@@ -1,3 +1,5 @@
+(ns robot)
+
 (defn robot []
   {:name (atom "")})
 
