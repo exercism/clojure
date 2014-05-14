@@ -1,4 +1,5 @@
-(require '[clojure.string :refer [split]])
+(ns scrabble
+  (:require [clojure.string :refer [split]]))
 
 (defn score-letter [letter]
   (let [ul (.toUpperCase letter)]
