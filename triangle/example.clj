@@ -1,9 +1,11 @@
-(defn invalid-sides [a b c]
+(ns triangle)
+
+(defn- invalid-sides [a b c]
   (let [[a b c] (sort [a b c])]
     (or (<= a 0)
         (>= c (+ a b)))))
 
-(defn triangle [a b c]
+(defn type [a b c]
   (let [unique-sides (partition-by identity (sort [a b c]))
         unique-side-count (count unique-sides)
         invalid (invalid-sides a b c)]
