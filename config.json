@@ -39,6 +39,9 @@
     "hexadecimal",
     "largest-series-product"
   ],
+  "deprecated": [
+
+  ],
   "ignore": [
 
   ]
