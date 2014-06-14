@@ -41,5 +41,15 @@
              (school/add "Kyle" 3)
              (school/sorted)))))
 
+(deftest sorted-school-keys-sorted
+  (is (= [3 4 6]
+         (-> db
+             (school/add "Jennifer" 4)
+             (school/add "Kareem" 6)
+             (school/add "Christopher" 4)
+             (school/add "Kyle" 3)
+             (school/sorted)
+             (keys)))))
+
 (run-tests)
 
