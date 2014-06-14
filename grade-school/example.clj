@@ -14,6 +14,6 @@
 (defn sorted
   "show the sorted roster for each grade"
   [db]
-    (into {}
+    (into (sorted-map)
       (for [[grade-level roster] db]
         [grade-level (sort roster)])))
