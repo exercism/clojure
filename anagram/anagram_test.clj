@@ -27,4 +27,7 @@
 (deftest word-is-not-own-anagram
   (is (= [] (anagram/anagrams-for "banana" ["banana"]))))
 
+(deftest capital-word-is-not-own-anagram
+  (is (= [] (anagram/anagrams-for "BANANA" ["banana"]))))
+
 (run-tests)
