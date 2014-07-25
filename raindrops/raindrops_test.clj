@@ -2,51 +2,51 @@
 (load-file "raindrops.clj")
 
 (deftest one
-  (is (= "1" (drops/convert 1))))
+  (is (= "1" (raindrops/convert 1))))
 
 (deftest three
-  (is (= "Pling" (drops/convert 3))))
+  (is (= "Pling" (raindrops/convert 3))))
 
 (deftest five
-  (is (= "Plang" (drops/convert 5))))
+  (is (= "Plang" (raindrops/convert 5))))
 
 (deftest seven
-  (is (= "Plong" (drops/convert 7))))
+  (is (= "Plong" (raindrops/convert 7))))
 
 (deftest six
-  (is (= "Pling" (drops/convert 6))))
+  (is (= "Pling" (raindrops/convert 6))))
 
 (deftest nine
-  (is (= "Pling" (drops/convert 9))))
+  (is (= "Pling" (raindrops/convert 9))))
 
 (deftest ten
-  (is (= "Plang" (drops/convert 10))))
+  (is (= "Plang" (raindrops/convert 10))))
 
 (deftest fourteen
-  (is (= "Plong" (drops/convert 14))))
+  (is (= "Plong" (raindrops/convert 14))))
 
 (deftest fifteen
-  (is (= "PlingPlang" (drops/convert 15))))
+  (is (= "PlingPlang" (raindrops/convert 15))))
 
 (deftest twenty-one
-  (is (= "PlingPlong" (drops/convert 21))))
+  (is (= "PlingPlong" (raindrops/convert 21))))
 
 (deftest twenty-five
-  (is (= "Plang" (drops/convert 25))))
+  (is (= "Plang" (raindrops/convert 25))))
 
 (deftest thirty-five
-  (is (= "PlangPlong" (drops/convert 35))))
+  (is (= "PlangPlong" (raindrops/convert 35))))
 
 (deftest forty-nine
-  (is (= "Plong" (drops/convert 49))))
+  (is (= "Plong" (raindrops/convert 49))))
 
 (deftest fifty-two
-  (is (= "52" (drops/convert 52))))
+  (is (= "52" (raindrops/convert 52))))
 
 (deftest one-hundred-five
-  (is (= "PlingPlangPlong" (drops/convert 105))))
+  (is (= "PlingPlangPlong" (raindrops/convert 105))))
 
 (deftest twelve-thousand-one-hundred-twenty-one
-  (is (= "12121" (drops/convert 12121))))
+  (is (= "12121" (raindrops/convert 12121))))
 
 (run-tests)

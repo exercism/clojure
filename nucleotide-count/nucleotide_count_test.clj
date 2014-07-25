@@ -1,32 +1,32 @@
 (ns nucleotide-count.test (:require [clojure.test :refer :all]))
-(load-file "dna.clj")
+(load-file "nucleotide_count.clj")
 
 (deftest empty-dna-strand-has-no-adenosine
-  (is (= 0 (dna/count \A, ""))))
+  (is (= 0 (nucleotide_count/count \A, ""))))
 
 (deftest empty-dna-strand-has-no-nucleotides
   (is (= {\A 0, \T 0, \C 0, \G 0}
-         (dna/nucleotide-counts ""))))
+         (nucleotide_count/nucleotide-counts ""))))
 
 (deftest repetitive-cytidine-gets-counted
-  (is (= 5 (dna/count \C "CCCCC"))))
+  (is (= 5 (nucleotide_count/count \C "CCCCC"))))
 
 (deftest repetitive-sequence-has-only-guanosine
   (is (= {\A 0, \T 0, \C 0, \G 8}
-         (dna/nucleotide-counts "GGGGGGGG"))))
+         (nucleotide_count/nucleotide-counts "GGGGGGGG"))))
 
 (deftest counts-only-thymidine
-  (is (= 1 (dna/count \T "GGGGGTAACCCGG"))))
+  (is (= 1 (nucleotide_count/count \T "GGGGGTAACCCGG"))))
 
 (deftest dna-has-no-uracil
-  (is (= 0 (dna/count \U "GATTACA"))))
+  (is (= 0 (nucleotide_count/count \U "GATTACA"))))
 
 (deftest validates-nucleotides
-  (is (thrown-with-msg? Exception #"invalid nucleotide" (dna/count \X "GACT"))))
+  (is (thrown-with-msg? Exception #"invalid nucleotide" (nucleotide_count/count \X "GACT"))))
 
 (deftest counts-all-nucleotides
   (let [s "AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC"]
     (is (= {\A 20, \T 21, \G 17, \C 12}
-           (dna/nucleotide-counts s)))))
+           (nucleotide_count/nucleotide-counts s)))))
 
 (run-tests)
