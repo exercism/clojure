@@ -10,12 +10,12 @@
 (def song-3-0 "3 bottles of beer on the wall, 3 bottles of beer.\nTake one down and pass it around, 2 bottles of beer on the wall.\n\n2 bottles of beer on the wall, 2 bottles of beer.\nTake one down and pass it around, 1 bottle of beer on the wall.\n\n1 bottle of beer on the wall, 1 bottle of beer.\nTake it down and pass it around, no more bottles of beer on the wall.\n\nNo more bottles of beer on the wall, no more bottles of beer.\nGo to the store and buy some more, 99 bottles of beer on the wall.\n")
 
 (deftest test-verse
-  (is (= verse-8 (beer/verse 8)))
-  (is (= verse-2 (beer/verse 2)))
-  (is (= verse-1 (beer/verse 1))))
+  (is (= verse-8 (beer_song/verse 8)))
+  (is (= verse-2 (beer_song/verse 2)))
+  (is (= verse-1 (beer_song/verse 1))))
 
 (deftest test-song
-  (is (= song-8-6 (beer/sing 8 6)))
-  (is (= song-3-0 (beer/sing 3))))
+  (is (= song-8-6 (beer_song/sing 8 6)))
+  (is (= song-3-0 (beer_song/sing 3))))
 
 (run-tests)
