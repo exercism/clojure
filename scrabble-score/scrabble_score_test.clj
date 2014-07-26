@@ -1,17 +1,22 @@
-(ns scrabble.test (:require [clojure.test :refer :all]))
-(load-file "scrabble.clj")
+(ns scrabble-score.test (:require [clojure.test :refer :all]))
+(load-file "scrabble_score.clj")
 
 (deftest lower-case-letter
-  (is (= 1 (scrabble/score-letter "a"))))
+  (is (= 1 (scrabble_score/score-letter "a"))))
+
 (deftest upper-case-letter
-  (is (= 1 (scrabble/score-letter "A"))))
+  (is (= 1 (scrabble_score/score-letter "A"))))
+
 (deftest two-letter-word
-  (is (= 2 (scrabble/score-word "at"))))
+  (is (= 2 (scrabble_score/score-word "at"))))
+
 (deftest bigger-word-1
-  (is (= 6 (scrabble/score-word "street"))))
+  (is (= 6 (scrabble_score/score-word "street"))))
+
 (deftest bigger-word-2
-  (is (= 22 (scrabble/score-word "quirky"))))
+  (is (= 22 (scrabble_score/score-word "quirky"))))
+
 (deftest all-upper-case-word
-  (is (= 20 (scrabble/score-word "MULTIBILLIONAIRE"))))
+  (is (= 20 (scrabble_score/score-word "MULTIBILLIONAIRE"))))
 
 (run-tests)
