@@ -20,9 +20,6 @@
 (deftest counts-only-thymidine
   (is (= 1 (nucleotide-count/count \T "GGGGGTAACCCGG"))))
 
-(deftest dna-has-no-uracil
-  (is (= 0 (nucleotide-count/count \U "GATTACA"))))
-
 (deftest validates-nucleotides
   (is (thrown-with-msg? Exception #"invalid nucleotide" (nucleotide-count/count \X "GACT"))))
 
