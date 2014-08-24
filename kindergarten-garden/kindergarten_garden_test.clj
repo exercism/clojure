@@ -2,19 +2,19 @@
 (load-file "kindergarten_garden.clj")
 
 (deftest garden-test
-  (is (= [:radishes :clover :grass :grass] (:alice (kindergarten_garden/garden "RC\nGG"))))
-  (is (= [:violets :clover :radishes :clover] (:alice (kindergarten_garden/garden "VC\nRC")))))
+  (is (= [:radishes :clover :grass :grass] (:alice (kindergarten-garden/garden "RC\nGG"))))
+  (is (= [:violets :clover :radishes :clover] (:alice (kindergarten-garden/garden "VC\nRC")))))
 
-(def small-garden (kindergarten_garden/garden "VVCG\nVVRC"))
+(def small-garden (kindergarten-garden/garden "VVCG\nVVRC"))
 (deftest small-garden-test
   (is (= [:clover :grass :radishes :clover] (:bob small-garden))))
 
-(def medium-garden (kindergarten_garden/garden "VVCCGG\nVVCCGG"))
+(def medium-garden (kindergarten-garden/garden "VVCCGG\nVVCCGG"))
 (deftest medium-garden-test
   (is (= [:clover :clover :clover :clover] (:bob medium-garden)))
   (is (= [:grass :grass :grass :grass] (:charlie medium-garden))))
 
-(def full-garden (kindergarten_garden/garden "VRCGVVRVCGGCCGVRGCVCGCGV\nVRCCCGCRRGVCGCRVVCVGCGCV"))
+(def full-garden (kindergarten-garden/garden "VRCGVVRVCGGCCGVRGCVCGCGV\nVRCCCGCRRGVCGCRVVCVGCGCV"))
 (deftest full-garden-test
   (is (= [:violets  :radishes :violets  :radishes] (:alice   full-garden)))
   (is (= [:clover   :grass    :clover   :clover]   (:bob     full-garden)))
@@ -29,7 +29,7 @@
   (is (= [:grass    :clover   :clover   :grass]    (:kincaid full-garden)))
   (is (= [:grass    :violets  :clover   :violets]  (:larry   full-garden))))
 
-(def surprise-garden (kindergarten_garden/garden "VCRRGVRG\nRVGCCGCV" ["Samantha" "Patricia" "Xander" "Roger"]))
+(def surprise-garden (kindergarten-garden/garden "VCRRGVRG\nRVGCCGCV" ["Samantha" "Patricia" "Xander" "Roger"]))
 (deftest surprise-garden-test
   (is (= [:violets  :clover   :radishes :violets] (:patricia surprise-garden)))
   (is (= [:radishes :radishes :grass    :clover]  (:roger    surprise-garden)))
