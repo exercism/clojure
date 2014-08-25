@@ -2,57 +2,57 @@
 (load-file "roman_numerals.clj")
 
 (deftest one
-  (is (= "I" (roman_numerals/numerals 1))))
+  (is (= "I" (roman-numerals/numerals 1))))
 
 (deftest two
-  (is (= "II" (roman_numerals/numerals 2))))
+  (is (= "II" (roman-numerals/numerals 2))))
 
 (deftest three
-  (is (= "III" (roman_numerals/numerals 3))))
+  (is (= "III" (roman-numerals/numerals 3))))
 
 (deftest four
-  (is (= "IV" (roman_numerals/numerals 4))))
+  (is (= "IV" (roman-numerals/numerals 4))))
 
 (deftest five
-  (is (= "V" (roman_numerals/numerals 5))))
+  (is (= "V" (roman-numerals/numerals 5))))
 
 (deftest six
-  (is (= "VI" (roman_numerals/numerals 6))))
+  (is (= "VI" (roman-numerals/numerals 6))))
 
 (deftest nine
-  (is (= "IX" (roman_numerals/numerals 9))))
+  (is (= "IX" (roman-numerals/numerals 9))))
 
 (deftest twenty-seven
-  (is (= "XXVII" (roman_numerals/numerals 27))))
+  (is (= "XXVII" (roman-numerals/numerals 27))))
 
 (deftest forty-eight
-  (is (= "XLVIII" (roman_numerals/numerals 48))))
+  (is (= "XLVIII" (roman-numerals/numerals 48))))
 
 (deftest fifty-nine
-  (is (= "LIX" (roman_numerals/numerals 59))))
+  (is (= "LIX" (roman-numerals/numerals 59))))
 
 (deftest ninety-three
-  (is (= "XCIII" (roman_numerals/numerals 93))))
+  (is (= "XCIII" (roman-numerals/numerals 93))))
 
 (deftest one-hundred-forty-one
-  (is (= "CXLI" (roman_numerals/numerals 141))))
+  (is (= "CXLI" (roman-numerals/numerals 141))))
 
 (deftest one-hundred-sixty-three
-  (is (= "CLXIII" (roman_numerals/numerals 163))))
+  (is (= "CLXIII" (roman-numerals/numerals 163))))
 
 (deftest four-hundred-two
-  (is (= "CDII" (roman_numerals/numerals 402))))
+  (is (= "CDII" (roman-numerals/numerals 402))))
 
 (deftest five-hundred-seventy-five
-  (is (= "DLXXV" (roman_numerals/numerals 575))))
+  (is (= "DLXXV" (roman-numerals/numerals 575))))
 
 (deftest nine-hundred-eleven
-  (is (= "CMXI" (roman_numerals/numerals 911))))
+  (is (= "CMXI" (roman-numerals/numerals 911))))
 
 (deftest one-thousand-twenty-four
-  (is (= "MXXIV" (roman_numerals/numerals 1024))))
+  (is (= "MXXIV" (roman-numerals/numerals 1024))))
 
 (deftest three-thousand
-  (is (= "MMM" (roman_numerals/numerals 3000))))
+  (is (= "MMM" (roman-numerals/numerals 3000))))
 
 (run-tests)
