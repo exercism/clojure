@@ -14,6 +14,6 @@
 (defn response-for [input]
   (cond
     (silence?  input) "Fine. Be that way!"
-    (shouting? input) "Woah, chill out!"
+    (shouting? input) "Whoa, chill out!"
     (question? input) "Sure."
     :else             "Whatever."))
