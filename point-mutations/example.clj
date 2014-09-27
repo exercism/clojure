@@ -1,4 +1,4 @@
-(ns dna)
+(ns point_mutations)
 (require '[clojure.string :refer [split]])
 
 (defn- nucleotides
@@ -11,6 +11,8 @@
 
 (defn hamming-distance
   [strand1 strand2]
-  (->> (map vector (nucleotides strand1) (nucleotides strand2))
-       (remove #(matching? %1))
-       count))
+  (if (= (count strand1) (count strand2))
+    (->> (map vector (nucleotides strand1) (nucleotides strand2))
+         (remove #(matching? %1))
+         count)
+    nil))
