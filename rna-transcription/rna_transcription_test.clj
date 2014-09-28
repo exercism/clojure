@@ -1,16 +1,16 @@
 (ns rna-transcription.test (:require [clojure.test :refer :all]))
 (load-file "rna_transcription.clj")
 
-(deftest transcribes-guanine-to-cytosine
+(deftest transcribes-cytosine-to-guanine
   (is (= "G" (rna-transcription/to-rna "C"))))
 
-(deftest transcribes-cytosine-to-guanine
+(deftest transcribes-guanine-to-cytosine
   (is (= "C" (rna-transcription/to-rna "G"))))
 
-(deftest transcribes-uracil-to-adenine
+(deftest transcribes-adenine-to-uracil
   (is (= "U" (rna-transcription/to-rna "A"))))
 
-(deftest it-transcribes-thymine-to-uracil
+(deftest it-transcribes-thymine-to-adenine
   (is (= "A" (rna-transcription/to-rna "T"))))
 
 (deftest it-transcribes-all-nucleotides
