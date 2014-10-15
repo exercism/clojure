@@ -1,3 +1,5 @@
+(ns crypto-square)
+
 (defn normalize-plaintext [input]
   (.toLowerCase (clojure.string/replace input #"[^0-9a-zA-Z]" "")))
 
@@ -21,8 +23,9 @@
                  (nth s n nil)))))
 
 (defn normalize-ciphertext [input]
-  (let [cipher (ciphertext input)]
+  (let [cipher (ciphertext input)
+        square-dims (int (Math/ceil (/ (count cipher) (square-size cipher))))]
     (apply str (interpose " "
                     (map #(apply str %1)
-                         (partition 5 5 nil cipher))))))
+                         (partition square-dims square-dims nil cipher))))))
 

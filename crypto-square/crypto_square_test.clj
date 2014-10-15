@@ -30,8 +30,11 @@
   (is (= "msemo aanin dninn dlaet ltshu i"
          (crypto-square/normalize-ciphertext "Madness, and then illumination."))))
 (deftest cipher-4
-  (is (= "vrela epems etpao oirpo"
+  (is (= "vrel aepe mset paoo irpo"
          (crypto-square/normalize-ciphertext "Vampires are people too!"))))
+(deftest cipher-5
+  (is (= "ageihdsednsh lsagtoonaepe lannswnccair hrditeaetnrh ueethdnatoio mbqyewdnotto aouayicdwhod nranatosaefb nldrhnhrrbef irersodirirn ieecusnonedg nailoat"
+         (crypto-square/normalize-ciphertext "All human beings are born free and equal in dignity and rights. They are endowed with reason and conscience and should act towards one another in a spirit of brotherhood."))))
 
 (run-tests)
 
