@@ -1,5 +1,5 @@
 (ns phrase
-  (:require [clojure.string :refer [split lower-case]]))
+  (:require [clojure.string :refer [lower-case split]]))
 
 (defn word-count
   "return a hash of unique words and how many times they appeared in the input string"
