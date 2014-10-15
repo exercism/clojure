@@ -1,4 +1,4 @@
-(ns grade-school.test
+(ns grade-school-test
   (:require [clojure.test :refer :all]))
 
 (load-file "grade_school.clj")
@@ -32,7 +32,7 @@
 (deftest get-students-in-a-non-existant-grade
   (is (= [] (grade-school/grade db 1))))
 
-(deftest sorted-grade_school
+(deftest sorted-grade-school
   (is (= { 3 ["Kyle"]
            4 ["Christopher" "Jennifer"]
            6 ["Kareem"] }

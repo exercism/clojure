@@ -1,4 +1,4 @@
-(ns dna
+(ns nucleotide-count
   (:refer-clojure :exclude [count]))
 
 (def ^{:private :const} dna-nucleotide? #{\A \C \G \T})

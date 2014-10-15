@@ -1,4 +1,4 @@
-(ns triangle.test
+(ns triangle-test
   (:require [clojure.test :refer :all]))
 
 (load-file "triangle.clj")

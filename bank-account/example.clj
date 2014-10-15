@@ -1,4 +1,4 @@
-(ns bank)
+(ns bank-account)
 
 (defn open-account []
   (ref 0))

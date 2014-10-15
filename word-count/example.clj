@@ -1,4 +1,4 @@
-(ns phrase
+(ns word-count
   (:require [clojure.string :refer [lower-case split]]))
 
 (defn word-count

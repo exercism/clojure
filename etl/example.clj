@@ -1,5 +1,5 @@
-(ns etl)
-(require '[clojure.string :refer [lower-case]])
+(ns etl
+  (:require [clojure.string :refer [lower-case]]))
 
 (defn transform [extract]
   (into {}

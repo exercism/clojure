@@ -1,4 +1,4 @@
-(ns dna)
+(ns rna-transcription)
 
 (def dna->rna {
       \C \G

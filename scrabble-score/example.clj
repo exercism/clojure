@@ -1,4 +1,4 @@
-(ns scrabble
+(ns scrabble-score
   (:require [clojure.string :refer [split]]))
 
 (defn score-letter [letter]

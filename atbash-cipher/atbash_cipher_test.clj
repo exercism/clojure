@@ -1,7 +1,7 @@
-(ns atbash-cipher.test
+(ns atbash-cipher-test
   (:require [clojure.test :refer :all]))
 
-(load-file "atbash.clj")
+(load-file "atbash_cipher.clj")
 
 (deftest encode-no
   (is (= "ml" (atbash-cipher/encode "no"))))

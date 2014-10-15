@@ -1,4 +1,4 @@
-(ns accumulate.test
+(ns accumulate-test
   (:require [clojure.test :refer :all]))
 
 (load-file "accumulate.clj")

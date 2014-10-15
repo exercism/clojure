@@ -1,4 +1,4 @@
-(ns hexadecimal.test
+(ns hexadecimal-test
   (:require [clojure.test :refer :all]))
 
 (load-file "hexadecimal.clj")

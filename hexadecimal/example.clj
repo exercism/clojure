@@ -1,3 +1,4 @@
+(ns hexadecimal)
 
 (defn- char-between [start end c]
   (let [ascii (int c)]

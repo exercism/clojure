@@ -1,4 +1,4 @@
-(ns robot-simulator.test
+(ns robot-simulator-test
   (:require [clojure.test :refer :all]))
 
 (load-file "robot_simulator.clj")

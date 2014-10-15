@@ -1,4 +1,4 @@
-(ns grains.test
+(ns grains-test
   (:require [clojure.test :refer :all]))
 
 (load-file "grains.clj")

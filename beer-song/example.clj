@@ -1,4 +1,4 @@
-(ns beer)
+(ns beer-song)
 
 (defn- bottles [number]
   (str "bottle" (if (= number 1) "" "s")))
