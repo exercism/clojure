@@ -1,4 +1,6 @@
-(ns accumulate.test (:require [clojure.test :refer :all]))
+(ns accumulate.test
+  (:require [clojure.test :refer :all]))
+
 (load-file "accumulate.clj")
 
 (defn- square [n] (* n n))
