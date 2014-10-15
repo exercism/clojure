@@ -1,4 +1,6 @@
-(ns atbash-cipher.test (:use clojure.test))
+(ns atbash-cipher.test
+  (:require [clojure.test :refer :all]))
+
 (load-file "atbash.clj")
 
 (deftest encode-no

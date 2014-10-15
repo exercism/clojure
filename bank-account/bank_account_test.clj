@@ -1,4 +1,6 @@
-(ns bank.test (:use clojure.test))
+(ns bank.test
+  (:require [clojure.test :refer :all]))
+
 (load-file "bank.clj")
 
 ;; The BankAccount module should support four calls:

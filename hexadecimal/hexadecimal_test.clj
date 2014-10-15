@@ -1,4 +1,6 @@
-(ns hexadecimal.test (:require [clojure.test :refer :all]))
+(ns hexadecimal.test
+  (:require [clojure.test :refer :all]))
+
 (load-file "hexadecimal.clj")
 
 (deftest hex-to-int-test

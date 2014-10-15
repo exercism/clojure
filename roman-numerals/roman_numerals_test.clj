@@ -1,4 +1,6 @@
-(ns roman-numerals.test (:require [clojure.test :refer :all]))
+(ns roman-numerals.test
+  (:require [clojure.test :refer :all]))
+
 (load-file "roman_numerals.clj")
 
 (deftest one
