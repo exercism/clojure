@@ -29,11 +29,14 @@
   (is (= "wneiaweoreneawssciliprerlneoidktcms"
          (crypto-square/ciphertext "We all know interspecies romance is weird."))))
 (deftest cipher-3
-  (is (= "msemo aanin dninn dlaet ltshu i"
+  (is (= "msemo aanin dnin ndla etlt shui"
          (crypto-square/normalize-ciphertext "Madness, and then illumination."))))
 (deftest cipher-4
-  (is (= "vrela epems etpao oirpo"
+  (is (= "vrel aepe mset paoo irpo"
          (crypto-square/normalize-ciphertext "Vampires are people too!"))))
+(deftest cipher-5
+  (is (= "ageihdsednsh lsagtoonaepe lannswnccair hrditeaetnrh ueethdnatoio mbqyewdnotto aouayicdwhod nranatosaef bnldrhnhrrb efirersodir irnieecusno nedgnailoat"
+         (crypto-square/normalize-ciphertext "All human beings are born free and equal in dignity and rights. They are endowed with reason and conscience and should act towards one another in a spirit of brotherhood."))))
 
 (run-tests)
 
