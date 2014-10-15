@@ -25,7 +25,7 @@
 (deftest sum-of-squares-to-100
   (is (= 338350 (difference-of-squares/sum-of-squares 100))))
 
-(deftest difference-of-sums-to-100 
+(deftest difference-of-sums-to-100
   (is (= 25164150 (difference-of-squares/difference 100))))
 
 (run-tests)
