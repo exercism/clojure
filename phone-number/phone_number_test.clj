@@ -1,4 +1,6 @@
-(ns phone-number.test (:require [clojure.test :refer :all]))
+(ns phone-number.test
+  (:require [clojure.test :refer :all]))
+
 (load-file "phone_number.clj")
 
 (deftest cleans-number

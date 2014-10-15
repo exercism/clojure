@@ -1,4 +1,6 @@
-(ns robot-name.test (:require [clojure.test :refer :all]))
+(ns robot-name.test
+  (:require [clojure.test :refer :all]))
+
 (load-file "robot_name.clj")
 
 (def robbie (robot-name/robot))

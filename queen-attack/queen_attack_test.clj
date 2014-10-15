@@ -1,4 +1,6 @@
-(ns queen-attack.test (:require [clojure.test :refer :all]))
+(ns queen-attack.test
+  (:require [clojure.test :refer :all]))
+
 (load-file "queen_attack.clj")
 
 (def empty-board

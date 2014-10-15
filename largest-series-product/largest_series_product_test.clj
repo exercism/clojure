@@ -1,4 +1,6 @@
-(ns largest-series-product.test (:require [clojure.test :refer :all]))
+(ns largest-series-product.test
+  (:require [clojure.test :refer :all]))
+
 (load-file "largest_series_product.clj")
 
 (deftest largest_series_tests

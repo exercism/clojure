@@ -1,4 +1,6 @@
-(ns scrabble-score.test (:require [clojure.test :refer :all]))
+(ns scrabble-score.test
+  (:require [clojure.test :refer :all]))
+
 (load-file "scrabble_score.clj")
 
 (deftest lower-case-letter

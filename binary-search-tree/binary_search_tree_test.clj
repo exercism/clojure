@@ -1,4 +1,6 @@
-(ns bst.test (:require [clojure.test :refer :all]))
+(ns bst.test
+  (:require [clojure.test :refer :all]))
+
 (load-file "bst.clj")
 
 (deftest data-is-retained

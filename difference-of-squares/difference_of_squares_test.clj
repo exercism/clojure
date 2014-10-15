@@ -1,4 +1,6 @@
-(ns difference-of-squares.test (:require [clojure.test :refer :all]))
+(ns difference-of-squares.test
+  (:require [clojure.test :refer :all]))
+
 (load-file "squares.clj")
 
 (deftest square-of-sums-to-5
