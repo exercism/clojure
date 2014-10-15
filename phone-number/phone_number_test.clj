@@ -1,4 +1,4 @@
-(ns phone-number.test
+(ns phone-number-test
   (:require [clojure.test :refer :all]))
 
 (load-file "phone_number.clj")

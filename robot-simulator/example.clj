@@ -1,3 +1,5 @@
+(ns robot-simulator)
+
 (def directions [:north :east :south :west])
 
 (defn robot [coordinates bearing]

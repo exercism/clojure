@@ -1,4 +1,4 @@
-(ns scrabble-score.test
+(ns scrabble-score-test
   (:require [clojure.test :refer :all]))
 
 (load-file "scrabble_score.clj")

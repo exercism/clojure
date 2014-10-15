@@ -1,4 +1,4 @@
-(ns robot)
+(ns robot-name)
 
 (defn robot []
   {:name (atom "")})

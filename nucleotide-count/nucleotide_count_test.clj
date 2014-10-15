@@ -1,4 +1,4 @@
-(ns nucleotide-count.test
+(ns nucleotide-count-test
   (:require [clojure.test :refer :all]))
 
 (load-file "nucleotide_count.clj")

@@ -1,4 +1,4 @@
-(ns allergies.test
+(ns allergies-test
   (:require [clojure.test :refer :all]))
 
 (load-file "allergies.clj")

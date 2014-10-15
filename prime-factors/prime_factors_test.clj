@@ -1,4 +1,4 @@
-(ns prime-factors.test
+(ns prime-factors-test
   (:require [clojure.test :refer :all]))
 
 (load-file "prime_factors.clj")

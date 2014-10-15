@@ -1,4 +1,4 @@
-(ns kindergarten-garden.test
+(ns kindergarten-garden-test
   (:require [clojure.test :refer :all]))
 
 (load-file "kindergarten_garden.clj")

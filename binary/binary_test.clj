@@ -1,4 +1,4 @@
-(ns binary.test
+(ns binary-test
   (:require [clojure.test :refer :all]))
 
 (load-file "binary.clj")

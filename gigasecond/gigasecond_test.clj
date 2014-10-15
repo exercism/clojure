@@ -1,4 +1,4 @@
-(ns gigasecond.test
+(ns gigasecond-test
   (:require [clojure.test :refer :all]))
 
 (load-file "gigasecond.clj")

@@ -1,4 +1,4 @@
-(ns queen-attack.test
+(ns queen-attack-test
   (:require [clojure.test :refer :all]))
 
 (load-file "queen_attack.clj")

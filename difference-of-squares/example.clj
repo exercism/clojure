@@ -1,3 +1,4 @@
+(ns difference-of-squares)
 
 (defn- sum [xs] (reduce + xs))
 

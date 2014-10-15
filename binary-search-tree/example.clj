@@ -1,4 +1,4 @@
-(ns bst)
+(ns binary-search-tree)
 
 (defn value [node] (first node))
 (defn left [node] (second node))

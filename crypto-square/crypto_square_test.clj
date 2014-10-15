@@ -1,4 +1,4 @@
-(ns crypto-square.test
+(ns crypto-square-test
   (:require [clojure.test :refer :all]))
 
 (load-file "crypto_square.clj")

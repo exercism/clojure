@@ -1,5 +1,6 @@
-(require '[clojure.string :as str])
-(require '[clojure.set    :as set])
+(ns queen-attack
+  (:require [clojure.string :as str]
+            [clojure.set    :as set]))
 
 (defn board-string [queens]
   (let [piece-at (set/map-invert queens)]

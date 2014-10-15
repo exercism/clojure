@@ -1,4 +1,4 @@
-(ns leap.test
+(ns leap-test
   (:require [clojure.test :refer :all]))
 
 (load-file "leap.clj")

@@ -1,4 +1,4 @@
-(ns drops
+(ns raindrops
   (:require [clojure.string :refer [blank?]]))
 
 (def ^:private sound-map

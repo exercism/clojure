@@ -1,5 +1,5 @@
-(ns phone)
-(require '[clojure.string :as str])
+(ns phone-number
+  (:require [clojure.string :as str]))
 
 (defn- digits-only
   [input]
