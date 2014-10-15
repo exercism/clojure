@@ -4,7 +4,7 @@
 (deftest data-is-retained
   (is (= 4 (binary-search-tree/value (binary-search-tree/singleton 4)))))
 
-(deftest inserting-less 
+(deftest inserting-less
   (let [t (binary-search-tree/insert 2 (binary-search-tree/singleton 4))]
     (is (= 4 (binary-search-tree/value t)))
     (is (= 2 (binary-search-tree/value (binary-search-tree/left t))))))
@@ -38,7 +38,7 @@
 (deftest iterating-over-larger-element
   (is (= [4 5] (binary-search-tree/to-list (binary-search-tree/from-list [4 5])))))
 
-(deftest iterating-over-complex-tree 
+(deftest iterating-over-complex-tree
   (is (= (range 1 8) (binary-search-tree/to-list (binary-search-tree/from-list [4 2 1 3 6 7 5])))))
 
 (run-tests)
