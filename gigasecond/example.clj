@@ -1,5 +1,5 @@
 (ns gigasecond
-  (require [clojure.string :refer [join]]))
+  (:require [clojure.string :refer [join]]))
 
 (import java.text.SimpleDateFormat)
 (import java.util.Date)
