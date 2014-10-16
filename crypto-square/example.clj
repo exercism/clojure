@@ -32,6 +32,6 @@
     (apply str (interpose " "
                     (map #(apply str %1)
                          (concat (partition square-longest square-longest nil
-                                    (take (* square-long-sides square-longest) cipher))
+                                    (take (* square-count-long-sides square-longest) cipher))
                                  (partition square-shortest square-shortest nil
-                                    (take-last (- cipher-length (* square-long-sides square-longest)) cipher))))))))
+                                    (take-last (- cipher-length (* square-count-long-sides square-longest)) cipher))))))))
