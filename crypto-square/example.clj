@@ -1,3 +1,5 @@
+(ns crypto-square)
+
 (defn normalize-plaintext [input]
   (.toLowerCase (clojure.string/replace input #"[^0-9a-zA-Z]" "")))
 
@@ -25,4 +27,3 @@
     (apply str (interpose " "
                     (map #(apply str %1)
                          (partition 5 5 nil cipher))))))
-

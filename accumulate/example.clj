@@ -1,4 +1,4 @@
-(ns accum)
+(ns accumulate)
 
 (defn accumulate [f xs]
   (loop [xs xs

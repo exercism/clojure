@@ -14,7 +14,7 @@
   [flags]
   (mapv last
     (filter
-      (fn[[index allergen]]
+      (fn [[index allergen]]
         (flagged? flags index))
       (map-indexed vector allergens))))
 

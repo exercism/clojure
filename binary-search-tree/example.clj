@@ -1,4 +1,4 @@
-(ns bst)
+(ns binary-search-tree)
 
 (defn value [node] (first node))
 (defn left [node] (second node))
@@ -6,8 +6,8 @@
 (defn singleton [n] [n nil nil])
 
 (defn insert [v node]
-  (if 
-    (empty? node) 
+  (if
+    (empty? node)
     (singleton v)
     (let [x (value node)]
       (if
@@ -19,7 +19,7 @@
   (reduce #(insert %2 %1) nil xs))
 
 (defn to-list [node]
-  (if 
+  (if
     (empty? node)
     node
     (concat (to-list (left node)) [(value node)] (to-list (right node)))))

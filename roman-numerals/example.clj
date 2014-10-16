@@ -1,4 +1,4 @@
-(ns roman)
+(ns roman-numerals)
 
 (def ^:private numeral-mapping [
   [1000 "M"]

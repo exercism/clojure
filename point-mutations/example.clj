@@ -1,5 +1,5 @@
-(ns point_mutations)
-(require '[clojure.string :refer [split]])
+(ns point-mutations
+  (:require [clojure.string :refer [split]]))
 
 (defn- nucleotides
   [strand]

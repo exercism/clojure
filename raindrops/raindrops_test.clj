@@ -1,4 +1,6 @@
-(ns raindrops.test (:require [clojure.test :refer :all]))
+(ns raindrops-test
+  (:require [clojure.test :refer :all]))
+
 (load-file "raindrops.clj")
 
 (deftest one

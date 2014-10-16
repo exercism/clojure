@@ -1,4 +1,6 @@
-(ns space-age.test (:require [clojure.test :refer :all]))
+(ns space-age-test
+  (:require [clojure.test :refer :all]))
+
 (load-file "space_age.clj")
 
 (defn- rounds-to

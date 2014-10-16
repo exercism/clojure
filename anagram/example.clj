@@ -1,5 +1,5 @@
 (ns anagram
-  (:require [clojure.string :refer [split lower-case]]))
+  (:require [clojure.string :refer [lower-case]]))
 
 (defn- canonicalize
   [word]

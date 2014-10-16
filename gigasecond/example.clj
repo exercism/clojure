@@ -1,8 +1,7 @@
 (ns gigasecond
-  (require [clojure.string :refer [join]]))
-
-(import java.text.SimpleDateFormat)
-(import java.util.Date)
+  (:require [clojure.string :refer [join]])
+  (:import java.text.SimpleDateFormat)
+  (:import java.util.Date))
 
 (def ^:private date-format "yyyy MM dd")
 

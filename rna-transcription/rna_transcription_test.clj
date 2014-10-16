@@ -1,4 +1,6 @@
-(ns rna-transcription.test (:require [clojure.test :refer :all]))
+(ns rna-transcription-test
+  (:require [clojure.test :refer :all]))
+
 (load-file "rna_transcription.clj")
 
 (deftest transcribes-cytosine-to-guanine

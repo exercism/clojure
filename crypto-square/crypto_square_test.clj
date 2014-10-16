@@ -1,4 +1,6 @@
-(ns crypto-square.test (:require [clojure.test :refer :all]))
+(ns crypto-square-test
+  (:require [clojure.test :refer :all]))
+
 (load-file "crypto_square.clj")
 
 (deftest normalize-splunk
