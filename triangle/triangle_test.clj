@@ -1,4 +1,6 @@
-(ns triangle.test (:require [clojure.test :refer :all]))
+(ns triangle-test
+  (:require [clojure.test :refer :all]))
+
 (load-file "triangle.clj")
 
 (deftest equilateral-1

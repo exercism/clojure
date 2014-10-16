@@ -1,4 +1,6 @@
-(ns binary.test (:require [clojure.test :refer :all]))
+(ns binary-test
+  (:require [clojure.test :refer :all]))
+
 (load-file "binary.clj")
 
 (deftest binary-1-is-decimal-1

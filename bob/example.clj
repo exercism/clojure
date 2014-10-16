@@ -1,5 +1,5 @@
 (ns bob
-  (require [clojure.string :as str]))
+  (:require [clojure.string :as str]))
 
 (defn- silence?    [msg] (str/blank? msg))
 

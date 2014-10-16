@@ -1,4 +1,6 @@
-(ns anagram.test (:require [clojure.test :refer :all]))
+(ns anagram-test
+  (:require [clojure.test :refer :all]))
+
 (load-file "anagram.clj")
 
 (deftest no-matches

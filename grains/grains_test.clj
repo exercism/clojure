@@ -1,4 +1,6 @@
-(ns grains.test (:require [clojure.test :refer :all]))
+(ns grains-test
+  (:require [clojure.test :refer :all]))
+
 (load-file "grains.clj")
 
 (deftest square-1
