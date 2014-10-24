@@ -1,23 +1,21 @@
 (ns meetup
   (:import (java.util Calendar)))
 
-(def day-offsets {:sunday    1
-                  :monday    2
-                  :tuesday   3
-                  :wednesday 4
-                  :thursday  5
-                  :friday    6
-                  :saturday  7})
+(def day-offsets
+  {:sunday    1
+   :monday    2
+   :tuesday   3
+   :wednesday 4
+   :thursday  5
+   :friday    6
+   :saturday  7})
 
-(def ordinals {:first  1
-               :second 2
-               :third  3
-               :fourth 4})
-
-(defn- abs [n]
-  (cond
-    (neg? n) (* -1 n)
-    :else    n))
+(def days-of-month
+  {:first 1
+   :second 8
+   :third 15
+   :fourth 22
+   :teenth 13})
 
 (defn- ^Calendar to-date
   [year month day]
@@ -39,7 +37,7 @@
 
 (defn- days-to-move
   [weekday offset-and-direction]
-  (let [offset    (abs offset-and-direction)
+  (let [offset    (Math/abs offset-and-direction)
         direction (/ offset-and-direction offset)]
     (* (mod (* -1 direction (- weekday offset)) 7) direction)))
 
@@ -55,28 +53,17 @@
   (let [date (to-date year month 1)]
     (.getActualMaximum date Calendar/DAY_OF_MONTH)))
 
-; generate the "*teenth" functions
-(doseq [[day-name offset] day-offsets]
-  (let [fname (symbol
-                (clojure.string/replace
-                  (name day-name) #"day" "teenth"))]
-    (intern *ns* fname
-            (fn [month year]
-              (date-parts (offset-date year month 13 offset))))))
+(defn- offset-for
+  [schedule day-of-week]
+  (if (= :last schedule)
+    (* -1 day-of-week)
+    day-of-week))
 
-; generate the ordinal day functions
-(doseq [[ordinal week-number] ordinals]
-  (doseq [[day-name offset] day-offsets]
-    (let [fname (symbol (str (name ordinal) "-" (name day-name)))
-          day-of-month (inc (* (dec week-number) 7))]
-      (intern *ns* fname
-              (fn [month year]
-                (date-parts (offset-date year month day-of-month offset)))))))
-
-; generate the "last*" functions
-(doseq [[day-name offset] day-offsets]
-  (let [fname (symbol (str "last-" (name day-name)))]
-    (intern *ns* fname
-            (fn [month year]
-              (let [last-day (last-day-of-month year month)]
-                (date-parts (offset-date year month last-day (* -1 offset))))))))
+(defn meetup
+  [month year day-name schedule]
+  (let [day-of-month (if (= :last schedule)
+                       (last-day-of-month year month)
+                       (get days-of-month schedule))
+        day-of-week (get day-offsets day-name)
+        offset (offset-for schedule day-of-week)]
+    (date-parts (offset-date year month day-of-month offset))))
