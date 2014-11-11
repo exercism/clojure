@@ -5,8 +5,8 @@
 
 (defn- rounds-to
   [expected actual]
-  (is (= (Math/round (* 100 expected))
-         (Math/round (* 100 actual)))))
+  (is (= (Math/round (* 100.0 expected))
+         (Math/round (* 100.0 actual)))))
 
 (deftest age-in-earth-years
   (rounds-to 31.69 (space-age/on-earth 1000000000)))
