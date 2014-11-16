@@ -7,9 +7,9 @@
   (is (= :equilateral (triangle/type 2 2 2))))
 (deftest equilateral-2
   (is (= :equilateral (triangle/type 10 10 10))))
-(deftest isoceles-1
+(deftest isosceles-1
   (is (= :isosceles (triangle/type 3 4 4))))
-(deftest isoceles-2
+(deftest isosceles-2
   (is (= :isosceles (triangle/type 4 3 4))))
 (deftest scalene
   (is (= :scalene (triangle/type 3 4 5))))
