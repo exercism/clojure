@@ -1,5 +1,8 @@
 (ns bank-account-test
-  (:require [clojure.test :refer :all]))
+  (:refer-clojure :exclude (replace))
+  (:require [clojure.walk :refer (postwalk)]
+            [clojure.string :refer (capitalize replace)]
+            [clojure.test :refer :all]))
 
 (load-file "bank_account.clj")
 
@@ -20,32 +23,37 @@
 ;;
 ;; The initial balance of the bank account should be 0.
 
-(defn with-bank [label f]
-  (let [acct (bank-account/open-account)
-        result (f acct label)]
-    (bank-account/close-account acct)
-    result))
+(defmacro bank-test
+  "Helper for writing cleaner bank-tests"
+  [testname & body]
+  (let [label (capitalize (replace (name testname) "-" " "))
+        add-label #(if (and (list? %) (= 'is (first %))) (concat % (list label)) %)
+        with-labels (postwalk add-label body)]
+    `(deftest ~testname
+       (let [acc# (bank-account/open-account)
+             ~'get-balance (partial bank-account/get-balance acc#)
+             ~'update-balance (partial bank-account/update-balance acc#)]
+         (do ~@with-labels)
+         (bank-account/close-account acc#)))))
 
-(deftest checking-basic-balance
-  (with-bank "initial balance is 0" #(is (= 0 (bank-account/get-balance %1)) %2))
-  (with-bank "incrementing and checking balance"
-    #(do (is (= 0 (bank-account/get-balance %1)) %2)
-         (is (= 10 (bank-account/update-balance %1 10)) %2)
-         (is (= 10 (bank-account/get-balance %1)) %2))))
+(bank-test initial-account-state
+  (is (= 0 (get-balance))))
 
-(deftest can-increment-and-decrement
-  (with-bank "increment and decrement balance"
-    #(do (is (= 0 (bank-account/get-balance %1)) %2)
-         (is (= 10 (bank-account/update-balance %1 10)) %2)
-         (is (= 0 (bank-account/update-balance %1 -10)) %2))))
+(bank-test increment-and-get-balance
+  (is (= 0  (get-balance)))
+  (is (= 10 (update-balance 10)))
+  (is (= 10 (get-balance))))
 
-(deftest check-concurrent-access
-  (with-bank "handles concurrent execution"
-    #(do
-      (pcalls (bank-account/update-balance %1 10)
-              (bank-account/update-balance %1 10)
-              (bank-account/update-balance %1 10))
-      (is (= 30 (bank-account/get-balance %1)) %2))))
+(bank-test can-increment-and-decrement
+  (is (= 0  (get-balance)))
+  (is (= 10 (update-balance 10)))
+  (is (= 0  (update-balance -10))))
+
+(bank-test check-concurrent-access
+  (let [add-10 #(update-balance 10)]
+    (doall ;; We have to force evaluation on this lazy-list.
+      (pcalls add-10 add-10 add-10)))
+  (is (= 30 (get-balance))))
 
 (run-tests)
 (shutdown-agents) ;; for the pcalls above so the test exits
