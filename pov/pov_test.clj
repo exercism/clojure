@@ -111,5 +111,18 @@
   (is (nil? (pov/of :x nil))
       "Returns nil if the input is nil"))
 
+(deftest path-from-to
+  (is (= [:x :parent]
+         (pov/path-from-to :x :parent simple-tree))
+      "Can trace a path from target to parent")
+  (is (= [:x :parent :sib-c]
+         (pov/path-from-to :x :sib-c large-flat))
+      "Can trace a path from target to sibling")
+  (is (= [:x :parent :grand-parent :aunt :cousin-1 :2nd-cousin-1]
+         (pov/path-from-to :x :2nd-cousin-1 target-with-children))
+      "Can trace a path from :x to :2nd-cousin-1")
+  (is (nil? (pov/path-from-to :x :not-there! cousins))
+      "Returns nil if there is no path"))
+
 ;; Run the tests when using lein-exec
 (run-tests)

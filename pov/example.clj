@@ -32,3 +32,11 @@
   (when-let [loc (find-node s tree)]
     (reparent loc)))
 
+(defn path-from-to
+  "Find a path from src node to dest node"
+  [src dest graph]
+  (when-let [loc (find-node dest (of src graph))]
+    (let [dest-node (zip/node loc)
+          path (concat (zip/path loc) [dest-node])]
+      (map first path))))
+
