@@ -107,9 +107,9 @@
   (is (nil? (pov/of :not-found! target-with-children))
       "Returns nil if we cannot reparent")
   (is (nil? (pov/of :x []))
-      "Return nil if we the input is empty")
+      "Return nil if the input is empty")
   (is (nil? (pov/of :x nil))
-      "Returns nil if we the input is nil"))
+      "Returns nil if the input is nil"))
 
 ;; Run the tests when using lein-exec
 (run-tests)
