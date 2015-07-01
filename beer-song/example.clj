@@ -1,37 +1,21 @@
-(ns beer-song)
+(ns beer-song
+  (:require [clojure.string :as str]))
 
-(defn- bottles [number]
-  (str "bottle" (if (= number 1) "" "s")))
+(defn many [n] (format "%d bottles of beer on the wall, %d bottles of beer.\nTake one down and pass it around, %d bottles of beer on the wall.\n" n n (dec n)))
 
-(defn- count-bottles [number]
-  (if (= 0 number) "no more" number))
+(def two "2 bottles of beer on the wall, 2 bottles of beer.\nTake one down and pass it around, 1 bottle of beer on the wall.\n")
+(def one "1 bottle of beer on the wall, 1 bottle of beer.\nTake it down and pass it around, no more bottles of beer on the wall.\n")
+(def zero "No more bottles of beer on the wall, no more bottles of beer.\nGo to the store and buy some more, 99 bottles of beer on the wall.\n")
 
-(defn- stanza [number]
-  (if (>= number 0)
-      (str (count-bottles number) " " (bottles number) " of beer")
-      (stanza 99)))
-
-(defn- it [number]
-  (if (> number 1) "one" "it"))
-
-(defn- action [number]
-  (if (> number 0)
-      (str "Take " (it number) " down and pass it around")
-      "Go to the store and buy some more"))
-
-(defn verse
-  "generate a verse of \"99 Bottles Of Beer\""
-  [number]
-  (str (clojure.string/capitalize (stanza number)) " on the wall, "
-       (stanza number) ".\n"
-       (action number) ", "
-       (stanza (dec number)) " on the wall.\n"))
+(defn verse [v]
+  (case (int v)
+    0 zero
+    1 one
+    2 two
+    (many v)))
 
 (defn sing
-  ([start-from]
-    (sing start-from 0))
-
-  ([start-from down-to]
-    (apply str (->> (range down-to (inc start-from))
-                    reverse
-                    (map #(str (verse %1) "\n"))))))
+  ([n]   (sing n 0))
+  ([n m] (->> (range n (dec m) -1)
+              (map verse)
+              (str/join "\n"))))
