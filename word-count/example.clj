@@ -12,12 +12,10 @@
 
 ;; Another approach
 (ns phrase
- (:require [clojure.string :refer [split lower-case]]))
+ (:require [clojure.string :refer [lower-case]]))
 
-(defn- sanitize-and-split [phrase]
-  (-> (lower-case phrase)
-      (split #"\W+")))
+(defn words [s]
+  (re-seq #"\w+" s))
 
-(defn word-count [phrase]
-  (-> (sanitize-and-split phrase)
-      (frequencies)))
+(defn word-count [s]
+  (-> s lower-case words frequencies))
