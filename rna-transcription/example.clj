@@ -1,17 +1,13 @@
 (ns rna-transcription)
 
-(def dna->rna {
-      \C \G
-      \G \C
-      \A \U
-      \T \A})
+(def dna->rna {\G \C
+               \C \G
+               \A \U
+               \T \A})
 
-(defn validate-strand [strand]
-  (let [valid-dna (set (keys dna->rna))]
-    (every? valid-dna strand)))
+(defn- translate [c]
+  {:post [%]}
+  (dna->rna c))
 
-(defn to-rna
-  [strand]
-  {:pre [(validate-strand strand)]}
-  (apply str
-    (map dna->rna (seq strand))))
+(defn to-rna [dna]
+  (apply str (map translate dna)))
