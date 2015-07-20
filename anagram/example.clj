@@ -1,13 +1,11 @@
 (ns anagram
   (:require [clojure.string :refer [lower-case]]))
 
-(defn- canonicalize
-  [word]
-  (-> word
-      lower-case
-      frequencies))
+(defn- anagram? [w c]
+  (let [w (lower-case w)
+        c (lower-case c)]
+    (and (= (sort w) (sort c))
+         (not= w c))))
 
-(defn anagrams-for
-  [word candidates]
-  (let [canonical (canonicalize word)]
-    (vec (filter #(and (not= word %) (= canonical (canonicalize %))) candidates))))
+(defn anagrams-for [w coll]
+  (filter (partial anagram? w) coll))
