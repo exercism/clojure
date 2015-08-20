@@ -47,8 +47,9 @@
 
   ],
   "ignored": [
+    "_test",
     "docs",
-    "_test"
+    "target"
   ],
   "foregone": [
 
