@@ -6,3 +6,4 @@ jdk: oraclejdk8
 script:
 - bin/fetch-configlet
 - bin/configlet .
+- lein test
