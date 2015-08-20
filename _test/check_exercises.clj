@@ -11,5 +11,5 @@
     (doseq [problem problems]
       (load-file (str problem "/example.clj"))
       (load-file (str problem "/" (string/replace problem \- \_) "_test.clj")))
-    (is (odd? (:fail (apply run-tests
-                       (map #(symbol (str % "-test")) problems)))))))
+    (is (zero? (:fail (apply run-tests
+                        (map #(symbol (str % "-test")) problems)))))))
