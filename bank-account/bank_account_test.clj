@@ -4,7 +4,6 @@
             [clojure.string :refer (capitalize replace)]
             [clojure.test :refer :all]))
 
-(load-file "bank_account.clj")
 
 ;; The BankAccount module should support four calls:
 ;;

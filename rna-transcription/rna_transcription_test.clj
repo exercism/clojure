@@ -1,7 +1,6 @@
 (ns rna-transcription-test
   (:require [clojure.test :refer :all]))
 
-(load-file "rna_transcription.clj")
 
 (deftest transcribes-cytosine-to-guanine
   (is (= "G" (rna-transcription/to-rna "C"))))

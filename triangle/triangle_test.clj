@@ -1,7 +1,6 @@
 (ns triangle-test
   (:require [clojure.test :refer :all]))
 
-(load-file "triangle.clj")
 
 (deftest equilateral-1
   (is (= :equilateral (triangle/type 2 2 2))))

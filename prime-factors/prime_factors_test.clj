@@ -1,7 +1,6 @@
 (ns prime-factors-test
   (:require [clojure.test :refer :all]))
 
-(load-file "prime_factors.clj")
 
 (deftest one
   (is (= [] (prime-factors/of 1))))

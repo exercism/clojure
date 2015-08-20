@@ -1,7 +1,6 @@
 (ns etl-test
   (:require [clojure.test :refer :all]))
 
-(load-file "etl.clj")
 
 
 (deftest transform-one-value

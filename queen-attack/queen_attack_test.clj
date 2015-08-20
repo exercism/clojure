@@ -1,7 +1,6 @@
 (ns queen-attack-test
   (:require [clojure.test :refer :all]))
 
-(load-file "queen_attack.clj")
 
 (def empty-board
   (str "O O O O O O O O\n"

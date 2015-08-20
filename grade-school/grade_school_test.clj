@@ -1,7 +1,6 @@
 (ns grade-school-test
   (:require [clojure.test :refer :all]))
 
-(load-file "grade_school.clj")
 
 (def db {})
 

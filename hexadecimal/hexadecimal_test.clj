@@ -1,7 +1,6 @@
 (ns hexadecimal-test
   (:require [clojure.test :refer :all]))
 
-(load-file "hexadecimal.clj")
 
 (deftest hex-to-int-test
   (is (= 1 (hexadecimal/hex-to-int "1")))

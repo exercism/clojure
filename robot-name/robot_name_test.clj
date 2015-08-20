@@ -1,7 +1,6 @@
 (ns robot-name-test
   (:require [clojure.test :refer :all]))
 
-(load-file "robot_name.clj")
 
 (def robbie (robot-name/robot))
 (def clutz  (robot-name/robot))

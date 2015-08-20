@@ -1,7 +1,6 @@
 (ns kindergarten-garden-test
   (:require [clojure.test :refer :all]))
 
-(load-file "kindergarten_garden.clj")
 
 (deftest garden-test
   (is (= [:radishes :clover :grass :grass] (:alice (kindergarten-garden/garden "RC\nGG"))))

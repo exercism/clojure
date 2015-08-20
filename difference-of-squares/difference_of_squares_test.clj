@@ -1,7 +1,6 @@
 (ns difference-of-squares-test
   (:require [clojure.test :refer :all]))
 
-(load-file "difference_of_squares.clj")
 
 (deftest square-of-sums-to-5
   (is (= 225 (difference-of-squares/square-of-sums 5))))

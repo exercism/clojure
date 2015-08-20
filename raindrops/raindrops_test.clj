@@ -1,7 +1,6 @@
 (ns raindrops-test
   (:require [clojure.test :refer :all]))
 
-(load-file "raindrops.clj")
 
 (deftest one
   (is (= "1" (raindrops/convert 1))))

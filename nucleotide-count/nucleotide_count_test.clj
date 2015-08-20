@@ -1,7 +1,6 @@
 (ns nucleotide-count-test
   (:require [clojure.test :refer :all]))
 
-(load-file "nucleotide_count.clj")
 
 (deftest empty-dna-strand-has-no-adenosine
   (is (= 0 (nucleotide-count/count \A, ""))))

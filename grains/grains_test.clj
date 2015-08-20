@@ -1,7 +1,6 @@
 (ns grains-test
   (:require [clojure.test :refer :all]))
 
-(load-file "grains.clj")
 
 (deftest square-1
   (is (= 1 (grains/square 1))))

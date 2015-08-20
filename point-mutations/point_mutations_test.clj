@@ -1,7 +1,6 @@
 (ns point-mutations-test
   (:require [clojure.test :refer :all]))
 
-(load-file "point_mutations.clj")
 
 (deftest no-difference-between-empty-strands
   (is (= 0 (point-mutations/hamming-distance "" ""))))

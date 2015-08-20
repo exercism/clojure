@@ -1,7 +1,6 @@
 (ns leap-test
   (:require [clojure.test :refer :all]))
 
-(load-file "leap.clj")
 
 (deftest vanilla-leap-year
   (is (leap/leap-year? 1996)))

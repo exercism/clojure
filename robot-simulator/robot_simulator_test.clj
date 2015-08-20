@@ -1,7 +1,6 @@
 (ns robot-simulator-test
   (:require [clojure.test :refer :all]))
 
-(load-file "robot_simulator.clj")
 
 (def robbie (robot-simulator/robot {:x -2 :y 1} :east))
 (deftest can-get-vals

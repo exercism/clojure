@@ -1,7 +1,6 @@
 (ns binary-search-tree-test
   (:require [clojure.test :refer :all]))
 
-(load-file "binary_search_tree.clj")
 
 (deftest data-is-retained
   (is (= 4 (binary-search-tree/value (binary-search-tree/singleton 4)))))
