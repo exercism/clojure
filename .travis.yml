@@ -3,7 +3,7 @@ language: clojure
 sudo: false
 lein: lein2
 jdk: oraclejdk8
-# script:
-# - bin/fetch-configlet
-# - bin/configlet .
-# - lein test
+script:
+- bin/fetch-configlet
+- bin/configlet .
+- lein test
