@@ -4,9 +4,8 @@
             [clojure.test :refer :all]))
 
 (deftest check-exercises
-  (let [problems (-> (slurp "config.json") (json/parse-string true) :problems)]
-    (doseq [problem problems]
-      (load-file (str problem "/example.clj"))
-      (load-file (str problem "/" (string/replace problem \- \_) "_test.clj")))
-    (is (zero? (:fail (apply run-tests
-                        (map #(symbol (str % "-test")) problems)))))))
+  (doseq [problem (-> (slurp "config.json") (json/parse-string true) :problems)
+          :let [str-problem #(apply str problem %&)]]
+    (load-file (str-problem "/example.clj"))
+    (load-file (str-problem "/" (string/replace problem \- \_) "_test.clj"))
+    (is (successful? (run-tests (symbol (str-problem "-test")))))))
