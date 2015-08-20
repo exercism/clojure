@@ -4,10 +4,7 @@
             [clojure.test :refer :all]))
 
 (deftest check-exercises
-  (let [problems (-> (slurp "config.json")
-                     (json/parse-string true)
-                     :problems
-                     (->> (remove #{"bank-account"})))]
+  (let [problems (-> (slurp "config.json") (json/parse-string true) :problems)]
     (doseq [problem problems]
       (load-file (str problem "/example.clj"))
       (load-file (str problem "/" (string/replace problem \- \_) "_test.clj")))
