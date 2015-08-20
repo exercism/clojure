@@ -1,17 +1,29 @@
 (ns scrabble-score
   (:require [clojure.string :refer [split]]))
 
+;; The letter values as shown in the README
+(def ^:private letter-values
+  {"AEIOULNRST" 1
+   "DG"         2
+   "BCMP"       3
+   "FHVWY"      4
+   "K"          5
+   "JX"         8
+   "QZ"        10})
+
+;; A map from letter (as string) to score
+(def ^:private letter->score
+  (reduce-kv (fn [acc letters score]
+               (-> (map str letters)
+                   (zipmap (repeat score))
+                   (->> (merge acc))))
+             {} letter-values))
+
+;; Defaults to 0 for non-alphabetic input
 (defn score-letter [letter]
-  (let [ul (.toUpperCase letter)]
-    (cond
-      (some #{ul} (split "AEIOULNRST" #""))  1
-      (some #{ul} (split "DG" #"")        )  2
-      (some #{ul} (split "BCMP" #"")      )  3
-      (some #{ul} (split "FHVWY" #"")     )  4
-      (some #{ul} (split "K" #"")         )  5
-      (some #{ul} (split "JX" #"")        )  8
-      (some #{ul} (split "QZ" #"")        ) 10
-    )))
+  (get letter->score (.toUpperCase (str letter)) 0))
 
 (defn score-word [word]
-  (reduce + (map score-letter (rest (split word #"")))))
+  (reduce (fn [score letter]
+            (+ score (score-letter letter)))
+          0 word))
