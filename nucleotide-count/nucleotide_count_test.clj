@@ -21,7 +21,7 @@
   (is (= 1 (nucleotide-count/count \T "GGGGGTAACCCGG"))))
 
 (deftest validates-nucleotides
-    (is (thrown-with-msg? Throwable #"invalid nucleotide" (nucleotide-count/count \X "GACT"))))
+  (is (thrown-with-msg? Throwable #"invalid nucleotide" (nucleotide-count/count \X "GACT"))))
 
 (deftest counts-all-nucleotides
   (let [s "AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC"]
