@@ -39,3 +39,5 @@
                 filterv (fn [& _] (throw (Exception. "Implement without filterv!")))]
     (dorun (keep even? (range 10)))
     (dorun (discard even? (range 10)))))
+
+(run-tests)
