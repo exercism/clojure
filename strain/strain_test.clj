@@ -1,25 +1,24 @@
 (ns strain-test
-  (:refer-clojure :exclude [keep])
-  (:require [strain :refer [keep discard]]
+  (:require [strain :refer [retain discard]]
             [clojure.test :refer :all]))
 
 (deftest empty-sequence
-  (is (empty? (keep even? '()))))
+  (is (empty? (retain even? '()))))
 
-(deftest empty-keep
-  (is (empty? (keep odd? [2 4 6 8 10]))))
+(deftest empty-retain
+  (is (empty? (retain odd? [2 4 6 8 10]))))
 
-(deftest keep-single-element
-  (is (= [0] (keep even? [0]))))
+(deftest retain-single-element
+  (is (= [0] (retain even? [0]))))
 
-(deftest keep-several
-  (is (= [1 3 5] (keep odd? (range 6)))))
+(deftest retain-several
+  (is (= [1 3 5] (retain odd? (range 6)))))
 
-(deftest keep-everything
-  (is (= [2 4 6 8 10] (keep even? [2 4 6 8 10]))))
+(deftest retain-everything
+  (is (= [2 4 6 8 10] (retain even? [2 4 6 8 10]))))
 
-(deftest keep-strings
-  (is (= ["string" "three"] (keep string? ["string" 1 :two "three" ["4"]]))))
+(deftest retain-strings
+  (is (= ["string" "three"] (retain string? ["string" 1 :two "three" ["4"]]))))
 
 (deftest empty-discard
   (is (empty? (discard even? [2 4 6 8 10]))))
@@ -37,7 +36,7 @@
   (with-redefs [filter (fn [& _] (throw (Exception. "Implement without filter!")))
                 remove (fn [& _] (throw (Exception. "Implement without remove!")))
                 filterv (fn [& _] (throw (Exception. "Implement without filterv!")))]
-    (dorun (keep even? (range 10)))
+    (dorun (retain even? (range 10)))
     (dorun (discard even? (range 10)))))
 
 (run-tests)
