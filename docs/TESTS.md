@@ -1,5 +1,3 @@
-## Working on an exercise and running tests
-
 A Clojure REPL allows you to easily run code and get immediate feedback and can also be used to run tests.
 
 ### Leiningen
