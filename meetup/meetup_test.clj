@@ -57,7 +57,7 @@
 (deftest saturteenth-of-october-2013
   (is (= [2013 10 19] (meetup/meetup 10 2013 :saturday :teenth))))
 
-(deftest sunteenth-of-map-2013
+(deftest sunteenth-of-may-2013
   (is (= [2013 5 19] (meetup/meetup 5 2013 :sunday :teenth))))
 
 (deftest sunteenth-of-june-2013
