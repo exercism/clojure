@@ -1,4 +1,4 @@
 (ns hello-world)
 
-(defn- hello [name]
+(defn hello [name]
   (str "Hello, " name "!"))
