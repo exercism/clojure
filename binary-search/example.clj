@@ -5,7 +5,7 @@
 
 (defn search-for
   [elem alist]
-  (assert (apply <= alist) "Input list must be sorted")
+  {:pre [(apply <= alist)]}
   (let [middle (middle alist)
         cur-elem (nth alist middle)]
     (cond
