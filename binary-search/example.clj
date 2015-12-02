@@ -1,10 +1,7 @@
 (ns binary-search)
 
-(defn middle
-  [alist]
-  (-> alist
-      (count)
-       (quot 2)))
+(defn middle [alist]
+  (-> alist (count) (quot 2)))
 
 (defn search-for
   [elem alist]
