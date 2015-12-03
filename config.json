@@ -4,6 +4,7 @@
   "repository": "https://github.com/exercism/xclojure",
   "active": true,
   "problems": [
+    "hello-world",
     "bob",
     "rna-transcription",
     "word-count",
