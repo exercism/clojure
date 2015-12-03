@@ -1,4 +1,4 @@
-(ns bob-test
+(ns hello-world-test
   (:require [clojure.test :refer :all]))
 
 (load-file "hello_world.clj")
