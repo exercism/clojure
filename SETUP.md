@@ -1,7 +1,7 @@
 * * * *
 
 For installation and learning resources, refer to the
-[exercism help page](http://help.exercism.io/getting-started-with-clojure.html).
+[exercism help page](http://exercism.io/languages/clojure).
 
 For running the tests provided, you will need to install Leiningen.
 
