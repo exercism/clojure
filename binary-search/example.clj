@@ -5,7 +5,8 @@
 
 (defn search-for
   [elem alist]
-  {:pre [(apply <= alist)]}
+  {:pre [(or (apply <= alist)
+             (throw (Exception. "Collection must be sorted")))]}
   (let [middle (middle alist)
         cur-elem (nth alist middle)]
     (cond
