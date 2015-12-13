@@ -1,23 +1,28 @@
 * * * *
 
-For installation and learning resources, refer to the
-[exercism help page](http://exercism.io/languages/clojure).
+For learning resources and help with installation, refer to the
+[Exercism help page][].
 
-For running the tests provided, you will need to install Leiningen.
+To run the tests provided, you will need to install [Leiningen][].
 
-Installing on Mac OS X using homebrew, you can run the following command:
+To install Leiningen on Mac OS X using [Homebrew][], run the following command:
 
     brew install leiningen
 
-Installing on Linux, Windows or without homebrew see:
-[leiningen installation](https://github.com/technomancy/leiningen#installation).
+For help installing on Linux, Windows or without Homebrew see:
+[Leiningen installation][].
 
-In the exercise directory, create a file to hold your solution. The name of the
-file should be the exercise name with dash `-` replaced by underscore `_`. For
-example, if the exercise name is `hello-world`, name the solution file
+[Exercism help page]: http://exercism.io/languages/clojure
+[Leiningen]: http://leiningen.org
+[Homebrew]: http://brew.sh
+[Leiningen installation]: https://github.com/technomancy/leiningen#installation
+
+In an exercise directory, create a file to hold your solution. The name of the
+file should be the exercise name with dashes `-` replaced by underscores `_`.
+For example, if the exercise is called `hello-world`, name the solution file
 `hello_world.clj`.
 
-In order to run the test, you can run the test file from the exercise
-directory using the following command:
+To run the tests, navigate to the exercise directory and run the following
+command:
 
-    lien test
+    lein test
