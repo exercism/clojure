@@ -30,7 +30,6 @@
     "raindrops",
     "allergies",
     "atbash-cipher",
-    "bank-account",
     "crypto-square",
     "sieve",
     "kindergarten-garden",
@@ -52,6 +51,6 @@
     "target"
   ],
   "foregone": [
-
+    "bank-account"
   ]
 }
