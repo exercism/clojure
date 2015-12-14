@@ -2,24 +2,24 @@
   (:require [clojure.test :refer :all]))
 
 (def empty-board
-  (str "O O O O O O O O\n"
-       "O O O O O O O O\n"
-       "O O O O O O O O\n"
-       "O O O O O O O O\n"
-       "O O O O O O O O\n"
-       "O O O O O O O O\n"
-       "O O O O O O O O\n"
-       "O O O O O O O O\n"))
+  (str "_ _ _ _ _ _ _ _\n"
+       "_ _ _ _ _ _ _ _\n"
+       "_ _ _ _ _ _ _ _\n"
+       "_ _ _ _ _ _ _ _\n"
+       "_ _ _ _ _ _ _ _\n"
+       "_ _ _ _ _ _ _ _\n"
+       "_ _ _ _ _ _ _ _\n"
+       "_ _ _ _ _ _ _ _\n"))
 
 (def board
-  (str "O O O O O O O O\n"
-       "O O O O O O O O\n"
-       "O O O O W O O O\n"
-       "O O O O O O O O\n"
-       "O O O O O O O O\n"
-       "O O O O O O O O\n"
-       "O O O O O O B O\n"
-       "O O O O O O O O\n"))
+  (str "_ _ _ _ _ _ _ _\n"
+       "_ _ _ _ _ _ _ _\n"
+       "_ _ _ _ W _ _ _\n"
+       "_ _ _ _ _ _ _ _\n"
+       "_ _ _ _ _ _ _ _\n"
+       "_ _ _ _ _ _ _ _\n"
+       "_ _ _ _ _ _ B _\n"
+       "_ _ _ _ _ _ _ _\n"))
 
 (deftest handles-empty-board
   (is (= empty-board (queen-attack/board-string {}))))
