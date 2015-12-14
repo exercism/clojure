@@ -10,7 +10,7 @@
                               (for [x (range 8)
                                     y (range 8)]
                                 (.toUpperCase (name (or (piece-at [x y])
-                                    "O")))
+                                    "_")))
                                   )))
                          nil)))))
 
