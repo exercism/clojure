@@ -1,7 +1,6 @@
 (ns hexadecimal-test
   (:require [clojure.test :refer :all]))
 
-
 (deftest hex-to-int-test
   (is (= 1 (hexadecimal/hex-to-int "1")))
   (is (= 12 (hexadecimal/hex-to-int "c")))
@@ -13,6 +12,3 @@
   (is (= 0 (hexadecimal/hex-to-int "000000")))
   (is (= 16777215 (hexadecimal/hex-to-int "ffffff")))
   (is (= 16776960 (hexadecimal/hex-to-int "ffff00"))))
-
-(run-tests)
-

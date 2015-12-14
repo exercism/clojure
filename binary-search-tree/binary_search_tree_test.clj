@@ -1,7 +1,6 @@
 (ns binary-search-tree-test
   (:require [clojure.test :refer :all]))
 
-
 (deftest data-is-retained
   (is (= 4 (binary-search-tree/value (binary-search-tree/singleton 4)))))
 
@@ -41,6 +40,3 @@
 
 (deftest iterating-over-complex-tree
   (is (= (range 1 8) (binary-search-tree/to-list (binary-search-tree/from-list [4 2 1 3 6 7 5])))))
-
-(run-tests)
-

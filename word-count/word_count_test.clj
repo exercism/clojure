@@ -1,7 +1,6 @@
 (ns word-count-test
   (:require [clojure.test :refer :all]))
 
-
 (deftest count-one-word
   (is (= {"word" 1}
          (word-count/word-count "word"))))
@@ -25,5 +24,3 @@
 (deftest normalize-case
   (is (= {"go" 3}
          (word-count/word-count "go Go GO"))))
-
-(run-tests)

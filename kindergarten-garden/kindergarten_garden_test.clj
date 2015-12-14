@@ -1,7 +1,6 @@
 (ns kindergarten-garden-test
   (:require [clojure.test :refer :all]))
 
-
 (deftest garden-test
   (is (= [:radishes :clover :grass :grass] (:alice (kindergarten-garden/garden "RC\nGG"))))
   (is (= [:violets :clover :radishes :clover] (:alice (kindergarten-garden/garden "VC\nRC")))))
@@ -36,7 +35,3 @@
   (is (= [:radishes :radishes :grass    :clover]  (:roger    surprise-garden)))
   (is (= [:grass    :violets  :clover   :grass]   (:samantha surprise-garden)))
   (is (= [:radishes :grass    :clover   :violets] (:xander   surprise-garden))))
-
-(run-tests)
-
-

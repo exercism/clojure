@@ -4,7 +4,6 @@
             [clojure.string :refer (capitalize replace)]
             [clojure.test :refer :all]))
 
-
 ;; The BankAccount module should support four calls:
 ;;
 ;; open-account
@@ -54,5 +53,4 @@
       (pcalls add-10 add-10 add-10)))
   (is (= 30 (get-balance))))
 
-(run-tests)
 (shutdown-agents) ;; for the pcalls above so the test exits

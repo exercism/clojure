@@ -1,7 +1,6 @@
 (ns bob-test
   (:require [clojure.test :refer :all]))
 
-
 (deftest responds-to-something
   (is (= "Whatever." (bob/response-for "Tom-ay-to, tom-aaaah-to."))))
 
@@ -43,5 +42,3 @@
 
 (deftest responds-to-number-question
   (is (= "Sure." (bob/response-for "4?"))))
-
-(run-tests)

@@ -1,7 +1,6 @@
 (ns difference-of-squares-test
   (:require [clojure.test :refer :all]))
 
-
 (deftest square-of-sums-to-5
   (is (= 225 (difference-of-squares/square-of-sums 5))))
 
@@ -28,6 +27,3 @@
 
 (deftest difference-of-sums-to-100
   (is (= 25164150 (difference-of-squares/difference 100))))
-
-(run-tests)
-

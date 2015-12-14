@@ -1,7 +1,6 @@
 (ns raindrops-test
   (:require [clojure.test :refer :all]))
 
-
 (deftest one
   (is (= "1" (raindrops/convert 1))))
 
@@ -49,5 +48,3 @@
 
 (deftest twelve-thousand-one-hundred-twenty-one
   (is (= "12121" (raindrops/convert 12121))))
-
-(run-tests)

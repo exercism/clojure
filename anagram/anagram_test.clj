@@ -1,7 +1,6 @@
 (ns anagram-test
   (:require [clojure.test :refer :all]))
 
-
 (deftest no-matches
   (is (= [] (anagram/anagrams-for "diaper" ["hello" "world" "zombies" "pants"]))))
 
@@ -30,5 +29,3 @@
 
 (deftest capital-word-is-not-own-anagram
   (is (= [] (anagram/anagrams-for "BANANA" ["banana"]))))
-
-(run-tests)

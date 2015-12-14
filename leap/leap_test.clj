@@ -1,7 +1,6 @@
 (ns leap-test
   (:require [clojure.test :refer :all]))
 
-
 (deftest vanilla-leap-year
   (is (leap/leap-year? 1996)))
 
@@ -13,5 +12,3 @@
 
 (deftest exceptional-century
   (is (leap/leap-year? 2400)))
-
-(run-tests)

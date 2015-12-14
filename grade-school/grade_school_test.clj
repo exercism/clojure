@@ -1,7 +1,6 @@
 (ns grade-school-test
   (:require [clojure.test :refer :all]))
 
-
 (def db {})
 
 (deftest add-student
@@ -51,6 +50,3 @@
              (grade-school/add "Kyle" 3)
              (grade-school/sorted)
              (keys)))))
-
-(run-tests)
-

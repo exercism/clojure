@@ -1,7 +1,6 @@
 (ns nucleotide-count-test
   (:require [clojure.test :refer :all]))
 
-
 (deftest empty-dna-strand-has-no-adenosine
   (is (= 0 (nucleotide-count/count \A, ""))))
 
@@ -26,5 +25,3 @@
   (let [s "AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC"]
     (is (= {\A 20, \T 21, \G 17, \C 12}
            (nucleotide-count/nucleotide-counts s)))))
-
-(run-tests)

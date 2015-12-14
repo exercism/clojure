@@ -1,7 +1,6 @@
 (ns prime-factors-test
   (:require [clojure.test :refer :all]))
 
-
 (deftest one
   (is (= [] (prime-factors/of 1))))
 
@@ -34,5 +33,3 @@
 
 (deftest a-huge-number
   (is (= [11, 9539, 894119] (prime-factors/of 93819012551))))
-
-(run-tests)

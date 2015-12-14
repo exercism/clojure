@@ -1,7 +1,6 @@
 (ns crypto-square-test
   (:require [clojure.test :refer :all]))
 
-
 (deftest normalize-splunk
   (is (= "splunk" (crypto-square/normalize-plaintext "s#!@$%plunk"))))
 (deftest normalize-with-punctuation
@@ -36,6 +35,3 @@
 (deftest cipher-5
   (is (= "ageihdsednsh lsagtoonaepe lannswnccair hrditeaetnrh ueethdnatoio mbqyewdnotto aouayicdwhod nranatosaef bnldrhnhrrb efirersodir irnieecusno nedgnailoat"
          (crypto-square/normalize-ciphertext "All human beings are born free and equal in dignity and rights. They are endowed with reason and conscience and should act towards one another in a spirit of brotherhood."))))
-
-(run-tests)
-

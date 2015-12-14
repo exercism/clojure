@@ -1,7 +1,6 @@
 (ns robot-name-test
   (:require [clojure.test :refer :all]))
 
-
 (def robbie (robot-name/robot))
 (def clutz  (robot-name/robot))
 
@@ -25,5 +24,3 @@
 
 (deftest new-name-is-different-than-old-name
   (is (not (= original-name (robot-name/robot-name robbie)))))
-
-(run-tests)

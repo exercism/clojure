@@ -125,4 +125,3 @@
       "Returns nil if there is no path"))
 
 ;; Run the tests when using lein-exec
-(run-tests)
