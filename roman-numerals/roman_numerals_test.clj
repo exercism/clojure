@@ -1,8 +1,6 @@
 (ns roman-numerals-test
   (:require [clojure.test :refer :all]))
 
-(load-file "roman_numerals.clj")
-
 (deftest one
   (is (= "I" (roman-numerals/numerals 1))))
 
@@ -56,5 +54,3 @@
 
 (deftest three-thousand
   (is (= "MMM" (roman-numerals/numerals 3000))))
-
-(run-tests)

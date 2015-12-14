@@ -1,8 +1,6 @@
 (ns rna-transcription-test
   (:require [clojure.test :refer :all]))
 
-(load-file "rna_transcription.clj")
-
 (deftest transcribes-cytosine-to-guanine
   (is (= "G" (rna-transcription/to-rna "C"))))
 
@@ -20,5 +18,3 @@
 
 (deftest it-validates-dna-strands
   (is (thrown? AssertionError (rna-transcription/to-rna "XCGFGGTDTTAA"))))
-
-(run-tests)

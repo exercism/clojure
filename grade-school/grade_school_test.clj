@@ -1,8 +1,6 @@
 (ns grade-school-test
   (:require [clojure.test :refer :all]))
 
-(load-file "grade_school.clj")
-
 (def db {})
 
 (deftest add-student
@@ -52,6 +50,3 @@
              (grade-school/add "Kyle" 3)
              (grade-school/sorted)
              (keys)))))
-
-(run-tests)
-

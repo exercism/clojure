@@ -1,8 +1,6 @@
 (ns grains-test
   (:require [clojure.test :refer :all]))
 
-(load-file "grains.clj")
-
 (deftest square-1
   (is (= 1 (grains/square 1))))
 
@@ -26,5 +24,3 @@
 
 (deftest total-grains
   (is (= 18446744073709551615  (grains/total))))
-
-(run-tests)

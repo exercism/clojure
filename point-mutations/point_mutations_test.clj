@@ -1,8 +1,6 @@
 (ns point-mutations-test
   (:require [clojure.test :refer :all]))
 
-(load-file "point_mutations.clj")
-
 (deftest no-difference-between-empty-strands
   (is (= 0 (point-mutations/hamming-distance "" ""))))
 
@@ -21,5 +19,3 @@
 (deftest undefined-when-lengths-are-different
   (is (= nil (point-mutations/hamming-distance "AAAC" "TAGGGGAGGCTAGCGGTAGGAC")))
   (is (= nil (point-mutations/hamming-distance "GACTACGGACAGGGTAACATAG" "GACA"))))
-
-(run-tests)

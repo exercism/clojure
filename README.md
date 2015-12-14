@@ -1,4 +1,5 @@
 # xClojure
+[![Build Status](https://travis-ci.org/exercism/xclojure.svg)](https://travis-ci.org/exercism/xclojure)
 
 Exercism exercises in Clojure
 

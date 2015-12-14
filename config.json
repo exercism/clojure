@@ -30,7 +30,6 @@
     "raindrops",
     "allergies",
     "atbash-cipher",
-    "bank-account",
     "crypto-square",
     "sieve",
     "kindergarten-garden",
@@ -47,9 +46,11 @@
 
   ],
   "ignored": [
-    "docs"
+    "_test",
+    "docs",
+    "target"
   ],
   "foregone": [
-
+    "bank-account"
   ]
 }

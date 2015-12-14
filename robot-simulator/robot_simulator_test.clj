@@ -1,8 +1,6 @@
 (ns robot-simulator-test
   (:require [clojure.test :refer :all]))
 
-(load-file "robot_simulator.clj")
-
 (def robbie (robot-simulator/robot {:x -2 :y 1} :east))
 (deftest can-get-vals
   (is (= :east (:bearing robbie)))
@@ -34,6 +32,3 @@
   (let [roomba (robot-simulator/simulate "LAAARRRALLLL" roomba)]
     (is (= :north (:bearing roomba)))
     (is (= {:x 11 :y 5} (:coordinates roomba)))))
-
-(run-tests)
-

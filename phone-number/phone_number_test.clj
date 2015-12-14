@@ -1,8 +1,6 @@
 (ns phone-number-test
   (:require [clojure.test :refer :all]))
 
-(load-file "phone_number.clj")
-
 (deftest cleans-number
   (is (= "1234567890" (phone-number/number "(123) 456-7890"))))
 
@@ -38,5 +36,3 @@
 
 (deftest pretty-print-with-full-us-phone-number
   (is (= "(987) 654-3210" (phone-number/pretty-print "19876543210"))))
-
-(run-tests)

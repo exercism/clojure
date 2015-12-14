@@ -1,8 +1,6 @@
 (ns atbash-cipher-test
   (:require [clojure.test :refer :all]))
 
-(load-file "atbash_cipher.clj")
-
 (deftest encode-no
   (is (= "ml" (atbash-cipher/encode "no"))))
 
@@ -28,5 +26,3 @@
   (let [plaintext "The quick brown fox jumps over the lazy dog."
         cipher "gsvjf rxpyi ldmul cqfnk hlevi gsvoz abwlt"]
     (is (= cipher (atbash-cipher/encode plaintext)))))
-
-(run-tests)

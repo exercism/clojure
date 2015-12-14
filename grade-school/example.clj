@@ -1,4 +1,4 @@
-(ns school)
+(ns grade-school)
 
 (defn grade
   "show the roster for a specific grade"

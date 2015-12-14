@@ -1,8 +1,6 @@
 (ns largest-series-product-test
   (:require [clojure.test :refer :all]))
 
-(load-file "largest_series_product.clj")
-
 (deftest largest_series_tests
   (is (= (range 0 10) (largest-series-product/digits "0123456789")))
   (is (= (range 9 -1 -1) (largest-series-product/digits "9876543210")))
@@ -24,6 +22,3 @@
   (is (= 1 (largest-series-product/largest-product 4 "123")))
   ;; edge case :)
   (is (= 0 (largest-series-product/largest-product 2 "00"))))
-
-(run-tests)
-

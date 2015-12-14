@@ -1,8 +1,6 @@
 (ns allergies-test
   (:require [clojure.test :refer :all]))
 
-(load-file "allergies.clj")
-
 (deftest no-allergies-at-all
   (is (= [] (allergies/allergies 0))))
 
@@ -44,5 +42,3 @@
 (deftest ignore-non-allergen-score-parts
   (is (= [:eggs :shellfish :strawberries :tomatoes :chocolate :pollen :cats]
          (allergies/allergies 509))))
-
-(run-tests)

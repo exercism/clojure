@@ -1,8 +1,6 @@
 (ns binary-search-test
   (:require [clojure.test :refer :all]))
 
-(load-file "binary_search.clj")
-
 (def short-vector [1, 3, 4, 6, 8, 9, 11])
 
 (def unsorted-vector [2, 1, 4, 3, 6])
@@ -43,6 +41,3 @@
 
 (deftest throws-exception-when-element-not-found
   (is (thrown-with-msg? Throwable #"not found" (binary-search/search-for 20 short-vector))))
-
-(run-tests)
-

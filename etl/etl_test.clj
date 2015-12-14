@@ -1,9 +1,6 @@
 (ns etl-test
   (:require [clojure.test :refer :all]))
 
-(load-file "etl.clj")
-
-
 (deftest transform-one-value
   (is (= {"world" 1}
          (etl/transform {1 ["WORLD"]}))))
@@ -32,5 +29,3 @@
              8 (re-seq #"\w" "JX")
             10 (re-seq #"\w" "QZ")
          }))))
-
-(run-tests)

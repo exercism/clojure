@@ -1,8 +1,6 @@
 (ns queen-attack-test
   (:require [clojure.test :refer :all]))
 
-(load-file "queen_attack.clj")
-
 (def empty-board
   (str "O O O O O O O O\n"
        "O O O O O O O O\n"
@@ -35,6 +33,3 @@
   (is (= true  (queen-attack/can-attack {:w [1 1] :b [6 6]})))
   (is (= true  (queen-attack/can-attack {:w [0 6] :b [1 7]})))
   (is (= true  (queen-attack/can-attack {:w [4 1] :b [6 3]}))))
-
-(run-tests)
-

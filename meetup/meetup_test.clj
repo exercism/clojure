@@ -1,8 +1,6 @@
 (ns meetup-test
   (:require [clojure.test :refer :all]))
 
-(load-file "meetup.clj")
-
 (deftest monteenth-of-may-2013
   (is (= [2013 5 13] (meetup/meetup 5 2013 :monday :teenth))))
 
@@ -275,5 +273,3 @@
 
 (deftest last-sunday-of-april-2013
   (is (= [2013 4 28] (meetup/meetup 4 2013 :sunday :last))))
-
-(run-tests)

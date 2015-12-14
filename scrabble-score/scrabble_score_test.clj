@@ -1,8 +1,6 @@
 (ns scrabble-score-test
   (:require [clojure.test :refer :all]))
 
-(load-file "scrabble_score.clj")
-
 (deftest lower-case-letter
   (is (= 1 (scrabble-score/score-letter "a"))))
 
@@ -20,5 +18,3 @@
 
 (deftest all-upper-case-word
   (is (= 20 (scrabble-score/score-word "MULTIBILLIONAIRE"))))
-
-(run-tests)

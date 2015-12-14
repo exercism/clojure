@@ -1,8 +1,6 @@
 (ns space-age-test
   (:require [clojure.test :refer :all]))
 
-(load-file "space_age.clj")
-
 (defn- rounds-to
   [expected actual]
   (is (= (Math/round (* 100.0 expected))
@@ -45,5 +43,3 @@
   (let [seconds 8210123456]
     (rounds-to 260.16 (space-age/on-earth seconds))
     (rounds-to 1.58 (space-age/on-neptune seconds))))
-
-(run-tests)
