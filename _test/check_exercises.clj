@@ -1,11 +1,14 @@
 (ns check-exercises
   (:require [cheshire.core :as json]
             [clojure.string :as string]
-            [clojure.test :refer :all]))
+            [clojure.test :refer [deftest is run-tests successful?]]))
+
+(defn- ->snake_case [s] (string/replace s \- \_))
 
 (deftest check-exercises
-  (doseq [problem (-> (slurp "config.json") (json/parse-string true) :problems)
-          :let [str-problem #(apply str problem %&)]]
-    (load-file (str-problem "/example.clj"))
-    (load-file (str-problem "/" (string/replace problem \- \_) "_test.clj"))
-    (is (successful? (run-tests (symbol (str-problem "-test")))))))
+  (doseq [problem ((json/parse-string (slurp "config.json")) "problems")
+          :let [path-to-problem (partial str problem "/")
+                problem-tests   (symbol (str problem "-test"))]]
+    (load-file (path-to-problem "example.clj"))
+    (load-file (path-to-problem (->snake_case problem) "_test.clj"))
+    (is (successful? (run-tests problem-tests)))))
