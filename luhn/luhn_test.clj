@@ -1,5 +1,5 @@
 (ns luhn-test
-  (:require [clojure.test :refer [deftest is run-tests]]))
+  (:require [clojure.test :refer [deftest is]]))
 
 (deftest checksum-works
   (is (= 2 (luhn/checksum 10)))
