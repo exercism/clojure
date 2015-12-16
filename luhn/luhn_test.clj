@@ -1,6 +1,5 @@
 (ns luhn-test
-  (:require luhn
-            [clojure.test :refer [deftest is run-tests]]))
+  (:require [clojure.test :refer [deftest is run-tests]]))
 
 (deftest checksum-works
   (is (= 2 (luhn/checksum 10)))
@@ -30,5 +29,3 @@
   (is (= 8763 (luhn/add-check-digit 876)))
   (is (= 4242424242424242 (luhn/add-check-digit 424242424242424)))
   (is (= 2323200577663554 (luhn/add-check-digit 232320057766355))))
-
-(run-tests)
