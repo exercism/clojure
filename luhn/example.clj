@@ -5,24 +5,24 @@
   [n]
   (->> [n 0]
        (iterate (fn [[i _]] [(quot i 10) (mod i 10)]))
-       (take-while #(not= [0 0] %))
+       (take-while (complement #{[0 0]}))
        (map second)
        rest))
 
 (defn checksum
   "returns the luhn checksum of n, assuming it has a check digit"
   [n]
-  (->> n
-       to-reversed-digits
-       (map #(* %1 %2) (cycle [1 2]))
-       (map #(if (>= % 10) (- % 9) %))
-       (apply +)
-       (#(mod % 10))))
+  (-> (->> n
+           to-reversed-digits
+           (map * (cycle [1 2]))
+           (map #(if (>= % 10) (- % 9) %))
+           (apply +))
+      (mod 10)))
 
 (defn valid?
   "whether n has a valid luhn check-digit"
   [n]
-  (= 0 (checksum n)))
+  (zero? (checksum n)))
 
 (defn add-check-digit
   "given a number, adds a luhn check digit at the end"
