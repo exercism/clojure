@@ -33,10 +33,8 @@
   (is (= [0 2 4] (discard odd? (range 6)))))
 
 (deftest does-not-use-existing-implementations
-  (with-redefs [filter (constantly (throw (Exception. "Implement without filter!")))
-                remove (constantly (throw (Exception. "Implement without remove!")))
-                filterv (constantly (throw (Exception. "Implement without filterv!")))]
+  (with-redefs [filter  (fn [& _] (throw (Exception. "Implement without filter!")))
+                remove  (fn [& _] (throw (Exception. "Implement without remove!")))
+                filterv (fn [& _] (throw (Exception. "Implement without filterv!")))]
     (dorun (retain even? (range 10)))
     (dorun (discard even? (range 10)))))
-
-(run-tests)
