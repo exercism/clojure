@@ -33,6 +33,7 @@
     "atbash-cipher",
     "crypto-square",
     "sieve",
+    "luhn",
     "kindergarten-garden",
     "robot-simulator",
     "queen-attack",
