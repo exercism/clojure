@@ -2,11 +2,10 @@
 
 (defn digits [ds] (map #(Character/digit % 10) ds))
 
-(defn slices [n ds]
-  (partition n 1 (digits ds)))
+(defn slices [n ds] (partition n 1 (digits ds)))
 
 (defn largest-product [size ds]
-  (if
-    (or (empty? ds) (> size (count ds))) 1
-    (apply max (map #(apply * %) (slices size ds)))))
-
+  (cond
+    (empty? ds)         (throw (Exception. "Series must not be empty."))
+    (> size (count ds)) 1
+    :else               (apply max (map (partial apply *) (slices size ds)))))
