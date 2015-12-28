@@ -1,20 +1,10 @@
 (ns pascals-triangle)
 
-(defn- build-next-row
-  [number row]
-  (->> number
-       inc
-       range
-       (mapv #(cond
-               (zero? %1) (first row)
-               (= number %1) (last row)
-               :else (+' (row (dec %1)) (row %1))))))
+(defn row [n]
+  (->> (range 1 (inc (quot (dec n) 2)))
+       (reductions #(quot (*' %1 (-' n %2)) %2) 1)
+       ((fn [s]
+          (let [v (vec s)]
+            (into v (cond-> (rseq v) (odd? n) rest)))))))
 
-(defn triangle [row]
-  (loop [last-row [1]
-         i 1
-         res [[1]]]
-    (let [new-row (build-next-row i last-row)]
-      (if (= i row)
-        res
-        (recur new-row (inc i) (conj res new-row))))))
+(def triangle (map row (iterate inc 1)))
