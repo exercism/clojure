@@ -1,5 +1,6 @@
 (ns triangle-test
-  (:require [clojure.test :refer :all]))
+  (:require [clojure.test :refer [deftest is]]
+            triangle))
 
 (deftest equilateral-1
   (is (= :equilateral (triangle/type 2 2 2))))

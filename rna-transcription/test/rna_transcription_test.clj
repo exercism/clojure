@@ -1,5 +1,6 @@
 (ns rna-transcription-test
-  (:require [clojure.test :refer :all]))
+  (:require [clojure.test :refer [deftest is]]
+            rna-transcription))
 
 (deftest transcribes-cytosine-to-guanine
   (is (= "G" (rna-transcription/to-rna "C"))))

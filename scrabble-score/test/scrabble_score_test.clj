@@ -1,5 +1,6 @@
 (ns scrabble-score-test
-  (:require [clojure.test :refer :all]))
+  (:require [clojure.test :refer [deftest is]]
+            scrabble-score))
 
 (deftest lower-case-letter
   (is (= 1 (scrabble-score/score-letter "a"))))

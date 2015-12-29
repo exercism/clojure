@@ -1,5 +1,6 @@
 (ns queen-attack-test
-  (:require [clojure.test :refer :all]))
+  (:require [clojure.test :refer [deftest is]]
+            queen-attack))
 
 (def empty-board
   (str "_ _ _ _ _ _ _ _\n"

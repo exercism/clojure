@@ -1,5 +1,6 @@
 (ns leap-test
-  (:require [clojure.test :refer :all]))
+  (:require [clojure.test :refer [deftest is]]
+            leap))
 
 (deftest vanilla-leap-year
   (is (leap/leap-year? 1996)))

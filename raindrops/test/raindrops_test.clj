@@ -1,5 +1,6 @@
 (ns raindrops-test
-  (:require [clojure.test :refer :all]))
+  (:require [clojure.test :refer [deftest is]]
+            raindrops))
 
 (deftest one
   (is (= "1" (raindrops/convert 1))))

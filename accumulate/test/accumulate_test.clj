@@ -1,7 +1,9 @@
 (ns accumulate-test
-  (:require [clojure.test :refer :all]))
+  (:require [clojure.test :refer [deftest is]]
+            accumulate))
 
 (defn- square [n] (* n n))
+
 (defn- to-s [xs] (apply str xs))
 
 (deftest empty-accumulation
@@ -12,12 +14,17 @@
 
 (deftest accumulate-upcases
   (is (= ["HELLO", "WORLD"]
-         (map to-s (accumulate/accumulate clojure.string/upper-case ["hello" "world"])))))
+         (->> ["hello" "world"]
+              (accumulate/accumulate clojure.string/upper-case)
+              (map to-s)))))
 
 (deftest accumulate-reversed-strings
   (is (= ["eht" "kciuq" "nworb" "xof" "cte"]
-         (map to-s (accumulate/accumulate reverse ["the" "quick" "brown" "fox" "etc"])))))
+         (->> ["the" "quick" "brown" "fox" "etc"]
+              (accumulate/accumulate reverse)
+              (map to-s)))))
 
 (deftest accumulate-recursively
   (is (= [["a1" "a2" "a3"] ["b1" "b2" "b3"] ["c1" "c2" "c3"]]
-         (accumulate/accumulate #(accumulate/accumulate (fn [n] (str % n)) [1 2 3]) "abc"))))
+         (-> #(accumulate/accumulate (fn [n] (str % n)) [1 2 3])
+             (accumulate/accumulate "abc")))))

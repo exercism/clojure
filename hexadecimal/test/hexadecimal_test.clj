@@ -1,5 +1,6 @@
 (ns hexadecimal-test
-  (:require [clojure.test :refer :all]))
+  (:require [clojure.test :refer [deftest is]]
+            hexadecimal))
 
 (deftest hex-to-int-test
   (is (= 1 (hexadecimal/hex-to-int "1")))

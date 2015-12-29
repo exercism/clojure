@@ -1,5 +1,6 @@
 (ns gigasecond-test
-  (:require [clojure.test :refer :all]))
+  (:require [clojure.test :refer [deftest is]]
+            gigasecond))
 
 (deftest from-apr-25-2011
   (is (= [2043 1 1] (gigasecond/from 2011 4 25))))

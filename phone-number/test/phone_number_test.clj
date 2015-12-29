@@ -1,5 +1,6 @@
 (ns phone-number-test
-  (:require [clojure.test :refer :all]))
+  (:require [clojure.test :refer [deftest is]]
+            phone-number))
 
 (deftest cleans-number
   (is (= "1234567890" (phone-number/number "(123) 456-7890"))))

@@ -1,6 +1,8 @@
 (ns strain-test
-  (:require [strain :refer [retain discard]]
-            [clojure.test :refer :all]))
+  (:require [clojure.test :refer [deftest is]]
+            [strain :refer [retain discard]]))
+
+(defn- fn-throw-exception [msg] (fn [& _] (throw (Exception. msg))))
 
 (deftest empty-sequence
   (is (empty? (retain even? '()))))
@@ -33,8 +35,8 @@
   (is (= [0 2 4] (discard odd? (range 6)))))
 
 (deftest does-not-use-existing-implementations
-  (with-redefs [filter  (fn [& _] (throw (Exception. "Implement without filter!")))
-                remove  (fn [& _] (throw (Exception. "Implement without remove!")))
-                filterv (fn [& _] (throw (Exception. "Implement without filterv!")))]
+  (with-redefs [filter  (fn-throw-exception "Implement without filter!")
+                remove  (fn-throw-exception "Implement without remove!")
+                filterv (fn-throw-exception "Implement without filterv!")]
     (dorun (retain even? (range 10)))
     (dorun (discard even? (range 10)))))

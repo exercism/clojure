@@ -1,5 +1,6 @@
 (ns allergies-test
-  (:require [clojure.test :refer :all]))
+  (:require [clojure.test :refer [deftest is]]
+            allergies))
 
 (deftest no-allergies-at-all
   (is (= [] (allergies/allergies 0))))

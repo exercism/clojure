@@ -1,5 +1,6 @@
 (ns binary-test
-  (:require [clojure.test :refer :all]))
+  (:require [clojure.test :refer [deftest is]]
+            binary))
 
 (deftest binary-1-is-decimal-1
   (is (= 1 (binary/to-decimal "1"))))

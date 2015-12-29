@@ -1,5 +1,5 @@
 (ns pascals-triangle-test
-  (:require [clojure.test :refer :all]
+  (:require [clojure.test :refer [deftest is testing]]
             [pascals-triangle :refer :all]))
 
 (deftest test-one-row
@@ -34,6 +34,6 @@
 
 (deftest triangle-300th-row
   (testing "300th row"
-    (is (true?
-         (some #(= 768408467483699505953134992026497450726137182648496343119395977464120N %1)
-                     (row 300))))))
+    (is (some?
+         (some #{768408467483699505953134992026497450726137182648496343119395977464120N}
+               (row 300))))))

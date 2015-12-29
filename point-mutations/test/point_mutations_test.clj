@@ -1,5 +1,6 @@
 (ns point-mutations-test
-  (:require [clojure.test :refer :all]))
+  (:require [clojure.test :refer [deftest is]]
+            point-mutations))
 
 (deftest no-difference-between-empty-strands
   (is (= 0 (point-mutations/hamming-distance "" ""))))

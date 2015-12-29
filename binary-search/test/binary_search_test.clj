@@ -1,5 +1,6 @@
 (ns binary-search-test
-  (:require [clojure.test :refer :all]))
+  (:require [clojure.test :refer [deftest is]]
+            binary-search))
 
 (def short-vector [1, 3, 4, 6, 8, 9, 11])
 
@@ -16,7 +17,8 @@
   (is (= 0 (binary-search/search-for 4 [4]))))
 
 (deftest throws-exception-when-list-is-not-sorted
-  (is (thrown-with-msg? Throwable #"must be sorted" (binary-search/search-for 5 unsorted-vector))))
+  (is (thrown-with-msg? Throwable #"must be sorted"
+        (binary-search/search-for 5 unsorted-vector))))
 
 (deftest it-finds-position-of-search-data
   (is (= 5 (binary-search/search-for 9 short-vector))))
@@ -40,4 +42,5 @@
   (is (= 4 (binary-search/search-for 3 '(-3 -2 0 1 3 4)))))
 
 (deftest throws-exception-when-element-not-found
-  (is (thrown-with-msg? Throwable #"not found" (binary-search/search-for 20 short-vector))))
+  (is (thrown-with-msg? Throwable #"not found"
+        (binary-search/search-for 20 short-vector))))

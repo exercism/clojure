@@ -1,5 +1,6 @@
 (ns grains-test
-  (:require [clojure.test :refer :all]))
+  (:require [clojure.test :refer [deftest is]]
+            grains))
 
 (deftest square-1
   (is (= 1 (grains/square 1))))

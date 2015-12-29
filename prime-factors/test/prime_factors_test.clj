@@ -1,5 +1,6 @@
 (ns prime-factors-test
-  (:require [clojure.test :refer :all]))
+  (:require [clojure.test :refer [deftest is]]
+            prime-factors))
 
 (deftest one
   (is (= [] (prime-factors/of 1))))

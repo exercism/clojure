@@ -1,5 +1,6 @@
 (ns grade-school-test
-  (:require [clojure.test :refer :all]))
+  (:require [clojure.test :refer [deftest is]]
+            grade-school))
 
 (def db {})
 

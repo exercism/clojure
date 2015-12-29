@@ -1,5 +1,6 @@
 (ns space-age-test
-  (:require [clojure.test :refer :all]))
+  (:require [clojure.test :refer [deftest is]]
+            space-age))
 
 (defn- rounds-to
   [expected actual]

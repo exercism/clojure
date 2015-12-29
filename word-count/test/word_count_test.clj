@@ -1,5 +1,6 @@
 (ns word-count-test
-  (:require [clojure.test :refer :all]))
+  (:require [clojure.test :refer [deftest is]]
+            word-count))
 
 (deftest count-one-word
   (is (= {"word" 1}

@@ -1,5 +1,6 @@
 (ns roman-numerals-test
-  (:require [clojure.test :refer :all]))
+  (:require [clojure.test :refer [deftest is]]
+            roman-numerals))
 
 (deftest one
   (is (= "I" (roman-numerals/numerals 1))))

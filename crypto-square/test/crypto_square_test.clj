@@ -1,5 +1,6 @@
 (ns crypto-square-test
-  (:require [clojure.test :refer :all]))
+  (:require [clojure.test :refer [deftest is]]
+            crypto-square))
 
 (deftest normalize-splunk
   (is (= "splunk" (crypto-square/normalize-plaintext "s#!@$%plunk"))))
@@ -33,5 +34,12 @@
   (is (= "vrel aepe mset paoo irpo"
          (crypto-square/normalize-ciphertext "Vampires are people too!"))))
 (deftest cipher-5
-  (is (= "ageihdsednsh lsagtoonaepe lannswnccair hrditeaetnrh ueethdnatoio mbqyewdnotto aouayicdwhod nranatosaef bnldrhnhrrb efirersodir irnieecusno nedgnailoat"
-         (crypto-square/normalize-ciphertext "All human beings are born free and equal in dignity and rights. They are endowed with reason and conscience and should act towards one another in a spirit of brotherhood."))))
+  (is (= (str "ageihdsednsh lsagtoonaepe lannswnccair hrditeaetnrh "
+              "ueethdnatoio mbqyewdnotto aouayicdwhod nranatosaef "
+              "bnldrhnhrrb efirersodir irnieecusno nedgnailoat")
+         (let [plaintext (str "All human beings are born free "
+                              "and equal in dignity and rights. "
+                              "They are endowed with reason and conscience "
+                              "and should act towards one another "
+                              "in a spirit of brotherhood.")]
+           (crypto-square/normalize-ciphertext plaintext)))))
