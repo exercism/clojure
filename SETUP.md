@@ -17,10 +17,20 @@ For help installing on Linux, Windows or without Homebrew see:
 [Homebrew]: http://brew.sh
 [Leiningen installation]: https://github.com/technomancy/leiningen#installation
 
-In an exercise directory, create a file to hold your solution. The name of the
-file should be the exercise name with dashes `-` replaced by underscores `_`.
-For example, if the exercise is called `hello-world`, name the solution file
-`hello_world.clj`.
+In an exercise directory, create a `src` directory and a file therein to hold
+your solution. The name of the file should be the exercise name with dashes `-`
+replaced by underscores `_`.  For example, if the exercise is called
+`hello-world`, name the solution file `hello_world.clj`.
+
+Your resulting file tree should look something like this:
+
+    /path/to/hello-world
+    ├── project.clj
+    ├── src
+    │   └── hello_world.clj
+    └── test
+        └── hello_world_test.clj
+
 
 To run the tests, navigate to the exercise directory and run the following
 command:
