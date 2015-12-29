@@ -1,6 +1,6 @@
 (ns trinary-test
-  (:require [clojure.test :refer :all]
-            [trinary :refer :all]))
+  (:require [clojure.test :refer [deftest is testing]]
+            [trinary :refer [to-decimal]]))
 
 (deftest trinary-1-is-decimal-1
   (testing "1 should still be 1"
