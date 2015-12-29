@@ -9,6 +9,6 @@
   (doseq [problem ((json/parse-string (slurp "config.json")) "problems")
           :let [path-to-problem (partial str problem "/")
                 problem-tests   (symbol (str problem "-test"))]]
-    (load-file (path-to-problem "example.clj"))
-    (load-file (path-to-problem (->snake_case problem) "_test.clj"))
+    (load-file (path-to-problem "src/example.clj"))
+    (load-file (path-to-problem "test/" (->snake_case problem) "_test.clj"))
     (is (successful? (run-tests problem-tests)))))
