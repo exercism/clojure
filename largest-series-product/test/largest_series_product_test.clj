@@ -29,5 +29,6 @@
   (is (= 1 (lsp/largest-product 0 "123")))
   (is (thrown? Throwable (lsp/largest-product 1 "")))
   (is (thrown? Throwable (lsp/largest-product 4 "123")))
-  ;; edge case :)
+  ;; if all spans contain zero, result is zero.
+  (is (= 0 (lsp/largest-product 3 "99099")))
   (is (= 0 (lsp/largest-product 2 "00"))))
