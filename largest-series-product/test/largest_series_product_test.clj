@@ -24,8 +24,10 @@
   (is (= 28350
          (let [ds "52677741234314237566414902593461595376319419139427"]
            (lsp/largest-product 6 ds))))
-  (is (thrown-with-msg? Throwable #"empty"
-        (lsp/largest-product 0 "")))
+  ;; edge cases involving 0 or empty strings
+  (is (= 1 (lsp/largest-product 0 "")))
+  (is (= 1 (lsp/largest-product 0 "123")))
+  (is (thrown? Throwable (lsp/largest-product 1 "")))
   (is (thrown? Throwable (lsp/largest-product 4 "123")))
   ;; edge case :)
   (is (= 0 (lsp/largest-product 2 "00"))))
