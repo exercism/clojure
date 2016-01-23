@@ -26,7 +26,6 @@
            (lsp/largest-product 6 ds))))
   (is (thrown-with-msg? Throwable #"empty"
         (lsp/largest-product 0 "")))
-  ;; unlike the Ruby implementation no error is expected for too small input
-  (is (= 1 (lsp/largest-product 4 "123")))
+  (is (thrown? Throwable (lsp/largest-product 4 "123")))
   ;; edge case :)
   (is (= 0 (lsp/largest-product 2 "00"))))

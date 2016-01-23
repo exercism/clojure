@@ -7,5 +7,5 @@
 (defn largest-product [size ds]
   (cond
     (empty? ds)         (throw (Exception. "Series must not be empty."))
-    (> size (count ds)) 1
+    (> size (count ds)) (throw (Exception. "Span must not exceed length."))
     :else               (apply max (map (partial apply *) (slices size ds)))))
