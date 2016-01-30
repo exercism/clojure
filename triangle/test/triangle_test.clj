@@ -20,6 +20,8 @@
 (deftest invalid-1
   (is (= :illogical (triangle/type 1 1 50))))
 
+;; See discussion at https://github.com/exercism/xerlang/issues/85
+
 (deftest invalid-2
   (is (= :illogical (triangle/type 1 2 1))))
 
