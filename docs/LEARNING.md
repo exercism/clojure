@@ -44,7 +44,9 @@ started:
 * [Planet Clojure][]
   Clojure blog aggregator.
 * [Clojure Gazette][]
+  A free, weekly email to inspire Clojure programmers.
 * [Clojure Weekly][]
+  A weekly collection of Clojure topics.
 
 [ClojureBridge]: http://www.clojurebridge.org
 [Planet Clojure]: http://planet.clojure.in
