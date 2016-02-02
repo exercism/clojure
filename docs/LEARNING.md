@@ -39,10 +39,8 @@ started:
 
 ## Community
 * [ClojureBridge][]
-  ClojureBridge aims to increase diversity within the Clojure community by
-  offering free, beginner-friendly Clojure programming workshops for
-  women.ClojureBridge aims to increase diversity within the Clojure community by
-  offering free, beginner-friendly Clojure programming workshops for women.
+  Aims to increase diversity within the Clojure community by offering free,
+  beginner-friendly Clojure programming workshops for women.
 * [Planet Clojure][]
   Clojure blog aggregator.
 * [Clojure Gazette][]
