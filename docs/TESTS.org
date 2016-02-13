@@ -13,8 +13,9 @@ exercise and run:
 #+END_EXAMPLE
 
 Once you are ready to work on an exercise and have created a file to
-hold your solution (such as =bob.clj=) you can run the tests using
-[[http://clojure.github.io/clojure/clojure.test-api.html#clojure.test/run-tests][=#'clojure.test/run-tests=]].
+hold your solution (such as =bob.clj=) you can run the tests using 
+=#'clojure.test/run-tests= 
+[[http://clojure.github.io/clojure/clojure.test-api.html#clojure.test/run-tests][as described here]].
 
 First, =require= the test namespace:
 
@@ -23,7 +24,7 @@ First, =require= the test namespace:
     nil
 #+END_SRC
 
-Then call =run-tests= on ='bob-test=:
+Then call =run-tests= on =bob-test=:
 
 #+BEGIN_SRC clojure
     => (clojure.test/run-tests 'bob-test)
