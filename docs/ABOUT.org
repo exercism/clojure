@@ -16,6 +16,10 @@ Rich Hickey, the creator of Clojure, wanted a modern Lisp for functional
 programming, symbiotic with the established Java platform, and designed for
 concurrency; thus, clojure was born.
 
-> Good design is not about making grand plans, but about taking things apart.
+#+BEGIN_QUOTE
+Good design is not about making grand plans, but about taking things apart.
+#+END_QUOTE
 
-> Programming is not about typing...it's about thinking.
+#+BEGIN_QUOTE
+Programming is not about typing...it's about thinking.
+#+END_QUOTE
