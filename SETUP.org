@@ -1,21 +1,17 @@
-* * * *
+#+TITLE: SETUP
 
 For learning resources and help with installation, refer to the
-[Exercism help page][].
+[[http://exercism.io/languages/clojure][Exercism help page]]
 
-To run the tests provided, you will need to install [Leiningen][].
+To run the tests provided, you will need to install [[http://leiningen.org][Leiningen]].
 
-To install Leiningen on Mac OS X using [Homebrew][], run the following command:
+To install Leiningen on Mac OS X using [[http://brew.sh][Homebrew]], run the following command:
 
     brew install leiningen
 
 For help installing on Linux, Windows or without Homebrew see:
-[Leiningen installation][].
+[[https://github.com/technomancy/leiningen#installation][Leiningen installation]].
 
-[Exercism help page]: http://exercism.io/languages/clojure
-[Leiningen]: http://leiningen.org
-[Homebrew]: http://brew.sh
-[Leiningen installation]: https://github.com/technomancy/leiningen#installation
 
 In an exercise directory, create a `src` directory and a file therein to hold
 your solution. The name of the file should be the exercise name with dashes `-`
