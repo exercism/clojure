@@ -1,7 +1,5 @@
 #+TITLE: xClojure
 
-[![Build Status](https://travis-ci.org/exercism/xclojure.svg)](https://travis-ci.org/exercism/xclojure)
-
 #+ATTR_HTML: :alt Build Status
 [[https://travis-ci.org/exercism/xclojure][https://travis-ci.org/exercism/xclojure.svg]]
 
