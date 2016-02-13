@@ -1,0 +1,16 @@
+#+TITLE: xClojure
+
+#+ATTR_HTML: :alt Build Status
+[[https://travis-ci.org/exercism/xclojure][https://travis-ci.org/exercism/xclojure.svg]]
+
+Exercism exercises in Clojure
+
+** Contributing Guide
+
+Please see the [[https://github.com/exercism/x-api/blob/master/CONTRIBUTING.md#the-exercise-data][contributing guide]]
+
+** License
+
+The MIT License (MIT)
+
+Copyright (c) 2014 Katrina Owen, _@kytrinyx.com
