@@ -20,12 +20,15 @@ replaced by underscores `_`.  For example, if the exercise is called
 
 Your resulting file tree should look something like this:
 
+#+BEGIN_EXAMPLE
     /path/to/hello-world
+    
     ├── project.clj
     ├── src
     │   └── hello_world.clj
     └── test
         └── hello_world_test.clj
+#+END_EXAMPLE
 
 
 To run the tests, navigate to the exercise directory and run the following
