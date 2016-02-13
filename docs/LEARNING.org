@@ -9,8 +9,7 @@ help you get started:
 ** References
 - [[http://clojure.org][Clojure.org]] The official language website.
 - [[https://clojuredocs.org][ClojureDocs]] A repository of language references and examples by function or keyword.
-- [[http://grimoire.arrdem.com][Grimoire]][ Community combined cheatsheet
-and examples.
+- [[http://conj.io][Grimoire]] Community combined cheatsheet and examples.
 
 ** Exercises and Tut
 
