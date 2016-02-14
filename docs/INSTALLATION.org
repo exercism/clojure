@@ -10,7 +10,7 @@ For installation instructions on most platforms see:
 [[https://github.com/technomancy/leiningen#installation][Leiningen installation]].
 
 ** Homebrew for Mac OS X
-Update your Homebrew to latest:
+Update your Homebrew:
 #+BEGIN_SRC bash
 $ brew update
 #+END_SRC

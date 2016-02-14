@@ -6,10 +6,10 @@ combines the approachability of a scripting language with a robust
 infrastructure for multithreaded programming.
 
 Clojure is predominantly a functional programming language, and features a rich
-set of immutable, persistent [[http://clojure.org/data_structures][data structures]]
+set of immutable, persistent [[http://clojure.org/data_structures][data structures]].
 
 Clojure is open source, and information about contributing to the language
-[[http://clojure.org/contributing][can be found here]]
+[[http://clojure.org/contributing][can be found here]].
 
 Rich Hickey, the creator of Clojure, wanted a modern Lisp for functional
 programming, symbiotic with the established Java platform, and designed for
