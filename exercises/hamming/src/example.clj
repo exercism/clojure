@@ -1,5 +1,5 @@
-(ns point-mutations)
+(ns hamming)
 
-(defn hamming-distance [a b]
+(defn distance [a b]
   (when (= (count a) (count b))
     (count (filter true? (map not= a b)))))
