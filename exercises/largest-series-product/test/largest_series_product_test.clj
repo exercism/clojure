@@ -3,14 +3,6 @@
             [largest-series-product :as lsp]))
 
 (deftest largest-series-tests
-  (is (= (range 0 10) (lsp/digits "0123456789")))
-  (is (= (range 9 -1 -1) (lsp/digits "9876543210")))
-  (is (= (range 8 3 -1) (lsp/digits "87654")))
-  (is (= [9 3 6 9 2 3 4 6 8] (lsp/digits "936923468")))
-  (is (= [[9 8] [8 2] [2 7] [7 3] [3 4] [4 6] [6 3]]
-         (lsp/slices 2 "98273463")))
-  (is (= [[9 8 2] [8 2 3] [2 3 4] [3 4 7]]
-         (lsp/slices 3 "982347")))
   (is (= 72 (lsp/largest-product 2 "0123456789")))
   (is (= 2 (lsp/largest-product 2 "12")))
   (is (= 9 (lsp/largest-product 2 "19")))
