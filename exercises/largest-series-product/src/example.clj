@@ -1,8 +1,8 @@
 (ns largest-series-product)
 
-(defn digits [ds] (map #(Character/digit % 10) ds))
+(defn- digits [ds] (map #(Character/digit % 10) ds))
 
-(defn slices [n ds] (partition n 1 (digits ds)))
+(defn- slices [n ds] (partition n 1 (digits ds)))
 
 (defn largest-product [size ds]
   (cond
