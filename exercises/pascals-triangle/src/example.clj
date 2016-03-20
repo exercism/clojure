@@ -1,10 +1,10 @@
 (ns pascals-triangle)
 
-(defn row [n]
-  (->> (range 1 (inc (quot (dec n) 2)))
-       (reductions #(quot (*' %1 (-' n %2)) %2) 1)
-       ((fn [s]
-          (let [v (vec s)]
-            (into v (cond-> (rseq v) (odd? n) rest)))))))
+(defn- next-row [row]
+  (lazy-seq (->> (partition-all 2 1 row)
+                 (map (partial apply +'))
+                 (cons 1))))
 
-(def triangle (map row (iterate inc 1)))
+(def triangle (iterate next-row [1]))
+
+(defn row [n] (nth triangle (dec n)))
