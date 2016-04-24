@@ -16,10 +16,6 @@
 (deftest searches-a-singleton
   (is (= 0 (binary-search/search-for 4 [4]))))
 
-(deftest throws-exception-when-list-is-not-sorted
-  (is (thrown-with-msg? Throwable #"must be sorted"
-        (binary-search/search-for 5 unsorted-vector))))
-
 (deftest it-finds-position-of-search-data
   (is (= 5 (binary-search/search-for 9 short-vector))))
 
