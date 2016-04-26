@@ -13,7 +13,9 @@
   (is (= (robot-name/robot-name robbie) (robot-name/robot-name robbie))))
 
 (deftest different-robots-have-different-names
-  (is (not (= (robot-name/robot-name clutz) (robot-name/robot-name robbie)))))
+  (let [robbie (robot-name/robot)
+        clutz (robot-name/robot)]
+    (is (not (= (robot-name/robot-name clutz) (robot-name/robot-name robbie))))))
 
 (def original-name (robot-name/robot-name robbie))
 (robot-name/reset-name robbie)
