@@ -22,5 +22,5 @@ $ brew install leiningen
 
 ** Installing the standalone JAR
 Alternatively you can download the latest stable release jar file from
-[clojure.org/downloads](http://clojure.org/community/downloads) which contains everything required to run Clojure code and
+[http://clojure.org/community/downloads][clojure.org/downloads]] which contains everything required to run Clojure code and
 provides a basic REPL.
