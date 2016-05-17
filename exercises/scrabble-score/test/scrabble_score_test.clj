@@ -18,4 +18,4 @@
   (is (= 22 (scrabble-score/score-word "quirky"))))
 
 (deftest all-upper-case-word
-  (is (= 20 (scrabble-score/score-word "MULTIBILLIONAIRE"))))
+  (is (= 41 (scrabble-score/score-word "OXYPHENBUTAZONE"))))
