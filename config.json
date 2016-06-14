@@ -54,7 +54,8 @@
   "ignored": [
     "_test",
     "docs",
-    "target"
+    "target",
+    "img"
   ],
   "foregone": [
     "bank-account"
