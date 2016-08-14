@@ -5,7 +5,6 @@
   ([n d] (zero? (rem n d))))
 
 (defn sum-of-multiples
-  ([n] (sum-of-multiples [3 5] n))
   ([multiples n]
    (reduce (fn [sum x] (cond-> sum (some (divides? x) multiples) (+ x)))
            0 (range 1 n))))
