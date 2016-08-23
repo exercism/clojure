@@ -46,7 +46,8 @@
     "difference-of-squares",
     "hexadecimal",
     "largest-series-product",
-    "pov"
+    "pov",
+    "bracket-push"
   ],
   "deprecated": [
 
