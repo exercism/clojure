@@ -1,7 +1,7 @@
 (ns minesweeper-test
-  (:require [clojure.test :refer :all]
+  (:require [clojure.test :refer [deftest is]]
             [clojure.string :refer [join]]
-            [minesweeper :refer :all]))
+            [minesweeper :refer [draw]]))
 
 (deftest zero-size-board
   (is (= (draw "") "")))
