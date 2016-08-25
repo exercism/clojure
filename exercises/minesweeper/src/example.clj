@@ -1,12 +1,12 @@
 (ns minesweeper
-  (require [clojure.pprint :refer [cl-format]]
-           [clojure.string :refer [split-lines]]))
+  (:require [clojure.pprint :refer [cl-format]]
+            [clojure.string :refer [split-lines]]))
 
 (defn- windows [field]
-  (apply map vector
-         (apply map #(partition 3 1 `(nil ~@%& nil))
-                (map #(partition 3 1 `(nil ~@% nil))
-                     field))))
+  (->> field
+       (map #(partition 3 1 `(nil ~@% nil)))
+       (apply map #(partition 3 1 `(nil ~@%& nil)))
+       (apply map vector)))
 
 (defn- count-mines-around [[[a b c]
                             [d e f]
