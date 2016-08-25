@@ -21,7 +21,7 @@
 (defn draw [field]
   (if (empty? field) ""
       (->> field
-         split-lines
-         windows
-         (map (fn [line] (map count-mines-around line)))
-         (cl-format nil "~{~{~a~}~^~%~}"))))
+           split-lines
+           windows
+           (map (fn [line] (map count-mines-around line)))
+           (cl-format nil "~{~{~a~}~^~%~}"))))
