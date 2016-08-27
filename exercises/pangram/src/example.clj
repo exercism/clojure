@@ -1,15 +1,13 @@
-(ns pangram
-  (:require [clojure.string :refer [lower-case]]))
+(ns pangram)
 
-(def ^:private a-int (int \a))
-(def ^:private z-int (int \z))
-
-(def ^:private alphabet (set (range a-int (inc z-int))))
+(def ^:private in-range? ((fn [] (let [start (int \a)
+                                       end (inc (int \z))]
+                                   #(<= start (int %) end)))))
 
 (defn pangram? [input]
-  (= alphabet
-     (->> input
-          lower-case
-          (map int)
-          (filter #(<= a-int % z-int))
-          set)))
+  (->> input
+       (into [] (comp (map #(Character/toLowerCase %))
+                      (filter in-range?)
+                      (distinct)))
+       count
+       (= 26)))
