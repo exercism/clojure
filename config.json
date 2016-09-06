@@ -51,7 +51,8 @@
     "minesweeper",
     "change",
     "pangram",
-    "wordy"
+    "wordy",
+    "sublist"
   ],
   "deprecated": [
 
