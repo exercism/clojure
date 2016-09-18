@@ -12,3 +12,8 @@ Please see the [[https://github.com/exercism/x-api/blob/master/CONTRIBUTING.md#t
 The MIT License (MIT)
 
 Copyright (c) 2014 Katrina Owen, _@kytrinyx.com
+
+*** [[https://github.com/exercism/xclojure/tree/master/img/icon.png][Clojure icon]]
+The Clojure logo is owned by Rich Hickey.
+We are using it to identify the Clojure language itself, not any part of Exercism, which we believe to be admissible under fair use.
+The version of the logo that we are using is a black/white adaptation of the logo found on http://clojure.org.
