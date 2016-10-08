@@ -11,9 +11,8 @@
 
 (deftest initial-account-state
   (testing "Accounts are opened with a balance of 0"
-    (is (= 0 (->
-                (bank-account/open-account)
-                (bank-account/get-balance))))))
+    (is (= 0 (-> (bank-account/open-account)
+                 (bank-account/get-balance))))))
 
 (deftest increment-and-get-balance
   (testing "Adding money to the account works"
