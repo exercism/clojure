@@ -33,6 +33,7 @@
     "octal",
     "strain",
     "atbash-cipher",
+    "bank-account",
     "crypto-square",
     "pascals-triangle",
     "sum-of-multiples",
@@ -65,6 +66,5 @@
     "img"
   ],
   "foregone": [
-    "bank-account"
   ]
 }
