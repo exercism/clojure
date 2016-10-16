@@ -6,9 +6,10 @@
 (defn- ->snake_case [s] (string/replace s \- \_))
 
 (deftest check-exercises
-  (doseq [problem ((json/parse-string (slurp "config.json")) "problems")
-          :let [path-to-problem (partial str "exercises/" problem "/")
-                problem-tests   (symbol (str problem "-test"))]]
-    (load-file (path-to-problem "src/example.clj"))
-    (load-file (path-to-problem "test/" (->snake_case problem) "_test.clj"))
-    (is (successful? (run-tests problem-tests)))))
+  (doseq [exercise ((json/parse-string (slurp "config.json")) "exercises")
+          :let [slug             (exercise "slug")
+                path-to-exercise (partial str "exercises/" slug "/")
+                exercise-tests   (symbol (str slug "-test"))]]
+    (load-file (path-to-exercise "src/example.clj"))
+    (load-file (path-to-exercise "test/" (->snake_case slug) "_test.clj"))
+    (is (successful? (run-tests exercise-tests)))))
