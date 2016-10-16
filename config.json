@@ -83,6 +83,11 @@
     },
     {
       "difficulty": 1,
+      "slug": "flatten-array",
+      "topics": []
+    },
+    {
+      "difficulty": 1,
       "slug": "binary-search",
       "topics": []
     },
