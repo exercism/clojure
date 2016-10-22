@@ -2,4 +2,7 @@
   (:require [clojure.string :as str]))
 
 (defn acronym [text]
-  (apply str (map str/upper-case (map first (re-seq #"[A-Z]+[a-z]*|[a-z]+" text)))))
+  (->> (re-seq #"[A-Z]+[a-z]*|[a-z]+" text)
+       (map first)
+       (map str/upper-case)
+       (apply str)))
