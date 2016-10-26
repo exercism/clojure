@@ -23,4 +23,7 @@
       (is (= (robot-name/robot-name robbie) (robot-name/robot-name robbie))
           "new name is persistent")
       (is (not= original-name (robot-name/robot-name robbie))
-          "new name is different from old name"))))
+          "new name is different from old name")
+      (is (not= (robot-name/robot-name robbie)
+                (-> robbie robot-name/reset-name robot-name/robot-name))
+          "new name is different each time"))))
