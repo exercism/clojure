@@ -7,10 +7,10 @@
        (+ 100 (.nextInt random 899))))
 
 (defn robot []
-  {:name (atom (generate-name))})
+  (atom {:name (generate-name)}))
 
 (defn robot-name [robot]
-  @(:name robot))
+  (:name @robot))
 
 (defn reset-name [robot]
-  (reset! (:name robot) (generate-name)))
+  (swap! robot assoc :name (generate-name)))
