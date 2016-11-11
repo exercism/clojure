@@ -4,8 +4,6 @@
 
 (def short-vector [1, 3, 4, 6, 8, 9, 11])
 
-(def unsorted-vector [2, 1, 4, 3, 6])
-
 (def large-vector [1, 3, 5, 8, 13, 21, 34, 55, 89])
 
 (def even-length-vector [1, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377])
