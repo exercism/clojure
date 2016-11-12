@@ -280,6 +280,12 @@
       "difficulty": 1,
       "slug": "isogram",
       "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "pig-latin",
+      "topics": []
     }
+	
   ]
 }
