@@ -63,6 +63,11 @@
     },
     {
       "difficulty": 1,
+      "slug": "clock",
+      "topics": []
+    },
+    {
+      "difficulty": 1,
       "slug": "grade-school",
       "topics": []
     },
