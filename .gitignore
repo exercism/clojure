@@ -4,6 +4,7 @@
 tmp
 bin/configlet
 bin/configlet.exe
+x-common
 
 pom.xml
 pom.xml.asc
