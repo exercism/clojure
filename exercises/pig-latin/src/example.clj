@@ -1,7 +1,7 @@
 (ns pig-latin
   (:require [clojure.string :as str]))
 
-(defn starts-with-any [prefixes word]
+(defn- starts-with-any [prefixes word]
   (some (partial str/starts-with? word) prefixes))
 
 (defn- starts-with-vowel-like? [word]
@@ -23,7 +23,7 @@
 (defn- rotate [word n]
   (str (subs word n) (subs word 0 n)))
 
-(defn append-ay [word]
+(defn- append-ay [word]
   (str word "ay"))
 
 (defn- translate-word [word]
