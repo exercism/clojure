@@ -2,7 +2,7 @@
 
 (def ^:private letters (map char (range 65 91)))
 (defn- generate-name []
-  (format "%s%03d" (apply str (repeatedly 2 #(first (shuffle letters))))
+  (format "%s%03d" (apply str (repeatedly 2 #(rand-nth letters)))
           (rand-int 1000)))
 
 (defn robot []
