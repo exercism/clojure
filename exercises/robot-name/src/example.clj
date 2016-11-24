@@ -1,10 +1,9 @@
 (ns robot-name)
 
-(def ^:private random (java.util.Random.))
 (def ^:private letters (map char (range 65 91)))
 (defn- generate-name []
-  (str (apply str (take 2 (shuffle letters)))
-       (+ 100 (.nextInt random 899))))
+  (format "%s%03d" (apply str (repeatedly 2 #(first (shuffle letters))))
+          (rand-int 1000)))
 
 (defn robot []
   (atom {:name (generate-name)}))
