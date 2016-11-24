@@ -7,7 +7,7 @@
 (defn- starts-with-vowel-like? [word]
   (starts-with-any #{"yt" "xr"} word))
 
-(defn starts-with-vowel? [word]
+(defn- starts-with-vowel? [word]
   (starts-with-any #{"a" "e" "i" "o" "u"} word))
 
 (defn- starts-with-two-letter-prefix? [word]
