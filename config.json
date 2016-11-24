@@ -285,6 +285,11 @@
       "difficulty": 1,
       "slug": "acronym",
       "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "pig-latin",
+      "topics": []
     }
   ]
 }
