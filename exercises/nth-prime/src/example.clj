@@ -27,11 +27,9 @@
       n
       (recur (inc n)))))
 
+(def primes (iterate next-prime 1))
+
 (defn nth-prime [index]
   (when (not (pos? index))
     (throw (IllegalArgumentException. "nth-prime expects a positive integer for an argument")))
-  (loop [cur-prime 2
-         num-times 1]
-    (if (= num-times index)
-      cur-prime
-      (recur (next-prime cur-prime) (inc num-times)))))
+  (nth primes index))
