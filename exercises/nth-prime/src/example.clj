@@ -10,11 +10,16 @@
   [number divisor]
   (zero? (mod number divisor)))
 
+(defn- prime-by-trial-division?
+  "Simple trial division prime check."
+  [number]
+  (empty? (for [n (range 3 (inc (sqrt number)) 2) :when (divides? number n)] n)))
+
 (defn prime? [number]
   (cond
     (= 2 number) true
     (even? number) false
-    :else (empty? (for [n (range 3 (inc (sqrt number)) 2) :when (divides? number n)] n))))
+    :else (prime-by-trial-division? number)))
 
 (defn next-prime [start]
   (loop [n (inc start)]
