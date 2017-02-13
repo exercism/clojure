@@ -1,0 +1,34 @@
+(ns clock-test
+  (:require [clock :refer :all]
+            [clojure.test :refer [deftest testing is]]))
+
+(deftest create-clock-test
+{{#create}}
+  {{#cases}}
+
+  (testing "{{{description}}}"
+    (let [test-clock (clock->string (clock {{{hour}}} {{{minute}}}))]
+      (is (= test-clock "{{{expected}}}")))){{/cases}}{{/create}})
+
+(deftest add-time-test
+{{#add}}
+  {{#cases}}
+
+  (testing "{{{description}}}"
+    (let [test-clock (clock->string (add-time (clock {{{hour}}} {{{minute}}}) {{{add}}}))]
+      (is (= test-clock "{{{expected}}}")))){{/cases}}{{/add}})
+
+(deftest equal-clock-test
+{{#equal}}
+  {{#cases}}
+  (testing "{{{description}}}"
+    (let [{{#clock1}}clock1 (clock {{{hour}}} {{{minute}}}){{/clock1}}
+          {{#clock2}}clock2 (clock {{{hour}}} {{{minute}}}){{/clock2}}]
+      {{#expected}}
+      (is (= clock1 clock2))))
+      {{/expected}}
+      {{^expected}}
+      (is (not= clock1 clock2))))
+      {{/expected}}
+    {{/cases}}
+{{/equal}})
