@@ -32,10 +32,3 @@
   (if (or (re-find #"[^0-9\s]+" n) (>= 1 (count (string/trim n))))
     false
     (zero? (-> n string->long checksum))))
-
-(defn add-check-digit
-  "given a number, adds a luhn check digit at the end"
-  [n]
-  (let [n-shifted (* 10 n)
-        check-digit (- 10 (checksum n-shifted))]
-    (+ n-shifted check-digit)))
