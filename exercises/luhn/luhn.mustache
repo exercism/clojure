@@ -1,0 +1,9 @@
+(ns luhn-test
+  (:require [clojure.test :refer [deftest is testing]]
+            luhn))
+
+(deftest validity-tests
+{{#valid}}
+  (testing "{{{description}}}"
+    (is ({{{expected}}}? (luhn/valid? "{{{input}}}"))))
+{{/valid}})
