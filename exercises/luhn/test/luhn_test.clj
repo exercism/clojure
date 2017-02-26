@@ -1,32 +1,32 @@
 (ns luhn-test
-  (:require [clojure.test :refer [deftest is]]
+  (:require [clojure.test :refer [deftest is testing]]
             luhn))
 
-(deftest checksum-works
-  (is (= 2 (luhn/checksum 10)))
-  (is (= 9 (luhn/checksum 90)))
-  (is (= 1 (luhn/checksum 100)))
-  (is (= 2 (luhn/checksum 1000)))
-  (is (= 1 (luhn/checksum 10000000000000000)))
-  (is (= 6 (luhn/checksum 1111)))
-  (is (= 0 (luhn/checksum 8763)))
-  (is (= 0 (luhn/checksum 2323200577663554))))
-
-(deftest valid?-works
-  (is (= true (luhn/valid? 18)))
-  (is (= true (luhn/valid? 59)))
-  (is (= false (luhn/valid? 63)))
-  (is (= true (luhn/valid? 8763)))
-  (is (= false (luhn/valid? 1111)))
-  (is (= true (luhn/valid? 4242424242424242)))
-  (is (= true (luhn/valid? 2323200577663554)))
-  (is (= false (luhn/valid? 2323200577663555)))
-  (is (= false (luhn/valid? 2223200577663554)))
-  (is (= false (luhn/valid? 3323200577663554))))
-
-(deftest add-check-digit-works
-  (is (= 18 (luhn/add-check-digit 1)))
-  (is (= 59 (luhn/add-check-digit 5)))
-  (is (= 8763 (luhn/add-check-digit 876)))
-  (is (= 4242424242424242 (luhn/add-check-digit 424242424242424)))
-  (is (= 2323200577663554 (luhn/add-check-digit 232320057766355))))
+(deftest validity-tests
+  (testing "single digit strings can not be valid"
+    (is (false? (luhn/valid? "1"))))
+  (testing "A single zero is invalid"
+    (is (false? (luhn/valid? "0"))))
+  (testing "simple valid sin"
+    (is (true? (luhn/valid? " 5 9 "))))
+  (testing "valid Canadian SIN"
+    (is (true? (luhn/valid? "046 454 286"))))
+  (testing "invalid Canadian SIN"
+    (is (false? (luhn/valid? "046 454 287"))))
+  (testing "invalid credit card"
+    (is (false? (luhn/valid? "8273 1232 7352 0569"))))
+  (testing "valid strings with a non-digit added become invalid"
+    (is (false? (luhn/valid? "046a 454 286"))))
+  (testing "punctuation is not allowed"
+    (is (false? (luhn/valid? "055-444-285"))))
+  (testing "symbols are not allowed"
+    (is (false? (luhn/valid? "055£ 444$ 285"))))
+  (testing "single zero with space is invalid"
+    (is (false? (luhn/valid? " 0"))))
+  (testing "lots of zeros are valid"
+    (is (true? (luhn/valid? " 00000"))))
+  (testing "another valid sin"
+    (is (true? (luhn/valid? "055 444 285"))))
+  (testing "nine doubled is nine"
+    (is (true? (luhn/valid? "091"))))
+)

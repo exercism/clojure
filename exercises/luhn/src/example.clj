@@ -1,4 +1,5 @@
-(ns luhn)
+(ns luhn
+  (:require [clojure.string :as string]))
 
 (defn to-reversed-digits
   "returns a lazy sequence of least to most significant digits of n"
@@ -19,14 +20,15 @@
            (apply +))
       (mod 10)))
 
+(defn string->long
+  "Strips any non-digit characters and converts the string into a Long"
+  [n]
+  (-> n (string/replace #"[^0-9]+" "") Long/parseLong))
+
 (defn valid?
   "whether n has a valid luhn check-digit"
   [n]
-  (zero? (checksum n)))
-
-(defn add-check-digit
-  "given a number, adds a luhn check digit at the end"
-  [n]
-  (let [n-shifted (* 10 n)
-        check-digit (- 10 (checksum n-shifted))]
-    (+ n-shifted check-digit)))
+  ; Numbers with non digit/whitespace or only 1 digit are invalid
+  (if (or (re-find #"[^0-9\s]+" n) (>= 1 (count (string/trim n))))
+    false
+    (zero? (-> n string->long checksum))))
