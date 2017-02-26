@@ -16,10 +16,8 @@
   (empty? (for [n (range 3 (inc (sqrt number)) 2) :when (divides? number n)] n)))
 
 (defn prime? [number]
-  (cond
-    (= 2 number) true
-    (even? number) false
-    :else (prime-by-trial-division? number)))
+  (or (= 2 number)
+      (and (odd? number) (prime-by-trial-division? number))))
 
 (defn next-prime [start]
   (loop [n (inc start)]
@@ -30,6 +28,6 @@
 (def primes (iterate next-prime 1))
 
 (defn nth-prime [index]
-  (when (not (pos? index))
+  (when-not (pos? index)
     (throw (IllegalArgumentException. "nth-prime expects a positive integer for an argument")))
   (nth primes index))
