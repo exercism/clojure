@@ -294,6 +294,11 @@
     },
     {
       "difficulty": 1,
+      "slug": "nth-prime",
+      "topics": []
+    },
+    {
+      "difficulty": 1,
       "slug": "pig-latin",
       "topics": []
     }
