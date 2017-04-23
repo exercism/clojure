@@ -301,6 +301,11 @@
       "difficulty": 1,
       "slug": "pig-latin",
       "topics": []
+    },
+    {
+      "difficulty": 1,
+      "slug": "secret-handshake",
+      "topics": []
     }
   ]
 }
