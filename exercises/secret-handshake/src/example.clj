@@ -6,9 +6,9 @@
       (reverse)))
 
 (defn- convert [integer]
-  (filter some?
+  (remove nil?
           (map (fn [command binary]
-                 (if (= \1 binary) command))
+                 (when (= \1 binary) command))
                ["wink" "double blink" "close your eyes" "jump"]
                (int->reversed-binary integer))))
 
