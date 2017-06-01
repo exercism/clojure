@@ -1,0 +1,9 @@
+(ns sublist-test
+  (:require [clojure.test :refer [deftest is testing]]
+            sublist))
+
+(deftest sublist-tests
+{{#cases}}
+  (testing "{{{description}}}"
+    (is (= :{{{expectation}}} (sublist/classify {{{list_one}}} {{{list_two}}}))))
+{{/cases}})
