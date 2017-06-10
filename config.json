@@ -20,297 +20,415 @@
     {
       "difficulty": 1,
       "slug": "hello-world",
-      "topics": []
+      "topics": [
+
+      ]
     },
     {
       "difficulty": 1,
       "slug": "bob",
-      "topics": []
+      "topics": [
+
+      ]
     },
     {
       "difficulty": 1,
       "slug": "rna-transcription",
-      "topics": []
+      "topics": [
+
+      ]
     },
     {
       "difficulty": 1,
       "slug": "word-count",
-      "topics": []
+      "topics": [
+
+      ]
     },
     {
       "difficulty": 1,
       "slug": "anagram",
-      "topics": []
+      "topics": [
+
+      ]
     },
     {
       "difficulty": 1,
       "slug": "beer-song",
-      "topics": []
+      "topics": [
+
+      ]
     },
     {
       "difficulty": 1,
       "slug": "nucleotide-count",
-      "topics": []
+      "topics": [
+
+      ]
     },
     {
       "difficulty": 1,
       "slug": "hamming",
-      "topics": []
+      "topics": [
+
+      ]
     },
     {
       "difficulty": 1,
       "slug": "phone-number",
-      "topics": []
+      "topics": [
+
+      ]
     },
     {
       "difficulty": 1,
       "slug": "clock",
-      "topics": []
+      "topics": [
+
+      ]
     },
     {
       "difficulty": 1,
       "slug": "grade-school",
-      "topics": []
+      "topics": [
+
+      ]
     },
     {
       "difficulty": 1,
       "slug": "robot-name",
-      "topics": []
+      "topics": [
+
+      ]
     },
     {
       "difficulty": 1,
       "slug": "leap",
-      "topics": []
+      "topics": [
+
+      ]
     },
     {
       "difficulty": 1,
       "slug": "etl",
-      "topics": []
+      "topics": [
+
+      ]
     },
     {
       "difficulty": 1,
       "slug": "flatten-array",
-      "topics": []
+      "topics": [
+
+      ]
     },
     {
       "difficulty": 1,
       "slug": "sublist",
-      "topics": []
+      "topics": [
+
+      ]
     },
     {
       "difficulty": 1,
       "slug": "binary-search",
-      "topics": []
+      "topics": [
+
+      ]
     },
     {
       "difficulty": 1,
       "slug": "perfect-numbers",
-      "topics": []
+      "topics": [
+
+      ]
     },
     {
       "difficulty": 1,
       "slug": "meetup",
-      "topics": []
+      "topics": [
+
+      ]
     },
     {
       "difficulty": 1,
       "slug": "space-age",
-      "topics": []
+      "topics": [
+
+      ]
     },
     {
       "difficulty": 1,
       "slug": "grains",
-      "topics": []
+      "topics": [
+
+      ]
     },
     {
       "difficulty": 1,
       "slug": "gigasecond",
-      "topics": []
+      "topics": [
+
+      ]
     },
     {
       "difficulty": 1,
       "slug": "triangle",
-      "topics": []
+      "topics": [
+
+      ]
     },
     {
       "difficulty": 1,
       "slug": "scrabble-score",
-      "topics": []
+      "topics": [
+
+      ]
     },
     {
       "difficulty": 1,
       "slug": "roman-numerals",
-      "topics": []
+      "topics": [
+
+      ]
     },
     {
       "difficulty": 1,
       "slug": "binary",
-      "topics": []
+      "topics": [
+
+      ]
     },
     {
       "difficulty": 1,
       "slug": "trinary",
-      "topics": []
+      "topics": [
+
+      ]
     },
     {
       "difficulty": 1,
       "slug": "prime-factors",
-      "topics": []
+      "topics": [
+
+      ]
     },
     {
       "difficulty": 1,
       "slug": "raindrops",
-      "topics": []
+      "topics": [
+
+      ]
     },
     {
       "difficulty": 1,
       "slug": "allergies",
-      "topics": []
+      "topics": [
+
+      ]
     },
     {
       "difficulty": 1,
       "slug": "octal",
-      "topics": []
+      "topics": [
+
+      ]
     },
     {
       "difficulty": 1,
       "slug": "strain",
-      "topics": []
+      "topics": [
+
+      ]
     },
     {
       "difficulty": 1,
       "slug": "atbash-cipher",
-      "topics": []
+      "topics": [
+
+      ]
     },
     {
       "difficulty": 1,
       "slug": "bank-account",
-      "topics": []
+      "topics": [
+
+      ]
     },
     {
       "difficulty": 1,
       "slug": "crypto-square",
-      "topics": []
+      "topics": [
+
+      ]
     },
     {
       "difficulty": 1,
       "slug": "pascals-triangle",
-      "topics": []
+      "topics": [
+
+      ]
     },
     {
       "difficulty": 1,
       "slug": "sum-of-multiples",
-      "topics": []
+      "topics": [
+
+      ]
     },
     {
       "difficulty": 1,
       "slug": "sieve",
-      "topics": []
+      "topics": [
+
+      ]
     },
     {
       "difficulty": 1,
       "slug": "luhn",
-      "topics": []
+      "topics": [
+
+      ]
     },
     {
       "difficulty": 1,
       "slug": "kindergarten-garden",
-      "topics": []
+      "topics": [
+
+      ]
     },
     {
       "difficulty": 1,
       "slug": "robot-simulator",
-      "topics": []
+      "topics": [
+
+      ]
     },
     {
       "difficulty": 1,
       "slug": "queen-attack",
-      "topics": []
+      "topics": [
+
+      ]
     },
     {
       "difficulty": 1,
       "slug": "accumulate",
-      "topics": []
+      "topics": [
+
+      ]
     },
     {
       "difficulty": 1,
       "slug": "binary-search-tree",
-      "topics": []
+      "topics": [
+
+      ]
     },
     {
       "difficulty": 1,
       "slug": "difference-of-squares",
-      "topics": []
+      "topics": [
+
+      ]
     },
     {
       "difficulty": 1,
       "slug": "hexadecimal",
-      "topics": []
+      "topics": [
+
+      ]
     },
     {
       "difficulty": 1,
       "slug": "all-your-base",
-      "topics": []
+      "topics": [
+
+      ]
     },
     {
       "difficulty": 1,
       "slug": "largest-series-product",
-      "topics": []
+      "topics": [
+
+      ]
     },
     {
       "difficulty": 1,
       "slug": "pov",
-      "topics": []
+      "topics": [
+
+      ]
     },
     {
       "difficulty": 1,
       "slug": "bracket-push",
-      "topics": []
+      "topics": [
+
+      ]
     },
     {
       "difficulty": 1,
       "slug": "minesweeper",
-      "topics": []
+      "topics": [
+
+      ]
     },
     {
       "difficulty": 1,
       "slug": "change",
-      "topics": []
+      "topics": [
+
+      ]
     },
     {
       "difficulty": 1,
       "slug": "pangram",
-      "topics": []
+      "topics": [
+
+      ]
     },
     {
       "difficulty": 1,
       "slug": "wordy",
-      "topics": []
+      "topics": [
+
+      ]
     },
     {
       "difficulty": 1,
       "slug": "isogram",
-      "topics": []
+      "topics": [
+
+      ]
     },
     {
       "difficulty": 1,
       "slug": "acronym",
-      "topics": []
+      "topics": [
+
+      ]
     },
     {
       "difficulty": 1,
       "slug": "nth-prime",
-      "topics": []
+      "topics": [
+
+      ]
     },
     {
       "difficulty": 1,
       "slug": "pig-latin",
-      "topics": []
+      "topics": [
+
+      ]
     },
     {
       "difficulty": 1,
       "slug": "secret-handshake",
-      "topics": []
+      "topics": [
+
+      ]
     }
   ]
 }
