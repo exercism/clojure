@@ -6,13 +6,6 @@
   "deprecated": [
 
   ],
-  "ignored": [
-    "_src",
-    "_test",
-    "docs",
-    "target",
-    "img"
-  ],
   "foregone": [
 
   ],
