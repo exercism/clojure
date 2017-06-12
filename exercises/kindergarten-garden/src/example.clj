@@ -3,7 +3,7 @@
 (def default-students ["Alice" "Bob" "Charlie" "David" "Eve" "Fred" "Ginny"
                        "Harriet" "Ileana" "Joseph" "Kincaid" "Larry"])
 
-(def seeds { \G :grass \C :clover \R :radishes \V :violets })
+(def seeds {\G :grass \C :clover \R :radishes \V :violets})
 
 (defn row-to-seeds [row-string]
   (map seeds row-string))
@@ -13,11 +13,13 @@
 
 (defn garden
   ([string]
-    (garden string default-students))
+   (garden string default-students))
   ([string students]
-    (let [students (map #(keyword (.toLowerCase %1)) (sort students))
-          [front back] (map #(partition 2 %1)
-                             (map row-to-seeds (garden-to-rows string)))]
-      (zipmap students (map vec
-                          (map flatten
-                             (partition 2 (interleave front back))))))))
+   (let [students     (map #(keyword (clojure.string/lower-case %1)) (sort students))
+         [front back] (map #(partition 2 %1)
+                           (map row-to-seeds (garden-to-rows string)))]
+     (->> (interleave front back)
+          (partition 2)
+          (map flatten)
+          (map vec)
+          (zipmap students)))))
