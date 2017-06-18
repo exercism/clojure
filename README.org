@@ -1,14 +1,14 @@
-#+TITLE: xClojure
+#+TITLE: Exercism Clojure Track
 
 #+ATTR_HTML: :alt Build Status
-[[https://travis-ci.org/exercism/xclojure][https://travis-ci.org/exercism/xclojure.svg]]
+[[https://travis-ci.org/exercism/clojure][https://travis-ci.org/exercism/clojure.svg]]
 
 Exercism exercises in Clojure
 
 * Contributing Guide
 Please see the [[https://github.com/exercism/x-api/blob/master/CONTRIBUTING.md#the-exercise-data][contributing guide]].
 
-*** [[https://github.com/exercism/xclojure/tree/master/img/icon.png][Clojure icon]]
+*** [[https://github.com/exercism/clojure/tree/master/img/icon.png][Clojure icon]]
 The Clojure logo is owned by Rich Hickey.
 We are using it to identify the Clojure language itself, not any part of Exercism, which we believe to be admissible under fair use.
 The version of the logo that we are using is a black/white adaptation of the logo found on http://clojure.org.
