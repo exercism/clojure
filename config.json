@@ -422,6 +422,13 @@
       "topics": [
 
       ]
+    },
+    {
+      "difficulty": 1,
+      "slug": "rotational-cipher",
+      "topics": [
+
+      ]
     }
   ]
 }
