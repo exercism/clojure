@@ -29,6 +29,9 @@
 
   (testing "rotate punctuation"
     (is (= (rotational-cipher/rotate "Let's eat, Grandma!" 21) "Gzo'n zvo, Bmviyhv!")))
+  
+  (testing "rotate in the opposite direction"
+    (is (= (rotational-cipher/rotate "b" -1) "a")))
 
   (testing "rotate all letters"
     (is (= (rotational-cipher/rotate "The quick brown fox jumps over the lazy dog." 13) "Gur dhvpx oebja sbk whzcf bire gur ynml qbt."))))
