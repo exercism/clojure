@@ -23,12 +23,25 @@
 
   (testing "rotate spaces"
     (is (= (rotational-cipher/rotate "O M G" 5) "T R L")))
-  
+
   (testing "rotate numbers"
     (is (= (rotational-cipher/rotate "Testing 1 2 3 testing" 4) "Xiwxmrk 1 2 3 xiwxmrk")))
 
   (testing "rotate punctuation"
     (is (= (rotational-cipher/rotate "Let's eat, Grandma!" 21) "Gzo'n zvo, Bmviyhv!")))
+
+  (testing "rotate in the opposite direction"
+    (is (= (rotational-cipher/rotate "b" -1) "a")))
+
+  (testing "rotate in the opposite direction past first letter"
+    (is (= (rotational-cipher/rotate "B" -2) "Z")))
+
+  (testing "rotate in the opposite direction past letter count"
+    (is (= (rotational-cipher/rotate "B" -28) "Z")))
+
+  (testing "rotate forward then backwards the same number of steps"
+    (is (=  (rotational-cipher/rotate
+              (rotational-cipher/rotate "B" 28) -28) "B")))
 
   (testing "rotate all letters"
     (is (= (rotational-cipher/rotate "The quick brown fox jumps over the lazy dog." 13) "Gur dhvpx oebja sbk whzcf bire gur ynml qbt."))))

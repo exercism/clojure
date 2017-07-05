@@ -1,21 +1,27 @@
 (ns rotational-cipher)
 
-(def ^:private string (partial apply str))
+(defn ^:private spinner [s a]
+  (let [a (int a)
+        spin (fn [c] (mod (+ c s) 26))]
+    (fn [c]
+      (let [c (- (int c) a)]
+        (char (+ (spin c) a))))))
 
-(def ^:private lower-case "abcdefghijklmnopqrstuvwxyz")
+(defn ^:private upper-spinner [s]
+  (spinner s \A))
 
-(def ^:private upper-case (->> lower-case (map clojure.string/upper-case) string))
+(defn ^:private lower-spinner [s]
+  (spinner s \a))
 
-(def ^:private letters (into #{} (concat lower-case upper-case)))
+(defn ^:private cipher [spin]
+  (let [upper-spin (upper-spinner spin)
+        lower-spin (lower-spinner spin)]
+    (fn [c]
+      (cond
+        (Character/isUpperCase c) (upper-spin c)
+        (Character/isLowerCase c) (lower-spin c)
+        :default c))))
 
-(defn- rotater [shift]
-  (let [encoding (->> (cycle letters)
-                      (drop (* shift 2))
-                      (take 52)
-                      (zipmap letters))]
-    (fn [char] (get encoding char char))))
-
-(defn rotate [message shift]
-  (->> message
-       (map (rotater shift))
-       string))
+(defn rotate [text spin]
+  (let [cipher (cipher spin)]
+    (apply str (map cipher text)) ))
