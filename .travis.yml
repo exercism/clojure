@@ -5,5 +5,5 @@ lein: lein2
 jdk: oraclejdk8
 script:
 - bin/fetch-configlet
-- bin/configlet .
+- bin/configlet lint .
 - lein test
