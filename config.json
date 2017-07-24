@@ -1,7 +1,5 @@
 {
-  "slug": "clojure",
   "language": "Clojure",
-  "repository": "https://github.com/exercism/clojure",
   "active": true,
   "foregone": [
 
