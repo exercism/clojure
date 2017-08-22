@@ -32,6 +32,7 @@
 (deftest mixed-case-and-punctuation
   (is (pangram? "\"Five quacking Zephyrs jolt my wax bed.\"")))
 
-(deftest non-ascii-characters
-  (is (pangram?
-       "Victor jagt zwölf Boxkämpfer quer über den großen Sylter Deich.")))
+(deftest upper-and-lower-not-counted-separately
+  (is
+    (false?
+      (pangram? "the quick brown fox jumps over with lazy FX"))))
