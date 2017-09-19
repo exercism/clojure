@@ -6,4 +6,4 @@
       (cond (= 1 n)   t
             (even? n) (recur (inc t) (/ n 2))
             :else     (recur (inc t) (inc (* 3 n)))))
-    (throw (IllegalArgumentException. "Just allowed numbers greater than 0."))))
+    (throw (IllegalArgumentException. "Just defined for numbers greater than 0."))))
