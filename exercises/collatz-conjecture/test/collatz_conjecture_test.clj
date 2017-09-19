@@ -20,8 +20,10 @@
 
 (deftest steps-for-0
   (testing "zero is an error"
-    (is (= nil (collatz 0)))))
+    (is (thrown? IllegalArgumentException
+                 (collatz 0)))))
 
 (deftest steps-for-negative
   (testing "negative value is an error"
-    (is (= nil (collatz -15)))))
+    (is (thrown? IllegalArgumentException
+                 (collatz -15)))))
