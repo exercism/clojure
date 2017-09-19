@@ -66,6 +66,16 @@
       ]
     },
     {
+      "uuid": "c14ef548-c5f6-43a9-84e2-c7248705fc8e",
+      "slug": "collatz-conjecture",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+
+      ]
+    },
+    {
       "uuid": "66d97ae9-36ac-47c6-8b9f-e77ce498fc70",
       "slug": "nucleotide-count",
       "core": false,
