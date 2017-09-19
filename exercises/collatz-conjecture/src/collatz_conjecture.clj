@@ -1,3 +1,3 @@
 (ns collatz-conjecture)
 
-(defn collatz [])
+(defn collatz [n])
