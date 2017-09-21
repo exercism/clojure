@@ -7,15 +7,15 @@
     (is (= [] (slices "" 1)))))
 
 (deftest number-eq-zero
-  (testing "number equal 0"
+  (testing "number = 0"
     (is (= [""] (slices "123" 0)))))
 
 (deftest number>string
-  (testing "number grater than string-length"
+  (testing "number > string-length"
     (is (= [] (slices "123" 1000)))))
 
 (deftest number=string
-  (testing "number equal to string-length"
+  (testing "number = string-length"
     (is (= ["123"] (slices "123" 3)))))
 
 (deftest number<string

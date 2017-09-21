@@ -22,7 +22,7 @@ in the input; the digits need not be *numerically consecutive*.
 
 ## Source
 
-See more at [http://projecteuler.net/problem=8"](http://projecteuler.net/problem=8")
+See more at [http://projecteuler.net/problem=8](http://projecteuler.net/problem=8)
 
 ## Submitting Incomplete Solutions
 It's possible to submit an incomplete solution so you can see how others have completed the exercise.
