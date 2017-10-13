@@ -296,6 +296,16 @@
       ]
     },
     {
+      "uuid": "d42g42d7-21b1-4daf-8ddc-a2ab9ee07c98",
+      "slug": "spiral-matrix",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "recursivity"
+      ]
+    },
+    {
       "uuid": "068a0997-d333-48cb-a82a-c5082e85115d",
       "slug": "prime-factors",
       "core": false,
