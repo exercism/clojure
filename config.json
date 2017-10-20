@@ -108,6 +108,14 @@
     {
       "core": false,
       "difficulty": 1,
+      "slug": "complex-numbers",
+      "topics": null,
+      "unlocked_by": null,
+      "uuid": "95580d10-92db-4809-b5e7-4085319d19e9"
+    },
+    {
+      "core": false,
+      "difficulty": 1,
       "slug": "robot-name",
       "topics": null,
       "unlocked_by": null,
