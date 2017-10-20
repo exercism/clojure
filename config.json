@@ -645,6 +645,16 @@
         "strings",
         "pattern matching"
       ]
+    },
+    {
+      "uuid": "f3971f71-08c9-4e36-a69e-5bd7fe070b07",
+      "slug": "diamond",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 2,
+      "topics": [
+
+      ]
     }
   ]
 }
