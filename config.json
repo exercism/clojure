@@ -634,6 +634,27 @@
       "topics": [
 
       ]
+    },
+    {
+      "uuid": "c4b7120c-a7c5-4a39-a08e-8d4fb9861a27",
+      "slug": "protein-translation",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "strings",
+        "pattern matching"
+      ]
+    },
+    {
+      "uuid": "f3971f71-08c9-4e36-a69e-5bd7fe070b07",
+      "slug": "diamond",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 2,
+      "topics": [
+
+      ]
     }
   ]
 }
