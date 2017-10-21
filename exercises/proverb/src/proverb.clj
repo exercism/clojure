@@ -1,0 +1,3 @@
+(ns proverb)
+
+(def proverb "")
