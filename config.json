@@ -1,4 +1,4 @@
-
+{
   "active": true,
   "exercises": [
     {
@@ -24,6 +24,14 @@
       "topics": null,
       "unlocked_by": null,
       "uuid": "c2100dff-4d18-4fcb-9035-6c57eddd6d37"
+    },
+    {
+      "core": false,
+      "difficulty": 1,
+      "slug": "run-length-encoding",
+      "topics": null,
+      "unlocked_by": null,
+      "uuid": "1efc777a-055f-0480-2251-39384d1c3460cd267e4"
     },
     {
       "core": false,
@@ -506,14 +514,6 @@
       "topics": null,
       "unlocked_by": null,
       "uuid": "2cc37c2a-7e6c-49ba-8b30-2ff8c9d818c2"
-    },
-    {
-      "core": false,
-      "difficulty": 1,
-      "slug": "run-length-encoding",
-      "topics": null,
-      "unlocked_by": null,
-      "uuid": "1efc777a-055f-0480-2251-39384d1c3460cd267e4"
     },
     {
       "core": false,
