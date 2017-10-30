@@ -1,6 +1,6 @@
-(defproject xclojure "0.1.0"
+(defproject clojure "0.1.0"
   :description  "Exercism Exercises in Clojure"
-  :url          "https://github.com/exercism/xclojure"
+  :url          "https://github.com/exercism/clojure"
   :test-paths   ["_test"]
   :source-paths ["_src"]
   :aliases {"generate" ["run" "-m" "generator"]}
