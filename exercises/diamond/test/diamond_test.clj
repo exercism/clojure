@@ -2,7 +2,7 @@
   (:require [clojure.test :refer [deftest is are]]
             [diamond :refer [diamond]]))
 
-(deftest sincle-a-row
+(deftest single-a-row
   (is (= (diamond \A) ["A"])))
 
 (deftest b-diamond
