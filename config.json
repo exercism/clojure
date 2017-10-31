@@ -28,6 +28,14 @@
     {
       "core": false,
       "difficulty": 1,
+      "slug": "run-length-encoding",
+      "topics": null,
+      "unlocked_by": null,
+      "uuid": "04a6c1d6-6cce-4c87-a34b-23fdd9baf70d"
+    },
+    {
+      "core": false,
+      "difficulty": 1,
       "slug": "word-count",
       "topics": null,
       "unlocked_by": null,
@@ -104,6 +112,14 @@
       "topics": null,
       "unlocked_by": null,
       "uuid": "f4cf3676-4399-4d1c-b21f-8e735c7af8cc"
+    },
+    {
+      "core": false,
+      "difficulty": 1,
+      "slug": "complex-numbers",
+      "topics": null,
+      "unlocked_by": null,
+      "uuid": "95580d10-92db-4809-b5e7-4085319d19e9"
     },
     {
       "core": false,
@@ -518,4 +534,4 @@
   ],
   "foregone": [],
   "language": "Clojure"
-} 
+}
