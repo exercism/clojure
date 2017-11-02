@@ -526,11 +526,30 @@
     {
       "core": false,
       "difficulty": 1,
+      "slug": "diamond",
+      "topics": null,
+      "unlocked_by": null,
+      "uuid": "f3971f71-08c9-4e36-a69e-5bd7fe070b07"
+    },
+    {
+      "core": false,
+      "difficulty": 1,
+      "slug": "protein-translation",
+      "unlocked_by": null,
+      "topics": [
+        "strings",
+        "pattern matching"
+      ],
+      "uuid": "c4b7120c-a7c5-4a39-a08e-8d4fb9861a27"
+    },
+    {
+      "core": false,
+      "difficulty": 1,
       "slug": "proverb",
       "topics": null,
       "unlocked_by: null,
       "uuid": "c8ba6ce5-9a7e-4c1c-8044-bb18a0d6ad39"
-    }
+    } 
   ],
   "foregone": [],
   "language": "Clojure"
