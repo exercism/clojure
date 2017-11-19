@@ -36,6 +36,14 @@
     {
       "core": false,
       "difficulty": 1,
+      "slug": "isbn-verifier",
+      "topics": null,
+      "unlocked_by": null,
+      "uuid": "e6411d18-d9b9-48fa-8ee6-0df8c13d3dee"
+    },
+    {
+      "core": false,
+      "difficulty": 1,
       "slug": "word-count",
       "topics": null,
       "unlocked_by": null,
