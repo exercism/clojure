@@ -8,6 +8,10 @@
 (defn isbn? [isbn]
   (let [chars (isbn-chars isbn)
         nums  (map #(if (= \X %) 10 (Character/digit % 10)) chars)]
-    (and (not (is-in? (butlast chars) \X))
+    (and (-> chars butlast (is-in? \X) not)
          (= 10 (count chars))
-         (zero? (mod (reduce + (map #(* %1 %2) (range 10 0 -1) nums)) 11)))))
+         (as-> nums x
+               (map #(* %1 %2) (range 10 0 -1) x)
+               (reduce + x)
+               (mod x 11)
+               (zero? x)))))
