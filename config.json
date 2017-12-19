@@ -20,6 +20,14 @@
     {
       "core": false,
       "difficulty": 1,
+      "slug": "reverse-string",
+      "topics": null,
+      "unlocked_by": null,
+      "uuid": "a8957cc5-d99e-4a31-9d49-4653226fd50b"
+    },
+    {
+      "core": false,
+      "difficulty": 1,
       "slug": "bob",
       "topics": null,
       "unlocked_by": null,
