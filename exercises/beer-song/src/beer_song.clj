@@ -1,9 +1,11 @@
 (ns beer-song)
- 
-;; implement two functions: one gives you a single verse, one gives you the entire song or a part of it
- 
-(defn verse [n])
+
+(defn verse
+ "Returns the nth verse of the song."
+ [n])
 
 (defn sing
-  ([from])
-  ([from to])
+  "Given a start and an optional end, returns all verses in this interval. If
+  end is not given, the whole song from start is sung."
+  ([start])
+  ([start end]))
