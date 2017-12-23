@@ -1,10 +1,11 @@
 (ns say
-    (:require [clojure.pprint :as pp]))
+    (:require [clojure.pprint :as pp])
+    (:require [clojure.string :as s]))
 
 (defn number [input]
   (if
     (or (< input 0) (> input 999999999999))
-    (throw (Exception. "Out of range"))
-    (clojure.string/replace (clojure.pprint/cl-format nil "~R" input) #"," "")
+    (throw (IllegalArgumentException. "Out of range"))
+    (s/replace (pp/cl-format nil "~R" input) #"," "")
   )
 )

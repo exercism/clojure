@@ -42,7 +42,7 @@
   (is (= "nine hundred eighty-seven billion six hundred fifty-four million three hundred twenty-one thousand one hundred twenty-three" (say/number 987654321123))))
 
 (deftest below-zero-is-out-of-range-test
-  (is (thrown? Exception (say/number -1))))
+  (is (thrown? IllegalArgumentException (say/number -1))))
 
 (deftest numbers-above-999999999999-out-of-range-test
-  (is (thrown? Exception (say/number 1000000000000))))
+  (is (thrown? IllegalArgumentException (say/number 1000000000000))))
