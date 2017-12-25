@@ -68,6 +68,14 @@
     {
       "core": false,
       "difficulty": 1,
+      "slug": "say",
+      "topics": null,
+      "unlocked_by": null,
+      "uuid": "31aa2618-b971-44ff-9799-761fdec53b87"
+    },
+    {
+      "core": false,
+      "difficulty": 1,
       "slug": "beer-song",
       "topics": null,
       "unlocked_by": null,
