@@ -1,6 +1,6 @@
 (ns complex-numbers-test
-  (require [clojure.test :refer [deftest is testing]]
-           [complex-numbers :as c]))
+  (:require [clojure.test :refer [deftest is testing]]
+            [complex-numbers :as c]))
 
 ;; Tests for Addition
 (deftest add-purely-real-numbers

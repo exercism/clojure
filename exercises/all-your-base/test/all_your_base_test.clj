@@ -1,6 +1,6 @@
 (ns all-your-base-test
-  (require [clojure.test :refer [deftest testing is]]
-           [all-your-base]))
+  (:require [clojure.test :refer [deftest testing is]]
+            [all-your-base]))
 
 (deftest test-single-bit-to-one-decimal
   (testing "Base 2 '1' converts to base 10 '1'"

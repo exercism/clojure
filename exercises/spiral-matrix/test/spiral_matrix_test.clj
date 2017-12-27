@@ -1,6 +1,6 @@
 (ns spiral-matrix-test
-  (require [clojure.test  :refer [deftest is testing]]
-           [spiral-matrix :refer [spiral]]))
+  (:require [clojure.test :refer [deftest is testing]]
+            [spiral-matrix :refer [spiral]]))
 
 (deftest spiral-matrix-of-0
   (testing "spiral matrix of 0"

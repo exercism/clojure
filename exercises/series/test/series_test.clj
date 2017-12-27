@@ -1,6 +1,6 @@
 (ns series-test
-  (require [clojure.test :refer [deftest is testing]]
-           [series  :refer [slices]]))
+  (:require [clojure.test :refer [deftest is testing]]
+            [series :refer [slices]]))
 
 (deftest empty-string
   (testing "empty string with any number"
