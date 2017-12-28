@@ -1,6 +1,6 @@
 (ns collatz-conjecture-test
-  (require [clojure.test :refer [deftest is testing]]
-           [collatz-conjecture :refer [collatz]]))
+  (:require [clojure.test :refer [deftest is testing]]
+            [collatz-conjecture :refer [collatz]]))
 
 (deftest steps-for-1
   (testing "zero steps for one"

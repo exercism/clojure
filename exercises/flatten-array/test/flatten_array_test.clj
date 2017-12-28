@@ -1,6 +1,6 @@
 (ns flatten-array-test
-  (require [clojure.test :refer [deftest is testing]]
-           [flatten-array]))
+  (:require [clojure.test :refer [deftest is testing]]
+            [flatten-array]))
 
 (deftest flattens-array-of-ints
   (testing "flattens array with just integers present"
