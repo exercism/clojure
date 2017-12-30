@@ -1,6 +1,6 @@
 (ns armstrong-numbers-test
-  (require [clojure.test :refer [deftest is testing]]
-           [armstrong-numbers :refer [armstrong?]]))
+  (:require [clojure.test :refer [deftest is testing]]
+            [armstrong-numbers :refer [armstrong?]]))
 
 (deftest armstrong-number-5
   (testing "Single digit numbers are Armstrong numbers"
