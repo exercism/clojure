@@ -12,6 +12,14 @@
     {
       "core": false,
       "difficulty": 1,
+      "slug": "armstrong-numbers",
+      "topics": null,
+      "unlocked_by": null,
+      "uuid": "a4bdbdfd-1db1-425c-a243-dd032dc7b93a"
+    },
+    {
+      "core": false,
+      "difficulty": 1,
       "slug": "reverse-string",
       "topics": null,
       "unlocked_by": null,
