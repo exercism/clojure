@@ -1,28 +1,27 @@
 (ns poker
   (:require [clojure.string :as cs]))
 
-(defn times [x xs]
-  (count (filter #{x} xs)))
-
 (defn rank-hand [hand]
-  (let [h   (cs/split (cs/replace hand #"10" "T") #" ")
-        r   (map #(.indexOf (seq "..23456789TJQKA") (first %)) h)
-        nr  (distinct r)
-        gs  (reverse (sort-by vec (map vector (map #(times % r) nr) nr)))
-        cs  (mapv first gs)
-        rs  (if (= (mapv second gs) [14,5,4,3,2]) [5,4,3,2,1] (mapv second gs))
-        srt (and (= 5 (count cs)) (= 4 (- (apply max cs) (apply min cs))))
-        fsh (= 1 (count (distinct (map last h))))]        
-    (cond (= 5 cs)         [9 rs]
-          (and srt fsh)    [8 rs]
-          (= cs [4 1])     [7 rs]
-          (= cs [3 2])     [6 rs]
-          fsh              [5 rs]
-          srt              [4 rs]
-          (= cs [3 1 1])   [3 rs]
-          (= cs [2 2 1])   [2 rs]
-          (= cs [2 1 1 1]) [1 rs]
-          :else            [0 rs])))
+  (let [h (cs/split (cs/replace hand #"10" "T") #" ")
+        initial-ranks (map #(.indexOf (seq "..23456789TJQKA") (first %)) h)
+        score-frec (reverse (sort-by vec (map (comp vec reverse)
+                                              (frequencies initial-ranks))))
+        rank-counts (mapv first score-frec)
+        normalized-ranks (if (= (mapv second score-frec) [14,5,4,3,2]) [5,4,3,2,1]
+                             (mapv second score-frec))
+        straight? (and (= 5 (count rank-counts))
+                       (= 4 (- (apply max rank-counts) (apply min rank-counts))))
+        flush? (= 1 (count (distinct (map last h))))]
+    (cond (= 5 rank-counts)         [9 normalized-ranks]
+          (and straight? flush?)    [8 normalized-ranks]
+          (= rank-counts [4 1])     [7 normalized-ranks]
+          (= rank-counts [3 2])     [6 normalized-ranks]
+          flush?                    [5 normalized-ranks]
+          straight?                 [4 normalized-ranks]
+          (= rank-counts [3 1 1])   [3 normalized-ranks]
+          (= rank-counts [2 2 1])   [2 normalized-ranks]
+          (= rank-counts [2 1 1 1]) [1 normalized-ranks]
+          :else                     [0 normalized-ranks])))
 
 (defn greater-than [xs ys]
   (or (> (first xs) (first ys))
@@ -31,12 +30,13 @@
            (some (partial = 1)))))
 
 (defn best-hands [hands]
-  (loop [m [0 []], r [], hs hands]
-    (if (empty? hs)
-      r
-      (let [[x xs] ((juxt first rest) hs)
-            rank   (rank-hand x)]
-        (cond
-          (or (empty? r) (greater-than rank m)) (recur rank [x] xs)
-          (= rank m)                            (recur m (conj r x) xs)
-          :else                                 (recur m r xs))))))
+  (-> (fn [[max-rank record hands]]
+        (let [[x & xs] hands
+              rank     (rank-hand x)]
+           (cond
+             (or (empty? record) (greater-than rank max-rank)) [rank [x] xs]
+             (= rank max-rank) [max-rank (conj record x) xs]
+             :else [max-rank record xs])))
+      (iterate  [[0 []] [] hands])
+      (nth (count hands))
+      (second)))
