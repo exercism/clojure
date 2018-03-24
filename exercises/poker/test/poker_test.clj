@@ -20,7 +20,7 @@
           "3H 4H 5C 6C JD"]
          ["3S 4S 5D 6H JH"
           "3H 4H 5C 6C JD"])))
- 
+
 (deftest multiple-hands-with-the-same-high-cards-tie-compares-next-highest-ranked-down-to-last-card
   (is (f ["3S 5H 6S 8D 7H"
           "2S 5D 6D 8C 7S"]
@@ -50,7 +50,7 @@
   (is (f ["2S QS 2C QD JH"
           "JD QH JS 8D QC"]
          ["JD QH JS 8D QC"])))
-          
+
 (deftest both-hands-have-two-identically-ranked-pairs-tie-goes-to-remaining-card-kicker
   (is (f ["JD QH JS 8D QC"
           "JS QS JC 2D QD"]
@@ -145,11 +145,3 @@
   (is (f ["4H 6H 7H 8H 5H"
           "5S 7S 8S 9S 6S"]
          ["5S 7S 8S 9S 6S"])))
-                    
-
-          
-          
-          
-          
-          
-          
