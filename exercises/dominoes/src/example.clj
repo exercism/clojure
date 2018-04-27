@@ -1,10 +1,8 @@
 (ns dominoes)
 
 (defn rm [xs x]
-  (loop [xs xs, ac []]
-    (cond (empty? xs)      ac
-          (= x (first xs)) (reduce conj ac (rest xs))
-          :else            (recur (rest xs) (conj ac (first xs))))))
+  (let [i (.indexOf xs x)]
+    (if (= -1 i) xs (vec (concat (take i xs) (drop (inc i) xs))))))
 
 (defn connects [[a b] [c d]]
   (cond (= b c) [c d]
