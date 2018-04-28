@@ -3,30 +3,32 @@
             [clojure.string :refer [join]]
             [minesweeper :refer [draw]]))
 
+(def line-separator (System/getProperty "line.separator"))
+
 (deftest zero-size-board
   (is (= (draw "") "")))
 
 (deftest empty-board
-  (is (= (draw (join \newline ["   "
+  (is (= (draw (join line-separator ["   "
                                "   "
                                "   "]))
-         (join \newline ["   "
+         (join line-separator ["   "
                          "   "
                          "   "]))))
 
 (deftest surrounded
-  (is (= (draw (join \newline ["***"
+  (is (= (draw (join line-separator ["***"
                                "* *"
                                "***"]))
-         (join \newline ["***"
+         (join line-separator ["***"
                          "*8*"
                          "***"]))))
 
 (deftest board-full-of-mines
-  (is (= (draw (join \newline ["***"
+  (is (= (draw (join line-separator ["***"
                                "***"
                                "***"]))
-         (join \newline ["***"
+         (join line-separator ["***"
                          "***"
                          "***"]))))
 
@@ -35,24 +37,24 @@
          "1*2*1")))
 
 (deftest vertical-line
-  (is (= (draw (join \newline [" "
+  (is (= (draw (join line-separator [" "
                                "*"
                                " "
                                "*"
                                " "]))
-         (join \newline ["1"
+         (join line-separator ["1"
                          "*"
                          "2"
                          "*"
                          "1"]))))
 
 (deftest cross
-  (is (= (draw (join \newline ["  *  "
+  (is (= (draw (join line-separator ["  *  "
                                "  *  "
                                "*****"
                                "  *  "
                                "  *  "]))
-         (join \newline [" 2*2 "
+         (join line-separator [" 2*2 "
                          "25*52"
                          "*****"
                          "25*52"
