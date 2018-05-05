@@ -597,6 +597,14 @@
       "topics": null,
       "unlocked_by": null,
       "uuid": "7df7ff1c-74ab-4f4e-aaf0-257b6e1cbc18"
+    },
+    {
+      "core": false,
+      "difficulty": 1,
+      "slug": "dominoes",
+      "topics": null,
+      "unlocked_by": null,
+      "uuid": "db6162c0-adff-401e-9dd6-a0322ca10dcf"
     }
   ],
   "foregone": [],
