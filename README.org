@@ -1,7 +1,9 @@
 #+TITLE: Exercism Clojure Track
 
-#+ATTR_HTML: :alt Build Status
-[[https://travis-ci.org/exercism/clojure][https://travis-ci.org/exercism/clojure.svg]]
+#+ATTR_HTML: :alt Travis Build Status
+[[https://travis-ci.org/exercism/clojure][https://travis-ci.org/exercism/clojure.svg?branch=master]]
+#+ATTR_HTML: :alt Appveyor Build Status
+[[https://ci.appveyor.com/project/haus/clojure][https://ci.appveyor.com/api/projects/status/k7lh9ohu77sqcwp2/branch/master#.jpg]]
 
 Exercism exercises in Clojure
 
