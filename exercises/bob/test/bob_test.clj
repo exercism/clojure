@@ -20,7 +20,7 @@
          (bob/response-for "It's OK if you don't want to go to the DMV."))))
 
 (deftest responds-to-forceful-questions
-  (is (= "Whoa, chill out!"
+  (is (= "Calm down, I know what I'm doing!"
          (bob/response-for "WHAT THE HELL WERE YOU THINKING?"))))
 
 (deftest responds-to-shouting-with-special-characters
