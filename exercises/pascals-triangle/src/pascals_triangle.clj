@@ -2,6 +2,6 @@
 
 (def triangle)
 
-(defn row [] ;; <- Arglist goes here
+(defn row [] ;; <- arglist goes here
   ;; your code goes here
   )

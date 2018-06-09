@@ -1,5 +1,5 @@
 (ns trinary)
 
-(defn to-decimal [] ;; <- Arglist goes here
+(defn to-decimal [] ;; <- arglist goes here
       ;; your code goes here
       )

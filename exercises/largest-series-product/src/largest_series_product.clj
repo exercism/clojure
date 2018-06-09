@@ -1,5 +1,5 @@
 (ns largest-series-product)
 
-(defn largest-product [] ;; <- Arglist goes here
+(defn largest-product [] ;; <- arglist goes here
       ;; your code goes here
       )

@@ -1,9 +1,9 @@
 (ns scrabble-score)
 
-(defn score-letter [] ;; <- Arglist goes here
+(defn score-letter [] ;; <- arglist goes here
       ;; your code goes here
       )
 
-(defn score-word [] ;; <- Arglist goes here
+(defn score-word [] ;; <- arglist goes here
   ;; your code goes here
   )

@@ -1,5 +1,5 @@
 (ns wordy)
 
-(defn evaluate [] ;; <- Arglist goes here
+(defn evaluate [] ;; <- arglist goes here
       ;; your code goes here
       )

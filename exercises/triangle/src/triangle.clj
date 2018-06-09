@@ -1,5 +1,5 @@
 (ns triangle)
 
-(defn type [] ;; <- Arglist goes here
+(defn type [] ;; <- arglist goes here
       ;; your code goes here
       )

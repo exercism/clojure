@@ -1,5 +1,5 @@
 (ns pangram)
 
-(defn pangram? [] ;; <- Arglist goes here
+(defn pangram? [] ;; <- arglist goes here
   ;; your code goes here
   )

@@ -1,13 +1,13 @@
 (ns phone-number)
 
-(defn number [] ;; <- Arglist goes here
+(defn number [] ;; <- arglist goes here
       ;; your code goes here
       )
 
-(defn area-code [] ;; <- Arglist goes here
+(defn area-code [] ;; <- arglist goes here
   ;; your code goes here
   )
 
-(defn pretty-print [] ;; <- Arglist goes here
+(defn pretty-print [] ;; <- arglist goes here
   ;; your code goes here
   )

@@ -1,3 +1,5 @@
 (ns collatz-conjecture)
 
-(defn collatz [n])
+(defn collatz [n] ;; <- arglist goes here
+  ;; your code goes here
+)

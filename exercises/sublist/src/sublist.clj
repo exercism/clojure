@@ -1,5 +1,5 @@
 (ns sublist)
 
-(defn classify [] ;; <- Arglist goes here
+(defn classify [] ;; <- arglist goes here
       ;; your code goes here
       )

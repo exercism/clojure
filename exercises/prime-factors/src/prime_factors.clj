@@ -1,5 +1,5 @@
 (ns prime-factors)
 
-(defn of [] ;; <- Arglist goes here
+(defn of [] ;; <- arglist goes here
       ;; your code goes here
       )

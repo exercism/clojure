@@ -1,5 +1,5 @@
 (ns pig-latin)
 
-(defn translate [] ;; <- Arglist goes here
+(defn translate [] ;; <- arglist goes here
       ;; your code goes here
       )

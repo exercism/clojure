@@ -1,5 +1,5 @@
 (ns sieve)
 
-(defn sieve [] ;; <- Arglist goes here
+(defn sieve [] ;; <- arglist goes here
       ;; your code goes here
       )

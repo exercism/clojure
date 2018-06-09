@@ -1,5 +1,5 @@
 (ns secret-handshake)
 
-(defn commands [] ;; <- Arglist goes here
+(defn commands [] ;; <- arglist goes here
       ;; your code goes here
       )

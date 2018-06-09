@@ -1,9 +1,9 @@
 (ns strain)
 
-(defn retain [] ;; <- Arglist goes here
+(defn retain [] ;; <- arglist goes here
       ;; your code goes here
       )
 
-(defn discard [] ;; <- Arglist goes here
+(defn discard [] ;; <- arglist goes here
   ;; your code goes here
   )

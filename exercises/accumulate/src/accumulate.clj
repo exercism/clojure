@@ -1,5 +1,5 @@
 (ns accumulate)
 
-(defn accumulate [] ;; <- Arglist goes here
+(defn accumulate [] ;; <- arglist goes here
       ;; your code goes here
       )

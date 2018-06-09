@@ -1,5 +1,5 @@
 (ns rotational-cipher)
 
-(defn rotate [] ;; <- Arglist goes here
+(defn rotate [] ;; <- arglist goes here
       ;; your code goes here
       )

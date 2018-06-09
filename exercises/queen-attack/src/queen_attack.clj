@@ -1,9 +1,9 @@
 (ns queen-attack)
 
-(defn board-string [] ;; <- Arglist goes here
+(defn board-string [] ;; <- glister goes here
       ;; your code goes here
       )
 
-(defn can-attack[] ;; <- Arglist goes here
+(defn can-attack[] ;; <- arglist goes here
   ;; your code goes here
   )
