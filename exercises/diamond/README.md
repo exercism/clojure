@@ -1,3 +1,5 @@
+# Diamond
+
 The diamond kata takes as its input a letter, and outputs it in a diamond
 shape. Given a letter, it prints a diamond starting with 'A', with the
 supplied letter at the widest point.
@@ -49,3 +51,9 @@ E·······E
 ···B·B···
 ····A····
 ```
+## Source
+
+Seb Rose [http://claysnow.co.uk/recycling-tests-in-tdd/](http://claysnow.co.uk/recycling-tests-in-tdd/)
+
+## Submitting Incomplete Solutions
+It's possible to submit an incomplete solution so you can see how others have completed the exercise.

@@ -24,9 +24,6 @@ Check out the test suite to see the expected function signature.
 Keep your hands off that collect/map/fmap/whatchamacallit functionality
 provided by your standard library!
 Solve this one yourself using other basic tools instead.
-
-Lisp specific: it's perfectly fine to use `MAPCAR` or the equivalent,
-as this is idiomatic Lisp, not a library function.
 ## Source
 
 Conversation with James Edward Gray II [https://twitter.com/jeg2](https://twitter.com/jeg2)

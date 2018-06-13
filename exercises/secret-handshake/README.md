@@ -6,7 +6,7 @@
 You and your fellow cohort of those in the "know" when it comes to
 binary decide to come up with a secret "handshake".
 
-```
+```text
 1 = wink
 10 = double blink
 100 = close your eyes
@@ -29,7 +29,7 @@ Notice that the addition of 16 (10000 in binary)
 has caused the array to be reversed.
 ## Source
 
-Bert, in Mary Poppins [http://www.imdb.com/character/ch0011238/quotes](http://www.imdb.com/character/ch0011238/quotes)
+Bert, in Mary Poppins [http://www.imdb.com/title/tt0058331/quotes/qt0437047](http://www.imdb.com/title/tt0058331/quotes/qt0437047)
 
 ## Submitting Incomplete Solutions
 It's possible to submit an incomplete solution so you can see how others have completed the exercise.
