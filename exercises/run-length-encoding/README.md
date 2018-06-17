@@ -22,12 +22,6 @@ For simplicity, you can assume that the unencoded string will only contain
 the letters A through Z (either lower or upper case) and whitespace. This way
 data to be encoded will never contain any numbers and numbers inside data to
 be decoded always represent the count for the following character.
-
-## General help
-
-For more detailed information about running tests, code style and linting,
-please see the [help page](http://exercism.io/languages/clojure).
-
 ## Source
 
 Wikipedia [https://en.wikipedia.org/wiki/Run-length_encoding](https://en.wikipedia.org/wiki/Run-length_encoding)
