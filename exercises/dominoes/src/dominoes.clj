@@ -1,3 +1,5 @@
 (ns dominoes)
 
-(defn can-chain? [])
+(defn can-chain? [] ;; <- arglist goes here
+  ;; your code goes here
+  )
