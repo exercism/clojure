@@ -32,6 +32,9 @@
 (deftest too-long-isbn-and-no-dashes
   (is (= false (isbn? "3598215078X"))))
 
+(deftest too-short-isbn
+  (is (= false (isbn? "00"))))
+
 (deftest isbn-without-check-digit
   (is (= false (isbn? "3-598-21507"))))
 
