@@ -1,5 +1,5 @@
 (ns anagram)
 
-(defn anagrams-for [] ;; <- arglist goes here
+(defn anagrams-for [word prospect-list] ;; <- arglist goes here
   ;; your code goes here
 )

@@ -1,5 +1,5 @@
 (ns armstrong-numbers)
 
-(defn armstrong? [n] ;; <- arglist goes here
+(defn armstrong? [num] ;; <- arglist goes here
   ;; your code goes here
   )

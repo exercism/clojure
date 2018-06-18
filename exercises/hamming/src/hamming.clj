@@ -1,5 +1,5 @@
 (ns hamming)
 
-(defn distance [] ; <- arglist goes here
-  ;; your code goes here 
+(defn distance [strand1 strand2] ; <- arglist goes here
+  ;; your code goes here
 )

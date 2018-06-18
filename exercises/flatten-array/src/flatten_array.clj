@@ -1,5 +1,5 @@
 (ns flatten-array)
 
-(defn flatten [] ;; <- arglist goes here
+(defn flatten [arr] ;; <- arglist goes here
   ;; your code goes here
 )

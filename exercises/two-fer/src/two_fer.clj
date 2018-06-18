@@ -1,5 +1,5 @@
 (ns two-fer)
 
-(defn two-fer [] ;; <- arglist goes here
+(defn two-fer [name] ;; <- arglist goes here
   ;; your code goes here
 )

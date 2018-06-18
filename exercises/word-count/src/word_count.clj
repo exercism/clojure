@@ -1,5 +1,5 @@
 (ns word-count)
 
-(defn word-count [] ;; <- arglist goes here
+(defn word-count [s] ;; <- arglist goes here
   ;; your code goes here
 )
