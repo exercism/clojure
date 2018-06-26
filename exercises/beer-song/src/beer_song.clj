@@ -2,7 +2,7 @@
 
 (defn verse
  "Returns the nth verse of the song."
- [n])
+ [num])
 
 (defn sing
   "Given a start and an optional end, returns all verses in this interval. If

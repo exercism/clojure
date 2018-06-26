@@ -1,5 +1,5 @@
 (ns etl)
 
-(defn transform [] ;; <- arglist goes here
+(defn transform [source] ;; <- arglist goes here
   ;; your code goes here
 )

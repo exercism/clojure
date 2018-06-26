@@ -1,9 +1,9 @@
 (ns nucleotide-count)
 
-(defn count [] ;; <- Arglist goes here
+(defn count [nucleotide strand] ;; <- Arglist goes here
   ;; your code goes here
   )
 
-(defn nucleotide-counts [] ;; <- Arglist goes here
+(defn nucleotide-counts [strand] ;; <- Arglist goes here
   ;; your code goes here
   )

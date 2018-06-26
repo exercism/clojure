@@ -1,13 +1,13 @@
 (ns clock)
 
-(defn clock->string [] ;; <- arglist goes here
+(defn clock->string [clock] ;; <- arglist goes here
   ;; your code goes here
 )
 
-(defn clock [] ;; <- arglist goes here
+(defn clock [hours minutes] ;; <- arglist goes here
   ;; your code goes here
 )
 
-(defn add-time [] ;; <- arglist goes here
+(defn add-time [clock time] ;; <- arglist goes here
   ;; your code goes here
 )
