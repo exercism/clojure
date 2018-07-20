@@ -20,10 +20,10 @@
 
 (deftest steps-for-0
   (testing "zero is an error"
-    (is (thrown? IllegalArgumentException
+    (is (thrown? Throwable
                  (collatz 0)))))
 
 (deftest steps-for-negative
   (testing "negative value is an error"
-    (is (thrown? IllegalArgumentException
+    (is (thrown? Throwable
                  (collatz -15)))))
