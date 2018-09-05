@@ -8,6 +8,6 @@
   ;; your code goes here
 )
 
-(defn square-of-sums [] ;; <- arglist goes here
+(defn square-of-sum [] ;; <- arglist goes here
   ;; your code goes here
 )
