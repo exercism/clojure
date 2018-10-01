@@ -640,6 +640,14 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": null
+    },
+    {
+      "slug": "go-counting",
+      "uuid": "987438e8-1db3-447a-a243-e67c7591709d",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": null
     }
   ]
 }
