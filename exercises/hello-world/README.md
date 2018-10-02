@@ -31,7 +31,7 @@ $ lein test
 
 lein test hello-world-test
 
-Ran 3 tests containing 3 assertions.
+Ran 1 tests containing 1 assertions.
 0 failures, 0 errors.
 ```
 
