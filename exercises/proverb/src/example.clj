@@ -3,7 +3,7 @@
 
 (def subjects ["nail" "shoe" "horse" "rider" "message" "battle" "kingdom"])
 
-(def last-line "And all for the want of a horseshoe nail.")
+(def last-line "And all for the want of a nail.")
 
 (defn- line [[cause-subject effect-subject]]
   (format "For want of a %s the %s was lost." cause-subject effect-subject))
