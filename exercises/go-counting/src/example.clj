@@ -8,16 +8,16 @@
            \space [[y x] :free]))
        (into {})))
 
-(defn neighbors [f stones [x y]]
+(defn neighbors [pred stones [x y]]
   (->> [[0 1] [0 -1] [1 0] [-1 0]]
        (map (fn [[j k]] [(+ x j) (+ y k)]))
-       (filter (comp f stones))))
+       (filter (comp pred stones))))
 
 (defn territory-of [stones [x y]]
   (if (= :free (stones [x y]))
-    (letfn [(f [[seen fronteir]]
-              (as-> (reduce conj seen fronteir) nseen
-                [nseen (->> fronteir
+    (letfn [(f [[seen frontier]]
+              (let [nseen (reduce conj seen frontier)]
+                [nseen (->> frontier
                             (mapcat #(neighbors #{:free} stones %))
                             (filter (complement nseen)))]))]
       (->> [#{} [[x y]]]
@@ -43,8 +43,8 @@
       {:stones territory :owner (territory-owner stones territory)})))
 
 (defn territories [grid]
-  (let [territories (->> grid grid->graph keys (map (partial territory grid)))
-        f #(->> territories (filter (comp % :owner)) (map :stones) (reduce concat) set)]
-    {:black-territory (f (partial = :black)) 
-     :white-territory (f (partial = :white))
-     :null-territory  (f nil?)}))
+  (let [territories   (->> grid grid->graph keys (map (partial territory grid)))
+        territory-for #(->> territories (filter (comp % :owner)) (map :stones) (reduce concat) set)]
+    {:black-territory (territory-for (partial = :black)) 
+     :white-territory (territory-for (partial = :white))
+     :null-territory  (territory-for nil?)}))
