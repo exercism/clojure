@@ -31,10 +31,9 @@ To be more precise an empty intersection is part of a player's territory
 if all of its neighbours are either stones of that player or empty
 intersections that are part of that player's territory.
 
-## Source
-
-[wikipedia](https://en.wikipedia.org/wiki/Go_%28game%29)
-[Sensei's Library](http://senseis.xmp.net/).
+For more information see
+[wikipedia](https://en.wikipedia.org/wiki/Go_%28game%29) or [Sensei's
+Library](http://senseis.xmp.net/).
 
 ## Submitting Incomplete Solutions
 It's possible to submit an incomplete solution so you can see how others have completed the exercise.
