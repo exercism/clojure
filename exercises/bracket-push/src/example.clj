@@ -1,7 +1,7 @@
 (ns bracket-push)
 
 (defn valid? [s]
-  (let [pairs { \) \( \] \[ \} \{ }
+  (let [pairs {\) \( \] \[ \} \{}
         opening (set (vals pairs))
         closing (set (keys pairs))]
     (loop [stack [] [x & xs :as s] s]

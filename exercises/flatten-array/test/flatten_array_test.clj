@@ -25,4 +25,4 @@
 (deftest all-nils-list
   (testing "All values in nested list are nil"
     (is (empty?
-          (flatten-array/flatten [nil [[[nil]]] nil nil [[nil nil] nil] nil])))))
+         (flatten-array/flatten [nil [[[nil]]] nil nil [[nil nil] nil] nil])))))

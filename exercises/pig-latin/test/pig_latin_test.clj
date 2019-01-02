@@ -32,19 +32,19 @@
 
 (deftest word-beginning-with-p
   (is (= "igpay"
-       (pig-latin/translate "pig"))))
+         (pig-latin/translate "pig"))))
 
 (deftest word-beginning-with-k
   (is (= "oalakay"
-       (pig-latin/translate "koala"))))
+         (pig-latin/translate "koala"))))
 
 (deftest word-beginning-with-y
   (is (= "ellowyay"
-       (pig-latin/translate "yellow"))))
+         (pig-latin/translate "yellow"))))
 
 (deftest word-beginning-with-x
   (is (= "enonxay"
-       (pig-latin/translate "xenon"))))
+         (pig-latin/translate "xenon"))))
 
 (deftest word-beginning-with-q-without-a-following-u
   (is (= "atqay"
@@ -54,39 +54,39 @@
 
 (deftest word-beginning-with-ch
   (is (= "airchay"
-       (pig-latin/translate "chair"))))
+         (pig-latin/translate "chair"))))
 
 (deftest word-beginning-with-qu
   (is (= "eenquay"
-       (pig-latin/translate "queen"))))
+         (pig-latin/translate "queen"))))
 
 (deftest word-beginning-with-qu-and-a-preceding-consonant
   (is (= "aresquay"
-       (pig-latin/translate "square"))))
+         (pig-latin/translate "square"))))
 
 (deftest word-beginning-with-th
   (is (= "erapythay"
-       (pig-latin/translate "therapy"))))
+         (pig-latin/translate "therapy"))))
 
 (deftest word-beginning-with-thr
   (is (= "ushthray"
-       (pig-latin/translate "thrush"))))
+         (pig-latin/translate "thrush"))))
 
 (deftest word-beginning-with-sch
   (is (= "oolschay"
-       (pig-latin/translate "school"))))
+         (pig-latin/translate "school"))))
 
 ;;  some letter clusters are treated like a single vowel
 
 (deftest word-beginning-with-yt
   (is (= "yttriaay"
-       (pig-latin/translate "yttria"))))
+         (pig-latin/translate "yttria"))))
 
 (deftest word-beginning-with-xr
   (is (= "xrayay"
-       (pig-latin/translate "xray"))))
+         (pig-latin/translate "xray"))))
 
 ;; phrases are translated
 (deftest a-whole-phrase
   (is (= "ickquay astfay unray"
-       (pig-latin/translate "quick fast run"))))
+         (pig-latin/translate "quick fast run"))))

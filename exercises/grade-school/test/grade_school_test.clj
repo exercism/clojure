@@ -34,7 +34,7 @@
 (deftest sorted-grade-school
   (is (= (sorted-map 3 ["Kyle"]
                      4 ["Christopher" "Jennifer"]
-                     6 ["Kareem"] )
+                     6 ["Kareem"])
          (-> db
              (grade-school/add "Jennifer" 4)
              (grade-school/add "Kareem" 6)

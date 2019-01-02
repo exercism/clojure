@@ -10,27 +10,27 @@
 
 (deftest empty-board
   (is (= (draw (join line-separator ["   "
-                               "   "
-                               "   "]))
+                                     "   "
+                                     "   "]))
          (join line-separator ["   "
-                         "   "
-                         "   "]))))
+                               "   "
+                               "   "]))))
 
 (deftest surrounded
   (is (= (draw (join line-separator ["***"
-                               "* *"
-                               "***"]))
+                                     "* *"
+                                     "***"]))
          (join line-separator ["***"
-                         "*8*"
-                         "***"]))))
+                               "*8*"
+                               "***"]))))
 
 (deftest board-full-of-mines
   (is (= (draw (join line-separator ["***"
-                               "***"
-                               "***"]))
+                                     "***"
+                                     "***"]))
          (join line-separator ["***"
-                         "***"
-                         "***"]))))
+                               "***"
+                               "***"]))))
 
 (deftest horizontal-line
   (is (= (draw " * * ")
@@ -38,25 +38,25 @@
 
 (deftest vertical-line
   (is (= (draw (join line-separator [" "
-                               "*"
-                               " "
-                               "*"
-                               " "]))
+                                     "*"
+                                     " "
+                                     "*"
+                                     " "]))
          (join line-separator ["1"
-                         "*"
-                         "2"
-                         "*"
-                         "1"]))))
+                               "*"
+                               "2"
+                               "*"
+                               "1"]))))
 
 (deftest cross
   (is (= (draw (join line-separator ["  *  "
-                               "  *  "
-                               "*****"
-                               "  *  "
-                               "  *  "]))
+                                     "  *  "
+                                     "*****"
+                                     "  *  "
+                                     "  *  "]))
          (join line-separator [" 2*2 "
-                         "25*52"
-                         "*****"
-                         "25*52"
-                         " 2*2 "]))))
+                               "25*52"
+                               "*****"
+                               "25*52"
+                               " 2*2 "]))))
 

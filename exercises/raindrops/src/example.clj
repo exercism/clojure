@@ -2,16 +2,16 @@
   (:require [clojure.string :refer [blank?]]))
 
 (def ^:private sound-map
-  { 3 "Pling"
-    5 "Plang"
-    7 "Plong" })
+  {3 "Pling"
+   5 "Plang"
+   7 "Plong"})
 
 (defn- divisors
   [number]
   (filter
-    (fn [[div sound]]
-      (zero? (rem number div)))
-    sound-map))
+   (fn [[div sound]]
+     (zero? (rem number div)))
+   sound-map))
 
 (defn- sounds-for
   [number]

@@ -7,11 +7,11 @@
 
 (defn insert [v node]
   (if
-    (empty? node)
+   (empty? node)
     (singleton v)
     (let [x (value node)]
       (if
-        (>= x v)
+       (>= x v)
         [x (insert v (left node)) (right node)]
         [x (left node) (insert v (right node))]))))
 
@@ -20,6 +20,6 @@
 
 (defn to-list [node]
   (if
-    (empty? node)
+   (empty? node)
     node
     (concat (to-list (left node)) [(value node)] (to-list (right node)))))

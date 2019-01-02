@@ -1,15 +1,15 @@
 (ns run-length-encoding)
 
-(defn run-length-encode 
+(defn run-length-encode
   "encodes a string with run-length-encoding"
   [s]
   (apply str
          (for
-           [ x (partition-by identity s)]
+          [x (partition-by identity s)]
            (str
-             (when-not (= 1 (count x)) (count x)) (first x)))))
+            (when-not (= 1 (count x)) (count x)) (first x)))))
 
-(defn run-length-decode 
+(defn run-length-decode
   "decodes a run-length-encoded string"
   [s]
   (->> s

@@ -4,6 +4,6 @@
   (loop [xs xs
          accum []]
     (if
-      (empty? xs) accum
-      (recur (rest xs) (conj accum (f (first xs)))))))
+     (empty? xs) accum
+     (recur (rest xs) (conj accum (f (first xs)))))))
 

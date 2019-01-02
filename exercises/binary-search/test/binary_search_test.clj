@@ -37,4 +37,4 @@
 
 (deftest throws-exception-when-element-not-found
   (is (thrown-with-msg? Throwable #"not found"
-        (binary-search/search-for 20 short-vector))))
+                        (binary-search/search-for 20 short-vector))))

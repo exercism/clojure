@@ -9,8 +9,8 @@
 
 (defn- power [[exponent bit]]
   (if (= "1" bit)
-      (pow 2 exponent)
-      0))
+    (pow 2 exponent)
+    0))
 
 (defn- bits [string]
   (->> string

@@ -28,5 +28,4 @@
   (testing "another valid sin"
     (is (true? (luhn/valid? "055 444 285"))))
   (testing "nine doubled is nine"
-    (is (true? (luhn/valid? "091"))))
-)
+    (is (true? (luhn/valid? "091")))))

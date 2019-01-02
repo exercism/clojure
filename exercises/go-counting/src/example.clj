@@ -24,7 +24,7 @@
            (iterate f)
            (drop-while (comp seq second))
            (ffirst)))
-    #{}))  
+    #{}))
 
 (defn territory-owner [stones territory]
   (->> territory
@@ -45,6 +45,6 @@
 (defn territories [grid]
   (let [territories   (->> grid grid->graph keys (map (partial territory grid)))
         territory-for #(->> territories (filter (comp % :owner)) (map :stones) (reduce concat) set)]
-    {:black-territory (territory-for (partial = :black)) 
+    {:black-territory (territory-for (partial = :black))
      :white-territory (territory-for (partial = :white))
      :null-territory  (territory-for nil?)}))

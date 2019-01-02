@@ -1,7 +1,7 @@
 (ns bank-account-test
   (:require
-    [clojure.test :refer [deftest testing is use-fixtures]]
-    [bank-account]))
+   [clojure.test :refer [deftest testing is use-fixtures]]
+   [bank-account]))
 
 (defn shutdown-agents-fixture [f]
   (f)
