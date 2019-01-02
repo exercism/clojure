@@ -10,4 +10,4 @@
     (count (take-while #(not= 1 %)
                        (iterate collatz-helper n)))
     (throw (IllegalArgumentException.
-             "Just defined for numbers greater than 0."))))
+            "Just defined for numbers greater than 0."))))

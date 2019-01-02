@@ -24,4 +24,4 @@
 
 (defn rotate [text spin]
   (let [cipher (cipher spin)]
-    (apply str (map cipher text)) ))
+    (apply str (map cipher text))))

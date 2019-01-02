@@ -7,11 +7,10 @@
     (str/join "\n"
               (map #(str/join " " %1)
                    (conj (vec (partition 8
-                              (for [x (range 8)
-                                    y (range 8)]
-                                (.toUpperCase (name (or (piece-at [x y])
-                                    "_")))
-                                  )))
+                                         (for [x (range 8)
+                                               y (range 8)]
+                                           (.toUpperCase (name (or (piece-at [x y])
+                                                                   "_"))))))
                          nil)))))
 
 (defn same-row [queens]

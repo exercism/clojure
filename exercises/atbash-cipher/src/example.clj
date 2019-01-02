@@ -3,11 +3,11 @@
 
 (def ^:private letters
   (map char
-    (range (int \a) (inc (int \z)))))
+       (range (int \a) (inc (int \z)))))
 
 (def ^:private to-cipher
   (apply hash-map
-    (interleave letters (reverse letters))))
+         (interleave letters (reverse letters))))
 
 (defn- sanitize
   [plaintext]

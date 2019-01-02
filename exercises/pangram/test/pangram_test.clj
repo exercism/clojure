@@ -34,5 +34,5 @@
 
 (deftest upper-and-lower-not-counted-separately
   (is
-    (false?
-      (pangram? "the quick brown fox jumps over with lazy FX"))))
+   (false?
+    (pangram? "the quick brown fox jumps over with lazy FX"))))

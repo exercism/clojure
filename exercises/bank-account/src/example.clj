@@ -5,13 +5,13 @@
 
 (defn close-account [account]
   (dosync
-    (ref-set account nil)))
+   (ref-set account nil)))
 
 (defn get-balance [account]
   (dosync
-    @account))
+   @account))
 
 (defn update-balance [account amt]
   (dosync
-    (alter account + amt)))
+   (alter account + amt)))
 

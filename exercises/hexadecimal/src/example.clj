@@ -8,7 +8,7 @@
 (def is-a-to-f (partial char-between \a \f))
 
 (defn- is-hex-digit [c]
-    (or (is-digit c) (is-a-to-f c)))
+  (or (is-digit c) (is-a-to-f c)))
 
 (defn- digit-to-int [c]
   (cond
@@ -18,6 +18,6 @@
 
 (defn hex-to-int [digits]
   (if
-    (some (complement is-hex-digit) digits) 0
-    (reduce #(+ (digit-to-int %2) (* %1 16)) 0 digits)))
+   (some (complement is-hex-digit) digits) 0
+   (reduce #(+ (digit-to-int %2) (* %1 16)) 0 digits)))
 

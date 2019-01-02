@@ -32,7 +32,7 @@
 (deftest unopened-closing-brackets
   (is (false? (bracket-push/valid? "{[)][]}"))
       "unopened closing brackets"))
- 
+
 (deftest unpaired-and-nested-brackets
   (is (false? (bracket-push/valid? "([{])"))
       "unpaired and nested brackets"))

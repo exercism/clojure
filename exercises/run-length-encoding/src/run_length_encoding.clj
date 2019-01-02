@@ -2,10 +2,8 @@
 
 (defn run-length-encode
   "encodes a string with run-length-encoding"
-  [plain-text]
-  )
+  [plain-text])
 
 (defn run-length-decode
   "decodes a run-length-encoded string"
-  [cipher-text]
-  )
+  [cipher-text])

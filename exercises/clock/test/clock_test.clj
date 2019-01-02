@@ -173,5 +173,4 @@
   (testing "clocks with negative hours and minutes that wrap"
     (let [clock1 (clock 18 7)
           clock2 (clock -54 -11513)]
-      (is (= clock1 clock2))))
-)
+      (is (= clock1 clock2)))))

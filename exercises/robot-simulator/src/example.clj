@@ -32,12 +32,12 @@
           coordinates (:coordinates current-state)
           bearing     (:bearing current-state)
           next-state  (cond
-                           (= \L instruction)
-                             (robot coordinates (turn-left bearing))
-                           (= \R instruction)
-                             (robot coordinates (turn-right bearing))
-                           :else
-                             (robot (advance coordinates bearing) bearing))]
+                        (= \L instruction)
+                        (robot coordinates (turn-left bearing))
+                        (= \R instruction)
+                        (robot coordinates (turn-right bearing))
+                        :else
+                        (robot (advance coordinates bearing) bearing))]
       (if (seq remainder)
         (recur remainder next-state)
         next-state))))

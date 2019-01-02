@@ -12,7 +12,7 @@
 
 ;; Another approach
 (ns phrase
- (:require [clojure.string :refer [lower-case]]))
+  (:require [clojure.string :refer [lower-case]]))
 
 (defn words [s]
   (re-seq #"\w+" s))

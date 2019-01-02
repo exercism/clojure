@@ -33,10 +33,10 @@
   (-> (fn [[max-rank record hands]]
         (let [[x & xs] hands
               rank     (rank-hand x)]
-           (cond
-             (or (empty? record) (greater-than rank max-rank)) [rank [x] xs]
-             (= rank max-rank) [max-rank (conj record x) xs]
-             :else [max-rank record xs])))
+          (cond
+            (or (empty? record) (greater-than rank max-rank)) [rank [x] xs]
+            (= rank max-rank) [max-rank (conj record x) xs]
+            :else [max-rank record xs])))
       (iterate  [[0 []] [] hands])
       (nth (count hands))
       (second)))

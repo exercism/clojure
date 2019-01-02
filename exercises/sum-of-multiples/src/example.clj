@@ -6,4 +6,4 @@
 
 (defn sum-of-multiples [multiples n]
   (reduce (fn [sum x] (cond-> sum (some (divides? x) multiples) (+ x)))
-	  0 (range 1 n)))
+          0 (range 1 n)))
