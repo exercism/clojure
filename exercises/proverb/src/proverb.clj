@@ -1,3 +1,5 @@
 (ns proverb)
 
-(def proverb "")
+(defn recite [] ;; <- arglist goes here
+    ;; your code goes here
+)
