@@ -24,7 +24,7 @@
 
 (deftest not-armstrong-number-9475
   (testing "Four digit number that is not an Armstrong number"
-    (is (not (armstrong? 9476)))))
+    (is (not (armstrong? 9475)))))
 
 (deftest armstrong-number-9926315
   (testing "Seven digit number that is an Armstrong number"
