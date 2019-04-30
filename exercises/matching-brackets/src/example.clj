@@ -1,4 +1,4 @@
-(ns bracket-push)
+(ns matching-brackets)
 
 (defn valid? [s]
   (let [pairs {\) \( \] \[ \} \{}

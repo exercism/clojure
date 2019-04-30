@@ -509,7 +509,7 @@
       "topics": null
     },
     {
-      "slug": "bracket-push",
+      "slug": "matching-brackets",
       "uuid": "c8ebc25b-17b9-44a9-8cbe-df2c2eb6e2d6",
       "core": false,
       "unlocked_by": null,
