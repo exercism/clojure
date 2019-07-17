@@ -2,7 +2,7 @@
 language: clojure
 sudo: false
 lein: lein
-jdk: oraclejdk8
+jdk: openjdk8
 script:
 - bin/fetch-configlet
 - bin/configlet lint .
