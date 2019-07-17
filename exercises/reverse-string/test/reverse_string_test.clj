@@ -5,6 +5,9 @@
 (deftest empty-string-test
   (is (= "" (reverse-string/reverse-string ""))))
 
+(deftest a-letter-test
+  (is (= "I" (reverse-string/reverse-string "I"))))
+
 (deftest a-word-test
   (is (= "tobor" (reverse-string/reverse-string "robot"))))
 
@@ -16,3 +19,8 @@
 
 (deftest palindrome-test
   (is (= "racecar" (reverse-string/reverse-string "racecar"))))
+
+(deftest long-string-test
+  (let [s (reduce str (repeat 1000 "overflow?"))
+        rs (reduce str (repeat 1000 "?wolfrevo"))]
+    (is (= rs (reverse-string/reverse-string s)))))
