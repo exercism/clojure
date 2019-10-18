@@ -1,5 +1,4 @@
-(ns nucleotide-count
-  (:refer-clojure :exclude [count]))
+(ns nucleotide-count)
 
 (def ^{:private :const} dna-nucleotides #{\A \C \G \T})
 
@@ -11,7 +10,7 @@
   [strand]
   (into base-count (frequencies strand)))
 
-(defn count
+(defn count-of-nucleotide-in-strand
   "count occurrences of nucleotide in strand"
   [nucleotide strand]
   (or ((nucleotide-counts strand) nucleotide)
