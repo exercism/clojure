@@ -10,7 +10,7 @@
   [strand]
   (into base-count (frequencies strand)))
 
-(defn counter
+(defn count-of-nucleotide-in-strand
   "count occurrences of nucleotide in strand"
   [nucleotide strand]
   (or ((nucleotide-counts strand) nucleotide)
