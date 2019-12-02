@@ -2,6 +2,10 @@
   (:require [clojure.test :refer [deftest is testing]]
             [armstrong-numbers :refer [armstrong?]]))
 
+(deftest armstrong-number-0
+  (testing "Zero is an Armstrong number"
+    (is (armstrong? 0))))
+
 (deftest armstrong-number-5
   (testing "Single digit numbers are Armstrong numbers"
     (is (armstrong? 5))))
