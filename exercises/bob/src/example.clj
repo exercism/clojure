@@ -14,9 +14,11 @@
   (and (shouting? msg) (question? msg)))
 
 (defn response-for [input]
-  (cond
-    (forceful-question? input) "Calm down, I know what I'm doing!"
-    (silence?  input) "Fine. Be that way!"
-    (shouting? input) "Whoa, chill out!"
-    (question? input) "Sure."
-    :else             "Whatever."))
+  (let [clean (str/trim input)]
+    (cond
+      (forceful-question? clean) "Calm down, I know what I'm doing!"
+      (silence?  clean) "Fine. Be that way!"
+      (shouting? clean) "Whoa, chill out!"
+      (question? clean) "Sure."
+      :else             "Whatever.")))
+
