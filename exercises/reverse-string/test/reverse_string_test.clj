@@ -20,6 +20,9 @@
 (deftest palindrome-test
   (is (= "racecar" (reverse-string/reverse-string "racecar"))))
 
+(deftest even-sized-word-test
+  (is (= "reward" (reverse-string/reverse-string "drawer"))))
+
 (deftest long-string-test
   (let [s (reduce str (repeat 1000 "overflow?"))
         rs (reduce str (repeat 1000 "?wolfrevo"))]
