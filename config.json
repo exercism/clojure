@@ -13,16 +13,6 @@
       "topics": null
     },
     {
-      "slug": "armstrong-numbers",
-      "uuid": "a4bdbdfd-1db1-425c-a243-dd032dc7b93a",
-      "core": false,
-      "unlocked_by": null,
-      "difficulty": 1,
-      "topics": [
-        "math"
-      ]
-    },
-    {
       "slug": "two-fer",
       "uuid": "91a1f32c-0dac-4c65-8a13-49da90d21520",
       "core": false,
@@ -45,6 +35,16 @@
       "unlocked_by": null,
       "difficulty": 2,
       "topics": null
+    },
+    {
+      "slug": "armstrong-numbers",
+      "uuid": "a4bdbdfd-1db1-425c-a243-dd032dc7b93a",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "math"
+      ]
     },
     {
       "slug": "rna-transcription",
