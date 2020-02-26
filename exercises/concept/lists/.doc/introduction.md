@@ -1,10 +1,8 @@
-# Introduction
-
 In Clojure, Lists are [collections][type-collection], just as like [lists in other languages][type-list]. Similar to other languages in the Lisp family, Clojure uses parentheses to express lists.
 
-Clojure lists can be created in one of two ways. The `list` function can create a list, or you can `quote` a literal list. 
+Clojure lists can be created in one of two ways. The `list` function can create a list, or you can `quote` a literal list.
 
-``` clojure
+```clojure
 (list 1 3 5 8)
 ;; => (1 3 5 8)
 
@@ -16,7 +14,7 @@ Lists are special beacuse Clojure will treat them as _calls_. It expects the cal
 
 Most of your Clojure code will be in the form of lists.
 
-``` clojure
+```clojure
 (+ 1 2)
 ;; => 3
 
@@ -24,9 +22,9 @@ Most of your Clojure code will be in the form of lists.
 ;; => 32
 ```
 
-Clojure's special treatment of lists is why we cannot create a list literal directly. In the example below, we get an error saying that `1` cannot be used as a function. Quoting a list using `quote` or its shorthand `'` incidates that the list should not be evaluated. 
+Clojure's special treatment of lists is why we cannot create a list literal directly. In the example below, we get an error saying that `1` cannot be used as a function. Quoting a list using `quote` or its shorthand `'` incidates that the list should not be evaluated.
 
-``` clojure
+```clojure
 (1 3 5 8)
 ;; => Execution error (ClassCastException) at user/eval2009 (REPL:1).java.lang.Long cannot be cast to clojure.lang.IFn
 

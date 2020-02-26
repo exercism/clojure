@@ -1,5 +1,3 @@
-# After
-
 ## Key Learnings
 
 - Lists are collections.

@@ -1,5 +1,3 @@
-# Instructions
-
 In this exercise you'll be writing code to process a list of programming languages you are planning to practice from Exercism platform.
 
 You have six tasks.
@@ -9,9 +7,9 @@ You have six tasks.
 Before you can add lanuguages, you'll need to start by creating an empty list. Define a function that returns an empty list.
 
 ### 2. Add a new lanuguage to the list
- 
- As you explore Exercism and find lanuages you want to learn, you'll need to be able to add them to your list. Define a function to add a new language the the beginning of your list.
- 
+
+As you explore Exercism and find lanuages you want to learn, you'll need to be able to add them to your list. Define a function to add a new language the the beginning of your list.
+
 ### 3. Check the language last added
 
 You'll want to quickly check which language you just added. Define a function that returns the first language from your list.
