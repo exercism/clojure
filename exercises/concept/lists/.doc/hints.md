@@ -1,12 +1,11 @@
-# Hints
-
 ### 1. Create an empty list
+
 Creating an empty list is just like creating a list with items. It can be done using `list` or using `quote` on an empty list.
 
 ### 2. Add a new lanuguage to the list
- 
+
 Check out [`cons`](https://clojuredocs.org/clojure.core/cons).
- 
+
 ### 3. Check the lanugage last added
 
 Check out [`first`](https://clojuredocs.org/clojure.core/first).
@@ -23,6 +22,6 @@ Check out [`count`](https://clojuredocs.org/clojure.core/count).
 
 Remember that function calls can be nested.
 
-``` clojure
+```clojure
 (add-language "Clojure" (new-list))
 ```
