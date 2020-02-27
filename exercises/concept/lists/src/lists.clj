@@ -10,7 +10,7 @@
   [lang lang-list]
   )
 
-(defn first-lanugage
+(defn first-language
   "Returns the first language on the list."
   [lang-list]
   )

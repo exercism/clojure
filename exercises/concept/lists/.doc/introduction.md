@@ -32,7 +32,7 @@ Clojure's special treatment of lists is why we cannot create a list literal dire
 ;; => (1 3 5 8)
 ```
 
-Unlike some modern languages, Clojure lists are _heterogenous_, meaning they can contain mutliple types of item internally. E.g. `'(2 "a" "b" 3)`
+Unlike some modern languages, Clojure lists are _heterogenous_, meaning they can contain multiple types of item internally. E.g. `'(2 "a" "b" 3)`
 Unlike other other Lisps, an empty list in Clojure in truthy and is not equivalent to `nil` or `false`.
 
 [type-list]: ../../../../../../reference/types/list.md

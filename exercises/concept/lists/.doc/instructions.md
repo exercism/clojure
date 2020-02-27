@@ -4,11 +4,11 @@ You have six tasks.
 
 ### 1. Create an empty list
 
-Before you can add lanuguages, you'll need to start by creating an empty list. Define a function that returns an empty list.
+Before you can add languages, you'll need to start by creating an empty list. Define a function that returns an empty list.
 
-### 2. Add a new lanuguage to the list
+### 2. Add a new language to the list
 
-As you explore Exercism and find lanuages you want to learn, you'll need to be able to add them to your list. Define a function to add a new language the the beginning of your list.
+As you explore Exercism and find languages you want to learn, you'll need to be able to add them to your list. Define a function to add a new language the the beginning of your list.
 
 ### 3. Check the language last added
 
@@ -20,7 +20,7 @@ Sometimes you'll change your mind about a language you just added. Define a func
 
 ### 5. Count the languages in the list
 
-Counting the lanugages one-by-one is inconvenient. Define function to count the number of languages on your list.
+Counting the languages one-by-one is inconvenient. Define function to count the number of languages on your list.
 
 ### 6. Put it all together
 
