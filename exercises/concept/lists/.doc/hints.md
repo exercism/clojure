@@ -2,11 +2,11 @@
 
 Creating an empty list is just like creating a list with items. It can be done using `list` or using `quote` on an empty list.
 
-### 2. Add a new lanuguage to the list
+### 2. Add a new language to the list
 
 Check out [`cons`](https://clojuredocs.org/clojure.core/cons).
 
-### 3. Check the lanugage last added
+### 3. Check the language last added
 
 Check out [`first`](https://clojuredocs.org/clojure.core/first).
 

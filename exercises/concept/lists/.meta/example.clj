@@ -7,7 +7,7 @@
   [lang lang-list]
   (cons lang lang-list))
 
-(defn first-lanugage
+(defn first-language
   [lang-list]
   (first lang-list))
 
