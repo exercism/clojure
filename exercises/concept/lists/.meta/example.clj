@@ -19,11 +19,12 @@
   [lang-list]
   (count lang-list))
 
+;; Learners are not expected to use threading macros.
 (defn learning-list []
-  (->> (empty-list)
-       (add-language "Clojure")
-       (add-language "Lisp")
-       remove-language
-       (add-language "Java")
-       (add-language "Javascript")
-       count-languages))
+  (count-languages
+   (add-language "JavaScript"
+                 (add-language "Java"
+                               (remove-language
+                                (add-language "Lisp"
+                                              (add-language "Clojure"
+                                                            (new-list))))))))

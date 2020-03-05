@@ -1,7 +1,7 @@
 ## Key Learnings
 
 - Lists are collections.
-- Lists can be created using `list` or by quoting a literal list.
+- Lists can be created using `list` or by using a single quote.
 - Clojure will try to evaluate lists, treating the first item as a function.
 - Core functions:
   - `cons` returns a list with the new item added to beginning.
