@@ -1,5 +1,6 @@
 (ns atbash-cipher)
 
-(defn encode [] ;; <- arglist goes here
-  ;; your code goes here
+(defn encode
+  "Converts plain text into Atbash cipher text."
+  [plain-text]
 )

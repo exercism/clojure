@@ -1,29 +1,38 @@
 (ns binary-search-tree)
 
-(defn value [] ;; <- arglist goes here
-  ;; your code goes here
+(defn value
+  "Returns the value of a node in a binary search tree."
+  [node]
 )
 
-(defn singleton [] ;; <- arglist goes here
-  ;; your code goes here
+(defn singleton
+  "Returns a node consisting of a single value."
+  [n]
 )
 
-(defn insert [] ;; <- arglist goes here
-  ;; your code goes here
+(defn left
+  "Returns the value of the left child of a node in a binary search tree."
+  [node]
+  )
+
+(defn right
+  "Returns the value of the right child of a node in a binary search tree."
+  [node]
+  )
+
+(defn insert
+  "Inserts a value into a node in a binary search tree."
+  [v node]
 )
 
-(defn left [] ;; <- arglist goes here
-  ;; your code goes here
+(defn from-list
+  "Creates a binary search tree from a list of values."
+  [xs]
+  )
+
+(defn to-list
+  "Takes a node of a binary search tree and returns a sorted list of values."
+  [node]
 )
 
-(defn right [] ;; <- arglist goes here
-  ;; your code goes here
-)
 
-(defn to-list [] ;; <- arglist goes here
-  ;; your code goes here
-)
-
-(defn from-list [] ;; <- arglist goes here
-  ;; your code goes here
-)

@@ -1,17 +1,21 @@
 (ns bank-account)
 
-(defn open-account [] ;; <- arglist goes here
-  ;; your code goes here
+(defn open-account
+  "Creates a new account with a balance of 0."
+  []
 )
 
-(defn close-account [] ;; <- arglist goes here
-  ;; your code goes here
+(defn close-account
+  "Sets an existing account's value to nil."
+  [account]
 )
 
-(defn get-balance [] ;; <- arglist goes here
-  ;; your code goes here
+(defn get-balance
+  "Returns a bank account's current balance."
+  [account]
 )
 
-(defn update-balance [] ;; <- arglist goes here
-  ;; your code goes here
+(defn update-balance
+  "Updates an account's balance by a positive or negative amount."
+  [account amt]
 )

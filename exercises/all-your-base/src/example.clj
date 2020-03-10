@@ -19,7 +19,8 @@
       (recur (conj digits (mod num output-base)) (quot num output-base)))))
 
 (defn convert
-  "Converts a sequence of digits given in input-base into a sequence of digits in the desired output-base."
+  "Converts a sequence of digits given in input-base
+   into a sequence of digits in the desired output-base."
   [input-base digits output-base]
   (cond
     (some #(< % 2) (list input-base output-base)) nil

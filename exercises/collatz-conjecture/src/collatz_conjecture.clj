@@ -1,5 +1,6 @@
 (ns collatz-conjecture)
 
-(defn collatz [num] ;; <- arglist goes here
-  ;; your code goes here
+(defn collatz
+  "Returns the total number of steps in a number's Collatz sequence."
+  [num]
 )

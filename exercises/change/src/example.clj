@@ -1,6 +1,8 @@
 (ns change)
 
-(defn issue [sum coins]
+(defn issue
+  "Outputs the fewest number of coins that add up to a given sum."
+  [sum coins]
   (when (or (neg? sum) (and (pos? sum) (every? #(< sum %) coins)))
     (throw (IllegalArgumentException. "cannot change")))
   (let [coins (sort coins)

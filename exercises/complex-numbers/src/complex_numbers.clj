@@ -1,33 +1,41 @@
 (ns complex-numbers)
 
-(defn real [[a b]] ;; <- arglist goes here
-  ;; your code goes here
+(defn real
+  "Returns the real part of a complex number."
+  [[real _]]
 )
 
-(defn imaginary [[a b]] ;; <- arglist goes here
-  ;; your code goes here
+(defn imaginary
+  "Returns the imaginary part of a complex number."
+  [[_ imag]]
+  )
+
+(defn abs
+  "Returns the absolute value of a complex number."
+  [[real imag]]
 )
 
-(defn abs [[a b]] ;; <- arglist goes here
-  ;; your code goes here
+(defn conjugate
+  "Returns the conjugate of a complex number."
+  [[real imag]]
 )
 
-(defn conjugate [[a b]] ;; <- arglist goes here
-  ;; your code goes here
+(defn add
+  "Returns the sum of 2 complex numbers."
+  [[real imag] [real imag]]
 )
 
-(defn add [[a b] [c d]] ;; <- arglist goes here
-  ;; your code goes here
-)
+(defn sub
+  "Returns the difference of 2 complex numbers."
+  [[real imag] [real imag]]
+  )
 
-(defn sub [[a b] [c d]] ;; <- arglist goes here
-  ;; your code goes here
-)
+(defn mul
+  "Returns the result of multiplying 2 complex numbers."
+  [[real imag] [real imag]]
+  )
 
-(defn mul [[a b] [c d]] ;; <- arglist goes here
-  ;; your code goes here
-)
-
-(defn div [[a b] [c d]] ;; <- arglist goes here
-  ;; your code goes here
-)
+(defn div
+  "Returns the result of dividing 2 complex numbers."
+  [[real imag] [real imag]]
+  )

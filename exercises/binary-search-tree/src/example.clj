@@ -15,8 +15,14 @@
         [x (insert v (left node)) (right node)]
         [x (left node) (insert v (right node))]))))
 
-(defn from-list [xs]
+(defn from-list
+  "Creates a binary search tree from a list of values."
+  [xs]
   (reduce #(insert %2 %1) nil xs))
+
+(comment
+  (from-list [4 2 6 1 3 7 5])
+  )
 
 (defn to-list [node]
   (if

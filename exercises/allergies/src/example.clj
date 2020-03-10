@@ -10,7 +10,7 @@
       (pos?)))
 
 (defn allergies
-  "Given an 8-bit bitmap of flags, return the list of matching allergens."
+  "Given an 8-bit bitmap of flags, returns the list of matching allergens."
   [flags]
   (keep-indexed (fn [index allergen]
                   (when (flagged? flags index)
@@ -18,7 +18,7 @@
                 allergens))
 
 (defn allergic-to?
-  "Given an 8-bit bitmap of flags and an allergen, return a boolean
+  "Given an 8-bit bitmap of flags and an allergen, returns a boolean
   indicating whether or not the patient is allergic to the given allergen."
   [flags allergen]
   (some #{allergen} (allergies flags)))

@@ -18,7 +18,9 @@
        reverse
        (map-indexed vector)))
 
-(defn to-decimal [string]
+(defn to-decimal
+  "Converts a binary string to decimal."
+  [string]
   (->> string
        bits
        (map power)

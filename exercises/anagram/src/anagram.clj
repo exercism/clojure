@@ -1,5 +1,6 @@
 (ns anagram)
 
-(defn anagrams-for [word prospect-list] ;; <- arglist goes here
-  ;; your code goes here
+(defn anagrams-for
+  "Returns the sublist of valid anagrams of a word from a list of words."
+  [word prospect-list]
 )

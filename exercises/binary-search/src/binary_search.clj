@@ -1,9 +1,11 @@
 (ns binary-search)
 
-(defn search-for [] ;; <- arglist goes here
-  ;; your code goes here
-)
+(defn middle
+  "Finds the position of the middle item in a list."
+  [list]
+  )
 
-(defn middle [] ;; <- arglist goes here
-  ;; your code goes here
-)
+(defn search-for
+  "Finds an element in a list by binary search."
+  [elem list]
+  )

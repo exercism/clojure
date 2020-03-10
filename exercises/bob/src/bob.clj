@@ -1,5 +1,7 @@
 (ns bob)
 
-(defn response-for [s] ;; <- arglist goes here
-  ;; your code goes here
+(defn response-for
+  "Returns Bob's appropriate lackadaisical response for an input string."
+  [s]
+  ; function body
 )

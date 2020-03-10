@@ -1,5 +1,7 @@
 (ns acronym)
 
-(defn acronym [] ;; <- arglist goes here
-  ;; your code goes here
+(defn acronym
+    "Converts a phrase to its acronym."
+  [text]
+  ;; function body
 )
