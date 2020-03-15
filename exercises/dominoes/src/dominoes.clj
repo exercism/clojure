@@ -1,5 +1,6 @@
 (ns dominoes)
 
-(defn can-chain? [] ;; <- arglist goes here
-  ;; your code goes here
+(defn can-chain?
+  "Returns true if a sequence of dominoes can be chained."
+  [xs]
 )

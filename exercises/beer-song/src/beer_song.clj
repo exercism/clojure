@@ -3,15 +3,15 @@
 (defn verse
   "Returns the nth verse of the song."
   [num]
-  ; function body
+  ; add function body
   )
 
 (defn sing
   "Given a start and an optional end, returns all verses in this interval.
    If end is not given, the whole song from start is sung."
   ([start]
-   ; single-arity
+   ; add single-arity body
    )
   ([start end]
-   ; 2-arity
+   ; add 2-arity body
    ))
