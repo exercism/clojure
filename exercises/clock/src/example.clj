@@ -15,5 +15,5 @@
 
 (defn add-time
   "Adds minutes to the given clock."
-  [clock minutes]
-  (clock (:hour clock) (+ (:minute clock) minutes)))
+  [in-clock minutes]
+  (clock (:hour in-clock) (+ (:minute in-clock) minutes)))
