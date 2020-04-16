@@ -6,7 +6,7 @@ You have six tasks.
 
 Before you can add languages, you'll need to start by creating an new list. Define a function that returns an empty list.
 
-``` clojure
+```clojure
 (new-list)
 ;; => ()
 ```
@@ -15,7 +15,7 @@ Before you can add languages, you'll need to start by creating an new list. Defi
 
 As you explore Exercism and find languages you want to learn, you'll need to be able to add them to your list. Define a function to add a new language the the beginning of your list.
 
-``` clojure
+```clojure
 (add-language "JavaScript" '("Clojurescript"))
 ;; => '("JavaScript" "Clojurescript")
 ```
@@ -24,7 +24,7 @@ As you explore Exercism and find languages you want to learn, you'll need to be 
 
 You'll want to quickly check which language you just added. Define a function that returns the first language from your list.
 
-``` clojure
+```clojure
 (first-language '("Haskell" "Python"))
 ;; => "Haskell"
 ```
@@ -33,7 +33,7 @@ You'll want to quickly check which language you just added. Define a function th
 
 Sometimes you'll change your mind about a language you just added. Define a function to remove the first language from your list.
 
-``` clojure
+```clojure
 (remove-language '("Common Lisp" "Racket" "Scheme"))
 ;; => '("Racket" "Scheme")
 ```
@@ -42,7 +42,7 @@ Sometimes you'll change your mind about a language you just added. Define a func
 
 Counting the languages one-by-one is inconvenient. Define function to count the number of languages on your list.
 
-``` clojure
+```clojure
 (count-languages '("C#" "Racket" "Rust" "Ruby"))
 ;; => 4
 ```
@@ -65,8 +65,7 @@ Define a `learning-list` function, within which you will use the some of the fun
 
 - Return the total number of languages. Hint: it should be 3.
 
-``` clojure
+```clojure
 (learning-list)
 ;; => 3
 ```
-
