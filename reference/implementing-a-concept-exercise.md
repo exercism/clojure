@@ -19,7 +19,7 @@ As this document is generic, the following placeholders are used:
 
 Before implementing the exercise, please make sure you have a good understanding of what the exercise should be teaching (and what not). This information can be found in the exercise's GitHub issue. Having done this, please read the [Clojure concept exercises introduction]//TODO.
 
-To implement a concept exercise, the following files must be created:
+To implement a concept exercise, the following files must be added:
 
 <pre>
 languages
@@ -41,22 +41,23 @@ languages
                 └── &lt;NAME&gt;_test.clj
 </pre>
 
-## Step 1: adding track-specific files
+## Step 1: Add code files
 
-These files are specific to the Clojure track:
+The code files are track-specific and should be designed to help the student learn the exercise's concepts. The following Clojure code files must be added (not necessarily in this order):
 
 - `<NAME>.clj`: the Clojure file.
 - `<NAME>_test.clj`: the test suite.
+- `.meta/Example.clj`: the example implementation file.
 
-## Step 2: adding common files
+## Step 2: Add documentation files
 
 How to create the files common to all tracks is described in the [how to implement a concept exercise document][how-to-implement-a-concept-exercise].
 
-## Step 3: add analyzer (optional)
+## Step 3: Add analyzer (optional)
 
 //TODO
 
-## Step 4: custom representation (optional)
+## Step 4: Add representation (optional)
 
 //TODO
 
