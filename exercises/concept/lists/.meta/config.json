@@ -1,12 +1,12 @@
 {
-		"contributors": [
-				{
-						"github_username": "bemself",
-						"exercism_username": "bemself"
-				},
-				{
-						"github_username": "cstby" ,
-						"exercism_username": "cstby"
-				}
-		]
+  "contributors": [
+    {
+      "github_username": "bemself",
+      "exercism_username": "bemself"
+    },
+    {
+      "github_username": "cstby",
+      "exercism_username": "cstby"
+    }
+  ]
 }
