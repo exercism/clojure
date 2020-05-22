@@ -2,7 +2,7 @@ In this exercise you'll be writing code to process a list of programming languag
 
 You have six tasks.
 
-### 1. Create a new list
+## 1. Create a new list
 
 Before you can add languages, you'll need to start by creating an new list. Define a function that returns an empty list.
 
@@ -11,7 +11,7 @@ Before you can add languages, you'll need to start by creating an new list. Defi
 ;; => ()
 ```
 
-### 2. Add a new language to the list
+## 2. Add a new language to the list
 
 As you explore Exercism and find languages you want to learn, you'll need to be able to add them to your list. Define a function to add a new language the the beginning of your list.
 
@@ -20,7 +20,7 @@ As you explore Exercism and find languages you want to learn, you'll need to be 
 ;; => '("JavaScript" "Clojurescript")
 ```
 
-### 3. Check the language last added
+## 3. Check the language last added
 
 You'll want to quickly check which language you just added. Define a function that returns the first language from your list.
 
@@ -29,7 +29,7 @@ You'll want to quickly check which language you just added. Define a function th
 ;; => "Haskell"
 ```
 
-### 4. Remove the first language from the list
+## 4. Remove the first language from the list
 
 Sometimes you'll change your mind about a language you just added. Define a function to remove the first language from your list.
 
@@ -38,7 +38,7 @@ Sometimes you'll change your mind about a language you just added. Define a func
 ;; => '("Racket" "Scheme")
 ```
 
-### 5. Count the languages in the list
+## 5. Count the languages in the list
 
 Counting the languages one-by-one is inconvenient. Define function to count the number of languages on your list.
 
@@ -47,7 +47,7 @@ Counting the languages one-by-one is inconvenient. Define function to count the 
 ;; => 4
 ```
 
-### 6. Put it all together
+## 6. Put it all together
 
 Define a `learning-list` function, within which you will use the some of the functions you've defined above.
 
