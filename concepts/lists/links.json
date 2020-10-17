@@ -1,1 +1,14 @@
-[]
+[
+  {
+    "url": "https://clojuredocs.org/clojure.core/list",
+    "description": "list - clojure.core | ClojureDocs"
+  },
+  {
+    "url": "https://clojure.org/reference/data_structures",
+    "description": "Data Structures"
+  },
+  {
+    "url": "https://cljs.github.io/api/syntax/list",
+    "description": "Lists in Clojurescript"
+  }
+]
