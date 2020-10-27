@@ -25,7 +25,7 @@
 
 - `basics`: know what a value is; know how to define a var; know how to define a function; know how to return a value from a function; know how to call a function; know how to define an integer; know how to use mathematical operators on integers; know how to use single-line comments and comment forms.
 
-## Prequisites
+## Prerequisites
 
 There are no prerequisites.
 
