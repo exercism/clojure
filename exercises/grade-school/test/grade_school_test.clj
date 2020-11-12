@@ -28,7 +28,7 @@
              (grade-school/add "Jeff" 1)
              (grade-school/grade 5)))))
 
-(deftest get-students-in-a-non-existant-grade
+(deftest get-students-in-a-non-existent-grade
   (is (= [] (grade-school/grade db 1))))
 
 (deftest sorted-grade-school
