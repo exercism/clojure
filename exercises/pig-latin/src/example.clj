@@ -16,7 +16,7 @@
 (defn- starts-with-three-letter-prefix? [word]
   (starts-with-any #{"thr" "sch"} word))
 
-(defn- starts-with-qu-and-preceeding-constanant? [word]
+(defn- starts-with-qu-and-preceding-consonant? [word]
   (and (not (starts-with-vowel? word))
        (str/starts-with? (subs word 1) "qu")))
 
@@ -34,7 +34,7 @@
 
     (or
      (starts-with-three-letter-prefix? word)
-     (starts-with-qu-and-preceeding-constanant? word))
+     (starts-with-qu-and-preceding-consonant? word))
     (append-ay (rotate word 3))
 
     (starts-with-two-letter-prefix? word)
