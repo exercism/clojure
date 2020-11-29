@@ -7,7 +7,7 @@
 
 (defn- extract-parts
   [input]
-  (if-let [matches (re-find #"^1?(...)(...)(....)$" input)]
+  (if-let [matches (re-find #"^1?([2-9]..)([2-9]..)(....)$" input)]
     (rest matches)
     ["000" "000" "0000"]))
 
