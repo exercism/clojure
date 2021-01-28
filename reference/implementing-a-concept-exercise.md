@@ -40,7 +40,7 @@ languages
                 ├── .meta
                 |   |── config.json
                 |   |── design.md
-                |   └── Example.clj
+                |   └── Exemplar.clj
                 ├── &lt;NAME&gt;.clj
                 └── &lt;NAME&gt;_test.clj
 </pre>
@@ -51,7 +51,7 @@ The code files are track-specific and should be designed to help the student lea
 
 - `<NAME>.clj`: the Clojure file.
 - `<NAME>_test.clj`: the test suite.
-- `.meta/Example.clj`: the example implementation file.
+- `.meta/Exemplar.clj`: the exemplar implementation file.
 
 ## Step 2: Add documentation files
 
