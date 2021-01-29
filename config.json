@@ -10,6 +10,10 @@
   },
   "blurb": "Clojure is a dynamic, general-purpose programming language. It combines the approachability and interactive development of a scripting language with an efficient and robust infrastructure for multithreaded programming and the performance gains of compiling and running on the JVM. It is a lisp dialect that runs on the JVM, enabling the use of Java code side by side with Clojure.",
   "version": 3,
+  "online_editor": {
+    "indent_style": "space",
+    "indent_size": 2
+  },
   "exercises": [
     {
       "slug": "hello-world",
