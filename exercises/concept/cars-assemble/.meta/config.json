@@ -5,5 +5,10 @@
       "exercism_username": "porkostomus"
     }
   ],
-  "forked_from": ["fsharp/numbers"]
+  "forked_from": ["fsharp/numbers"],
+  "files": {
+    "solution": [],
+    "test": [],
+    "exemplar": [".meta/exemplar.clj"]
+  }
 }
