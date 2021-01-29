@@ -15,6 +15,85 @@
     "indent_size": 2
   },
   "exercises": {
+    "concept": [
+      {
+        "slug": "lucians-luscious-lasagna",
+        "name": "Lucian's Luscious Lasagna",
+        "uuid": "0fbc4bd4-090e-445c-8a38-cf7ec290bfdd",
+        "concepts": [
+          "basics"
+        ],
+        "prerequisites": []
+      },
+      {
+        "slug": "tracks-on-tracks-on-tracks",
+        "name": "Tracks on Tracks on Tracks",
+        "uuid": "0d05620f-3ef9-43aa-8e89-660187e090f3",
+        "concepts": [
+          "lists"
+        ],
+        "prerequisites": [
+          "basics"
+        ]
+      },
+      {
+        "slug": "bird-watcher",
+        "name": "Bird Watcher",
+        "uuid": "7904b7af-b872-46fe-8602-63038c1587bc",
+        "concepts": [
+          "vectors"
+        ],
+        "prerequisites": [
+          "basics"
+        ]
+      },
+      {
+        "slug": "cars-assemble",
+        "name": "Cars, Assemble!",
+        "uuid": "5f94668b-659b-444d-8c22-0768bca0cf5b",
+        "concepts": [
+          "numbers",
+          "conditionals"
+        ],
+        "prerequisites": [
+          "basics"
+        ]
+      },
+      {
+        "slug": "interest-is-interesting",
+        "name": "Interest is Interesting",
+        "uuid": "a7d01e5c-f48d-483b-939f-a71f1cf4a8d1",
+        "concepts": [
+          "floating-point-numbers"
+        ],
+        "prerequisites": [
+          "basics",
+          "numbers"
+        ]
+      },
+      {
+        "slug": "annalyns-infiltration",
+        "name": "Annalyn's Infiltration",
+        "uuid": "b5a2c1e5-3222-4265-b885-53871b2ce549",
+        "concepts": [
+          "booleans"
+        ],
+        "prerequisites": [
+          "basics"
+        ]
+      },
+      {
+        "slug": "log-levels",
+        "name": "Log Levels",
+        "uuid": "693e4ef3-bcf1-4b5f-8883-24d006164541",
+        "concepts": [
+          "strings"
+        ],
+        "prerequisites": [
+          "basics"
+        ]
+      }
+    ],
     "practice": [
       {
         "slug": "armstrong-numbers",
