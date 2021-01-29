@@ -9,5 +9,5 @@ Clojure's special treatment of lists is why we cannot create a list literal dire
 Unlike some modern languages, Clojure lists are _heterogenous_, meaning they can contain multiple types of item internally. E.g. `'(2 "a" "b" 3)`
 Unlike other other Lisps, an empty list in Clojure in truthy and is not equivalent to `nil` or `false`.
 
-[type-list]: ../../../../../../reference/types/list.md
-[type-collection]: ../../../../../../reference/types/collection.md
+[type-list]: https://github.com/exercism/v3/blob/main/reference/types/list.md
+[type-collection]: https://github.com/exercism/v3/blob/main/reference/types/collection.md
