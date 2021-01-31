@@ -17,16 +17,16 @@
   (System/exit 1))
 
 (defn clone-test-data
-  "Clone the x-common repo from github"
+  "Clone the problem-specifications repo from github"
   []
-  (sh "git" "clone" "git@github.com:exercism/x-common"))
+  (sh "git" "clone" "git@github.com:exercism/problem-specifications"))
 
 (defn load-test-data
   "Clones and loads the test data for the given exercise"
   [exercise-name]
-  (when-not (file-exists? "x-common")
+  (when-not (file-exists? "problem-specifications")
     (clone-test-data))
-  (let [test-data-filename (format "x-common/exercises/%s/canonical-data.json" exercise-name)]
+  (let [test-data-filename (format "problem-specifications/exercises/%s/canonical-data.json" exercise-name)]
     (when-not (file-exists? test-data-filename)
       (warn-and-exit
        (format "Could not find test data for %s (looking in %s)"
