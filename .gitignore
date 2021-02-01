@@ -18,6 +18,6 @@ pom.xml.asc
 *.lein-plugins/
 *.lein-failures
 *.nrepl-port
-.calva/output-window/output.calva-repl
-.clj-kondo/.cache/2021.01.21-SNAPSHOT/lock
-.clj-kondo/.cache/2021.01.21-SNAPSHOT/clj/generator.transit.json
+.calva
+.clj-kondo
+.lsp
