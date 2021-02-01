@@ -62,7 +62,7 @@
 (defn -main
   "Uses the test template for the exercise and test data to generate test cases."
   [exercise-name & args]
-  (let [test-template-path (format "exercises/%s/.meta/%s.mustache" exercise-name exercise-name)
+  (let [test-template-path (format "exercises/%s/.meta/tests.toml" exercise-name)
         test-data (load-test-data exercise-name)]
     (if (file-exists? test-template-path)
       (do
