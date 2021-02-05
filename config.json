@@ -1,5 +1,6 @@
 {
   "language": "Clojure",
+  "slug": "clojure",
   "active": true,
   "version": 3,
   "online_editor": {
