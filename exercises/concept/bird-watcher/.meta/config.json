@@ -1,0 +1,14 @@
+{
+  "authors": [
+    {
+      "github_username": "porkostomus",
+      "exercism_username": "porkostomus"
+    }
+  ],
+  "forked_from": ["csharp/arrays"],
+  "files": {
+    "solution": [],
+    "test": [],
+    "exemplar": []
+  }
+}

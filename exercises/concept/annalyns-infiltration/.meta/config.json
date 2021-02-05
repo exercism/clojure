@@ -1,0 +1,14 @@
+{
+  "authors": [
+    {
+      "github_username": "porkostomus",
+      "exercism_username": "porkostomus"
+    }
+  ],
+  "forked_from": ["fsharp/booleans"],
+  "files": {
+    "solution": [],
+    "test": [],
+    "exemplar": [".meta/exemplar.clj"]
+  }
+}
