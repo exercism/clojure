@@ -882,5 +882,24 @@
       "icon": "features-jvm"
     }
   ],
-  "tags": []
+  "tags": [
+    "paradigm/declarative",
+    "paradigm/functional",
+    "typing/dynamic",
+    "execution_mode/compiled",
+    "platform/windows",
+    "platform/mac",
+    "platform/linux",
+    "runtime/jvm",
+    "used_for/artificial_intelligence",
+    "used_for/backends",
+    "used_for/cross_platform_development",
+    "used_for/financial_systems",
+    "used_for/used_for/frontends",
+    "used_for/games",
+    "used_for/guis",
+    "used_for/robotics",
+    "used_for/scientific_calculations",
+    "used_for/web_development"
+  ]
 }
