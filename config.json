@@ -757,6 +757,37 @@
       "blurb": "TODO: add blurb for lists concept"
     }
   ],
-  "key_features": [],
+  "key_features": [
+    {
+      "title": "Lisp",
+      "content": "Clojure extends Lisp's code-as-data system beyond parenthesized lists (s-expressions) to vectors and maps, and has a powerful macro system.",
+      "icon": "features-lisp"
+    },
+    {
+      "title": "Dynamic",
+      "content": "Clojure's primary programming interface is the Read-Eval-Print-Loop (REPL). Code input into the REPL is compiled to JVM bytecode on the fly.",
+      "icon": "features-dynamic"
+    },
+    {
+      "title": "Functional",
+      "content": "Clojure provides the tools to avoid mutable state, provides functions as first-class objects, and emphasizes recursive iteration instead of side-effect based looping.",
+      "icon": "features-functional"
+    },
+    {
+      "title": "Practical",
+      "content": "Clojure is impure, in that it doesn’t force your program to be referentially transparent, and doesn’t strive for 'provable' programs.",
+      "icon": "features-practical"
+    },
+    {
+      "title": "Concurrent",
+      "content": "Clojure, being a practical language, allows state to change but provides mechanism to ensure that, when it does so, it remains consistent, while alleviating developers from having to avoid conflicts manually using locks etc.",
+      "icon": "features-concurrent"
+    },
+    {
+      "title": "JVM Hosted",
+      "content": "Clojure is designed to be a hosted language, sharing the JVM type system, GC, threads etc. It compiles all functions to JVM bytecode. Clojure is a great Java library consumer, offering the dot-target-member notation for calls to Java.",
+      "icon": "features-jvm"
+    }
+  ],
   "tags": []
 }
