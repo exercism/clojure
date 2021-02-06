@@ -103,6 +103,18 @@
     ],
     "practice": [
       {
+        "slug": "two-fer",
+        "name": "Two Fer",
+        "uuid": "91a1f32c-0dac-4c65-8a13-49da90d21520",
+        "practices": [],
+        "prerequisites": [
+          "strings",
+          "multi-arity-functions"
+        ],
+        "difficulty": 1,
+        "topics": null
+      },
+      {
         "slug": "armstrong-numbers",
         "name": "Armstrong Numbers",
         "uuid": "a4bdbdfd-1db1-425c-a243-dd032dc7b93a",
@@ -126,15 +138,6 @@
         "slug": "reverse-string",
         "name": "Reverse String",
         "uuid": "a8957cc5-d99e-4a31-9d49-4653226fd50b",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 1,
-        "topics": null
-      },
-      {
-        "slug": "two-fer",
-        "name": "Two Fer",
-        "uuid": "91a1f32c-0dac-4c65-8a13-49da90d21520",
         "practices": [],
         "prerequisites": [],
         "difficulty": 1,
