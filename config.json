@@ -119,7 +119,7 @@
         "name": "Armstrong Numbers",
         "uuid": "a4bdbdfd-1db1-425c-a243-dd032dc7b93a",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": ["numbers", "higher-order-functions"],
         "difficulty": 1,
         "topics": [
           "math"
