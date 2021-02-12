@@ -1,3 +1,5 @@
+# Instructions append
+
 ### Project Structure
 
 Clojure exercises in exercism use [leiningen](http://leiningen.org/) to configure and run your code
