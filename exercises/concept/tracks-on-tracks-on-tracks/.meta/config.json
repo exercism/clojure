@@ -1,4 +1,5 @@
 {
+  "blurb": "TODO: add blurb for tracks-on-tracks-on-tracks exercise",
   "contributors": [
     {
       "github_username": "bemself",
@@ -12,6 +13,8 @@
   "files": {
     "solution": [],
     "test": [],
-    "exemplar": [".meta/exemplar.clj"]
+    "exemplar": [
+      ".meta/exemplar.clj"
+    ]
   }
 }
