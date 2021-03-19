@@ -1,0 +1,32 @@
+{
+  "docs": [
+    {
+      "uuid": "9bae3c74-b4a5-4c6b-b5ba-6ad5ae8675b3",
+      "slug": "installation",
+      "path": "docs/INSTALLATION.md",
+      "title": "Installing Clojure locally",
+      "blurb": "Learn how to install Clojure locally to solve Exercism's exercises on your own machine"
+    },
+    {
+      "uuid": "e071077c-e1c3-4887-af05-43fb41fc7c87",
+      "slug": "learning",
+      "path": "docs/LEARNING.md",
+      "title": "How to learn Clojure",
+      "blurb": "An overview of how to get started from scratch with Clojure"
+    },
+    {
+      "uuid": "1c1e43aa-cbf4-41ff-9470-8367b90b5377",
+      "slug": "tests",
+      "path": "docs/TESTS.md",
+      "title": "Testing on the Clojure track",
+      "blurb": "Learn how to test your Clojure exercises on Exercism"
+    },
+    {
+      "uuid": "eeb60d5d-c35e-4b4c-ac46-9a0391db79d2",
+      "slug": "resources",
+      "path": "docs/RESOURCES.md",
+      "title": "Useful Clojure resources",
+      "blurb": "A collection of useful resources to help you master Clojure"
+    }
+  ]
+}
