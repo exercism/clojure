@@ -14,7 +14,7 @@ In the end, you should be able to:
 - Get a sorted list of all students in all grades.  Grades should sort
   as 1, 2, 3, etc., and students within a grade should be sorted
   alphabetically by name.
-  - "Who all is enrolled in school right now?"
+  - "Who is enrolled in school right now?"
   - "Let me think. We have
   Anna, Barb, and Charlie in grade 1,
   Alex, Peter, and Zoe in grade 2
