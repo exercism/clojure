@@ -1,10 +1,7 @@
 {
   "blurb": "TODO: add blurb for log-levels exercise",
   "authors": [
-    {
-      "github_username": "porkostomus",
-      "exercism_username": "porkostomus"
-    }
+    "porkostomus"
   ],
   "forked_from": [
     "fsharp/strings"
