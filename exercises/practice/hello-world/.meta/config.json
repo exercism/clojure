@@ -1,6 +1,15 @@
 {
   "blurb": "The classical introductory exercise. Just say \"Hello, World!\"",
   "authors": [],
+  "contributors": [
+    "AndreaCrotti",
+    "christianpoveda",
+    "haus",
+    "jcorrado",
+    "sjwarner-bp",
+    "tejasbubane",
+    "yurrriq"
+  ],
   "files": {
     "solution": [
       "src/hello_world.clj"

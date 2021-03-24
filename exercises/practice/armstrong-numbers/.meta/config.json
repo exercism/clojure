@@ -1,6 +1,15 @@
 {
   "blurb": "Determine if a number is an Armstrong number",
   "authors": [],
+  "contributors": [
+    "amscotti",
+    "AndreaCrotti",
+    "haus",
+    "imtayadeway",
+    "mawis",
+    "mtkp",
+    "sjwarner-bp"
+  ],
   "files": {
     "solution": [
       "src/armstrong_numbers.clj"

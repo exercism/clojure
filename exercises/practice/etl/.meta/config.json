@@ -1,6 +1,22 @@
 {
   "blurb": "We are going to do the `Transform` step of an Extract-Transform-Load.",
-  "authors": [],
+  "authors": [
+    "rubysolo"
+  ],
+  "contributors": [
+    "AndreaCrotti",
+    "canweriotnow",
+    "dkinzer",
+    "etrepum",
+    "geofflane",
+    "haus",
+    "jgwhite",
+    "kytrinyx",
+    "mathias",
+    "rsslldnphy",
+    "sjwarner-bp",
+    "yurrriq"
+  ],
   "files": {
     "solution": [
       "src/etl.clj"

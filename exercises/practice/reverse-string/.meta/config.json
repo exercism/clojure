@@ -1,6 +1,14 @@
 {
   "blurb": "Reverse a string",
-  "authors": [],
+  "authors": [
+    "sjwarner-bp"
+  ],
+  "contributors": [
+    "amscotti",
+    "AndreaCrotti",
+    "haus",
+    "mtkp"
+  ],
   "files": {
     "solution": [
       "src/reverse_string.clj"

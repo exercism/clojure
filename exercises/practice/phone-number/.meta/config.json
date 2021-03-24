@@ -1,6 +1,21 @@
 {
   "blurb": "Clean up user-entered phone numbers so that they can be sent SMS messages.",
-  "authors": [],
+  "authors": [
+    "rubysolo"
+  ],
+  "contributors": [
+    "AndreaCrotti",
+    "canweriotnow",
+    "dkinzer",
+    "haus",
+    "jgwhite",
+    "kytrinyx",
+    "mathias",
+    "nwallace",
+    "sjwarner-bp",
+    "Testare",
+    "yurrriq"
+  ],
   "files": {
     "solution": [
       "src/phone_number.clj"

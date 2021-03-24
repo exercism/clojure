@@ -1,6 +1,11 @@
 {
   "blurb": "Count the scored points on a Go board.",
   "authors": [],
+  "contributors": [
+    "AndreaCrotti",
+    "haus",
+    "sjwarner-bp"
+  ],
   "files": {
     "solution": [
       "src/go_counting.clj"

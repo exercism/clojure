@@ -1,6 +1,22 @@
 {
   "blurb": "Determine if a triangle is equilateral, isosceles, or scalene.",
-  "authors": [],
+  "authors": [
+    "rubysolo"
+  ],
+  "contributors": [
+    "AndreaCrotti",
+    "arnab",
+    "canweriotnow",
+    "dkinzer",
+    "geofflane",
+    "haus",
+    "kytrinyx",
+    "mathias",
+    "morty",
+    "ovidiu141",
+    "sjwarner-bp",
+    "yurrriq"
+  ],
   "files": {
     "solution": [
       "src/triangle.clj"

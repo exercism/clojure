@@ -1,6 +1,27 @@
 {
   "blurb": "Bob is a lackadaisical teenager. In conversation, his responses are very limited.",
-  "authors": [],
+  "authors": [
+    "rubysolo"
+  ],
+  "contributors": [
+    "achengs",
+    "amscotti",
+    "AndreaCrotti",
+    "austinlyons",
+    "canweriotnow",
+    "dkinzer",
+    "haus",
+    "janetriley",
+    "jgwhite",
+    "kytrinyx",
+    "mathias",
+    "prathamesh-sonpatki",
+    "rsslldnphy",
+    "sjwarner-bp",
+    "tejasbubane",
+    "totallymike",
+    "yurrriq"
+  ],
   "files": {
     "solution": [
       "src/bob.clj"

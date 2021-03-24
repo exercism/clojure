@@ -1,6 +1,15 @@
 {
   "blurb": "Implement a program that translates from English to Pig Latin",
-  "authors": [],
+  "authors": [
+    "lmccombes"
+  ],
+  "contributors": [
+    "AndreaCrotti",
+    "haus",
+    "querenker",
+    "sjwarner-bp",
+    "thomchop"
+  ],
   "files": {
     "solution": [
       "src/pig_latin.clj"

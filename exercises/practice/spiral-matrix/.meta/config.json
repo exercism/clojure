@@ -1,6 +1,11 @@
 {
   "blurb": " Given the size, return a square matrix of numbers in spiral order.",
   "authors": [],
+  "contributors": [
+    "AndreaCrotti",
+    "haus",
+    "sjwarner-bp"
+  ],
   "files": {
     "solution": [
       "src/spiral_matrix.clj"

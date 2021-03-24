@@ -1,6 +1,12 @@
 {
   "blurb": "Implement a clock that handles times without dates.",
-  "authors": [],
+  "authors": [
+    "haus"
+  ],
+  "contributors": [
+    "andeemarks",
+    "AndreaCrotti"
+  ],
   "files": {
     "solution": [
       "src/clock.clj"

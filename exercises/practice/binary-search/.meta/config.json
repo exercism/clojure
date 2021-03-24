@@ -1,6 +1,17 @@
 {
   "blurb": "Implement a binary search algorithm.",
-  "authors": [],
+  "authors": [
+    "haus"
+  ],
+  "contributors": [
+    "AndreaCrotti",
+    "awseward",
+    "kevgathuku",
+    "kytrinyx",
+    "querenker",
+    "ryanplusplus",
+    "yurrriq"
+  ],
   "files": {
     "solution": [
       "src/binary_search.clj"

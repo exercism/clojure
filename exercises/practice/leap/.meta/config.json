@@ -1,6 +1,22 @@
 {
   "blurb": "Given a year, report if it is a leap year.",
-  "authors": [],
+  "authors": [
+    "rubysolo"
+  ],
+  "contributors": [
+    "AndreaCrotti",
+    "canweriotnow",
+    "dkinzer",
+    "haus",
+    "jgwhite",
+    "kytrinyx",
+    "mathias",
+    "ovidiu141",
+    "sjwarner-bp",
+    "verdammelt",
+    "walkermatt",
+    "yurrriq"
+  ],
   "files": {
     "solution": [
       "src/leap.clj"
