@@ -1,6 +1,16 @@
 {
   "blurb": "For want of a horseshoe nail, a kingdom was lost, or so the saying goes. Output the full text of this proverbial rhyme.",
-  "authors": [],
+  "authors": [
+    "querenker"
+  ],
+  "contributors": [
+    "AndreaCrotti",
+    "haus",
+    "m1kal",
+    "sjwarner-bp",
+    "UnrelatedString",
+    "yurrriq"
+  ],
   "files": {
     "solution": [],
     "test": [],

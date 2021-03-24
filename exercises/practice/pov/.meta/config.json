@@ -1,6 +1,16 @@
 {
   "blurb": "Reparent a graph on a selected node",
-  "authors": [],
+  "authors": [
+    "alexkalderimis"
+  ],
+  "contributors": [
+    "AndreaCrotti",
+    "canweriotnow",
+    "haus",
+    "kytrinyx",
+    "sjwarner-bp",
+    "yurrriq"
+  ],
   "files": {
     "solution": [],
     "test": [],

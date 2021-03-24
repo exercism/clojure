@@ -1,6 +1,14 @@
 {
   "blurb": "Make sure the brackets and braces all match.",
-  "authors": [],
+  "authors": [
+    "leeqleeq"
+  ],
+  "contributors": [
+    "AndreaCrotti",
+    "haus",
+    "sjwarner-bp",
+    "yurrriq"
+  ],
   "files": {
     "solution": [],
     "test": [],

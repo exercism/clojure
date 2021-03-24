@@ -1,6 +1,12 @@
 {
   "blurb": "Check if a given string is a valid ISBN-10 number.",
   "authors": [],
+  "contributors": [
+    "AndreaCrotti",
+    "haus",
+    "jgomo3",
+    "sjwarner-bp"
+  ],
   "files": {
     "solution": [],
     "test": [],

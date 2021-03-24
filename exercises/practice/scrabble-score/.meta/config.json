@@ -1,6 +1,21 @@
 {
   "blurb": "Given a word, compute the Scrabble score for that word.",
-  "authors": [],
+  "authors": [
+    "rubysolo"
+  ],
+  "contributors": [
+    "AndreaCrotti",
+    "arnab",
+    "canweriotnow",
+    "dkinzer",
+    "drewbs",
+    "geofflane",
+    "haus",
+    "kytrinyx",
+    "mathias",
+    "sjwarner-bp",
+    "yurrriq"
+  ],
   "files": {
     "solution": [],
     "test": [],

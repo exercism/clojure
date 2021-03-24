@@ -1,6 +1,11 @@
 {
   "blurb": "Implement complex numbers.",
   "authors": [],
+  "contributors": [
+    "AndreaCrotti",
+    "haus",
+    "sjwarner-bp"
+  ],
   "files": {
     "solution": [],
     "test": [],

@@ -1,6 +1,24 @@
 {
   "blurb": "Given a word and a list of possible anagrams, select the correct sublist.",
-  "authors": [],
+  "authors": [
+    "rubysolo"
+  ],
+  "contributors": [
+    "achengs",
+    "AndreaCrotti",
+    "canweriotnow",
+    "crazymykl",
+    "dkinzer",
+    "haus",
+    "henrik",
+    "jgwhite",
+    "kytrinyx",
+    "markijbema",
+    "mascip",
+    "mathias",
+    "tejasbubane",
+    "yurrriq"
+  ],
   "files": {
     "solution": [],
     "test": [],

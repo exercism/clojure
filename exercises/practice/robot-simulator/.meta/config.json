@@ -1,6 +1,18 @@
 {
   "blurb": "Write a robot simulator.",
-  "authors": [],
+  "authors": [
+    "kytrinyx"
+  ],
+  "contributors": [
+    "AndreaCrotti",
+    "canweriotnow",
+    "dkinzer",
+    "geofflane",
+    "haus",
+    "mathias",
+    "rubysolo",
+    "yurrriq"
+  ],
   "files": {
     "solution": [],
     "test": [],
