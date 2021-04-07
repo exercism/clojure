@@ -7,8 +7,12 @@
     "fsharp/strings"
   ],
   "files": {
-    "solution": [],
-    "test": [],
+    "solution": [
+      "src/{snake_slug}.clj"
+    ],
+    "test": [
+      "test/{snake_slug}_test.clj"
+    ],
     "exemplar": [
       ".meta/exemplar.clj"
     ]
