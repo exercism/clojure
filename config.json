@@ -14,6 +14,20 @@
     "indent_style": "space",
     "indent_size": 2
   },
+  "files": {
+    "solution": [
+      "src/{snake_slug}.clj"
+    ],
+    "test": [
+      "test/{snake_slug}_test.clj"
+    ],
+    "example": [
+      "src/example.clj"
+    ],
+    "exemplar": [
+      ".meta/exemplar.clj"
+    ]
+  },
   "exercises": {
     "concept": [
       {
