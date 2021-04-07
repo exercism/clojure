@@ -2,9 +2,15 @@
   "blurb": "Manage robot factory settings.",
   "authors": [],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "src/{snake_slug}.clj"
+    ],
+    "test": [
+      "test/{snake_slug}_test.clj"
+    ],
+    "example": [
+      "src/example.clj"
+    ]
   },
   "source": "A debugging session with Paul Blackwell at gSchool."
 }
