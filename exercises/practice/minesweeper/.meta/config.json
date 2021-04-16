@@ -2,8 +2,14 @@
   "blurb": "Add the numbers to a minesweeper board",
   "authors": [],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": ["src/example.clj"]
+    "solution": [
+      "src/minesweeper.clj"
+    ],
+    "test": [
+      "test/minesweeper_test.clj"
+    ],
+    "example": [
+      "src/example.clj"
+    ]
   }
 }

@@ -2,8 +2,14 @@
   "blurb": "Convert a number, represented as a sequence of digits in one base, to any other base.",
   "authors": [],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": ["src/example.clj"]
+    "solution": [
+      "src/all_your_base.clj"
+    ],
+    "test": [
+      "test/all_your_base_test.clj"
+    ],
+    "example": [
+      "src/example.clj"
+    ]
   }
 }

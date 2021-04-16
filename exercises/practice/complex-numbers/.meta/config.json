@@ -2,9 +2,15 @@
   "blurb": "Implement complex numbers.",
   "authors": [],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": ["src/example.clj"]
+    "solution": [
+      "src/complex_numbers.clj"
+    ],
+    "test": [
+      "test/complex_numbers_test.clj"
+    ],
+    "example": [
+      "src/example.clj"
+    ]
   },
   "source": "Wikipedia",
   "source_url": "https://en.wikipedia.org/wiki/Complex_number"

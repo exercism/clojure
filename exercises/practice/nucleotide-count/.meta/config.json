@@ -2,9 +2,15 @@
   "blurb": "Given a DNA string, compute how many times each nucleotide occurs in the string.",
   "authors": [],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": ["src/example.clj"]
+    "solution": [
+      "src/nucleotide_count.clj"
+    ],
+    "test": [
+      "test/nucleotide_count_test.clj"
+    ],
+    "example": [
+      "src/example.clj"
+    ]
   },
   "source": "The Calculating DNA Nucleotides_problem at Rosalind",
   "source_url": "http://rosalind.info/problems/dna/"

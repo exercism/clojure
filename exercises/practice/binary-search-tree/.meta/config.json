@@ -2,9 +2,15 @@
   "blurb": "Insert and search for numbers in a binary tree.",
   "authors": [],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": ["src/example.clj"]
+    "solution": [
+      "src/binary_search_tree.clj"
+    ],
+    "test": [
+      "test/binary_search_tree_test.clj"
+    ],
+    "example": [
+      "src/example.clj"
+    ]
   },
   "source": "Josh Cheek",
   "source_url": "https://twitter.com/josh_cheek"

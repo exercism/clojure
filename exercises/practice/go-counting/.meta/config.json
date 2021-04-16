@@ -2,8 +2,14 @@
   "blurb": "Count the scored points on a Go board.",
   "authors": [],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": ["src/example.clj"]
+    "solution": [
+      "src/go_counting.clj"
+    ],
+    "test": [
+      "test/go_counting_test.clj"
+    ],
+    "example": [
+      "src/example.clj"
+    ]
   }
 }

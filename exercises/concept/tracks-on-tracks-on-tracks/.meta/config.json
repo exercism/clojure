@@ -1,9 +1,18 @@
 {
   "blurb": "TODO: add blurb for tracks-on-tracks-on-tracks exercise",
-  "contributors": ["bemself", "cstby"],
+  "contributors": [
+    "bemself",
+    "cstby"
+  ],
   "files": {
-    "solution": [],
-    "test": [],
-    "exemplar": [".meta/exemplar.clj"]
+    "solution": [
+      "src/tracks_on_tracks_on_tracks.clj"
+    ],
+    "test": [
+      "test/tracks_on_tracks_on_tracks_test.clj"
+    ],
+    "exemplar": [
+      ".meta/exemplar.clj"
+    ]
   }
 }

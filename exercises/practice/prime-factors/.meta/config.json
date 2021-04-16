@@ -2,9 +2,15 @@
   "blurb": "Compute the prime factors of a given natural number.",
   "authors": [],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": ["src/example.clj"]
+    "solution": [
+      "src/prime_factors.clj"
+    ],
+    "test": [
+      "test/prime_factors_test.clj"
+    ],
+    "example": [
+      "src/example.clj"
+    ]
   },
   "source": "The Prime Factors Kata by Uncle Bob",
   "source_url": "http://butunclebob.com/ArticleS.UncleBob.ThePrimeFactorsKata"
