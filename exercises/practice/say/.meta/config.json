@@ -2,15 +2,9 @@
   "blurb": "Given a number from 0 to 999,999,999,999, spell out that number in English.",
   "authors": [],
   "files": {
-    "solution": [
-      "src/{snake_slug}.clj"
-    ],
-    "test": [
-      "test/{snake_slug}_test.clj"
-    ],
-    "example": [
-      "src/example.clj"
-    ]
+    "solution": [],
+    "test": [],
+    "example": ["src/example.clj"]
   },
   "source": "A variation on JavaRanch CattleDrive, exercise 4a",
   "source_url": "http://www.javaranch.com/say.jsp"

@@ -2,15 +2,9 @@
   "blurb": "Given a number determine whether or not it is valid per the Luhn formula.",
   "authors": [],
   "files": {
-    "solution": [
-      "src/{snake_slug}.clj"
-    ],
-    "test": [
-      "test/{snake_slug}_test.clj"
-    ],
-    "example": [
-      "src/example.clj"
-    ]
+    "solution": [],
+    "test": [],
+    "example": ["src/example.clj"]
   },
   "source": "The Luhn Algorithm on Wikipedia",
   "source_url": "http://en.wikipedia.org/wiki/Luhn_algorithm"

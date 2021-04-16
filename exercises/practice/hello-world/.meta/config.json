@@ -2,15 +2,9 @@
   "blurb": "The classical introductory exercise. Just say \"Hello, World!\"",
   "authors": [],
   "files": {
-    "solution": [
-      "src/{snake_slug}.clj"
-    ],
-    "test": [
-      "test/{snake_slug}_test.clj"
-    ],
-    "example": [
-      "src/example.clj"
-    ]
+    "solution": [],
+    "test": [],
+    "example": ["src/example.clj"]
   },
   "source": "This is an exercise to introduce users to using Exercism",
   "source_url": "http://en.wikipedia.org/wiki/%22Hello,_world!%22_program"

@@ -2,15 +2,9 @@
   "blurb": "Create a sentence of the form \"One for X, one for me.\"",
   "authors": [],
   "files": {
-    "solution": [
-      "src/{snake_slug}.clj"
-    ],
-    "test": [
-      "test/{snake_slug}_test.clj"
-    ],
-    "example": [
-      "src/example.clj"
-    ]
+    "solution": [],
+    "test": [],
+    "example": ["src/example.clj"]
   },
   "source_url": "https://github.com/exercism/problem-specifications/issues/757"
 }

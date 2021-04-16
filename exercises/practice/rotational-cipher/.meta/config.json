@@ -2,15 +2,9 @@
   "blurb": "Create an implementation of the rotational cipher, also sometimes called the Caesar cipher.",
   "authors": [],
   "files": {
-    "solution": [
-      "src/{snake_slug}.clj"
-    ],
-    "test": [
-      "test/{snake_slug}_test.clj"
-    ],
-    "example": [
-      "src/example.clj"
-    ]
+    "solution": [],
+    "test": [],
+    "example": ["src/example.clj"]
   },
   "source": "Wikipedia",
   "source_url": "https://en.wikipedia.org/wiki/Caesar_cipher"

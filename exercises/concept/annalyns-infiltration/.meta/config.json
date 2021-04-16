@@ -1,20 +1,10 @@
 {
   "blurb": "TODO: add blurb for annalyns-infiltration exercise",
-  "authors": [
-    "porkostomus"
-  ],
-  "forked_from": [
-    "fsharp/booleans"
-  ],
+  "authors": ["porkostomus"],
+  "forked_from": ["fsharp/booleans"],
   "files": {
-    "solution": [
-      "src/{snake_slug}.clj"
-    ],
-    "test": [
-      "test/{snake_slug}_test.clj"
-    ],
-    "exemplar": [
-      ".meta/exemplar.clj"
-    ]
+    "solution": [],
+    "test": [],
+    "exemplar": [".meta/exemplar.clj"]
   }
 }

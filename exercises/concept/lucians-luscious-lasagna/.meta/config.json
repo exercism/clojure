@@ -1,20 +1,10 @@
 {
   "blurb": "TODO: add blurb for lucians-luscious-lasagna exercise",
-  "authors": [
-    "porkostomus"
-  ],
-  "forked_from": [
-    "fsharp/basics"
-  ],
+  "authors": ["porkostomus"],
+  "forked_from": ["fsharp/basics"],
   "files": {
-    "solution": [
-      "src/{snake_slug}.clj"
-    ],
-    "test": [
-      "test/{snake_slug}_test.clj"
-    ],
-    "exemplar": [
-      ".meta/exemplar.clj"
-    ]
+    "solution": [],
+    "test": [],
+    "exemplar": [".meta/exemplar.clj"]
   }
 }

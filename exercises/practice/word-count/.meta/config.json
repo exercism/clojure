@@ -2,15 +2,9 @@
   "blurb": "Given a phrase, count the occurrences of each word in that phrase.",
   "authors": [],
   "files": {
-    "solution": [
-      "src/{snake_slug}.clj"
-    ],
-    "test": [
-      "test/{snake_slug}_test.clj"
-    ],
-    "example": [
-      "src/example.clj"
-    ]
+    "solution": [],
+    "test": [],
+    "example": ["src/example.clj"]
   },
   "source": "This is a classic toy problem, but we were reminded of it by seeing it in the Go Tour."
 }

@@ -1,20 +1,10 @@
 {
   "blurb": "TODO: add blurb for bird-watcher exercise",
-  "authors": [
-    "porkostomus"
-  ],
-  "forked_from": [
-    "csharp/arrays"
-  ],
+  "authors": ["porkostomus"],
+  "forked_from": ["csharp/arrays"],
   "files": {
-    "solution": [
-      "src/{snake_slug}.clj"
-    ],
-    "test": [
-      "test/{snake_slug}_test.clj"
-    ],
-    "exemplar": [
-      ".meta/exemplar.clj"
-    ]
+    "solution": [],
+    "test": [],
+    "exemplar": [".meta/exemplar.clj"]
   }
 }

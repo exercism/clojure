@@ -2,15 +2,9 @@
   "blurb": "Implement a binary search algorithm.",
   "authors": [],
   "files": {
-    "solution": [
-      "src/{snake_slug}.clj"
-    ],
-    "test": [
-      "test/{snake_slug}_test.clj"
-    ],
-    "example": [
-      "src/example.clj"
-    ]
+    "solution": [],
+    "test": [],
+    "example": ["src/example.clj"]
   },
   "source": "Wikipedia",
   "source_url": "http://en.wikipedia.org/wiki/Binary_search_algorithm"
