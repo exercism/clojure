@@ -3,10 +3,10 @@
   "authors": [],
   "files": {
     "solution": [
-      "src/{snake_slug}.clj"
+      "src/difference_of_squares.clj"
     ],
     "test": [
-      "test/{snake_slug}_test.clj"
+      "test/difference_of_squares_test.clj"
     ],
     "example": [
       "src/example.clj"

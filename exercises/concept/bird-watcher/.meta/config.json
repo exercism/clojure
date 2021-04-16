@@ -8,10 +8,10 @@
   ],
   "files": {
     "solution": [
-      "src/{snake_slug}.clj"
+      "src/bird_watcher.clj"
     ],
     "test": [
-      "test/{snake_slug}_test.clj"
+      "test/bird_watcher_test.clj"
     ],
     "exemplar": [
       ".meta/exemplar.clj"

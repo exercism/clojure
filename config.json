@@ -16,10 +16,10 @@
   },
   "files": {
     "solution": [
-      "src/{snake_slug}.clj"
+      "src/%{snake_slug}.clj"
     ],
     "test": [
-      "test/{snake_slug}_test.clj"
+      "test/%{snake_slug}_test.clj"
     ],
     "example": [
       "src/example.clj"

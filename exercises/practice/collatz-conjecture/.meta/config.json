@@ -3,10 +3,10 @@
   "authors": [],
   "files": {
     "solution": [
-      "src/{snake_slug}.clj"
+      "src/collatz_conjecture.clj"
     ],
     "test": [
-      "test/{snake_slug}_test.clj"
+      "test/collatz_conjecture_test.clj"
     ],
     "example": [
       "src/example.clj"

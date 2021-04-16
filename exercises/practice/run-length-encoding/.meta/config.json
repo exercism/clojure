@@ -3,10 +3,10 @@
   "authors": [],
   "files": {
     "solution": [
-      "src/{snake_slug}.clj"
+      "src/run_length_encoding.clj"
     ],
     "test": [
-      "test/{snake_slug}_test.clj"
+      "test/run_length_encoding_test.clj"
     ],
     "example": [
       "src/example.clj"

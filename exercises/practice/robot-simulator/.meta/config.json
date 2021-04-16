@@ -3,10 +3,10 @@
   "authors": [],
   "files": {
     "solution": [
-      "src/{snake_slug}.clj"
+      "src/robot_simulator.clj"
     ],
     "test": [
-      "test/{snake_slug}_test.clj"
+      "test/robot_simulator_test.clj"
     ],
     "example": [
       "src/example.clj"

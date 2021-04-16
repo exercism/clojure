@@ -3,10 +3,10 @@
   "authors": [],
   "files": {
     "solution": [
-      "src/{snake_slug}.clj"
+      "src/minesweeper.clj"
     ],
     "test": [
-      "test/{snake_slug}_test.clj"
+      "test/minesweeper_test.clj"
     ],
     "example": [
       "src/example.clj"

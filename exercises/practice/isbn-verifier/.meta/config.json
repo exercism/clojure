@@ -3,10 +3,10 @@
   "authors": [],
   "files": {
     "solution": [
-      "src/{snake_slug}.clj"
+      "src/isbn_verifier.clj"
     ],
     "test": [
-      "test/{snake_slug}_test.clj"
+      "test/isbn_verifier_test.clj"
     ],
     "example": [
       "src/example.clj"

@@ -6,10 +6,10 @@
   ],
   "files": {
     "solution": [
-      "src/{snake_slug}.clj"
+      "src/tracks_on_tracks_on_tracks.clj"
     ],
     "test": [
-      "test/{snake_slug}_test.clj"
+      "test/tracks_on_tracks_on_tracks_test.clj"
     ],
     "exemplar": [
       ".meta/exemplar.clj"

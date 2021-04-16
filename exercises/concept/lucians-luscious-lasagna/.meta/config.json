@@ -8,10 +8,10 @@
   ],
   "files": {
     "solution": [
-      "src/{snake_slug}.clj"
+      "src/lucians_luscious_lasagna.clj"
     ],
     "test": [
-      "test/{snake_slug}_test.clj"
+      "test/lucians_luscious_lasagna_test.clj"
     ],
     "exemplar": [
       ".meta/exemplar.clj"

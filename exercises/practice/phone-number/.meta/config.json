@@ -3,10 +3,10 @@
   "authors": [],
   "files": {
     "solution": [
-      "src/{snake_slug}.clj"
+      "src/phone_number.clj"
     ],
     "test": [
-      "test/{snake_slug}_test.clj"
+      "test/phone_number_test.clj"
     ],
     "example": [
       "src/example.clj"
