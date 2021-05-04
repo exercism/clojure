@@ -1,3 +1,5 @@
+# Hints
+
 ## 1. Check if a fast attack can be made
 
 We need to check if the knight is awake and _invert_ its truth value. This can be done with the [`not`][not] function.

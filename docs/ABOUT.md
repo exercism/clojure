@@ -1,3 +1,5 @@
+# About
+
 [Clojure](http://clojure.org) is a dynamic programming language that targets the Java Virtual Machine (JVM). 
 Designed as a general purpose language, Clojure combines the approachability of a scripting language with a robust infrastructure for multithreaded programming.
 

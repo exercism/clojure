@@ -1,3 +1,5 @@
+# Hints
+
 ## 1. Define the expected oven time in minutes
 
 - You need to define a [var][vars] using [def].

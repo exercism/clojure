@@ -1,3 +1,5 @@
+# Introduction
+
 Booleans in Clojure are represented by `true` or `false`.
 
 Predicate functions (functions which return a boolean) will typically end with a quesion mark (`?`), but this is by convention only.
