@@ -14,6 +14,9 @@
     "indent_style": "space",
     "indent_size": 2
   },
+  "test_runner": {
+    "average_run_time": 4.0
+  },
   "files": {
     "solution": [
       "src/%{snake_slug}.clj"
