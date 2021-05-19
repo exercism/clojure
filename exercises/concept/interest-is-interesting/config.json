@@ -1,9 +1,8 @@
 {
   "authors": [
-    {
-      "github_username": "porkostomus",
-      "exercism_username": "porkostomus"
-    }
+    "porkostomus"
   ],
-  "forked_from": ["fsharp/floating-point-numbers"]
+  "forked_from": [
+    "fsharp/floating-point-numbers"
+  ]
 }
