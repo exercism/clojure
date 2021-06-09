@@ -1,8 +1,5 @@
 {
-  "authors": [
-    "porkostomus"
-  ],
-  "forked_from": [
-    "fsharp/interest-is-interesting"
-  ]
+  "blurb": "TODO: add blurb for interest-is-interesting exercise",
+  "authors": ["porkostomus"],
+  "forked_from": ["fsharp/interest-is-interesting"]
 }
