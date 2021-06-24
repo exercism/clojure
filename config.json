@@ -853,32 +853,32 @@
   "key_features": [
     {
       "title": "Lisp",
-      "content": "Clojure extends Lisp's code-as-data system beyond parenthesized lists (s-expressions) to vectors and maps, and has a powerful macro system.",
+      "content": "Extends Lisp's code-as-data system to vectors and maps, and has a powerful macro system.",
       "icon": "features-lisp"
     },
     {
       "title": "Dynamic",
-      "content": "Clojure's primary programming interface is the Read-Eval-Print-Loop (REPL). Code input into the REPL is compiled to JVM bytecode on the fly.",
+      "content": "Clojure's primary programming interface is the Read-Eval-Print-Loop (REPL).",
       "icon": "features-dynamic"
     },
     {
       "title": "Functional",
-      "content": "Clojure provides the tools to avoid mutable state, provides functions as first-class objects, and emphasizes recursive iteration instead of side-effect based looping.",
+      "content": "Allows avoiding mutable state, provides functions as first-class objects, and emphasizes recursion.",
       "icon": "features-functional"
     },
     {
       "title": "Practical",
-      "content": "Clojure is impure, in that it doesn’t force your program to be referentially transparent, and doesn’t strive for 'provable' programs.",
+      "content": "Doesn’t force programs to be referentially transparent, and doesn’t strive for 'provable' programs.",
       "icon": "features-practical"
     },
     {
       "title": "Concurrent",
-      "content": "Clojure, being a practical language, allows state to change but provides mechanism to ensure that, when it does so, it remains consistent, while alleviating developers from having to avoid conflicts manually using locks etc.",
+      "content": "Supports sharing changing state between threads in a synchronous and coordinated manner.",
       "icon": "features-concurrent"
     },
     {
       "title": "JVM Hosted",
-      "content": "Clojure is designed to be a hosted language, sharing the JVM type system, GC, threads etc. It compiles all functions to JVM bytecode. Clojure is a great Java library consumer, offering the dot-target-member notation for calls to Java.",
+      "content": "Shares the JVM type system, GC, threads etc. Compiles all functions to JVM bytecode.",
       "icon": "features-jvm"
     }
   ],
