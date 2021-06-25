@@ -16,7 +16,7 @@
       "test/protein_translation_test.clj"
     ],
     "example": [
-      "src/example.clj"
+      ".meta/src/example.clj"
     ]
   },
   "source": "Tyler Long"

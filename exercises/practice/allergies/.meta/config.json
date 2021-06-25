@@ -22,7 +22,7 @@
       "test/allergies_test.clj"
     ],
     "example": [
-      "src/example.clj"
+      ".meta/src/example.clj"
     ]
   },
   "source": "Jumpstart Lab Warm-up",

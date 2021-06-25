@@ -22,7 +22,7 @@
       "test/roman_numerals_test.clj"
     ],
     "example": [
-      "src/example.clj"
+      ".meta/src/example.clj"
     ]
   },
   "source": "The Roman Numeral Kata",

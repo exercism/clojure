@@ -16,7 +16,7 @@
       "test/two_fer_test.clj"
     ],
     "example": [
-      "src/example.clj"
+      ".meta/src/example.clj"
     ]
   },
   "source_url": "https://github.com/exercism/problem-specifications/issues/757"

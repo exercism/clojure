@@ -15,7 +15,7 @@
       "test/isbn_verifier_test.clj"
     ],
     "example": [
-      "src/example.clj"
+      ".meta/src/example.clj"
     ]
   },
   "source": "Converting a string into a number and some basic processing utilizing a relatable real world example.",

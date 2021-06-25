@@ -14,7 +14,7 @@
       "test/spiral_matrix_test.clj"
     ],
     "example": [
-      "src/example.clj"
+      ".meta/src/example.clj"
     ]
   },
   "source": "Reddit r/dailyprogrammer challenge #320 [Easy] Spiral Ascension.",

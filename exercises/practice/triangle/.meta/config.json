@@ -25,7 +25,7 @@
       "test/triangle_test.clj"
     ],
     "example": [
-      "src/example.clj"
+      ".meta/src/example.clj"
     ]
   },
   "source": "The Ruby Koans triangle project, parts 1 & 2",

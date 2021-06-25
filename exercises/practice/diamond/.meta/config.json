@@ -16,7 +16,7 @@
       "test/diamond_test.clj"
     ],
     "example": [
-      "src/example.clj"
+      ".meta/src/example.clj"
     ]
   },
   "source": "Seb Rose",

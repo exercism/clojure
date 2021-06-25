@@ -16,7 +16,7 @@
       "test/say_test.clj"
     ],
     "example": [
-      "src/example.clj"
+      ".meta/src/example.clj"
     ]
   },
   "source": "A variation on JavaRanch CattleDrive, exercise 4a",

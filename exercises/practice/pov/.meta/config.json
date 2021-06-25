@@ -19,7 +19,7 @@
       "test/pov_test.clj"
     ],
     "example": [
-      "src/example.clj"
+      ".meta/src/example.clj"
     ]
   },
   "source": "Adaptation of exercise from 4clojure",

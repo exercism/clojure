@@ -10,6 +10,6 @@
           :let [slug             (exercise "slug")
                 path-to-exercise (partial str "exercises/practice/" slug "/")
                 exercise-tests   (symbol (str slug "-test"))]]
-    (load-file (path-to-exercise "src/example.clj"))
+    (load-file (path-to-exercise ".meta/src/example.clj"))
     (load-file (path-to-exercise "test/" (->snake_case slug) "_test.clj"))
     (is (successful? (run-tests exercise-tests)))))

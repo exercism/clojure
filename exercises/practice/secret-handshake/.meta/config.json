@@ -14,7 +14,7 @@
       "test/secret_handshake_test.clj"
     ],
     "example": [
-      "src/example.clj"
+      ".meta/src/example.clj"
     ]
   },
   "source": "Bert, in Mary Poppins",

@@ -22,7 +22,7 @@
       "test/bank_account_test.clj"
     ],
     "example": [
-      "src/example.clj"
+      ".meta/src/example.clj"
     ]
   }
 }

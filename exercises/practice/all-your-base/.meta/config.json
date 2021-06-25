@@ -16,7 +16,7 @@
       "test/all_your_base_test.clj"
     ],
     "example": [
-      "src/example.clj"
+      ".meta/src/example.clj"
     ]
   }
 }

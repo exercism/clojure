@@ -16,7 +16,7 @@
       "test/perfect_numbers_test.clj"
     ],
     "example": [
-      "src/example.clj"
+      ".meta/src/example.clj"
     ]
   },
   "source": "Taken from Chapter 2 of Functional Thinking by Neal Ford.",

@@ -18,7 +18,7 @@
       "test/hello_world_test.clj"
     ],
     "example": [
-      "src/example.clj"
+      ".meta/src/example.clj"
     ]
   },
   "source": "This is an exercise to introduce users to using Exercism",
