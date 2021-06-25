@@ -26,7 +26,7 @@
       "test/beer_song_test.clj"
     ],
     "example": [
-      "src/example.clj"
+      ".meta/src/example.clj"
     ]
   },
   "source": "Learn to Program by Chris Pine",

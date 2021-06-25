@@ -22,7 +22,7 @@
       "test/grains_test.clj"
     ],
     "example": [
-      "src/example.clj"
+      ".meta/src/example.clj"
     ]
   },
   "source": "JavaRanch Cattle Drive, exercise 6",

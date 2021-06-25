@@ -17,7 +17,7 @@
       "test/reverse_string_test.clj"
     ],
     "example": [
-      "src/example.clj"
+      ".meta/src/example.clj"
     ]
   },
   "source": "Introductory challenge to reverse an input string",

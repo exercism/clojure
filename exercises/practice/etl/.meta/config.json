@@ -25,7 +25,7 @@
       "test/etl_test.clj"
     ],
     "example": [
-      "src/example.clj"
+      ".meta/src/example.clj"
     ]
   },
   "source": "The Jumpstart Lab team",

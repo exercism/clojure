@@ -14,7 +14,7 @@
       "test/series_test.clj"
     ],
     "example": [
-      "src/example.clj"
+      ".meta/src/example.clj"
     ]
   },
   "source": "A subset of the Problem 8 at Project Euler",

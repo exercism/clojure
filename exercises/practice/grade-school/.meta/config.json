@@ -24,7 +24,7 @@
       "test/grade_school_test.clj"
     ],
     "example": [
-      "src/example.clj"
+      ".meta/src/example.clj"
     ]
   },
   "source": "A pairing session with Phil Battos at gSchool",

@@ -24,7 +24,7 @@
       "test/robot_name_test.clj"
     ],
     "example": [
-      "src/example.clj"
+      ".meta/src/example.clj"
     ]
   },
   "source": "A debugging session with Paul Blackwell at gSchool."

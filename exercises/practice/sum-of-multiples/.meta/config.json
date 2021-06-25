@@ -17,7 +17,7 @@
       "test/sum_of_multiples_test.clj"
     ],
     "example": [
-      "src/example.clj"
+      ".meta/src/example.clj"
     ]
   },
   "source": "A variation on Problem 1 at Project Euler",

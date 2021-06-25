@@ -17,7 +17,7 @@
       "test/change_test.clj"
     ],
     "example": [
-      "src/example.clj"
+      ".meta/src/example.clj"
     ]
   },
   "source": "Software Craftsmanship - Coin Change Kata",

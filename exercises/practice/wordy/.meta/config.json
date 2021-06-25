@@ -17,7 +17,7 @@
       "test/wordy_test.clj"
     ],
     "example": [
-      "src/example.clj"
+      ".meta/src/example.clj"
     ]
   },
   "source": "Inspired by one of the generated questions in the Extreme Startup game.",

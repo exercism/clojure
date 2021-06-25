@@ -17,7 +17,7 @@
       "test/hamming_test.clj"
     ],
     "example": [
-      "src/example.clj"
+      ".meta/src/example.clj"
     ]
   },
   "source": "The Calculating Point Mutations problem at Rosalind",

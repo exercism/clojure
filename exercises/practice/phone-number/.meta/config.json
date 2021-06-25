@@ -24,7 +24,7 @@
       "test/phone_number_test.clj"
     ],
     "example": [
-      "src/example.clj"
+      ".meta/src/example.clj"
     ]
   },
   "source": "Event Manager by JumpstartLab",

@@ -30,7 +30,7 @@
       "test/rna_transcription_test.clj"
     ],
     "example": [
-      "src/example.clj"
+      ".meta/src/example.clj"
     ]
   },
   "source": "Hyperphysics",

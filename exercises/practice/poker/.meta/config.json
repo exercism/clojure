@@ -14,7 +14,7 @@
       "test/poker_test.clj"
     ],
     "example": [
-      "src/example.clj"
+      ".meta/src/example.clj"
     ]
   },
   "source": "Inspired by the training course from Udacity.",

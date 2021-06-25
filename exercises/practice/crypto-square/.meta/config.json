@@ -23,7 +23,7 @@
       "test/crypto_square_test.clj"
     ],
     "example": [
-      "src/example.clj"
+      ".meta/src/example.clj"
     ]
   },
   "source": "J Dalbey's Programming Practice problems",

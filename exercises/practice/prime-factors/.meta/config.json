@@ -21,7 +21,7 @@
       "test/prime_factors_test.clj"
     ],
     "example": [
-      "src/example.clj"
+      ".meta/src/example.clj"
     ]
   },
   "source": "The Prime Factors Kata by Uncle Bob",
