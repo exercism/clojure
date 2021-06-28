@@ -1,4 +1,5 @@
-(ns crypto-square, (:require [clojure.string :as str]))
+(ns crypto-square
+  (:require [clojure.string :as str]))
 
 (defn normalize-plaintext [plaintext]
   (str/lower-case (str/replace plaintext #"[^\w]" "")))
