@@ -854,32 +854,32 @@
     {
       "title": "Lisp",
       "content": "Extends Lisp's code-as-data system to vectors and maps, and has a powerful macro system.",
-      "icon": "features-lisp"
+      "icon": "multi-paradigm"
     },
     {
       "title": "Dynamic",
       "content": "Clojure's primary programming interface is the Read-Eval-Print-Loop (REPL).",
-      "icon": "features-dynamic"
+      "icon": "interactive"
     },
     {
       "title": "Functional",
       "content": "Allows avoiding mutable state, provides functions as first-class objects, and emphasizes recursion.",
-      "icon": "features-functional"
+      "icon": "functional"
     },
     {
       "title": "Practical",
       "content": "Doesn’t force programs to be referentially transparent, and doesn’t strive for 'provable' programs.",
-      "icon": "features-practical"
+      "icon": "productive"
     },
     {
       "title": "Concurrent",
       "content": "Supports sharing changing state between threads in a synchronous and coordinated manner.",
-      "icon": "features-concurrent"
+      "icon": "concurrency"
     },
     {
       "title": "JVM Hosted",
       "content": "Shares the JVM type system, GC, threads etc. Compiles all functions to JVM bytecode.",
-      "icon": "features-jvm"
+      "icon": "stable"
     }
   ],
   "tags": [
