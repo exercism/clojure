@@ -10,7 +10,7 @@ These resources can help you get started:
 - [Grimoire](http://conj.io) Community combined cheatsheet and examples.
 
 ## Exercises and Tutorials
-- [4Clojure](http://www.4clojure.com) A resource to help fledgling clojurians learn the language through interactive problems.
+- [4Clojure](https://4clojure.oxal.org/) A resource to help fledgling clojurians learn the language through interactive problems.
 - [Clojure Katas](http://clojurekatas.org) A set of problems to help you get your hands dirty with Clojure.
 - [Wonderland Clojure Katas](https://github.com/gigasquid/wonderland-clojure-katas) Clojure Katas inspired by Alice in Wonderland.
 - [Parens of the Dead](http://www.parens-of-the-dead.com) A screencast series of zombie-themed games written with Clojure and ClojureScript.
