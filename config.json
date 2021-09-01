@@ -4,7 +4,7 @@
   "active": true,
   "status": {
     "concept_exercises": false,
-    "test_runner": false,
+    "test_runner": true,
     "representer": false,
     "analyzer": false
   },
@@ -12,7 +12,25 @@
   "version": 3,
   "online_editor": {
     "indent_style": "space",
-    "indent_size": 2
+    "indent_size": 2,
+    "highlightjs_language": "clojure"
+  },
+  "test_runner": {
+    "average_run_time": 4.0
+  },
+  "files": {
+    "solution": [
+      "src/%{snake_slug}.clj"
+    ],
+    "test": [
+      "test/%{snake_slug}_test.clj"
+    ],
+    "example": [
+      "src/example.clj"
+    ],
+    "exemplar": [
+      ".meta/exemplar.clj"
+    ]
   },
   "exercises": {
     "concept": [
@@ -867,6 +885,56 @@
       "name": "Vectors"
     },
   ],
-  "key_features": [],
-  "tags": []
+  "key_features": [
+    {
+    "title": "Lisp",
+    "content": "Extends Lisp's code-as-data system to vectors and maps, and has a powerful macro system.",
+    "icon": "multi-paradigm"
+  },
+  {
+    "title": "Dynamic",
+    "content": "Clojure's primary programming interface is the Read-Eval-Print-Loop (REPL).",
+    "icon": "interactive"
+  },
+  {
+    "title": "Functional",
+    "content": "Allows avoiding mutable state, provides functions as first-class objects, and emphasizes recursion.",
+    "icon": "functional"
+  },
+  {
+    "title": "Practical",
+    "content": "Doesn’t force programs to be referentially transparent, and doesn’t strive for 'provable' programs.",
+    "icon": "productive"
+  },
+  {
+    "title": "Concurrent",
+    "content": "Supports sharing changing state between threads in a synchronous and coordinated manner.",
+    "icon": "concurrency"
+  },
+  {
+    "title": "JVM Hosted",
+    "content": "Shares the JVM type system, GC, threads etc. Compiles all functions to JVM bytecode.",
+    "icon": "stable"
+  }
+],
+  "tags": [
+    "paradigm/declarative",
+    "paradigm/functional",
+    "typing/dynamic",
+    "execution_mode/compiled",
+    "platform/windows",
+    "platform/mac",
+    "platform/linux",
+    "runtime/jvm",
+    "used_for/artificial_intelligence",
+    "used_for/backends",
+    "used_for/cross_platform_development",
+    "used_for/financial_systems",
+    "used_for/frontends",
+    "used_for/games",
+    "used_for/guis",
+    "used_for/robotics",
+    "used_for/scientific_calculations",
+    "used_for/web_development"
+  ]
 }
