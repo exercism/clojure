@@ -959,44 +959,9 @@
   },
   "concepts": [
     {
-      "uuid": "e043262c-85bf-41b0-a182-519ec453f585",
-      "slug": "basics",
-      "name": "Basics"
-    },
-    {
-      "uuid": "819072d3-472c-4b2a-b16c-58828f8af61a",
-      "slug": "booleans",
-      "name": "Booleans"
-    },
-    {
-      "uuid": "d2e5b28f-9bd9-444f-b981-99803d7f3351",
-      "slug": "conditionals",
-      "name": "Conditionals"
-    },
-    {
-      "uuid": "a79d6d4d-9195-4e6a-ab8a-dbf9b7a401bc",
-      "slug": "floating-point-numbers",
-      "name": "Floating-point Numbers"
-    },
-    {
       "uuid": "33947666-6176-4ab6-825f-08b689c8040d",
       "slug": "lists",
       "name": "Lists"
-    },
-    {
-      "uuid": "5768cf26-4b8c-46f3-9c08-d6ff2e65a4d6",
-      "slug": "numbers",
-      "name": "Numbers"
-    },
-    {
-      "uuid": "c0b42493-d4e3-4a71-a7d1-2eaaae4eaeaa",
-      "slug": "strings",
-      "name": "Strings"
-    },
-    {
-      "uuid": "7aa13ace-5597-4d6c-8f93-8b0fb97cf2ff",
-      "slug": "vectors",
-      "name": "Vectors"
     }
   ],
   "key_features": [
