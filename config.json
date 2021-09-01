@@ -164,17 +164,6 @@
         ]
       },
       {
-        "slug": "two-fer",
-        "name": "Two Fer",
-        "uuid": "1706ec00-9e51-45d1-ac3e-01b0360ea950",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 1,
-        "topics": [
-          "strings"
-        ]
-      },
-      {
         "slug": "accumulate",
         "name": "Accumulate",
         "uuid": "49f62bbc-0f60-4922-b5a6-f266b80442f4",
