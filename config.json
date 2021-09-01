@@ -155,7 +155,6 @@
         "slug": "reverse-string",
         "name": "Reverse String",
         "uuid": "0f7b1858-15d0-467d-9f94-56408249c2f7",
-
         "practices": ["strings"],
         "prerequisites": ["strings"],
         "difficulty": 1,
@@ -190,6 +189,7 @@
         "name": "All Your Base",
         "uuid": "7b8c5f7e-3c7d-4e69-ba8c-f29bb492a628",
         "practices": ["numbers", "vectors"],
+        "prerequisites": ["numbers", "vectors"],
         "difficulty": 2,
         "topics": [
           "math"
