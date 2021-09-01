@@ -1,9 +1,29 @@
 {
-  "authors": [],
+  "blurb": "Convert a binary number, represented as a string (e.g. '101010'), to its decimal equivalent using first principles",
+  "authors": [
+    "rubysolo"
+  ],
+  "contributors": [
+    "AndreaCrotti",
+    "canweriotnow",
+    "dkinzer",
+    "haus",
+    "jgwhite",
+    "kytrinyx",
+    "mathias",
+    "sjwarner-bp",
+    "yurrriq"
+  ],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "src/binary.clj"
+    ],
+    "test": [
+      "test/binary_test.clj"
+    ],
+    "example": [
+      ".meta/src/example.clj"
+    ]
   },
   "source": "All of Computer Science",
   "source_url": "http://www.wolframalpha.com/input/?i=binary&a=*C.binary-_*MathWorld-"

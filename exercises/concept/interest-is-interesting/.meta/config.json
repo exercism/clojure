@@ -1,0 +1,10 @@
+{
+  "blurb": "TODO: add blurb for interest-is-interesting exercise",
+  "authors": ["porkostomus"],
+  "forked_from": ["fsharp/interest-is-interesting"],
+  "files": {
+    "solution": ["src/interest_is_interesting.clj"],
+    "test": ["test/interest_is_interesting_test.clj"],
+    "exemplar": [".meta/exemplar.clj"]
+  }
+}

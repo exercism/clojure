@@ -1,9 +1,32 @@
 {
-  "authors": [],
+  "blurb": "We are going to do the `Transform` step of an Extract-Transform-Load.",
+  "authors": [
+    "rubysolo"
+  ],
+  "contributors": [
+    "AndreaCrotti",
+    "canweriotnow",
+    "dkinzer",
+    "etrepum",
+    "geofflane",
+    "haus",
+    "jgwhite",
+    "kytrinyx",
+    "mathias",
+    "rsslldnphy",
+    "sjwarner-bp",
+    "yurrriq"
+  ],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "src/etl.clj"
+    ],
+    "test": [
+      "test/etl_test.clj"
+    ],
+    "example": [
+      ".meta/src/example.clj"
+    ]
   },
   "source": "The Jumpstart Lab team",
   "source_url": "http://jumpstartlab.com"

@@ -1,17 +1,21 @@
 {
+  "blurb": "TODO: add blurb for tracks-on-tracks-on-tracks exercise",
+  "authors": [
+    "porkostomus"
+  ],
   "contributors": [
-    {
-      "github_username": "bemself",
-      "exercism_username": "bemself"
-    },
-    {
-      "github_username": "cstby",
-      "exercism_username": "cstby"
-    }
+    "bemself",
+    "cstby"
   ],
   "files": {
-    "solution": [],
-    "test": [],
-    "exemplar": [".meta/exemplar.clj"]
+    "solution": [
+      "src/tracks_on_tracks_on_tracks.clj"
+    ],
+    "test": [
+      "test/tracks_on_tracks_on_tracks_test.clj"
+    ],
+    "exemplar": [
+      ".meta/exemplar.clj"
+    ]
   }
 }

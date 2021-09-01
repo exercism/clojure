@@ -1,9 +1,28 @@
 {
-  "authors": [],
+  "blurb": "Insert and search for numbers in a binary tree.",
+  "authors": [
+    "geofflane"
+  ],
+  "contributors": [
+    "AndreaCrotti",
+    "canweriotnow",
+    "dkinzer",
+    "haus",
+    "kytrinyx",
+    "mathias",
+    "rubysolo",
+    "yurrriq"
+  ],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "src/binary_search_tree.clj"
+    ],
+    "test": [
+      "test/binary_search_tree_test.clj"
+    ],
+    "example": [
+      ".meta/src/example.clj"
+    ]
   },
   "source": "Josh Cheek",
   "source_url": "https://twitter.com/josh_cheek"

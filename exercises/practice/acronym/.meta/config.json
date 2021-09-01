@@ -1,9 +1,23 @@
 {
-  "authors": [],
+  "blurb": "Convert a long phrase to its acronym",
+  "authors": [
+    "querenker"
+  ],
+  "contributors": [
+    "AndreaCrotti",
+    "haus",
+    "sjwarner-bp"
+  ],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "src/acronym.clj"
+    ],
+    "test": [
+      "test/acronym_test.clj"
+    ],
+    "example": [
+      ".meta/src/example.clj"
+    ]
   },
   "source": "Julien Vanier",
   "source_url": "https://github.com/monkbroc"

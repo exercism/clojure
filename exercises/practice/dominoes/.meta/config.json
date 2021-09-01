@@ -1,8 +1,20 @@
 {
+  "blurb": "Make a chain of dominoes.",
   "authors": [],
+  "contributors": [
+    "AndreaCrotti",
+    "haus",
+    "sjwarner-bp"
+  ],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "src/dominoes.clj"
+    ],
+    "test": [
+      "test/dominoes_test.clj"
+    ],
+    "example": [
+      ".meta/src/example.clj"
+    ]
   }
 }

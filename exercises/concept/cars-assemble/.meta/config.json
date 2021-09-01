@@ -1,14 +1,20 @@
 {
+  "blurb": "TODO: add blurb for cars-assemble exercise",
   "authors": [
-    {
-      "github_username": "porkostomus",
-      "exercism_username": "porkostomus"
-    }
+    "porkostomus"
   ],
-  "forked_from": ["fsharp/numbers"],
+  "forked_from": [
+    "fsharp/cars-assemble"
+  ],
   "files": {
-    "solution": [],
-    "test": [],
-    "exemplar": [".meta/exemplar.clj"]
+    "solution": [
+      "src/cars_assemble.clj"
+    ],
+    "test": [
+      "test/cars_assemble_test.clj"
+    ],
+    "exemplar": [
+      ".meta/exemplar.clj"
+    ]
   }
 }

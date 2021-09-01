@@ -1,9 +1,23 @@
 {
-  "authors": [],
+  "blurb": "Implement run-length encoding and decoding.",
+  "authors": [
+    "themistoklik"
+  ],
+  "contributors": [
+    "AndreaCrotti",
+    "haus",
+    "sjwarner-bp"
+  ],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "src/run_length_encoding.clj"
+    ],
+    "test": [
+      "test/run_length_encoding_test.clj"
+    ],
+    "example": [
+      ".meta/src/example.clj"
+    ]
   },
   "source": "Wikipedia",
   "source_url": "https://en.wikipedia.org/wiki/Run-length_encoding"

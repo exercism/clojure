@@ -5,5 +5,5 @@ lein: lein
 jdk: openjdk8
 script:
 - bin/fetch-configlet
-- bin/configlet lint .
+- bin/configlet lint
 - lein test

@@ -28,18 +28,21 @@
   (is (= "wneiaweoreneawssciliprerlneoidktcms"
          (crypto-square/ciphertext "We all know interspecies romance is weird."))))
 (deftest cipher-3
-  (is (= "msemo aanin dnin ndla etlt shui"
-         (crypto-square/normalize-ciphertext "Madness, and then illumination."))))
-(deftest cipher-4
   (is (= "vrel aepe mset paoo irpo"
          (crypto-square/normalize-ciphertext "Vampires are people too!"))))
+(deftest cipher-4
+  (is (= "msemo aanin dnin  ndla  etlt  shui "
+         (crypto-square/normalize-ciphertext "Madness, and then illumination."))))
 (deftest cipher-5
   (is (= (str "ageihdsednsh lsagtoonaepe lannswnccair hrditeaetnrh "
-              "ueethdnatoio mbqyewdnotto aouayicdwhod nranatosaef "
-              "bnldrhnhrrb efirersodir irnieecusno nedgnailoat")
+              "ueethdnatoio mbqyewdnotto aouayicdwhod nranatosaef  "
+              "bnldrhnhrrb  efirersodir  irnieecusno  nedgnailoat ")
          (let [plaintext (str "All human beings are born free "
                               "and equal in dignity and rights. "
                               "They are endowed with reason and conscience "
                               "and should act towards one another "
                               "in a spirit of brotherhood.")]
            (crypto-square/normalize-ciphertext plaintext)))))
+(deftest cipher-6
+  (is (= "imtgdvs fearwer mayoogo anouuio ntnnlvt wttddes aohghn  sseoau "
+         (crypto-square/normalize-ciphertext "If man was meant to stay on the ground, god would have given us roots."))))

@@ -1,10 +1,28 @@
 {
-  "authors": [],
+  "blurb": "Write a robot simulator.",
+  "authors": [
+    "kytrinyx"
+  ],
+  "contributors": [
+    "AndreaCrotti",
+    "canweriotnow",
+    "dkinzer",
+    "geofflane",
+    "haus",
+    "mathias",
+    "rubysolo",
+    "yurrriq"
+  ],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "src/robot_simulator.clj"
+    ],
+    "test": [
+      "test/robot_simulator_test.clj"
+    ],
+    "example": [
+      ".meta/src/example.clj"
+    ]
   },
-  "source": "Inspired by an interview question at a famous company.",
-  "source_url": ""
+  "source": "Inspired by an interview question at a famous company."
 }

@@ -1,9 +1,22 @@
 {
+  "blurb": "Check if a given string is a valid ISBN-10 number.",
   "authors": [],
+  "contributors": [
+    "AndreaCrotti",
+    "haus",
+    "jgomo3",
+    "sjwarner-bp"
+  ],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "src/isbn_verifier.clj"
+    ],
+    "test": [
+      "test/isbn_verifier_test.clj"
+    ],
+    "example": [
+      ".meta/src/example.clj"
+    ]
   },
   "source": "Converting a string into a number and some basic processing utilizing a relatable real world example.",
   "source_url": "https://en.wikipedia.org/wiki/International_Standard_Book_Number#ISBN-10_check_digit_calculation"

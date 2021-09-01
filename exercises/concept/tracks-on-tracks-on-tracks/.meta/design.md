@@ -1,3 +1,5 @@
+# Design
+
 ## Goal
 
 The goal of this exercise is to introduce the student to [Lists in Clojure](https://clojure.org/reference/data_structures#Lists).

@@ -1,9 +1,23 @@
 {
-  "authors": [],
+  "blurb": "Translate RNA sequences into proteins.",
+  "authors": [
+    "querenker"
+  ],
+  "contributors": [
+    "AndreaCrotti",
+    "haus",
+    "sjwarner-bp"
+  ],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "src/protein_translation.clj"
+    ],
+    "test": [
+      "test/protein_translation_test.clj"
+    ],
+    "example": [
+      ".meta/src/example.clj"
+    ]
   },
   "source": "Tyler Long"
 }

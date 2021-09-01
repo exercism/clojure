@@ -1,0 +1,9 @@
+{
+  "blurb": "TODO: add blurb for squeaky-clean exercise",
+  "authors": ["porkostomus"],
+  "files": {
+    "solution": ["src/squeaky_clean.clj"],
+    "test": ["test/squeaky_clean_test.clj"],
+    "exemplar": [".meta/exemplar.clj"]
+  }
+}

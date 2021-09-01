@@ -1,14 +1,20 @@
 {
+  "blurb": "TODO: add blurb for log-levels exercise",
   "authors": [
-    {
-      "github_username": "porkostomus",
-      "exercism_username": "porkostomus"
-    }
+    "porkostomus"
   ],
-  "forked_from": ["fsharp/strings"],
+  "forked_from": [
+    "fsharp/log-levels"
+  ],
   "files": {
-    "solution": [],
-    "test": [],
-    "exemplar": [".meta/exemplar.clj"]
+    "solution": [
+      "src/log_levels.clj"
+    ],
+    "test": [
+      "test/log_levels_test.clj"
+    ],
+    "exemplar": [
+      ".meta/exemplar.clj"
+    ]
   }
 }

@@ -1,3 +1,5 @@
+# Introduction
+
 TODO: the content below is copied from the exercise introduction and probably needs rewriting to a proper concept introduction
 
 A `string` in Clojure is a Java string, which is an object that represents immutable text as a sequence of Unicode characters (letters, digits, punctuation, etc.) and is defined as follows:

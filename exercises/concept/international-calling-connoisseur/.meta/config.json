@@ -1,0 +1,9 @@
+{
+  "blurb": "TODO: add blurb for international-calling-connoisseur exercise",
+  "authors": ["porkostomus"],
+  "files": {
+    "solution": ["src/dialing_codes.clj"],
+    "test": ["test/dialing_codes_test.clj"],
+    "exemplar": [".meta/exemplar.clj"]
+  }
+}

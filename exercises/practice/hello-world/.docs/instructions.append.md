@@ -1,4 +1,6 @@
-### Project Structure
+# Instructions append
+
+## Project Structure
 
 Clojure exercises in exercism use [leiningen](http://leiningen.org/) to configure and run your code
 and use [leiningen standard directory structure](https://github.com/technomancy/leiningen/blob/master/doc/TUTORIAL.md#directory-layout).
@@ -6,7 +8,7 @@ and use [leiningen standard directory structure](https://github.com/technomancy/
 You will find a test file named `hello_world_test.clj` inside `test` directory.
 Write your code in `src/hello_world.clj`. It should use the namespace `hello-world` so that tests can pick it up.
 
-### Running tests
+## Running tests
 
 Run the tests using `lein test` command and make them pass:
 

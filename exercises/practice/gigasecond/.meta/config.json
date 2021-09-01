@@ -1,9 +1,29 @@
 {
-  "authors": [],
+  "blurb": "Given a moment, determine the moment that would be after a gigasecond has passed.",
+  "authors": [
+    "rubysolo"
+  ],
+  "contributors": [
+    "AndreaCrotti",
+    "canweriotnow",
+    "dkinzer",
+    "haus",
+    "jgwhite",
+    "kytrinyx",
+    "mathias",
+    "sjwarner-bp",
+    "yurrriq"
+  ],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "src/gigasecond.clj"
+    ],
+    "test": [
+      "test/gigasecond_test.clj"
+    ],
+    "example": [
+      ".meta/src/example.clj"
+    ]
   },
   "source": "Chapter 9 in Chris Pine's online Learn to Program tutorial.",
   "source_url": "http://pine.fm/LearnToProgram/?Chapter=09"
