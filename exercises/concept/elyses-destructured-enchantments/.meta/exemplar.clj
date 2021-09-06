@@ -1,4 +1,4 @@
-(ns exercism.elyses-destructured-enchantments)
+(ns enchantments)
 
 (defn first-card
   "Returns the first card from deck."
@@ -23,7 +23,7 @@
    a vector of the remaining cards in the deck."
   [deck]
   (let [[first & rest] deck]
-  [first rest]))
+    [first rest]))
 
 (def face-cards
   ["jack" "queen" "king"])
@@ -37,5 +37,4 @@
 (comment
   (insert-face-cards [3 10 7])
   (insert-face-cards [9])
-  (insert-face-cards [])
-  )
+  (insert-face-cards []))
