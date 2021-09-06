@@ -10,6 +10,7 @@ These resources can help you get started:
 
 ## Exercises and Tutorials
 - [4Clojure](http://www.4clojure.com) A resource to help fledgling clojurians learn the language through interactive problems.
+- [Calva - Get Started with Clojure](https://calva.io/get-started-with-clojure/) A zero-install, interactive guide to get you started with Clojure using Calva and VS Code (via Gitpod)
 - [Clojure Katas](http://clojurekatas.org) A set of problems to help you get your hands dirty with Clojure.
 - [Wonderland Clojure Katas](https://github.com/gigasquid/wonderland-clojure-katas) Clojure Katas inspired by Alice in Wonderland.
 - [Parens of the Dead](http://www.parens-of-the-dead.com) A screencast series of zombie-themed games written with Clojure and ClojureScript.
