@@ -7,7 +7,6 @@ These resources can help you get started:
 ## References
 - [Clojure.org](http://clojure.org) The official language website.
 - [ClojureDocs](https://clojuredocs.org) A repository of language references and examples by function or keyword.
-- [Grimoire](http://conj.io) Community combined cheatsheet and examples.
 
 ## Exercises and Tutorials
 - [4Clojure](http://www.4clojure.com) A resource to help fledgling clojurians learn the language through interactive problems.
@@ -19,8 +18,6 @@ These resources can help you get started:
 ## Community
 - [ClojureBridge](http://www.clojurebridge.org) Aims to increase diversity within the Clojure community by offering free, beginner-friendly Clojure programming workshops for women.
 - [Planet Clojure](http://planet.clojure.in) Clojure blog aggregator.
-- [Clojure Gazette](http://www.clojuregazette.com) A free, weekly email to inspire Clojure programmers.
-- [Clojure Weekly](http://reborg.tumblr.com) A weekly collection of Clojure topics.
 
 ## Books
 - [Living Clojure](http://shop.oreilly.com/product/0636920034292.do) by Carin Meier
