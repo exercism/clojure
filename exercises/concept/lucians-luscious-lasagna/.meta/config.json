@@ -1,6 +1,5 @@
 {
-  "blurb": "TODO: add blurb for lucians-luscious-lasagna exercise",
-  "icon": "lasagna",
+  "blurb": "Learn about the basics of Clojure by following a lasagna recipe",
   "authors": [
     "porkostomus"
   ],
