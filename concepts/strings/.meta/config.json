@@ -1,4 +1,4 @@
 {
-  "blurb": "TODO: add blurb for strings concept",
+  "blurb": "Strings are immutable, enclosed in double quotes and support Java escape sequences.",
   "authors": ["porkostomus"]
 }

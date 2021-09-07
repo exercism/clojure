@@ -1,17 +1,12 @@
 # Introduction
 
-TODO: the content below is copied from the exercise introduction and probably needs rewriting to a proper concept introduction
+There are a few basic [flow control](https://clojure.org/guides/learn/flow) constructs in Clojure. `if` is the most important conditional expression - it consists of a condition, a "then", and an optional "else". `if` will only evaluate the branch selected by the conditional.
 
-Numbers in Clojure include:
+```clojure
+(if (even? 2) "even" "odd")
+```
 
-- Integers: numbers with no digits behind the decimal separator (whole numbers). Examples are `-6`, `0`, `1`, `25`, `976` and `500000`.
-- Floating-point numbers: numbers with zero or more digits behind the decimal separator. Examples are `-2.4`, `0.1`, `3.14`, `16.984025` and `1024.0`.
-
-Two common numeric types are `int` and `float`. An `int` is a 32-bit integer and a `float` is a 64-bit floating-point number.
-
-Arithmetic is done using the standard arithmetic operators. Numbers can be compared using the standard numeric comparison operators and the equality (`=`) and inequality (`<>`) operators.
-
-In this exercise you must conditionally execute logic. A common way to do this in Clojure is by using `cond`:
+`cond` is a series of tests and expressions. Each test is evaluated in order and the expression is evaluated and returned for the first true test.
 
 ```clojure
 (cond (= x 5) "Expression to evaluate when x equals 5"

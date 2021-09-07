@@ -1,4 +1,4 @@
 {
-  "blurb": "TODO: add blurb for lists concept",
-  "authors": ["porkostomus"]
+  "blurb": "Lists are immutable, sequential collections representing function calls unless quoted.",
+  "authors": ["porkostomus", "bemself", "cstby"]
 }

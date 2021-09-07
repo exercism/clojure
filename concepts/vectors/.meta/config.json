@@ -1,4 +1,4 @@
 {
-  "blurb": "TODO: add blurb for vectors concept",
+  "blurb": "Vectors are sequential, heterogeneous immutable persistent collections supporting fast operations.",
   "authors": ["porkostomus"]
 }

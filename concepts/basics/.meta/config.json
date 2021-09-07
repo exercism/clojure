@@ -1,5 +1,5 @@
 {
-  "blurb": "TODO: add blurb for basics concept",
+  "blurb": "Clojure is a dynamic, functional Lisp featuring immutable, persistent data structures, with state management emphasizing practicality over functional purity.",
   "authors": [
     "porkostomus"
   ]
