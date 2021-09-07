@@ -42,7 +42,7 @@
           "basics"
         ],
         "prerequisites": [],
-        "status": "beta"
+        "status": "wip"
       },
       {
         "slug": "tracks-on-tracks-on-tracks",
@@ -54,7 +54,7 @@
         "prerequisites": [
           "basics"
         ],
-        "status": "beta"
+        "status": "wip"
       },
       {
         "slug": "bird-watcher",
@@ -66,7 +66,7 @@
         "prerequisites": [
           "basics"
         ],
-        "status": "beta"
+        "status": "wip"
       },
       {
         "slug": "cars-assemble",
@@ -79,7 +79,7 @@
         "prerequisites": [
           "basics"
         ],
-        "status": "beta"
+        "status": "wip"
       },
       {
         "slug": "interest-is-interesting",
@@ -92,7 +92,7 @@
           "basics",
           "numbers"
         ],
-        "status": "beta"
+        "status": "wip"
       },
       {
         "slug": "annalyns-infiltration",
@@ -104,7 +104,7 @@
         "prerequisites": [
           "basics"
         ],
-        "status": "beta"
+        "status": "wip"
       },
       {
         "slug": "log-levels",
@@ -116,7 +116,7 @@
         "prerequisites": [
           "basics"
         ],
-        "status": "beta"
+        "status": "wip"
       }
     ],
     "practice": [
