@@ -1,4 +1,4 @@
-(ns enchantments)
+(ns elyses-destructured-enchantments)
 
 (defn first-card
   "Returns the first card from deck."
