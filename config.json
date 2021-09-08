@@ -117,6 +117,18 @@
           "basics"
         ],
         "status": "beta"
+      },
+      {
+        "slug": "elyses-destructured-enchantments",
+        "name": "Elyses Destructured Enchantments",
+        "uuid": "f6130b51-6a2b-4e18-95d0-bbf673a42cca",
+        "concepts": [
+          "sequential-destructuring"
+        ],
+        "prerequisites": [
+          "lists", "vectors", "strings"
+        ],
+        "status": "beta"
       }
     ],
     "practice": [
