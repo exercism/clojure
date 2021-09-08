@@ -20,4 +20,4 @@
   (is (= '("Clojure") (tracks-on-tracks-on-tracks/remove-language '("Lisp" "Clojure")))))
 
 (deftest list-count-test
-  (is (= 3 (tracks-on-tracks-on-tracks/count-tracks-on-tracks-on-tracks '("JavaScript" "Java" "Clojure")))))
+  (is (= 3 (tracks-on-tracks-on-tracks/count-languages '("JavaScript" "Java" "Clojure")))))
