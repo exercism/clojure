@@ -3,7 +3,7 @@
             lucians-luscious-lasagna))
 
 (deftest expected-time-test
-  (is (= 40 (lucians-luscious-lasagna/expected-time))))
+  (is (= 40 lucians-luscious-lasagna/expected-time)))
 
 (deftest remaining-time-test
   (is (= 15 (lucians-luscious-lasagna/remaining-time 25))))
