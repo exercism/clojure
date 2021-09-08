@@ -1,4 +1,4 @@
-(ns exercism.lasagna)
+(ns lasagna)
 
 (def expected-time
   ;; Define the var here

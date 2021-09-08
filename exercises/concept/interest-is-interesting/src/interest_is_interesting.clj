@@ -1,4 +1,4 @@
-(ns exercism.savings-account)
+(ns savings-account)
 
 (defn interest-rate
   "TODO: add docstring"

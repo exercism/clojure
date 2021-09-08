@@ -1,4 +1,4 @@
-(ns exercism.assembly-line)
+(ns assembly-line)
 
 (defn production-rate
   "Returns the assembly line's production rate per hour,

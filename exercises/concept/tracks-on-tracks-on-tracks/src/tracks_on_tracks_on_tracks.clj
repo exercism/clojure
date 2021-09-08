@@ -1,4 +1,4 @@
-(ns exercism.languages)
+(ns languages)
 
 (defn new-list
   "Creates an empty list of languages to practice."
