@@ -1,4 +1,4 @@
-(ns strings
+(ns log-levels
   (:require [clojure.string :as str]))
 
 (defn message

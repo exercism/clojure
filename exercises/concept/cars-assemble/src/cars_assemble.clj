@@ -1,4 +1,4 @@
-(ns assembly-line)
+(ns cars-assemble)
 
 (defn production-rate
   "Returns the assembly line's production rate per hour,

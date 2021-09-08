@@ -1,23 +1,23 @@
-(ns languages-test
+(ns tracks-on-tracks-on-tracks-test
   (:require [clojure.test :refer [deftest is]]
-            languages))
+            tracks-on-tracks-on-tracks))
 
 (deftest list-empty-test
-  (is (= '() (languages/new-list))))
+  (is (= '() (tracks-on-tracks-on-tracks/new-list))))
 
 (deftest list-add-test
   (is (= '("JavaScript" "Java" "Lisp" "Clojure")
-         (->> (languages/new-list)
-              (languages/add-language "Clojure")
-              (languages/add-language "Lisp")
-              (languages/add-language "Java")
-              (languages/add-language "JavaScript")))))
+         (->> (tracks-on-tracks-on-tracks/new-list)
+              (tracks-on-tracks-on-tracks/add-language "Clojure")
+              (tracks-on-tracks-on-tracks/add-language "Lisp")
+              (tracks-on-tracks-on-tracks/add-language "Java")
+              (tracks-on-tracks-on-tracks/add-language "JavaScript")))))
 
 (deftest first-test
-  (is (= "Lisp" (languages/first-language '("Lisp" "Clojure")))))
+  (is (= "Lisp" (tracks-on-tracks-on-tracks/first-language '("Lisp" "Clojure")))))
 
 (deftest list-remove-test
-  (is (= '("Clojure") (languages/remove-language '("Lisp" "Clojure")))))
+  (is (= '("Clojure") (tracks-on-tracks-on-tracks/remove-language '("Lisp" "Clojure")))))
 
 (deftest list-count-test
-  (is (= 3 (languages/count-languages '("JavaScript" "Java" "Clojure")))))
+  (is (= 3 (tracks-on-tracks-on-tracks/count-tracks-on-tracks-on-tracks '("JavaScript" "Java" "Clojure")))))
