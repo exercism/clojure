@@ -1,4 +1,4 @@
-(ns exercism.assembly-line-test
+(ns assembly-line-test
   (:require [clojure.test :refer [deftest testing is]]
             exercism.assembly-line))
 

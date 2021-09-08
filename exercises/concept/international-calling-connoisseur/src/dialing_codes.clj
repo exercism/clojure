@@ -1,4 +1,4 @@
-(ns exercism.dialing-codes)
+(ns dialing-codes)
 
 (def countries)
 

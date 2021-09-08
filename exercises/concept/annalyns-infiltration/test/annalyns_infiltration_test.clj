@@ -1,4 +1,4 @@
-(ns exercism.quest-logic-test
+(ns quest-logic-test
   (:require [clojure.test :refer [deftest testing is]]
             exercism.quest-logic))
 

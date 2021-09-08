@@ -1,4 +1,4 @@
-(ns exercism.squeaky-clean-test
+(ns squeaky-clean-test
   (:require [clojure.test :refer [deftest testing is]]
             exercism.squeaky-clean))
 

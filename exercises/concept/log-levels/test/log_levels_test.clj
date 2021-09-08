@@ -1,4 +1,4 @@
-(ns exercism.log-line-test
+(ns log-line-test
   (:require [clojure.test :refer [deftest testing is]]
             exercism.log-line))
 

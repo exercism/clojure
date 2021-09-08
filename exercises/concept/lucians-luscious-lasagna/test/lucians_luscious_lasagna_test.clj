@@ -1,4 +1,4 @@
-(ns exercism.lasagna-test
+(ns lasagna-test
   (:require [clojure.test :refer [deftest testing is]]
             exercism.lasagna))
 

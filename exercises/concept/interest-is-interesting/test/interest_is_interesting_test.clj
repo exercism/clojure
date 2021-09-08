@@ -1,4 +1,4 @@
-(ns exercism.savings-account-test
+(ns savings-account-test
   (:require [clojure.test :refer [deftest testing is]]
             exercism.savings-account))
 

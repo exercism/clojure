@@ -1,4 +1,4 @@
-(ns exercism.squeaky-clean
+(ns squeaky-clean
   (:require [clojure.string :as str]))
 
 (defn clean

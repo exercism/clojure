@@ -1,4 +1,4 @@
-(ns exercism.dialing-codes-test
+(ns dialing-codes-test
   (:require [clojure.test :refer [deftest testing is]]
             exercism.dialing-codes))
 

@@ -1,4 +1,4 @@
-(ns exercism.bird-count-test
+(ns bird-count-test
   (:require [clojure.test :refer [deftest testing is]]
             exercism.bird-count))
 

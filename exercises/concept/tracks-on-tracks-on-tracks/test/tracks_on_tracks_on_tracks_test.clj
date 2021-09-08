@@ -1,4 +1,4 @@
-(ns exercism.languages-test
+(ns languages-test
   (:require [clojure.test :refer [deftest is]]
             exercism.languages))
 
