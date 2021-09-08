@@ -1,4 +1,4 @@
-(ns enchantments-test
+(ns elyses-destructured-enchantments-test
   (:require [clojure.test :refer :all]
             [exercism.elyses-destructured-enchantments :refer :all]))
 
