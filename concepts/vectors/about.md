@@ -4,7 +4,7 @@ A `vector` in Clojure is a sequential, indexed, immutable collection of zero or 
 
 ```clojure
 (def empty [])
-(def single-value 5)
+(def single-value [5])
 (def single-value-alternative (vector 5))
 (def three-values [a b c]
 ```
