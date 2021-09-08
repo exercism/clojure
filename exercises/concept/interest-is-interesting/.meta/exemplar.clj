@@ -1,4 +1,4 @@
-(ns exercism.savings-account)
+(ns interest-is-interesting)
 
 (defn interest-rate [balance]
   (cond 

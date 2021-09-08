@@ -1,4 +1,4 @@
-(ns dialing-codes)
+(ns international-calling-connoisseur)
 
 (def countries)
 

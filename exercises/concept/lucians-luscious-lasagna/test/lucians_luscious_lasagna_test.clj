@@ -1,23 +1,23 @@
-(ns lasagna-test
+(ns lucians-luscious-lasagna-test
   (:require [clojure.test :refer [deftest testing is]]
-            lasagna))
+            lucians-luscious-lasagna))
 
 (deftest expected-time-test
-  (is (= 40 (lasagna/expected-time))))
+  (is (= 40 (lucians-luscious-lasagna/expected-time))))
 
 (deftest remaining-time-test
-  (is (= 15 (lasagna/remaining-time 25))))
+  (is (= 15 (lucians-luscious-lasagna/remaining-time 25))))
 
 (deftest prep-time-test
   (testing "Preparation time in minutes"
     (testing "for one layer"
-      (is (= 2 (lasagna/prep-time 1))))
+      (is (= 2 (lucians-luscious-lasagna/prep-time 1))))
     (testing "for multiple layers"
-      (is (= 8 (lasagna/prep-time 4))))))
+      (is (= 8 (lucians-luscious-lasagna/prep-time 4))))))
 
 (deftest total-time-test
   (testing "Total elapsed time in minutes"
     (testing "for one layer"
-      (is (= 32 (lasagna/total-time 1 30))))
+      (is (= 32 (lucians-luscious-lasagna/total-time 1 30))))
     (testing "for multiple layers"
-      (is (= 16 (lasagna/total-time 4 8))))))
+      (is (= 16 (lucians-luscious-lasagna/total-time 4 8))))))

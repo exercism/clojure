@@ -1,4 +1,4 @@
-(ns exercism.dialing-codes)
+(ns international-calling-connoisseur)
 
 (def countries
   {1 "United States of America", 55 "Brazil", 91 "India"})
