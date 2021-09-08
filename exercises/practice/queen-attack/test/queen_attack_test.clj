@@ -33,4 +33,6 @@
   (is (= true  (queen-attack/can-attack {:w [5 4] :b [2 4]})))
   (is (= true  (queen-attack/can-attack {:w [1 1] :b [6 6]})))
   (is (= true  (queen-attack/can-attack {:w [0 6] :b [1 7]})))
-  (is (= true  (queen-attack/can-attack {:w [4 1] :b [6 3]}))))
+  (is (= true  (queen-attack/can-attack {:w [4 1] :b [6 3]})))
+  (is (= true  (queen-attack/can-attack {:w [2 3] :b [5 0]})))
+  (is (= true  (queen-attack/can-attack {:w [2 3] :b [0 5]}))))

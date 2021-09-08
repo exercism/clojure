@@ -1,8 +1,20 @@
 {
+  "blurb": "Count the scored points on a Go board.",
   "authors": [],
+  "contributors": [
+    "AndreaCrotti",
+    "haus",
+    "sjwarner-bp"
+  ],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "src/go_counting.clj"
+    ],
+    "test": [
+      "test/go_counting_test.clj"
+    ],
+    "example": [
+      ".meta/src/example.clj"
+    ]
   }
 }

@@ -1,9 +1,21 @@
 {
-  "authors": [],
+  "blurb": "Given a number n, determine what the nth prime is.",
+  "authors": [
+    "haus"
+  ],
+  "contributors": [
+    "AndreaCrotti"
+  ],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "src/nth_prime.clj"
+    ],
+    "test": [
+      "test/nth_prime_test.clj"
+    ],
+    "example": [
+      ".meta/src/example.clj"
+    ]
   },
   "source": "A variation on Problem 7 at Project Euler",
   "source_url": "http://projecteuler.net/problem=7"

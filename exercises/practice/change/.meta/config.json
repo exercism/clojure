@@ -1,9 +1,24 @@
 {
-  "authors": [],
+  "blurb": "Correctly determine change to be given using the least number of coins",
+  "authors": [
+    "leetwinski"
+  ],
+  "contributors": [
+    "AndreaCrotti",
+    "haus",
+    "sjwarner-bp",
+    "yurrriq"
+  ],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "src/change.clj"
+    ],
+    "test": [
+      "test/change_test.clj"
+    ],
+    "example": [
+      ".meta/src/example.clj"
+    ]
   },
   "source": "Software Craftsmanship - Coin Change Kata",
   "source_url": "https://web.archive.org/web/20130115115225/http://craftsmanship.sv.cmu.edu:80/exercises/coin-change-kata"

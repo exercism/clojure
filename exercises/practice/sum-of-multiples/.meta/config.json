@@ -1,9 +1,24 @@
 {
-  "authors": [],
+  "blurb": "Given a number, find the sum of all the multiples of particular numbers up to but not including that number.",
+  "authors": [
+    "yurrriq"
+  ],
+  "contributors": [
+    "AndreaCrotti",
+    "haus",
+    "NobbZ",
+    "sjwarner-bp"
+  ],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "src/sum_of_multiples.clj"
+    ],
+    "test": [
+      "test/sum_of_multiples_test.clj"
+    ],
+    "example": [
+      ".meta/src/example.clj"
+    ]
   },
   "source": "A variation on Problem 1 at Project Euler",
   "source_url": "http://projecteuler.net/problem=1"

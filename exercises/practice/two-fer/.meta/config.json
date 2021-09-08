@@ -1,9 +1,23 @@
 {
-  "authors": [],
+  "blurb": "Create a sentence of the form \"One for X, one for me.\"",
+  "authors": [
+    "sjwarner-bp"
+  ],
+  "contributors": [
+    "AndreaCrotti",
+    "haus",
+    "sjwarner"
+  ],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "src/two_fer.clj"
+    ],
+    "test": [
+      "test/two_fer_test.clj"
+    ],
+    "example": [
+      ".meta/src/example.clj"
+    ]
   },
   "source_url": "https://github.com/exercism/problem-specifications/issues/757"
 }

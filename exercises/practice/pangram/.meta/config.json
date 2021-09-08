@@ -1,9 +1,25 @@
 {
-  "authors": [],
+  "blurb": "Determine if a sentence is a pangram.",
+  "authors": [
+    "leetwinski"
+  ],
+  "contributors": [
+    "AndreaCrotti",
+    "haus",
+    "sjwarner-bp",
+    "tstirrat15",
+    "yurrriq"
+  ],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "src/pangram.clj"
+    ],
+    "test": [
+      "test/pangram_test.clj"
+    ],
+    "example": [
+      ".meta/src/example.clj"
+    ]
   },
   "source": "Wikipedia",
   "source_url": "https://en.wikipedia.org/wiki/Pangram"

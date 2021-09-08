@@ -1,4 +1,4 @@
-TODO: the content below is copied from the exercise introduction and probably needs rewriting to a proper concept introduction
+# Introduction
 
 In Clojure, binding a value to a name is referred to as a _var_. Top-level (global) vars are similar to constants in other languages, but are commonly redefined to facilitate dynamic development.
 

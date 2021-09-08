@@ -26,9 +26,6 @@
 (deftest invalid-when-exchange-code-starts-with-0
   (is (= "0000000000" (phone-number/number "2230567890"))))
 
-(deftest invalid-when-area-code-starts-with-1
-  (is (= "0000000000" (phone-number/number "1234567890"))))
-
 (deftest invalid-when-11-digits
   (is (= "0000000000" (phone-number/number "22234567890"))))
 

@@ -1,9 +1,21 @@
 {
+  "blurb": "Implement complex numbers.",
   "authors": [],
+  "contributors": [
+    "AndreaCrotti",
+    "haus",
+    "sjwarner-bp"
+  ],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "src/complex_numbers.clj"
+    ],
+    "test": [
+      "test/complex_numbers_test.clj"
+    ],
+    "example": [
+      ".meta/src/example.clj"
+    ]
   },
   "source": "Wikipedia",
   "source_url": "https://en.wikipedia.org/wiki/Complex_number"
