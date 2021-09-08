@@ -6,7 +6,7 @@ A `vector` in Clojure is a sequential, indexed, immutable collection of zero or 
 (def empty [])
 (def single-value [5])
 (def single-value-alternative (vector 5))
-(def three-values [a b c]
+(def three-values [1 "a" "b"]
 ```
 
 Elements can be retrieved from a vector using an index. Clojure vectors are zero-based, meaning that the first element's index is always zero:
