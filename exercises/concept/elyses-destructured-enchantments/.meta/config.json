@@ -8,5 +8,5 @@
       "test": ["test/enchantments_test.clj"],
       "exemplar": [".meta/exemplar.clj"]
     },
-    "forked_from": ["javascript"]
+    "forked_from": ["javascript/elyses-destructured-enchantments"]
   }
