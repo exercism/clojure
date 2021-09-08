@@ -1,15 +1,6 @@
 # Introduction
 
-TODO: the content below is copied from the exercise introduction and probably needs rewriting to a proper concept introduction
-
-A `vector` in Clojure is a sequential, indexed, immutable collection of zero or more values. This means that once a vector has been created, it cannot be modified. Functions for operating on vectors will return a new vector, while the original vector remains unchanged. The values in a vector may be of heterogenous types. Vectors can be defined as follows:
-
-```clojure
-(def empty [])
-(def single-value 5)
-(def single-value-alternative (vector 5))
-(def three-values [a b c]
-```
+A `vector` in Clojure is a sequential, indexed, immutable collection of zero or more values. This means that once a vector has been created, it cannot be modified. Functions for operating on vectors will return a new vector, while the original vector remains unchanged. The values in a vector may be of heterogenous types.
 
 Elements can be retrieved from a vector using an index. Clojure vectors are zero-based, meaning that the first element's index is always zero:
 
