@@ -1,23 +1,23 @@
 (ns languages-test
   (:require [clojure.test :refer [deftest is]]
-            exercism.languages))
+            languages))
 
 (deftest list-empty-test
-  (is (= '() (exercism.languages/new-list))))
+  (is (= '() (languages/new-list))))
 
 (deftest list-add-test
   (is (= '("JavaScript" "Java" "Lisp" "Clojure")
-         (->> (exercism.languages/new-list)
-              (exercism.languages/add-language "Clojure")
-              (exercism.languages/add-language "Lisp")
-              (exercism.languages/add-language "Java")
-              (exercism.languages/add-language "JavaScript")))))
+         (->> (languages/new-list)
+              (languages/add-language "Clojure")
+              (languages/add-language "Lisp")
+              (languages/add-language "Java")
+              (languages/add-language "JavaScript")))))
 
 (deftest first-test
-  (is (= "Lisp" (exercism.languages/first-language '("Lisp" "Clojure")))))
+  (is (= "Lisp" (languages/first-language '("Lisp" "Clojure")))))
 
 (deftest list-remove-test
-  (is (= '("Clojure") (exercism.languages/remove-language '("Lisp" "Clojure")))))
+  (is (= '("Clojure") (languages/remove-language '("Lisp" "Clojure")))))
 
 (deftest list-count-test
-  (is (= 3 (exercism.languages/count-languages '("JavaScript" "Java" "Clojure")))))
+  (is (= 3 (languages/count-languages '("JavaScript" "Java" "Clojure")))))
