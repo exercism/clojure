@@ -4,8 +4,8 @@
     "authors": ["porkostomus"],
     "contributors": [],
     "files": {
-      "solution": ["src/enchantments.clj"],
-      "test": ["test/enchantments_test.clj"],
+      "solution": ["src/elyses-destructured-enchantments.clj"],
+      "test": ["test/elyses-destructured-enchantments_test.clj"],
       "exemplar": [".meta/exemplar.clj"]
     },
     "forked_from": ["javascript/elyses-destructured-enchantments"]
