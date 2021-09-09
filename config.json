@@ -117,6 +117,18 @@
           "basics"
         ],
         "status": "beta"
+      },
+      {
+        "slug": "elyses-destructured-enchantments",
+        "name": "Elyses Destructured Enchantments",
+        "uuid": "f6130b51-6a2b-4e18-95d0-bbf673a42cca",
+        "concepts": [
+          "sequential-destructuring"
+        ],
+        "prerequisites": [
+          "lists", "vectors", "strings"
+        ],
+        "status": "beta"
       }
     ],
     "practice": [
@@ -997,6 +1009,11 @@
       "uuid": "7aa13ace-5597-4d6c-8f93-8b0fb97cf2ff",
       "slug": "vectors",
       "name": "Vectors"
+    },
+    {
+      "uuid": "268d79d7-1bdd-41a5-a7a9-275332d3967c",
+      "slug": "sequential-destructuring",
+      "name": "Sequential Destructuring"
     }
   ],
   "key_features": [

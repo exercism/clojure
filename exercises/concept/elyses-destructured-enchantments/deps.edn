@@ -1,0 +1,18 @@
+{:paths ["src" "resources"]
+ :deps {org.clojure/clojure {:mvn/version "1.10.1"}}
+ :aliases
+ {:test {:extra-paths ["test"]
+         :extra-deps {org.clojure/test.check {:mvn/version "1.1.0"}}}
+  :runner
+  {:extra-deps {com.cognitect/test-runner
+                {:git/url "https://github.com/cognitect-labs/test-runner"
+                 :sha "b6b3193fcc42659d7e46ecd1884a228993441182"}}
+   :main-opts ["-m" "cognitect.test-runner"
+               "-d" "test"]}
+  :jar {:extra-deps {seancorfield/depstar {:mvn/version "1.1.133"}}
+        :exec-fn hf.depstar/jar
+        :exec-args {:jar "elyses-destructured-enchantments.jar"}}
+  :install {:extra-deps {slipset/deps-deploy {:mvn/version "0.1.1"}}
+            :main-opts ["-m" "deps-deploy.deps-deploy" "install" "elyses-destructured-enchantments.jar"]}
+  :deploy {:extra-deps {slipset/deps-deploy {:mvn/version "0.1.1"}}
+           :main-opts ["-m" "deps-deploy.deps-deploy" "deploy" "elyses-destructured-enchantments.jar"]}}}
