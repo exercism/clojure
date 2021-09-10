@@ -21,3 +21,6 @@
 
 (deftest list-count-test
   (is (= 3 (tracks-on-tracks-on-tracks/count-languages '("JavaScript" "Java" "Clojure")))))
+
+(deftest learning-list-test
+  (is (= 3 (tracks-on-tracks-on-tracks/learning-list))))
