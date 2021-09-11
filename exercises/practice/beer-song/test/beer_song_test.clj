@@ -36,12 +36,20 @@
        "No more bottles of beer on the wall, no more bottles of beer.\n"
        "Go to the store and buy some more, 99 bottles of beer on the wall.\n"))
 
-(deftest test-verse
-  (is (= verse-8 (beer-song/verse 8)))
-  (is (= verse-2 (beer-song/verse 2)))
-  (is (= verse-1 (beer-song/verse 1)))
+(deftest test-verse-8
+  (is (= verse-8 (beer-song/verse 8))))
+
+(deftest test-verse-2
+  (is (= verse-2 (beer-song/verse 2))))
+
+(deftest test-verse-1
+  (is (= verse-1 (beer-song/verse 1))))
+
+(deftest test-verse-0
   (is (= verse-0 (beer-song/verse 0))))
 
-(deftest test-song
-  (is (= song-8-6 (beer-song/sing 8 6)))
+(deftest test-song-8-6
+  (is (= song-8-6 (beer-song/sing 8 6))))
+
+(deftest test-song-3-0
   (is (= song-3-0 (beer-song/sing 3))))
