@@ -8,16 +8,14 @@
 (deftest remaining-time-test
   (is (= 15 (lucians-luscious-lasagna/remaining-time 25))))
 
-(deftest prep-time-test
-  (testing "Preparation time in minutes"
-    (testing "for one layer"
-      (is (= 2 (lucians-luscious-lasagna/prep-time 1))))
-    (testing "for multiple layers"
-      (is (= 8 (lucians-luscious-lasagna/prep-time 4))))))
+(deftest prep-time-one-layer-test
+  (is (= 2 (lucians-luscious-lasagna/prep-time 1))))
 
-(deftest total-time-test
-  (testing "Total elapsed time in minutes"
-    (testing "for one layer"
-      (is (= 32 (lucians-luscious-lasagna/total-time 1 30))))
-    (testing "for multiple layers"
-      (is (= 16 (lucians-luscious-lasagna/total-time 4 8))))))
+(deftest prep-time-multiple-layers-test
+  (is (= 8 (lucians-luscious-lasagna/prep-time 4))))
+
+(deftest total-time-one-layer-test
+  (is (= 32 (lucians-luscious-lasagna/total-time 1 30))))
+
+(deftest total-time-multiple-layers-test
+  (is (= 16 (lucians-luscious-lasagna/total-time 4 8))))
