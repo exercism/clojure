@@ -1,6 +1,6 @@
 (ns bird-watcher-test
   (:require [clojure.test :refer [deftest testing is]]
-            bird-watcher))
+            [bird-watcher]))
 
 (deftest last-week-test
   (is (= [0 2 5 3 7 8 4] bird-watcher/last-week)))
