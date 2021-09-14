@@ -11,7 +11,7 @@
 (deftest message-info-test
   (is (= (log-levels/message "[INFO]: File moved") "File moved")))
 
-(deftest message-trim whitespace-test
+(deftest message-trim-whitespace-test
   (is (= "Timezone not set" (log-levels/message "[WARNING]:   \tTimezone not set  \r\n"))))
 
 (deftest log-level-error-test
