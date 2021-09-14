@@ -29,9 +29,13 @@
           :tomatoes :chocolate :pollen :cats]
          (allergies/allergies 255))))
 
-(deftest no-allergies-means-not-allergic
-  (is (not (allergies/allergic-to? 0 :peanuts)))
-  (is (not (allergies/allergic-to? 0 :cats)))
+(deftest no-allergies-means-not-allergic-peanuts
+  (is (not (allergies/allergic-to? 0 :peanuts))))
+
+(deftest no-allergies-means-not-allergic-cats
+  (is (not (allergies/allergic-to? 0 :cats))))
+
+(deftest no-allergies-means-not-allergic-strawberries
   (is (not (allergies/allergic-to? 0 :strawberries))))
 
 (deftest is-allergic-to-eggs
