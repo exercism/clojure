@@ -16,7 +16,7 @@
   )
 
 (defn remove-language
-  "Removes the the last language added to the list."
+  "Removes the the first language added to the list."
   [lang-list]
   )
 
