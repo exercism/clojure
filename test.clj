@@ -1,10 +1,8 @@
 #!/usr/bin/env bb
 
 (require
- '[babashka.classpath :as cp]
  '[cheshire.core :as json]
  '[clojure.string :as str]
- '[rewrite-clj.zip :as z]
  '[clojure.test :refer [deftest is run-tests successful? use-fixtures]])
 
 (defn- ->snake_case [s] (str/replace s \- \_))
