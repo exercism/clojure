@@ -9,14 +9,6 @@
 
 (defn- ->snake_case [s] (str/replace s \- \_))
 
-(def exercises ((json/parse-string (slurp "config.json")) "exercises"))
-
-(def concept-exercises 
-  (map #(% "slug") (exercises "concept")))
-
-(def practice-exercises
-  (map #(% "slug") (exercises "practice")))
-
 (deftest check-practice-exercises
   (doseq [exercise (((json/parse-string (slurp "config.json")) "exercises") "practice")
           :let [slug             (exercise "slug")
@@ -25,6 +17,15 @@
     (load-file (path-to-exercise ".meta/src/example.clj"))
     (load-file (path-to-exercise "test/" (->snake_case slug) "_test.clj"))
 (is (successful? (run-tests exercise-tests)))))
+
+(deftest check-concept-exercises
+  (doseq [exercise (((json/parse-string (slurp "config.json")) "exercises") "concept")
+          :let [slug             (exercise "slug")
+                path-to-exercise (partial str "exercises/concept/" slug "/")
+                exercise-tests   (symbol (str slug "-test"))]]
+    (load-file (path-to-exercise ".meta/exemplar.clj"))
+    (load-file (path-to-exercise "test/" (->snake_case slug) "_test.clj"))
+    (is (successful? (run-tests exercise-tests)))))
 
 (let [report (run-tests)]
   (System/exit (+ (:fail report)
