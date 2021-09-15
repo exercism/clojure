@@ -96,43 +96,50 @@
        [:2nd-cousin-3]
        [:2nd-cousin-4]]]]]])
 
-(deftest test-pov
+(deftest singletons
   (is (= singleton
-         (pov/of :x singleton))
-      "Can handle singletons")
+         (pov/of :x singleton))))
+
+(deftest simple-trees
   (is (= simple-pulled
-         (pov/of :x simple-tree))
-      "Can handle simple trees")
+         (pov/of :x simple-tree))))
+
+(deftest nested-trees
   (is (= nested-pulled
-         (pov/of :x deeply-nested))
-      "Can handle nested trees")
+         (pov/of :x deeply-nested))))
+
+(deftest extract-node-from-siblings
   (is (= flat-pulled
-         (pov/of :x large-flat))
-      "Can extract a node from a list of siblings")
+         (pov/of :x large-flat))))
+
+(deftest moderate-trees
   (is (= cousins-pulled
-         (pov/of :x cousins))
-      "Can handle moderate trees")
+         (pov/of :x cousins))))
+
+(deftest complex-trees
   (is (= with-kids-pulled
-         (pov/of :x target-with-children))
-      "Can handle complex trees"))
+         (pov/of :x target-with-children))))
 
-(deftest not-found
-  (is (nil? (pov/of :not-found! target-with-children))
-      "Returns nil if we cannot reparent")
-  (is (nil? (pov/of :x []))
-      "Return nil if the input is empty")
-  (is (nil? (pov/of :x nil))
-      "Returns nil if the input is nil"))
+(deftest not-found-cannot-reparent
+  (is (nil? (pov/of :not-found! target-with-children))))
 
-(deftest path-from-to
+(deftest not-found-input-empty
+  (is (nil? (pov/of :x []))))
+
+(deftest not-found-input-nil
+  (is (nil? (pov/of :x nil))))
+
+(deftest path-from-target-to-parent
   (is (= [:x :parent]
-         (pov/path-from-to :x :parent simple-tree))
-      "Can trace a path from target to parent")
+         (pov/path-from-to :x :parent simple-tree))))
+
+(deftest path-from-target-to-sibling
   (is (= [:x :parent :sib-c]
-         (pov/path-from-to :x :sib-c large-flat))
-      "Can trace a path from target to sibling")
+         (pov/path-from-to :x :sib-c large-flat))))
+
+(deftest path-from-x-to-2nd-cousin-1
   (is (= [:x :parent :grand-parent :aunt :cousin-1 :2nd-cousin-1]
-         (pov/path-from-to :x :2nd-cousin-1 target-with-children))
-      "Can trace a path from :x to :2nd-cousin-1")
-  (is (nil? (pov/path-from-to :x :not-there! cousins))
-      "Returns nil if there is no path"))
+         (pov/path-from-to :x :2nd-cousin-1 target-with-children))))
+
+(deftest no-path
+  (is (nil? (pov/path-from-to :x :not-there! cousins))))

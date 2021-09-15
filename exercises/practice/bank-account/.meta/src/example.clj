@@ -1,17 +1,13 @@
 (ns bank-account)
 
 (defn open-account []
-  (ref 0))
+  (atom 0))
 
-(defn close-account [account]
-  (dosync
-   (ref-set account nil)))
+(defn close-account [acct]
+  (reset! acct nil))
 
-(defn get-balance [account]
-  (dosync
-   @account))
+(defn get-balance [acct]
+  @acct)
 
-(defn update-balance [account amt]
-  (dosync
-   (alter account + amt)))
-
+(defn update-balance [account amount]
+  (swap! account + amount))

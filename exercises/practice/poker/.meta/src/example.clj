@@ -1,42 +1,107 @@
-(ns poker
-  (:require [clojure.string :as cs]))
+(ns poker)
 
-(defn rank-hand [hand]
-  (let [h (cs/split (cs/replace hand #"10" "T") #" ")
-        initial-ranks (map #(.indexOf (seq "..23456789TJQKA") (first %)) h)
-        score-frec (reverse (sort-by vec (map (comp vec reverse)
-                                              (frequencies initial-ranks))))
-        rank-counts (mapv first score-frec)
-        normalized-ranks (if (= (mapv second score-frec) [14,5,4,3,2]) [5,4,3,2,1]
-                             (mapv second score-frec))
-        straight? (and (= 5 (count rank-counts))
-                       (= 4 (- (apply max rank-counts) (apply min rank-counts))))
-        flush? (= 1 (count (distinct (map last h))))]
-    (cond (= 5 rank-counts)         [9 normalized-ranks]
-          (and straight? flush?)    [8 normalized-ranks]
-          (= rank-counts [4 1])     [7 normalized-ranks]
-          (= rank-counts [3 2])     [6 normalized-ranks]
-          flush?                    [5 normalized-ranks]
-          straight?                 [4 normalized-ranks]
-          (= rank-counts [3 1 1])   [3 normalized-ranks]
-          (= rank-counts [2 2 1])   [2 normalized-ranks]
-          (= rank-counts [2 1 1 1]) [1 normalized-ranks]
-          :else                     [0 normalized-ranks])))
+(def base-values
+  {"2" 2
+   "3" 3
+   "4" 4
+   "5" 5
+   "6" 6
+   "7" 7
+   "8" 8
+   "9" 9
+   "10" 10
+   "J" 11
+   "Q" 12
+   "K" 13})
 
-(defn greater-than [xs ys]
-  (or (> (first xs) (first ys))
-      (->> (map compare (second xs) (second ys))
-           (take-while (partial not= -1))
-           (some (partial = 1)))))
+(def values-low-as
+  (into base-values
+        {"A" 1}))
+
+(def values-high-as
+  (into base-values
+        {"A" 14}))
+
+(defn value-freq [hand]
+  (->> hand
+       (group-by :value)
+       (vals)
+       (map count)
+       (sort)))
+
+(defn one-pair? [hand]
+  (= [1 1 1 2] (value-freq hand)))
+
+(defn two-pair? [hand]
+  (= [1 2 2] (value-freq hand)))
+
+(defn three-of-a-kind? [hand]
+  (= [1 1 3] (value-freq hand)))
+
+(defn straight? [hand]
+  (->> hand
+       (map :value)
+       (sort)
+       (partition 2 1)
+       (map (partial apply -))
+       (every? (partial = -1))))
+
+(defn flush? [hand]
+  (->> hand
+       (map :color)
+       (apply =)))
+
+(defn full-house? [hand]
+  (= [2 3] (value-freq hand)))
+
+(defn four-of-a-kind? [hand]
+  (= [1 4] (value-freq hand)))
+
+(defn straight-flush? [hand]
+  (and (flush? hand) (straight? hand)))
+
+(defn category [hand]
+  (condp #(%1 %2) hand
+    straight-flush? 8
+    four-of-a-kind? 7
+    full-house? 6
+    flush? 5
+    straight? 4
+    three-of-a-kind? 3
+    two-pair? 2
+    one-pair? 1
+    0))
+
+(defn highcards [hand]
+  (->> hand
+       (map :value)
+       (frequencies)
+       (map reverse)
+       (map vec)
+       (sort)
+       (reverse)
+       (vec)))
+
+(defn read-hand [raw-hand values]
+  (vec (for [[_ rank color] (re-seq #"(\d+|[JQKA])([CDHS])" raw-hand)]
+         {:value (values rank)
+          :color color})))
+
+(defn score
+  ([raw-hand]
+   (last (sorted-set (score raw-hand values-high-as)
+                     (score raw-hand values-low-as))))
+  ([raw-hand values]
+   (-> raw-hand
+       (read-hand values)
+       ((juxt category highcards)))))
+
+(defn max-by-score [raw-hands]
+  (->> raw-hands
+       (group-by score)
+       (into (sorted-map))
+       (vals)
+       (last)))
 
 (defn best-hands [hands]
-  (-> (fn [[max-rank record hands]]
-        (let [[x & xs] hands
-              rank     (rank-hand x)]
-          (cond
-            (or (empty? record) (greater-than rank max-rank)) [rank [x] xs]
-            (= rank max-rank) [max-rank (conj record x) xs]
-            :else [max-rank record xs])))
-      (iterate  [[0 []] [] hands])
-      (nth (count hands))
-      (second)))
+  (max-by-score hands))
