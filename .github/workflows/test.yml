@@ -1,0 +1,27 @@
+name: test
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    name: Tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          path: main
+      - name: Checkout test runner
+        uses: actions/checkout@v2
+        with:
+          repository: exercism/clojure-test-runner
+          path: clojure-test-runner
+
+      - name: Run Tests
+        run: main/test.sh
