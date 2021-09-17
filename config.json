@@ -129,6 +129,22 @@
           "lists", "vectors", "strings"
         ],
         "status": "beta"
+      },
+      {
+        "slug": "international-calling-connoisseur",
+        "name": "International Calling Connoisseur",
+        "uuid": "60d4333d-b40a-4ce2-858d-0e003356f41a",
+        "concepts": [],
+        "prerequisites": [],
+        "status": "wip"
+      },
+      {
+        "slug": "squeaky-clean",
+        "name": "Squeaky Clean",
+        "uuid": "3af5b219-d751-4243-89f7-c8f05216f534",
+        "concepts": [],
+        "prerequisites": [],
+        "status": "wip"
       }
     ],
     "practice": [
