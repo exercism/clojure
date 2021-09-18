@@ -481,7 +481,7 @@
         "slug": "sum-of-multiples",
         "name": "Sum Of Multiples",
         "uuid": "357de34a-c149-4a2c-b6a8-86ffb5eaa152",
-        "practices": ["numbers"],
+        "practices": [],
         "prerequisites": ["numbers", "conditionals"],
         "difficulty": 2,
         "topics": [
@@ -613,7 +613,7 @@
         "slug": "grains",
         "name": "Grains",
         "uuid": "2e57c7d4-d887-4dba-8483-60e026bdf5ea",
-        "practices": ["numbers"],
+        "practices": [],
         "prerequisites": ["numbers"],
         "difficulty": 3,
         "topics": [
@@ -690,7 +690,7 @@
         "slug": "perfect-numbers",
         "name": "Perfect Numbers",
         "uuid": "e10b7063-75ac-46d6-848c-c50db87bddc7",
-        "practices": ["numbers"],
+        "practices": [],
         "prerequisites": ["numbers"],
         "difficulty": 3,
         "topics": [
@@ -712,7 +712,7 @@
         "slug": "prime-factors",
         "name": "Prime Factors",
         "uuid": "96005f0f-5153-4915-9f28-326b41b63fab",
-        "practices": ["numbers"],
+        "practices": [],
         "prerequisites": ["numbers"],
         "difficulty": 3,
         "topics": [
