@@ -51,7 +51,7 @@
   (is (= 1016.210000M (interest-is-interesting/annual-balance-update 1000.0M))))
 
 (deftest annual-balance-update-large-positive-balance-test
-  (is (= 1016.2101016209999M (interest-is-interesting/annual-balance-update 1000.0001M))))
+  (is (= 1016.210101621M (interest-is-interesting/annual-balance-update 1000.0001M))))
 
 (deftest annual-balance-update-huge-positive-balance-test
   (is (= 920352587.267443M (interest-is-interesting/annual-balance-update 898124017.826243404425M))))
