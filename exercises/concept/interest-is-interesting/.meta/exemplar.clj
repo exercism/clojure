@@ -8,12 +8,12 @@
     :else 2.475))
 
 (defn- annual-yield [balance]
-  (let [multiplier (/ (interest-rate balance)
-                      100.0M)]
+  (let [multiplier (bigdec (/ (interest-rate balance)
+                              100))]
     (* (if (neg? balance) (- balance) balance) multiplier)))
 
 (defn annual-balance-update [balance]
-  (bigdec (+ balance (annual-yield balance))))
+  (+ balance (annual-yield balance)))
 
 (defn amount-to-donate [balance tax-free-percentage]
   (if (> balance 0.0M)
