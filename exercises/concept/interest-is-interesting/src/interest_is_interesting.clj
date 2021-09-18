@@ -5,11 +5,6 @@
   [balance]
   )
 
-(defn annual-yield
-  "TODO: add docstring"
-  [balance]
-  )
-
 (defn annual-balance-update
   "TODO: add docstring"
   [balance]
