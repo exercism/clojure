@@ -8,7 +8,7 @@
 (deftest equilateral-any-side-is-unequal
       (is (false? (triangle/equilateral? 2 3 2))))
 
-(deftest equilateral-no sides are equal
+(deftest equilateral-no-sides-are-equal
       (is (false? (triangle/equilateral? 5 4 6))))
 
 (deftest equilateral-all-zero-sides
