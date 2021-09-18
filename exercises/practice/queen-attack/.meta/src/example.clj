@@ -1,6 +1,9 @@
 (ns queen-attack
   (:require [clojure.string :as str]))
 
+(defn abs [n]
+  (if (neg? n) (- n) n))
+
 (def empty-board
   (->> ["_" "_" "_" "_" "_" "_" "_" "_"]
        (repeat 8)
@@ -21,5 +24,5 @@
 (defn can-attack [{[wx wy] :w [bx by] :b :as state}]
   (or (= wx bx)
       (= wy by)
-      (= (Math/abs (- wx bx))
-         (Math/abs (- wy by)))))
+      (= (abs (- wx bx))
+         (abs (- wy by)))))
