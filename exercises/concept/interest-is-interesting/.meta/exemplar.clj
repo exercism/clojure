@@ -7,7 +7,7 @@
     (< balance 5000.0M) 1.621
     :else 2.475))
 
-(defn annual-yield [balance]
+(defn- annual-yield [balance]
   (let [multiplier (/ (interest-rate balance)
                       100.0M)]
     (* balance multiplier)))
