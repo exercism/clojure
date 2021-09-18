@@ -51,16 +51,16 @@
   (is (= 1016.210000M (interest-is-interesting/annual-balance-update 1000.0M))))
 
 (deftest annual-balance-update-large-positive-balance-test
-  (is (= 1016.2101016209999M (interest-is-interesting/annual-balance-update 1000.0001M))))
+  (is (= 1016.210101621M (interest-is-interesting/annual-balance-update 1000.0001M))))
 
 (deftest annual-balance-update-huge-positive-balance-test
-  (is (= 920352587.267443M (interest-is-interesting/annual-balance-update 898124017.826243404425M))))
+  (is (= 920352587.26744292868451875M (interest-is-interesting/annual-balance-update 898124017.826243404425M))))
 
 (deftest annual-balance-update-small-negative-balance-test
-  (is (= -0.11904801M (interest-is-interesting/annual-balance-update -0.123M))))
+  (is (= -0.12695199M (interest-is-interesting/annual-balance-update -0.123M))))
 
 (deftest annual-balance-update-large-negative-balance-test
-  (is (= -148049.49025797M (interest-is-interesting/annual-balance-update -152964.231M))))
+  (is (= -157878.97174203M (interest-is-interesting/annual-balance-update -152964.231M))))
 
 (deftest amount-to-donate-empty-balance-test
   (is (= 0 (interest-is-interesting/amount-to-donate 0.0M 2.0))))
