@@ -1,32 +1,25 @@
 (ns queen-attack
-  (:require [clojure.string :as str]
-            [clojure.set    :as set]))
+  (:require [clojure.string :as str]))
 
-(defn board-string [queens]
-  (let [piece-at (set/map-invert queens)]
-    (str/join "\n"
-              (map #(str/join " " %1)
-                   (conj (vec (partition 8
-                                         (for [x (range 8)
-                                               y (range 8)]
-                                           (.toUpperCase (name (or (piece-at [x y])
-                                                                   "_"))))))
-                         nil)))))
+(def empty-board
+  (->> ["_" "_" "_" "_" "_" "_" "_" "_"]
+       (repeat 8)
+       vec))
 
-(defn same-row [queens]
-  (= (first (:w queens))
-     (first (:b queens))))
+(defn board->str [board]
+  (->> board
+       (map #(str/join " " %))
+       (map #(str % "\n"))
+       (apply str)))
 
-(defn same-col [queens]
-  (= (last (:w queens))
-     (last (:b queens))))
+(defn board-string [{:keys [w b]}]
+  (-> empty-board
+      (cond-> w (assoc-in w \W)
+              b (assoc-in b \B))
+      board->str))
 
-(defn diagonal [queens]
-  (let [xdiff (- (first (:w queens)) (first (:b queens)))
-        ydiff (- (last  (:w queens)) (last  (:b queens)))]
-    (= xdiff ydiff)))
-
-(defn can-attack [queens]
-  (or (same-row queens)
-      (same-col queens)
-      (diagonal queens)))
+(defn can-attack [{[wx wy] :w [bx by] :b :as state}]
+  (or (= wx bx)
+      (= wy by)
+      (= (Math/abs (- wx bx))
+         (Math/abs (- wy by)))))
