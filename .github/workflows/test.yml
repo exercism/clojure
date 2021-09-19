@@ -24,4 +24,4 @@ jobs:
           path: clojure-test-runner
 
       - name: Run Tests
-        run: main/test.sh
+        run: main/test.clj main/exercises/ clojure-test-runner/
