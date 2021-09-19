@@ -8,8 +8,8 @@
 
 (defn- ->snake_case [s] (str/replace s \- \_))
 
-(def root-dir (first *command-line-args*))
-(def test-runner-dir (second *command-line-args*))
+(def root-dir "/github/workspace/main/")
+(def test-runner-dir "/github/workspace/clojure-test-runner/")
 
 (cp/add-classpath root-dir)
 
