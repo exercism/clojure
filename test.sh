@@ -23,5 +23,5 @@ docker run \
     --mount type=bind,src="/home/runner/work/clojure/clojure/clojure-test-runner/tests",dst=/opt/test-runner/tests \
     --mount type=tmpfs,dst=/tmp \
     --workdir /opt/test-runner \
-    --entrypoint /opt/test-runner/bin/run-tests.sh \
+    --entrypoint /home/runner/work/clojure/clojure/main/test.clj /home/runner/work/clojure/clojure/main/exercises/ /home/runner/work/clojure/clojure/clojure-test-runner/ \
     exercism/clojure-test-runner
