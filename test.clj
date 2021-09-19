@@ -71,6 +71,8 @@
     {(keyword exercise) (concept-pass? exercise)}))
 
 (let [results (into (check-concept-exercises!)
-                     (check-practice-exercises!))]
-  {:tested (count results)
-   :fails (filter false? results)})
+                    (check-practice-exercises!))
+      fails (filter false? results)]
+  (prn {:tested (count results)
+        :fails fails})
+  (System/exit (count fails)))
