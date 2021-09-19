@@ -20,8 +20,8 @@ docker build --rm -t exercism/clojure-test-runner /home/runner/work/clojure/cloj
 docker run \
     --rm \
     --network none \
-    --mount type=bind,src="/home/runner/work/clojure/clojure/clojure-test-runner/tests",dst=/opt/test-runner/tests \
+    --mount type=bind,src=/home/runner/work/clojure/clojure/main/exercises/,dst=/home/runner/work/clojure/clojure/clojure-test-runner/ \
     --mount type=tmpfs,dst=/tmp \
-    --workdir /opt/test-runner \
-    --entrypoint /home/runner/work/clojure/clojure/main/test.clj /home/runner/work/clojure/clojure/main/exercises/ /home/runner/work/clojure/clojure/clojure-test-runner/ \
+    --workdir /home/runner/work/clojure/clojure/main/ \
+    --entrypoint /home/runner/work/clojure/clojure/main/test.clj \
     exercism/clojure-test-runner
