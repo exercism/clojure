@@ -1,10 +1,8 @@
 {
+    "blurb": "Learn about regular expressions by parsing dates.",
     "authors": [
-      {
-        "github_username": "porkostomus",
-        "exercism_username": "porkostomus"
-      }
-    ],
+        "porkostomus"
+      ],
     "forked_from": ["elixir/date-parser"],
     "files": {
         "solution": [
