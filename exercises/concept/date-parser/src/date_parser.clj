@@ -1,4 +1,4 @@
-(ns exercism.date-parser)
+(ns date-parser)
 
 (def day "\\d{1,2}")
 (def month "\\d{1,2}")

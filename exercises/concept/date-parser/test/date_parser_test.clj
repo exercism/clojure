@@ -1,4 +1,4 @@
-(ns exercism.date-parser-test
+(ns date-parser-test
   (:require [clojure.test :refer [deftest testing is]]
             exercism.date-parser))
 
