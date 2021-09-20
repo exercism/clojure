@@ -1,9 +1,28 @@
 {
-  "authors": [],
+  "blurb": "Convert a number to a string, the content of which depends on the number's factors.",
+  "authors": [
+    "rubysolo"
+  ],
+  "contributors": [
+    "AndreaCrotti",
+    "canweriotnow",
+    "dkinzer",
+    "haus",
+    "jgwhite",
+    "kytrinyx",
+    "mathias",
+    "yurrriq"
+  ],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "src/raindrops.clj"
+    ],
+    "test": [
+      "test/raindrops_test.clj"
+    ],
+    "example": [
+      ".meta/src/example.clj"
+    ]
   },
   "source": "A variation on FizzBuzz, a famous technical interview question that is intended to weed out potential candidates. That question is itself derived from Fizz Buzz, a popular children's game for teaching division.",
   "source_url": "https://en.wikipedia.org/wiki/Fizz_buzz"

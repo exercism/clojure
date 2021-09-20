@@ -1,9 +1,33 @@
 {
-  "authors": [],
+  "blurb": "Produce the lyrics to that beloved classic, that field-trip favorite: 99 Bottles of Beer on the Wall.",
+  "authors": [
+    "rubysolo"
+  ],
+  "contributors": [
+    "achengs",
+    "AndreaCrotti",
+    "canweriotnow",
+    "dkinzer",
+    "haus",
+    "heyarne",
+    "jgwhite",
+    "jsyeo",
+    "kytrinyx",
+    "mathias",
+    "sgrimm",
+    "sjwarner-bp",
+    "yurrriq"
+  ],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "src/beer_song.clj"
+    ],
+    "test": [
+      "test/beer_song_test.clj"
+    ],
+    "example": [
+      ".meta/src/example.clj"
+    ]
   },
   "source": "Learn to Program by Chris Pine",
   "source_url": "http://pine.fm/LearnToProgram/?Chapter=06"

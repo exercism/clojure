@@ -1,9 +1,23 @@
 {
-  "authors": [],
+  "blurb": "Given a number from 0 to 999,999,999,999, spell out that number in English.",
+  "authors": [
+    "sjwarner-bp"
+  ],
+  "contributors": [
+    "AndreaCrotti",
+    "CrowsVeldt",
+    "haus"
+  ],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "src/say.clj"
+    ],
+    "test": [
+      "test/say_test.clj"
+    ],
+    "example": [
+      ".meta/src/example.clj"
+    ]
   },
   "source": "A variation on JavaRanch CattleDrive, exercise 4a",
   "source_url": "http://www.javaranch.com/say.jsp"

@@ -1,9 +1,29 @@
 {
-  "authors": [],
+  "blurb": "Implement the `accumulate` operation, which, given a collection and an operation to perform on each element of the collection, returns a new collection containing the result of applying that operation to each element of the input collection.",
+  "authors": [
+    "geofflane"
+  ],
+  "contributors": [
+    "AndreaCrotti",
+    "canweriotnow",
+    "dkinzer",
+    "haus",
+    "kytrinyx",
+    "mathias",
+    "rubysolo",
+    "sjwarner-bp",
+    "yurrriq"
+  ],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "src/accumulate.clj"
+    ],
+    "test": [
+      "test/accumulate_test.clj"
+    ],
+    "example": [
+      ".meta/src/example.clj"
+    ]
   },
   "source": "Conversation with James Edward Gray II",
   "source_url": "https://twitter.com/jeg2"

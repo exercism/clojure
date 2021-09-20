@@ -1,0 +1,12 @@
+{
+    "blurb": "Elyse's magic training continues, teaching you about sequential destructing.",
+    "icon": "elyses-enchantments",
+    "authors": ["porkostomus"],
+    "contributors": [],
+    "files": {
+      "solution": ["src/elyses_destructured_enchantments.clj"],
+      "test": ["test/elyses_destructured_enchantments_test.clj"],
+      "exemplar": [".meta/exemplar.clj"]
+    },
+    "forked_from": ["javascript/elyses-destructured-enchantments"]
+  }

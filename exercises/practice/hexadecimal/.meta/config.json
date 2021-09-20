@@ -1,9 +1,28 @@
 {
-  "authors": [],
+  "blurb": "Convert a hexadecimal number, represented as a string (e.g. \"10af8c\"), to its decimal equivalent using first principles (i.e. no, you may not use built-in or external libraries to accomplish the conversion).",
+  "authors": [
+    "geofflane"
+  ],
+  "contributors": [
+    "AndreaCrotti",
+    "canweriotnow",
+    "dkinzer",
+    "haus",
+    "kytrinyx",
+    "mathias",
+    "rubysolo",
+    "yurrriq"
+  ],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "src/hexadecimal.clj"
+    ],
+    "test": [
+      "test/hexadecimal_test.clj"
+    ],
+    "example": [
+      ".meta/src/example.clj"
+    ]
   },
   "source": "All of Computer Science",
   "source_url": "http://www.wolframalpha.com/examples/NumberBases.html"

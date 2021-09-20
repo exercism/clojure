@@ -1,0 +1,4 @@
+{
+  "blurb": "Floating point numbers in Clojure consist of Doubles and BigDecimals",
+  "authors": ["porkostomus"]
+}

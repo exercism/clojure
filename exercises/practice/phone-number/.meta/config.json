@@ -1,9 +1,31 @@
 {
-  "authors": [],
+  "blurb": "Clean up user-entered phone numbers so that they can be sent SMS messages.",
+  "authors": [
+    "rubysolo"
+  ],
+  "contributors": [
+    "AndreaCrotti",
+    "canweriotnow",
+    "dkinzer",
+    "haus",
+    "jgwhite",
+    "kytrinyx",
+    "mathias",
+    "nwallace",
+    "sjwarner-bp",
+    "Testare",
+    "yurrriq"
+  ],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "src/phone_number.clj"
+    ],
+    "test": [
+      "test/phone_number_test.clj"
+    ],
+    "example": [
+      ".meta/src/example.clj"
+    ]
   },
   "source": "Event Manager by JumpstartLab",
   "source_url": "http://tutorials.jumpstartlab.com/projects/eventmanager.html"

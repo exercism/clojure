@@ -1,9 +1,27 @@
 {
-  "authors": [],
+  "blurb": "Implement a binary search algorithm.",
+  "authors": [
+    "haus"
+  ],
+  "contributors": [
+    "AndreaCrotti",
+    "awseward",
+    "kevgathuku",
+    "kytrinyx",
+    "querenker",
+    "ryanplusplus",
+    "yurrriq"
+  ],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "src/binary_search.clj"
+    ],
+    "test": [
+      "test/binary_search_test.clj"
+    ],
+    "example": [
+      ".meta/src/example.clj"
+    ]
   },
   "source": "Wikipedia",
   "source_url": "http://en.wikipedia.org/wiki/Binary_search_algorithm"

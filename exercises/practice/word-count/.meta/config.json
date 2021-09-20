@@ -1,9 +1,33 @@
 {
-  "authors": [],
+  "blurb": "Given a phrase, count the occurrences of each word in that phrase.",
+  "authors": [
+    "rubysolo"
+  ],
+  "contributors": [
+    "achengs",
+    "AndreaCrotti",
+    "canweriotnow",
+    "dkinzer",
+    "haus",
+    "jgwhite",
+    "kytrinyx",
+    "mathias",
+    "seeflanigan",
+    "sjwarner-bp",
+    "tejasbubane",
+    "walkermatt",
+    "yurrriq"
+  ],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "src/word_count.clj"
+    ],
+    "test": [
+      "test/word_count_test.clj"
+    ],
+    "example": [
+      ".meta/src/example.clj"
+    ]
   },
   "source": "This is a classic toy problem, but we were reminded of it by seeing it in the Go Tour."
 }

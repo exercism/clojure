@@ -1,9 +1,24 @@
 {
-  "authors": [],
+  "blurb": "Determine if a word or phrase is an isogram.",
+  "authors": [
+    "querenker"
+  ],
+  "contributors": [
+    "AndreaCrotti",
+    "haus",
+    "sjwarner-bp",
+    "yurrriq"
+  ],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "src/isogram.clj"
+    ],
+    "test": [
+      "test/isogram_test.clj"
+    ],
+    "example": [
+      ".meta/src/example.clj"
+    ]
   },
   "source": "Wikipedia",
   "source_url": "https://en.wikipedia.org/wiki/Isogram"

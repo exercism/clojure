@@ -1,9 +1,31 @@
 {
-  "authors": [],
+  "blurb": "Given students' names along with the grade that they are in, create a roster for the school",
+  "authors": [
+    "rubysolo"
+  ],
+  "contributors": [
+    "7enderhead",
+    "AndreaCrotti",
+    "canweriotnow",
+    "dkinzer",
+    "haus",
+    "jgwhite",
+    "kytrinyx",
+    "mathias",
+    "sjwarner-bp",
+    "thomchop",
+    "yurrriq"
+  ],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "src/grade_school.clj"
+    ],
+    "test": [
+      "test/grade_school_test.clj"
+    ],
+    "example": [
+      ".meta/src/example.clj"
+    ]
   },
   "source": "A pairing session with Phil Battos at gSchool",
   "source_url": "http://gschool.it"

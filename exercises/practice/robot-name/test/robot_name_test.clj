@@ -5,27 +5,43 @@
 (deftest robot-name
   (let [a-robot (robot-name/robot)
         its-name (robot-name/robot-name a-robot)]
-    (testing "robot-name"
-      (is (re-seq #"[A-Z]{2}\d{3}" its-name)
-          "name matches expected pattern")
-      (is (= its-name (robot-name/robot-name a-robot))
-          "name doesn't change until you reset it")
-      (is (not= its-name (-> (robot-name/robot) robot-name/robot-name))
-          "different robots have different names"))))
+      (is (re-seq #"[A-Z]{2}\d{3}" its-name))))
 
-(deftest reset-name
+(deftest name-matches-pattern
+   (let [a-robot (robot-name/robot)
+         its-name (robot-name/robot-name a-robot)]
+     (is (= its-name (robot-name/robot-name a-robot)))))
+
+(deftest different-robots-different-names
+ (let [a-robot (robot-name/robot)
+        its-name (robot-name/robot-name a-robot)]
+      (is (not= its-name (-> (robot-name/robot) robot-name/robot-name)))))
+
+(deftest new-name-matches
   (let [a-robot (robot-name/robot)
         its-original-name (robot-name/robot-name a-robot)
         its-new-name (do (robot-name/reset-name a-robot)
                          (robot-name/robot-name a-robot))]
+      (is (re-seq #"[A-Z]{2}\d{3}" its-new-name))))
 
-    (testing "reset-name"
-      (is (re-seq #"[A-Z]{2}\d{3}" its-new-name)
-          "new name matches expected pattern")
-      (is (not= its-original-name its-new-name)
-          "new name is different from old name")
-      (is (= its-new-name (robot-name/robot-name a-robot))
-          "new name doesn't change until you reset it")
-      (is (not= its-new-name (do (robot-name/reset-name a-robot)
-                                 (robot-name/robot-name a-robot)))
-          "new names are different each time"))))
+(deftest new-name-different
+  (let [a-robot (robot-name/robot)
+        its-original-name (robot-name/robot-name a-robot)
+        its-new-name (do (robot-name/reset-name a-robot)
+                         (robot-name/robot-name a-robot))]
+      (is (not= its-original-name its-new-name))))
+
+(deftest new-name-does-not-change-until-reset
+  (let [a-robot (robot-name/robot)
+        its-original-name (robot-name/robot-name a-robot)
+        its-new-name (do (robot-name/reset-name a-robot)
+                         (robot-name/robot-name a-robot))]
+      (is (= its-new-name (robot-name/robot-name a-robot)))))
+
+(deftest new-names-different-each-time
+  (let [a-robot (robot-name/robot)
+        its-original-name (robot-name/robot-name a-robot)
+        its-new-name (do (robot-name/reset-name a-robot)
+                         (robot-name/robot-name a-robot))]
+  (is (not= its-new-name (do (robot-name/reset-name a-robot)
+                             (robot-name/robot-name a-robot))))))
