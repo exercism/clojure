@@ -3,11 +3,18 @@
    [clojure.test :refer [deftest testing is use-fixtures]]
    [bank-account]))
 
-(defn shutdown-agents-fixture [f]
+(defn pcalls
+  "Executes the no-arg fns in parallel, returning a lazy sequence of
+  their values"
+  {:added "1.0"
+   :static true}
+  [& fns] (pmap #(%) fns))
+
+#_(defn shutdown-agents-fixture [f]
   (f)
   (shutdown-agents))
 
-(use-fixtures :once shutdown-agents-fixture)
+;(use-fixtures :once shutdown-agents-fixture)
 
 (deftest initial-account-state
   (testing "Accounts are opened with a balance of 0"

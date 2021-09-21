@@ -8,10 +8,10 @@
   ],
   "files": {
     "solution": [
-      "src/dialing_codes.clj"
+      "src/international_calling_connoisseur.clj"
     ],
     "test": [
-      "test/dialing_codes_test.clj"
+      "test/international_calling_connoisseur_test.clj"
     ],
     "exemplar": [
       ".meta/exemplar.clj"

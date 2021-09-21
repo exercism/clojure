@@ -1,0 +1,36 @@
+name: test
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    name: Tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          path: main
+          
+      - name: Checkout test runner
+        uses: actions/checkout@v2
+        with:
+          repository: exercism/clojure-test-runner
+          path: clojure-test-runner
+
+      - name: babashka script
+        uses: tzafrirben/babashka-docker-action@v1.1
+        id: bb_script
+        with:
+          bb_src: 'main/test.clj'
+          
+      # Print the output of the babashka script from the
+      # `bb_script` step 
+      - name: Get the script output
+        run: echo "${{ steps.bb_script.outputs.bb_out }}"

@@ -1,20 +1,18 @@
 (ns dominoes)
 
-(defn rm [xs x]
-  (let [i (.indexOf xs x)]
-    (if (= -1 i) xs (vec (concat (take i xs) (drop (inc i) xs))))))
+(defn next-stones [n ds]
+  (for [i (range (count ds))
+        :let [[l [[a b] & r]] (split-at i ds)
+              m (cond (= a n) b (= b n) a)]
+        :when m]
+    [m (concat l r)]))
 
-(defn connects [[a b] [c d]]
-  (cond (= b c) [c d]
-        (= b d) [d c]
-        :else   nil))
+(defn chain-end [b ds]
+  (some (fn [[b ds]]
+          (if (empty? ds) b (chain-end b ds)))
+        (next-stones b ds)))
 
-(defn backtrack [rem chain]
-  (or (and (empty? rem) (= (ffirst chain) (second (peek chain))))
-      (and (not (empty? rem))
-           (some #(let [c (connects (peek chain) %)]
-                    (and c (backtrack (rm rem %) (conj chain c))))
-                 rem))))
-
-(defn can-chain? [xs]
-  (or (empty? xs) (some #(backtrack (rm xs %) [%]) xs)))
+(defn can-chain? [[[a b] & ds]]
+  (cond (nil? a) true
+        (nil? ds) (= a b)
+        :else (= a (chain-end b (vec ds)))))
