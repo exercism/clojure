@@ -3,7 +3,8 @@
 (require
  '[cheshire.core :as json]
  '[clojure.string :as str]
- '[clojure.java.shell :as shell])
+ '[clojure.java.shell :as shell]
+ '[clojure.java.io :as io])
 
 (defn clean-path [path]
   (if (str/ends-with? path "/")
@@ -11,7 +12,7 @@
     (str path "/")))
 
 (def root 
-  (clean-path (if-not (empty? *command-line-args*)
+  (clean-path (if (.exists (io/file (str (clean-path (first *command-line-args*)) "config.json")))
                 (first *command-line-args*)
                 "/github/workspace/main/")))
 
