@@ -17,7 +17,8 @@
                 "/github/workspace/main/")))
 
 (def test-runner-dir 
-  (clean-path (or (first *command-line-args*)
+  (clean-path (if (.exists (io/file (str (clean-path (first *command-line-args*)) "test-runner.clj")))
+                (first *command-line-args*)
                   "/github/workspace/clojure-test-runner/")))
 
 (defn- ->snake_case [s] (str/replace s \- \_))
