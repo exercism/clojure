@@ -3,75 +3,50 @@
 (require
  '[cheshire.core :as json]
  '[clojure.string :as str]
- '[babashka.classpath :as cp]
  '[clojure.java.shell :as shell])
+
+(def root "/github/workspace/main/")
+(def test-runner "/github/workspace/clojure-test-runner/test-runner.clj")
 
 (defn- ->snake_case [s] (str/replace s \- \_))
 
-(def root-dir "/github/workspace/main/")
-(def test-runner-dir "/github/workspace/clojure-test-runner/")
-
-(cp/add-classpath root-dir)
-
-(def practice-root (str root-dir "exercises/practice/"))
-(def concept-root (str root-dir "exercises/concept/"))
-
-(defn copy-practice-example! [slug]
-  (shell/sh "cp"
-            (str practice-root slug "/.meta/src/example.clj")
-            (str practice-root slug "/.meta/src/" (->snake_case slug) ".clj")))
-
-(defn replace-practice-example! [slug]
-  (shell/sh "mv"
-            (str practice-root slug "/.meta/src/" (->snake_case slug) ".clj")
-            (str practice-root slug "/src/" (->snake_case slug) ".clj")))
-
-(defn practice-pass? [slug]
-  (let [copy (copy-practice-example! slug)
-        replace (replace-practice-example! slug)]
-    (= "pass" ((json/parse-string
-                (:out (shell/sh (str test-runner-dir "test-runner.clj")
-                                slug
-                                (str practice-root slug "/")
-                                (str practice-root slug "/"))))
-               "status"))))
-
-(defn copy-concept-example! [slug]
-  (shell/sh "cp"
-            (str concept-root slug "/.meta/exemplar.clj")
-            (str concept-root slug "/.meta/" (->snake_case slug) ".clj")))
-
-(defn replace-concept-example! [slug]
-  (shell/sh "mv"
-            (str concept-root slug "/.meta/" (->snake_case slug) ".clj")
-            (str concept-root slug "/src/" (->snake_case slug) ".clj")))
-
-(defn concept-pass? [slug]
-  (let [copy (copy-concept-example! slug)
-        replace (replace-concept-example! slug)]
-    (= "pass" ((json/parse-string
-                (:out (shell/sh (str test-runner-dir "test-runner.clj")
-                                slug
-                                (str concept-root slug "/")
-                                (str concept-root slug "/"))))
-               "status"))))
-
 (def practice-exercises
-  (map #(% "slug") (((json/parse-string (slurp (str root-dir "config.json"))) "exercises") "practice")))
+  (map #(% "slug")
+       (-> (str root "config.json")
+           slurp
+           json/parse-string
+           (get "exercises")
+           (get "practice"))))
 
 (def concept-exercises
-  (map #(% "slug") (((json/parse-string (slurp (str root-dir "config.json"))) "exercises") "concept")))
+  (map #(% "slug")
+       (-> (str root "config.json")
+           slurp
+           json/parse-string
+           (get "exercises")
+           (get "concept"))))
 
-(defn check-practice-exercises! []
-  (for [exercise practice-exercises]
-    {(keyword exercise) (practice-pass? exercise)}))
+(defn test-exercise [slug]
+  (let [practice? (contains? (set practice-exercises) slug)
+        example (if practice?
+                  (str root "exercises/practice/" slug "/src/example.clj")
+                  (str root "exercises/concept/" slug "/.meta/exemplar.clj"))
+        src (if practice?
+              (str root "exercises/practice/" slug "/src/" (->snake_case slug) ".clj")
+              (str root "exercises/concept/" slug "/.meta/" (->snake_case slug) ".clj"))]
+    (shell/sh "cp" example src)
+    (= "pass" ((json/parse-string
+                (:out (shell/sh test-runner
+                                slug
+                                (str root (if practice? "exercises/practice/" "exercises/concept/") slug "/")
+                                (str root (if practice? "exercises/practice/" "exercises/concept/") slug "/"))))
+               "status"))))
 
-(defn check-concept-exercises! []
-  (for [exercise concept-exercises]
-    {(keyword exercise) (concept-pass? exercise)}))
+(defn test-exercises! []
+  (for [exercise (into practice-exercises concept-exercises)]
+    {(keyword exercise) (test-exercise exercise)}))
 
-(let [results (into (check-concept-exercises!)
-                    (check-practice-exercises!))
+(let [results (test-exercises!)
       fails (filter false? results)]
   (prn {:tested (count results)
         :fails fails})
