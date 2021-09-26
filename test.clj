@@ -11,7 +11,9 @@
     (str path "/")))
 
 (def root 
-  (clean-path (str/trim (:out (shell/sh "pwd")))))
+  (clean-path (if-not (empty? *command-line-args*)
+                (first *command-line-args*)
+                "/github/workspace/main/")))
 
 (def test-runner-dir 
   (clean-path (or (first *command-line-args*)
