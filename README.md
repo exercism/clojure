@@ -17,6 +17,7 @@ To test all exercises with sample solutions using [babashka](https://babashka.or
 ```bash
 ./test.clj .
 ```
+{:tested 86, :fails ()}
 
 ## Contributing Guide
 
