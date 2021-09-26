@@ -5,8 +5,18 @@
  '[clojure.string :as str]
  '[clojure.java.shell :as shell])
 
-(def root "/github/workspace/main/")
-(def test-runner "/github/workspace/clojure-test-runner/test-runner.clj")
+(defn clean-path [path]
+  (if (str/ends-with? path "/")
+    path
+    (str path "/")))
+
+(def root 
+  (clean-path (or (first *command-line-args*)
+                  "/github/workspace/main/")))
+
+(def test-runner-dir 
+  (clean-path (or (first *command-line-args*)
+                  "/github/workspace/clojure-test-runner/")))
 
 (defn- ->snake_case [s] (str/replace s \- \_))
 
@@ -36,7 +46,7 @@
               (str root "exercises/concept/" slug "/src/" (->snake_case slug) ".clj"))]
     (shell/sh "cp" example src)
     (= "pass" ((json/parse-string
-                (:out (shell/sh test-runner
+                (:out (shell/sh (str test-runner-dir "test-runner.clj")
                                 slug
                                 (str root (if practice? "exercises/practice/" "exercises/concept/") slug "/")
                                 (str root (if practice? "exercises/practice/" "exercises/concept/") slug "/"))))
