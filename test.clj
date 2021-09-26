@@ -29,11 +29,11 @@
 (defn test-exercise [slug]
   (let [practice? (contains? (set practice-exercises) slug)
         example (if practice?
-                  (str root "exercises/practice/" slug "/src/example.clj")
+                  (str root "exercises/practice/" slug "/.meta/src/example.clj")
                   (str root "exercises/concept/" slug "/.meta/exemplar.clj"))
         src (if practice?
               (str root "exercises/practice/" slug "/src/" (->snake_case slug) ".clj")
-              (str root "exercises/concept/" slug "/.meta/" (->snake_case slug) ".clj"))]
+              (str root "exercises/concept/" slug "/src/" (->snake_case slug) ".clj"))]
     (shell/sh "cp" example src)
     (= "pass" ((json/parse-string
                 (:out (shell/sh test-runner
