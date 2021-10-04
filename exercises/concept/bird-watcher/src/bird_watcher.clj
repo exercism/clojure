@@ -2,8 +2,6 @@
 
 (def last-week 
   )
-(def birds-per-day
-  )
 
 (defn today [birds]
   )
