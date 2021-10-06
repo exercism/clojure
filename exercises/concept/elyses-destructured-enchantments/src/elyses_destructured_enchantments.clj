@@ -28,6 +28,3 @@
   "Returns the deck with face cards between its head and tail."
   [deck]
 )
-
-(comment
-  )
