@@ -8,8 +8,8 @@ Lists are special because Clojure will treat them as _calls_. It expects the cal
 
 Clojure's special treatment of lists is why we cannot create a list literal directly. Quoting a list using `quote` or its shorthand `'` indicates that the list should not be evaluated.
 
-Unlike some modern languages, Clojure lists are _heterogenous_, meaning they can contain multiple types of item internally. E.g. `'(2 "a" "b" 3)`
-Unlike other other Lisps, an empty list in Clojure in truthy and is not equivalent to `nil` or `false`.
+Unlike some modern languages, Clojure lists are _heterogeneous_, meaning they can contain multiple types of items internally e.g., `'(2 "a" "b" 3)`.
+Unlike other Lisps, an empty list in Clojure is truthy and is not equivalent to `nil` or `false`.
 
 [type-list]: https://github.com/exercism/v3/blob/main/reference/types/list.md
 [type-collection]: https://github.com/exercism/v3/blob/main/reference/types/collection.md
