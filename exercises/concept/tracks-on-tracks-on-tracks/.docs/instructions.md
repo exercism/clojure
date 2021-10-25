@@ -6,7 +6,7 @@ You have six tasks.
 
 ## 1. Create a new list
 
-Before you can add languages, you'll need to start by creating an new list. Define a function that returns an empty list.
+Before you can add languages, you'll need to start by creating a new list. Define a function that returns an empty list.
 
 ```clojure
 (new-list)
@@ -15,7 +15,7 @@ Before you can add languages, you'll need to start by creating an new list. Defi
 
 ## 2. Add a new language to the list
 
-As you explore Exercism and find languages you want to learn, you'll need to be able to add them to your list. Define a function to add a new language the the beginning of your list.
+As you explore Exercism and find languages you want to learn, you'll need to be able to add them to your list. Define a function to add a new language the beginning of your list.
 
 ```clojure
 (add-language "JavaScript" '("Clojurescript"))
