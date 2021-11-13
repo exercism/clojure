@@ -28,7 +28,7 @@ Elyse performs sleight of hand, and summons the second card in the deck, without
 
 ## 3. Swap the first two cards
 
-Elyse will make the top two cards of the deck switch places. She doesn't need to call a single function.
+Elyse will make the top two cards of the deck switch places.
 
 ```clojure
 (def deck [10 7 3 8 5])
