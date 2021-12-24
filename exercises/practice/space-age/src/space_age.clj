@@ -24,10 +24,10 @@
   ;; your code goes here
 )
 
-(defn on-neptune [] ;; <- arglist goes here
+(defn on-uranus [] ;; <- arglist goes here
   ;; your code goes here
 )
 
-(defn on-uranus [] ;; <- arglist goes here
+(defn on-neptune [] ;; <- arglist goes here
   ;; your code goes here
 )
