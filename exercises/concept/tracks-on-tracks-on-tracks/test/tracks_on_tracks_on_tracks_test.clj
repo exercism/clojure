@@ -7,7 +7,7 @@
 
 (deftest list-add-test
   (is (= '("JavaScript" "Java" "Lisp" "Clojure")
-         (->> (tracks-on-tracks-on-tracks/new-list)
+         (-> (tracks-on-tracks-on-tracks/new-list)
               (tracks-on-tracks-on-tracks/add-language "Clojure")
               (tracks-on-tracks-on-tracks/add-language "Lisp")
               (tracks-on-tracks-on-tracks/add-language "Java")
