@@ -7,7 +7,7 @@
 
 (defn add-language
   "Adds a language to the list."
-  [lang lang-list]
+  [lang-list lang]
   )
 
 (defn first-language
