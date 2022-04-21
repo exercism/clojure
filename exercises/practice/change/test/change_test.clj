@@ -32,3 +32,7 @@
 (deftest cannot-find-negative-change-values
   (is (thrown-with-msg? IllegalArgumentException #"cannot change"
                         (issue -5 #{1 2 5}))))
+
+(deftest error-testing-for-no-valid-change
+  (is (thrown-with-msg? IllegalArgumentException #"cannot change"
+                        (issue 10 #{20 8 3}))))
