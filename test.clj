@@ -6,20 +6,9 @@
  '[clojure.java.shell :as shell]
  '[clojure.java.io :as io])
 
-(defn clean-path [path]
-  (if (str/ends-with? path "/")
-    path
-    (str path "/")))
+(def root "/github/workspace/main/")
 
-(def root 
-  (clean-path (if (.exists (io/file (str (clean-path (first *command-line-args*)) "config.json")))
-                (first *command-line-args*)
-                "/github/workspace/main/")))
-
-(def test-runner-dir 
-  (clean-path (if (.exists (io/file (str (clean-path (first *command-line-args*)) "test-runner.clj")))
-                (first *command-line-args*)
-                  "/github/workspace/clojure-test-runner/")))
+(def test-runner-dir "/github/workspace/clojure-test-runner/")
 
 (defn- ->snake_case [s] (str/replace s \- \_))
 
