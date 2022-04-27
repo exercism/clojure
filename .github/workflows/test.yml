@@ -24,11 +24,14 @@ jobs:
           repository: exercism/clojure-test-runner
           path: clojure-test-runner
 
-      - name: babashka script
-        uses: tzafrirben/babashka-docker-action@v1.1
-        id: bb_script
+      - name: setup babashka
+        uses: turtlequeue/setup-babashka@v1.3.0
         with:
-          bb_src: 'main/test.clj'
+          babashka-version: 0.8.1
+          
+      - name: babashka script
+        id: bb_script
+        run: bb main/test.clj
           
       # Print the output of the babashka script from the
       # `bb_script` step 
