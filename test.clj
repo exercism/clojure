@@ -6,9 +6,9 @@
  '[clojure.java.shell :as shell]
  '[clojure.java.io :as io])
 
-(def root "/github/workspace/main/")
+(def root (str (fs/parent *file*) "/"))
 
-(def test-runner-dir "/github/workspace/clojure-test-runner/")
+(def test-runner-dir (str (fs/parent *file*) "/"))
 
 (defn- ->snake_case [s] (str/replace s \- \_))
 
