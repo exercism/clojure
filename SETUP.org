@@ -1,7 +1,7 @@
 #+TITLE: Setup
 
 For learning resources and help with installation, refer to the
-[[http://exercism.io/languages/clojure][Exercism help page]].
+[[http://exercism.org/languages/clojure][Exercism help page]].
 
 To run the tests provided, you will need to install [[http://leiningen.org][Leiningen]].
 
