@@ -27,4 +27,4 @@ Then submit the exercise using:
 $ exercism submit src/hello_world.clj
 ```
 
-For more detailed instructions and learning resources refer [exercism's clojure language page](http://exercism.io/languages/clojure).
+For more detailed instructions and learning resources refer [exercism's clojure language page](http://exercism.org/languages/clojure).
