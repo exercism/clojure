@@ -21,7 +21,7 @@ Implement the `production-rate` function to calculate the assembly line's produc
 ;;=> 1193.4
 ```
 
-Note that the value returned is a `float`.
+Note that the value returned is a `double`.
 
 ## 2. Calculate the number of working items produced per minute
 
