@@ -49,7 +49,7 @@
     {(keyword exercise) (test-exercise exercise)}))
 
 (let [results (test-exercises!)
-      fails (filter false? results)]
+      fails (filter #(false? (first (vals %))) results)]
   (prn {:tested (count results)
         :fails fails})
   (System/exit (count fails)))
