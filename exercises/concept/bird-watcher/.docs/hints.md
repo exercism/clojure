@@ -45,7 +45,7 @@ The [`=`][equality] function can be used to test equality.
 [filter]: https://clojuredocs.org/clojure.core/filter
 [inc]: https://clojuredocs.org/clojure.core/inc
 [last]: https://clojuredocs.org/clojure.core/last
-[not]: 
+[not]: https://clojuredocs.org/clojure.core/not
 [pos?]: https://clojuredocs.org/clojure.core/pos_q
 [reduce]: https://clojuredocs.org/clojure.core/reduce
 [take]: https://clojuredocs.org/clojure.core/take
