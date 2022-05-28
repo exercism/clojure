@@ -6,8 +6,8 @@
 
 ## 1. Get message from a log line
 
-- The [split][split] function can be used to split a string on a regular expression.
-- The [trim][trim] function can be used to remove whitespace from the ends of a string.
+- The [`split`][split] function can be used to split a string on a regular expression.
+- The [`trim`][trim] function can be used to remove whitespace from the ends of a string.
 
 ## 2. Get log level from a log line
 
@@ -15,7 +15,7 @@
 
 ## 3. Reformat a log line
 
-- The [str][str] function can be used to concatenate strings.
+- The [`str`][str] function can be used to concatenate strings.
 
 [lowercase]: https://clojuredocs.org/clojure.string/lower-case
 [split]: https://clojuredocs.org/clojure.string/split
