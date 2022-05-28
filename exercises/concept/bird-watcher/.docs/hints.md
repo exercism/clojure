@@ -10,7 +10,7 @@ The [`last`][last] function can be used to return the last item in a sequential 
 
 ## Increment today's count
 
-The [`update`] function can be used to return a new vector with a different element at a given index.
+The [`update`][update] function can be used to return a new vector with a different element at a given index.
 
 The [`count`][count] function can be used to find the length of the vector.
 
