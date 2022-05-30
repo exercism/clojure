@@ -11,7 +11,7 @@
 
 ## 2. Get log level from a log line
 
-- A `string` can be converted to a lowercase using [`lowercase`][lowercase].
+- A `string` can be converted to lowercase using [`lowercase`][lowercase].
 
 ## 3. Reformat a log line
 
