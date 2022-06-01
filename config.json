@@ -145,6 +145,14 @@
         "concepts": [],
         "prerequisites": [],
         "status": "wip"
+      },
+      {
+        "slug": "date-parser",
+        "name": "Date Parser",
+        "uuid": "37ba33f8-5b19-4cdd-9b1c-ca1a5c15f096",
+        "concepts": [],
+        "prerequisites": [],
+        "status": "wip"
       }
     ],
     "practice": [
