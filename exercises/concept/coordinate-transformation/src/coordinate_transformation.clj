@@ -11,3 +11,11 @@
    perform a repeatable 2d scale of a coordinate pair."
   [sx sy]
   (fn [x y] [(* sx x) (* sy y)]))
+
+(defn compose-transform
+  "Create a composition function that returns a function that 
+   combines two functions to perform a repeatable transformation."
+  [f g]
+  (fn [x y]
+    (let [f-result (f x y)]
+      (g (first f-result) (last f-result)))))
