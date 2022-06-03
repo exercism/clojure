@@ -1,6 +1,6 @@
 (ns coordinate-transformation-test
   (:require [clojure.test :refer [deftest testing is function?]]
-            [coordinate-transformation :refer [translate2d scale2d compose-transform]]))
+            [coordinate-transformation :refer [translate2d scale2d compose-transform memoize-transform]]))
 
 (deftest translate2d-test
   (testing "should return a function"
@@ -46,22 +46,16 @@
              sx         3
              sy         2
              scaler     (scale2d sx sy)]
-         (true? (function? (compose-transform translate2d scale2d))))))
+         (true? (function? (compose-transform translator scaler))))))
   (testing "should compose two translate functions"
    (is (let [dx         -6
              dy         10
              translator (translate2d dx dy)
-             sx         3
-             sy         2
-             scaler     (scale2d sx sy)
              compose-translate (compose-transform translator translator)]
          (= [-12 20] (compose-translate 0 0)))))
          (testing
           "should compose two scale functions"
-          (is (let [dx         -6
-                    dy         10
-                    translator (translate2d dx dy)
-                    sx         3
+          (is (let [sx         3
                     sy         2
                     scaler     (scale2d sx sy)
                     compose-scale (compose-transform scaler scaler)]
@@ -74,7 +68,6 @@
                   sx         3
                   sy         2
                   scaler     (scale2d sx sy)
-                  compose-scale (compose-transform scaler scaler)
                   composed (compose-transform scaler translator)]
               (= [-6 10] (composed 0 0)))))
          (testing "should compose in the opposite order: g(f(x))"
@@ -84,6 +77,33 @@
                     sx         3
                     sy         2
                     scaler     (scale2d sx sy)
-                    compose-scale (compose-transform scaler scaler)
                     composed (compose-transform translator scaler)]
                 (= [-18 20] (composed 0 0))))))
+
+(def fake-first (atom true))
+
+(defn fake-transform [& args]
+  (if @fake-first
+    (do (reset! fake-first false)
+        [1 1])
+    false))
+
+(deftest memoize-transform-test
+  (testing "should return a function"
+    (is (function? (memoize-transform (translate2d 2 2)))))
+  (testing "should return the same result if given the same input"
+    (is (= [4 4] (let [memoized-translate (memoize-transform (translate2d 2 2))]
+                   (memoized-translate 2 2))))
+    (is (= [4 4] (let [memoized-translate (memoize-transform (translate2d 2 2))]
+                   (memoized-translate 2 2)))))
+  (testing "should return different results for different inputs"
+    (is (= [3 4] (let [memoized-translate (memoize-transform (translate2d 1 2))]
+                   (memoized-translate 2 2))))
+    (is (= [7 8] (let [memoized-translate (memoize-transform (translate2d 1 2))]
+                   (memoized-translate 6 6)))))
+  (testing "should not call the memoized function if the input is the same"
+    (is (= [1 1] (let [memoized-transform (memoize-transform fake-transform)]
+                   (memoized-transform 5 5)
+                   (memoized-transform 5 5))))))
+
+;(clojure.test/run-tests)
