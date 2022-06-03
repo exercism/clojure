@@ -102,8 +102,18 @@
     (is (= [7 8] (let [memoized-translate (memoize-transform (translate2d 1 2))]
                    (memoized-translate 6 6)))))
   (testing "should not call the memoized function if the input is the same"
-    (is (= [1 1] (let [memoized-transform (memoize-transform fake-transform)]
-                   (memoized-transform 5 5)
-                   (memoized-transform 5 5))))))
-
-;(clojure.test/run-tests)
+    (let [memoized-transform (memoize-transform fake-transform)]
+      (is (= [1 1] (memoized-transform 5 5)))
+      (is (= [1 1] (memoized-transform 5 5)))))
+  (testing "should only remember the last result"
+    (let [mock-fn (let [n (atom 0)]
+                    (with-meta
+                      (fn [x y]
+                        (swap! n inc)
+                        [(* x 2) (* y 2)])
+                      {::call-count (fn [] @n)}))
+          memoized-transform (memoize-transform mock-fn)]
+      (is (= [2 2] (memoized-transform 1 1)))
+      (is (= [4 4] (memoized-transform 2 2)))
+      (is (= [2 2] (memoized-transform 1 1)))
+      (is (= 3 ((::call-count (meta mock-fn))))))))
