@@ -21,6 +21,9 @@
       (g (first f-result) (last f-result)))))
 
 (defn memoize-transform
+  "Returns a function that memoizes the last result.
+   If the arguments are the same as the last call,
+   the memoized result is returned."
   [f]
   (let [mem (atom {:last-x nil
                    :last-y nil
