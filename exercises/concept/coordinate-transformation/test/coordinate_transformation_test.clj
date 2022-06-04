@@ -80,14 +80,6 @@
                     composed (compose-transform translator scaler)]
                 (= [-18 20] (composed 0 0))))))
 
-(def fake-first (atom true))
-
-(defn fake-transform [& args]
-  (if @fake-first
-    (do (reset! fake-first false)
-        [1 1])
-    false))
-
 (deftest memoize-transform-test
   (testing "should return a function"
     (is (function? (memoize-transform (translate2d 2 2)))))
@@ -102,7 +94,13 @@
     (is (= [7 8] (let [memoized-translate (memoize-transform (translate2d 1 2))]
                    (memoized-translate 6 6)))))
   (testing "should not call the memoized function if the input is the same"
-    (let [memoized-transform (memoize-transform fake-transform)]
+    (let [fake-first (atom true)
+          fake-transform (fn [_ _]
+                           (if @fake-first
+                             (do (reset! fake-first false)
+                                 [1 1])
+                             false))
+          memoized-transform (memoize-transform fake-transform)]
       (is (= [1 1] (memoized-transform 5 5)))
       (is (= [1 1] (memoized-transform 5 5)))))
   (testing "should only remember the last result"
