@@ -266,6 +266,3 @@
     (is (nil? (re-matches date-parser/match-day-month-name-date "The day way Thursday, January 1, 1970"))))
   (testing "day and month names date with a suffix doesn't match"
     (is (nil? (re-matches date-parser/match-day-month-name-date "Thursday, January 1, 1970 was the day")))))
-
-
-(clojure.test/run-tests)
