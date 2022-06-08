@@ -6,8 +6,13 @@
  '[clojure.java.shell :as shell]
  '[clojure.java.io :as io])
 
-(def root (str (fs/cwd) "/"))
-(def test-runner-dir (str (fs/parent (fs/cwd)) "/clojure-test-runner/"))
+(defn cwd
+  "Returns current working directory as path"
+  []
+  (as-path (System/getProperty "user.dir")))
+
+(def root (str (cwd) "/"))
+(def test-runner-dir (str (fs/parent (cwd)) "/clojure-test-runner/"))
 
 (defn- ->snake_case [s] (str/replace s \- \_))
 
