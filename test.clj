@@ -6,7 +6,8 @@
     [clojure.string :as str]
     [clojure.java.shell :as shell]
     [clojure.java.io :as io])
-  (:import [java.nio.file Path]))
+  (:import [java.nio.file Path]
+           [java.net URI]))
 
 (defn- as-path
   ^Path [path]
