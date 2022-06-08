@@ -1,10 +1,12 @@
 #!/usr/bin/env bb
 
-(require
- '[cheshire.core :as json]
- '[clojure.string :as str]
- '[clojure.java.shell :as shell]
- '[clojure.java.io :as io])
+(ns test-exercises
+  (:require
+    [cheshire.core :as json]
+    [clojure.string :as str]
+    [clojure.java.shell :as shell]
+    [clojure.java.io :as io])
+  (:import [java.nio.file Path]))
 
 (defn- as-path
   ^Path [path]
