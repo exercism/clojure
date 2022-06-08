@@ -53,7 +53,7 @@
               (str root "exercises/concept/" slug "/src/" (->snake_case slug) ".clj"))]
     (shell/sh "cp" example src)
     (= "pass" ((json/parse-string
-                (:out (shell/sh (str test-runner-dir "/clojure-test-runner/test-runner.clj")
+                (:out (shell/sh (str test-runner-dir "clojure-test-runner/test-runner.clj")
                                 slug
                                 (str root (if practice? "exercises/practice/" "exercises/concept/") slug "/")
                                 (str root (if practice? "exercises/practice/" "exercises/concept/") slug "/"))))
