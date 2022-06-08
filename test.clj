@@ -29,7 +29,7 @@
 
 (def practice-exercises
   (map #(% "slug")
-       (-> (str root "config.json")
+       (-> (str root "main/config.json")
            slurp
            json/parse-string
            (get "exercises")
@@ -37,7 +37,7 @@
 
 (def concept-exercises
   (map #(% "slug")
-       (-> (str root "config.json")
+       (-> (str root "main/config.json")
            slurp
            json/parse-string
            (get "exercises")
