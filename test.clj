@@ -46,17 +46,17 @@
 (defn test-exercise [slug]
   (let [practice? (contains? (set practice-exercises) slug)
         example (if practice?
-                  (str root "exercises/practice/" slug "/.meta/src/example.clj")
-                  (str root "exercises/concept/" slug "/.meta/exemplar.clj"))
+                  (str root "main/exercises/practice/" slug "/.meta/src/example.clj")
+                  (str root "main/exercises/concept/" slug "/.meta/exemplar.clj"))
         src (if practice?
-              (str root "exercises/practice/" slug "/src/" (->snake_case slug) ".clj")
-              (str root "exercises/concept/" slug "/src/" (->snake_case slug) ".clj"))]
+              (str root "main/exercises/practice/" slug "/src/" (->snake_case slug) ".clj")
+              (str root "main/exercises/concept/" slug "/src/" (->snake_case slug) ".clj"))]
     (shell/sh "cp" example src)
     (= "pass" ((json/parse-string
                 (:out (shell/sh (str test-runner-dir "test-runner.clj")
                                 slug
-                                (str root (if practice? "exercises/practice/" "exercises/concept/") slug "/")
-                                (str root (if practice? "exercises/practice/" "exercises/concept/") slug "/"))))
+                                (str root (if practice? "main/exercises/practice/" "exercises/concept/") slug "/")
+                                (str root (if practice? "main/exercises/practice/" "exercises/concept/") slug "/"))))
                "status"))))
 
 (defn test-exercises! []
