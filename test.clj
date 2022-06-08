@@ -6,6 +6,13 @@
  '[clojure.java.shell :as shell]
  '[clojure.java.io :as io])
 
+(defn- as-path
+  ^Path [path]
+  (if (instance? Path path) path
+      (if (instance? URI path)
+        (java.nio.file.Paths/get ^URI path)
+        (.toPath (io/file path)))))
+
 (defn cwd
   "Returns current working directory as path"
   []
