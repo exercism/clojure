@@ -37,3 +37,12 @@
 
 (defn capture-day-month-name-date [s]
   )
+
+(def match-numeric-date 
+  )
+
+(def match-month-name-date
+  )
+
+(def match-day-month-name-date
+  )
