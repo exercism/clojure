@@ -5,7 +5,8 @@
     [cheshire.core :as json]
     [clojure.string :as str]
     [clojure.java.shell :as shell]
-    [clojure.java.io :as io])
+    [clojure.java.io :as io]
+    [babashka.fs :as fs])
   (:import [java.nio.file Path]
            [java.net URI]))
 
