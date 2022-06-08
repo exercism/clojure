@@ -23,7 +23,7 @@
   (as-path (System/getProperty "user.dir")))
 
 (def root (str (cwd) "/clojure/"))
-(def test-runner-dir (str (cwd) "/"))
+(def test-runner-dir (str (cwd) "/clojure/"))
 
 (defn- ->snake_case [s] (str/replace s \- \_))
 
