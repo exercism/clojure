@@ -56,3 +56,12 @@
        :month-name (.group matcher "month")
        :day (.group matcher "day")
        :year (.group matcher "year")})))
+
+(def match-numeric-date 
+  (re-pattern (str "(?<day>" day ")/(?<month>" month ")/(?<year>" year ")")))
+
+(def match-month-name-date
+  (re-pattern (str "(?<month>" months ") (?<day>" day "), (?<year>" year ")")))
+
+(def match-day-month-name-date
+  (re-pattern (str "(?<dayname>" days "), (?<month>" months ") (?<day>" day "), (?<year>" year ")")))
