@@ -9,6 +9,7 @@ represented as a sequence of digits, convert it to base **b**.
 
 - Try to implement the conversion yourself.
   Do not use something else to perform the conversion for you.
+- Your solution should take base **a**, a sequence of digits, and base **b**, in that order.
 
 ## About [Positional Notation](https://en.wikipedia.org/wiki/Positional_notation)
 
