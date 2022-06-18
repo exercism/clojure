@@ -3,9 +3,9 @@
 In this exercise you'll be working with savings accounts. Each year, the balance of your savings account is updated based on its interest rate. The interest rate your bank gives you depends on the amount of money in your account (its balance):
 
 - -3.213% for a negative balance.
-- 0.5% for a positive balance less than `1000` dollars.
-- 1.621% for a positive balance greater or equal than `1000` dollars and less than `5000` dollars.
-- 2.475% for a positive balance greater or equal than `5000` dollars.
+- 0.5% for a balance less than `1000` dollars.
+- 1.621% for a balance greater or equal than `1000` dollars and less than `5000` dollars.
+- 2.475% for a balance greater or equal than `5000` dollars.
 
 Each year, **before** the balance of your savings account is updated, the government allows you to donate a percentage of your money to charity, tax free. Because you're a nice person, if your balance is positive at the end of the year, you donate twice this amount to charities, rounded down to the nearest whole dollar.
 
