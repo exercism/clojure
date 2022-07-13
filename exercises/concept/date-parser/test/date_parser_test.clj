@@ -1,8 +1,8 @@
 (ns date-parser-test
-  (:require [clojure.test :refer [deftest testing is]]
+  (:require [clojure.test :refer [deftest is testing]]
             exercism.date-parser))
 
-(deftest day-test
+(deftest ^{:task 1} day-test
   (testing "numeric pattern for day matches"
     (testing "un-padded 1"
       (is (= "1" (re-matches (re-pattern exercism.date-parser/day) "1"))))
@@ -94,7 +94,7 @@
     (testing "two letters"
       (is (nil? (re-matches (re-pattern exercism.date-parser/day) "bb"))))))
 
-(deftest month-test
+(deftest ^{:task 1} month-test
   (testing "numeric pattern for month matches"
     (testing "un-padded 1"
       (is (= "1" (re-matches (re-pattern exercism.date-parser/month) "1"))))
@@ -152,7 +152,7 @@
     (testing "long month name"
       (is (nil? (re-matches (re-pattern exercism.date-parser/month) "January"))))))
 
-(deftest year-test
+(deftest ^{:task 1} year-test
   (testing "numeric pattern for year"
     (testing "matches 4 digits"
       (is (= "1970" (re-matches (re-pattern exercism.date-parser/year) "1970"))))
@@ -165,7 +165,7 @@
     (testing "doesn't match too many"
       (is (nil? (re-matches (re-pattern exercism.date-parser/year) "19701"))))))
 
-(deftest day-names-test
+(deftest ^{:task 2} day-names-test
   (testing "day names match"
     (is (= "Sunday" (exercism.date-parser/day-names "Sunday")))
     (is (= "Monday" (exercism.date-parser/day-names "Monday")))
@@ -184,7 +184,7 @@
     (testing "numeric day of the week (1-indexed)"
       (is (nil? (exercism.date-parser/day-names "1"))))))
 
-(deftest month-names-test
+(deftest ^{:task 2} month-names-test
   (testing "month names match"
     (is (= "January" (exercism.date-parser/month-names "January")))
     (is (= "February" (exercism.date-parser/month-names "February")))
@@ -208,7 +208,7 @@
     (testing "numeric month of the year (1-indexed)"
       (is (nil? (exercism.date-parser/month-names "1"))))))
 
-(deftest capture-test
+(deftest ^{:task 3} capture-test
   (testing "capture numeric month"
     (is (= {:month "01"} (exercism.date-parser/capture-month "01"))))
   (testing "capture numeric day"
@@ -218,7 +218,9 @@
   (testing "capture day name"
     (is (= {:day-name "Monday"} (exercism.date-parser/capture-day-name "Monday"))))
   (testing "capture month name"
-    (is (= {:month-name "February"} (exercism.date-parser/capture-month-name "February"))))
+    (is (= {:month-name "February"} (exercism.date-parser/capture-month-name "February")))))
+
+(deftest ^{:task 4} combined-capture-test
   (testing "numeric date"
     (is (= {:year "1970", :month "02", :day "01"} (exercism.date-parser/capture-numeric-date "01/02/1970"))))
   (testing "month named date"
