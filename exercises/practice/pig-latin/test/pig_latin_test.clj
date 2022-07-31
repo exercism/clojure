@@ -86,6 +86,14 @@
   (is (= "xrayay"
          (pig-latin/translate "xray"))))
 
+(deftest word-beginning-with-consonants-followed-by-y
+  (is (= "ythmrhay"
+         (pig-latin/translate "rhythm"))))
+
+(deftest two-letter-word-ends-with-y
+  (is (= "ymay"
+         (pig-latin/translate "my"))))
+
 ;; phrases are translated
 (deftest a-whole-phrase
   (is (= "ickquay astfay unray"
