@@ -18,9 +18,9 @@ The function `classify` should either return `:sublist`, `:superlist`, `:equal` 
 
 ### Examples:
 
- * A = [1, 2, 3], B = [1, 2, 3, 4, 5], A is a sublist of B
- * A = [3, 4, 5], B = [1, 2, 3, 4, 5], A is a sublist of B
- * A = [3, 4], B = [1, 2, 3, 4, 5], A is a sublist of B
- * A = [1, 2, 3], B = [1, 2, 3], A is equal to B
- * A = [1, 2, 3, 4, 5], B = [2, 3, 4], A is a superlist of B
- * A = [1, 2, 4], B = [1, 2, 3, 4, 5], A is neither a superlist, sublist nor equal to B : they are unequal
+ * A = (1, 2, 3), B = (1, 2, 3, 4, 5), A is a sublist of B
+ * A = (3, 4, 5), B = (1, 2, 3, 4, 5), A is a sublist of B
+ * A = (3, 4), B = (1, 2, 3, 4, 5), A is a sublist of B
+ * A = (1, 2, 3), B = (1, 2, 3), A is equal to B
+ * A = (1, 2, 3, 4, 5), B = (2, 3, 4), A is a superlist of B
+ * A = (1, 2, 4), B = (1, 2, 3, 4, 5), A is neither a superlist, sublist nor equal to B : they are unequal
