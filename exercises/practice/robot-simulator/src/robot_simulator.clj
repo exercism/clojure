@@ -1,17 +1,13 @@
 (ns robot-simulator)
 
-(defn robot [] ;; <- arglist goes here
-      ;; your code goes here
+(defn robot [coords direction]
 )
 
-(defn simulate [] ;; <- arglist goes here
-  ;; your code goes here
+(defn simulate []
 )
 
-(defn turn-right [] ;; <- arglist goes here
-  ;; your code goes here
+(defn turn-right []
 )
 
-(defn turn-left [] ;; <- arglist goes here
-  ;; your code goes here
+(defn turn-left []
 )
