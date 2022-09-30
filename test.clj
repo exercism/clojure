@@ -68,3 +68,4 @@
   (prn {:tested (count results)
         :fails fails})
   (System/exit (count fails)))
+
