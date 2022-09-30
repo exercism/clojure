@@ -62,6 +62,8 @@
   (let [copy (if (fs/directory? src) fs/copy-tree fs/copy)]
     (apply copy src dest opts)))
 
+(cp "/home/runner/work/clojure/clojure/clojure-test-runner/libs.jar" "./libs.jar")
+
 (defn check-proc-inherit [& args]
   (check (process args {:inherit true})))
 
