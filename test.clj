@@ -66,7 +66,7 @@
   (check (process args {:inherit true})))
 
 (def run-script
-  (path-str "/home/runner/work/clojure/clojure/clojure-test-runner/"  "bin" "run.sh"))
+  (path-str "/home/runner/work/clojure/clojure/clojure/"  "bin" "run.sh"))
 
 (defn update-snapshot [snapshot-file results-file]
   (fs/create-dirs (fs/parent snapshot-file))
