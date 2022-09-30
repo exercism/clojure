@@ -114,7 +114,8 @@
       {:replace-existing true}))
 
 (defn run-all-tests []
-  (let [temp-dir (fs/create-temp-dir {:prefix "exercism-clojure-"})]
+  (let [temp-dir (fs/create-temp-dir {:prefix "exercism-clojure-"
+                                      :path "/home/runner/work/clojure/clojure/clojure/"})]
     (->> (for [{:keys [slug] :as ex} (get-exercises)]
            (let [test-dir (fs/path temp-dir slug)
                  _  (cp (exercise-path ex) test-dir)
