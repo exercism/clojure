@@ -34,7 +34,7 @@ echo "${slug}: testing..."
 
 # Run the tests for the provided implementation file and redirect stdout and
 # stderr to capture it
-test_output=$(../clojure-test-runner/test-runner.clj "${slug}" "${input_dir}/" "${output_dir}" 2>&1)
+test_output=$(/home/runner/work/clojure/clojure/clojure-test-runner/test-runner.clj "${slug}" "${input_dir}/" "${output_dir}" 2>&1)
 exit_code=$?
 
 
