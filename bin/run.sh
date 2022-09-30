@@ -38,7 +38,7 @@ test_output=$(./test-runner.clj "${slug}" "${input_dir}/" "${output_dir}" 2>&1)
 exit_code=$?
 
 
-# Write the results.json file based on the exit code of the command that was
+# Write the results.json file based on the exit code of the command that was 
 # just executed that tested the implementation file
 if [ $exit_code -eq 0 ]; then
     echo "${test_output}" > ${results_file}
