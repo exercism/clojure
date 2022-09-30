@@ -31,7 +31,7 @@ jobs:
           
       - name: babashka script
         id: bb_script
-        run: bb clojure/test.clj
+        run: bb clojure/test.clj .
           
       # Print the output of the babashka script from the
       # `bb_script` step 
