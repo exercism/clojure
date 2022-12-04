@@ -1,18 +1,20 @@
 {
-    "blurb": "Learn about regular expressions by parsing dates.",
-    "authors": [
-        "porkostomus"
-      ],
-    "forked_from": ["elixir/date-parser"],
-    "files": {
-        "solution": [
-          "src/date_parser.clj"
-        ],
-        "test": [
-          "test/date_parser_test.clj"
-        ],
-        "exemplar": [
-          ".meta/exemplar.clj"
-        ]
-  }
+  "authors": [
+    "porkostomus"
+  ],
+  "files": {
+    "solution": [
+      "src/date_parser.clj"
+    ],
+    "test": [
+      "test/date_parser_test.clj"
+    ],
+    "exemplar": [
+      ".meta/exemplar.clj"
+    ]
+  },
+  "forked_from": [
+    "elixir/date-parser"
+  ],
+  "blurb": "Learn about regular expressions by parsing dates."
 }
