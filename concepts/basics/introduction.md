@@ -44,4 +44,4 @@ Clojure functions and vars are organized in namespaces. A namespace groups relat
   (+ x y))
 ```
 
-Clojure supports two types of comments. Single line comments are preceded by `;` and the `comment` form is used to prevent evaluation of everything between `(comment` and `)`.
+Clojure supports two types of comments. Single-line comments are preceded by `;` and the `comment` form is used to prevent evaluation of everything between `(comment` and `)`.

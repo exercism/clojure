@@ -1,5 +1,4 @@
 {
-  "blurb": "Count the scored points on a Go board.",
   "authors": [],
   "contributors": [
     "AndreaCrotti",
@@ -16,5 +15,6 @@
     "example": [
       ".meta/src/example.clj"
     ]
-  }
+  },
+  "blurb": "Count the scored points on a Go board."
 }
