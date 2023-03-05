@@ -34,6 +34,9 @@
   (:require [clojure.test :refer [deftest testing is]]\n             "
             (:exercise data) "))\n\n"))
 
+(defn src-ns-form [data]
+  (str "(ns " (:exercise data) ")\n\n"))
+
 (defn testing-form [slug test-case]
   (let [property (symbol (str slug "/" (:property test-case)))
         input (:input test-case)
@@ -66,3 +69,11 @@
         (str (test-ns-form data)
              (apply str (interpose "\n\n"
                                    (deftest-forms data))))))
+
+(defn init-src [data]
+  (spit (str (fs/file "exercises" "practice" (:exercise data) "src"
+                      (str (str/replace (:exercise data) "-" "_") ".clj")))
+   (str (src-ns-form data)
+        (apply str (interpose "\n\n"
+                              (for [property (distinct (map :property (:cases data)))]
+                                (str "(defn " property " []\n  )")))))))
