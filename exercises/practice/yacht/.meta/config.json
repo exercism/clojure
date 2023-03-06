@@ -11,7 +11,7 @@
         "test/yacht_test.clj"
       ],
       "example": [
-        ".meta/example.clj"
+        ".meta/src/example.clj"
       ]
     },
     "blurb": "Score a single throw of dice in the game Yacht",
