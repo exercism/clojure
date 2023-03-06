@@ -32,10 +32,7 @@
   (let [counterArray @(mapDicesToCounterArray dices)]
     (if (and (contains? (set counterArray) 2)
              (contains? (set counterArray) 3))
-      (if (apply >
-                 (map first
-                      (sort-by last (seq (frequencies dices)))))
-        19 16)
+      (reduce + dices)
       0)))
 
 (defn score [dices category]
