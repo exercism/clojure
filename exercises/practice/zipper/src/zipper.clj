@@ -78,7 +78,7 @@
    returns a new zipper navigated to its right child.
    If no right child, returns nil."
   [z]
-  (let [r (some #(when (= :left (ffirst %)) %) (iterate next (down z)))]
+  (let [r (some #(when (= :right (ffirst %)) %) (iterate next (down z)))]
     (when-not (nil? (first (nfirst r))) r)))
 
 (defn value
@@ -98,4 +98,11 @@
                      :right nil}},
      :right {:value 4
              :left  nil
-             :right nil}}))
+             :right nil}})
+  
+  (-> tree
+      to_zip
+      left
+      ;right
+      ;value
+      ))
