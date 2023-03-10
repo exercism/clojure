@@ -70,7 +70,7 @@
      (is (= {:value 1, :left {:value 2, :left nil, :right nil}, :right {:value 4, :left nil, :right nil}} 
          (-> {:value 1, :left {:value 2, :left nil, :right {:value 3, :left nil, :right nil}}, :right {:value 4, :left nil, :right nil}}
            zipper/left
-           zipper/set_right
+           (zipper/set_right nil)
            zipper/to_tree))))
   (testing "set_right with subtree"
      (is (= {:value 1, :left {:value 2, :left nil, :right {:value 3, :left nil, :right nil}}, :right {:value 6, :left {:value 7, :left nil, :right nil}, :right {:value 8, :left nil, :right nil}}} 

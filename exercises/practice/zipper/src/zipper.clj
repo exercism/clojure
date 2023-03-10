@@ -112,3 +112,9 @@
 (-> tree
     left
     left)
+
+(defn set_value [z x])
+
+(defn set_left [z x])
+
+(defn set_right [z x])

@@ -56,8 +56,11 @@
 (defn zipper-generator [slug test-case]
   (let [input (:input test-case)
         ops (for [op (:operations input)]
-              (if (:item op)
-                (str "(zipper/" (:operation op) " " (str (:item op)) ")")
+              (if (contains? op :item)
+                (str "(zipper/" (:operation op) " " 
+                     (if (nil? (:item op))
+                       "nil"
+                       (str (:item op))) ")")
                 (str "zipper/" (:operation op))))]
     (str "  (testing \"" (:description test-case) "\"
      (is (= " (if (nil? (:value (:expected test-case)))
