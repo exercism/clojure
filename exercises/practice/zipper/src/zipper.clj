@@ -28,7 +28,7 @@
 (defn rebuild-tree [tree trail]
   (if (= 0 (count trail)) 
     tree
-    (rebuild-tree (from-trail tree (first trail)) (fnext trail))))
+    (recur (from-trail tree (first trail)) (fnext trail))))
 
 (defn to-tree [z]
   (rebuild-tree (:tree z) (:trail z)))
