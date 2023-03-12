@@ -1,5 +1,5 @@
 (ns yacht-test
-  (:require [clojure.test :refer [deftest testing is]]
+  (:require [clojure.test :refer [deftest testing is run-tests]]
              yacht))
 
 (deftest score-test
@@ -61,3 +61,7 @@
      (is (= 23 (yacht/score [3 3 5 6 6] "choice"))))
   (testing "Yacht as choice"
      (is (= 10 (yacht/score [2 2 2 2 2] "choice")))))
+
+(comment
+  (run-tests)
+  )
