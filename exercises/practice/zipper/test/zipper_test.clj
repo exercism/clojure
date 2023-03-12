@@ -34,12 +34,12 @@
                       zipper/left
                       zipper/right
                       zipper/toTree))))
-    #_(testing "traversing up from top"
+    (testing "traversing up from top"
       (is (= nil 
              (-> tree
                  zipper/fromTree
                  zipper/up))))
-    #_(testing "left, right, and up"
+    (testing "left, right, and up"
       (is (= 3 
              (-> tree
                  zipper/fromTree
@@ -50,7 +50,7 @@
                  zipper/left
                  zipper/right
                  zipper/value))))
-    #_(testing "test ability to descend multiple levels and return"
+    (testing "test ability to descend multiple levels and return"
       (is (= 1 
              (-> tree
                  zipper/fromTree

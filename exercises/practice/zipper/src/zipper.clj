@@ -38,13 +38,7 @@
 (defn up [z]
   (when-not (zero? (count (:trail z)))
     (zipper (fromTrail (:tree z) (first (:trail z)))
-            (rest (:trail z)))))
-
-(def z {:tree
-        {:value 1,
-         :left {:value 2, :left nil, :right {:value 3, :left nil, :right nil}},
-         :right {:value 4, :left nil, :right nil}},
-        :trail []})
+            (fnext (:trail z)))))
 
 (defn setValue [z value]
   (zipper {:value value,
@@ -63,9 +57,3 @@
            :left  (:left (:tree z)),
            :right right}
           (:trail z)))
-
-
-(-> t1
-    fromTree
-    ;up
-    )
