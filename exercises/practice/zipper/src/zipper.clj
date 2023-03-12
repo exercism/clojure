@@ -32,29 +32,19 @@
     tree
     (rebuildTree (fromTrail tree (first trail)) (fnext trail))))
 
-(def tree {:value 3, :left nil, :right nil})
-(def trail [["right" 2 nil] [["left" 1 {:value 4, :left nil, :right nil}] []]])
-
-(fromTrail tree (first trail))
-
-(rebuildTree tree trail)
-(first (fnext trail))
-
 (defn toTree [z]
   (rebuildTree (:tree z) (:trail z)))
 
-(-> t1
-    fromTree
-    left
-    right
-    toTree
-    )
-
 (defn up [z]
-  (let [last (nth (:trail z) 0)]
-    (when-not (zero? (count (:trail z)))
-      (zipper (fromTrail (:tree z) last)
-              (rest (:trail z))))))
+  (when-not (zero? (count (:trail z)))
+    (zipper (fromTrail (:tree z) (first (:trail z)))
+            (rest (:trail z)))))
+
+(def z {:tree
+        {:value 1,
+         :left {:value 2, :left nil, :right {:value 3, :left nil, :right nil}},
+         :right {:value 4, :left nil, :right nil}},
+        :trail []})
 
 (defn setValue [z value]
   (zipper {:value value,
@@ -75,10 +65,7 @@
           (:trail z)))
 
 
-(let [z (-> t1
-            fromTree
-            )]
-  (when (:left (:tree z))
-    (zipper (:left (:tree z))
-            (conj [["left" (:value (:tree z)) (:right (:tree z))]]
-                  (:trail z)))))
+(-> t1
+    fromTree
+    ;up
+    )
