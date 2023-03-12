@@ -990,6 +990,17 @@
         "topics": [
           "conditionals"
         ]
+      },
+      {
+        "slug": "yacht",
+        "name": "Yacht",
+        "uuid": "459c8468-efc4-46a6-bbc0-9937167827a7",
+        "practices": [],
+        "prerequisites": ["strings", "vectors"],
+        "difficulty": 5,
+        "topics": [
+          "conditionals"
+        ]
       }
     ]
   },

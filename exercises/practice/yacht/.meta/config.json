@@ -1,0 +1,21 @@
+{
+    "authors": [
+      "porkostomus"
+    ],
+    "contributors": [],
+    "files": {
+      "solution": [
+        "src/yacht.clj"
+      ],
+      "test": [
+        "test/yacht_test.clj"
+      ],
+      "example": [
+        ".meta/src/example.clj"
+      ]
+    },
+    "blurb": "Score a single throw of dice in the game Yacht",
+    "source": "James Kilfiger, using wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Yacht_(dice_game)"
+  }
+  
