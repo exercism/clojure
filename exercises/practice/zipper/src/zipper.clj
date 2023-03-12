@@ -1,108 +1,84 @@
 (ns zipper)
 
-(defn to_zip [root]
-  [root nil])
+(def t1 {:value 1, :left {:value 2, :left nil, :right {:value 3, :left nil, :right nil}}, :right {:value 4, :left nil, :right nil}})
 
-(defn node [loc] (loc 0))
+(defn fromTrail [tree last]
+  (if (= (nth last 0) "left")
+    {:value (nth last 1), :left tree, :right (nth last 2)}
+    {:value (nth last 1), :left (nth last 2), :right tree}))
 
-(defn branch? [loc]
-  ((fn [x] (or (map? x) (map? (nth x 1)))) (node loc)))
+(defn fromTree [tree]
+  {:tree tree :trail []})
 
-(defn children [loc]
-  (if (branch? loc)
-    ((fn [x] (seq (if (map? x) x (nth x 1)))) (node loc))
-    (throw (Exception. "called children on a leaf node"))))
+(defn value [z] 
+  (:value (:tree z)))
 
-(defn make-node [loc node children]
-  ((fn [x children]
-     (if (map? x)
-       (into {} children)
-       (assoc x 1 (into {} children)))) node children))
+(defn zipper [tree trail]
+  {:tree tree :trail trail})
 
-(defn down [loc]
-  (when (branch? loc)
-    (let [[node path] loc
-          [c & cnext :as cs] (children loc)]
-      (when cs
-        [c {:l []
-            :pnodes (if path (conj (:pnodes path) node) [node])
-            :ppath path
-            :r cnext}]))))
+(defn left [z]
+   (when (:left (:tree z))
+   (zipper (:left (:tree z))
+            (conj [["left" (:value (:tree z)) (:right (:tree z))]]
+                     (:trail z)))))
+(defn right [z]
+  (when (:right (:tree z))
+    (zipper (:right (:tree z))
+            (conj [["right" (:value (:tree z)) (:left (:tree z))]]
+                  (:trail z)))))
 
-(defn next [loc]
-  (let [[node {l :l  [r & rnext :as rs] :r :as path}] loc]
-    (when (and path rs)
-      (with-meta [r (assoc path :l (conj l node) :r rnext)] (meta loc)))))
+(defn rebuildTree [tree trail]
+  (if (= 0 (count trail)) 
+    tree
+    (rebuildTree (fromTrail tree (first trail)) (fnext trail))))
 
-(defn prev [loc]
-  (let [[node {l :l r :r :as path}] loc]
-    (when (and path (seq l))
-      (with-meta [(peek l) (assoc path :l (pop l) :r (cons node r))] (meta loc)))))
+(def tree {:value 3, :left nil, :right nil})
+(def trail [["right" 2 nil] [["left" 1 {:value 4, :left nil, :right nil}] []]])
 
-(defn path [loc]
-  (:pnodes (loc 1)))
+(fromTrail tree (first trail))
 
-(defn up [loc]
-  (let [[node {l :l, ppath :ppath, pnodes :pnodes r :r, changed? :changed?, :as path}] loc]
-    (when pnodes
-      (let [pnode (peek pnodes)]
-        (if changed?
-          [(make-node loc pnode (concat l (cons node r)))
-           (and ppath (assoc ppath :changed? true))]
-          [pnode ppath])))))
+(rebuildTree tree trail)
+(first (fnext trail))
 
-(defn to_tree [loc]
-  (if (= :end (loc 1))
-    (node loc)
-    (let [p (up loc)]
-      (if p
-        (recur p)
-        (node loc)))))
+(defn toTree [z]
+  (rebuildTree (:tree z) (:trail z)))
 
-(defn set_value [z x])
+(-> t1
+    fromTree
+    left
+    right
+    toTree
+    )
 
-(defn set_left [z x])
+(defn up [z]
+  (let [last (nth (:trail z) 0)]
+    (when-not (zero? (count (:trail z)))
+      (zipper (fromTrail (:tree z) last)
+              (rest (:trail z))))))
 
-(defn set_right [z x])
+(defn setValue [z value]
+  (zipper {:value value,
+           :left  (:left (:tree z)),
+           :right (:right (:tree z))}
+          (:trail z)))
 
-(defn left 
-  "Takes a zipper with the focus at a tree node,
-   returns a new zipper navigated to its left child.
-   If no left child, returns nil."
-  [z]
-  (let [l (some #(when (= :left (ffirst %)) %) (iterate next (down z)))]
-    (when-not (nil? (first (nfirst l))) l)))
+(defn setLeft [z left]
+  (zipper {:value (:value (:tree z)),
+           :left  left,
+           :right (:right (:tree z))}
+          (:trail z)))
 
-(defn right
-  "Takes a zipper with the focus at a tree node,
-   returns a new zipper navigated to its right child.
-   If no right child, returns nil."
-  [z]
-  (let [r (some #(when (= :right (ffirst %)) %) (iterate next (down z)))]
-    (when-not (nil? (first (nfirst r))) r)))
+(defn setRight [z right]
+  (zipper {:value (:value (:tree z)),
+           :left  (:left (:tree z)),
+           :right right}
+          (:trail z)))
 
-(defn value
-  "Takes a zipper with the focus at a tree node,
-   returns its value."
-  [z]
-  (first (nfirst 
-          (some #(when (= :value (ffirst %)) %) (iterate next (down z))))))
 
-(comment 
-  (def tree
-    {:value 1
-     :left  {:value 2
-             :left  nil,
-             :right {:value 3
-                     :left  nil
-                     :right nil}},
-     :right {:value 4
-             :left  nil
-             :right nil}})
-  
-  (-> tree
-      to_zip
-      left
-      ;right
-      ;value
-      ))
+(let [z (-> t1
+            fromTree
+            )]
+  (when (:left (:tree z))
+    (zipper (:left (:tree z))
+            (conj [["left" (:value (:tree z)) (:right (:tree z))]]
+                  (:trail z)))))

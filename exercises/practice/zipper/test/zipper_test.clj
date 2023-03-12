@@ -4,23 +4,6 @@
 
 (def t1 {:value 1, :left {:value 2, :left nil, :right {:value 3, :left nil, :right nil}}, :right {:value 4, :left nil, :right nil}})
 
-(comment
-  (-> {:value 1, :left {:value 2, :left nil, :right {:value 3, :left nil, :right nil}}, :right {:value 4, :left nil, :right nil}} 
-      zipper/to_zip  zipper/to_tree)
-  
-
-  (-> t1
-      zipper/to_zip
-      zipper/left
-      zipper/right
-      zipper/value)
-  
-  (-> t1
-      zipper/to_zip
-      zipper/left
-      zipper/left)
-  )
-
 (deftest expectedValue-test
   (let [tree {:value 1
               :left  {:value 2
@@ -32,33 +15,34 @@
                       :left  nil
                       :right nil}}]
     (testing "data is retained"
-      (is (= tree (-> tree zipper/to_zip zipper/to_tree))))
+      (is (= tree (-> tree zipper/fromTree zipper/toTree))))
     (testing "left, right and value"
-      (is (= 3 (-> tree
-                   zipper/to_zip
+      (is (= 3 (-> t1
+                   zipper/fromTree
                    zipper/left
                    zipper/right
-                   zipper/value))))
+                   zipper/value
+                   ))))
     (testing "dead end"
       (is (= nil (-> tree
-                     zipper/to_zip
+                     zipper/fromTree
                      zipper/left
                      zipper/left))))
-    #_(testing "tree from deep focus"
+    (testing "tree from deep focus"
       (is (= tree (-> tree
-                      zipper/to_zip
+                      zipper/fromTree
                       zipper/left
                       zipper/right
-                      zipper/to_tree))))
+                      zipper/toTree))))
     #_(testing "traversing up from top"
       (is (= nil 
              (-> tree
-                 zipper/to_zip
+                 zipper/fromTree
                  zipper/up))))
     #_(testing "left, right, and up"
       (is (= 3 
              (-> tree
-                 zipper/to_zip
+                 zipper/fromTree
                  zipper/left
                  zipper/up
                  zipper/right
@@ -69,7 +53,7 @@
     #_(testing "test ability to descend multiple levels and return"
       (is (= 1 
              (-> tree
-                 zipper/to_zip
+                 zipper/fromTree
                  zipper/left
                  zipper/right
                  zipper/up
@@ -86,10 +70,10 @@
                       :left  nil
                       :right nil}} 
              (-> tree
-                 zipper/to_zip
+                 zipper/fromTree
                  zipper/left
-                 (zipper/set_value 5)
-                 zipper/to_tree))))
+                 (zipper/setValue 5)
+                 zipper/toTree))))
     #_(testing "set_value after traversing up"
       (is (= {:value 1
               :left  {:value 5
@@ -197,6 +181,4 @@
              zipper/up
              zipper/right)))))
 
-(comment
-  (run-tests)
-  )
+ (run-tests)
