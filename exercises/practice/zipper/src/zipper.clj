@@ -1,13 +1,11 @@
 (ns zipper)
 
-(def t1 {:value 1, :left {:value 2, :left nil, :right {:value 3, :left nil, :right nil}}, :right {:value 4, :left nil, :right nil}})
-
-(defn fromTrail [tree last]
+(defn from-trail [tree last]
   (if (= (nth last 0) "left")
     {:value (nth last 1), :left tree, :right (nth last 2)}
     {:value (nth last 1), :left (nth last 2), :right tree}))
 
-(defn fromTree [tree]
+(defn from-tree [tree]
   {:tree tree :trail []})
 
 (defn value [z] 
@@ -27,32 +25,32 @@
             (conj [["right" (:value (:tree z)) (:left (:tree z))]]
                   (:trail z)))))
 
-(defn rebuildTree [tree trail]
+(defn rebuild-tree [tree trail]
   (if (= 0 (count trail)) 
     tree
-    (rebuildTree (fromTrail tree (first trail)) (fnext trail))))
+    (rebuild-tree (from-trail tree (first trail)) (fnext trail))))
 
-(defn toTree [z]
-  (rebuildTree (:tree z) (:trail z)))
+(defn to-tree [z]
+  (rebuild-tree (:tree z) (:trail z)))
 
 (defn up [z]
   (when-not (zero? (count (:trail z)))
-    (zipper (fromTrail (:tree z) (first (:trail z)))
+    (zipper (from-trail (:tree z) (first (:trail z)))
             (fnext (:trail z)))))
 
-(defn setValue [z value]
+(defn set-value [z value]
   (zipper {:value value,
            :left  (:left (:tree z)),
            :right (:right (:tree z))}
           (:trail z)))
 
-(defn setLeft [z left]
+(defn set-left [z left]
   (zipper {:value (:value (:tree z)),
            :left  left,
            :right (:right (:tree z))}
           (:trail z)))
 
-(defn setRight [z right]
+(defn set-right [z right]
   (zipper {:value (:value (:tree z)),
            :left  (:left (:tree z)),
            :right right}
