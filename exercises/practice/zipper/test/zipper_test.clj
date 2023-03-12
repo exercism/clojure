@@ -59,7 +59,7 @@
                  zipper/up
                  zipper/up
                  zipper/value))))
-    #_(testing "set_value"
+    (testing "set_value"
       (is (= {:value 1
               :left  {:value 5
                       :left  nil
@@ -74,7 +74,7 @@
                  zipper/left
                  (zipper/setValue 5)
                  zipper/toTree))))
-    #_(testing "set_value after traversing up"
+    (testing "set_value after traversing up"
       (is (= {:value 1
               :left  {:value 5
                       :left  nil
@@ -85,13 +85,13 @@
                       :left  nil
                       :right nil}} 
              (-> tree
-                 zipper/to_zip
+                 zipper/fromTree
                  zipper/left
                  zipper/right
                  zipper/up
-                 (zipper/set_value 5)
-                 zipper/to_tree))))
-    #_(testing "set_left with leaf"
+                 (zipper/setValue 5)
+                 zipper/toTree))))
+    (testing "set_left with leaf"
       (is (= {:value 1
               :left  {:value 2
                       :left  {:value 5
@@ -104,13 +104,13 @@
                       :left  nil
                       :right nil}} 
              (-> tree
-                 zipper/to_zip
+                 zipper/fromTree
                  zipper/left
-                 (zipper/set_left {:value 5
+                 (zipper/setLeft {:value 5
                                    :left  nil
                                    :right nil})
-                 zipper/to_tree))))
-    #_(testing "set_right with null"
+                 zipper/toTree))))
+    (testing "set_right with null"
       (is (= {:value 1
               :left  {:value 2
                       :left  nil
@@ -119,11 +119,11 @@
                       :left  nil
                       :right nil}} 
              (-> tree
-                 zipper/to_zip
+                 zipper/fromTree
                  zipper/left
-                 (zipper/set_right nil)
-                 zipper/to_tree))))
-    #_(testing "set_right with subtree"
+                 (zipper/setRight nil)
+                 zipper/toTree))))
+    (testing "set_right with subtree"
       (is (= {:value 1
               :left  {:value 2
                       :left  nil
@@ -138,16 +138,16 @@
                               :left  nil
                               :right nil}}} 
              (-> tree
-                 zipper/to_zip
-                 (zipper/set_right {:value 6
+                 zipper/fromTree
+                 (zipper/setRight {:value 6
                                     :left  {:value 7
                                             :left  nil
                                             :right nil}
                                     :right {:value 8
                                             :left  nil
                                             :right nil}})
-                 zipper/to_tree))))
-    #_(testing "set_value on deep focus"
+                 zipper/toTree))))
+    (testing "set_value on deep focus"
       (is (= {:value 1
               :left  {:value 2
                       :left  nil
@@ -158,15 +158,25 @@
                       :left  nil
                       :right nil}} 
              (-> tree
-                 zipper/to_zip
+                 zipper/fromTree
                  zipper/left
                  zipper/right
-                 (zipper/set_value 5)
-                 zipper/to_tree))))))
+                 (zipper/setValue 5)
+                 zipper/toTree))))))
 
-#_(deftest sameResultFromOperations-test
+(deftest sameResultFromOperations-test
   (testing "different paths to same zipper"
-     (is (= nil 
+     (is (= (-> {:value 1
+                 :left  {:value 2
+                         :left  nil
+                         :right {:value 3
+                                 :left  nil
+                                 :right nil}}
+                 :right {:value 4
+                         :left  nil
+                         :right nil}}
+                zipper/fromTree
+                zipper/right)
          (-> {:value 1
               :left  {:value 2
                       :left  nil
@@ -176,7 +186,7 @@
               :right {:value 4
                       :left  nil
                       :right nil}}
-             zipper/to_zip
+             zipper/fromTree
              zipper/left
              zipper/up
              zipper/right)))))
