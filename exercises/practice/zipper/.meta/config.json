@@ -1,0 +1,10 @@
+{
+  "authors" : [ "porkostomus" ],
+  "contributors" : [ ],
+  "files" : {
+    "solution" : [ "src/zipper.clj" ],
+    "test" : [ "test/zipper_test.clj" ],
+    "example" : [ ".meta/src/example.clj" ]
+  },
+  "blurb" : "\"Creating a zipper for a binary tree.\""
+}

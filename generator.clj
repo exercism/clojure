@@ -13,6 +13,16 @@
      :description (slurp (str url "/" slug "/description.md"))
      :metadata (slurp (str url "/" slug "/metadata.toml"))}))
 
+(second
+ (str/split (:metadata data) #"="))
+
+(defn get-meta 
+  "Returns a vector containing the exercise title and blurb"
+  [data]
+  (mapv last
+       (map #(map str/trim (str/split % #"="))
+            (str/split-lines (:metadata data)))))
+
 (defn init-deps [data]
   (fs/create-dirs (fs/path "exercises" "practice"
                            (:exercise (:canonical-data data)) "src"))
@@ -107,3 +117,24 @@
       (fs/create-dir (apply fs/path path))
       (spit (str (apply fs/file (conj path "instructions.md")))
             (:description data)))))
+
+(defn config [data author blurb]
+  (let [slug (:exercise (:canonical-data data))]
+    {:authors [author],
+     :contributors [],
+     :files {:solution [(str "src/" (str/replace slug "-" "_") ".clj")], 
+             :test [(str "test/" (str/replace slug "-" "_") "_test.clj")], 
+             :example [".meta/src/example.clj"]},
+     :blurb blurb}))
+
+(defn init-config! [data]
+  (let [path ["exercises" "practice" (:exercise (:canonical-data data)) ".meta"]]
+    (when-not (fs/directory? (apply fs/path path))
+   (fs/create-dirs (apply fs/path (conj path "src")))
+      (spit (str (apply fs/file (conj path "config.json")))
+            (json/generate-string (config data "porkostomus" (last (get-meta data)))
+                                  {:pretty true})))))
+
+(comment
+  (init-config! data)
+  )
