@@ -1001,6 +1001,17 @@
         "topics": [
           "conditionals"
         ]
+      },
+      {
+        "slug": "zipper",
+        "name": "Zipper",
+        "uuid": "331b2960-baae-4331-a462-a434fd6e8767",
+        "practices": [],
+        "prerequisites": ["strings", "vectors"],
+        "difficulty": 9,
+        "topics": [
+          "conditionals"
+        ]
       }
     ]
   },
