@@ -16,8 +16,8 @@
 )
 
 (defn discard-top-card
-  "Returns a vector containing the first card and
-   a vector of the remaining cards in the deck."
+  "Returns a sequence containing the first card and
+   a sequence of the remaining cards in the deck."
   [deck]
 )
 

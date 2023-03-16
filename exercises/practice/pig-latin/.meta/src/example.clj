@@ -11,7 +11,7 @@
   (starts-with-any #{"a" "e" "i" "o" "u"} word))
 
 (defn- starts-with-two-letter-prefix? [word]
-  (starts-with-any #{"ch" "qu" "th"} word))
+  (starts-with-any #{"ch" "qu" "th" "rh"} word))
 
 (defn- starts-with-three-letter-prefix? [word]
   (starts-with-any #{"thr" "sch"} word))
