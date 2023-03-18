@@ -25,4 +25,13 @@ Using an atom allows for some state to be preserved:
     (fn [] (swap! counter inc))))
 ```
 
+Each successive call to `increment' increments its counter:
+
+``` clojure
+(increment)
+;;=> 1
+(increment)
+;;=> 2
+```
+
 [wiki-lexical-scope]: https://en.wikipedia.org/wiki/Scope_(computer_science)#Lexical_scoping
