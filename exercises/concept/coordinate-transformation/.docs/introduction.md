@@ -1,6 +1,6 @@
 # Introduction
 
-**Closures** are a programming pattern in Clojure which allows variables from an outer [lexical scope][wiki-lexical-scope] to be used inside of a function. Clojure supports closures transparently, and they are often used without knowing what they are.
+**Closures** are a programming pattern [in Clojure][clojure-guide-closures] which allows variables from an outer [lexical scope][wiki-lexical-scope] to be used inside of a function. Clojure supports closures transparently, and they are often used without knowing what they are.
 
 ```clojure
 ;; Top-level definitions are global-scope
@@ -35,3 +35,4 @@ Each successive call to `increment' increments its counter:
 ```
 
 [wiki-lexical-scope]: https://en.wikipedia.org/wiki/Scope_(computer_science)#Lexical_scoping
+[clojure-guide-closures]: https://clojure.org/guides/higher_order_functions#_functions_returning_functions_and_closures
