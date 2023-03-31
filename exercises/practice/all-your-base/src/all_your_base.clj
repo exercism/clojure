@@ -1,5 +1,5 @@
 (ns all-your-base)
 
-(defn convert [] ;; <- arglist goes here
+(defn convert [x y z] ;; <- arglist goes here
   ;; your code goes here
 )
