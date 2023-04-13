@@ -6,6 +6,9 @@ Top-level vars are defined using `def`:
 
 ```clojure
 (def fingers 10)
+
+fingers
+;;=> 10
 ```
 
 The `defn` macro can be used to define a function taking zero or more arguments. A function always returns the result of the last expression in its body.
@@ -15,10 +18,15 @@ The `defn` macro can be used to define a function taking zero or more arguments.
   (+ x y))
 ```
 
+`[x y]` is the function's arglist, which are inside a vector. More about them later, but one of the biggest syntactical differences between Clojure and other Lisps is the addition of built-in data structure literals besides lists. 
+
+A nice benefit of this is consistency - we always know that unquoted lists represent function calls, making it easier to visually distinguish *code* from *data*, the vector of arguments being the latter.
+
 Invoking a function is done by specifying its name and passing arguments for each of the function's parameters.
 
 ```clojure
-(def five (add 2 3))
+(add 2 3)
+;;=> 5
 ```
 
 Functions and values in Clojure can only be used _after_ they have been defined. Using it before it has been defined results in a compile error.
