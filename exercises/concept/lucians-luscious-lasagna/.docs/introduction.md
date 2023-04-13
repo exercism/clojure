@@ -18,7 +18,7 @@ The `defn` macro can be used to define a function taking zero or more arguments.
   (+ x y))
 ```
 
-`[x y]` is the function's arglist, which are inside a vector. More about them later, but one of the biggest syntactical differences between Clojure and other Lisps is the addition of built-in data structure literals besides lists. 
+`[x y]` is the function's arglist, with the parameters placed inside of a vector. More about vectors later, but they are similar to arrays in other languages. One of the biggest syntactical differences between Clojure and other Lisps is the addition of built-in data structure literals besides lists. 
 
 A nice benefit of this is consistency - we always know that unquoted lists represent function calls, making it easier to visually distinguish *code* from *data*, the vector of arguments being the latter.
 
