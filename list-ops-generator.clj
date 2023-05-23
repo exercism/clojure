@@ -130,14 +130,19 @@
   (init-tests! data)
   )
 
-(defn init-src [data]
+(defn init-src! [data]
   (spit (str (fs/file "exercises" "practice" (:exercise (:canonical-data data)) "src"
                       (str (str/replace (:exercise (:canonical-data data))
                                         "-" "_") ".clj")))
         (str (src-ns-form (:canonical-data data))
              (apply str (interpose "\n\n"
-                                   (for [property (distinct (map :property (:cases (:canonical-data data))))]
+                                   (for [property (distinct (map :property (mapcat :cases
+                                                                                   (:cases (:canonical-data data)))))]
                                      (str "(defn " property " []\n  )")))))))
+
+(comment
+  (init-src! data)
+  )
 
 (defn init-description! [data]
   (let [path ["exercises" "practice" (:exercise (:canonical-data data)) ".docs"]]
