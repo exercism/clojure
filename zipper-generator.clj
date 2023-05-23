@@ -5,7 +5,7 @@
          '[clojure.string :as str])
 
 (comment
-  (def slug "list-ops"))
+  (def slug "zipper"))
 
 (def data
   (let [url "https://raw.githubusercontent.com/exercism/problem-specifications/main/exercises/"]
@@ -16,14 +16,14 @@
 (second
  (str/split (:metadata data) #"="))
 
-(defn get-meta 
+(defn get-meta
   "Returns a vector containing the exercise title and blurb"
   [data]
   (mapv last
-       (map #(map str/trim (str/split % #"="))
-            (str/split-lines (:metadata data)))))
+        (map #(map str/trim (str/split % #"="))
+             (str/split-lines (:metadata data)))))
 
-(defn init-deps! [data]
+(defn init-deps [data]
   (fs/create-dirs (fs/path "exercises" "practice"
                            (:exercise (:canonical-data data)) "src"))
   (spit (str (fs/file "exercises" "practice"
@@ -36,23 +36,15 @@
                  :main-opts [\"-m\" \"cognitect.test-runner\"]
                  :exec-fn cognitect.test-runner.api/test}}}"))
 
-(comment
-  (init-deps! data)
-  )
-
-(defn init-lein! [data]
+(defn init-lein [data]
   (let [slug (:exercise (:canonical-data data))]
     (spit (str (fs/file "exercises" "practice"
                         (:exercise (:canonical-data data)) "project.clj"))
           (str "(defproject " slug " \"0.1.0-SNAPSHOT\"
   :description \"" slug " exercise.\"
-  :url \"https://github.com/exercism/clojure/tree/main/exercises/" slug "\"
+  :url \"https://github.com/exercism/clojure/tree/master/exercises/" slug "\"
   :dependencies [[org.clojure/clojure \"1.10.0\"]])
 "))))
-
-(comment
-  (init-lein! data)
-  )
 
 (defn test-ns-form [data]
   (str "(ns " (:exercise data) "-test
@@ -70,22 +62,27 @@
      (is (= " (:expected test-case) " "
          (reverse (into (list property) args)) ")))")))
 
-(comment
-  (testing-form "list-ops" (first (:cases (first (:cases (:canonical-data data))))))
-  )
+(defn zipper-generator [slug test-case]
+  (let [input (:input test-case)
+        ops (for [op (:operations input)]
+              (if (contains? op :item)
+                (str "(zipper/" (:operation op) " "
+                     (if (nil? (:item op))
+                       "nil"
+                       (str (:item op))) ")")
+                (str "zipper/" (:operation op))))]
+    (str "  (testing \"" (:description test-case) "\"
+     (is (= " (if (nil? (:value (:expected test-case)))
+                "nil" (:value (:expected test-case))) " "
+         "\n         (-> " (:initialTree input) "\n           "
+         (apply str (interpose "\n           " ops)) "))))")))
 
 (defn testing-forms
   "Outputs a sequence of the test cases for a given property name
    given its name as a string and the canonical data."
   [property data]
-  (let [test-cases (filter #(= property (:property %))
-                           (mapcat :cases
-                                   (:cases (:canonical-data data))))]
-    (map #(testing-form (:exercise (:canonical-data data)) %) test-cases)))
-
-(comment
-  (testing-forms "append" data)
-  )
+  (let [test-cases (filter #(= property (:property %)) (:cases data))]
+    (map #(zipper-generator (:exercise data) %) test-cases)))
 
 (defn deftest-forms [data]
   (for [property (distinct (map :property (:cases (:canonical-data data))))]
@@ -121,27 +118,22 @@
       (spit (str (apply fs/file (conj path "instructions.md")))
             (:description data)))))
 
-(comment
-  (init-description! data)
-  )
-
 (defn config [data author blurb]
   (let [slug (:exercise (:canonical-data data))]
     {:authors [author],
      :contributors [],
-     :files {:solution [(str "src/" (str/replace slug "-" "_") ".clj")], 
-             :test [(str "test/" (str/replace slug "-" "_") "_test.clj")], 
+     :files {:solution [(str "src/" (str/replace slug "-" "_") ".clj")],
+             :test [(str "test/" (str/replace slug "-" "_") "_test.clj")],
              :example [".meta/src/example.clj"]},
      :blurb blurb}))
 
 (defn init-config! [data]
   (let [path ["exercises" "practice" (:exercise (:canonical-data data)) ".meta"]]
     (when-not (fs/directory? (apply fs/path path))
-   (fs/create-dirs (apply fs/path (conj path "src")))
+      (fs/create-dirs (apply fs/path (conj path "src")))
       (spit (str (apply fs/file (conj path "config.json")))
             (json/generate-string (config data "porkostomus" (last (get-meta data)))
                                   {:pretty true})))))
 
 (comment
-  (init-config! data)
-  )
+  (init-config! data))
