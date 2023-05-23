@@ -88,22 +88,33 @@
   )
 
 (defn deftest-forms [data]
-  (for [property (distinct (map :property (:cases (:canonical-data data))))]
+  (for [property (distinct (map :property (mapcat :cases
+                                                  (:cases (:canonical-data data)))))]
     (str "(deftest " property "-test\n"
          (apply str (interpose "\n"
-                               (testing-forms property (:canonical-data data))))
+                               (testing-forms property data)))
          ")")))
 
-(defn init-tests [data]
-  #_(fs/create-dir (fs/path "exercises" "practice"
-                            (:exercise (:canonical-data data)) "test"))
-  (spit (str (fs/file "exercises" "practice"
-                      (:exercise (:canonical-data data)) "test"
-                      (str (str/replace (:exercise (:canonical-data data)) "-" "_")
-                           "_test.clj")))
-        (str (test-ns-form (:canonical-data data))
-             (apply str (interpose "\n\n"
-                                   (deftest-forms data))))))
+(comment
+  (deftest-forms data)
+  )
+
+(defn init-tests! [data]
+  (let [path (fs/path "exercises" "practice"
+                      (:exercise (:canonical-data data)) "test")]
+    (when-not (fs/directory? path)
+      (fs/create-dir path))
+    (spit (str (fs/file "exercises" "practice"
+                        (:exercise (:canonical-data data)) "test"
+                        (str (str/replace (:exercise (:canonical-data data)) "-" "_")
+                             "_test.clj")))
+          (str (test-ns-form (:canonical-data data))
+               (apply str (interpose "\n\n"
+                                     (deftest-forms data)))))))
+
+(comment
+  (init-tests! data)
+  )
 
 (defn init-src [data]
   (spit (str (fs/file "exercises" "practice" (:exercise (:canonical-data data)) "src"
