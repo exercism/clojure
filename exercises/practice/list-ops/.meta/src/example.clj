@@ -7,7 +7,11 @@
   (apply clojure.core/concat list))
 
 (defn filter [f list]
-  (clojure.core/filter f list))
+  (loop [acc [] l list]
+    (cond 
+      (empty? l) acc
+      (f (first l)) (recur (conj acc (first l)) (rest l))
+      :else (recur acc (rest l)))))
 
 (defn length [list]
   (count list))
