@@ -5,7 +5,7 @@
          '[clojure.string :as str])
 
 (comment
-  (def slug "zipper"))
+  (def slug "list-ops"))
 
 (def data
   (let [url "https://raw.githubusercontent.com/exercism/problem-specifications/main/exercises/"]
@@ -23,7 +23,7 @@
        (map #(map str/trim (str/split % #"="))
             (str/split-lines (:metadata data)))))
 
-(defn init-deps [data]
+(defn init-deps! [data]
   (fs/create-dirs (fs/path "exercises" "practice"
                            (:exercise (:canonical-data data)) "src"))
   (spit (str (fs/file "exercises" "practice"
@@ -36,15 +36,23 @@
                  :main-opts [\"-m\" \"cognitect.test-runner\"]
                  :exec-fn cognitect.test-runner.api/test}}}"))
 
-(defn init-lein [data]
+(comment
+  (init-deps! data)
+  )
+
+(defn init-lein! [data]
   (let [slug (:exercise (:canonical-data data))]
     (spit (str (fs/file "exercises" "practice"
                         (:exercise (:canonical-data data)) "project.clj"))
           (str "(defproject " slug " \"0.1.0-SNAPSHOT\"
   :description \"" slug " exercise.\"
-  :url \"https://github.com/exercism/clojure/tree/master/exercises/" slug "\"
+  :url \"https://github.com/exercism/clojure/tree/main/exercises/" slug "\"
   :dependencies [[org.clojure/clojure \"1.10.0\"]])
 "))))
+
+(comment
+  (init-lein! data)
+  )
 
 (defn test-ns-form [data]
   (str "(ns " (:exercise data) "-test
