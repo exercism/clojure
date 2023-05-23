@@ -2,7 +2,8 @@
 
 (require '[cheshire.core :as json]
          '[babashka.fs :as fs]
-         '[clojure.string :as str])
+         '[clojure.string :as str]
+         '[clojure.edn :as edn])
 
 (comment
   (def slug "list-ops"))
@@ -61,6 +62,19 @@
 
 (defn src-ns-form [data]
   (str "(ns " (:exercise data) ")\n\n"))
+
+(defn trans-fn [s]
+  (let [[args body] (str/split s #"->")
+        arg-strs (mapv str (edn/read-string args))
+        [arg1 op arg2] (str/split (str/trim body) #"\s")]
+    (str "(fn [" (apply str (interpose " " arg-strs)) "] " 
+         "(" op " " arg1 " " arg2 "))")))
+
+(comment
+  (trans-fn "(x) -> x + 1")  
+  (trans-fn "(x, y) -> x * y")
+  (trans-fn "(acc, el) -> el * acc")
+  )
 
 (defn testing-form [slug test-case]
   (let [property (symbol (str slug "/" (:property test-case)))
