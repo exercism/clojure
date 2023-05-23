@@ -22,9 +22,9 @@
 
 (deftest filter-test
   (testing "empty list"
-     (is (= [] (list-ops/filter [] "(x) -> x modulo 2 == 1"))))
+     (is (= [] (list-ops/filter [] (fn [x] (= (mod x 2) 1)))))
   (testing "non-empty list"
-     (is (= [1 3 5] (list-ops/filter [1 2 3 5] "(x) -> x modulo 2 == 1")))))
+     (is (= [1 3 5] (list-ops/filter [1 2 3 5] (fn [x] (= (mod x 2) 1))))))))
 
 (deftest length-test
   (testing "empty list"
@@ -34,37 +34,37 @@
 
 (deftest map-test
   (testing "empty list"
-     (is (= [] (list-ops/map [] "(x) -> x + 1"))))
+     (is (= [] (list-ops/map [] (fn [x] (+ x 1))))))
   (testing "non-empty list"
-     (is (= [2 4 6 8] (list-ops/map [1 3 5 7] "(x) -> x + 1")))))
+     (is (= [2 4 6 8] (list-ops/map [1 3 5 7] (fn [x] (+ x 1)))))))
 
 (deftest foldl-test
   (testing "empty list"
-     (is (= 2 (list-ops/foldl [] 2 "(x, y) -> x * y"))))
+     (is (= 2 (list-ops/foldl [] 2 (fn [x y] (* x y))))))
   (testing "direction independent function applied to non-empty list"
-     (is (= 15 (list-ops/foldl [1 2 3 4] 5 "(x, y) -> x + y"))))
+     (is (= 15 (list-ops/foldl [1 2 3 4] 5 (fn [x y] (+ x y))))))
   (testing "direction dependent function applied to non-empty list"
-     (is (= 0 (list-ops/foldl [2 5] 5 "(x, y) -> x / y"))))
+     (is (= 0 (list-ops/foldl [2 5] 5 (fn [x y] (/ x y))))))
   (testing "empty list"
-     (is (= 2 (list-ops/foldl [] 2 "(acc, el) -> el * acc"))))
+     (is (= 2 (list-ops/foldl [] 2 (fn [acc el] (* el acc))))))
   (testing "direction independent function applied to non-empty list"
-     (is (= 15 (list-ops/foldl [1 2 3 4] 5 "(acc, el) -> el + acc"))))
+     (is (= 15 (list-ops/foldl [1 2 3 4] 5 (fn [acc el] (+ el acc))))))
   (testing "direction dependent function applied to non-empty list"
-     (is (= 64 (list-ops/foldl [1 2 3 4] 24 "(acc, el) -> el / acc")))))
+     (is (= 64 (list-ops/foldl [1 2 3 4] 24 (fn [acc el] (/ el acc)))))))
 
 (deftest foldr-test
   (testing "empty list"
-     (is (= 2 (list-ops/foldr [] 2 "(x, y) -> x * y"))))
+     (is (= 2 (list-ops/foldr [] 2 (fn [x y] (* x y))))))
   (testing "direction independent function applied to non-empty list"
-     (is (= 15 (list-ops/foldr [1 2 3 4] 5 "(x, y) -> x + y"))))
+     (is (= 15 (list-ops/foldr [1 2 3 4] 5 (fn [x y] (+ x y))))))
   (testing "direction dependent function applied to non-empty list"
-     (is (= 2 (list-ops/foldr [2 5] 5 "(x, y) -> x / y"))))
+     (is (= 2 (list-ops/foldr [2 5] 5 (fn [x y] (/ x y))))))
   (testing "empty list"
-     (is (= 2 (list-ops/foldr [] 2 "(acc, el) -> el * acc"))))
+     (is (= 2 (list-ops/foldr [] 2 (fn [acc el] (* el acc))))))
   (testing "direction independent function applied to non-empty list"
-     (is (= 15 (list-ops/foldr [1 2 3 4] 5 "(acc, el) -> el + acc"))))
+     (is (= 15 (list-ops/foldr [1 2 3 4] 5 (fn [acc el] (+ el acc))))))
   (testing "direction dependent function applied to non-empty list"
-     (is (= 9 (list-ops/foldr [1 2 3 4] 24 "(acc, el) -> el / acc")))))
+     (is (= 9 (list-ops/foldr [1 2 3 4] 24 (fn [acc el] (/ el acc)))))))
 
 (deftest reverse-test
   (testing "empty list"
