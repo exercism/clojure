@@ -17,7 +17,9 @@
   (count list))
 
 (defn map [f list]
-  (clojure.core/map f list))
+  (lazy-seq 
+   (when (seq list) 
+     (cons (f (first list)) (map f (rest list))))))
 
 (defn foldl [f list init]
   (reduce f init list))
