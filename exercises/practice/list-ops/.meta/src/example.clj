@@ -4,16 +4,22 @@
   (into list1 list2))
 
 (defn concat [list]
-  (flatten list))
+  (apply clojure.core/concat list))
 
-(defn filter [f list])
+(defn filter [f list]
+  (clojure.core/filter f list))
 
-(defn length [list])
+(defn length [list]
+  (count list))
 
-(defn map [f list])
+(defn map [f list]
+  (clojure.core/map f list))
 
-(defn foldl [f list init])
+(defn foldl [f list init]
+  (reduce f init list))
 
-(defn foldr [f list init])
+(defn foldr [f list init]
+  (reduce f init (reverse list)))
 
-(defn reverse [list])
+(defn reverse [list]
+  (clojure.core/reverse list))
