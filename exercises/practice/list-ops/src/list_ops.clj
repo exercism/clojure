@@ -1,25 +1,25 @@
 (ns list-ops)
 
-(defn append []
-  )
+(defn append [list1 list2]
+  (into list1 list2))
 
-(defn concat []
-  )
+(defn concat [list]
+  (apply clojure.core/concat list))
 
-(defn filter []
-  )
+(defn filter [f list]
+  (clojure.core/filter f list))
 
-(defn length []
-  )
+(defn length [list]
+  (count list))
 
-(defn map []
-  )
+(defn map [f list]
+  (clojure.core/map f list))
 
-(defn foldl []
-  )
+(defn foldl [f list init]
+  (reduce f init list))
 
-(defn foldr []
-  )
+(defn foldr [f list init]
+  (reduce f init (reverse list)))
 
-(defn reverse []
-  )
+(defn reverse [list]
+  (clojure.core/reverse list))

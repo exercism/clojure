@@ -22,9 +22,9 @@
 
 (deftest filter-test
   (testing "empty list"
-     (is (= [] (list-ops/filter [] (fn [x] (= (mod x 2) 1)))))
+     (is (= [] (list-ops/filter (fn [x] (= (mod x 2) 1)) [])))
   (testing "non-empty list"
-     (is (= [1 3 5] (list-ops/filter [1 2 3 5] (fn [x] (= (mod x 2) 1))))))))
+     (is (= [1 3 5] (list-ops/filter (fn [x] (= (mod x 2) 1)) [1 2 3 5]))))))
 
 (deftest length-test
   (testing "empty list"
@@ -34,37 +34,25 @@
 
 (deftest map-test
   (testing "empty list"
-     (is (= [] (list-ops/map [] (fn [x] (+ x 1))))))
+     (is (= [] (list-ops/map (fn [x] (+ x 1)) []))))
   (testing "non-empty list"
-     (is (= [2 4 6 8] (list-ops/map [1 3 5 7] (fn [x] (+ x 1)))))))
+     (is (= [2 4 6 8] (list-ops/map (fn [x] (+ x 1)) [1 3 5 7])))))
 
 (deftest foldl-test
   (testing "empty list"
-     (is (= 2 (list-ops/foldl [] 2 (fn [x y] (* x y))))))
+     (is (= 2 (list-ops/foldl (fn [acc el] (* el acc)) [] 2))))
   (testing "direction independent function applied to non-empty list"
-     (is (= 15 (list-ops/foldl [1 2 3 4] 5 (fn [x y] (+ x y))))))
+     (is (= 15 (list-ops/foldl (fn [acc el] (+ el acc)) [1 2 3 4] 5))))
   (testing "direction dependent function applied to non-empty list"
-     (is (= 0 (list-ops/foldl [2 5] 5 (fn [x y] (/ x y))))))
-  (testing "empty list"
-     (is (= 2 (list-ops/foldl [] 2 (fn [acc el] (* el acc))))))
-  (testing "direction independent function applied to non-empty list"
-     (is (= 15 (list-ops/foldl [1 2 3 4] 5 (fn [acc el] (+ el acc))))))
-  (testing "direction dependent function applied to non-empty list"
-     (is (= 64 (list-ops/foldl [1 2 3 4] 24 (fn [acc el] (/ el acc)))))))
+     (is (= 64 (list-ops/foldl (fn [acc el] (/ el acc)) [1 2 3 4] 24)))))
 
 (deftest foldr-test
   (testing "empty list"
-     (is (= 2 (list-ops/foldr [] 2 (fn [x y] (* x y))))))
+     (is (= 2 (list-ops/foldr (fn [acc el] (* el acc)) [] 2))))
   (testing "direction independent function applied to non-empty list"
-     (is (= 15 (list-ops/foldr [1 2 3 4] 5 (fn [x y] (+ x y))))))
+     (is (= 15 (list-ops/foldr (fn [acc el] (+ el acc)) [1 2 3 4] 5))))
   (testing "direction dependent function applied to non-empty list"
-     (is (= 2 (list-ops/foldr [2 5] 5 (fn [x y] (/ x y))))))
-  (testing "empty list"
-     (is (= 2 (list-ops/foldr [] 2 (fn [acc el] (* el acc))))))
-  (testing "direction independent function applied to non-empty list"
-     (is (= 15 (list-ops/foldr [1 2 3 4] 5 (fn [acc el] (+ el acc))))))
-  (testing "direction dependent function applied to non-empty list"
-     (is (= 9 (list-ops/foldr [1 2 3 4] 24 (fn [acc el] (/ el acc)))))))
+     (is (= 9 (list-ops/foldr (fn [acc el] (/ el acc)) [1 2 3 4] 24)))))
 
 (deftest reverse-test
   (testing "empty list"
@@ -73,3 +61,5 @@
      (is (= [7 5 3 1] (list-ops/reverse [1 3 5 7]))))
   (testing "list of lists is not flattened"
      (is (= [[4 5 6] [] [3] [1 2]] (list-ops/reverse [[1 2] [3] [] [4 5 6]])))))
+
+;(clojure.test/run-tests)
