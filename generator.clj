@@ -70,6 +70,8 @@
      (is (= " (:expected test-case) " "
          (reverse (into (list property) args)) ")))")))
 
+(first (:cases (:canonical-data data)))
+
 (defn zipper-generator [slug test-case]
   (let [input (:input test-case)
         ops (for [op (:operations input)]
@@ -125,6 +127,10 @@
       (fs/create-dir (apply fs/path path))
       (spit (str (apply fs/file (conj path "instructions.md")))
             (:description data)))))
+
+(comment
+  (init-description! data)
+  )
 
 (defn config [data author blurb]
   (let [slug (:exercise (:canonical-data data))]
