@@ -92,6 +92,7 @@ clj
 ## Install Leiningen (optional)
 
 While no longer necessary, we still support the full featured project management tool [Leiningen](https://leiningen.org/).
+It offers a wide variety of helpful tasks like convenient testing, builds, and an improved REPL.
 
 1. Download the [lein script](https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein) or [lein.bat](https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein.bat) (Windows)
 2. Place it on your `$PATH` where your shell can find it (eg. `/usr/local/bin/`)
