@@ -42,7 +42,9 @@ brew install --cask temurin17
 ### Windows
 
 Clojure on Windows has improved significantly recently. We used to recommended using WSL2, which works great,
-but there is now a PowerShell installer. Make sure Java is installed and the `JAVA_HOME` environment variable is set, and run:
+but there is now a PowerShell installer. Clojure on Windows is currently in an alpha state, see [clj-on-windows](https://github.com/clojure/tools.deps.alpha/wiki/clj-on-Windows#known-issues) for known issues.
+
+Make sure Java is installed and the `JAVA_HOME` environment variable is set, and run:
 
 ```powershell
 iwr -useb download.clojure.org/install/win-install-1.11.1.1165.ps1 | iex
