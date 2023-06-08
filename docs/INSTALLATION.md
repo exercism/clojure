@@ -53,7 +53,7 @@ Another way to install Clojure on Windows is with the [Scoop](https://scoop.sh/)
  ```sh
  iwr -useb get.scoop.sh | iex
 Set-ExecutionPolicy RemoteSigned -Scope CurrentUser -Force
-``
+```
 
 To install Clojure with Scoop you have to add two important buckets first:
 
