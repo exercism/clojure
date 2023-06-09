@@ -12,15 +12,14 @@
 
 (defn camelize [s]
     (let [words (str/split s #"-")]
-      (if (str/includes? s "-")
-      (str/join "" (cons (first words)
-                         (cons (str/upper-case (ffirst (rest words)))
-                               (rest (first (rest words))))))
-    s)))
+      (if-not (str/includes? s "-") s
+              (str/join (cons (first words)
+                              (cons (str/upper-case (ffirst (rest words)))
+                                    (nfirst (rest words))))))))
 
 (defn letters [s]
-  (apply str (filter #(or (Character/isLetter %)
-                        (= \_ %))
+  (apply str (filter #(or (Character/isLetter %) 
+                          (= \_ %)) 
                      s)))
 
 (defn clean-greek [s]
@@ -28,8 +27,8 @@
 
 (defn clean [s]
   (-> s
-       (str/replace " " "_")
-       camelize
+      (str/replace " " "_")
+      camelize
       escape-ctrl
       letters
       clean-greek))

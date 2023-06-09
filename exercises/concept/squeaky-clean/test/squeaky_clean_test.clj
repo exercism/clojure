@@ -6,7 +6,7 @@
   (is (= "A" (squeaky-clean/clean "A"))))
 
 (deftest ^{:task 1} clean-clean-string
-  (is (= "àḃç" (squeaky-clean/clean "àḃç"))))
+  (is (= "àḃç" (squeaky-clean/clean "àḃç")))) 
 
 (deftest ^{:task 1} clean-string-with-spaces
   (is (= "my___Id" (squeaky-clean/clean "my   Id"))))
@@ -28,3 +28,7 @@
 
 (deftest ^{:task 3} combine-conversions
   (is (= "_AbcĐCTRL" (squeaky-clean/clean "9 -abcĐ😀ω\0"))))
+
+(comment
+  (clojure.test/run-tests)
+  )
