@@ -142,9 +142,9 @@
         "slug": "squeaky-clean",
         "name": "Squeaky Clean",
         "uuid": "3af5b219-d751-4243-89f7-c8f05216f534",
-        "concepts": [],
-        "prerequisites": [],
-        "status": "wip"
+        "concepts": ["chars"],
+        "prerequisites": ["basics", "strings"],
+        "status": "beta"
       },
       {
         "slug": "date-parser",
@@ -1058,6 +1058,11 @@
       "uuid": "c0b42493-d4e3-4a71-a7d1-2eaaae4eaeaa",
       "slug": "strings",
       "name": "Strings"
+    },
+    {
+      "uuid": "3e962be9-e7e8-445a-9eb7-206eb1310e9f",
+      "slug": "chars",
+      "name": "Chars"
     },
     {
       "uuid": "7aa13ace-5597-4d6c-8f93-8b0fb97cf2ff",
