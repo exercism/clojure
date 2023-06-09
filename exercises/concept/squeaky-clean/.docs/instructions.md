@@ -45,7 +45,16 @@ Modify the `clean` function to convert kebab-case to camelCase.
 ;;=> "àḂç"
 ```
 
-## 4. Omit Greek lower case letters
+## 4. Omit characters that are not letters
+
+Modify the `clean` function to omit any characters that are not letters.
+
+```clojure
+(clean "1😀2😀3😀")
+;; => ""
+```
+
+## 5. Omit Greek lower case letters
 
 Modify the `clean` function to omit any Greek letters in the range 'α' to 'ω'.
 
