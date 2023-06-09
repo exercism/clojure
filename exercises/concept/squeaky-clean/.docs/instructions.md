@@ -48,6 +48,7 @@ Modify the `clean` function to convert kebab-case to camelCase.
 ## 4. Omit characters that are not letters
 
 Modify the `clean` function to omit any characters that are not letters.
+Note: The underscores must be preserved from the previous step.
 
 ```clojure
 (clean "1😀2😀3😀")
