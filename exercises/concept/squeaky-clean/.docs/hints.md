@@ -19,7 +19,7 @@ You can filter characters using [Character/isLetter][java-isletter] as a predica
 
 ## 5. Omit Greek lower case letters
 
-
+The lower-case Greek letters are Unicode points `\u03B1` to `\u03C9`, or integer values 945 through 969.
 
 [str-join]: https://clojuredocs.org/clojure.string/join
 [str-upper-case]: https://clojuredocs.org/clojure.string/upper-case
