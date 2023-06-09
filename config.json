@@ -1060,6 +1060,11 @@
       "name": "Strings"
     },
     {
+      "uuid": "3e962be9-e7e8-445a-9eb7-206eb1310e9f",
+      "slug": "chars",
+      "name": "Chars"
+    },
+    {
       "uuid": "7aa13ace-5597-4d6c-8f93-8b0fb97cf2ff",
       "slug": "vectors",
       "name": "Vectors"
