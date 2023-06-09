@@ -144,7 +144,7 @@
         "uuid": "3af5b219-d751-4243-89f7-c8f05216f534",
         "concepts": [],
         "prerequisites": [],
-        "status": "wip"
+        "status": "beta"
       },
       {
         "slug": "date-parser",
