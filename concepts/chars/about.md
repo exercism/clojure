@@ -4,7 +4,7 @@ Clojure uses the underlying `java.lang.Character` type, which is a 16 bit quanti
 Multiple `char`s can comprise a string such as `"word"` or `char`s can be
 processed independently. Their literals have single quotes e.g. `'A'`.
 
-C# `char`s support UTF-16 Unicode encoding so in addition to the latin character set
+Clojure's `char`s support UTF-16 Unicode encoding so in addition to the latin character set
 pretty much all the writing systems in use world can be represented,
 e.g. the Greek letter `'β'`.
 
