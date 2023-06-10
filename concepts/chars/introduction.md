@@ -2,7 +2,7 @@
 
 Clojure uses the underlying `java.lang.Character` type, which is a 16 bit quantity to represent the smallest addressable components of text.
 Multiple `char`s can comprise a string such as `"word"` or `char`s can be
-processed independently. Their literals have single quotes e.g. `'A'`.
+processed independently. Their literals have double quotes e.g. `"A"`.
 
 Clojure's `char`s support UTF-16 Unicode encoding so in addition to the latin character set
 pretty much all the writing systems in use world can be represented,
