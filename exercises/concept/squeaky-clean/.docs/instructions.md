@@ -3,7 +3,7 @@
 In this exercise you will implement a partial set of utility routines 
 to help a developer clean up identifier names.
 
-In the 4 tasks you will gradually build up the routine `clean`. 
+In the 5 tasks you will gradually build up the routine `clean`. 
 A valid identifier comprises zero or more letters and underscores.
 
 In all cases the input string is guaranteed to be non-nil. 
@@ -48,6 +48,7 @@ Modify the `clean` function to convert kebab-case to camelCase.
 ## 4. Omit characters that are not letters
 
 Modify the `clean` function to omit any characters that are not letters.
+Note: The underscores must be preserved from the previous step.
 
 ```clojure
 (clean "1😀2😀3😀")
