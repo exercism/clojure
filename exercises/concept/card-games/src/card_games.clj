@@ -24,6 +24,14 @@
   [hand]
   (double (/ (apply + hand) (count hand))))
 
+(defn approx-average?
+  "Returns `true` if average is equal to either one of:
+  - Take the average of the _first_ and _last_ number in the hand.
+  - Using the median (middle card) of the hand."
+  [hand]
+  (or (= (card-average hand) (double (/ (+ (first hand) (last hand)) 2)))
+      (= (card-average hand) (double (nth hand (int (/ (count hand) 2.0)))))))
+
 (comment
   (map rounds '(0 1 10 27 99 666))
   (rounds 27)
@@ -31,4 +39,7 @@
   (contains-round? '(27 28 29 35 36) 29)
   (contains-round? '(27 28 29 35 36) 30)
   (card-average '(5 6 7))
+  (approx-average? '(1 2 3))
+  (approx-average? '(2 3 4 8 8))
+  (approx-average? '(1 2 4 5 8))
   )

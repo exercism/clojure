@@ -11,9 +11,10 @@
   (is (= '(() (0 1) (1 2) (1 2)
            (27 28 29 35 36)
            (1 2 3 4 5 6))
-         (map #(apply card-games/concat-rounds %) '((() ()) ((0 1) ()) (() (1 2))
-                                         ((1) (2)) ((27 28 29) (35 36))
-                                         ((1 2 3) (4 5 6)))))))
+         (map #(apply card-games/concat-rounds %) 
+              '((() ()) ((0 1) ()) (() (1 2))
+                        ((1) (2)) ((27 28 29) (35 36))
+                        ((1 2 3) (4 5 6)))))))
 
 (deftest contains-round-test
   (is (= '(false false false true true true)
@@ -24,6 +25,13 @@
 (deftest card-average-test
   (is (= '(1.0 6.0 2.5 37.0)
          (map card-games/card-average '((1) (5 6 7) (1 2 3 4) (1 10 100))))))
+
+(deftest approx-average-test
+  (is (= '(false false false false true true true true)
+         (map card-games/approx-average?
+               '((0 1 5) (3 6 9 12 150) (1 2 3 5 9)
+                (2 3 4 7 8) (1 2 3) (2 3 4)
+                (2 3 4 8 8) (1 2 4 5 8))))))
 
 (comment
   (clojure.test/run-tests)
