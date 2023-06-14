@@ -41,6 +41,14 @@
     (= (double (/ (apply + evens) (count evens)))
        (double (/ (apply + odds) (count odds))))))
 
+(defn maybe-double-last
+  "If the last card is a Jack (11), doubles its value
+   before returning the hand."
+  [hand]
+  (if (= 11 (last hand))
+    (concat (butlast hand) '(22))
+    hand))
+
 (comment
   (map rounds '(0 1 10 27 99 666))
   (rounds 27)
@@ -53,4 +61,5 @@
   (approx-average? '(1 2 4 5 8))
   (average-even-odd? '(1 2 3))
   (average-even-odd? '(1 2 3 4))
+  (maybe-double-last '(5 9 11))
   )

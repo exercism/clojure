@@ -38,6 +38,11 @@
          (map card-games/average-even-odd?
               '((5 6 8) (1 2 3 4) (1 2 3) (5 6 7) (1 3 5 7 9))))))
 
+(deftest maybe-double-last-test
+  (is (= '((1 2 22) (5 9 22) (5 9 10) (1 2 3))
+         (map card-games/maybe-double-last
+              '((1 2 11) (5 9 11) (5 9 10) (1 2 3))))))
+
 (comment
   (clojure.test/run-tests)
   )
