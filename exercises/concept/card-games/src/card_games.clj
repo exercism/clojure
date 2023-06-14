@@ -19,10 +19,16 @@
   [l n]
   (boolean (some #{n} l)))
 
+(defn card-average
+  "Returns the average value of a hand"
+  [hand]
+  (double (/ (apply + hand) (count hand))))
+
 (comment
   (map rounds '(0 1 10 27 99 666))
   (rounds 27)
   (concat-rounds '(27 28 29) '(35 36))
   (contains-round? '(27 28 29 35 36) 29)
   (contains-round? '(27 28 29 35 36) 30)
+  (card-average '(5 6 7))
   )
