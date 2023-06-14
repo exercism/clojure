@@ -13,8 +13,16 @@
   [l1 l2]
   (concat l1 l2))
 
+(defn contains-round? 
+  "Takes a list of rounds played and a round number.
+   Returns `true` if the round is in the list, `false` if not."
+  [l n]
+  (boolean (some #{n} l)))
+
 (comment
   (map rounds '(0 1 10 27 99 666))
   (rounds 27)
   (concat-rounds '(27 28 29) '(35 36))
+  (contains-round? '(27 28 29 35 36) 29)
+  (contains-round? '(27 28 29 35 36) 30)
   )

@@ -15,8 +15,12 @@
                                          ((1) (2)) ((27 28 29) (35 36))
                                          ((1 2 3) (4 5 6)))))))
 
-(comment
-  (apply card-games/concat-rounds '(() ()))
+(deftest contains-round-test
+  (is (= '(false false false true true true)
+         (map #(apply card-games/contains-round? %) 
+              '(([], 1), ([1, 2, 3], 0), ([27, 28, 29, 35, 36], 30),
+              ([1], 1), ([1, 2, 3], 1), ([27, 28, 29, 35, 36], 29))))))
 
+(comment
   (clojure.test/run-tests)
   )
