@@ -32,6 +32,15 @@
   (or (= (card-average hand) (double (/ (+ (first hand) (last hand)) 2)))
       (= (card-average hand) (double (nth hand (int (/ (count hand) 2.0)))))))
 
+(defn average-even-odd?
+  "Returns true if the average of the cards at even indexes 
+   is the same as the average of the cards at odd indexes."
+  [hand]
+  (let [evens (map #(nth hand %) (range 1 (count hand) 2))
+        odds (map #(nth hand %) (range 0 (count hand) 2))]
+    (= (double (/ (apply + evens) (count evens)))
+       (double (/ (apply + odds) (count odds))))))
+
 (comment
   (map rounds '(0 1 10 27 99 666))
   (rounds 27)
@@ -42,4 +51,6 @@
   (approx-average? '(1 2 3))
   (approx-average? '(2 3 4 8 8))
   (approx-average? '(1 2 4 5 8))
+  (average-even-odd? '(1 2 3))
+  (average-even-odd? '(1 2 3 4))
   )

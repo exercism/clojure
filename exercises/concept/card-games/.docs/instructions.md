@@ -88,13 +88,13 @@ Note: _The length of all hands are odd, to make finding a median easier._
 Intrigued by the results of her averaging experiment, Elyse is wondering if taking the average of the cards at the _even_ positions versus the average of the cards at the _odd_ positions would give the same results.
  Time for another test function!
 
-Implement a function `average-even?` that returns a Boolean indicating if the average of the cards at even indexes is the same as the average of the cards at odd indexes.
+Implement a function `average-even-odd?` that returns a Boolean indicating if the average of the cards at even indexes is the same as the average of the cards at odd indexes.
 
 ```clojure
-(average-even? '(1 2 3))
+(average-even-odd? '(1 2 3))
 ;;=> true
 
-(average-even? '(1 2 3 4))
+(average-even-odd? '(1 2 3 4))
 ;;=> false
 ```
 

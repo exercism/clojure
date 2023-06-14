@@ -33,6 +33,11 @@
                 (2 3 4 7 8) (1 2 3) (2 3 4)
                 (2 3 4 8 8) (1 2 4 5 8))))))
 
+(deftest average-even-odd-test
+  (is (= '(false false true true true)
+         (map card-games/average-even-odd?
+              '((5 6 8) (1 2 3 4) (1 2 3) (5 6 7) (1 3 5 7 9))))))
+
 (comment
   (clojure.test/run-tests)
   )
