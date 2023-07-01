@@ -11,33 +11,23 @@ fingers
 ;;=> 10
 ```
 
-The `defn` macro can be used to define a function taking zero or more arguments. A function always returns the result of the last expression in its body.
+You can use `defn` to define a function taking zero or more arguments. This is a function that would add 2 numbers together:
 
 ```clojure
 (defn add [x y]
   (+ x y))
 ```
 
-`[x y]` is the function's arglist, with the parameters placed inside of a vector. More about vectors later, but they are similar to arrays in other languages. One of the biggest syntactical differences between Clojure and other Lisps is the addition of built-in data structure literals besides lists. 
+This function takes 2 arguments which are placed in the vector `[x y]`, followed by the *body* of the function which can contain any number of expressions. The return value is always the result of evaluating the last expression in the body, `(+ x y)`. This expression is a list representing a function call. The first items of the list is the `+` function which is evaluated using the following items `x` and `y` as arguments.
 
-A nice benefit of this is consistency - we always know that unquoted lists represent function calls, making it easier to visually distinguish *code* from *data*, the vector of arguments being the latter.
-
-Invoking a function is done by specifying its name and passing arguments for each of the function's parameters.
+The `add` function defined above is called the same way:
 
 ```clojure
 (add 2 3)
 ;;=> 5
 ```
 
-Functions and values in Clojure can only be used _after_ they have been defined. Using it before it has been defined results in a compile error.
-
-```clojure
-;; Compile error as `add` has not yet been defined
-(def seven (add 3 4))
-
-(defn add [x y]
-  (+ x y))
-```
+Functions and values in Clojure can only be used _after_ they have been defined, i.e. forms are always evaluated in the order they appear.
 
 In Clojure, whitespace has no significance other than formatting.
 
