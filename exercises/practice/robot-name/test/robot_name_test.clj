@@ -39,9 +39,5 @@
       (is (= its-new-name (robot-name/robot-name a-robot)))))
 
 (deftest new-names-different-each-time
-  (let [a-robot (robot-name/robot)
-        its-original-name (robot-name/robot-name a-robot)
-        its-new-name (do (robot-name/reset-name a-robot)
-                         (robot-name/robot-name a-robot))]
-  (is (not= its-new-name (do (robot-name/reset-name a-robot)
-                             (robot-name/robot-name a-robot))))))
+  (let [four-thousand-names (repeatedly 4000 #(robot-name/robot-name (robot-name/robot)))]
+    (is (= 4000 (count (set four-thousand-names))))))
