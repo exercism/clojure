@@ -5,7 +5,7 @@
   "status": {
     "concept_exercises": true,
     "test_runner": true,
-    "representer": false,
+    "representer": true,
     "analyzer": false
   },
   "blurb": "Clojure is a dynamic, general-purpose programming language. It combines the approachability and interactive development of a scripting language with an efficient and robust infrastructure for multithreaded programming and the performance gains of compiling and running on the JVM. It is a lisp dialect that runs on the JVM, enabling the use of Java code side by side with Clojure.",
@@ -142,14 +142,22 @@
         "slug": "squeaky-clean",
         "name": "Squeaky Clean",
         "uuid": "3af5b219-d751-4243-89f7-c8f05216f534",
-        "concepts": [],
-        "prerequisites": [],
-        "status": "wip"
+        "concepts": ["chars"],
+        "prerequisites": ["basics", "strings"],
+        "status": "beta"
       },
       {
         "slug": "date-parser",
         "name": "Date Parser",
         "uuid": "37ba33f8-5b19-4cdd-9b1c-ca1a5c15f096",
+        "concepts": [],
+        "prerequisites": [],
+        "status": "wip"
+      },
+      {
+        "slug": "coordinate-transformation",
+        "name": "Coordinate Transformation",
+        "uuid": "5b23eabd-6ebb-4fed-b889-9324ad174a5f",
         "concepts": [],
         "prerequisites": [],
         "status": "wip"
@@ -277,7 +285,7 @@
       },
       {
         "slug": "etl",
-        "name": "Etl",
+        "name": "ETL",
         "uuid": "befca7ee-fc29-4ef0-afd7-2d3f68aa47fb",
         "practices": [],
         "prerequisites": ["lists", "numbers", "strings"],
@@ -366,7 +374,7 @@
       },
       {
         "slug": "rna-transcription",
-        "name": "Rna Transcription",
+        "name": "RNA Transcription",
         "uuid": "d8773153-d717-43f1-9324-c7e8cf00455c",
         "practices": [],
         "prerequisites": ["strings"],
@@ -410,7 +418,7 @@
       },
       {
         "slug": "run-length-encoding",
-        "name": "Run Length Encoding",
+        "name": "Run-Length Encoding",
         "uuid": "fa1be98f-59b2-487e-948d-46e744d50dc4",
         "practices": [],
         "prerequisites": ["numbers", "strings"],
@@ -487,7 +495,7 @@
       },
       {
         "slug": "sum-of-multiples",
-        "name": "Sum Of Multiples",
+        "name": "Sum of Multiples",
         "uuid": "357de34a-c149-4a2c-b6a8-86ffb5eaa152",
         "practices": [],
         "prerequisites": ["numbers", "conditionals"],
@@ -641,7 +649,7 @@
       },
       {
         "slug": "isbn-verifier",
-        "name": "Isbn Verifier",
+        "name": "ISBN Verifier",
         "uuid": "0479e73c-acb3-4a36-949c-a2065bfb57e5",
         "practices": [],
         "prerequisites": ["strings", "booleans"],
@@ -685,7 +693,7 @@
       },
       {
         "slug": "pascals-triangle",
-        "name": "Pascals Triangle",
+        "name": "Pascal's Triangle",
         "uuid": "29b16274-b413-4231-a1c7-aff8f93c9b7e",
         "practices": [],
         "prerequisites": ["numbers"],
@@ -784,7 +792,7 @@
       },
       {
         "slug": "difference-of-squares",
-        "name": "Difference Of Squares",
+        "name": "Difference of Squares",
         "uuid": "6f69d8fe-9da2-48f9-a635-b9f54b626daf",
         "practices": ["numbers"],
         "prerequisites": ["numbers"],
@@ -982,11 +990,33 @@
       },
       {
         "slug": "pov",
-        "name": "Pov",
+        "name": "POV",
         "uuid": "ca557f64-9e2d-4ab0-8788-4133764ef703",
         "practices": [],
         "prerequisites": ["strings", "vectors"],
         "difficulty": 10,
+        "topics": [
+          "conditionals"
+        ]
+      },
+      {
+        "slug": "yacht",
+        "name": "Yacht",
+        "uuid": "459c8468-efc4-46a6-bbc0-9937167827a7",
+        "practices": [],
+        "prerequisites": ["strings", "vectors"],
+        "difficulty": 5,
+        "topics": [
+          "conditionals"
+        ]
+      },
+      {
+        "slug": "zipper",
+        "name": "Zipper",
+        "uuid": "331b2960-baae-4331-a462-a434fd6e8767",
+        "practices": [],
+        "prerequisites": ["strings", "vectors"],
+        "difficulty": 9,
         "topics": [
           "conditionals"
         ]
@@ -1028,6 +1058,11 @@
       "uuid": "c0b42493-d4e3-4a71-a7d1-2eaaae4eaeaa",
       "slug": "strings",
       "name": "Strings"
+    },
+    {
+      "uuid": "3e962be9-e7e8-445a-9eb7-206eb1310e9f",
+      "slug": "chars",
+      "name": "Chars"
     },
     {
       "uuid": "7aa13ace-5597-4d6c-8f93-8b0fb97cf2ff",

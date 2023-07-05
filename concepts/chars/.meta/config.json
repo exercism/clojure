@@ -1,0 +1,6 @@
+{
+    "blurb": "A char is a type that represents a Unicode UTF-16 value. Strings are composed of chars.",
+    "authors": [
+      "porkostomus"
+    ]
+  }

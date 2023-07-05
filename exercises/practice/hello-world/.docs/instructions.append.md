@@ -2,15 +2,18 @@
 
 ## Project Structure
 
-Clojure exercises in exercism use [leiningen](http://leiningen.org/) to configure and run your code
-and use [leiningen standard directory structure](https://github.com/technomancy/leiningen/blob/master/doc/TUTORIAL.md#directory-layout).
+Clojure exercises in exercism support the two most common tools for dependency management and testing, [leiningen](http://leiningen.org/) and the [Clojure CLI](https://clojure.org/guides/deps_and_cli).
 
 You will find a test file named `hello_world_test.clj` inside `test` directory.
 Write your code in `src/hello_world.clj`. It should use the namespace `hello-world` so that tests can pick it up.
 
-## Running tests
+### Running tests using the Clojure CLI
 
-Run the tests using `lein test` command and make them pass:
+```
+$ clj -X:test
+```
+
+### Running tests using Leiningen
 
 ```
 $ lein test
