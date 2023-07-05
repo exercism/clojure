@@ -1,6 +1,7 @@
 {
-  "blurb": "Learn about lists by keeping track of the programming languages you want to learn",
-  "authors": ["bemself"],
+  "authors": [
+    "bemself"
+  ],
   "contributors": [
     "porkostomus",
     "cstby"
@@ -15,5 +16,6 @@
     "exemplar": [
       ".meta/exemplar.clj"
     ]
-  }
+  },
+  "blurb": "Learn about lists by keeping track of the programming languages you want to learn"
 }

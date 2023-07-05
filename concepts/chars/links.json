@@ -1,0 +1,30 @@
+[
+    {
+      "url": "https://docs.oracle.com/javase/8/docs/api/java/lang/Character.html#isISOControl-char-",
+      "description": "java-ctrl"
+    },
+    {
+      "url": "https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Character.html#isLetter(char)",
+      "description": "java-isletter"
+    },
+    {
+        "url": "https://clojuredocs.org/clojure.string/includes_q",
+        "description": "str-includes"
+    },
+    {
+        "url": "https://clojuredocs.org/clojure.string/join",
+        "description": "str-join"
+    },
+    {
+        "url": "https://clojuredocs.org/clojure.string/replace",
+        "description": "str-replace"
+    },
+    {
+        "url": "https://clojuredocs.org/clojure.string/split",
+        "description": "str-split"
+    },
+    {
+        "url": "https://clojuredocs.org/clojure.string/upper-case",
+        "description": "str-upper-case"
+    }
+  ]
