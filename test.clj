@@ -55,7 +55,7 @@
 
 (defn snapshot-path [{:keys [slug]} solved?]
   (let [filename (format "%s-%s.json" slug (if solved? "solved" "unsolved"))]
-    (path-str *file* ".." ".." "results-snapshots" filename)))
+    (path-str *file* ".." "results-snapshots" filename)))
 
 (defn cp [src dest & opts]
   (println "Copying" (str src) "to" (str dest))
