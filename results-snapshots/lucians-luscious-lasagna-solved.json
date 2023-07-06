@@ -1,0 +1,36 @@
+{
+  "status": "pass",
+  "tests": [
+    {
+      "name": "expected-time-test",
+      "status": "pass",
+      "test_code": "(is (= 40 lucians-luscious-lasagna/expected-time))"
+    },
+    {
+      "name": "remaining-time-test",
+      "status": "pass",
+      "test_code": "(is (= 15 (lucians-luscious-lasagna/remaining-time 25)))"
+    },
+    {
+      "name": "prep-time-one-layer-test",
+      "status": "pass",
+      "test_code": "(is (= 2 (lucians-luscious-lasagna/prep-time 1)))"
+    },
+    {
+      "name": "prep-time-multiple-layers-test",
+      "status": "pass",
+      "test_code": "(is (= 8 (lucians-luscious-lasagna/prep-time 4)))"
+    },
+    {
+      "name": "total-time-one-layer-test",
+      "status": "pass",
+      "test_code": "(is (= 32 (lucians-luscious-lasagna/total-time 1 30)))"
+    },
+    {
+      "name": "total-time-multiple-layers-test",
+      "status": "pass",
+      "test_code": "(is (= 16 (lucians-luscious-lasagna/total-time 4 8)))"
+    }
+  ],
+  "version": 3
+}

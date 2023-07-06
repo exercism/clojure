@@ -1,0 +1,36 @@
+{
+  "status": "fail",
+  "tests": [
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "initial-account-state",
+      "status": "error",
+      "test_code": "(testing \"Accounts are opened with a balance of 0\" (is (= 0 (-> (bank-account/open-account) (bank-account/get-balance)))))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "increment-and-get-balance",
+      "status": "error",
+      "test_code": "(testing \"Adding money to the account works\" (let [account (bank-account/open-account)] (is (= 0 (bank-account/get-balance account))) (bank-account/update-balance account 10) (is (= 10 (bank-account/get-balance account)))))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "increment-decrement-and-get-balance",
+      "status": "error",
+      "test_code": "(testing \"Taking money out of the account works\" (let [account (bank-account/open-account)] (is (= 0 (bank-account/get-balance account))) (bank-account/update-balance account 10) (is (= 10 (bank-account/get-balance account))) (bank-account/update-balance account -10) (is (= 0 (bank-account/get-balance account)))))"
+    },
+    {
+      "message": "An unexpected error occurred:\nWrong number of args (1) passed to: bank-account/close-account",
+      "name": "closed-accounts-are-nil",
+      "status": "error",
+      "test_code": "(testing \"Closing an account makes it nil\" (let [account (bank-account/open-account)] (bank-account/close-account account) (is (nil? (bank-account/get-balance account)))))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (2) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "check-concurrent-access",
+      "status": "error",
+      "test_code": "(testing \"The account can handle parallel access\" (let [account (bank-account/open-account) add-10 (fn* [] (bank-account/update-balance account 10))] (doall (pcalls add-10 add-10 add-10 add-10 add-10)) (is (= 50 (bank-account/get-balance account)))))"
+    }
+  ],
+  "version": 3
+}

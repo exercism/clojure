@@ -1,0 +1,18 @@
+{
+  "status": "fail",
+  "tests": [
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "test-isograms",
+      "status": "error",
+      "test_code": "(is (isogram/isogram? \"duplicates\"))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "test-non-isograms",
+      "status": "error",
+      "test_code": "(is (not (isogram/isogram? \"eleven\")))"
+    }
+  ],
+  "version": 3
+}

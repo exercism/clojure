@@ -1,0 +1,24 @@
+{
+  "status": "fail",
+  "tests": [
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (3) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "from-apr-25-2011",
+      "status": "error",
+      "test_code": "(is (= [2043 1 1] (gigasecond/from 2011 4 25)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (3) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "from-jun-13-1977",
+      "status": "error",
+      "test_code": "(is (= [2009 2 19] (gigasecond/from 1977 6 13)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (3) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "from-jul-19-1959",
+      "status": "error",
+      "test_code": "(is (= [1991 3 27] (gigasecond/from 1959 7 19)))"
+    }
+  ],
+  "version": 3
+}

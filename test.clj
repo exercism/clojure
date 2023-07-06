@@ -25,11 +25,11 @@
                           (System/exit 0))
       errors (do (doall (map println errors))
                  (System/exit 1))
-      :else (merge options {:clojure-repo-path (or (first arguments) "../clojure")}))))
+      :else (merge options {:clojure-repo-path (or (first arguments) ".")}))))
 
 (when-not (fs/directory? (:clojure-repo-path opts))
   (throw (IllegalArgumentException.
-          "Please provide the path to your excercism/clojure repo")))
+          "Please provide the path to your exercism/clojure repo")))
 
 (defn get-exercises []
   (-> (fs/file (:clojure-repo-path opts) "config.json")
@@ -55,14 +55,14 @@
 
 (defn snapshot-path [{:keys [slug]} solved?]
   (let [filename (format "%s-%s.json" slug (if solved? "solved" "unsolved"))]
-    (path-str *file* ".." ".." "results-snapshots" filename)))
+    (path-str "results-snapshots" filename)))
 
 (defn cp [src dest & opts]
   (println "Copying" (str src) "to" (str dest))
   (let [copy (if (fs/directory? src) fs/copy-tree fs/copy)]
     (apply copy src dest opts)))
 
-(cp "/home/runner/work/clojure/clojure/clojure-test-runner/libs.jar" "./libs.jar")
+;(cp "/home/runner/work/clojure/clojure/clojure-test-runner/libs.jar" "./libs.jar")
 
 (defn check-proc-inherit [& args]
   (check (process args {:inherit true})))
@@ -117,7 +117,9 @@
 
 (defn run-all-tests []
   (let [temp-dir (fs/create-temp-dir {:prefix "exercism-clojure-"
-                                      :path "/home/runner/work/clojure/clojure/clojure/"})]
+                                      :path 
+                                      "."
+                                      #_"/home/runner/work/clojure/clojure/clojure/"})]
     (->> (for [{:keys [slug] :as ex} (get-exercises)]
            (let [test-dir (fs/path temp-dir slug)
                  _  (cp (exercise-path ex) test-dir)
@@ -128,6 +130,7 @@
          (reduce #(merge-with + %1 %2) {:total 0 :passed 0 :failed 0}))))
 
 (defn -main []
+  
   (let [results (run-all-tests)]
     (prn results)
     (System/exit (:failed results))))

@@ -1,0 +1,81 @@
+{
+  "status": "pass",
+  "tests": [
+    {
+      "name": "octal-1-is-decimal-1",
+      "status": "pass",
+      "test_code": "(testing \"1 should still be 1\" (is (= 1 (to-decimal \"1\"))))"
+    },
+    {
+      "name": "octal-2-is-decimal-2",
+      "status": "pass",
+      "test_code": "(testing \"2 should still be 2\" (is (= 2 (to-decimal \"2\"))))"
+    },
+    {
+      "name": "octal-10-is-decimal-8",
+      "status": "pass",
+      "test_code": "(testing \"10 should be 8\" (is (= 8 (to-decimal \"10\"))))"
+    },
+    {
+      "name": "octal-11-is-decimal-9",
+      "status": "pass",
+      "test_code": "(testing \"11 should be 9\" (is (= 9 (to-decimal \"11\"))))"
+    },
+    {
+      "name": "octal-17-is-decimal-15",
+      "status": "pass",
+      "test_code": "(testing \"17 should be 15\" (is (= 15 (to-decimal \"17\"))))"
+    },
+    {
+      "name": "octal-130-is-decimal-88",
+      "status": "pass",
+      "test_code": "(testing \"130 should be 88\" (is (= 88 (to-decimal \"130\"))))"
+    },
+    {
+      "name": "octal-2047-is-decimal-1063",
+      "status": "pass",
+      "test_code": "(testing \"2047 should be 1063\" (is (= 1063 (to-decimal \"2047\"))))"
+    },
+    {
+      "name": "octal-7777-is-decimal-4095",
+      "status": "pass",
+      "test_code": "(testing \"7777 should be 4095\" (is (= 4095 (to-decimal \"7777\"))))"
+    },
+    {
+      "name": "octal-1234567-is-decimal-342391",
+      "status": "pass",
+      "test_code": "(testing \"1234567 should be 342391\" (is (= 342391 (to-decimal \"1234567\"))))"
+    },
+    {
+      "name": "invalid-input-is-decimal-0",
+      "status": "pass",
+      "test_code": "(testing \"carrot should be invalid\" (is (= 0 (to-decimal \"carrot\"))))"
+    },
+    {
+      "name": "eight-is-invalid-input-decimal-0",
+      "status": "pass",
+      "test_code": "(testing \"8 should be invalid and return 0\" (is (= 0 (to-decimal \"8\"))))"
+    },
+    {
+      "name": "nine-is-invalid-input-decimal-0",
+      "status": "pass",
+      "test_code": "(testing \"9 should be invalid and return 0\" (is (= 0 (to-decimal \"9\"))))"
+    },
+    {
+      "name": "invalid-input-6789-is-decimal-0",
+      "status": "pass",
+      "test_code": "(testing \"6789 should be invalid and return 0\" (is (= 0 (to-decimal \"6789\"))))"
+    },
+    {
+      "name": "invalid-input-with-digits-is-decimal-0",
+      "status": "pass",
+      "test_code": "(testing \"abc1z should be 0\" (is (= 0 (to-decimal \"abc1z\"))))"
+    },
+    {
+      "name": "leading-zero-is-okay",
+      "status": "pass",
+      "test_code": "(testing \"Leading zero should be valid octal\" (is (= 9 (to-decimal \"011\"))))"
+    }
+  ],
+  "version": 3
+}

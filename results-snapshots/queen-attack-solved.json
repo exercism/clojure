@@ -1,0 +1,21 @@
+{
+  "status": "pass",
+  "tests": [
+    {
+      "name": "handles-empty-board",
+      "status": "pass",
+      "test_code": "(is (= empty-board (queen-attack/board-string {})))"
+    },
+    {
+      "name": "build-board",
+      "status": "pass",
+      "test_code": "(is (= board (queen-attack/board-string {:w [2 4], :b [6 6]})))"
+    },
+    {
+      "name": "finds-attack-positions",
+      "status": "pass",
+      "test_code": "(is (= false (queen-attack/can-attack {:w [2 3], :b [4 7]})))\n(is (= true (queen-attack/can-attack {:w [2 4], :b [2 7]})))\n(is (= true (queen-attack/can-attack {:w [5 4], :b [2 4]})))\n(is (= true (queen-attack/can-attack {:w [1 1], :b [6 6]})))\n(is (= true (queen-attack/can-attack {:w [0 6], :b [1 7]})))\n(is (= true (queen-attack/can-attack {:w [4 1], :b [6 3]})))\n(is (= true (queen-attack/can-attack {:w [2 3], :b [5 0]})))\n(is (= true (queen-attack/can-attack {:w [2 3], :b [0 5]})))"
+    }
+  ],
+  "version": 3
+}

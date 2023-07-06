@@ -1,0 +1,35 @@
+{
+  "status": "fail",
+  "tests": [
+    {
+      "message": "Expected (= [1 2 3 4 5 6 7 8] (flatten-array/flatten [1 [2 3 4 5 6 7] 8])) but got (not (= [1 2 3 4 5 6 7 8] nil))",
+      "name": "flattens-array-of-ints",
+      "status": "fail",
+      "test_code": "(testing \"flattens array with just integers present\" (is (= [1 2 3 4 5 6 7 8] (flatten-array/flatten [1 [2 3 4 5 6 7] 8]))))"
+    },
+    {
+      "message": "Expected (= [0 2 2 3 8 100 4 50 -2] (flatten-array/flatten [0 2 [[2 3] 8 100 4 [[[50]]]] -2])) but got (not (= [0 2 2 3 8 100 4 50 -2] nil))",
+      "name": "five-level-nesting",
+      "status": "fail",
+      "test_code": "(testing \"5 level nested list\" (is (= [0 2 2 3 8 100 4 50 -2] (flatten-array/flatten [0 2 [[2 3] 8 100 4 [[[50]]]] -2]))))"
+    },
+    {
+      "message": "Expected (= [1 2 3 4 5 6 7 8] (flatten-array/flatten [1 [2 [[3]] [4 [[5]]] 6 7] 8])) but got (not (= [1 2 3 4 5 6 7 8] nil))",
+      "name": "six-level-nesting",
+      "status": "fail",
+      "test_code": "(testing \"6 level nested list\" (is (= [1 2 3 4 5 6 7 8] (flatten-array/flatten [1 [2 [[3]] [4 [[5]]] 6 7] 8]))))"
+    },
+    {
+      "message": "Expected (= [0 2 2 3 8 100 -2] (flatten-array/flatten [0 2 [[2 3] 8 [[100]] nil [[nil]]] -2])) but got (not (= [0 2 2 3 8 100 -2] nil))",
+      "name": "six-level-nested-with-nils",
+      "status": "fail",
+      "test_code": "(testing \"6 level nested list with nil values\" (is (= [0 2 2 3 8 100 -2] (flatten-array/flatten [0 2 [[2 3] 8 [[100]] nil [[nil]]] -2]))))"
+    },
+    {
+      "name": "all-nils-list",
+      "status": "pass",
+      "test_code": "(testing \"All values in nested list are nil\" (is (empty? (flatten-array/flatten [nil [[[nil]]] nil nil [[nil nil] nil] nil]))))"
+    }
+  ],
+  "version": 3
+}

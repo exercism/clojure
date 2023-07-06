@@ -1,0 +1,72 @@
+{
+  "status": "fail",
+  "tests": [
+    {
+      "message": "Expected (= \"Stack overflow\" (log-levels/message \"[ERROR]: Stack overflow\")) but got (not (= \"Stack overflow\" nil))",
+      "name": "message-error-test",
+      "status": "fail",
+      "test_code": "(is (= \"Stack overflow\" (log-levels/message \"[ERROR]: Stack overflow\")))"
+    },
+    {
+      "message": "Expected (= (log-levels/message \"[WARNING]: Disk almost full\") \"Disk almost full\") but got (not (= nil \"Disk almost full\"))",
+      "name": "message-warning-test",
+      "status": "fail",
+      "test_code": "(is (= (log-levels/message \"[WARNING]: Disk almost full\") \"Disk almost full\"))"
+    },
+    {
+      "message": "Expected (= (log-levels/message \"[INFO]: File moved\") \"File moved\") but got (not (= nil \"File moved\"))",
+      "name": "message-info-test",
+      "status": "fail",
+      "test_code": "(is (= (log-levels/message \"[INFO]: File moved\") \"File moved\"))"
+    },
+    {
+      "message": "Expected (= \"Timezone not set\" (log-levels/message \"[WARNING]:   \\tTimezone not set  \\r\\n\")) but got (not (= \"Timezone not set\" nil))",
+      "name": "message-trim-whitespace-test",
+      "status": "fail",
+      "test_code": "(is (= \"Timezone not set\" (log-levels/message \"[WARNING]:   \\tTimezone not set  \\r\\n\")))"
+    },
+    {
+      "message": "Expected (= \"error\" (log-levels/log-level \"[ERROR]: Disk full\")) but got (not (= \"error\" nil))",
+      "name": "log-level-error-test",
+      "status": "fail",
+      "test_code": "(is (= \"error\" (log-levels/log-level \"[ERROR]: Disk full\")))"
+    },
+    {
+      "message": "Expected (= \"warning\" (log-levels/log-level \"[WARNING]: Unsafe password\")) but got (not (= \"warning\" nil))",
+      "name": "log-level-warning-test",
+      "status": "fail",
+      "test_code": "(is (= \"warning\" (log-levels/log-level \"[WARNING]: Unsafe password\")))"
+    },
+    {
+      "message": "Expected (= \"info\" (log-levels/log-level \"[INFO]: Timezone changed\")) but got (not (= \"info\" nil))",
+      "name": "log-level-info-test",
+      "status": "fail",
+      "test_code": "(is (= \"info\" (log-levels/log-level \"[INFO]: Timezone changed\")))"
+    },
+    {
+      "message": "Expected (= \"Segmentation fault (error)\" (log-levels/reformat \"[ERROR]: Segmentation fault\")) but got (not (= \"Segmentation fault (error)\" nil))",
+      "name": "reformat-error-test",
+      "status": "fail",
+      "test_code": "(is (= \"Segmentation fault (error)\" (log-levels/reformat \"[ERROR]: Segmentation fault\")))"
+    },
+    {
+      "message": "Expected (= \"Decreased performance (warning)\" (log-levels/reformat \"[WARNING]: Decreased performance\")) but got (not (= \"Decreased performance (warning)\" nil))",
+      "name": "reformat-warning-test",
+      "status": "fail",
+      "test_code": "(is (= \"Decreased performance (warning)\" (log-levels/reformat \"[WARNING]: Decreased performance\")))"
+    },
+    {
+      "message": "Expected (= \"Disk defragmented (info)\" (log-levels/reformat \"[INFO]: Disk defragmented\")) but got (not (= \"Disk defragmented (info)\" nil))",
+      "name": "reformat-info-test",
+      "status": "fail",
+      "test_code": "(is (= \"Disk defragmented (info)\" (log-levels/reformat \"[INFO]: Disk defragmented\")))"
+    },
+    {
+      "message": "Expected (= \"Corrupt disk (error)\" (log-levels/reformat \"[ERROR]: \\t Corrupt disk\\t \\t \\r\\n\")) but got (not (= \"Corrupt disk (error)\" nil))",
+      "name": "reformat-trim-whitespace-test",
+      "status": "fail",
+      "test_code": "(is (= \"Corrupt disk (error)\" (log-levels/reformat \"[ERROR]: \\t Corrupt disk\\t \\t \\r\\n\")))"
+    }
+  ],
+  "version": 3
+}

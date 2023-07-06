@@ -1,0 +1,46 @@
+{
+  "status": "pass",
+  "tests": [
+    {
+      "name": "square-1",
+      "status": "pass",
+      "test_code": "(is (= 1 (grains/square 1)))"
+    },
+    {
+      "name": "square-2",
+      "status": "pass",
+      "test_code": "(is (= 2 (grains/square 2)))"
+    },
+    {
+      "name": "square-3",
+      "status": "pass",
+      "test_code": "(is (= 4 (grains/square 3)))"
+    },
+    {
+      "name": "square-4",
+      "status": "pass",
+      "test_code": "(is (= 8 (grains/square 4)))"
+    },
+    {
+      "name": "square-16",
+      "status": "pass",
+      "test_code": "(is (= 32768 (grains/square 16)))"
+    },
+    {
+      "name": "square-32",
+      "status": "pass",
+      "test_code": "(is (= 2147483648 (grains/square 32)))"
+    },
+    {
+      "name": "square-64",
+      "status": "pass",
+      "test_code": "(is (= 9223372036854775808N (grains/square 64)))"
+    },
+    {
+      "name": "total-grains",
+      "status": "pass",
+      "test_code": "(is (= 18446744073709551615N (grains/total)))"
+    }
+  ],
+  "version": 3
+}

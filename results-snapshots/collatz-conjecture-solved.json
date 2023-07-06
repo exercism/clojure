@@ -1,0 +1,36 @@
+{
+  "status": "pass",
+  "tests": [
+    {
+      "name": "steps-for-1",
+      "status": "pass",
+      "test_code": "(testing \"zero steps for one\" (is (= 0 (collatz 1))))"
+    },
+    {
+      "name": "steps-for-16",
+      "status": "pass",
+      "test_code": "(testing \"divide if even\" (is (= 4 (collatz 16))))"
+    },
+    {
+      "name": "steps-for-12",
+      "status": "pass",
+      "test_code": "(testing \"even and odd steps\" (is (= 9 (collatz 12))))"
+    },
+    {
+      "name": "steps-for-1000000",
+      "status": "pass",
+      "test_code": "(testing \"Large number of even and odd steps\" (is (= 152 (collatz 1000000))))"
+    },
+    {
+      "name": "steps-for-0",
+      "status": "pass",
+      "test_code": "(testing \"zero is an error\" (is (thrown? Throwable (collatz 0))))"
+    },
+    {
+      "name": "steps-for-negative",
+      "status": "pass",
+      "test_code": "(testing \"negative value is an error\" (is (thrown? Throwable (collatz -15))))"
+    }
+  ],
+  "version": 3
+}

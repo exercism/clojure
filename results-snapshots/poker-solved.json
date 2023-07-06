@@ -1,0 +1,146 @@
+{
+  "status": "pass",
+  "tests": [
+    {
+      "name": "single-hand-always-wins",
+      "status": "pass",
+      "test_code": "(is (f [\"4S 5S 7H 8D JC\"] [\"4S 5S 7H 8D JC\"]))"
+    },
+    {
+      "name": "highest-card-out-of-all-hands-wins",
+      "status": "pass",
+      "test_code": "(is (f [\"4D 5S 6S 8D 3C\" \"2S 4C 7S 9H 10H\" \"3S 4S 5D 6H JH\"] [\"3S 4S 5D 6H JH\"]))"
+    },
+    {
+      "name": "a-tie-has-multiple-winners",
+      "status": "pass",
+      "test_code": "(is (f [\"4D 5S 6S 8D 3C\" \"2S 4C 7S 9H 10H\" \"3S 4S 5D 6H JH\" \"3H 4H 5C 6C JD\"] [\"3S 4S 5D 6H JH\" \"3H 4H 5C 6C JD\"]))"
+    },
+    {
+      "name": "multiple-hands-with-the-same-high-cards-tie-compares-next-highest-ranked-down-to-last-card",
+      "status": "pass",
+      "test_code": "(is (f [\"3S 5H 6S 8D 7H\" \"2S 5D 6D 8C 7S\"] [\"3S 5H 6S 8D 7H\"]))"
+    },
+    {
+      "name": "one-pair-beats-high-card",
+      "status": "pass",
+      "test_code": "(is (f [\"4S 5H 6C 8D KH\" \"2S 4H 6S 4D JH\"] [\"2S 4H 6S 4D JH\"]))"
+    },
+    {
+      "name": "highest-pair-wins",
+      "status": "pass",
+      "test_code": "(is (f [\"4S 2H 6S 2D JH\" \"2S 4H 6C 4D JD\"] [\"2S 4H 6C 4D JD\"]))"
+    },
+    {
+      "name": "two-pairs-beats-one-pair",
+      "status": "pass",
+      "test_code": "(is (f [\"2S 8H 6S 8D JH\" \"4S 5H 4C 8C 5C\"] [\"4S 5H 4C 8C 5C\"]))"
+    },
+    {
+      "name": "both-hands-have-two-pairs-highest-ranked-pair-wins",
+      "status": "pass",
+      "test_code": "(is (f [\"2S 8H 2D 8D 3H\" \"4S 5H 4C 8S 5D\"] [\"2S 8H 2D 8D 3H\"]))"
+    },
+    {
+      "name": "both-hands-have-two-pairs-with-the-same-highest-ranked-pair-tie-goes-to-low-pair",
+      "status": "pass",
+      "test_code": "(is (f [\"2S QS 2C QD JH\" \"JD QH JS 8D QC\"] [\"JD QH JS 8D QC\"]))"
+    },
+    {
+      "name": "both-hands-have-two-identically-ranked-pairs-tie-goes-to-remaining-card-kicker",
+      "status": "pass",
+      "test_code": "(is (f [\"JD QH JS 8D QC\" \"JS QS JC 2D QD\"] [\"JD QH JS 8D QC\"]))"
+    },
+    {
+      "name": "three-of-a-kind-beats-two-pair",
+      "status": "pass",
+      "test_code": "(is (f [\"2S 8H 2H 8D JH\" \"4S 5H 4C 8S 4H\"] [\"4S 5H 4C 8S 4H\"]))"
+    },
+    {
+      "name": "both-hands-have-three-of-a-kind-tie-goes-to-highest-ranked-triplet",
+      "status": "pass",
+      "test_code": "(is (f [\"2S 2H 2C 8D JH\" \"4S AH AS 8C AD\"] [\"4S AH AS 8C AD\"]))"
+    },
+    {
+      "name": "with-multiple-decks-two-players-can-have-same-three-of-a-kind-ties-go-to-highest-remaining-cards",
+      "status": "pass",
+      "test_code": "(is (f [\"4S AH AS 7C AD\" \"4S AH AS 8C AD\"] [\"4S AH AS 8C AD\"]))"
+    },
+    {
+      "name": "a-straight-beats-three-of-a-kind",
+      "status": "pass",
+      "test_code": "(is (f [\"4S 5H 4C 8D 4H\" \"3S 4D 2S 6D 5C\"] [\"3S 4D 2S 6D 5C\"]))"
+    },
+    {
+      "name": "aces-can-end-a-straight-10-J-Q-K-A",
+      "status": "pass",
+      "test_code": "(is (f [\"4S 5H 4C 8D 4H\" \"10D JH QS KD AC\"] [\"10D JH QS KD AC\"]))"
+    },
+    {
+      "name": "aces-can-start-a-straight-A-2-3-4-5",
+      "status": "pass",
+      "test_code": "(is (f [\"4S 5H 4C 8D 4H\" \"4D AH 3S 2D 5C\"] [\"4D AH 3S 2D 5C\"]))"
+    },
+    {
+      "name": "both-hands-with-a-straight-tie-goes-to-highest-ranked-card",
+      "status": "pass",
+      "test_code": "(is (f [\"4S 6C 7S 8D 5H\" \"5S 7H 8S 9D 6H\"] [\"5S 7H 8S 9D 6H\"]))"
+    },
+    {
+      "name": "even-though-an-ace-is-usually-high-a-5-high-straight-is-the-lowest-scoring-straight",
+      "status": "pass",
+      "test_code": "(is (f [\"2H 3C 4D 5D 6H\" \"4S AH 3S 2D 5H\"] [\"2H 3C 4D 5D 6H\"]))"
+    },
+    {
+      "name": "flush-beats-a-straight",
+      "status": "pass",
+      "test_code": "(is (f [\"4C 6H 7D 8D 5H\" \"2S 4S 5S 6S 7S\"] [\"2S 4S 5S 6S 7S\"]))"
+    },
+    {
+      "name": "both-hands-have-a-flush-tie-goes-to-high-card-down-to-the-last-one-if-necessary",
+      "status": "pass",
+      "test_code": "(is (f [\"4H 7H 8H 9H 6H\" \"2S 4S 5S 6S 7S\"] [\"4H 7H 8H 9H 6H\"]))"
+    },
+    {
+      "name": "full-house-beats-a-flush",
+      "status": "pass",
+      "test_code": "(is (f [\"3H 6H 7H 8H 5H\" \"4S 5H 4C 5D 4H\"] [\"4S 5H 4C 5D 4H\"]))"
+    },
+    {
+      "name": "both-hands-have-a-full-house-tie-goes-to-highest-ranked-triplet",
+      "status": "pass",
+      "test_code": "(is (f [\"4H 4S 4D 9S 9D\" \"5H 5S 5D 8S 8D\"] [\"5H 5S 5D 8S 8D\"]))"
+    },
+    {
+      "name": "with-multiple-decks-both-hands-have-a-full-house-with-the-same-triplet-tie-goes-to-the-pair",
+      "status": "pass",
+      "test_code": "(is (f [\"5H 5S 5D 9S 9D\" \"5H 5S 5D 8S 8D\"] [\"5H 5S 5D 9S 9D\"]))"
+    },
+    {
+      "name": "four-of-a-kind-beats-a-full-house",
+      "status": "pass",
+      "test_code": "(is (f [\"4S 5H 4D 5D 4H\" \"3S 3H 2S 3D 3C\"] [\"3S 3H 2S 3D 3C\"]))"
+    },
+    {
+      "name": "both-hands-have-four-of-a-kind-tie-goes-to-high-quad",
+      "status": "pass",
+      "test_code": "(is (f [\"2S 2H 2C 8D 2D\" \"4S 5H 5S 5D 5C\"] [\"4S 5H 5S 5D 5C\"]))"
+    },
+    {
+      "name": "with-multiple-decks-both-hands-with-identical-four-of-a-kind-tie-determined-by-kicker",
+      "status": "pass",
+      "test_code": "(is (f [\"3S 3H 2S 3D 3C\" \"3S 3H 4S 3D 3C\"] [\"3S 3H 4S 3D 3C\"]))"
+    },
+    {
+      "name": "straight-flush-beats-four-of-a-kind",
+      "status": "pass",
+      "test_code": "(is (f [\"4S 5H 5S 5D 5C\" \"7S 8S 9S 6S 10S\"] [\"7S 8S 9S 6S 10S\"]))"
+    },
+    {
+      "name": "both-hands-have-straight-flush-tie-goes-to-highest-ranked-card",
+      "status": "pass",
+      "test_code": "(is (f [\"4H 6H 7H 8H 5H\" \"5S 7S 8S 9S 6S\"] [\"5S 7S 8S 9S 6S\"]))"
+    }
+  ],
+  "version": 3
+}

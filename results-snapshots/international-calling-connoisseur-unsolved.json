@@ -1,0 +1,196 @@
+{
+  "status": "fail",
+  "tests": [
+    {
+      "message": "An unexpected error occurred:\njava.lang.UnsupportedOperationException: count not supported on this type: SciUnbound",
+      "name": "map-count-is-3",
+      "status": "error",
+      "test_code": "(is (= 3 (count international-calling-connoisseur/countries)))"
+    },
+    {
+      "message": "Expected (= \"United States of America\" (get international-calling-connoisseur/countries 1)) but got (not (= \"United States of America\" nil))",
+      "name": "United-States-of-America-is-1",
+      "status": "fail",
+      "test_code": "(is (= \"United States of America\" (get international-calling-connoisseur/countries 1)))"
+    },
+    {
+      "message": "Expected (= \"Brazil\" (get international-calling-connoisseur/countries 55)) but got (not (= \"Brazil\" nil))",
+      "name": "Brazil-is-55",
+      "status": "fail",
+      "test_code": "(is (= \"Brazil\" (get international-calling-connoisseur/countries 55)))"
+    },
+    {
+      "message": "Expected (= \"India\" (get international-calling-connoisseur/countries 91)) but got (not (= \"India\" nil))",
+      "name": "India-is-55",
+      "status": "fail",
+      "test_code": "(is (= \"India\" (get international-calling-connoisseur/countries 91)))"
+    },
+    {
+      "message": "Expected (= 1 (count (international-calling-connoisseur/add-country {} 44 \"United Kingdom\"))) but got (not (= 1 0))",
+      "name": "add-country-to-empty-map-single",
+      "status": "fail",
+      "test_code": "(is (= 1 (count (international-calling-connoisseur/add-country {} 44 \"United Kingdom\"))))"
+    },
+    {
+      "message": "Expected (= \"United Kingdom\" (get (international-calling-connoisseur/add-country {} 44 \"United Kingdom\") 44)) but got (not (= \"United Kingdom\" nil))",
+      "name": "add-country-to-empty-map-44-is-United-Kingdom",
+      "status": "fail",
+      "test_code": "(is (= \"United Kingdom\" (get (international-calling-connoisseur/add-country {} 44 \"United Kingdom\") 44)))"
+    },
+    {
+      "message": "Expected (= 4 (count (international-calling-connoisseur/add-country international-calling-connoisseur/countries 44 \"United Kingdom\"))) but got (not (= 4 0))",
+      "name": "add-country-to-country-map-count-is-4",
+      "status": "fail",
+      "test_code": "(is (= 4 (count (international-calling-connoisseur/add-country international-calling-connoisseur/countries 44 \"United Kingdom\"))))"
+    },
+    {
+      "message": "Expected (= \"United States of America\" (get (international-calling-connoisseur/add-country international-calling-connoisseur/countries 44 \"United Kingdom\") 1)) but got (not (= \"United States of America\" nil))",
+      "name": "add-country-to-country-map-1-is-United-States-of-America",
+      "status": "fail",
+      "test_code": "(is (= \"United States of America\" (get (international-calling-connoisseur/add-country international-calling-connoisseur/countries 44 \"United Kingdom\") 1)))"
+    },
+    {
+      "message": "Expected (= \"United Kingdom\" (get (international-calling-connoisseur/add-country international-calling-connoisseur/countries 44 \"United Kingdom\") 44)) but got (not (= \"United Kingdom\" nil))",
+      "name": "add-country-to-country-map-44-is-United-Kingdom",
+      "status": "fail",
+      "test_code": "(is (= \"United Kingdom\" (get (international-calling-connoisseur/add-country international-calling-connoisseur/countries 44 \"United Kingdom\") 44)))"
+    },
+    {
+      "message": "Expected (= \"Brazil\" (get (international-calling-connoisseur/add-country international-calling-connoisseur/countries 44 \"United Kingdom\") 55)) but got (not (= \"Brazil\" nil))",
+      "name": "add-country-to-country-map-55-is-Brazil",
+      "status": "fail",
+      "test_code": "(is (= \"Brazil\" (get (international-calling-connoisseur/add-country international-calling-connoisseur/countries 44 \"United Kingdom\") 55)))"
+    },
+    {
+      "message": "Expected (= \"India\" (get (international-calling-connoisseur/add-country international-calling-connoisseur/countries 44 \"United Kingdom\") 91)) but got (not (= \"India\" nil))",
+      "name": "add-country-to-country-map-91-is-India",
+      "status": "fail",
+      "test_code": "(is (= \"India\" (get (international-calling-connoisseur/add-country international-calling-connoisseur/countries 44 \"United Kingdom\") 91)))"
+    },
+    {
+      "message": "Expected (= \"Brazil\" (international-calling-connoisseur/country-name international-calling-connoisseur/countries 55)) but got (not (= \"Brazil\" nil))",
+      "name": "get-country-name-from-map",
+      "status": "fail",
+      "test_code": "(is (= \"Brazil\" (international-calling-connoisseur/country-name international-calling-connoisseur/countries 55)))"
+    },
+    {
+      "name": "get-country-name-for-non-existent-country",
+      "status": "pass",
+      "test_code": "(is (nil? (international-calling-connoisseur/country-name international-calling-connoisseur/countries 999)))"
+    },
+    {
+      "message": "Expected (true? (international-calling-connoisseur/code-exists? international-calling-connoisseur/countries 55)) but got (not (true? nil))",
+      "name": "check-country-exists",
+      "status": "fail",
+      "test_code": "(is (true? (international-calling-connoisseur/code-exists? international-calling-connoisseur/countries 55)))"
+    },
+    {
+      "message": "Expected (false? (international-calling-connoisseur/code-exists? international-calling-connoisseur/countries 999)) but got (not (false? nil))",
+      "name": "check-non-existent-country-exists",
+      "status": "fail",
+      "test_code": "(is (false? (international-calling-connoisseur/code-exists? international-calling-connoisseur/countries 999)))"
+    },
+    {
+      "message": "Expected (= 3 (count (international-calling-connoisseur/update-country international-calling-connoisseur/countries 1 \"les États-Unis\"))) but got (not (= 3 0))",
+      "name": "update-name-in-map-count-is-3",
+      "status": "fail",
+      "test_code": "(is (= 3 (count (international-calling-connoisseur/update-country international-calling-connoisseur/countries 1 \"les États-Unis\"))))"
+    },
+    {
+      "message": "Expected (= \"les États-Unis\" (get (international-calling-connoisseur/update-country international-calling-connoisseur/countries 1 \"les États-Unis\") 1)) but got (not (= \"les États-Unis\" nil))",
+      "name": "update-name-in-map-1-is-les-Etats-Unis",
+      "status": "fail",
+      "test_code": "(is (= \"les États-Unis\" (get (international-calling-connoisseur/update-country international-calling-connoisseur/countries 1 \"les États-Unis\") 1)))"
+    },
+    {
+      "message": "Expected (= \"Brazil\" (get (international-calling-connoisseur/update-country international-calling-connoisseur/countries 1 \"les États-Unis\") 55)) but got (not (= \"Brazil\" nil))",
+      "name": "update-name-in-map-55-is-Brazil",
+      "status": "fail",
+      "test_code": "(is (= \"Brazil\" (get (international-calling-connoisseur/update-country international-calling-connoisseur/countries 1 \"les États-Unis\") 55)))"
+    },
+    {
+      "message": "Expected (= \"India\" (get (international-calling-connoisseur/update-country international-calling-connoisseur/countries 1 \"les États-Unis\") 91)) but got (not (= \"India\" nil))",
+      "name": "update-name-in-map-91-is-India",
+      "status": "fail",
+      "test_code": "(is (= \"India\" (get (international-calling-connoisseur/update-country international-calling-connoisseur/countries 1 \"les États-Unis\") 91)))"
+    },
+    {
+      "message": "Expected (= 3 (count (international-calling-connoisseur/update-country international-calling-connoisseur/countries 999 \"Newlands\"))) but got (not (= 3 0))",
+      "name": "update-non-existent-name-in-map-count-is-3",
+      "status": "fail",
+      "test_code": "(is (= 3 (count (international-calling-connoisseur/update-country international-calling-connoisseur/countries 999 \"Newlands\"))))"
+    },
+    {
+      "message": "Expected (= \"United States of America\" (get (international-calling-connoisseur/update-country international-calling-connoisseur/countries 999 \"Newlands\") 1)) but got (not (= \"United States of America\" nil))",
+      "name": "update-non-existent-name-in-map-1-is-United-States-of-America",
+      "status": "fail",
+      "test_code": "(is (= \"United States of America\" (get (international-calling-connoisseur/update-country international-calling-connoisseur/countries 999 \"Newlands\") 1)))"
+    },
+    {
+      "message": "Expected (= \"Brazil\" (get (international-calling-connoisseur/update-country international-calling-connoisseur/countries 999 \"Newlands\") 55)) but got (not (= \"Brazil\" nil))",
+      "name": "update-non-existent-name-in-map-55-is-Brazil",
+      "status": "fail",
+      "test_code": "(is (= \"Brazil\" (get (international-calling-connoisseur/update-country international-calling-connoisseur/countries 999 \"Newlands\") 55)))"
+    },
+    {
+      "message": "Expected (= \"India\" (get (international-calling-connoisseur/update-country international-calling-connoisseur/countries 999 \"Newlands\") 91)) but got (not (= \"India\" nil))",
+      "name": "update-non-existent-name-in-map-91-is-India",
+      "status": "fail",
+      "test_code": "(is (= \"India\" (get (international-calling-connoisseur/update-country international-calling-connoisseur/countries 999 \"Newlands\") 91)))"
+    },
+    {
+      "message": "Expected (= 2 (count (international-calling-connoisseur/remove-country international-calling-connoisseur/countries 91))) but got (not (= 2 0))",
+      "name": "remove-country-from-map-count-is-2",
+      "status": "fail",
+      "test_code": "(is (= 2 (count (international-calling-connoisseur/remove-country international-calling-connoisseur/countries 91))))"
+    },
+    {
+      "message": "Expected (= \"United States of America\" (get (international-calling-connoisseur/remove-country international-calling-connoisseur/countries 44) 1)) but got (not (= \"United States of America\" nil))",
+      "name": "remove-country-from-map-1-is-United-States-of-America",
+      "status": "fail",
+      "test_code": "(is (= \"United States of America\" (get (international-calling-connoisseur/remove-country international-calling-connoisseur/countries 44) 1)))"
+    },
+    {
+      "message": "Expected (= \"Brazil\" (get (international-calling-connoisseur/remove-country international-calling-connoisseur/countries 44) 55)) but got (not (= \"Brazil\" nil))",
+      "name": "remove-country-from-map-55-is-Brazil",
+      "status": "fail",
+      "test_code": "(is (= \"Brazil\" (get (international-calling-connoisseur/remove-country international-calling-connoisseur/countries 44) 55)))"
+    },
+    {
+      "message": "Expected (= 3 (count (international-calling-connoisseur/remove-country international-calling-connoisseur/countries 999))) but got (not (= 3 0))",
+      "name": "remove-non-existent-country-from-map-count-is-3",
+      "status": "fail",
+      "test_code": "(is (= 3 (count (international-calling-connoisseur/remove-country international-calling-connoisseur/countries 999))))"
+    },
+    {
+      "message": "Expected (= \"United States of America\" (get (international-calling-connoisseur/remove-country international-calling-connoisseur/countries 999) 1)) but got (not (= \"United States of America\" nil))",
+      "name": "remove-non-existent-country-from-map-1-is-United-States-of-America",
+      "status": "fail",
+      "test_code": "(is (= \"United States of America\" (get (international-calling-connoisseur/remove-country international-calling-connoisseur/countries 999) 1)))"
+    },
+    {
+      "message": "Expected (= \"Brazil\" (get (international-calling-connoisseur/remove-country international-calling-connoisseur/countries 999) 55)) but got (not (= \"Brazil\" nil))",
+      "name": "remove-non-existent-country-from-map-55-is-Brazil",
+      "status": "fail",
+      "test_code": "(is (= \"Brazil\" (get (international-calling-connoisseur/remove-country international-calling-connoisseur/countries 999) 55)))"
+    },
+    {
+      "message": "Expected (= \"India\" (get (international-calling-connoisseur/remove-country international-calling-connoisseur/countries 999) 91)) but got (not (= \"India\" nil))",
+      "name": "remove-non-existent-country-from-map-91-is-India",
+      "status": "fail",
+      "test_code": "(is (= \"India\" (get (international-calling-connoisseur/remove-country international-calling-connoisseur/countries 999) 91)))"
+    },
+    {
+      "message": "Expected (= \"United States of America\" (international-calling-connoisseur/longest-name international-calling-connoisseur/countries)) but got (not (= \"United States of America\" nil))",
+      "name": "longest-name",
+      "status": "fail",
+      "test_code": "(is (= \"United States of America\" (international-calling-connoisseur/longest-name international-calling-connoisseur/countries)))"
+    },
+    {
+      "name": "longest-name-empty-map",
+      "status": "pass",
+      "test_code": "(is (nil? (international-calling-connoisseur/longest-name {})))"
+    }
+  ],
+  "version": 3
+}

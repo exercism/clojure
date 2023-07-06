@@ -1,0 +1,51 @@
+{
+  "status": "pass",
+  "tests": [
+    {
+      "name": "single-coin-change",
+      "status": "pass",
+      "test_code": "(is (= (issue 25 #{1 100 25 5 10}) (quote (25))))"
+    },
+    {
+      "name": "multiple-coin-change",
+      "status": "pass",
+      "test_code": "(is (= (issue 15 #{1 100 25 5 10}) (quote (5 10))))"
+    },
+    {
+      "name": "change-with-lilliputian-coins",
+      "status": "pass",
+      "test_code": "(is (= (issue 23 #{20 1 4 15 50}) (quote (4 4 15))))"
+    },
+    {
+      "name": "change-with-elbonia-coins",
+      "status": "pass",
+      "test_code": "(is (= (issue 63 #{1 21 25 5 10}) (quote (21 21 21))))"
+    },
+    {
+      "name": "large-target-values",
+      "status": "pass",
+      "test_code": "(is (= (issue 999 #{20 1 50 100 2 5 10}) (quote (2 2 5 20 20 50 100 100 100 100 100 100 100 100 100))))"
+    },
+    {
+      "name": "no-coins-make-zero-change",
+      "status": "pass",
+      "test_code": "(is (empty? (issue 0 #{1 21 25 5 10})))"
+    },
+    {
+      "name": "error-testing-for-change-smallet-than-the-smallest-coin",
+      "status": "pass",
+      "test_code": "(is (thrown-with-msg? IllegalArgumentException (re-pattern \"cannot change\") (issue 3 #{5 10})))"
+    },
+    {
+      "name": "cannot-find-negative-change-values",
+      "status": "pass",
+      "test_code": "(is (thrown-with-msg? IllegalArgumentException (re-pattern \"cannot change\") (issue -5 #{1 2 5})))"
+    },
+    {
+      "name": "error-testing-for-no-valid-change",
+      "status": "pass",
+      "test_code": "(is (thrown-with-msg? IllegalArgumentException (re-pattern \"cannot change\") (issue 10 #{20 3 8})))"
+    }
+  ],
+  "version": 3
+}

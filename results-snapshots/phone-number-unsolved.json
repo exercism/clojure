@@ -1,0 +1,108 @@
+{
+  "status": "fail",
+  "tests": [
+    {
+      "message": "Expected (= \"2234567890\" (phone-number/number \"(223) 456-7890\")) but got (not (= \"2234567890\" nil))",
+      "name": "cleans-number",
+      "status": "fail",
+      "test_code": "(is (= \"2234567890\" (phone-number/number \"(223) 456-7890\")))"
+    },
+    {
+      "message": "Expected (= \"5558675309\" (phone-number/number \"555.867.5309\")) but got (not (= \"5558675309\" nil))",
+      "name": "cleans-number-with-dots",
+      "status": "fail",
+      "test_code": "(is (= \"5558675309\" (phone-number/number \"555.867.5309\")))"
+    },
+    {
+      "message": "Expected (= \"9876543210\" (phone-number/number \"19876543210\")) but got (not (= \"9876543210\" nil))",
+      "name": "valid-when-11-digits-and-first-is-1",
+      "status": "fail",
+      "test_code": "(is (= \"9876543210\" (phone-number/number \"19876543210\")))"
+    },
+    {
+      "message": "Expected (= \"0000000000\" (phone-number/number \"0234567890\")) but got (not (= \"0000000000\" nil))",
+      "name": "invalid-when-area-code-starts-with-0",
+      "status": "fail",
+      "test_code": "(is (= \"0000000000\" (phone-number/number \"0234567890\")))"
+    },
+    {
+      "message": "Expected (= \"0000000000\" (phone-number/number \"1234567890\")) but got (not (= \"0000000000\" nil))",
+      "name": "invalid-when-area-code-starts-with-1",
+      "status": "fail",
+      "test_code": "(is (= \"0000000000\" (phone-number/number \"1234567890\")))"
+    },
+    {
+      "message": "Expected (= \"0000000000\" (phone-number/number \"0234567890\")) but got (not (= \"0000000000\" nil))",
+      "name": "invalid-when--code-starts-with-0",
+      "status": "fail",
+      "test_code": "(is (= \"0000000000\" (phone-number/number \"0234567890\")))"
+    },
+    {
+      "message": "Expected (= \"0000000000\" (phone-number/number \"2231567890\")) but got (not (= \"0000000000\" nil))",
+      "name": "invalid-when-exchange-code-starts-with-1",
+      "status": "fail",
+      "test_code": "(is (= \"0000000000\" (phone-number/number \"2231567890\")))"
+    },
+    {
+      "message": "Expected (= \"0000000000\" (phone-number/number \"2230567890\")) but got (not (= \"0000000000\" nil))",
+      "name": "invalid-when-exchange-code-starts-with-0",
+      "status": "fail",
+      "test_code": "(is (= \"0000000000\" (phone-number/number \"2230567890\")))"
+    },
+    {
+      "message": "Expected (= \"0000000000\" (phone-number/number \"22234567890\")) but got (not (= \"0000000000\" nil))",
+      "name": "invalid-when-11-digits",
+      "status": "fail",
+      "test_code": "(is (= \"0000000000\" (phone-number/number \"22234567890\")))"
+    },
+    {
+      "message": "Expected (= \"0000000000\" (phone-number/number \"123456789\")) but got (not (= \"0000000000\" nil))",
+      "name": "invalid-when-9-digits",
+      "status": "fail",
+      "test_code": "(is (= \"0000000000\" (phone-number/number \"123456789\")))"
+    },
+    {
+      "message": "Expected (= \"223\" (phone-number/area-code \"2234567890\")) but got (not (= \"223\" nil))",
+      "name": "area-code",
+      "status": "fail",
+      "test_code": "(is (= \"223\" (phone-number/area-code \"2234567890\")))"
+    },
+    {
+      "message": "Expected (= \"555\" (phone-number/area-code \"555.867.5309\")) but got (not (= \"555\" nil))",
+      "name": "area-code-with-dots",
+      "status": "fail",
+      "test_code": "(is (= \"555\" (phone-number/area-code \"555.867.5309\")))"
+    },
+    {
+      "message": "Expected (= \"987\" (phone-number/area-code \"(987) 654-3210\")) but got (not (= \"987\" nil))",
+      "name": "area-code-with-parentheses",
+      "status": "fail",
+      "test_code": "(is (= \"987\" (phone-number/area-code \"(987) 654-3210\")))"
+    },
+    {
+      "message": "Expected (= \"223\" (phone-number/area-code \"12234567890\")) but got (not (= \"223\" nil))",
+      "name": "area-code-with-full-us-phone-number",
+      "status": "fail",
+      "test_code": "(is (= \"223\" (phone-number/area-code \"12234567890\")))"
+    },
+    {
+      "message": "Expected (= \"(223) 456-7890\" (phone-number/pretty-print \"2234567890\")) but got (not (= \"(223) 456-7890\" nil))",
+      "name": "pretty-print",
+      "status": "fail",
+      "test_code": "(is (= \"(223) 456-7890\" (phone-number/pretty-print \"2234567890\")))"
+    },
+    {
+      "message": "Expected (= \"(555) 867-5309\" (phone-number/pretty-print \"555.867.5309\")) but got (not (= \"(555) 867-5309\" nil))",
+      "name": "pretty-print-with-dots",
+      "status": "fail",
+      "test_code": "(is (= \"(555) 867-5309\" (phone-number/pretty-print \"555.867.5309\")))"
+    },
+    {
+      "message": "Expected (= \"(987) 654-3210\" (phone-number/pretty-print \"19876543210\")) but got (not (= \"(987) 654-3210\" nil))",
+      "name": "pretty-print-with-full-us-phone-number",
+      "status": "fail",
+      "test_code": "(is (= \"(987) 654-3210\" (phone-number/pretty-print \"19876543210\")))"
+    }
+  ],
+  "version": 3
+}

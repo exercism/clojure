@@ -1,0 +1,156 @@
+{
+  "status": "pass",
+  "tests": [
+    {
+      "name": "fast-attack-awake-test",
+      "status": "pass",
+      "test_code": "(testing \"Fast attack if knight is awake\" (is (= false (annalyns-infiltration/can-fast-attack? true))))"
+    },
+    {
+      "name": "fast-attack-asleep-test",
+      "status": "pass",
+      "test_code": "(testing \"Fast attack if knight is sleeping\" (is (= true (annalyns-infiltration/can-fast-attack? false))))"
+    },
+    {
+      "name": "spy-everyone-sleeping-test",
+      "status": "pass",
+      "test_code": "(testing \"Cannot spy if everyone is sleeping\" (is (= false (annalyns-infiltration/can-spy? false false false))))"
+    },
+    {
+      "name": "spy-but-knight-sleeping-test",
+      "status": "pass",
+      "test_code": "(testing \"Can spy if everyone but knight is sleeping\" (is (= true (annalyns-infiltration/can-spy? true false false))))"
+    },
+    {
+      "name": "spy-but-archer-sleeping-test",
+      "status": "pass",
+      "test_code": "(testing \"Can spy if everyone but archer is sleeping\" (is (= true (annalyns-infiltration/can-spy? false true false))))"
+    },
+    {
+      "name": "spy-but-prisoner-sleeping-test",
+      "status": "pass",
+      "test_code": "(testing \"Can spy if everyone but prisoner is sleeping\" (is (= true (annalyns-infiltration/can-spy? false false true))))"
+    },
+    {
+      "name": "spy-only-knight-sleeping-test",
+      "status": "pass",
+      "test_code": "(testing \"Can spy if only knight is sleeping\" (is (= true (annalyns-infiltration/can-spy? false true true))))"
+    },
+    {
+      "name": "spy-only-archer-sleeping-test",
+      "status": "pass",
+      "test_code": "(testing \"Can spy if only archer is sleeping\" (is (= true (annalyns-infiltration/can-spy? true false true))))"
+    },
+    {
+      "name": "spy-only-prisoner-sleeping-test",
+      "status": "pass",
+      "test_code": "(testing \"Can spy if only prisoner is sleeping\" (is (= true (annalyns-infiltration/can-spy? true true false))))"
+    },
+    {
+      "name": "spy-everyone-awake-test",
+      "status": "pass",
+      "test_code": "(testing \"Can spy if everyone is awake\" (is (= true (annalyns-infiltration/can-spy? true true true))))"
+    },
+    {
+      "name": "signal-prisoner-archer-sleeping-prisoner-awake-test",
+      "status": "pass",
+      "test_code": "(testing \"Can signal prisoner if archer is sleeping and prisoner is awake\" (is (= true (annalyns-infiltration/can-signal-prisoner? false true))))"
+    },
+    {
+      "name": "signal-prisoner-archer-awake-prisoner-sleeping-test",
+      "status": "pass",
+      "test_code": "(testing \"Cannot signal prisoner if archer is awake and prisoner is sleeping\" (is (= false (annalyns-infiltration/can-signal-prisoner? true false))))"
+    },
+    {
+      "name": "signal-prisoner-both-sleeping-test",
+      "status": "pass",
+      "test_code": "(testing \"Cannot signal prisoner if archer and prisoner are both sleeping\" (is (= false (annalyns-infiltration/can-signal-prisoner? false false))))"
+    },
+    {
+      "name": "signal-prisoner-both-awake-test",
+      "status": "pass",
+      "test_code": "(testing \"Cannot signal prisoner if archer and prisoner are both awake\" (is (= false (annalyns-infiltration/can-signal-prisoner? true true))))"
+    },
+    {
+      "name": "release-prisoner-everyone-awake-dog-present-test",
+      "status": "pass",
+      "test_code": "(testing \"Cannot release prisoner if everyone is awake and pet dog is present\" (is (= false (annalyns-infiltration/can-free-prisoner? true true true true))))"
+    },
+    {
+      "name": "release-prisoner-everyone-awake-dog-absent-test",
+      "status": "pass",
+      "test_code": "(testing \"Cannot release prisoner if everyone is awake and pet dog is absent\" (is (= false (annalyns-infiltration/can-free-prisoner? true true true false))))"
+    },
+    {
+      "name": "release-prisoner-everyone-asleep-dog-absent-test",
+      "status": "pass",
+      "test_code": "(testing \"Cannot release prisoner if everyone is asleep and pet dog is absent\" (is (= false (annalyns-infiltration/can-free-prisoner? false false false false))))"
+    },
+    {
+      "name": "release-prisoner-archer-awake-dog-present-test",
+      "status": "pass",
+      "test_code": "(testing \"Cannot release prisoner if only archer is awake and pet dog is present\" (is (= false (annalyns-infiltration/can-free-prisoner? false true false true))))"
+    },
+    {
+      "name": "release-prisoner-archer-awake-dog-absent-test",
+      "status": "pass",
+      "test_code": "(testing \"Cannot release prisoner if only archer is awake and pet dog is absent\" (is (= false (annalyns-infiltration/can-free-prisoner? false true false false))))"
+    },
+    {
+      "name": "release-prisoner-knight-awake-dog-absent-test",
+      "status": "pass",
+      "test_code": "(testing \"Cannot release prisoner if only knight is awake and pet dog is absent\" (is (= false (annalyns-infiltration/can-free-prisoner? true false false false))))"
+    },
+    {
+      "name": "release-prisoner-knight-awake-dog-present-test",
+      "status": "pass",
+      "test_code": "(testing \"Can release prisoner if only knight is awake and pet dog is present\" (is (= true (annalyns-infiltration/can-free-prisoner? true false false true))))"
+    },
+    {
+      "name": "release-prisoner-knight-asleep-dog-absent-test",
+      "status": "pass",
+      "test_code": "(testing \"Cannot release prisoner if only knight is asleep and pet dog is absent\" (is (= false (annalyns-infiltration/can-free-prisoner? false true true false))))"
+    },
+    {
+      "name": "release-prisoner-archer-asleep-dog-absent-test",
+      "status": "pass",
+      "test_code": "(testing \"Cannot release prisoner if only archer is asleep and pet dog is absent\" (is (= false (annalyns-infiltration/can-free-prisoner? true false true false))))"
+    },
+    {
+      "name": "release-prisoner-prisoner-asleep-dog-present-test",
+      "status": "pass",
+      "test_code": "(testing \"Cannot release prisoner if only prisoner is asleep and pet dog is present\" (is (= false (annalyns-infiltration/can-free-prisoner? true true false true))))"
+    },
+    {
+      "name": "release-prisoner-prisoner-asleep-dog-absent-test",
+      "status": "pass",
+      "test_code": "(testing \"Cannot release prisoner if only prisoner is asleep and pet dog is absent\" (is (= false (annalyns-infiltration/can-free-prisoner? true true false false))))"
+    },
+    {
+      "name": "release-prisoner-everyone-asleep-dog-present-test",
+      "status": "pass",
+      "test_code": "(testing \"Can release prisoner if everyone is asleep and pet dog is present\" (is (= true (annalyns-infiltration/can-free-prisoner? false false false true))))"
+    },
+    {
+      "name": "release-prisoner-prisoner-awake-dog-present-test",
+      "status": "pass",
+      "test_code": "(testing \"Can release prisoner if only prisoner is awake and pet dog is present\" (is (= true (annalyns-infiltration/can-free-prisoner? false false true true))))"
+    },
+    {
+      "name": "release-prisoner-prisoner-awake-dog-absent-test",
+      "status": "pass",
+      "test_code": "(testing \"Can release prisoner if only prisoner is awake and pet dog is absent\" (is (= true (annalyns-infiltration/can-free-prisoner? false false true false))))"
+    },
+    {
+      "name": "release-prisoner-knight-awake-dog-present-test",
+      "status": "pass",
+      "test_code": "(testing \"Can release prisoner if only knight is awake and pet dog is present\" (is (= true (annalyns-infiltration/can-free-prisoner? true false false true))))"
+    },
+    {
+      "name": "release-prisoner-archer-asleep-dog-present-test",
+      "status": "pass",
+      "test_code": "(testing \"Can release prisoner if only archer is asleep and pet dog is present\" (is (= true (annalyns-infiltration/can-free-prisoner? true false true true))))"
+    }
+  ],
+  "version": 3
+}

@@ -1,0 +1,81 @@
+{
+  "status": "pass",
+  "tests": [
+    {
+      "name": "zero-test",
+      "status": "pass",
+      "test_code": "(is (= \"zero\" (say/number 0)))"
+    },
+    {
+      "name": "one-test",
+      "status": "pass",
+      "test_code": "(is (= \"one\" (say/number 1)))"
+    },
+    {
+      "name": "fourteen-test",
+      "status": "pass",
+      "test_code": "(is (= \"fourteen\" (say/number 14)))"
+    },
+    {
+      "name": "twenty-test",
+      "status": "pass",
+      "test_code": "(is (= \"twenty\" (say/number 20)))"
+    },
+    {
+      "name": "twenty-two-test",
+      "status": "pass",
+      "test_code": "(is (= \"twenty-two\" (say/number 22)))"
+    },
+    {
+      "name": "one-hundred-test",
+      "status": "pass",
+      "test_code": "(is (= \"one hundred\" (say/number 100)))"
+    },
+    {
+      "name": "one-hundred-twenty-three-test",
+      "status": "pass",
+      "test_code": "(is (= \"one hundred twenty-three\" (say/number 123)))"
+    },
+    {
+      "name": "one-thousand-test",
+      "status": "pass",
+      "test_code": "(is (= \"one thousand\" (say/number 1000)))"
+    },
+    {
+      "name": "one-thousand-two-hundred-thirty-four-test",
+      "status": "pass",
+      "test_code": "(is (= \"one thousand two hundred thirty-four\" (say/number 1234)))"
+    },
+    {
+      "name": "one-million-test",
+      "status": "pass",
+      "test_code": "(is (= \"one million\" (say/number 1000000)))"
+    },
+    {
+      "name": "one-million-two-thousand-three-hundred-forty-five-test",
+      "status": "pass",
+      "test_code": "(is (= \"one million two thousand three hundred forty-five\" (say/number 1002345)))"
+    },
+    {
+      "name": "one-billion-test",
+      "status": "pass",
+      "test_code": "(is (= \"one billion\" (say/number 1000000000)))"
+    },
+    {
+      "name": "a-big-number-test",
+      "status": "pass",
+      "test_code": "(is (= \"nine hundred eighty-seven billion six hundred fifty-four million three hundred twenty-one thousand one hundred twenty-three\" (say/number 987654321123)))"
+    },
+    {
+      "name": "below-zero-is-out-of-range-test",
+      "status": "pass",
+      "test_code": "(is (thrown? IllegalArgumentException (say/number -1)))"
+    },
+    {
+      "name": "numbers-above-999999999999-out-of-range-test",
+      "status": "pass",
+      "test_code": "(is (thrown? IllegalArgumentException (say/number 1000000000000)))"
+    }
+  ],
+  "version": 3
+}

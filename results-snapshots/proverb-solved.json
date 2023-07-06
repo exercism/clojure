@@ -1,0 +1,36 @@
+{
+  "status": "pass",
+  "tests": [
+    {
+      "name": "zero-pieces",
+      "status": "pass",
+      "test_code": "(is (= (recite ()) \"\"))"
+    },
+    {
+      "name": "one-piece",
+      "status": "pass",
+      "test_code": "(is (= (recite (quote (\"nail\"))) \"And all for the want of a nail.\"))"
+    },
+    {
+      "name": "two-pieces",
+      "status": "pass",
+      "test_code": "(is (= (recite (quote (\"nail\" \"shoe\"))) (str/join \"\\n\" [\"For want of a nail the shoe was lost.\" \"And all for the want of a nail.\"])))"
+    },
+    {
+      "name": "three-pieces",
+      "status": "pass",
+      "test_code": "(is (= (recite (quote (\"nail\" \"shoe\" \"horse\"))) (str/join \"\\n\" [\"For want of a nail the shoe was lost.\" \"For want of a shoe the horse was lost.\" \"And all for the want of a nail.\"])))"
+    },
+    {
+      "name": "full-proverb",
+      "status": "pass",
+      "test_code": "(is (= (recite (quote (\"nail\" \"shoe\" \"horse\" \"rider\" \"message\" \"battle\" \"kingdom\"))) (str/join \"\\n\" [\"For want of a nail the shoe was lost.\" \"For want of a shoe the horse was lost.\" \"For want of a horse the rider was lost.\" \"For want of a rider the message was lost.\" \"For want of a message the battle was lost.\" \"For want of a battle the kingdom was lost.\" \"And all for the want of a nail.\"])))"
+    },
+    {
+      "name": "four-pieces-modernized",
+      "status": "pass",
+      "test_code": "(is (= (recite (quote (\"pin\" \"gun\" \"soldier\" \"battle\"))) (str/join \"\\n\" [\"For want of a pin the gun was lost.\" \"For want of a gun the soldier was lost.\" \"For want of a soldier the battle was lost.\" \"And all for the want of a pin.\"])))"
+    }
+  ],
+  "version": 3
+}

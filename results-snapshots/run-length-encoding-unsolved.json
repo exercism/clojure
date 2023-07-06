@@ -1,0 +1,84 @@
+{
+  "status": "fail",
+  "tests": [
+    {
+      "message": "Expected (= (rle/run-length-encode \"\") \"\") but got (not (= nil \"\"))",
+      "name": "encode-empty-string",
+      "status": "fail",
+      "test_code": "(testing \"encode an empty string\" (is (= (rle/run-length-encode \"\") \"\")))"
+    },
+    {
+      "message": "Expected (= (rle/run-length-encode \"XYZ\") \"XYZ\") but got (not (= nil \"XYZ\"))",
+      "name": "encode-single-characters-without-count",
+      "status": "fail",
+      "test_code": "(testing \"encode single characters without count\" (is (= (rle/run-length-encode \"XYZ\") \"XYZ\")))"
+    },
+    {
+      "message": "Expected (= (rle/run-length-encode \"AABBBCCCC\") \"2A3B4C\") but got (not (= nil \"2A3B4C\"))",
+      "name": "encode-string-with-no-single-characters",
+      "status": "fail",
+      "test_code": "(testing \"encode string with no single characters\" (is (= (rle/run-length-encode \"AABBBCCCC\") \"2A3B4C\")))"
+    },
+    {
+      "message": "Expected (= (rle/run-length-encode \"WWWWWWWWWWWWBWWWWWWWWWWWWBBBWWWWWWWWWWWWWWWWWWWWWWWWB\") \"12WB12W3B24WB\") but got (not (= nil \"12WB12W3B24WB\"))",
+      "name": "encode-string-with-single-and-mixed-characters",
+      "status": "fail",
+      "test_code": "(testing \"encode string with single and mixed characters\" (is (= (rle/run-length-encode \"WWWWWWWWWWWWBWWWWWWWWWWWWBBBWWWWWWWWWWWWWWWWWWWWWWWWB\") \"12WB12W3B24WB\")))"
+    },
+    {
+      "message": "Expected (= (rle/run-length-encode \"  hsqq qww  \") \"2 hs2q q2w2 \") but got (not (= nil \"2 hs2q q2w2 \"))",
+      "name": "encode-multiple-whitespace",
+      "status": "fail",
+      "test_code": "(testing \"encode string with whitespace characters mixed in it\" (is (= (rle/run-length-encode \"  hsqq qww  \") \"2 hs2q q2w2 \")))"
+    },
+    {
+      "message": "Expected (= (rle/run-length-encode \"aabbbcccc\") \"2a3b4c\") but got (not (= nil \"2a3b4c\"))",
+      "name": "encode-lowercase",
+      "status": "fail",
+      "test_code": "(testing \"encode string with lowercase characters\" (is (= (rle/run-length-encode \"aabbbcccc\") \"2a3b4c\")))"
+    },
+    {
+      "message": "Expected (= (rle/run-length-decode \"\") \"\") but got (not (= nil \"\"))",
+      "name": "decode-empty-string",
+      "status": "fail",
+      "test_code": "(testing \"decode empty string\" (is (= (rle/run-length-decode \"\") \"\")))"
+    },
+    {
+      "message": "Expected (= (rle/run-length-decode \"XYZ\") \"XYZ\") but got (not (= nil \"XYZ\"))",
+      "name": "decode-single-characters",
+      "status": "fail",
+      "test_code": "(testing \"decode string with single characters only\" (is (= (rle/run-length-decode \"XYZ\") \"XYZ\")))"
+    },
+    {
+      "message": "Expected (= (rle/run-length-decode \"2A3B4C\") \"AABBBCCCC\") but got (not (= nil \"AABBBCCCC\"))",
+      "name": "decode-no-single-characters",
+      "status": "fail",
+      "test_code": "(testing \"decode string with no single characters\" (is (= (rle/run-length-decode \"2A3B4C\") \"AABBBCCCC\")))"
+    },
+    {
+      "message": "Expected (= (rle/run-length-decode \"12WB12W3B24WB\") \"WWWWWWWWWWWWBWWWWWWWWWWWWBBBWWWWWWWWWWWWWWWWWWWWWWWWB\") but got (not (= nil \"WWWWWWWWWWWWBWWWWWWWWWWWWBBBWWWWWWWWWWWWWWWWWWWWWWWWB\"))",
+      "name": "decode-single-and-repeated-characters",
+      "status": "fail",
+      "test_code": "(testing \"decode string with single and repeated characters\" (is (= (rle/run-length-decode \"12WB12W3B24WB\") \"WWWWWWWWWWWWBWWWWWWWWWWWWBBBWWWWWWWWWWWWWWWWWWWWWWWWB\")))"
+    },
+    {
+      "message": "Expected (= (rle/run-length-decode \"2a3b4c\") \"aabbbcccc\") but got (not (= nil \"aabbbcccc\"))",
+      "name": "decode-lowercase",
+      "status": "fail",
+      "test_code": "(testing \"decode string with lowercase characters\" (is (= (rle/run-length-decode \"2a3b4c\") \"aabbbcccc\")))"
+    },
+    {
+      "message": "Expected (= (rle/run-length-decode \"2 hs2q q2w2 \") \"  hsqq qww  \") but got (not (= nil \"  hsqq qww  \"))",
+      "name": "decode-mixed-whitespace",
+      "status": "fail",
+      "test_code": "(testing \"decode string with mixed whitespace characters in it\" (is (= (rle/run-length-decode \"2 hs2q q2w2 \") \"  hsqq qww  \")))"
+    },
+    {
+      "message": "Expected (= (rle/run-length-decode (rle/run-length-encode \"zzz ZZ  zZ\")) \"zzz ZZ  zZ\") but got (not (= nil \"zzz ZZ  zZ\"))",
+      "name": "consistency",
+      "status": "fail",
+      "test_code": "(testing \"Encode a string and then decode it. Should return the same one.\" (is (= (rle/run-length-decode (rle/run-length-encode \"zzz ZZ  zZ\")) \"zzz ZZ  zZ\")))"
+    }
+  ],
+  "version": 3
+}

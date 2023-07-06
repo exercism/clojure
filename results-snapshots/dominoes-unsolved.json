@@ -1,0 +1,78 @@
+{
+  "status": "fail",
+  "tests": [
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "empty-input-empty-output",
+      "status": "error",
+      "test_code": "(is (can-chain? []))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "singleton-input-singleton-output",
+      "status": "error",
+      "test_code": "(is (can-chain? [[1 1]]))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "singleton-that-cant-be-chained",
+      "status": "error",
+      "test_code": "(is ((comp not can-chain?) [[1 2]]))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "three-elements",
+      "status": "error",
+      "test_code": "(is (can-chain? [[1 2] [3 1] [2 3]]))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "can-reverse-dominoes",
+      "status": "error",
+      "test_code": "(is (can-chain? [[1 2] [1 3] [2 3]]))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "cant-be-chained",
+      "status": "error",
+      "test_code": "(is ((comp not can-chain?) [[1 2] [4 1] [2 3]]))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "disconnected-simple",
+      "status": "error",
+      "test_code": "(is ((comp not can-chain?) [[1 1] [2 2]]))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "disconnected-double-loop",
+      "status": "error",
+      "test_code": "(is ((comp not can-chain?) [[1 2] [2 1] [3 4] [4 3]]))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "disconnected-single-isolated",
+      "status": "error",
+      "test_code": "(is ((comp not can-chain?) [[1 2] [2 3] [3 1] [4 4]]))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "need-backtrack",
+      "status": "error",
+      "test_code": "(is (can-chain? [[1 2] [2 3] [3 1] [2 4] [2 4]]))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "separate-loops",
+      "status": "error",
+      "test_code": "(is (can-chain? [[1 2] [2 3] [3 1] [1 1] [2 2] [3 3]]))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "nine-elements",
+      "status": "error",
+      "test_code": "(is (can-chain? [[1 2] [5 3] [3 1] [1 2] [2 4] [1 6] [2 3] [3 4] [5 6]]))"
+    }
+  ],
+  "version": 3
+}

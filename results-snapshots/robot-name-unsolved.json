@@ -1,0 +1,46 @@
+{
+  "status": "fail",
+  "tests": [
+    {
+      "message": "An unexpected error occurred:\njava.lang.NullPointerException",
+      "name": "robot-name",
+      "status": "error",
+      "test_code": "(let [a-robot (robot-name/robot) its-name (robot-name/robot-name a-robot)] (is (re-seq (re-pattern \"[A-Z]{2}\\\\d{3}\") its-name)))"
+    },
+    {
+      "name": "name-matches-pattern",
+      "status": "pass",
+      "test_code": "(let [a-robot (robot-name/robot) its-name (robot-name/robot-name a-robot)] (is (= its-name (robot-name/robot-name a-robot))))"
+    },
+    {
+      "message": "Expected (not= its-name (-> (robot-name/robot) robot-name/robot-name)) but got (not (not= nil nil))",
+      "name": "different-robots-different-names",
+      "status": "fail",
+      "test_code": "(let [a-robot (robot-name/robot) its-name (robot-name/robot-name a-robot)] (is (not= its-name (-> (robot-name/robot) robot-name/robot-name))))"
+    },
+    {
+      "message": "An unexpected error occurred:\njava.lang.NullPointerException",
+      "name": "new-name-matches",
+      "status": "error",
+      "test_code": "(let [a-robot (robot-name/robot) its-original-name (robot-name/robot-name a-robot) its-new-name (do (robot-name/reset-name a-robot) (robot-name/robot-name a-robot))] (is (re-seq (re-pattern \"[A-Z]{2}\\\\d{3}\") its-new-name)))"
+    },
+    {
+      "message": "Expected (not= its-original-name its-new-name) but got (not (not= nil nil))",
+      "name": "new-name-different",
+      "status": "fail",
+      "test_code": "(let [a-robot (robot-name/robot) its-original-name (robot-name/robot-name a-robot) its-new-name (do (robot-name/reset-name a-robot) (robot-name/robot-name a-robot))] (is (not= its-original-name its-new-name)))"
+    },
+    {
+      "name": "new-name-does-not-change-until-reset",
+      "status": "pass",
+      "test_code": "(let [a-robot (robot-name/robot) its-original-name (robot-name/robot-name a-robot) its-new-name (do (robot-name/reset-name a-robot) (robot-name/robot-name a-robot))] (is (= its-new-name (robot-name/robot-name a-robot))))"
+    },
+    {
+      "message": "Expected (not= its-new-name (do (robot-name/reset-name a-robot) (robot-name/robot-name a-robot))) but got (not (not= nil nil))",
+      "name": "new-names-different-each-time",
+      "status": "fail",
+      "test_code": "(let [a-robot (robot-name/robot) its-original-name (robot-name/robot-name a-robot) its-new-name (do (robot-name/reset-name a-robot) (robot-name/robot-name a-robot))] (is (not= its-new-name (do (robot-name/reset-name a-robot) (robot-name/robot-name a-robot)))))"
+    }
+  ],
+  "version": 3
+}

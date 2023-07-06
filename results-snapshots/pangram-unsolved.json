@@ -1,0 +1,60 @@
+{
+  "status": "fail",
+  "tests": [
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "empty-sentence",
+      "status": "error",
+      "test_code": "(is (false? (pangram? \"\")))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "lowercase-pangram",
+      "status": "error",
+      "test_code": "(is (pangram? \"the quick brown fox jumps over the lazy dog\"))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "missing-character-x",
+      "status": "error",
+      "test_code": "(is (false? (pangram? \"a quick movement of the enemy will jeopardize five gunboats\")))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "another-missing-character-x",
+      "status": "error",
+      "test_code": "(is (false? (pangram? \"the quick brown fish jumps over the lazy dog\")))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "with-underscores",
+      "status": "error",
+      "test_code": "(is (pangram? \"the_quick_brown_fox_jumps_over_the_lazy_dog\"))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "with-numbers",
+      "status": "error",
+      "test_code": "(is (pangram? \"the 1 quick brown fox jumps over the 2 lazy dogs\"))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "missing-letters-replaced-by-numbers",
+      "status": "error",
+      "test_code": "(is (false? (pangram? \"7h3 qu1ck brown fox jumps ov3r 7h3 lazy dog\")))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "mixed-case-and-punctuation",
+      "status": "error",
+      "test_code": "(is (pangram? \"\\\"Five quacking Zephyrs jolt my wax bed.\\\"\"))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "upper-and-lower-not-counted-separately",
+      "status": "error",
+      "test_code": "(is (false? (pangram? \"the quick brown fox jumps over with lazy FX\")))"
+    }
+  ],
+  "version": 3
+}

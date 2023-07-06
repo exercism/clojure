@@ -1,0 +1,71 @@
+{
+  "status": "pass",
+  "tests": [
+    {
+      "name": "paired-square",
+      "status": "pass",
+      "test_code": "(is (matching-brackets/valid? \"[]\") \"paired square brackets\")"
+    },
+    {
+      "name": "empty-string",
+      "status": "pass",
+      "test_code": "(is (matching-brackets/valid? \"\") \"empty string\")"
+    },
+    {
+      "name": "unpaired-brackets",
+      "status": "pass",
+      "test_code": "(is (false? (matching-brackets/valid? \"[[\")) \"unpaired brackets\")"
+    },
+    {
+      "name": "wrong-ordered-brackets",
+      "status": "pass",
+      "test_code": "(is (false? (matching-brackets/valid? \"}{\")) \"wrong ordered brackets\")"
+    },
+    {
+      "name": "paired-with-whitespace",
+      "status": "pass",
+      "test_code": "(is (matching-brackets/valid? \"{ }\") \"paired with whitespace\")"
+    },
+    {
+      "name": "simple-nested-brackets",
+      "status": "pass",
+      "test_code": "(is (matching-brackets/valid? \"{[]}\") \"simple nested brackets\")"
+    },
+    {
+      "name": "several-paired-brackets",
+      "status": "pass",
+      "test_code": "(is (matching-brackets/valid? \"{}[]\") \"several paired brackets\")"
+    },
+    {
+      "name": "paired-and-nested-brackets",
+      "status": "pass",
+      "test_code": "(is (matching-brackets/valid? \"([{}({}[])])\") \"paired and nested brackets\")"
+    },
+    {
+      "name": "unopened-closing-brackets",
+      "status": "pass",
+      "test_code": "(is (false? (matching-brackets/valid? \"{[)][]}\")) \"unopened closing brackets\")"
+    },
+    {
+      "name": "unpaired-and-nested-brackets",
+      "status": "pass",
+      "test_code": "(is (false? (matching-brackets/valid? \"([{])\")) \"unpaired and nested brackets\")"
+    },
+    {
+      "name": "paired-and-wrong-nested-brackets",
+      "status": "pass",
+      "test_code": "(is (false? (matching-brackets/valid? \"[({]})\")) \"paired and wrong nested brackets\")"
+    },
+    {
+      "name": "math-expression",
+      "status": "pass",
+      "test_code": "(is (matching-brackets/valid? \"(((185 + 223.85) * 15) - 543)/2\") \"math expression\")"
+    },
+    {
+      "name": "complex-latex-expression",
+      "status": "pass",
+      "test_code": "(is (matching-brackets/valid? \"\\\\\\\\left(\\\\\\\\begin{array}{cc} \\\\\\\\frac{1}{3} & x\\\\\\\\\\\\\\\\ \\\\\\\\mathrm{e}^{x} &... x^2 \\\\\\\\end{array}\\\\\\\\right)\") \"complex latex expression\")"
+    }
+  ],
+  "version": 3
+}

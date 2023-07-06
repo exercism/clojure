@@ -1,0 +1,36 @@
+{
+  "status": "pass",
+  "tests": [
+    {
+      "name": "lower-case-letter",
+      "status": "pass",
+      "test_code": "(is (= 1 (scrabble-score/score-letter \"a\")))"
+    },
+    {
+      "name": "upper-case-letter",
+      "status": "pass",
+      "test_code": "(is (= 1 (scrabble-score/score-letter \"A\")))"
+    },
+    {
+      "name": "two-letter-word",
+      "status": "pass",
+      "test_code": "(is (= 2 (scrabble-score/score-word \"at\")))"
+    },
+    {
+      "name": "bigger-word-1",
+      "status": "pass",
+      "test_code": "(is (= 6 (scrabble-score/score-word \"street\")))"
+    },
+    {
+      "name": "bigger-word-2",
+      "status": "pass",
+      "test_code": "(is (= 22 (scrabble-score/score-word \"quirky\")))"
+    },
+    {
+      "name": "all-upper-case-word",
+      "status": "pass",
+      "test_code": "(is (= 41 (scrabble-score/score-word \"OXYPHENBUTAZONE\")))"
+    }
+  ],
+  "version": 3
+}

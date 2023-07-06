@@ -1,0 +1,100 @@
+{
+  "status": "fail",
+  "tests": [
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "addition",
+      "status": "error",
+      "test_code": "(is (= (wordy/evaluate \"What is 1 plus 1?\") 2))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "more-addition",
+      "status": "error",
+      "test_code": "(is (= (wordy/evaluate \"What is 53 plus 2?\") 55))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "addition-with-negative-numbers",
+      "status": "error",
+      "test_code": "(is (= (wordy/evaluate \"What is -1 plus -10?\") -11))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "large-addition",
+      "status": "error",
+      "test_code": "(is (= (wordy/evaluate \"What is 123 plus 45678?\") 45801))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "subtraction",
+      "status": "error",
+      "test_code": "(is (= (wordy/evaluate \"What is 4 minus -12?\") 16))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "multiplication",
+      "status": "error",
+      "test_code": "(is (= (wordy/evaluate \"What is -3 multiplied by 25?\") -75))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "division",
+      "status": "error",
+      "test_code": "(is (= (wordy/evaluate \"What is 33 divided by -3?\") -11))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "multiple-additions",
+      "status": "error",
+      "test_code": "(is (= (wordy/evaluate \"What is 1 plus 1 plus 1?\") 3))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "addition-and-subtraction",
+      "status": "error",
+      "test_code": "(is (= (wordy/evaluate \"What is 1 plus 5 minus -2?\") 8))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "multiple-subtraction",
+      "status": "error",
+      "test_code": "(is (= (wordy/evaluate \"What is 20 minus 4 minus 13?\") 3))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "subtraction-then-addition",
+      "status": "error",
+      "test_code": "(is (= (wordy/evaluate \"What is 17 minus 6 plus 3?\") 14))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "multiple-multiplication",
+      "status": "error",
+      "test_code": "(is (= (wordy/evaluate \"What is 2 multiplied by -2 multiplied by 3?\") -12))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "addition-and-multiplication",
+      "status": "error",
+      "test_code": "(is (= (wordy/evaluate \"What is -3 plus 7 multiplied by -2?\") -8))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "multiple-division",
+      "status": "error",
+      "test_code": "(is (= (wordy/evaluate \"What is -12 divided by 2 divided by -3?\") 2))"
+    },
+    {
+      "name": "unknown-operation",
+      "status": "pass",
+      "test_code": "(is (thrown? IllegalArgumentException (wordy/evaluate \"What is 52 cubed?\")))"
+    },
+    {
+      "name": "Non-math-question",
+      "status": "pass",
+      "test_code": "(is (thrown? IllegalArgumentException (wordy/evaluate \"Who is the President of the United States?\")))"
+    }
+  ],
+  "version": 3
+}

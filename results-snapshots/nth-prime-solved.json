@@ -1,0 +1,31 @@
+{
+  "status": "pass",
+  "tests": [
+    {
+      "name": "first-prime",
+      "status": "pass",
+      "test_code": "(testing \"the first prime is 2\" (is (= 2 (nth-prime/nth-prime 1))))"
+    },
+    {
+      "name": "second-prime",
+      "status": "pass",
+      "test_code": "(testing \"the second prime is 3\" (is (= 3 (nth-prime/nth-prime 2))))"
+    },
+    {
+      "name": "sixth-prime",
+      "status": "pass",
+      "test_code": "(testing \"the sixth prime is 13\" (is (= 13 (nth-prime/nth-prime 6))))"
+    },
+    {
+      "name": "ten-thousand-first-prime",
+      "status": "pass",
+      "test_code": "(testing \"the ten thousand and first prime is 104743\" (is (= 104743 (nth-prime/nth-prime 10001))))"
+    },
+    {
+      "name": "zeroth-prime",
+      "status": "pass",
+      "test_code": "(testing \"there is no zeroth prime\" (is (thrown? IllegalArgumentException (nth-prime/nth-prime 0))))"
+    }
+  ],
+  "version": 3
+}

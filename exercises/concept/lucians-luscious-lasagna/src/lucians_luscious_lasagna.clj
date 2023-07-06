@@ -8,7 +8,7 @@
 
 (def expected-time
   ;; Define the var here
-  )
+  nil) 
 
 (defn remaining-time
   "Takes the actual time in minutes the lasagna has been in the oven,

@@ -1,0 +1,51 @@
+{
+  "status": "pass",
+  "tests": [
+    {
+      "name": "clean-single-letter",
+      "status": "pass",
+      "test_code": "(is (= \"A\" (squeaky-clean/clean \"A\")))"
+    },
+    {
+      "name": "clean-clean-string",
+      "status": "pass",
+      "test_code": "(is (= \"àḃç\" (squeaky-clean/clean \"àḃç\")))"
+    },
+    {
+      "name": "clean-string-with-spaces",
+      "status": "pass",
+      "test_code": "(is (= \"my___Id\" (squeaky-clean/clean \"my   Id\")))"
+    },
+    {
+      "name": "clean-string-with-control-char",
+      "status": "pass",
+      "test_code": "(is (= \"myCTRLId\" (squeaky-clean/clean \"my\u0000Id\")))"
+    },
+    {
+      "name": "clean-string-with-no-letters",
+      "status": "pass",
+      "test_code": "(is (= \"\" (squeaky-clean/clean \"😀😀😀\")))"
+    },
+    {
+      "name": "clean-empty-string",
+      "status": "pass",
+      "test_code": "(is (= \"\" (squeaky-clean/clean \"\")))"
+    },
+    {
+      "name": "convert-kebab-to-camel-case",
+      "status": "pass",
+      "test_code": "(is (= \"àḂç\" (squeaky-clean/clean \"à-ḃç\")))"
+    },
+    {
+      "name": "omit-lower-case-greek-letters",
+      "status": "pass",
+      "test_code": "(is (= \"MyΟFinder\" (squeaky-clean/clean \"MyΟβιεγτFinder\")))"
+    },
+    {
+      "name": "combine-conversions",
+      "status": "pass",
+      "test_code": "(is (= \"_AbcĐCTRL\" (squeaky-clean/clean \"9 -abcĐ😀ω\u0000\")))"
+    }
+  ],
+  "version": 3
+}

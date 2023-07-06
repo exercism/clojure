@@ -1,0 +1,16 @@
+{
+  "status": "pass",
+  "tests": [
+    {
+      "name": "test-isograms",
+      "status": "pass",
+      "test_code": "(is (isogram/isogram? \"duplicates\"))\n(is (isogram/isogram? \"subdermatoglyphic\"))\n(is (isogram/isogram? \"thumbscrew-japingly\"))\n(is (isogram/isogram? \"Hjelmqvist-Gryb-Zock-Pfund-Wax\"))\n(is (isogram/isogram? \"Heizölrückstoßabdämpfung\"))\n(is (isogram/isogram? \"Emily Jung Schwartzkopf\"))"
+    },
+    {
+      "name": "test-non-isograms",
+      "status": "pass",
+      "test_code": "(is (not (isogram/isogram? \"eleven\")))\n(is (not (isogram/isogram? \"Alphabet\")))\n(is (not (isogram/isogram? \"the quick brown fox\")))\n(is (not (isogram/isogram? \"éléphant\")))"
+    }
+  ],
+  "version": 3
+}

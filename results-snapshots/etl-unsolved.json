@@ -1,0 +1,30 @@
+{
+  "status": "fail",
+  "tests": [
+    {
+      "message": "Expected (= {\"world\" 1} (etl/transform {1 [\"WORLD\"]})) but got (not (= {\"world\" 1} nil))",
+      "name": "transform-one-value",
+      "status": "fail",
+      "test_code": "(is (= {\"world\" 1} (etl/transform {1 [\"WORLD\"]})))"
+    },
+    {
+      "message": "Expected (= {\"world\" 1, \"gschoolers\" 1} (etl/transform {1 [\"WORLD\" \"GSCHOOLERS\"]})) but got (not (= {\"world\" 1, \"gschoolers\" 1} nil))",
+      "name": "transform-more-values",
+      "status": "fail",
+      "test_code": "(is (= {\"gschoolers\" 1, \"world\" 1} (etl/transform {1 [\"WORLD\" \"GSCHOOLERS\"]})))"
+    },
+    {
+      "message": "Expected (= {\"apple\" 1, \"artichoke\" 1, \"boat\" 2, \"ballerina\" 2} (etl/transform {1 [\"APPLE\" \"ARTICHOKE\"], 2 [\"BOAT\" \"BALLERINA\"]})) but got (not (= {\"apple\" 1, \"artichoke\" 1, \"boat\" 2, \"ballerina\" 2} nil))",
+      "name": "more-keys",
+      "status": "fail",
+      "test_code": "(is (= {\"boat\" 2, \"apple\" 1, \"artichoke\" 1, \"ballerina\" 2} (etl/transform {1 [\"APPLE\" \"ARTICHOKE\"], 2 [\"BOAT\" \"BALLERINA\"]})))"
+    },
+    {
+      "message": "Expected (= {\"d\" 2, \"n\" 1, \"z\" 10, \"w\" 4, \"s\" 1, \"f\" 4, \"e\" 1, \"q\" 10, \"p\" 3, \"j\" 8, \"x\" 8, \"v\" 4, \"a\" 1, \"t\" 1, \"i\" 1, \"k\" 5, \"b\" 3, \"r\" 1, \"y\" 4, \"g\" 2, \"l\" 1, \"u\" 1, \"h\" 4, \"m\" 3, \"o\" 1, \"c\" 3} (etl/transform {1 (re-seq #\"\\w\" \"AEIOULNRST\"), 2 (re-seq #\"\\w\" \"DG\"), 3 (re-seq #\"\\w\" \"BCMP\"), 4 (re-seq #\"\\w\" \"FHVWY\"), 5 (re-seq #\"\\w\" \"K\"), 8 (re-seq #\"\\w\" \"JX\"), 10 (re-seq #\"\\w\" \"QZ\")})) but got (not (= {\"d\" 2, \"n\" 1, \"z\" 10, \"w\" 4, \"s\" 1, \"f\" 4, \"e\" 1, \"q\" 10, \"p\" 3, \"j\" 8, \"x\" 8, \"v\" 4, \"a\" 1, \"t\" 1, \"i\" 1, \"k\" 5, \"b\" 3, \"r\" 1, \"y\" 4, \"g\" 2, \"l\" 1, \"u\" 1, \"h\" 4, \"m\" 3, \"o\" 1, \"c\" 3} nil))",
+      "name": "full-dataset",
+      "status": "fail",
+      "test_code": "(is (= {\"d\" 2, \"n\" 1, \"z\" 10, \"w\" 4, \"s\" 1, \"f\" 4, \"e\" 1, \"q\" 10, \"p\" 3, \"j\" 8, \"x\" 8, \"v\" 4, \"a\" 1, \"t\" 1, \"i\" 1, \"k\" 5, \"b\" 3, \"r\" 1, \"y\" 4, \"g\" 2, \"l\" 1, \"u\" 1, \"h\" 4, \"m\" 3, \"o\" 1, \"c\" 3} (etl/transform {1 (re-seq (re-pattern \"\\\\w\") \"AEIOULNRST\"), 4 (re-seq (re-pattern \"\\\\w\") \"FHVWY\"), 3 (re-seq (re-pattern \"\\\\w\") \"BCMP\"), 2 (re-seq (re-pattern \"\\\\w\") \"DG\"), 5 (re-seq (re-pattern \"\\\\w\") \"K\"), 10 (re-seq (re-pattern \"\\\\w\") \"QZ\"), 8 (re-seq (re-pattern \"\\\\w\") \"JX\")})))"
+    }
+  ],
+  "version": 3
+}

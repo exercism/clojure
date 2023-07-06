@@ -1,0 +1,51 @@
+{
+  "status": "pass",
+  "tests": [
+    {
+      "name": "empty-sentence",
+      "status": "pass",
+      "test_code": "(is (false? (pangram? \"\")))"
+    },
+    {
+      "name": "lowercase-pangram",
+      "status": "pass",
+      "test_code": "(is (pangram? \"the quick brown fox jumps over the lazy dog\"))"
+    },
+    {
+      "name": "missing-character-x",
+      "status": "pass",
+      "test_code": "(is (false? (pangram? \"a quick movement of the enemy will jeopardize five gunboats\")))"
+    },
+    {
+      "name": "another-missing-character-x",
+      "status": "pass",
+      "test_code": "(is (false? (pangram? \"the quick brown fish jumps over the lazy dog\")))"
+    },
+    {
+      "name": "with-underscores",
+      "status": "pass",
+      "test_code": "(is (pangram? \"the_quick_brown_fox_jumps_over_the_lazy_dog\"))"
+    },
+    {
+      "name": "with-numbers",
+      "status": "pass",
+      "test_code": "(is (pangram? \"the 1 quick brown fox jumps over the 2 lazy dogs\"))"
+    },
+    {
+      "name": "missing-letters-replaced-by-numbers",
+      "status": "pass",
+      "test_code": "(is (false? (pangram? \"7h3 qu1ck brown fox jumps ov3r 7h3 lazy dog\")))"
+    },
+    {
+      "name": "mixed-case-and-punctuation",
+      "status": "pass",
+      "test_code": "(is (pangram? \"\\\"Five quacking Zephyrs jolt my wax bed.\\\"\"))"
+    },
+    {
+      "name": "upper-and-lower-not-counted-separately",
+      "status": "pass",
+      "test_code": "(is (false? (pangram? \"the quick brown fox jumps over with lazy FX\")))"
+    }
+  ],
+  "version": 3
+}

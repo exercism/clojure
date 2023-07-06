@@ -1,0 +1,156 @@
+{
+  "status": "fail",
+  "tests": [
+    {
+      "message": "Expected (= \"Whatever.\" (bob/response-for \"Tom-ay-to, tom-aaaah-to.\")) but got (not (= \"Whatever.\" nil))",
+      "name": "responds-to-something",
+      "status": "fail",
+      "test_code": "(is (= \"Whatever.\" (bob/response-for \"Tom-ay-to, tom-aaaah-to.\")))"
+    },
+    {
+      "message": "Expected (= \"Whoa, chill out!\" (bob/response-for \"WATCH OUT!\")) but got (not (= \"Whoa, chill out!\" nil))",
+      "name": "responds-to-shouts",
+      "status": "fail",
+      "test_code": "(is (= \"Whoa, chill out!\" (bob/response-for \"WATCH OUT!\")))"
+    },
+    {
+      "message": "Expected (= \"Whoa, chill out!\" (bob/response-for \"FCECDFCAAB\")) but got (not (= \"Whoa, chill out!\" nil))",
+      "name": "responds-to-shouting-gibberish",
+      "status": "fail",
+      "test_code": "(is (= \"Whoa, chill out!\" (bob/response-for \"FCECDFCAAB\")))"
+    },
+    {
+      "message": "Expected (= \"Sure.\" (bob/response-for \"Does this cryogenic chamber make me look fat?\")) but got (not (= \"Sure.\" nil))",
+      "name": "responds-to-questions",
+      "status": "fail",
+      "test_code": "(is (= \"Sure.\" (bob/response-for \"Does this cryogenic chamber make me look fat?\")))"
+    },
+    {
+      "message": "Expected (= \"Sure.\" (bob/response-for \"You are, what, like 15?\")) but got (not (= \"Sure.\" nil))",
+      "name": "responds-to-numeric-question",
+      "status": "fail",
+      "test_code": "(is (= \"Sure.\" (bob/response-for \"You are, what, like 15?\")))"
+    },
+    {
+      "message": "Expected (= \"Sure.\" (bob/response-for \"fffbbcbeab?\")) but got (not (= \"Sure.\" nil))",
+      "name": "responds-to-gibberish-question",
+      "status": "fail",
+      "test_code": "(is (= \"Sure.\" (bob/response-for \"fffbbcbeab?\")))"
+    },
+    {
+      "message": "Expected (= \"Whatever.\" (bob/response-for \"Let's go make out behind the gym!\")) but got (not (= \"Whatever.\" nil))",
+      "name": "responds-to-forceful-talking",
+      "status": "fail",
+      "test_code": "(is (= \"Whatever.\" (bob/response-for \"Let's go make out behind the gym!\")))"
+    },
+    {
+      "message": "Expected (= \"Whatever.\" (bob/response-for \"It's OK if you don't want to go to the DMV.\")) but got (not (= \"Whatever.\" nil))",
+      "name": "responds-to-acronyms",
+      "status": "fail",
+      "test_code": "(is (= \"Whatever.\" (bob/response-for \"It's OK if you don't want to go to the DMV.\")))"
+    },
+    {
+      "message": "Expected (= \"Calm down, I know what I'm doing!\" (bob/response-for \"WHAT THE HELL WERE YOU THINKING?\")) but got (not (= \"Calm down, I know what I'm doing!\" nil))",
+      "name": "responds-to-forceful-questions",
+      "status": "fail",
+      "test_code": "(is (= \"Calm down, I know what I'm doing!\" (bob/response-for \"WHAT THE HELL WERE YOU THINKING?\")))"
+    },
+    {
+      "message": "Expected (= \"Whoa, chill out!\" (bob/response-for \"1, 2, 3 GO!\")) but got (not (= \"Whoa, chill out!\" nil))",
+      "name": "responds-to-shouting-numbers",
+      "status": "fail",
+      "test_code": "(is (= \"Whoa, chill out!\" (bob/response-for \"1, 2, 3 GO!\")))"
+    },
+    {
+      "message": "Expected (= \"Whatever.\" (bob/response-for \"1, 2, 3\")) but got (not (= \"Whatever.\" nil))",
+      "name": "responds-to-no-letters",
+      "status": "fail",
+      "test_code": "(is (= \"Whatever.\" (bob/response-for \"1, 2, 3\")))"
+    },
+    {
+      "message": "Expected (= \"Sure.\" (bob/response-for \"4?\")) but got (not (= \"Sure.\" nil))",
+      "name": "responds-to-question-with-no-letters",
+      "status": "fail",
+      "test_code": "(is (= \"Sure.\" (bob/response-for \"4?\")))"
+    },
+    {
+      "message": "Expected (= \"Whoa, chill out!\" (bob/response-for \"ZOMG THE %^*@#$(*^ ZOMBIES ARE COMING!!11!!1!\")) but got (not (= \"Whoa, chill out!\" nil))",
+      "name": "responds-to-shouting-with-special-characters",
+      "status": "fail",
+      "test_code": "(is (= \"Whoa, chill out!\" (bob/response-for \"ZOMG THE %^*@#$(*^ ZOMBIES ARE COMING!!11!!1!\")))"
+    },
+    {
+      "message": "Expected (= \"Whoa, chill out!\" (bob/response-for \"I HATE THE DMV\")) but got (not (= \"Whoa, chill out!\" nil))",
+      "name": "responds-to-shouting-with-no-exclamation-mark",
+      "status": "fail",
+      "test_code": "(is (= \"Whoa, chill out!\" (bob/response-for \"I HATE THE DMV\")))"
+    },
+    {
+      "message": "Expected (= \"Whatever.\" (bob/response-for \"Ending with ? means a question.\")) but got (not (= \"Whatever.\" nil))",
+      "name": "responds-to-statement-containing-question-mark",
+      "status": "fail",
+      "test_code": "(is (= \"Whatever.\" (bob/response-for \"Ending with ? means a question.\")))"
+    },
+    {
+      "message": "Expected (= \"Sure.\" (bob/response-for \":) ?\")) but got (not (= \"Sure.\" nil))",
+      "name": "responds-to-non-letters-with-question",
+      "status": "fail",
+      "test_code": "(is (= \"Sure.\" (bob/response-for \":) ?\")))"
+    },
+    {
+      "message": "Expected (= \"Sure.\" (bob/response-for \"Wait! Hang on. Are you going to be OK?\")) but got (not (= \"Sure.\" nil))",
+      "name": "responds-to-prattling-on",
+      "status": "fail",
+      "test_code": "(is (= \"Sure.\" (bob/response-for \"Wait! Hang on. Are you going to be OK?\")))"
+    },
+    {
+      "message": "Expected (= \"Fine. Be that way!\" (bob/response-for \"\")) but got (not (= \"Fine. Be that way!\" nil))",
+      "name": "responds-to-silence",
+      "status": "fail",
+      "test_code": "(is (= \"Fine. Be that way!\" (bob/response-for \"\")))"
+    },
+    {
+      "message": "Expected (= \"Fine. Be that way!\" (bob/response-for \"    \")) but got (not (= \"Fine. Be that way!\" nil))",
+      "name": "responds-to-prolonged-silence",
+      "status": "fail",
+      "test_code": "(is (= \"Fine. Be that way!\" (bob/response-for \"    \")))"
+    },
+    {
+      "message": "Expected (= \"Fine. Be that way!\" (bob/response-for \"\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\")) but got (not (= \"Fine. Be that way!\" nil))",
+      "name": "responds-to-alternate-silence",
+      "status": "fail",
+      "test_code": "(is (= \"Fine. Be that way!\" (bob/response-for \"\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\")))"
+    },
+    {
+      "message": "Expected (= \"Whatever.\" (bob/response-for \"\\nDoes this cryogenic chamber make me look fat?\\nNo.\")) but got (not (= \"Whatever.\" nil))",
+      "name": "responds-to-multiple-line-question",
+      "status": "fail",
+      "test_code": "(is (= \"Whatever.\" (bob/response-for \"\\nDoes this cryogenic chamber make me look fat?\\nNo.\")))"
+    },
+    {
+      "message": "Expected (= \"Whatever.\" (bob/response-for \"         hmmmmmmm...\")) but got (not (= \"Whatever.\" nil))",
+      "name": "responds-to-starting-with-whitespace",
+      "status": "fail",
+      "test_code": "(is (= \"Whatever.\" (bob/response-for \"         hmmmmmmm...\")))"
+    },
+    {
+      "message": "Expected (= \"Sure.\" (bob/response-for \"Okay if like my  spacebar  quite a bit?   \")) but got (not (= \"Sure.\" nil))",
+      "name": "responds-to-ending-with-whitespace",
+      "status": "fail",
+      "test_code": "(is (= \"Sure.\" (bob/response-for \"Okay if like my  spacebar  quite a bit?   \")))"
+    },
+    {
+      "message": "Expected (= \"Fine. Be that way!\" (bob/response-for \"\\n\\r \\t\")) but got (not (= \"Fine. Be that way!\" nil))",
+      "name": "responds-to-other-whitespace",
+      "status": "fail",
+      "test_code": "(is (= \"Fine. Be that way!\" (bob/response-for \"\\n\\r \\t\")))"
+    },
+    {
+      "message": "Expected (= \"Whatever.\" (bob/response-for \"This is a statement ending with whitespace      \")) but got (not (= \"Whatever.\" nil))",
+      "name": "responds-to-non-question-ending-with-whitespace",
+      "status": "fail",
+      "test_code": "(is (= \"Whatever.\" (bob/response-for \"This is a statement ending with whitespace      \")))"
+    }
+  ],
+  "version": 3
+}

@@ -1,0 +1,31 @@
+{
+  "status": "pass",
+  "tests": [
+    {
+      "name": "empty-string",
+      "status": "pass",
+      "test_code": "(testing \"empty string with any number\" (is (= [] (slices \"\" 1))))"
+    },
+    {
+      "name": "number-eq-zero",
+      "status": "pass",
+      "test_code": "(testing \"number = 0\" (is (= [\"\"] (slices \"123\" 0))))"
+    },
+    {
+      "name": "number>string",
+      "status": "pass",
+      "test_code": "(testing \"number > string-length\" (is (= [] (slices \"123\" 1000))))"
+    },
+    {
+      "name": "number=string",
+      "status": "pass",
+      "test_code": "(testing \"number = string-length\" (is (= [\"123\"] (slices \"123\" 3))))"
+    },
+    {
+      "name": "number<string",
+      "status": "pass",
+      "test_code": "(testing \"number < string-length\" (is (= #{\"234\" \"123\" \"345\"} (set (slices \"12345\" 3)))))"
+    }
+  ],
+  "version": 3
+}

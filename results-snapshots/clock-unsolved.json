@@ -1,0 +1,24 @@
+{
+  "status": "fail",
+  "tests": [
+    {
+      "message": "Expected (= \"08:00\" test-clock) but got (not (= \"08:00\" nil))",
+      "name": "create-clock-test",
+      "status": "fail",
+      "test_code": "(testing \"on the hour\" (let [test-clock (clock->string (clock 8 0))] (is (= \"08:00\" test-clock))))"
+    },
+    {
+      "message": "Expected (= \"10:03\" test-clock) but got (not (= \"10:03\" nil))",
+      "name": "add-time-test",
+      "status": "fail",
+      "test_code": "(testing \"add minutes\" (let [test-clock (clock->string (add-time (clock 10 0) 3))] (is (= \"10:03\" test-clock))))"
+    },
+    {
+      "message": "Expected (not= clock1 clock2) but got (not (not= nil nil))",
+      "name": "equal-clock-test",
+      "status": "fail",
+      "test_code": "(testing \"clocks a minute apart\" (let [clock1 (clock 15 36) clock2 (clock 15 37)] (is (not= clock1 clock2))))"
+    }
+  ],
+  "version": 3
+}

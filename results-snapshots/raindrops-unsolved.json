@@ -1,0 +1,102 @@
+{
+  "status": "fail",
+  "tests": [
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "one",
+      "status": "error",
+      "test_code": "(is (= \"1\" (raindrops/convert 1)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "three",
+      "status": "error",
+      "test_code": "(is (= \"Pling\" (raindrops/convert 3)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "five",
+      "status": "error",
+      "test_code": "(is (= \"Plang\" (raindrops/convert 5)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "seven",
+      "status": "error",
+      "test_code": "(is (= \"Plong\" (raindrops/convert 7)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "six",
+      "status": "error",
+      "test_code": "(is (= \"Pling\" (raindrops/convert 6)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "nine",
+      "status": "error",
+      "test_code": "(is (= \"Pling\" (raindrops/convert 9)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "ten",
+      "status": "error",
+      "test_code": "(is (= \"Plang\" (raindrops/convert 10)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "fourteen",
+      "status": "error",
+      "test_code": "(is (= \"Plong\" (raindrops/convert 14)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "fifteen",
+      "status": "error",
+      "test_code": "(is (= \"PlingPlang\" (raindrops/convert 15)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "twenty-one",
+      "status": "error",
+      "test_code": "(is (= \"PlingPlong\" (raindrops/convert 21)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "twenty-five",
+      "status": "error",
+      "test_code": "(is (= \"Plang\" (raindrops/convert 25)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "thirty-five",
+      "status": "error",
+      "test_code": "(is (= \"PlangPlong\" (raindrops/convert 35)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "forty-nine",
+      "status": "error",
+      "test_code": "(is (= \"Plong\" (raindrops/convert 49)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "fifty-two",
+      "status": "error",
+      "test_code": "(is (= \"52\" (raindrops/convert 52)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "one-hundred-five",
+      "status": "error",
+      "test_code": "(is (= \"PlingPlangPlong\" (raindrops/convert 105)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "twelve-thousand-one-hundred-twenty-one",
+      "status": "error",
+      "test_code": "(is (= \"12121\" (raindrops/convert 12121)))"
+    }
+  ],
+  "version": 3
+}

@@ -1,7 +1,6 @@
 (ns bird-watcher)
 
-(def last-week 
-  )
+(def last-week nil)
 
 (defn today [birds]
   )

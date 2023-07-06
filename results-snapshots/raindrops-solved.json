@@ -1,0 +1,86 @@
+{
+  "status": "pass",
+  "tests": [
+    {
+      "name": "one",
+      "status": "pass",
+      "test_code": "(is (= \"1\" (raindrops/convert 1)))"
+    },
+    {
+      "name": "three",
+      "status": "pass",
+      "test_code": "(is (= \"Pling\" (raindrops/convert 3)))"
+    },
+    {
+      "name": "five",
+      "status": "pass",
+      "test_code": "(is (= \"Plang\" (raindrops/convert 5)))"
+    },
+    {
+      "name": "seven",
+      "status": "pass",
+      "test_code": "(is (= \"Plong\" (raindrops/convert 7)))"
+    },
+    {
+      "name": "six",
+      "status": "pass",
+      "test_code": "(is (= \"Pling\" (raindrops/convert 6)))"
+    },
+    {
+      "name": "nine",
+      "status": "pass",
+      "test_code": "(is (= \"Pling\" (raindrops/convert 9)))"
+    },
+    {
+      "name": "ten",
+      "status": "pass",
+      "test_code": "(is (= \"Plang\" (raindrops/convert 10)))"
+    },
+    {
+      "name": "fourteen",
+      "status": "pass",
+      "test_code": "(is (= \"Plong\" (raindrops/convert 14)))"
+    },
+    {
+      "name": "fifteen",
+      "status": "pass",
+      "test_code": "(is (= \"PlingPlang\" (raindrops/convert 15)))"
+    },
+    {
+      "name": "twenty-one",
+      "status": "pass",
+      "test_code": "(is (= \"PlingPlong\" (raindrops/convert 21)))"
+    },
+    {
+      "name": "twenty-five",
+      "status": "pass",
+      "test_code": "(is (= \"Plang\" (raindrops/convert 25)))"
+    },
+    {
+      "name": "thirty-five",
+      "status": "pass",
+      "test_code": "(is (= \"PlangPlong\" (raindrops/convert 35)))"
+    },
+    {
+      "name": "forty-nine",
+      "status": "pass",
+      "test_code": "(is (= \"Plong\" (raindrops/convert 49)))"
+    },
+    {
+      "name": "fifty-two",
+      "status": "pass",
+      "test_code": "(is (= \"52\" (raindrops/convert 52)))"
+    },
+    {
+      "name": "one-hundred-five",
+      "status": "pass",
+      "test_code": "(is (= \"PlingPlangPlong\" (raindrops/convert 105)))"
+    },
+    {
+      "name": "twelve-thousand-one-hundred-twenty-one",
+      "status": "pass",
+      "test_code": "(is (= \"12121\" (raindrops/convert 12121)))"
+    }
+  ],
+  "version": 3
+}

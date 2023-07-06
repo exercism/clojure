@@ -1,0 +1,72 @@
+{
+  "status": "fail",
+  "tests": [
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "AUG-translates-to-Methionine",
+      "status": "error",
+      "test_code": "(is (= \"Methionine\" (protein-translation/translate-codon \"AUG\")))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "UGG-translates-to-Tryptophan",
+      "status": "error",
+      "test_code": "(is (= \"Tryptophan\" (protein-translation/translate-codon \"UGG\")))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "identifies-Phenylalanine-codons",
+      "status": "error",
+      "test_code": "(are [codon] (= \"Phenylalanine\" (protein-translation/translate-codon codon)) \"UUU\" \"UUC\")"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "identifies-Leucine-codons",
+      "status": "error",
+      "test_code": "(are [codon] (= \"Leucine\" (protein-translation/translate-codon codon)) \"UUA\" \"UUG\")"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "identiefies-Serine-codons",
+      "status": "error",
+      "test_code": "(are [codon] (= \"Serine\" (protein-translation/translate-codon codon)) \"UCU\" \"UCC\" \"UCA\" \"UCG\")"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "identiefies-Tyrosine-codons",
+      "status": "error",
+      "test_code": "(are [codon] (= \"Tyrosine\" (protein-translation/translate-codon codon)) \"UAU\" \"UAC\")"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "identifies-Cysteine-codons",
+      "status": "error",
+      "test_code": "(are [codon] (= \"Cysteine\" (protein-translation/translate-codon codon)) \"UGU\" \"UGC\")"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "identifies-stop-codons",
+      "status": "error",
+      "test_code": "(are [codon] (= \"STOP\" (protein-translation/translate-codon codon)) \"UAA\" \"UAG\" \"UGA\")"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "translates-rna-strand-into-correct-protein",
+      "status": "error",
+      "test_code": "(is (= [\"Methionine\" \"Phenylalanine\" \"Tryptophan\"] (protein-translation/translate-rna \"AUGUUUUGG\")))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "stops-translation-if-stop-codon-present",
+      "status": "error",
+      "test_code": "(is (= [\"Methionine\" \"Phenylalanine\"] (protein-translation/translate-rna \"AUGUUUUAA\")))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "stops-translation-of-longer-strand",
+      "status": "error",
+      "test_code": "(is (= [\"Tryptophan\" \"Cysteine\" \"Tyrosine\"] (protein-translation/translate-rna \"UGGUGUUAUUAAUGGUUU\")))"
+    }
+  ],
+  "version": 3
+}

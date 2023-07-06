@@ -1,0 +1,84 @@
+{
+  "status": "fail",
+  "tests": [
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "paired-square",
+      "status": "error",
+      "test_code": "(is (matching-brackets/valid? \"[]\") \"paired square brackets\")"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "empty-string",
+      "status": "error",
+      "test_code": "(is (matching-brackets/valid? \"\") \"empty string\")"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "unpaired-brackets",
+      "status": "error",
+      "test_code": "(is (false? (matching-brackets/valid? \"[[\")) \"unpaired brackets\")"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "wrong-ordered-brackets",
+      "status": "error",
+      "test_code": "(is (false? (matching-brackets/valid? \"}{\")) \"wrong ordered brackets\")"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "paired-with-whitespace",
+      "status": "error",
+      "test_code": "(is (matching-brackets/valid? \"{ }\") \"paired with whitespace\")"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "simple-nested-brackets",
+      "status": "error",
+      "test_code": "(is (matching-brackets/valid? \"{[]}\") \"simple nested brackets\")"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "several-paired-brackets",
+      "status": "error",
+      "test_code": "(is (matching-brackets/valid? \"{}[]\") \"several paired brackets\")"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "paired-and-nested-brackets",
+      "status": "error",
+      "test_code": "(is (matching-brackets/valid? \"([{}({}[])])\") \"paired and nested brackets\")"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "unopened-closing-brackets",
+      "status": "error",
+      "test_code": "(is (false? (matching-brackets/valid? \"{[)][]}\")) \"unopened closing brackets\")"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "unpaired-and-nested-brackets",
+      "status": "error",
+      "test_code": "(is (false? (matching-brackets/valid? \"([{])\")) \"unpaired and nested brackets\")"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "paired-and-wrong-nested-brackets",
+      "status": "error",
+      "test_code": "(is (false? (matching-brackets/valid? \"[({]})\")) \"paired and wrong nested brackets\")"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "math-expression",
+      "status": "error",
+      "test_code": "(is (matching-brackets/valid? \"(((185 + 223.85) * 15) - 543)/2\") \"math expression\")"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "complex-latex-expression",
+      "status": "error",
+      "test_code": "(is (matching-brackets/valid? \"\\\\\\\\left(\\\\\\\\begin{array}{cc} \\\\\\\\frac{1}{3} & x\\\\\\\\\\\\\\\\ \\\\\\\\mathrm{e}^{x} &... x^2 \\\\\\\\end{array}\\\\\\\\right)\") \"complex latex expression\")"
+    }
+  ],
+  "version": 3
+}

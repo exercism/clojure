@@ -1,0 +1,61 @@
+{
+  "status": "pass",
+  "tests": [
+    {
+      "name": "AUG-translates-to-Methionine",
+      "status": "pass",
+      "test_code": "(is (= \"Methionine\" (protein-translation/translate-codon \"AUG\")))"
+    },
+    {
+      "name": "UGG-translates-to-Tryptophan",
+      "status": "pass",
+      "test_code": "(is (= \"Tryptophan\" (protein-translation/translate-codon \"UGG\")))"
+    },
+    {
+      "name": "identifies-Phenylalanine-codons",
+      "status": "pass",
+      "test_code": "(are [codon] (= \"Phenylalanine\" (protein-translation/translate-codon codon)) \"UUU\" \"UUC\")"
+    },
+    {
+      "name": "identifies-Leucine-codons",
+      "status": "pass",
+      "test_code": "(are [codon] (= \"Leucine\" (protein-translation/translate-codon codon)) \"UUA\" \"UUG\")"
+    },
+    {
+      "name": "identiefies-Serine-codons",
+      "status": "pass",
+      "test_code": "(are [codon] (= \"Serine\" (protein-translation/translate-codon codon)) \"UCU\" \"UCC\" \"UCA\" \"UCG\")"
+    },
+    {
+      "name": "identiefies-Tyrosine-codons",
+      "status": "pass",
+      "test_code": "(are [codon] (= \"Tyrosine\" (protein-translation/translate-codon codon)) \"UAU\" \"UAC\")"
+    },
+    {
+      "name": "identifies-Cysteine-codons",
+      "status": "pass",
+      "test_code": "(are [codon] (= \"Cysteine\" (protein-translation/translate-codon codon)) \"UGU\" \"UGC\")"
+    },
+    {
+      "name": "identifies-stop-codons",
+      "status": "pass",
+      "test_code": "(are [codon] (= \"STOP\" (protein-translation/translate-codon codon)) \"UAA\" \"UAG\" \"UGA\")"
+    },
+    {
+      "name": "translates-rna-strand-into-correct-protein",
+      "status": "pass",
+      "test_code": "(is (= [\"Methionine\" \"Phenylalanine\" \"Tryptophan\"] (protein-translation/translate-rna \"AUGUUUUGG\")))"
+    },
+    {
+      "name": "stops-translation-if-stop-codon-present",
+      "status": "pass",
+      "test_code": "(is (= [\"Methionine\" \"Phenylalanine\"] (protein-translation/translate-rna \"AUGUUUUAA\")))"
+    },
+    {
+      "name": "stops-translation-of-longer-strand",
+      "status": "pass",
+      "test_code": "(is (= [\"Tryptophan\" \"Cysteine\" \"Tyrosine\"] (protein-translation/translate-rna \"UGGUGUUAUUAAUGGUUU\")))"
+    }
+  ],
+  "version": 3
+}

@@ -1,0 +1,82 @@
+{
+  "status": "fail",
+  "tests": [
+    {
+      "message": "Expected (= (first-card [3]) 3) but got (not (= nil 3))",
+      "name": "first-card-single-test",
+      "status": "fail",
+      "test_code": "(is (= (first-card [3]) 3))"
+    },
+    {
+      "message": "Expected (= (first-card [8 3 9 5]) 8) but got (not (= nil 8))",
+      "name": "first-card-multiple-test",
+      "status": "fail",
+      "test_code": "(is (= (first-card [8 3 9 5]) 8))"
+    },
+    {
+      "message": "Expected (= (second-card [10 4]) 4) but got (not (= nil 4))",
+      "name": "second-card-2-test",
+      "status": "fail",
+      "test_code": "(is (= (second-card [10 4]) 4))"
+    },
+    {
+      "message": "Expected (= (second-card [2 5 1 6]) 5) but got (not (= nil 5))",
+      "name": "second-card-4-test",
+      "status": "fail",
+      "test_code": "(is (= (second-card [2 5 1 6]) 5))"
+    },
+    {
+      "name": "second-card-empty-test",
+      "status": "pass",
+      "test_code": "(is (nil? (second-card [])))"
+    },
+    {
+      "name": "second-card-single-test",
+      "status": "pass",
+      "test_code": "(is (nil? (second-card [8])))"
+    },
+    {
+      "message": "Expected (= (swap-top-two-cards [3 6]) [6 3]) but got (not (= nil [6 3]))",
+      "name": "swap-top-two-cards-2-test",
+      "status": "fail",
+      "test_code": "(is (= (swap-top-two-cards [3 6]) [6 3]))"
+    },
+    {
+      "message": "Expected (= (swap-top-two-cards [10 4 3 7 8]) [4 10 3 7 8]) but got (not (= nil [4 10 3 7 8]))",
+      "name": "swap-top-two-cards-5-test",
+      "status": "fail",
+      "test_code": "(is (= (swap-top-two-cards [10 4 3 7 8]) [4 10 3 7 8]))"
+    },
+    {
+      "message": "Expected (= (discard-top-card [7]) [7 nil]) but got (not (= nil [7 nil]))",
+      "name": "discard-top-card-single-test",
+      "status": "fail",
+      "test_code": "(is (= (discard-top-card [7]) [7 nil]))"
+    },
+    {
+      "message": "Expected (= (discard-top-card [9 2 10 4]) [9 [2 10 4]]) but got (not (= nil [9 [2 10 4]]))",
+      "name": "discard-top-card-4-test",
+      "status": "fail",
+      "test_code": "(is (= (discard-top-card [9 2 10 4]) [9 [2 10 4]]))"
+    },
+    {
+      "message": "Expected (= (insert-face-cards [3 10 7]) [3 \"jack\" \"queen\" \"king\" 10 7]) but got (not (= nil [3 \"jack\" \"queen\" \"king\" 10 7]))",
+      "name": "insert-face-cards-3-test",
+      "status": "fail",
+      "test_code": "(is (= (insert-face-cards [3 10 7]) [3 \"jack\" \"queen\" \"king\" 10 7]))"
+    },
+    {
+      "message": "Expected (= (insert-face-cards [9]) [9 \"jack\" \"queen\" \"king\"]) but got (not (= nil [9 \"jack\" \"queen\" \"king\"]))",
+      "name": "insert-face-cards-1-test",
+      "status": "fail",
+      "test_code": "(is (= (insert-face-cards [9]) [9 \"jack\" \"queen\" \"king\"]))"
+    },
+    {
+      "message": "Expected (= (insert-face-cards []) [\"jack\" \"queen\" \"king\"]) but got (not (= nil [\"jack\" \"queen\" \"king\"]))",
+      "name": "insert-face-cards-empty-test",
+      "status": "fail",
+      "test_code": "(is (= (insert-face-cards []) [\"jack\" \"queen\" \"king\"]))"
+    }
+  ],
+  "version": 3
+}

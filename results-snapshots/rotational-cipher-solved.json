@@ -1,0 +1,76 @@
+{
+  "status": "pass",
+  "tests": [
+    {
+      "name": "rotate-a-by-1",
+      "status": "pass",
+      "test_code": "(is (= (rotational-cipher/rotate \"a\" 1) \"b\"))"
+    },
+    {
+      "name": "rotate-a-by-26-same-output",
+      "status": "pass",
+      "test_code": "(is (= (rotational-cipher/rotate \"a\" 26) \"a\"))"
+    },
+    {
+      "name": "rotate-a-by-0-same-output",
+      "status": "pass",
+      "test_code": "(is (= (rotational-cipher/rotate \"a\" 0) \"a\"))"
+    },
+    {
+      "name": "rotate-m-by-13",
+      "status": "pass",
+      "test_code": "(is (= (rotational-cipher/rotate \"m\" 13) \"z\"))"
+    },
+    {
+      "name": "rotate-n-by-13-with-wrap",
+      "status": "pass",
+      "test_code": "(is (= (rotational-cipher/rotate \"n\" 13) \"a\"))"
+    },
+    {
+      "name": "rotate-capital-letters",
+      "status": "pass",
+      "test_code": "(is (= (rotational-cipher/rotate \"OMG\" 5) \"TRL\"))"
+    },
+    {
+      "name": "rotate-spaces",
+      "status": "pass",
+      "test_code": "(is (= (rotational-cipher/rotate \"O M G\" 5) \"T R L\"))"
+    },
+    {
+      "name": "rotate-numbers",
+      "status": "pass",
+      "test_code": "(is (= (rotational-cipher/rotate \"Testing 1 2 3 testing\" 4) \"Xiwxmrk 1 2 3 xiwxmrk\"))"
+    },
+    {
+      "name": "rotate-punctuation",
+      "status": "pass",
+      "test_code": "(is (= (rotational-cipher/rotate \"Let's eat, Grandma!\" 21) \"Gzo'n zvo, Bmviyhv!\"))"
+    },
+    {
+      "name": "rotate-opposite-direction",
+      "status": "pass",
+      "test_code": "(is (= (rotational-cipher/rotate \"b\" -1) \"a\"))"
+    },
+    {
+      "name": "rotate-opposite-past-first-letter",
+      "status": "pass",
+      "test_code": "(is (= (rotational-cipher/rotate \"B\" -2) \"Z\"))"
+    },
+    {
+      "name": "rotate-opposite-past-letter-count",
+      "status": "pass",
+      "test_code": "(is (= (rotational-cipher/rotate \"B\" -28) \"Z\"))"
+    },
+    {
+      "name": "rotate-forward-then-backwards-same-number-of-steps",
+      "status": "pass",
+      "test_code": "(is (= (rotational-cipher/rotate (rotational-cipher/rotate \"B\" 28) -28) \"B\"))"
+    },
+    {
+      "name": "rotate-all-letters",
+      "status": "pass",
+      "test_code": "(is (= (rotational-cipher/rotate \"The quick brown fox jumps over the lazy dog.\" 13) \"Gur dhvpx oebja sbk whzcf bire gur ynml qbt.\"))"
+    }
+  ],
+  "version": 3
+}

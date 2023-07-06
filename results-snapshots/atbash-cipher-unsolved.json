@@ -1,0 +1,54 @@
+{
+  "status": "fail",
+  "tests": [
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "encode-no",
+      "status": "error",
+      "test_code": "(is (= \"ml\" (atbash-cipher/encode \"no\")))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "encode-yes",
+      "status": "error",
+      "test_code": "(is (= \"bvh\" (atbash-cipher/encode \"yes\")))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "encode-OMG",
+      "status": "error",
+      "test_code": "(is (= \"lnt\" (atbash-cipher/encode \"OMG\")))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "encode-O-M-G",
+      "status": "error",
+      "test_code": "(is (= \"lnt\" (atbash-cipher/encode \"O M G\")))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "encode-long-word",
+      "status": "error",
+      "test_code": "(is (= \"nrmwy oldrm tob\" (atbash-cipher/encode \"mindblowingly\")))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "encode-numbers",
+      "status": "error",
+      "test_code": "(is (= \"gvhgr mt123 gvhgr mt\" (atbash-cipher/encode \"Testing, 1 2 3, testing.\")))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "encode-sentence",
+      "status": "error",
+      "test_code": "(is (= \"gifgs rhurx grlm\" (atbash-cipher/encode \"Truth is fiction.\")))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "encode-all-the-things",
+      "status": "error",
+      "test_code": "(let [plaintext \"The quick brown fox jumps over the lazy dog.\" cipher \"gsvjf rxpyi ldmul cqfnk hlevi gsvoz abwlt\"] (is (= cipher (atbash-cipher/encode plaintext))))"
+    }
+  ],
+  "version": 3
+}

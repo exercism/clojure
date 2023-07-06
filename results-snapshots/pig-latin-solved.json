@@ -1,0 +1,116 @@
+{
+  "status": "pass",
+  "tests": [
+    {
+      "name": "word-beginning-with-a",
+      "status": "pass",
+      "test_code": "(is (= \"appleay\" (pig-latin/translate \"apple\")))"
+    },
+    {
+      "name": "word-beginning-with-e",
+      "status": "pass",
+      "test_code": "(is (= \"earay\" (pig-latin/translate \"ear\")))"
+    },
+    {
+      "name": "word-beginning-with-i",
+      "status": "pass",
+      "test_code": "(is (= \"iglooay\" (pig-latin/translate \"igloo\")))"
+    },
+    {
+      "name": "word-beginning-with-o",
+      "status": "pass",
+      "test_code": "(is (= \"objectay\" (pig-latin/translate \"object\")))"
+    },
+    {
+      "name": "word-beginning-with-u",
+      "status": "pass",
+      "test_code": "(is (= \"underay\" (pig-latin/translate \"under\")))"
+    },
+    {
+      "name": "word-beginning-with-a-vowel-and-followed-by-a-qu",
+      "status": "pass",
+      "test_code": "(is (= \"equalay\" (pig-latin/translate \"equal\")))"
+    },
+    {
+      "name": "word-beginning-with-p",
+      "status": "pass",
+      "test_code": "(is (= \"igpay\" (pig-latin/translate \"pig\")))"
+    },
+    {
+      "name": "word-beginning-with-k",
+      "status": "pass",
+      "test_code": "(is (= \"oalakay\" (pig-latin/translate \"koala\")))"
+    },
+    {
+      "name": "word-beginning-with-y",
+      "status": "pass",
+      "test_code": "(is (= \"ellowyay\" (pig-latin/translate \"yellow\")))"
+    },
+    {
+      "name": "word-beginning-with-x",
+      "status": "pass",
+      "test_code": "(is (= \"enonxay\" (pig-latin/translate \"xenon\")))"
+    },
+    {
+      "name": "word-beginning-with-q-without-a-following-u",
+      "status": "pass",
+      "test_code": "(is (= \"atqay\" (pig-latin/translate \"qat\")))"
+    },
+    {
+      "name": "word-beginning-with-ch",
+      "status": "pass",
+      "test_code": "(is (= \"airchay\" (pig-latin/translate \"chair\")))"
+    },
+    {
+      "name": "word-beginning-with-qu",
+      "status": "pass",
+      "test_code": "(is (= \"eenquay\" (pig-latin/translate \"queen\")))"
+    },
+    {
+      "name": "word-beginning-with-qu-and-a-preceding-consonant",
+      "status": "pass",
+      "test_code": "(is (= \"aresquay\" (pig-latin/translate \"square\")))"
+    },
+    {
+      "name": "word-beginning-with-th",
+      "status": "pass",
+      "test_code": "(is (= \"erapythay\" (pig-latin/translate \"therapy\")))"
+    },
+    {
+      "name": "word-beginning-with-thr",
+      "status": "pass",
+      "test_code": "(is (= \"ushthray\" (pig-latin/translate \"thrush\")))"
+    },
+    {
+      "name": "word-beginning-with-sch",
+      "status": "pass",
+      "test_code": "(is (= \"oolschay\" (pig-latin/translate \"school\")))"
+    },
+    {
+      "name": "word-beginning-with-yt",
+      "status": "pass",
+      "test_code": "(is (= \"yttriaay\" (pig-latin/translate \"yttria\")))"
+    },
+    {
+      "name": "word-beginning-with-xr",
+      "status": "pass",
+      "test_code": "(is (= \"xrayay\" (pig-latin/translate \"xray\")))"
+    },
+    {
+      "name": "word-beginning-with-consonants-followed-by-y",
+      "status": "pass",
+      "test_code": "(is (= \"ythmrhay\" (pig-latin/translate \"rhythm\")))"
+    },
+    {
+      "name": "two-letter-word-ends-with-y",
+      "status": "pass",
+      "test_code": "(is (= \"ymay\" (pig-latin/translate \"my\")))"
+    },
+    {
+      "name": "a-whole-phrase",
+      "status": "pass",
+      "test_code": "(is (= \"ickquay astfay unray\" (pig-latin/translate \"quick fast run\")))"
+    }
+  ],
+  "version": 3
+}

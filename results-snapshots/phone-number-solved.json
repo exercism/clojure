@@ -1,0 +1,91 @@
+{
+  "status": "pass",
+  "tests": [
+    {
+      "name": "cleans-number",
+      "status": "pass",
+      "test_code": "(is (= \"2234567890\" (phone-number/number \"(223) 456-7890\")))"
+    },
+    {
+      "name": "cleans-number-with-dots",
+      "status": "pass",
+      "test_code": "(is (= \"5558675309\" (phone-number/number \"555.867.5309\")))"
+    },
+    {
+      "name": "valid-when-11-digits-and-first-is-1",
+      "status": "pass",
+      "test_code": "(is (= \"9876543210\" (phone-number/number \"19876543210\")))"
+    },
+    {
+      "name": "invalid-when-area-code-starts-with-0",
+      "status": "pass",
+      "test_code": "(is (= \"0000000000\" (phone-number/number \"0234567890\")))"
+    },
+    {
+      "name": "invalid-when-area-code-starts-with-1",
+      "status": "pass",
+      "test_code": "(is (= \"0000000000\" (phone-number/number \"1234567890\")))"
+    },
+    {
+      "name": "invalid-when--code-starts-with-0",
+      "status": "pass",
+      "test_code": "(is (= \"0000000000\" (phone-number/number \"0234567890\")))"
+    },
+    {
+      "name": "invalid-when-exchange-code-starts-with-1",
+      "status": "pass",
+      "test_code": "(is (= \"0000000000\" (phone-number/number \"2231567890\")))"
+    },
+    {
+      "name": "invalid-when-exchange-code-starts-with-0",
+      "status": "pass",
+      "test_code": "(is (= \"0000000000\" (phone-number/number \"2230567890\")))"
+    },
+    {
+      "name": "invalid-when-11-digits",
+      "status": "pass",
+      "test_code": "(is (= \"0000000000\" (phone-number/number \"22234567890\")))"
+    },
+    {
+      "name": "invalid-when-9-digits",
+      "status": "pass",
+      "test_code": "(is (= \"0000000000\" (phone-number/number \"123456789\")))"
+    },
+    {
+      "name": "area-code",
+      "status": "pass",
+      "test_code": "(is (= \"223\" (phone-number/area-code \"2234567890\")))"
+    },
+    {
+      "name": "area-code-with-dots",
+      "status": "pass",
+      "test_code": "(is (= \"555\" (phone-number/area-code \"555.867.5309\")))"
+    },
+    {
+      "name": "area-code-with-parentheses",
+      "status": "pass",
+      "test_code": "(is (= \"987\" (phone-number/area-code \"(987) 654-3210\")))"
+    },
+    {
+      "name": "area-code-with-full-us-phone-number",
+      "status": "pass",
+      "test_code": "(is (= \"223\" (phone-number/area-code \"12234567890\")))"
+    },
+    {
+      "name": "pretty-print",
+      "status": "pass",
+      "test_code": "(is (= \"(223) 456-7890\" (phone-number/pretty-print \"2234567890\")))"
+    },
+    {
+      "name": "pretty-print-with-dots",
+      "status": "pass",
+      "test_code": "(is (= \"(555) 867-5309\" (phone-number/pretty-print \"555.867.5309\")))"
+    },
+    {
+      "name": "pretty-print-with-full-us-phone-number",
+      "status": "pass",
+      "test_code": "(is (= \"(987) 654-3210\" (phone-number/pretty-print \"19876543210\")))"
+    }
+  ],
+  "version": 3
+}

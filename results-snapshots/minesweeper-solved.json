@@ -1,0 +1,41 @@
+{
+  "status": "pass",
+  "tests": [
+    {
+      "name": "zero-size-board",
+      "status": "pass",
+      "test_code": "(is (= (draw \"\") \"\"))"
+    },
+    {
+      "name": "empty-board",
+      "status": "pass",
+      "test_code": "(is (= (draw (join line-separator [\"   \" \"   \" \"   \"])) (join line-separator [\"   \" \"   \" \"   \"])))"
+    },
+    {
+      "name": "surrounded",
+      "status": "pass",
+      "test_code": "(is (= (draw (join line-separator [\"***\" \"* *\" \"***\"])) (join line-separator [\"***\" \"*8*\" \"***\"])))"
+    },
+    {
+      "name": "board-full-of-mines",
+      "status": "pass",
+      "test_code": "(is (= (draw (join line-separator [\"***\" \"***\" \"***\"])) (join line-separator [\"***\" \"***\" \"***\"])))"
+    },
+    {
+      "name": "horizontal-line",
+      "status": "pass",
+      "test_code": "(is (= (draw \" * * \") \"1*2*1\"))"
+    },
+    {
+      "name": "vertical-line",
+      "status": "pass",
+      "test_code": "(is (= (draw (join line-separator [\" \" \"*\" \" \" \"*\" \" \"])) (join line-separator [\"1\" \"*\" \"2\" \"*\" \"1\"])))"
+    },
+    {
+      "name": "cross",
+      "status": "pass",
+      "test_code": "(is (= (draw (join line-separator [\"  *  \" \"  *  \" \"*****\" \"  *  \" \"  *  \"])) (join line-separator [\" 2*2 \" \"25*52\" \"*****\" \"25*52\" \" 2*2 \"])))"
+    }
+  ],
+  "version": 3
+}

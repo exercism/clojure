@@ -1,0 +1,16 @@
+{
+  "status": "pass",
+  "tests": [
+    {
+      "name": "territory",
+      "status": "pass",
+      "test_code": "(is (= (g/territory example [0 1]) {:stones #{[0 0] [1 0] [0 1]}, :owner :black}))\n(is (= (g/territory example [2 3]) {:stones #{[2 3]}, :owner :white}))\n(is (= (g/territory example [1 4]) {:stones #{[1 4] [0 3] [0 4]}, :owner nil}))\n(is (= (g/territory example [1 1]) {:stones #{}, :owner nil}))\n(is (thrown? Throwable (g/territory example [-1 1])))\n(is (thrown? Throwable (g/territory example [5 1])))\n(is (thrown? Throwable (g/territory example [1 -1])))\n(is (thrown? Throwable (g/territory example [1 5])))"
+    },
+    {
+      "name": "territories",
+      "status": "pass",
+      "test_code": "(is (= (g/territories [\" \"]) {:null-territory #{[0 0]}, :white-territory #{}, :black-territory #{}}))\n(is (= (g/territories [\" BW \" \" BW \"]) {:null-territory #{}, :white-territory #{[3 0] [3 1]}, :black-territory #{[0 0] [0 1]}}))\n(is (= (g/territories [\" B \"]) {:null-territory #{}, :white-territory #{}, :black-territory #{[0 0] [2 0]}}))"
+    }
+  ],
+  "version": 3
+}

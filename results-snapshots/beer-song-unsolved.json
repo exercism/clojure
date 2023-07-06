@@ -1,0 +1,42 @@
+{
+  "status": "fail",
+  "tests": [
+    {
+      "message": "Expected (= verse-8 (beer-song/verse 8)) but got (not (= \"8 bottles of beer on the wall, 8 bottles of beer.\\nTake one down and pass it around, 7 bottles of beer on the wall.\\n\" nil))",
+      "name": "test-verse-8",
+      "status": "fail",
+      "test_code": "(is (= verse-8 (beer-song/verse 8)))"
+    },
+    {
+      "message": "Expected (= verse-2 (beer-song/verse 2)) but got (not (= \"2 bottles of beer on the wall, 2 bottles of beer.\\nTake one down and pass it around, 1 bottle of beer on the wall.\\n\" nil))",
+      "name": "test-verse-2",
+      "status": "fail",
+      "test_code": "(is (= verse-2 (beer-song/verse 2)))"
+    },
+    {
+      "message": "Expected (= verse-1 (beer-song/verse 1)) but got (not (= \"1 bottle of beer on the wall, 1 bottle of beer.\\nTake it down and pass it around, no more bottles of beer on the wall.\\n\" nil))",
+      "name": "test-verse-1",
+      "status": "fail",
+      "test_code": "(is (= verse-1 (beer-song/verse 1)))"
+    },
+    {
+      "message": "Expected (= verse-0 (beer-song/verse 0)) but got (not (= \"No more bottles of beer on the wall, no more bottles of beer.\\nGo to the store and buy some more, 99 bottles of beer on the wall.\\n\" nil))",
+      "name": "test-verse-0",
+      "status": "fail",
+      "test_code": "(is (= verse-0 (beer-song/verse 0)))"
+    },
+    {
+      "message": "Expected (= song-8-6 (beer-song/sing 8 6)) but got (not (= \"8 bottles of beer on the wall, 8 bottles of beer.\\nTake one down and pass it around, 7 bottles of beer on the wall.\\n\\n7 bottles of beer on the wall, 7 bottles of beer.\\nTake one down and pass it around, 6 bottles of beer on the wall.\\n\\n6 bottles of beer on the wall, 6 bottles of beer.\\nTake one down and pass it around, 5 bottles of beer on the wall.\\n\" nil))",
+      "name": "test-song-8-6",
+      "status": "fail",
+      "test_code": "(is (= song-8-6 (beer-song/sing 8 6)))"
+    },
+    {
+      "message": "Expected (= song-3-0 (beer-song/sing 3)) but got (not (= \"3 bottles of beer on the wall, 3 bottles of beer.\\nTake one down and pass it around, 2 bottles of beer on the wall.\\n\\n2 bottles of beer on the wall, 2 bottles of beer.\\nTake one down and pass it around, 1 bottle of beer on the wall.\\n\\n1 bottle of beer on the wall, 1 bottle of beer.\\nTake it down and pass it around, no more bottles of beer on the wall.\\n\\nNo more bottles of beer on the wall, no more bottles of beer.\\nGo to the store and buy some more, 99 bottles of beer on the wall.\\n\" nil))",
+      "name": "test-song-3-0",
+      "status": "fail",
+      "test_code": "(is (= song-3-0 (beer-song/sing 3)))"
+    }
+  ],
+  "version": 3
+}

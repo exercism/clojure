@@ -34,7 +34,7 @@ echo "${slug}: testing..."
 
 # Run the tests for the provided implementation file and redirect stdout and
 # stderr to capture it
-test_output=$(/home/runner/work/clojure/clojure/clojure-test-runner/test-runner.clj "${slug}" "${input_dir}/" "${output_dir}" 2>&1)
+test_output=$(./test-runner.clj "${slug}" "${input_dir}/" "${output_dir}" 2>&1)
 exit_code=$?
 
 
@@ -43,7 +43,7 @@ exit_code=$?
 if [ $exit_code -eq 0 ]; then
     echo "${test_output}" > ${results_file}
 else
-    jq -n --arg output "${test_output}" '{"version" : 2, "status" : "error", "message" : $output}' > ${results_file}
+    jq -n --arg output "${test_output}" '{"version" : 3, "status" : "error", "message" : $output}' > ${results_file}
 fi
 
 echo "${output_dir}"

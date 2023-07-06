@@ -1,0 +1,36 @@
+{
+  "status": "pass",
+  "tests": [
+    {
+      "name": "no-difference-between-empty-strands",
+      "status": "pass",
+      "test_code": "(is (= 0 (hamming/distance \"\" \"\")))"
+    },
+    {
+      "name": "no-difference-between-identical-strands",
+      "status": "pass",
+      "test_code": "(is (= 0 (hamming/distance \"GGACTGA\" \"GGACTGA\")))"
+    },
+    {
+      "name": "complete-distance-in-small-strand",
+      "status": "pass",
+      "test_code": "(is (= 3 (hamming/distance \"ACT\" \"GGA\")))"
+    },
+    {
+      "name": "small-distance-in-middle-somewhere",
+      "status": "pass",
+      "test_code": "(is (= 1 (hamming/distance \"GGACG\" \"GGTCG\")))"
+    },
+    {
+      "name": "larger-distance",
+      "status": "pass",
+      "test_code": "(is (= 2 (hamming/distance \"ACCAGGG\" \"ACTATGG\")))"
+    },
+    {
+      "name": "undefined-when-lengths-are-different",
+      "status": "pass",
+      "test_code": "(is (= nil (hamming/distance \"AAAC\" \"TAGGGGAGGCTAGCGGTAGGAC\")))\n(is (= nil (hamming/distance \"GACTACGGACAGGGTAACATAG\" \"GACA\")))"
+    }
+  ],
+  "version": 3
+}

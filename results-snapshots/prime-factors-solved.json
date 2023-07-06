@@ -1,0 +1,61 @@
+{
+  "status": "pass",
+  "tests": [
+    {
+      "name": "one",
+      "status": "pass",
+      "test_code": "(is (= [] (prime-factors/of 1)))"
+    },
+    {
+      "name": "two",
+      "status": "pass",
+      "test_code": "(is (= [2] (prime-factors/of 2)))"
+    },
+    {
+      "name": "three",
+      "status": "pass",
+      "test_code": "(is (= [3] (prime-factors/of 3)))"
+    },
+    {
+      "name": "four",
+      "status": "pass",
+      "test_code": "(is (= [2 2] (prime-factors/of 4)))"
+    },
+    {
+      "name": "six",
+      "status": "pass",
+      "test_code": "(is (= [2 3] (prime-factors/of 6)))"
+    },
+    {
+      "name": "eight",
+      "status": "pass",
+      "test_code": "(is (= [2 2 2] (prime-factors/of 8)))"
+    },
+    {
+      "name": "nine",
+      "status": "pass",
+      "test_code": "(is (= [3 3] (prime-factors/of 9)))"
+    },
+    {
+      "name": "twenty-seven",
+      "status": "pass",
+      "test_code": "(is (= [3 3 3] (prime-factors/of 27)))"
+    },
+    {
+      "name": "six-hundred-twenty-five",
+      "status": "pass",
+      "test_code": "(is (= [5 5 5 5] (prime-factors/of 625)))"
+    },
+    {
+      "name": "a-large-number",
+      "status": "pass",
+      "test_code": "(is (= [5 17 23 461] (prime-factors/of 901255)))"
+    },
+    {
+      "name": "a-huge-number",
+      "status": "pass",
+      "test_code": "(is (= [11 9539 894119] (prime-factors/of 93819012551)))"
+    }
+  ],
+  "version": 3
+}

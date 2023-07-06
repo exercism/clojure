@@ -1,0 +1,71 @@
+{
+  "status": "pass",
+  "tests": [
+    {
+      "name": "singletons",
+      "status": "pass",
+      "test_code": "(is (= singleton (pov/of :x singleton)))"
+    },
+    {
+      "name": "simple-trees",
+      "status": "pass",
+      "test_code": "(is (= simple-pulled (pov/of :x simple-tree)))"
+    },
+    {
+      "name": "nested-trees",
+      "status": "pass",
+      "test_code": "(is (= nested-pulled (pov/of :x deeply-nested)))"
+    },
+    {
+      "name": "extract-node-from-siblings",
+      "status": "pass",
+      "test_code": "(is (= flat-pulled (pov/of :x large-flat)))"
+    },
+    {
+      "name": "moderate-trees",
+      "status": "pass",
+      "test_code": "(is (= cousins-pulled (pov/of :x cousins)))"
+    },
+    {
+      "name": "complex-trees",
+      "status": "pass",
+      "test_code": "(is (= with-kids-pulled (pov/of :x target-with-children)))"
+    },
+    {
+      "name": "not-found-cannot-reparent",
+      "status": "pass",
+      "test_code": "(is (nil? (pov/of :not-found! target-with-children)))"
+    },
+    {
+      "name": "not-found-input-empty",
+      "status": "pass",
+      "test_code": "(is (nil? (pov/of :x [])))"
+    },
+    {
+      "name": "not-found-input-nil",
+      "status": "pass",
+      "test_code": "(is (nil? (pov/of :x nil)))"
+    },
+    {
+      "name": "path-from-target-to-parent",
+      "status": "pass",
+      "test_code": "(is (= [:x :parent] (pov/path-from-to :x :parent simple-tree)))"
+    },
+    {
+      "name": "path-from-target-to-sibling",
+      "status": "pass",
+      "test_code": "(is (= [:x :parent :sib-c] (pov/path-from-to :x :sib-c large-flat)))"
+    },
+    {
+      "name": "path-from-x-to-2nd-cousin-1",
+      "status": "pass",
+      "test_code": "(is (= [:x :parent :grand-parent :aunt :cousin-1 :2nd-cousin-1] (pov/path-from-to :x :2nd-cousin-1 target-with-children)))"
+    },
+    {
+      "name": "no-path",
+      "status": "pass",
+      "test_code": "(is (nil? (pov/path-from-to :x :not-there! cousins)))"
+    }
+  ],
+  "version": 3
+}

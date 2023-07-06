@@ -1,0 +1,162 @@
+{
+  "status": "fail",
+  "tests": [
+    {
+      "message": "Expected (= (c/real [1 0]) 1) but got (not (= nil 1))",
+      "name": "real-of-purely-real-number",
+      "status": "fail",
+      "test_code": "(testing \"Real part of a purely real number\" (is (= (c/real [1 0]) 1)))"
+    },
+    {
+      "message": "Expected (= (c/real [0 1]) 0) but got (not (= nil 0))",
+      "name": "real-of-purely-imaginary-number",
+      "status": "fail",
+      "test_code": "(testing \"Real part of a purely imaginary number\" (is (= (c/real [0 1]) 0)))"
+    },
+    {
+      "message": "Expected (= (c/real [1 2]) 1) but got (not (= nil 1))",
+      "name": "real-of-real-and-imaginary-number",
+      "status": "fail",
+      "test_code": "(testing \"Real part of a number with real and imaginary part\" (is (= (c/real [1 2]) 1)))"
+    },
+    {
+      "message": "Expected (= (c/imaginary [1 0]) 0) but got (not (= nil 0))",
+      "name": "imaginary-of-purely-real-number",
+      "status": "fail",
+      "test_code": "(testing \"Imaginary part of a purely real number\" (is (= (c/imaginary [1 0]) 0)))"
+    },
+    {
+      "message": "Expected (= (c/imaginary [0 1]) 1) but got (not (= nil 1))",
+      "name": "imaginary-of-purely-imaginary-number",
+      "status": "fail",
+      "test_code": "(testing \"Imaginary part of a purely imaginary number\" (is (= (c/imaginary [0 1]) 1)))"
+    },
+    {
+      "message": "Expected (= (c/imaginary [1 2]) 2) but got (not (= nil 2))",
+      "name": "imaginary-of-real-and-imaginary-number",
+      "status": "fail",
+      "test_code": "(testing \"Imaginary part of a number with real and imaginary part\" (is (= (c/imaginary [1 2]) 2)))"
+    },
+    {
+      "message": "Expected (= (c/abs [5 0]) 5.0) but got (not (= nil 5.0))",
+      "name": "absolute-of-positive-purely-real-number",
+      "status": "fail",
+      "test_code": "(testing \"Absolute value of a positive purely real number\" (is (= (c/abs [5 0]) 5.0)))"
+    },
+    {
+      "message": "Expected (= (c/abs [-5 0]) 5.0) but got (not (= nil 5.0))",
+      "name": "absolute-of-negative-purely-real-number",
+      "status": "fail",
+      "test_code": "(testing \"Absolute value of a negative purely real number\" (is (= (c/abs [-5 0]) 5.0)))"
+    },
+    {
+      "message": "Expected (= (c/abs [0 5]) 5.0) but got (not (= nil 5.0))",
+      "name": "absolute-of-positive-purely-imaginary-number",
+      "status": "fail",
+      "test_code": "(testing \"Absolute value of a purely imaginary number with positive imaginary part\" (is (= (c/abs [0 5]) 5.0)))"
+    },
+    {
+      "message": "Expected (= (c/abs [0 -5]) 5.0) but got (not (= nil 5.0))",
+      "name": "absolute-of-negative-purely-imaginary-number",
+      "status": "fail",
+      "test_code": "(testing \"Absolute value of a purely imaginary number with negative imaginary part\" (is (= (c/abs [0 -5]) 5.0)))"
+    },
+    {
+      "message": "Expected (= (c/abs [3 4]) 5.0) but got (not (= nil 5.0))",
+      "name": "absolute-of-real-and-imaginary-number",
+      "status": "fail",
+      "test_code": "(testing \"Absolute value of a number with real and imaginary part\" (is (= (c/abs [3 4]) 5.0)))"
+    },
+    {
+      "message": "Expected (= (c/conjugate [5 0]) [5 0]) but got (not (= nil [5 0]))",
+      "name": "conjugate-of-purely-real-number",
+      "status": "fail",
+      "test_code": "(testing \"Conjugate a purely real number\" (is (= (c/conjugate [5 0]) [5 0])))"
+    },
+    {
+      "message": "Expected (= (c/conjugate [0 5]) [0 -5]) but got (not (= nil [0 -5]))",
+      "name": "conjugate-of-purely-imaginary-number",
+      "status": "fail",
+      "test_code": "(testing \"Conjugate a purely imaginary number\" (is (= (c/conjugate [0 5]) [0 -5])))"
+    },
+    {
+      "message": "Expected (= (c/conjugate [1 1]) [1 -1]) but got (not (= nil [1 -1]))",
+      "name": "conjugate-of-real-and-imaginary-number",
+      "status": "fail",
+      "test_code": "(testing \"Conjugate a number with real and imaginary part\" (is (= (c/conjugate [1 1]) [1 -1])))"
+    },
+    {
+      "message": "Expected (= (c/add [1 0] [2 0]) [3 0]) but got (not (= nil [3 0]))",
+      "name": "add-purely-real-numbers",
+      "status": "fail",
+      "test_code": "(testing \"Add purely real numbers\" (is (= (c/add [1 0] [2 0]) [3 0])))"
+    },
+    {
+      "message": "Expected (= (c/add [0 1] [0 2]) [0 3]) but got (not (= nil [0 3]))",
+      "name": "add-purely-imaginary-numbers",
+      "status": "fail",
+      "test_code": "(testing \"Add purely imaginary numbers\" (is (= (c/add [0 1] [0 2]) [0 3])))"
+    },
+    {
+      "message": "Expected (= (c/add [1 2] [3 4]) [4 6]) but got (not (= nil [4 6]))",
+      "name": "add-numbers-with-real-and-imaginary-part",
+      "status": "fail",
+      "test_code": "(testing \"Add numbers with real and imaginary part\" (is (= (c/add [1 2] [3 4]) [4 6])))"
+    },
+    {
+      "message": "Expected (= (c/sub [1 0] [2 0]) [-1 0]) but got (not (= nil [-1 0]))",
+      "name": "subtract-purely-real-numbers",
+      "status": "fail",
+      "test_code": "(testing \"Subtract purely real numbers\" (is (= (c/sub [1 0] [2 0]) [-1 0])))"
+    },
+    {
+      "message": "Expected (= (c/sub [0 1] [0 2]) [0 -1]) but got (not (= nil [0 -1]))",
+      "name": "subtract-purely-imaginary-numbers",
+      "status": "fail",
+      "test_code": "(testing \"Subtract purely imaginary numbers\" (is (= (c/sub [0 1] [0 2]) [0 -1])))"
+    },
+    {
+      "message": "Expected (= (c/sub [1 2] [3 4]) [-2 -2]) but got (not (= nil [-2 -2]))",
+      "name": "subtract-numbers-with-real-and-imaginary-part",
+      "status": "fail",
+      "test_code": "(testing \"Subtract numbers with real and imaginary part\" (is (= (c/sub [1 2] [3 4]) [-2 -2])))"
+    },
+    {
+      "message": "Expected (= (c/mul [1 0] [2 0]) [2 0]) but got (not (= nil [2 0]))",
+      "name": "multiply-purely-real-numbers",
+      "status": "fail",
+      "test_code": "(testing \"Multiply purely real numbers\" (is (= (c/mul [1 0] [2 0]) [2 0])))"
+    },
+    {
+      "message": "Expected (= (c/mul [0 1] [0 2]) [-2 0]) but got (not (= nil [-2 0]))",
+      "name": "multiply-purely-imaginary-numbers",
+      "status": "fail",
+      "test_code": "(testing \"Multiply purely imaginary numbers\" (is (= (c/mul [0 1] [0 2]) [-2 0])))"
+    },
+    {
+      "message": "Expected (= (c/mul [1 2] [3 4]) [-5 10]) but got (not (= nil [-5 10]))",
+      "name": "multiply-numbers-with-real-and-imaginary-part",
+      "status": "fail",
+      "test_code": "(testing \"Multiply numbers with real and imaginary part\" (is (= (c/mul [1 2] [3 4]) [-5 10])))"
+    },
+    {
+      "message": "Expected (= (c/div [1 0] [2 0]) [0.5 0.0]) but got (not (= nil [0.5 0.0]))",
+      "name": "divide-purely-real-numbers",
+      "status": "fail",
+      "test_code": "(testing \"Divide purely real numbers\" (is (= (c/div [1 0] [2 0]) [0.5 0.0])))"
+    },
+    {
+      "message": "Expected (= (c/div [0 1] [0 2]) [0.5 0.0]) but got (not (= nil [0.5 0.0]))",
+      "name": "dividey-purely-imaginary-numbers",
+      "status": "fail",
+      "test_code": "(testing \"Divide purely imaginary numbers\" (is (= (c/div [0 1] [0 2]) [0.5 0.0])))"
+    },
+    {
+      "message": "Expected (= (c/div [1 2] [3 4]) [0.44 0.08]) but got (not (= nil [0.44 0.08]))",
+      "name": "divide-numbers-with-real-and-imaginary-part",
+      "status": "fail",
+      "test_code": "(testing \"Divide numbers with real and imaginary part\" (is (= (c/div [1 2] [3 4]) [0.44 0.08])))"
+    }
+  ],
+  "version": 3
+}

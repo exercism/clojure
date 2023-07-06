@@ -1,0 +1,11 @@
+{
+  "status": "pass",
+  "tests": [
+    {
+      "name": "hex-to-int-test",
+      "status": "pass",
+      "test_code": "(is (= 1 (hexadecimal/hex-to-int \"1\")))\n(is (= 12 (hexadecimal/hex-to-int \"c\")))\n(is (= 16 (hexadecimal/hex-to-int \"10\")))\n(is (= 175 (hexadecimal/hex-to-int \"af\")))\n(is (= 256 (hexadecimal/hex-to-int \"100\")))\n(is (= 105166 (hexadecimal/hex-to-int \"19ace\")))\n(is (= 0 (hexadecimal/hex-to-int \"carrot\")))\n(is (= 0 (hexadecimal/hex-to-int \"000000\")))\n(is (= 16777215 (hexadecimal/hex-to-int \"ffffff\")))\n(is (= 16776960 (hexadecimal/hex-to-int \"ffff00\")))"
+    }
+  ],
+  "version": 3
+}

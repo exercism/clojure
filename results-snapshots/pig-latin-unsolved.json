@@ -1,0 +1,138 @@
+{
+  "status": "fail",
+  "tests": [
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "word-beginning-with-a",
+      "status": "error",
+      "test_code": "(is (= \"appleay\" (pig-latin/translate \"apple\")))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "word-beginning-with-e",
+      "status": "error",
+      "test_code": "(is (= \"earay\" (pig-latin/translate \"ear\")))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "word-beginning-with-i",
+      "status": "error",
+      "test_code": "(is (= \"iglooay\" (pig-latin/translate \"igloo\")))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "word-beginning-with-o",
+      "status": "error",
+      "test_code": "(is (= \"objectay\" (pig-latin/translate \"object\")))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "word-beginning-with-u",
+      "status": "error",
+      "test_code": "(is (= \"underay\" (pig-latin/translate \"under\")))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "word-beginning-with-a-vowel-and-followed-by-a-qu",
+      "status": "error",
+      "test_code": "(is (= \"equalay\" (pig-latin/translate \"equal\")))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "word-beginning-with-p",
+      "status": "error",
+      "test_code": "(is (= \"igpay\" (pig-latin/translate \"pig\")))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "word-beginning-with-k",
+      "status": "error",
+      "test_code": "(is (= \"oalakay\" (pig-latin/translate \"koala\")))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "word-beginning-with-y",
+      "status": "error",
+      "test_code": "(is (= \"ellowyay\" (pig-latin/translate \"yellow\")))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "word-beginning-with-x",
+      "status": "error",
+      "test_code": "(is (= \"enonxay\" (pig-latin/translate \"xenon\")))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "word-beginning-with-q-without-a-following-u",
+      "status": "error",
+      "test_code": "(is (= \"atqay\" (pig-latin/translate \"qat\")))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "word-beginning-with-ch",
+      "status": "error",
+      "test_code": "(is (= \"airchay\" (pig-latin/translate \"chair\")))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "word-beginning-with-qu",
+      "status": "error",
+      "test_code": "(is (= \"eenquay\" (pig-latin/translate \"queen\")))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "word-beginning-with-qu-and-a-preceding-consonant",
+      "status": "error",
+      "test_code": "(is (= \"aresquay\" (pig-latin/translate \"square\")))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "word-beginning-with-th",
+      "status": "error",
+      "test_code": "(is (= \"erapythay\" (pig-latin/translate \"therapy\")))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "word-beginning-with-thr",
+      "status": "error",
+      "test_code": "(is (= \"ushthray\" (pig-latin/translate \"thrush\")))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "word-beginning-with-sch",
+      "status": "error",
+      "test_code": "(is (= \"oolschay\" (pig-latin/translate \"school\")))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "word-beginning-with-yt",
+      "status": "error",
+      "test_code": "(is (= \"yttriaay\" (pig-latin/translate \"yttria\")))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "word-beginning-with-xr",
+      "status": "error",
+      "test_code": "(is (= \"xrayay\" (pig-latin/translate \"xray\")))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "word-beginning-with-consonants-followed-by-y",
+      "status": "error",
+      "test_code": "(is (= \"ythmrhay\" (pig-latin/translate \"rhythm\")))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "two-letter-word-ends-with-y",
+      "status": "error",
+      "test_code": "(is (= \"ymay\" (pig-latin/translate \"my\")))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "a-whole-phrase",
+      "status": "error",
+      "test_code": "(is (= \"ickquay astfay unray\" (pig-latin/translate \"quick fast run\")))"
+    }
+  ],
+  "version": 3
+}

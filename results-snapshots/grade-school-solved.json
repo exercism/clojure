@@ -1,0 +1,41 @@
+{
+  "status": "pass",
+  "tests": [
+    {
+      "name": "add-student",
+      "status": "pass",
+      "test_code": "(is (= {2 [\"Aimee\"]} (grade-school/add db \"Aimee\" 2)))"
+    },
+    {
+      "name": "add-more-students-in-same-class",
+      "status": "pass",
+      "test_code": "(is (= {2 [\"James\" \"Blair\" \"Paul\"]} (-> db (grade-school/add \"James\" 2) (grade-school/add \"Blair\" 2) (grade-school/add \"Paul\" 2))))"
+    },
+    {
+      "name": "add-students-to-different-grades",
+      "status": "pass",
+      "test_code": "(is (= {7 [\"Logan\"], 3 [\"Chelsea\"]} (-> db (grade-school/add \"Chelsea\" 3) (grade-school/add \"Logan\" 7))))"
+    },
+    {
+      "name": "get-students-in-a-grade",
+      "status": "pass",
+      "test_code": "(is (= [\"Franklin\" \"Bradley\"] (-> db (grade-school/add \"Franklin\" 5) (grade-school/add \"Bradley\" 5) (grade-school/add \"Jeff\" 1) (grade-school/grade 5))))"
+    },
+    {
+      "name": "get-students-in-a-non-existent-grade",
+      "status": "pass",
+      "test_code": "(is (= [] (grade-school/grade db 1)))"
+    },
+    {
+      "name": "sorted-grade-school",
+      "status": "pass",
+      "test_code": "(is (= (sorted-map 3 [\"Kyle\"] 4 [\"Christopher\" \"Jennifer\"] 6 [\"Kareem\"]) (-> db (grade-school/add \"Jennifer\" 4) (grade-school/add \"Kareem\" 6) (grade-school/add \"Christopher\" 4) (grade-school/add \"Kyle\" 3) (grade-school/sorted))))"
+    },
+    {
+      "name": "sorted-grade_school-keys-sorted",
+      "status": "pass",
+      "test_code": "(is (= [3 4 6] (-> db (grade-school/add \"Jennifer\" 4) (grade-school/add \"Kareem\" 6) (grade-school/add \"Christopher\" 4) (grade-school/add \"Kyle\" 3) (grade-school/sorted) (keys))))"
+    }
+  ],
+  "version": 3
+}

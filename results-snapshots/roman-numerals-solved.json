@@ -1,0 +1,96 @@
+{
+  "status": "pass",
+  "tests": [
+    {
+      "name": "one",
+      "status": "pass",
+      "test_code": "(is (= \"I\" (roman-numerals/numerals 1)))"
+    },
+    {
+      "name": "two",
+      "status": "pass",
+      "test_code": "(is (= \"II\" (roman-numerals/numerals 2)))"
+    },
+    {
+      "name": "three",
+      "status": "pass",
+      "test_code": "(is (= \"III\" (roman-numerals/numerals 3)))"
+    },
+    {
+      "name": "four",
+      "status": "pass",
+      "test_code": "(is (= \"IV\" (roman-numerals/numerals 4)))"
+    },
+    {
+      "name": "five",
+      "status": "pass",
+      "test_code": "(is (= \"V\" (roman-numerals/numerals 5)))"
+    },
+    {
+      "name": "six",
+      "status": "pass",
+      "test_code": "(is (= \"VI\" (roman-numerals/numerals 6)))"
+    },
+    {
+      "name": "nine",
+      "status": "pass",
+      "test_code": "(is (= \"IX\" (roman-numerals/numerals 9)))"
+    },
+    {
+      "name": "twenty-seven",
+      "status": "pass",
+      "test_code": "(is (= \"XXVII\" (roman-numerals/numerals 27)))"
+    },
+    {
+      "name": "forty-eight",
+      "status": "pass",
+      "test_code": "(is (= \"XLVIII\" (roman-numerals/numerals 48)))"
+    },
+    {
+      "name": "fifty-nine",
+      "status": "pass",
+      "test_code": "(is (= \"LIX\" (roman-numerals/numerals 59)))"
+    },
+    {
+      "name": "ninety-three",
+      "status": "pass",
+      "test_code": "(is (= \"XCIII\" (roman-numerals/numerals 93)))"
+    },
+    {
+      "name": "one-hundred-forty-one",
+      "status": "pass",
+      "test_code": "(is (= \"CXLI\" (roman-numerals/numerals 141)))"
+    },
+    {
+      "name": "one-hundred-sixty-three",
+      "status": "pass",
+      "test_code": "(is (= \"CLXIII\" (roman-numerals/numerals 163)))"
+    },
+    {
+      "name": "four-hundred-two",
+      "status": "pass",
+      "test_code": "(is (= \"CDII\" (roman-numerals/numerals 402)))"
+    },
+    {
+      "name": "five-hundred-seventy-five",
+      "status": "pass",
+      "test_code": "(is (= \"DLXXV\" (roman-numerals/numerals 575)))"
+    },
+    {
+      "name": "nine-hundred-eleven",
+      "status": "pass",
+      "test_code": "(is (= \"CMXI\" (roman-numerals/numerals 911)))"
+    },
+    {
+      "name": "one-thousand-twenty-four",
+      "status": "pass",
+      "test_code": "(is (= \"MXXIV\" (roman-numerals/numerals 1024)))"
+    },
+    {
+      "name": "three-thousand",
+      "status": "pass",
+      "test_code": "(is (= \"MMM\" (roman-numerals/numerals 3000)))"
+    }
+  ],
+  "version": 3
+}

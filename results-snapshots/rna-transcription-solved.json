@@ -1,0 +1,36 @@
+{
+  "status": "pass",
+  "tests": [
+    {
+      "name": "transcribes-cytosine-to-guanine",
+      "status": "pass",
+      "test_code": "(is (= \"G\" (rna-transcription/to-rna \"C\")))"
+    },
+    {
+      "name": "transcribes-guanine-to-cytosine",
+      "status": "pass",
+      "test_code": "(is (= \"C\" (rna-transcription/to-rna \"G\")))"
+    },
+    {
+      "name": "transcribes-adenine-to-uracil",
+      "status": "pass",
+      "test_code": "(is (= \"U\" (rna-transcription/to-rna \"A\")))"
+    },
+    {
+      "name": "it-transcribes-thymine-to-adenine",
+      "status": "pass",
+      "test_code": "(is (= \"A\" (rna-transcription/to-rna \"T\")))"
+    },
+    {
+      "name": "it-transcribes-all-nucleotides",
+      "status": "pass",
+      "test_code": "(is (= \"UGCACCAGAAUU\" (rna-transcription/to-rna \"ACGTGGTCTTAA\")))"
+    },
+    {
+      "name": "it-validates-dna-strands",
+      "status": "pass",
+      "test_code": "(is (thrown? AssertionError (rna-transcription/to-rna \"XCGFGGTDTTAA\")))"
+    }
+  ],
+  "version": 3
+}

@@ -1,0 +1,66 @@
+{
+  "status": "pass",
+  "tests": [
+    {
+      "name": "sum-to-1",
+      "status": "pass",
+      "test_code": "(is (zero? (sum-of-multiples/sum-of-multiples (quote (3 5)) 1)))"
+    },
+    {
+      "name": "sum-to-4",
+      "status": "pass",
+      "test_code": "(is (= 3 (sum-of-multiples/sum-of-multiples (quote (3 5)) 4)))"
+    },
+    {
+      "name": "sum-to-10",
+      "status": "pass",
+      "test_code": "(is (= 23 (sum-of-multiples/sum-of-multiples (quote (3 5)) 10)))"
+    },
+    {
+      "name": "sum-to-100",
+      "status": "pass",
+      "test_code": "(is (= 2318 (sum-of-multiples/sum-of-multiples (quote (3 5)) 100)))"
+    },
+    {
+      "name": "sum-to-1000",
+      "status": "pass",
+      "test_code": "(is (= 233168 (sum-of-multiples/sum-of-multiples (quote (3 5)) 1000)))"
+    },
+    {
+      "name": "sum-to-20-using-7-13-17",
+      "status": "pass",
+      "test_code": "(is (= 51 (sum-of-multiples/sum-of-multiples (quote (7 13 17)) 20)))"
+    },
+    {
+      "name": "sum-to-15-using-4-6",
+      "status": "pass",
+      "test_code": "(is (= 30 (sum-of-multiples/sum-of-multiples (quote (4 6)) 15)))"
+    },
+    {
+      "name": "sum-to-150-using-5-6-8",
+      "status": "pass",
+      "test_code": "(is (= 4419 (sum-of-multiples/sum-of-multiples (quote (5 6 8)) 150)))"
+    },
+    {
+      "name": "sum-to-51-using-5-25",
+      "status": "pass",
+      "test_code": "(is (= 275 (sum-of-multiples/sum-of-multiples (quote (5 25)) 51)))"
+    },
+    {
+      "name": "sum-to-10_000-using-43-47",
+      "status": "pass",
+      "test_code": "(is (= 2203160 (sum-of-multiples/sum-of-multiples (quote (43 47)) 10000)))"
+    },
+    {
+      "name": "sum-to-100-using-1",
+      "status": "pass",
+      "test_code": "(is (= 4950 (sum-of-multiples/sum-of-multiples (quote (1)) 100)))"
+    },
+    {
+      "name": "sum-to-10_000-using-empty",
+      "status": "pass",
+      "test_code": "(is (zero? (sum-of-multiples/sum-of-multiples (quote ()) 10000)))"
+    }
+  ],
+  "version": 3
+}

@@ -1,0 +1,41 @@
+{
+  "status": "pass",
+  "tests": [
+    {
+      "name": "test-acronym-empty-string",
+      "status": "pass",
+      "test_code": "(is (= \"\" (acronym/acronym \"\")))"
+    },
+    {
+      "name": "test-acronym-png",
+      "status": "pass",
+      "test_code": "(is (= \"PNG\" (acronym/acronym \"Portable Network Graphics\")))"
+    },
+    {
+      "name": "test-acronym-ror",
+      "status": "pass",
+      "test_code": "(is (= \"ROR\" (acronym/acronym \"Ruby on Rails\")))"
+    },
+    {
+      "name": "test-acronym-html",
+      "status": "pass",
+      "test_code": "(is (= \"HTML\" (acronym/acronym \"HyperText Markup Language\")))"
+    },
+    {
+      "name": "test-acronym-fifo",
+      "status": "pass",
+      "test_code": "(is (= \"FIFO\" (acronym/acronym \"First In, First Out\")))"
+    },
+    {
+      "name": "test-acronym-php",
+      "status": "pass",
+      "test_code": "(is (= \"PHP\" (acronym/acronym \"PHP: Hypertext Preprocessor\")))"
+    },
+    {
+      "name": "test-acronym-cmos",
+      "status": "pass",
+      "test_code": "(is (= \"CMOS\" (acronym/acronym \"Complementary metal-oxide semiconductor\")))"
+    }
+  ],
+  "version": 3
+}

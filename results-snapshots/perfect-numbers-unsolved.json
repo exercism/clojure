@@ -1,0 +1,29 @@
+{
+  "status": "fail",
+  "tests": [
+    {
+      "name": "test-initialize-perfect-number",
+      "status": "pass",
+      "test_code": "(testing \"Negative numbers throw an exception\" (is (thrown? IllegalArgumentException (perfect-numbers/classify -1))))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "test-classify-deficient",
+      "status": "error",
+      "test_code": "(testing \"13 is a deficient number\" (is (= :deficient (perfect-numbers/classify 13))))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "test-classify-perfect",
+      "status": "error",
+      "test_code": "(testing \"28 is a perfect number\" (is (= :perfect (perfect-numbers/classify 28))))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "test-classify-abundant",
+      "status": "error",
+      "test_code": "(testing \"12 is an abundant number\" (is (= :abundant (perfect-numbers/classify 12))))"
+    }
+  ],
+  "version": 3
+}

@@ -1,0 +1,108 @@
+{
+  "status": "fail",
+  "tests": [
+    {
+      "message": "Expected (= :equal (sublist/classify [] [])) but got (not (= :equal nil))",
+      "name": "empty-lists-test",
+      "status": "fail",
+      "test_code": "(is (= :equal (sublist/classify [] [])))"
+    },
+    {
+      "message": "Expected (= :sublist (sublist/classify [] [1 2 3])) but got (not (= :sublist nil))",
+      "name": "empty-list-within-non-empty-list-test",
+      "status": "fail",
+      "test_code": "(is (= :sublist (sublist/classify [] [1 2 3])))"
+    },
+    {
+      "message": "Expected (= :superlist (sublist/classify [1 2 3] [])) but got (not (= :superlist nil))",
+      "name": "non-empty-list-contains-empty-list-test",
+      "status": "fail",
+      "test_code": "(is (= :superlist (sublist/classify [1 2 3] [])))"
+    },
+    {
+      "message": "Expected (= :equal (sublist/classify [1 2 3] [1 2 3])) but got (not (= :equal nil))",
+      "name": "list-equals-itself-test",
+      "status": "fail",
+      "test_code": "(is (= :equal (sublist/classify [1 2 3] [1 2 3])))"
+    },
+    {
+      "message": "Expected (= :unequal (sublist/classify [1 2 3] [2 3 4])) but got (not (= :unequal nil))",
+      "name": "different-lists",
+      "status": "fail",
+      "test_code": "(is (= :unequal (sublist/classify [1 2 3] [2 3 4])))"
+    },
+    {
+      "message": "Expected (= :sublist (sublist/classify [1 2 5] [0 1 2 3 1 2 5 6])) but got (not (= :sublist nil))",
+      "name": "false-start",
+      "status": "fail",
+      "test_code": "(is (= :sublist (sublist/classify [1 2 5] [0 1 2 3 1 2 5 6])))"
+    },
+    {
+      "message": "Expected (= :sublist (sublist/classify [1 1 2] [0 1 1 1 2 1 2])) but got (not (= :sublist nil))",
+      "name": "consecutive",
+      "status": "fail",
+      "test_code": "(is (= :sublist (sublist/classify [1 1 2] [0 1 1 1 2 1 2])))"
+    },
+    {
+      "message": "Expected (= :sublist (sublist/classify [0 1 2] [0 1 2 3 4 5])) but got (not (= :sublist nil))",
+      "name": "sublist-at-start",
+      "status": "fail",
+      "test_code": "(is (= :sublist (sublist/classify [0 1 2] [0 1 2 3 4 5])))"
+    },
+    {
+      "message": "Expected (= :sublist (sublist/classify [2 3 4] [0 1 2 3 4 5])) but got (not (= :sublist nil))",
+      "name": "sublist-in-middle",
+      "status": "fail",
+      "test_code": "(is (= :sublist (sublist/classify [2 3 4] [0 1 2 3 4 5])))"
+    },
+    {
+      "message": "Expected (= :sublist (sublist/classify [3 4 5] [0 1 2 3 4 5])) but got (not (= :sublist nil))",
+      "name": "sublist-at-end",
+      "status": "fail",
+      "test_code": "(is (= :sublist (sublist/classify [3 4 5] [0 1 2 3 4 5])))"
+    },
+    {
+      "message": "Expected (= :superlist (sublist/classify [0 1 2 3 4 5] [0 1 2])) but got (not (= :superlist nil))",
+      "name": "at-start-of-superlist",
+      "status": "fail",
+      "test_code": "(is (= :superlist (sublist/classify [0 1 2 3 4 5] [0 1 2])))"
+    },
+    {
+      "message": "Expected (= :superlist (sublist/classify [0 1 2 3 4 5] [2 3])) but got (not (= :superlist nil))",
+      "name": "in-middle-of-superlist",
+      "status": "fail",
+      "test_code": "(is (= :superlist (sublist/classify [0 1 2 3 4 5] [2 3])))"
+    },
+    {
+      "message": "Expected (= :superlist (sublist/classify [0 1 2 3 4 5] [3 4 5])) but got (not (= :superlist nil))",
+      "name": "at-end-of-superlist",
+      "status": "fail",
+      "test_code": "(is (= :superlist (sublist/classify [0 1 2 3 4 5] [3 4 5])))"
+    },
+    {
+      "message": "Expected (= :unequal (sublist/classify [1 3] [1 2 3])) but got (not (= :unequal nil))",
+      "name": "first-list-missing-element-from-second-list",
+      "status": "fail",
+      "test_code": "(is (= :unequal (sublist/classify [1 3] [1 2 3])))"
+    },
+    {
+      "message": "Expected (= :unequal (sublist/classify [1 2 3] [1 3])) but got (not (= :unequal nil))",
+      "name": "second-list-missing-element-from-first-list",
+      "status": "fail",
+      "test_code": "(is (= :unequal (sublist/classify [1 2 3] [1 3])))"
+    },
+    {
+      "message": "Expected (= :unequal (sublist/classify [1 2 3] [3 2 1])) but got (not (= :unequal nil))",
+      "name": "order-matters-to-a-list",
+      "status": "fail",
+      "test_code": "(is (= :unequal (sublist/classify [1 2 3] [3 2 1])))"
+    },
+    {
+      "message": "Expected (= :unequal (sublist/classify [1 0 1] [10 1])) but got (not (= :unequal nil))",
+      "name": "same-digits-but-different-numbers",
+      "status": "fail",
+      "test_code": "(is (= :unequal (sublist/classify [1 0 1] [10 1])))"
+    }
+  ],
+  "version": 3
+}

@@ -1,0 +1,42 @@
+{
+  "status": "fail",
+  "tests": [
+    {
+      "message": "Expected (= (quote ()) (tracks-on-tracks-on-tracks/new-list)) but got (not (= () nil))",
+      "name": "list-empty-test",
+      "status": "fail",
+      "test_code": "(is (= (quote ()) (tracks-on-tracks-on-tracks/new-list)))"
+    },
+    {
+      "message": "Expected (= (quote (\"JavaScript\" \"Java\" \"Lisp\" \"Clojure\")) (-> (tracks-on-tracks-on-tracks/new-list) (tracks-on-tracks-on-tracks/add-language \"Clojure\") (tracks-on-tracks-on-tracks/add-language \"Lisp\") (tracks-on-tracks-on-tracks/add-language \"Java\") (tracks-on-tracks-on-tracks/add-language \"JavaScript\"))) but got (not (= (\"JavaScript\" \"Java\" \"Lisp\" \"Clojure\") nil))",
+      "name": "list-add-test",
+      "status": "fail",
+      "test_code": "(is (= (quote (\"JavaScript\" \"Java\" \"Lisp\" \"Clojure\")) (-> (tracks-on-tracks-on-tracks/new-list) (tracks-on-tracks-on-tracks/add-language \"Clojure\") (tracks-on-tracks-on-tracks/add-language \"Lisp\") (tracks-on-tracks-on-tracks/add-language \"Java\") (tracks-on-tracks-on-tracks/add-language \"JavaScript\"))))"
+    },
+    {
+      "message": "Expected (= \"Lisp\" (tracks-on-tracks-on-tracks/first-language (quote (\"Lisp\" \"Clojure\")))) but got (not (= \"Lisp\" nil))",
+      "name": "first-test",
+      "status": "fail",
+      "test_code": "(is (= \"Lisp\" (tracks-on-tracks-on-tracks/first-language (quote (\"Lisp\" \"Clojure\")))))"
+    },
+    {
+      "message": "Expected (= (quote (\"Clojure\")) (tracks-on-tracks-on-tracks/remove-language (quote (\"Lisp\" \"Clojure\")))) but got (not (= (\"Clojure\") nil))",
+      "name": "list-remove-test",
+      "status": "fail",
+      "test_code": "(is (= (quote (\"Clojure\")) (tracks-on-tracks-on-tracks/remove-language (quote (\"Lisp\" \"Clojure\")))))"
+    },
+    {
+      "message": "Expected (= 3 (tracks-on-tracks-on-tracks/count-languages (quote (\"JavaScript\" \"Java\" \"Clojure\")))) but got (not (= 3 nil))",
+      "name": "list-count-test",
+      "status": "fail",
+      "test_code": "(is (= 3 (tracks-on-tracks-on-tracks/count-languages (quote (\"JavaScript\" \"Java\" \"Clojure\")))))"
+    },
+    {
+      "message": "Expected (= 3 (tracks-on-tracks-on-tracks/learning-list)) but got (not (= 3 nil))",
+      "name": "learning-list-test",
+      "status": "fail",
+      "test_code": "(is (= 3 (tracks-on-tracks-on-tracks/learning-list)))"
+    }
+  ],
+  "version": 3
+}

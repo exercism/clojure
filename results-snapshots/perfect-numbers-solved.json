@@ -1,0 +1,26 @@
+{
+  "status": "pass",
+  "tests": [
+    {
+      "name": "test-initialize-perfect-number",
+      "status": "pass",
+      "test_code": "(testing \"Negative numbers throw an exception\" (is (thrown? IllegalArgumentException (perfect-numbers/classify -1))))"
+    },
+    {
+      "name": "test-classify-deficient",
+      "status": "pass",
+      "test_code": "(testing \"13 is a deficient number\" (is (= :deficient (perfect-numbers/classify 13))))"
+    },
+    {
+      "name": "test-classify-perfect",
+      "status": "pass",
+      "test_code": "(testing \"28 is a perfect number\" (is (= :perfect (perfect-numbers/classify 28))))"
+    },
+    {
+      "name": "test-classify-abundant",
+      "status": "pass",
+      "test_code": "(testing \"12 is an abundant number\" (is (= :abundant (perfect-numbers/classify 12))))"
+    }
+  ],
+  "version": 3
+}

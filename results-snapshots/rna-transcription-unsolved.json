@@ -1,0 +1,42 @@
+{
+  "status": "fail",
+  "tests": [
+    {
+      "message": "Expected (= \"G\" (rna-transcription/to-rna \"C\")) but got (not (= \"G\" nil))",
+      "name": "transcribes-cytosine-to-guanine",
+      "status": "fail",
+      "test_code": "(is (= \"G\" (rna-transcription/to-rna \"C\")))"
+    },
+    {
+      "message": "Expected (= \"C\" (rna-transcription/to-rna \"G\")) but got (not (= \"C\" nil))",
+      "name": "transcribes-guanine-to-cytosine",
+      "status": "fail",
+      "test_code": "(is (= \"C\" (rna-transcription/to-rna \"G\")))"
+    },
+    {
+      "message": "Expected (= \"U\" (rna-transcription/to-rna \"A\")) but got (not (= \"U\" nil))",
+      "name": "transcribes-adenine-to-uracil",
+      "status": "fail",
+      "test_code": "(is (= \"U\" (rna-transcription/to-rna \"A\")))"
+    },
+    {
+      "message": "Expected (= \"A\" (rna-transcription/to-rna \"T\")) but got (not (= \"A\" nil))",
+      "name": "it-transcribes-thymine-to-adenine",
+      "status": "fail",
+      "test_code": "(is (= \"A\" (rna-transcription/to-rna \"T\")))"
+    },
+    {
+      "message": "Expected (= \"UGCACCAGAAUU\" (rna-transcription/to-rna \"ACGTGGTCTTAA\")) but got (not (= \"UGCACCAGAAUU\" nil))",
+      "name": "it-transcribes-all-nucleotides",
+      "status": "fail",
+      "test_code": "(is (= \"UGCACCAGAAUU\" (rna-transcription/to-rna \"ACGTGGTCTTAA\")))"
+    },
+    {
+      "message": "Expected (thrown? AssertionError (rna-transcription/to-rna \"XCGFGGTDTTAA\")) but got ",
+      "name": "it-validates-dna-strands",
+      "status": "fail",
+      "test_code": "(is (thrown? AssertionError (rna-transcription/to-rna \"XCGFGGTDTTAA\")))"
+    }
+  ],
+  "version": 3
+}

@@ -1,0 +1,60 @@
+{
+  "status": "fail",
+  "tests": [
+    {
+      "message": "Expected (= \"A\" (squeaky-clean/clean \"A\")) but got (not (= \"A\" nil))",
+      "name": "clean-single-letter",
+      "status": "fail",
+      "test_code": "(is (= \"A\" (squeaky-clean/clean \"A\")))"
+    },
+    {
+      "message": "Expected (= \"àḃç\" (squeaky-clean/clean \"àḃç\")) but got (not (= \"àḃç\" nil))",
+      "name": "clean-clean-string",
+      "status": "fail",
+      "test_code": "(is (= \"àḃç\" (squeaky-clean/clean \"àḃç\")))"
+    },
+    {
+      "message": "Expected (= \"my___Id\" (squeaky-clean/clean \"my   Id\")) but got (not (= \"my___Id\" nil))",
+      "name": "clean-string-with-spaces",
+      "status": "fail",
+      "test_code": "(is (= \"my___Id\" (squeaky-clean/clean \"my   Id\")))"
+    },
+    {
+      "message": "Expected (= \"myCTRLId\" (squeaky-clean/clean \"my\u0000Id\")) but got (not (= \"myCTRLId\" nil))",
+      "name": "clean-string-with-control-char",
+      "status": "fail",
+      "test_code": "(is (= \"myCTRLId\" (squeaky-clean/clean \"my\u0000Id\")))"
+    },
+    {
+      "message": "Expected (= \"\" (squeaky-clean/clean \"😀😀😀\")) but got (not (= \"\" nil))",
+      "name": "clean-string-with-no-letters",
+      "status": "fail",
+      "test_code": "(is (= \"\" (squeaky-clean/clean \"😀😀😀\")))"
+    },
+    {
+      "message": "Expected (= \"\" (squeaky-clean/clean \"\")) but got (not (= \"\" nil))",
+      "name": "clean-empty-string",
+      "status": "fail",
+      "test_code": "(is (= \"\" (squeaky-clean/clean \"\")))"
+    },
+    {
+      "message": "Expected (= \"àḂç\" (squeaky-clean/clean \"à-ḃç\")) but got (not (= \"àḂç\" nil))",
+      "name": "convert-kebab-to-camel-case",
+      "status": "fail",
+      "test_code": "(is (= \"àḂç\" (squeaky-clean/clean \"à-ḃç\")))"
+    },
+    {
+      "message": "Expected (= \"MyΟFinder\" (squeaky-clean/clean \"MyΟβιεγτFinder\")) but got (not (= \"MyΟFinder\" nil))",
+      "name": "omit-lower-case-greek-letters",
+      "status": "fail",
+      "test_code": "(is (= \"MyΟFinder\" (squeaky-clean/clean \"MyΟβιεγτFinder\")))"
+    },
+    {
+      "message": "Expected (= \"_AbcĐCTRL\" (squeaky-clean/clean \"9 -abcĐ😀ω\u0000\")) but got (not (= \"_AbcĐCTRL\" nil))",
+      "name": "combine-conversions",
+      "status": "fail",
+      "test_code": "(is (= \"_AbcĐCTRL\" (squeaky-clean/clean \"9 -abcĐ😀ω\u0000\")))"
+    }
+  ],
+  "version": 3
+}

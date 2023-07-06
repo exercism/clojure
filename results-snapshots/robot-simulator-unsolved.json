@@ -1,0 +1,78 @@
+{
+  "status": "fail",
+  "tests": [
+    {
+      "message": "Expected (= :east (:bearing robbie)) but got (not (= :east nil))",
+      "name": "can-get-vals-bearing",
+      "status": "fail",
+      "test_code": "(is (= :east (:bearing robbie)))"
+    },
+    {
+      "message": "Expected (= {:x -2, :y 1} (:coordinates robbie)) but got (not (= {:x -2, :y 1} nil))",
+      "name": "can-get-vals-coords",
+      "status": "fail",
+      "test_code": "(is (= {:y 1, :x -2} (:coordinates robbie)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "can-turn-right",
+      "status": "error",
+      "test_code": "(is (= :north (robot-simulator/turn-right :west)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "can-turn-left",
+      "status": "error",
+      "test_code": "(is (= :west (robot-simulator/turn-left :north)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (2) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "can-simulate-bearing",
+      "status": "error",
+      "test_code": "(is (= :west (:bearing (robot-simulator/simulate \"RLAALAL\" robbie))))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (2) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "can-simulate-coords",
+      "status": "error",
+      "test_code": "(is (= {:y 2, :x 0} (:coordinates (robot-simulator/simulate \"RLAALAL\" robbie))))"
+    },
+    {
+      "message": "An unexpected error occurred:\nWrong number of args (2) passed to: robot-simulator/simulate",
+      "name": "simulate-clutz-bearing",
+      "status": "error",
+      "test_code": "(let [clutz (->> (robot-simulator/robot {:y 0, :x 0} :north) (robot-simulator/simulate \"LAAARALA\"))] (is (= :west (:bearing clutz))))"
+    },
+    {
+      "message": "An unexpected error occurred:\nWrong number of args (2) passed to: robot-simulator/simulate",
+      "name": "simulate-clutz-coords",
+      "status": "error",
+      "test_code": "(let [clutz (->> (robot-simulator/robot {:y 0, :x 0} :north) (robot-simulator/simulate \"LAAARALA\"))] (is (= {:y 1, :x -4} (:coordinates clutz))))"
+    },
+    {
+      "message": "An unexpected error occurred:\nWrong number of args (2) passed to: robot-simulator/simulate",
+      "name": "simulate-sphero-bearing",
+      "status": "error",
+      "test_code": "(let [sphero (->> (robot-simulator/robot {:y -7, :x 2} :east) (robot-simulator/simulate \"RRAAAAALA\"))] (is (= :south (:bearing sphero))))"
+    },
+    {
+      "message": "An unexpected error occurred:\nWrong number of args (2) passed to: robot-simulator/simulate",
+      "name": "simulate-sphero-coords",
+      "status": "error",
+      "test_code": "(let [sphero (->> (robot-simulator/robot {:y -7, :x 2} :east) (robot-simulator/simulate \"RRAAAAALA\"))] (is (= {:y -8, :x -3} (:coordinates sphero))))"
+    },
+    {
+      "message": "An unexpected error occurred:\nWrong number of args (2) passed to: robot-simulator/simulate",
+      "name": "simulate-roomba-bearing",
+      "status": "error",
+      "test_code": "(let [roomba (->> (robot-simulator/robot {:y 4, :x 8} :south) (robot-simulator/simulate \"LAAARRRALLLL\"))] (is (= :north (:bearing roomba))))"
+    },
+    {
+      "message": "An unexpected error occurred:\nWrong number of args (2) passed to: robot-simulator/simulate",
+      "name": "simulate-roomba-coords",
+      "status": "error",
+      "test_code": "(let [roomba (->> (robot-simulator/robot {:y 4, :x 8} :south) (robot-simulator/simulate \"LAAARRRALLLL\"))] (is (= {:y 5, :x 11} (:coordinates roomba))))"
+    }
+  ],
+  "version": 3
+}

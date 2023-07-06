@@ -1,0 +1,66 @@
+{
+  "status": "pass",
+  "tests": [
+    {
+      "name": "can-get-vals-bearing",
+      "status": "pass",
+      "test_code": "(is (= :east (:bearing robbie)))"
+    },
+    {
+      "name": "can-get-vals-coords",
+      "status": "pass",
+      "test_code": "(is (= {:y 1, :x -2} (:coordinates robbie)))"
+    },
+    {
+      "name": "can-turn-right",
+      "status": "pass",
+      "test_code": "(is (= :north (robot-simulator/turn-right :west)))"
+    },
+    {
+      "name": "can-turn-left",
+      "status": "pass",
+      "test_code": "(is (= :west (robot-simulator/turn-left :north)))"
+    },
+    {
+      "name": "can-simulate-bearing",
+      "status": "pass",
+      "test_code": "(is (= :west (:bearing (robot-simulator/simulate \"RLAALAL\" robbie))))"
+    },
+    {
+      "name": "can-simulate-coords",
+      "status": "pass",
+      "test_code": "(is (= {:y 2, :x 0} (:coordinates (robot-simulator/simulate \"RLAALAL\" robbie))))"
+    },
+    {
+      "name": "simulate-clutz-bearing",
+      "status": "pass",
+      "test_code": "(let [clutz (->> (robot-simulator/robot {:y 0, :x 0} :north) (robot-simulator/simulate \"LAAARALA\"))] (is (= :west (:bearing clutz))))"
+    },
+    {
+      "name": "simulate-clutz-coords",
+      "status": "pass",
+      "test_code": "(let [clutz (->> (robot-simulator/robot {:y 0, :x 0} :north) (robot-simulator/simulate \"LAAARALA\"))] (is (= {:y 1, :x -4} (:coordinates clutz))))"
+    },
+    {
+      "name": "simulate-sphero-bearing",
+      "status": "pass",
+      "test_code": "(let [sphero (->> (robot-simulator/robot {:y -7, :x 2} :east) (robot-simulator/simulate \"RRAAAAALA\"))] (is (= :south (:bearing sphero))))"
+    },
+    {
+      "name": "simulate-sphero-coords",
+      "status": "pass",
+      "test_code": "(let [sphero (->> (robot-simulator/robot {:y -7, :x 2} :east) (robot-simulator/simulate \"RRAAAAALA\"))] (is (= {:y -8, :x -3} (:coordinates sphero))))"
+    },
+    {
+      "name": "simulate-roomba-bearing",
+      "status": "pass",
+      "test_code": "(let [roomba (->> (robot-simulator/robot {:y 4, :x 8} :south) (robot-simulator/simulate \"LAAARRRALLLL\"))] (is (= :north (:bearing roomba))))"
+    },
+    {
+      "name": "simulate-roomba-coords",
+      "status": "pass",
+      "test_code": "(let [roomba (->> (robot-simulator/robot {:y 4, :x 8} :south) (robot-simulator/simulate \"LAAARRRALLLL\"))] (is (= {:y 5, :x 11} (:coordinates roomba))))"
+    }
+  ],
+  "version": 3
+}

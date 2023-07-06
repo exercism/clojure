@@ -1,0 +1,42 @@
+{
+  "status": "fail",
+  "tests": [
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "lower-case-letter",
+      "status": "error",
+      "test_code": "(is (= 1 (scrabble-score/score-letter \"a\")))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "upper-case-letter",
+      "status": "error",
+      "test_code": "(is (= 1 (scrabble-score/score-letter \"A\")))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "two-letter-word",
+      "status": "error",
+      "test_code": "(is (= 2 (scrabble-score/score-word \"at\")))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "bigger-word-1",
+      "status": "error",
+      "test_code": "(is (= 6 (scrabble-score/score-word \"street\")))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "bigger-word-2",
+      "status": "error",
+      "test_code": "(is (= 22 (scrabble-score/score-word \"quirky\")))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "all-upper-case-word",
+      "status": "error",
+      "test_code": "(is (= 41 (scrabble-score/score-word \"OXYPHENBUTAZONE\")))"
+    }
+  ],
+  "version": 3
+}

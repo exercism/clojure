@@ -1,0 +1,46 @@
+{
+  "status": "pass",
+  "tests": [
+    {
+      "name": "empty-string-test",
+      "status": "pass",
+      "test_code": "(is (= \"\" (reverse-string/reverse-string \"\")))"
+    },
+    {
+      "name": "a-letter-test",
+      "status": "pass",
+      "test_code": "(is (= \"I\" (reverse-string/reverse-string \"I\")))"
+    },
+    {
+      "name": "a-word-test",
+      "status": "pass",
+      "test_code": "(is (= \"tobor\" (reverse-string/reverse-string \"robot\")))"
+    },
+    {
+      "name": "capitalised-word-test",
+      "status": "pass",
+      "test_code": "(is (= \"nemaR\" (reverse-string/reverse-string \"Ramen\")))"
+    },
+    {
+      "name": "sentence-with-punctuation-test",
+      "status": "pass",
+      "test_code": "(is (= \"!yrgnuh m'I\" (reverse-string/reverse-string \"I'm hungry!\")))"
+    },
+    {
+      "name": "palindrome-test",
+      "status": "pass",
+      "test_code": "(is (= \"racecar\" (reverse-string/reverse-string \"racecar\")))"
+    },
+    {
+      "name": "even-sized-word-test",
+      "status": "pass",
+      "test_code": "(is (= \"reward\" (reverse-string/reverse-string \"drawer\")))"
+    },
+    {
+      "name": "long-string-test",
+      "status": "pass",
+      "test_code": "(let [s (reduce str (repeat 1000 \"overflow?\")) rs (reduce str (repeat 1000 \"?wolfrevo\"))] (is (= rs (reverse-string/reverse-string s))))"
+    }
+  ],
+  "version": 3
+}

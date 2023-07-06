@@ -1,0 +1,114 @@
+{
+  "status": "fail",
+  "tests": [
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "one",
+      "status": "error",
+      "test_code": "(is (= \"I\" (roman-numerals/numerals 1)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "two",
+      "status": "error",
+      "test_code": "(is (= \"II\" (roman-numerals/numerals 2)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "three",
+      "status": "error",
+      "test_code": "(is (= \"III\" (roman-numerals/numerals 3)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "four",
+      "status": "error",
+      "test_code": "(is (= \"IV\" (roman-numerals/numerals 4)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "five",
+      "status": "error",
+      "test_code": "(is (= \"V\" (roman-numerals/numerals 5)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "six",
+      "status": "error",
+      "test_code": "(is (= \"VI\" (roman-numerals/numerals 6)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "nine",
+      "status": "error",
+      "test_code": "(is (= \"IX\" (roman-numerals/numerals 9)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "twenty-seven",
+      "status": "error",
+      "test_code": "(is (= \"XXVII\" (roman-numerals/numerals 27)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "forty-eight",
+      "status": "error",
+      "test_code": "(is (= \"XLVIII\" (roman-numerals/numerals 48)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "fifty-nine",
+      "status": "error",
+      "test_code": "(is (= \"LIX\" (roman-numerals/numerals 59)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "ninety-three",
+      "status": "error",
+      "test_code": "(is (= \"XCIII\" (roman-numerals/numerals 93)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "one-hundred-forty-one",
+      "status": "error",
+      "test_code": "(is (= \"CXLI\" (roman-numerals/numerals 141)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "one-hundred-sixty-three",
+      "status": "error",
+      "test_code": "(is (= \"CLXIII\" (roman-numerals/numerals 163)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "four-hundred-two",
+      "status": "error",
+      "test_code": "(is (= \"CDII\" (roman-numerals/numerals 402)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "five-hundred-seventy-five",
+      "status": "error",
+      "test_code": "(is (= \"DLXXV\" (roman-numerals/numerals 575)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "nine-hundred-eleven",
+      "status": "error",
+      "test_code": "(is (= \"CMXI\" (roman-numerals/numerals 911)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "one-thousand-twenty-four",
+      "status": "error",
+      "test_code": "(is (= \"MXXIV\" (roman-numerals/numerals 1024)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "three-thousand",
+      "status": "error",
+      "test_code": "(is (= \"MMM\" (roman-numerals/numerals 3000)))"
+    }
+  ],
+  "version": 3
+}

@@ -1,0 +1,46 @@
+{
+  "status": "pass",
+  "tests": [
+    {
+      "name": "age-in-earth-years",
+      "status": "pass",
+      "test_code": "(rounds-to 31.69 (space-age/on-earth 1000000000))"
+    },
+    {
+      "name": "age-in-mercury-years",
+      "status": "pass",
+      "test_code": "(let [seconds 2134835688] (rounds-to 67.65 (space-age/on-earth seconds)) (rounds-to 280.88 (space-age/on-mercury seconds)))"
+    },
+    {
+      "name": "age-in-venus-years",
+      "status": "pass",
+      "test_code": "(let [seconds 189839836] (rounds-to 6.02 (space-age/on-earth seconds)) (rounds-to 9.78 (space-age/on-venus seconds)))"
+    },
+    {
+      "name": "age-on-mars",
+      "status": "pass",
+      "test_code": "(let [seconds 2329871239] (rounds-to 73.83 (space-age/on-earth seconds)) (rounds-to 39.25 (space-age/on-mars seconds)))"
+    },
+    {
+      "name": "age-on-jupiter",
+      "status": "pass",
+      "test_code": "(let [seconds 901876382] (rounds-to 28.58 (space-age/on-earth seconds)) (rounds-to 2.41 (space-age/on-jupiter seconds)))"
+    },
+    {
+      "name": "age-on-saturn",
+      "status": "pass",
+      "test_code": "(let [seconds 3000000000] (rounds-to 95.06 (space-age/on-earth seconds)) (rounds-to 3.23 (space-age/on-saturn seconds)))"
+    },
+    {
+      "name": "age-on-uranus",
+      "status": "pass",
+      "test_code": "(let [seconds 3210123456] (rounds-to 101.72 (space-age/on-earth seconds)) (rounds-to 1.21 (space-age/on-uranus seconds)))"
+    },
+    {
+      "name": "age-on-neptune",
+      "status": "pass",
+      "test_code": "(let [seconds 8210123456] (rounds-to 260.16 (space-age/on-earth seconds)) (rounds-to 1.58 (space-age/on-neptune seconds)))"
+    }
+  ],
+  "version": 3
+}

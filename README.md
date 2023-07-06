@@ -1,7 +1,7 @@
 # Exercism Clojure Track
 
 [![Configlet CI](https://github.com/exercism/clojure/actions/workflows/configlet.yml/badge.svg)](https://github.com/exercism/clojure/actions/workflows/configlet.yml)
-[![test](https://github.com/exercism/clojure/workflows/test/badge.svg)](https://github.com/exercism/clojure/actions?query=workflow%3Atest)
+[![Track CI](https://github.com/exercism/clojure/workflows/test/badge.svg)](https://github.com/exercism/clojure/actions?query=workflow%3Atest)
 
 **Exercism exercises in [Clojure](https://clojure.org/)**
 

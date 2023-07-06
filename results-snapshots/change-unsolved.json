@@ -1,0 +1,60 @@
+{
+  "status": "fail",
+  "tests": [
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (2) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "single-coin-change",
+      "status": "error",
+      "test_code": "(is (= (issue 25 #{1 100 25 5 10}) (quote (25))))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (2) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "multiple-coin-change",
+      "status": "error",
+      "test_code": "(is (= (issue 15 #{1 100 25 5 10}) (quote (5 10))))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (2) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "change-with-lilliputian-coins",
+      "status": "error",
+      "test_code": "(is (= (issue 23 #{20 1 4 15 50}) (quote (4 4 15))))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (2) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "change-with-elbonia-coins",
+      "status": "error",
+      "test_code": "(is (= (issue 63 #{1 21 25 5 10}) (quote (21 21 21))))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (2) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "large-target-values",
+      "status": "error",
+      "test_code": "(is (= (issue 999 #{20 1 50 100 2 5 10}) (quote (2 2 5 20 20 50 100 100 100 100 100 100 100 100 100))))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (2) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "no-coins-make-zero-change",
+      "status": "error",
+      "test_code": "(is (empty? (issue 0 #{1 21 25 5 10})))"
+    },
+    {
+      "message": "Expected (thrown-with-msg? IllegalArgumentException #\"cannot change\" (issue 3 #{5 10})) but got clojure.lang.ArityException: Wrong number of args (2) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "error-testing-for-change-smallet-than-the-smallest-coin",
+      "status": "fail",
+      "test_code": "(is (thrown-with-msg? IllegalArgumentException (re-pattern \"cannot change\") (issue 3 #{5 10})))"
+    },
+    {
+      "message": "Expected (thrown-with-msg? IllegalArgumentException #\"cannot change\" (issue -5 #{1 2 5})) but got clojure.lang.ArityException: Wrong number of args (2) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "cannot-find-negative-change-values",
+      "status": "fail",
+      "test_code": "(is (thrown-with-msg? IllegalArgumentException (re-pattern \"cannot change\") (issue -5 #{1 2 5})))"
+    },
+    {
+      "message": "Expected (thrown-with-msg? IllegalArgumentException #\"cannot change\" (issue 10 #{20 3 8})) but got clojure.lang.ArityException: Wrong number of args (2) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "error-testing-for-no-valid-change",
+      "status": "fail",
+      "test_code": "(is (thrown-with-msg? IllegalArgumentException (re-pattern \"cannot change\") (issue 10 #{20 3 8})))"
+    }
+  ],
+  "version": 3
+}

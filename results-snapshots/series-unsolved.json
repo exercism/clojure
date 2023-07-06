@@ -1,0 +1,36 @@
+{
+  "status": "fail",
+  "tests": [
+    {
+      "message": "Expected (= [] (slices \"\" 1)) but got (not (= [] nil))",
+      "name": "empty-string",
+      "status": "fail",
+      "test_code": "(testing \"empty string with any number\" (is (= [] (slices \"\" 1))))"
+    },
+    {
+      "message": "Expected (= [\"\"] (slices \"123\" 0)) but got (not (= [\"\"] nil))",
+      "name": "number-eq-zero",
+      "status": "fail",
+      "test_code": "(testing \"number = 0\" (is (= [\"\"] (slices \"123\" 0))))"
+    },
+    {
+      "message": "Expected (= [] (slices \"123\" 1000)) but got (not (= [] nil))",
+      "name": "number>string",
+      "status": "fail",
+      "test_code": "(testing \"number > string-length\" (is (= [] (slices \"123\" 1000))))"
+    },
+    {
+      "message": "Expected (= [\"123\"] (slices \"123\" 3)) but got (not (= [\"123\"] nil))",
+      "name": "number=string",
+      "status": "fail",
+      "test_code": "(testing \"number = string-length\" (is (= [\"123\"] (slices \"123\" 3))))"
+    },
+    {
+      "message": "Expected (= #{\"234\" \"123\" \"345\"} (set (slices \"12345\" 3))) but got (not (= #{\"234\" \"123\" \"345\"} #{}))",
+      "name": "number<string",
+      "status": "fail",
+      "test_code": "(testing \"number < string-length\" (is (= #{\"234\" \"123\" \"345\"} (set (slices \"12345\" 3)))))"
+    }
+  ],
+  "version": 3
+}

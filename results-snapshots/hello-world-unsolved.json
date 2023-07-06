@@ -1,0 +1,12 @@
+{
+  "status": "fail",
+  "tests": [
+    {
+      "message": "Expected (= \"Hello, World!\" (hello-world/hello)) but got (not (= \"Hello, World!\" \"Goodbye, Mars!\"))",
+      "name": "hello-world-test",
+      "status": "fail",
+      "test_code": "(is (= \"Hello, World!\" (hello-world/hello)))"
+    }
+  ],
+  "version": 3
+}

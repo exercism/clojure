@@ -1,0 +1,71 @@
+{
+  "status": "pass",
+  "tests": [
+    {
+      "name": "single-digit-strings",
+      "status": "pass",
+      "test_code": "(is (false? (luhn/valid? \"1\")))"
+    },
+    {
+      "name": "single-zero",
+      "status": "pass",
+      "test_code": "(is (false? (luhn/valid? \"0\")))"
+    },
+    {
+      "name": "sin",
+      "status": "pass",
+      "test_code": "(is (true? (luhn/valid? \" 5 9 \")))"
+    },
+    {
+      "name": "Canadian-SIN",
+      "status": "pass",
+      "test_code": "(is (true? (luhn/valid? \"046 454 286\")))"
+    },
+    {
+      "name": "invalid-Canadian-SIN",
+      "status": "pass",
+      "test_code": "(is (false? (luhn/valid? \"046 454 287\")))"
+    },
+    {
+      "name": "invalid-credit-card",
+      "status": "pass",
+      "test_code": "(is (false? (luhn/valid? \"8273 1232 7352 0569\")))"
+    },
+    {
+      "name": "non-digit-added",
+      "status": "pass",
+      "test_code": "(is (false? (luhn/valid? \"046a 454 286\")))"
+    },
+    {
+      "name": "punctuation",
+      "status": "pass",
+      "test_code": "(is (false? (luhn/valid? \"055-444-285\")))"
+    },
+    {
+      "name": "symbols",
+      "status": "pass",
+      "test_code": "(is (false? (luhn/valid? \"055£ 444$ 285\")))"
+    },
+    {
+      "name": "single-zero-with-space",
+      "status": "pass",
+      "test_code": "(is (false? (luhn/valid? \" 0\")))"
+    },
+    {
+      "name": "lots-of-zeros",
+      "status": "pass",
+      "test_code": "(is (true? (luhn/valid? \" 00000\")))"
+    },
+    {
+      "name": "another-valid-sin",
+      "status": "pass",
+      "test_code": "(is (true? (luhn/valid? \"055 444 285\")))"
+    },
+    {
+      "name": "nine-doubled",
+      "status": "pass",
+      "test_code": "(is (true? (luhn/valid? \"091\")))"
+    }
+  ],
+  "version": 3
+}

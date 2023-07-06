@@ -1,0 +1,54 @@
+{
+  "status": "fail",
+  "tests": [
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "square-1",
+      "status": "error",
+      "test_code": "(is (= 1 (grains/square 1)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "square-2",
+      "status": "error",
+      "test_code": "(is (= 2 (grains/square 2)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "square-3",
+      "status": "error",
+      "test_code": "(is (= 4 (grains/square 3)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "square-4",
+      "status": "error",
+      "test_code": "(is (= 8 (grains/square 4)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "square-16",
+      "status": "error",
+      "test_code": "(is (= 32768 (grains/square 16)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "square-32",
+      "status": "error",
+      "test_code": "(is (= 2147483648 (grains/square 32)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "square-64",
+      "status": "error",
+      "test_code": "(is (= 9223372036854775808N (grains/square 64)))"
+    },
+    {
+      "message": "Expected (= 18446744073709551615N (grains/total)) but got (not (= 18446744073709551615N nil))",
+      "name": "total-grains",
+      "status": "fail",
+      "test_code": "(is (= 18446744073709551615N (grains/total)))"
+    }
+  ],
+  "version": 3
+}

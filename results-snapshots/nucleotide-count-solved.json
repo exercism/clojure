@@ -1,0 +1,41 @@
+{
+  "status": "pass",
+  "tests": [
+    {
+      "name": "empty-dna-strand-has-no-adenosine",
+      "status": "pass",
+      "test_code": "(is (= 0 (nucleotide-count/count-of-nucleotide-in-strand \\A \"\")))"
+    },
+    {
+      "name": "empty-dna-strand-has-no-nucleotides",
+      "status": "pass",
+      "test_code": "(is (= {\\A 0, \\C 0, \\G 0, \\T 0} (nucleotide-count/nucleotide-counts \"\")))"
+    },
+    {
+      "name": "repetitive-cytidine-gets-counted",
+      "status": "pass",
+      "test_code": "(is (= 5 (nucleotide-count/count-of-nucleotide-in-strand \\C \"CCCCC\")))"
+    },
+    {
+      "name": "repetitive-sequence-has-only-guanosine",
+      "status": "pass",
+      "test_code": "(is (= {\\A 0, \\C 0, \\G 8, \\T 0} (nucleotide-count/nucleotide-counts \"GGGGGGGG\")))"
+    },
+    {
+      "name": "counts-only-thymidine",
+      "status": "pass",
+      "test_code": "(is (= 1 (nucleotide-count/count-of-nucleotide-in-strand \\T \"GGGGGTAACCCGG\")))"
+    },
+    {
+      "name": "validates-nucleotides",
+      "status": "pass",
+      "test_code": "(is (thrown? Throwable (nucleotide-count/count-of-nucleotide-in-strand \\X \"GACT\")))"
+    },
+    {
+      "name": "counts-all-nucleotides",
+      "status": "pass",
+      "test_code": "(let [s \"AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC\"] (is (= {\\A 20, \\C 12, \\G 17, \\T 21} (nucleotide-count/nucleotide-counts s))))"
+    }
+  ],
+  "version": 3
+}

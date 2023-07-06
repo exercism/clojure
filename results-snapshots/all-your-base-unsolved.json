@@ -1,0 +1,132 @@
+{
+  "status": "fail",
+  "tests": [
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (3) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "test-single-bit-to-one-decimal",
+      "status": "error",
+      "test_code": "(testing \"Base 2 '1' converts to base 10 '1'\" (is (= (quote (1)) (all-your-base/convert 2 (quote (1)) 10))))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (3) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "test-binary-to-single-decimal",
+      "status": "error",
+      "test_code": "(testing \"Base 2 '1 0 1' converts to base 10 '5'\" (is (= (quote (5)) (all-your-base/convert 2 (quote (1 0 1)) 10))))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (3) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "test-single-decimal-to-binary",
+      "status": "error",
+      "test_code": "(testing \"Base 10 '5' converts to base 2 '1 0 1'\" (is (= (quote (1 0 1)) (all-your-base/convert 10 (quote (5)) 2))))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (3) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "test-binary-to-multiple-decimal",
+      "status": "error",
+      "test_code": "(testing \"Base 2 '1 0 1 0 1 0' converts to base 10 '4 2'\" (is (= (quote (4 2)) (all-your-base/convert 2 (quote (1 0 1 0 1 0)) 10))))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (3) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "test-decimal-to-binary",
+      "status": "error",
+      "test_code": "(testing \"Base 10 '4 2' conves to base 2 '1 0 1 0 1 0'\" (is (= (quote (1 0 1 0 1 0)) (all-your-base/convert 10 (quote (4 2)) 2))))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (3) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "test-trinary-to-hexadecimal",
+      "status": "error",
+      "test_code": "(testing \"Base 3 '1 1 2 0' converts to base 16 '2 10'\" (is (= (quote (2 10)) (all-your-base/convert 3 (quote (1 1 2 0)) 16))))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (3) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "test-hexadecimal-to-trinary",
+      "status": "error",
+      "test_code": "(testing \"Base 16 '2 10' converts to base 3 '1 1 2 0'\" (is (= (quote (1 1 2 0)) (all-your-base/convert 16 (quote (2 10)) 3))))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (3) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "test-15-bit-integer",
+      "status": "error",
+      "test_code": "(testing \"Base 97 '3 46 60' converts to base 73 '6 10 45'\" (is (= (quote (6 10 45)) (all-your-base/convert 97 (quote (3 46 60)) 73))))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (3) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "test-empty-list",
+      "status": "error",
+      "test_code": "(testing \"Empty input digits returns empty sequence\" (is (empty? (all-your-base/convert 2 () 10))))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (3) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "test-single-zero",
+      "status": "error",
+      "test_code": "(testing \"0 converts to 0, no matter the base\" (is (= (quote (0)) (all-your-base/convert 10 (quote (0)) 2))))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (3) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "test-multiple-zeroes",
+      "status": "error",
+      "test_code": "(testing \"0 converts to 0, no matter the how many zeroes\" (is (= (quote (0)) (all-your-base/convert 10 (quote (0 0 0)) 2))))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (3) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "test-leading-zeros",
+      "status": "error",
+      "test_code": "(testing \"Leading zeroes don't affect conversion\" (is (= (quote (4 2)) (all-your-base/convert 7 (quote (0 6 0)) 10))))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (3) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "test-negative-digit",
+      "status": "error",
+      "test_code": "(testing \"Negative digits result in nil\" (is (nil? (all-your-base/convert 2 (quote (1 -1 1 0 1 0)) 10))))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (3) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "test-invalid-positive-digit",
+      "status": "error",
+      "test_code": "(testing \"Invalid digits return nil\" (is (nil? (all-your-base/convert 2 (quote (1 2 1 0 1 0)) 10))))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (3) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "test-first-base-is-one",
+      "status": "error",
+      "test_code": "(testing \"Input base of 1 returns nil\" (is (nil? (all-your-base/convert 1 () 10))))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (3) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "test-second-base-is-one",
+      "status": "error",
+      "test_code": "(testing \"Output base of 1 returns nil\" (is (nil? (all-your-base/convert 2 (quote (1 0 1 0 1 0)) 1))))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (3) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "test-first-base-is-zero",
+      "status": "error",
+      "test_code": "(testing \"Input base of 0 returns nil\" (is (nil? (all-your-base/convert 0 () 10))))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (3) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "test-second-base-is-zero",
+      "status": "error",
+      "test_code": "(testing \"Output base of 0 returns nil\" (is (nil? (all-your-base/convert 10 (quote (7)) 0))))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (3) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "test-first-base-is-negative",
+      "status": "error",
+      "test_code": "(testing \"Negative input base returns nil\" (is (nil? (all-your-base/convert -2 (quote (1)) 10))))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (3) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "test-second-base-is-negative",
+      "status": "error",
+      "test_code": "(testing \"Negative output base returns nil\" (is (nil? (all-your-base/convert 2 (quote (1)) -7))))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (3) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "test-both-bases-are-negative",
+      "status": "error",
+      "test_code": "(testing \"When both bases are negative, nil is returned\" (is (nil? (all-your-base/convert -2 (quote (1)) -7))))"
+    }
+  ],
+  "version": 3
+}

@@ -1,0 +1,42 @@
+{
+  "status": "fail",
+  "tests": [
+    {
+      "message": "Expected (= {\"word\" 1} (word-count/word-count \"word\")) but got (not (= {\"word\" 1} nil))",
+      "name": "count-one-word",
+      "status": "fail",
+      "test_code": "(is (= {\"word\" 1} (word-count/word-count \"word\")))"
+    },
+    {
+      "message": "Expected (= {\"one\" 1, \"of\" 1, \"each\" 1} (word-count/word-count \"one of each\")) but got (not (= {\"one\" 1, \"of\" 1, \"each\" 1} nil))",
+      "name": "count-one-of-each",
+      "status": "fail",
+      "test_code": "(is (= {\"of\" 1, \"one\" 1, \"each\" 1} (word-count/word-count \"one of each\")))"
+    },
+    {
+      "message": "Expected (= {\"one\" 1, \"fish\" 4, \"two\" 1, \"red\" 1, \"blue\" 1} (word-count/word-count \"one fish two fish red fish blue fish\")) but got (not (= {\"one\" 1, \"fish\" 4, \"two\" 1, \"red\" 1, \"blue\" 1} nil))",
+      "name": "count-multiple-occurrences",
+      "status": "fail",
+      "test_code": "(is (= {\"blue\" 1, \"two\" 1, \"red\" 1, \"one\" 1, \"fish\" 4} (word-count/word-count \"one fish two fish red fish blue fish\")))"
+    },
+    {
+      "message": "Expected (= {\"car\" 1, \"carpet\" 1, \"as\" 1, \"java\" 1, \"javascript\" 1} (word-count/word-count \"car : carpet as java : javascript!!&@$%^&\")) but got (not (= {\"car\" 1, \"carpet\" 1, \"as\" 1, \"java\" 1, \"javascript\" 1} nil))",
+      "name": "ignore-punctuation",
+      "status": "fail",
+      "test_code": "(is (= {\"java\" 1, \"carpet\" 1, \"car\" 1, \"javascript\" 1, \"as\" 1} (word-count/word-count \"car : carpet as java : javascript!!&@$%^&\")))"
+    },
+    {
+      "message": "Expected (= {\"testing\" 2, \"1\" 1, \"2\" 1} (word-count/word-count \"testing, 1, 2 testing\")) but got (not (= {\"testing\" 2, \"1\" 1, \"2\" 1} nil))",
+      "name": "include-numbers",
+      "status": "fail",
+      "test_code": "(is (= {\"testing\" 2, \"1\" 1, \"2\" 1} (word-count/word-count \"testing, 1, 2 testing\")))"
+    },
+    {
+      "message": "Expected (= {\"go\" 3} (word-count/word-count \"go Go GO\")) but got (not (= {\"go\" 3} nil))",
+      "name": "normalize-case",
+      "status": "fail",
+      "test_code": "(is (= {\"go\" 3} (word-count/word-count \"go Go GO\")))"
+    }
+  ],
+  "version": 3
+}

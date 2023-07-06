@@ -1,0 +1,48 @@
+{
+  "status": "fail",
+  "tests": [
+    {
+      "message": "Expected (= \"\" (acronym/acronym \"\")) but got (not (= \"\" nil))",
+      "name": "test-acronym-empty-string",
+      "status": "fail",
+      "test_code": "(is (= \"\" (acronym/acronym \"\")))"
+    },
+    {
+      "message": "Expected (= \"PNG\" (acronym/acronym \"Portable Network Graphics\")) but got (not (= \"PNG\" nil))",
+      "name": "test-acronym-png",
+      "status": "fail",
+      "test_code": "(is (= \"PNG\" (acronym/acronym \"Portable Network Graphics\")))"
+    },
+    {
+      "message": "Expected (= \"ROR\" (acronym/acronym \"Ruby on Rails\")) but got (not (= \"ROR\" nil))",
+      "name": "test-acronym-ror",
+      "status": "fail",
+      "test_code": "(is (= \"ROR\" (acronym/acronym \"Ruby on Rails\")))"
+    },
+    {
+      "message": "Expected (= \"HTML\" (acronym/acronym \"HyperText Markup Language\")) but got (not (= \"HTML\" nil))",
+      "name": "test-acronym-html",
+      "status": "fail",
+      "test_code": "(is (= \"HTML\" (acronym/acronym \"HyperText Markup Language\")))"
+    },
+    {
+      "message": "Expected (= \"FIFO\" (acronym/acronym \"First In, First Out\")) but got (not (= \"FIFO\" nil))",
+      "name": "test-acronym-fifo",
+      "status": "fail",
+      "test_code": "(is (= \"FIFO\" (acronym/acronym \"First In, First Out\")))"
+    },
+    {
+      "message": "Expected (= \"PHP\" (acronym/acronym \"PHP: Hypertext Preprocessor\")) but got (not (= \"PHP\" nil))",
+      "name": "test-acronym-php",
+      "status": "fail",
+      "test_code": "(is (= \"PHP\" (acronym/acronym \"PHP: Hypertext Preprocessor\")))"
+    },
+    {
+      "message": "Expected (= \"CMOS\" (acronym/acronym \"Complementary metal-oxide semiconductor\")) but got (not (= \"CMOS\" nil))",
+      "name": "test-acronym-cmos",
+      "status": "fail",
+      "test_code": "(is (= \"CMOS\" (acronym/acronym \"Complementary metal-oxide semiconductor\")))"
+    }
+  ],
+  "version": 3
+}

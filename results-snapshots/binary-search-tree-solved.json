@@ -1,0 +1,51 @@
+{
+  "status": "pass",
+  "tests": [
+    {
+      "name": "data-is-retained",
+      "status": "pass",
+      "test_code": "(is (= 4 (bst/value (bst/singleton 4))))"
+    },
+    {
+      "name": "inserting-less",
+      "status": "pass",
+      "test_code": "(let [t (bst/insert 2 (bst/singleton 4))] (is (= 4 (bst/value t))) (is (= 2 (bst/value (bst/left t)))))"
+    },
+    {
+      "name": "inserting-same",
+      "status": "pass",
+      "test_code": "(let [t (bst/insert 4 (bst/singleton 4))] (is (= 4 (bst/value t))) (is (= 4 (bst/value (bst/left t)))))"
+    },
+    {
+      "name": "inserting-right",
+      "status": "pass",
+      "test_code": "(let [t (bst/insert 5 (bst/singleton 4))] (is (= 4 (bst/value t))) (is (= 5 (bst/value (bst/right t)))))"
+    },
+    {
+      "name": "complex-tree",
+      "status": "pass",
+      "test_code": "(let [t (bst/from-list [4 2 6 1 3 7 5])] (is (= 4 (bst/value t))) (is (= 2 (bst/value (bst/left t)))) (is (= 1 (bst/value (bst/left (bst/left t))))) (is (= 3 (bst/value (bst/right (bst/left t))))) (is (= 6 (bst/value (bst/right t)))) (is (= 5 (bst/value (bst/left (bst/right t))))) (is (= 7 (bst/value (bst/right (bst/right t))))))"
+    },
+    {
+      "name": "iterating-one-element",
+      "status": "pass",
+      "test_code": "(is (= [4] (bst/to-list (bst/singleton 4))))"
+    },
+    {
+      "name": "iterating-over-smaller-element",
+      "status": "pass",
+      "test_code": "(is (= [2 4] (bst/to-list (bst/from-list [4 2]))))"
+    },
+    {
+      "name": "iterating-over-larger-element",
+      "status": "pass",
+      "test_code": "(is (= [4 5] (bst/to-list (bst/from-list [4 5]))))"
+    },
+    {
+      "name": "iterating-over-complex-tree",
+      "status": "pass",
+      "test_code": "(is (= (range 1 8) (bst/to-list (bst/from-list [4 2 1 3 6 7 5]))))"
+    }
+  ],
+  "version": 3
+}

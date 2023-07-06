@@ -1,0 +1,76 @@
+{
+  "status": "pass",
+  "tests": [
+    {
+      "name": "no-allergies-at-all",
+      "status": "pass",
+      "test_code": "(is (= [] (allergies/allergies 0)))"
+    },
+    {
+      "name": "allergic-to-just-eggs",
+      "status": "pass",
+      "test_code": "(is (= [:eggs] (allergies/allergies 1)))"
+    },
+    {
+      "name": "allergic-to-just-peanuts",
+      "status": "pass",
+      "test_code": "(is (= [:peanuts] (allergies/allergies 2)))"
+    },
+    {
+      "name": "allergic-to-just-strawberries",
+      "status": "pass",
+      "test_code": "(is (= [:strawberries] (allergies/allergies 8)))"
+    },
+    {
+      "name": "allergic-to-eggs-and-peanuts",
+      "status": "pass",
+      "test_code": "(is (= [:eggs :peanuts] (allergies/allergies 3)))"
+    },
+    {
+      "name": "allergic-to-more-than-eggs-but-not-peanuts",
+      "status": "pass",
+      "test_code": "(is (= [:eggs :shellfish] (allergies/allergies 5)))"
+    },
+    {
+      "name": "allergic-to-lots-of-stuff",
+      "status": "pass",
+      "test_code": "(is (= [:strawberries :tomatoes :chocolate :pollen :cats] (allergies/allergies 248)))"
+    },
+    {
+      "name": "allergic-to-everything",
+      "status": "pass",
+      "test_code": "(is (= [:eggs :peanuts :shellfish :strawberries :tomatoes :chocolate :pollen :cats] (allergies/allergies 255)))"
+    },
+    {
+      "name": "no-allergies-means-not-allergic-peanuts",
+      "status": "pass",
+      "test_code": "(is (not (allergies/allergic-to? 0 :peanuts)))"
+    },
+    {
+      "name": "no-allergies-means-not-allergic-cats",
+      "status": "pass",
+      "test_code": "(is (not (allergies/allergic-to? 0 :cats)))"
+    },
+    {
+      "name": "no-allergies-means-not-allergic-strawberries",
+      "status": "pass",
+      "test_code": "(is (not (allergies/allergic-to? 0 :strawberries)))"
+    },
+    {
+      "name": "is-allergic-to-eggs",
+      "status": "pass",
+      "test_code": "(is (allergies/allergic-to? 1 :eggs))"
+    },
+    {
+      "name": "allergic-to-eggs-in-addition-to-other-stuff",
+      "status": "pass",
+      "test_code": "(is (allergies/allergic-to? 5 :eggs))"
+    },
+    {
+      "name": "ignore-non-allergen-score-parts",
+      "status": "pass",
+      "test_code": "(is (= [:eggs :shellfish :strawberries :tomatoes :chocolate :pollen :cats] (allergies/allergies 509)))"
+    }
+  ],
+  "version": 3
+}

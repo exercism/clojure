@@ -1,0 +1,552 @@
+{
+  "status": "fail",
+  "tests": [
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (4) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "monteenth-of-may-2013",
+      "status": "error",
+      "test_code": "(is (= [2013 5 13] (meetup/meetup 5 2013 :monday :teenth)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (4) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "monteenth-of-august-2013",
+      "status": "error",
+      "test_code": "(is (= [2013 8 19] (meetup/meetup 8 2013 :monday :teenth)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (4) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "monteenth-of-september-2013",
+      "status": "error",
+      "test_code": "(is (= [2013 9 16] (meetup/meetup 9 2013 :monday :teenth)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (4) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "tuesteenth-of-march-2013",
+      "status": "error",
+      "test_code": "(is (= [2013 3 19] (meetup/meetup 3 2013 :tuesday :teenth)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (4) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "tuesteenth-of-april-2013",
+      "status": "error",
+      "test_code": "(is (= [2013 4 16] (meetup/meetup 4 2013 :tuesday :teenth)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (4) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "tuesteenth-of-august-2013",
+      "status": "error",
+      "test_code": "(is (= [2013 8 13] (meetup/meetup 8 2013 :tuesday :teenth)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (4) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "wednesteenth-of-january-2013",
+      "status": "error",
+      "test_code": "(is (= [2013 1 16] (meetup/meetup 1 2013 :wednesday :teenth)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (4) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "wednesteenth-of-february-2013",
+      "status": "error",
+      "test_code": "(is (= [2013 2 13] (meetup/meetup 2 2013 :wednesday :teenth)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (4) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "wednesteenth-of-june-2013",
+      "status": "error",
+      "test_code": "(is (= [2013 6 19] (meetup/meetup 6 2013 :wednesday :teenth)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (4) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "thursteenth-of-may-2013",
+      "status": "error",
+      "test_code": "(is (= [2013 5 16] (meetup/meetup 5 2013 :thursday :teenth)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (4) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "thursteenth-of-june-2013",
+      "status": "error",
+      "test_code": "(is (= [2013 6 13] (meetup/meetup 6 2013 :thursday :teenth)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (4) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "thursteenth-of-september-2013",
+      "status": "error",
+      "test_code": "(is (= [2013 9 19] (meetup/meetup 9 2013 :thursday :teenth)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (4) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "friteenth-of-april-2013",
+      "status": "error",
+      "test_code": "(is (= [2013 4 19] (meetup/meetup 4 2013 :friday :teenth)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (4) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "friteenth-of-august-2013",
+      "status": "error",
+      "test_code": "(is (= [2013 8 16] (meetup/meetup 8 2013 :friday :teenth)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (4) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "friteenth-of-september-2013",
+      "status": "error",
+      "test_code": "(is (= [2013 9 13] (meetup/meetup 9 2013 :friday :teenth)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (4) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "saturteenth-of-february-2013",
+      "status": "error",
+      "test_code": "(is (= [2013 2 16] (meetup/meetup 2 2013 :saturday :teenth)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (4) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "saturteenth-of-april-2013",
+      "status": "error",
+      "test_code": "(is (= [2013 4 13] (meetup/meetup 4 2013 :saturday :teenth)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (4) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "saturteenth-of-october-2013",
+      "status": "error",
+      "test_code": "(is (= [2013 10 19] (meetup/meetup 10 2013 :saturday :teenth)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (4) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "sunteenth-of-may-2013",
+      "status": "error",
+      "test_code": "(is (= [2013 5 19] (meetup/meetup 5 2013 :sunday :teenth)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (4) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "sunteenth-of-june-2013",
+      "status": "error",
+      "test_code": "(is (= [2013 6 16] (meetup/meetup 6 2013 :sunday :teenth)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (4) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "sunteenth-of-october-2013",
+      "status": "error",
+      "test_code": "(is (= [2013 10 13] (meetup/meetup 10 2013 :sunday :teenth)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (4) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "first-monday-of-march-2013",
+      "status": "error",
+      "test_code": "(is (= [2013 3 4] (meetup/meetup 3 2013 :monday :first)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (4) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "first-monday-of-april-2013",
+      "status": "error",
+      "test_code": "(is (= [2013 4 1] (meetup/meetup 4 2013 :monday :first)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (4) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "first-tuesday-of-may-2013",
+      "status": "error",
+      "test_code": "(is (= [2013 5 7] (meetup/meetup 5 2013 :tuesday :first)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (4) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "first-tuesday-of-june-2013",
+      "status": "error",
+      "test_code": "(is (= [2013 6 4] (meetup/meetup 6 2013 :tuesday :first)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (4) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "first-wednesday-of-july-2013",
+      "status": "error",
+      "test_code": "(is (= [2013 7 3] (meetup/meetup 7 2013 :wednesday :first)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (4) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "first-wednesday-of-august-2013",
+      "status": "error",
+      "test_code": "(is (= [2013 8 7] (meetup/meetup 8 2013 :wednesday :first)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (4) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "first-thursday-of-september-2013",
+      "status": "error",
+      "test_code": "(is (= [2013 9 5] (meetup/meetup 9 2013 :thursday :first)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (4) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "first-thursday-of-october-2013",
+      "status": "error",
+      "test_code": "(is (= [2013 10 3] (meetup/meetup 10 2013 :thursday :first)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (4) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "first-friday-of-november-2013",
+      "status": "error",
+      "test_code": "(is (= [2013 11 1] (meetup/meetup 11 2013 :friday :first)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (4) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "first-friday-of-december-2013",
+      "status": "error",
+      "test_code": "(is (= [2013 12 6] (meetup/meetup 12 2013 :friday :first)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (4) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "first-saturday-of-january-2013",
+      "status": "error",
+      "test_code": "(is (= [2013 1 5] (meetup/meetup 1 2013 :saturday :first)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (4) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "first-saturday-of-february-2013",
+      "status": "error",
+      "test_code": "(is (= [2013 2 2] (meetup/meetup 2 2013 :saturday :first)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (4) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "first-sunday-of-march-2013",
+      "status": "error",
+      "test_code": "(is (= [2013 3 3] (meetup/meetup 3 2013 :sunday :first)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (4) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "first-sunday-of-april-2013",
+      "status": "error",
+      "test_code": "(is (= [2013 4 7] (meetup/meetup 4 2013 :sunday :first)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (4) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "second-monday-of-march-2013",
+      "status": "error",
+      "test_code": "(is (= [2013 3 11] (meetup/meetup 3 2013 :monday :second)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (4) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "second-monday-of-april-2013",
+      "status": "error",
+      "test_code": "(is (= [2013 4 8] (meetup/meetup 4 2013 :monday :second)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (4) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "second-tuesday-of-may-2013",
+      "status": "error",
+      "test_code": "(is (= [2013 5 14] (meetup/meetup 5 2013 :tuesday :second)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (4) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "second-tuesday-of-june-2013",
+      "status": "error",
+      "test_code": "(is (= [2013 6 11] (meetup/meetup 6 2013 :tuesday :second)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (4) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "second-wednesday-of-july-2013",
+      "status": "error",
+      "test_code": "(is (= [2013 7 10] (meetup/meetup 7 2013 :wednesday :second)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (4) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "second-wednesday-of-august-2013",
+      "status": "error",
+      "test_code": "(is (= [2013 8 14] (meetup/meetup 8 2013 :wednesday :second)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (4) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "second-thursday-of-september-2013",
+      "status": "error",
+      "test_code": "(is (= [2013 9 12] (meetup/meetup 9 2013 :thursday :second)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (4) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "second-thursday-of-october-2013",
+      "status": "error",
+      "test_code": "(is (= [2013 10 10] (meetup/meetup 10 2013 :thursday :second)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (4) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "second-friday-of-november-2013",
+      "status": "error",
+      "test_code": "(is (= [2013 11 8] (meetup/meetup 11 2013 :friday :second)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (4) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "second-friday-of-december-2013",
+      "status": "error",
+      "test_code": "(is (= [2013 12 13] (meetup/meetup 12 2013 :friday :second)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (4) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "second-saturday-of-january-2013",
+      "status": "error",
+      "test_code": "(is (= [2013 1 12] (meetup/meetup 1 2013 :saturday :second)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (4) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "second-saturday-of-february-2013",
+      "status": "error",
+      "test_code": "(is (= [2013 2 9] (meetup/meetup 2 2013 :saturday :second)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (4) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "second-sunday-of-march-2013",
+      "status": "error",
+      "test_code": "(is (= [2013 3 10] (meetup/meetup 3 2013 :sunday :second)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (4) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "second-sunday-of-april-2013",
+      "status": "error",
+      "test_code": "(is (= [2013 4 14] (meetup/meetup 4 2013 :sunday :second)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (4) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "third-monday-of-march-2013",
+      "status": "error",
+      "test_code": "(is (= [2013 3 18] (meetup/meetup 3 2013 :monday :third)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (4) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "third-monday-of-april-2013",
+      "status": "error",
+      "test_code": "(is (= [2013 4 15] (meetup/meetup 4 2013 :monday :third)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (4) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "third-tuesday-of-may-2013",
+      "status": "error",
+      "test_code": "(is (= [2013 5 21] (meetup/meetup 5 2013 :tuesday :third)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (4) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "third-tuesday-of-june-2013",
+      "status": "error",
+      "test_code": "(is (= [2013 6 18] (meetup/meetup 6 2013 :tuesday :third)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (4) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "third-wednesday-of-july-2013",
+      "status": "error",
+      "test_code": "(is (= [2013 7 17] (meetup/meetup 7 2013 :wednesday :third)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (4) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "third-wednesday-of-august-2013",
+      "status": "error",
+      "test_code": "(is (= [2013 8 21] (meetup/meetup 8 2013 :wednesday :third)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (4) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "third-thursday-of-september-2013",
+      "status": "error",
+      "test_code": "(is (= [2013 9 19] (meetup/meetup 9 2013 :thursday :third)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (4) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "third-thursday-of-october-2013",
+      "status": "error",
+      "test_code": "(is (= [2013 10 17] (meetup/meetup 10 2013 :thursday :third)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (4) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "third-friday-of-november-2013",
+      "status": "error",
+      "test_code": "(is (= [2013 11 15] (meetup/meetup 11 2013 :friday :third)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (4) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "third-friday-of-december-2013",
+      "status": "error",
+      "test_code": "(is (= [2013 12 20] (meetup/meetup 12 2013 :friday :third)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (4) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "third-saturday-of-january-2013",
+      "status": "error",
+      "test_code": "(is (= [2013 1 19] (meetup/meetup 1 2013 :saturday :third)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (4) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "third-saturday-of-february-2013",
+      "status": "error",
+      "test_code": "(is (= [2013 2 16] (meetup/meetup 2 2013 :saturday :third)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (4) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "third-sunday-of-march-2013",
+      "status": "error",
+      "test_code": "(is (= [2013 3 17] (meetup/meetup 3 2013 :sunday :third)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (4) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "third-sunday-of-april-2013",
+      "status": "error",
+      "test_code": "(is (= [2013 4 21] (meetup/meetup 4 2013 :sunday :third)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (4) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "fourth-monday-of-march-2013",
+      "status": "error",
+      "test_code": "(is (= [2013 3 25] (meetup/meetup 3 2013 :monday :fourth)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (4) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "fourth-monday-of-april-2013",
+      "status": "error",
+      "test_code": "(is (= [2013 4 22] (meetup/meetup 4 2013 :monday :fourth)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (4) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "fourth-tuesday-of-may-2013",
+      "status": "error",
+      "test_code": "(is (= [2013 5 28] (meetup/meetup 5 2013 :tuesday :fourth)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (4) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "fourth-tuesday-of-june-2013",
+      "status": "error",
+      "test_code": "(is (= [2013 6 25] (meetup/meetup 6 2013 :tuesday :fourth)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (4) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "fourth-wednesday-of-july-2013",
+      "status": "error",
+      "test_code": "(is (= [2013 7 24] (meetup/meetup 7 2013 :wednesday :fourth)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (4) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "fourth-wednesday-of-august-2013",
+      "status": "error",
+      "test_code": "(is (= [2013 8 28] (meetup/meetup 8 2013 :wednesday :fourth)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (4) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "fourth-thursday-of-september-2013",
+      "status": "error",
+      "test_code": "(is (= [2013 9 26] (meetup/meetup 9 2013 :thursday :fourth)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (4) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "fourth-thursday-of-october-2013",
+      "status": "error",
+      "test_code": "(is (= [2013 10 24] (meetup/meetup 10 2013 :thursday :fourth)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (4) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "fourth-friday-of-november-2013",
+      "status": "error",
+      "test_code": "(is (= [2013 11 22] (meetup/meetup 11 2013 :friday :fourth)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (4) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "fourth-friday-of-december-2013",
+      "status": "error",
+      "test_code": "(is (= [2013 12 27] (meetup/meetup 12 2013 :friday :fourth)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (4) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "fourth-saturday-of-january-2013",
+      "status": "error",
+      "test_code": "(is (= [2013 1 26] (meetup/meetup 1 2013 :saturday :fourth)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (4) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "fourth-saturday-of-february-2013",
+      "status": "error",
+      "test_code": "(is (= [2013 2 23] (meetup/meetup 2 2013 :saturday :fourth)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (4) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "fourth-sunday-of-march-2013",
+      "status": "error",
+      "test_code": "(is (= [2013 3 24] (meetup/meetup 3 2013 :sunday :fourth)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (4) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "fourth-sunday-of-april-2013",
+      "status": "error",
+      "test_code": "(is (= [2013 4 28] (meetup/meetup 4 2013 :sunday :fourth)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (4) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "last-monday-of-march-2013",
+      "status": "error",
+      "test_code": "(is (= [2013 3 25] (meetup/meetup 3 2013 :monday :last)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (4) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "last-monday-of-april-2013",
+      "status": "error",
+      "test_code": "(is (= [2013 4 29] (meetup/meetup 4 2013 :monday :last)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (4) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "last-tuesday-of-may-2013",
+      "status": "error",
+      "test_code": "(is (= [2013 5 28] (meetup/meetup 5 2013 :tuesday :last)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (4) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "last-tuesday-of-june-2013",
+      "status": "error",
+      "test_code": "(is (= [2013 6 25] (meetup/meetup 6 2013 :tuesday :last)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (4) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "last-wednesday-of-july-2013",
+      "status": "error",
+      "test_code": "(is (= [2013 7 31] (meetup/meetup 7 2013 :wednesday :last)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (4) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "last-wednesday-of-august-2013",
+      "status": "error",
+      "test_code": "(is (= [2013 8 28] (meetup/meetup 8 2013 :wednesday :last)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (4) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "last-thursday-of-september-2013",
+      "status": "error",
+      "test_code": "(is (= [2013 9 26] (meetup/meetup 9 2013 :thursday :last)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (4) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "last-thursday-of-october-2013",
+      "status": "error",
+      "test_code": "(is (= [2013 10 31] (meetup/meetup 10 2013 :thursday :last)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (4) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "last-friday-of-november-2013",
+      "status": "error",
+      "test_code": "(is (= [2013 11 29] (meetup/meetup 11 2013 :friday :last)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (4) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "last-friday-of-december-2013",
+      "status": "error",
+      "test_code": "(is (= [2013 12 27] (meetup/meetup 12 2013 :friday :last)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (4) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "last-saturday-of-january-2013",
+      "status": "error",
+      "test_code": "(is (= [2013 1 26] (meetup/meetup 1 2013 :saturday :last)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (4) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "last-saturday-of-february-2013",
+      "status": "error",
+      "test_code": "(is (= [2013 2 23] (meetup/meetup 2 2013 :saturday :last)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (4) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "last-sunday-of-march-2013",
+      "status": "error",
+      "test_code": "(is (= [2013 3 31] (meetup/meetup 3 2013 :sunday :last)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (4) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "last-sunday-of-april-2013",
+      "status": "error",
+      "test_code": "(is (= [2013 4 28] (meetup/meetup 4 2013 :sunday :last)))"
+    }
+  ],
+  "version": 3
+}

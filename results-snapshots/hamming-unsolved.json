@@ -1,0 +1,41 @@
+{
+  "status": "fail",
+  "tests": [
+    {
+      "message": "Expected (= 0 (hamming/distance \"\" \"\")) but got (not (= 0 nil))",
+      "name": "no-difference-between-empty-strands",
+      "status": "fail",
+      "test_code": "(is (= 0 (hamming/distance \"\" \"\")))"
+    },
+    {
+      "message": "Expected (= 0 (hamming/distance \"GGACTGA\" \"GGACTGA\")) but got (not (= 0 nil))",
+      "name": "no-difference-between-identical-strands",
+      "status": "fail",
+      "test_code": "(is (= 0 (hamming/distance \"GGACTGA\" \"GGACTGA\")))"
+    },
+    {
+      "message": "Expected (= 3 (hamming/distance \"ACT\" \"GGA\")) but got (not (= 3 nil))",
+      "name": "complete-distance-in-small-strand",
+      "status": "fail",
+      "test_code": "(is (= 3 (hamming/distance \"ACT\" \"GGA\")))"
+    },
+    {
+      "message": "Expected (= 1 (hamming/distance \"GGACG\" \"GGTCG\")) but got (not (= 1 nil))",
+      "name": "small-distance-in-middle-somewhere",
+      "status": "fail",
+      "test_code": "(is (= 1 (hamming/distance \"GGACG\" \"GGTCG\")))"
+    },
+    {
+      "message": "Expected (= 2 (hamming/distance \"ACCAGGG\" \"ACTATGG\")) but got (not (= 2 nil))",
+      "name": "larger-distance",
+      "status": "fail",
+      "test_code": "(is (= 2 (hamming/distance \"ACCAGGG\" \"ACTATGG\")))"
+    },
+    {
+      "name": "undefined-when-lengths-are-different",
+      "status": "pass",
+      "test_code": "(is (= nil (hamming/distance \"AAAC\" \"TAGGGGAGGCTAGCGGTAGGAC\")))\n(is (= nil (hamming/distance \"GACTACGGACAGGGTAACATAG\" \"GACA\")))"
+    }
+  ],
+  "version": 3
+}

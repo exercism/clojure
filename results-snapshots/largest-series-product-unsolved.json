@@ -1,0 +1,12 @@
+{
+  "status": "fail",
+  "tests": [
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (2) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "largest-series-tests",
+      "status": "error",
+      "test_code": "(testing \"can find the largest product of 2 with numbers in order\" (is (= 72 (lsp/largest-product 2 \"0123456789\"))))"
+    }
+  ],
+  "version": 3
+}

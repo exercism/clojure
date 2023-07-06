@@ -1,0 +1,61 @@
+{
+  "status": "pass",
+  "tests": [
+    {
+      "name": "message-error-test",
+      "status": "pass",
+      "test_code": "(is (= \"Stack overflow\" (log-levels/message \"[ERROR]: Stack overflow\")))"
+    },
+    {
+      "name": "message-warning-test",
+      "status": "pass",
+      "test_code": "(is (= (log-levels/message \"[WARNING]: Disk almost full\") \"Disk almost full\"))"
+    },
+    {
+      "name": "message-info-test",
+      "status": "pass",
+      "test_code": "(is (= (log-levels/message \"[INFO]: File moved\") \"File moved\"))"
+    },
+    {
+      "name": "message-trim-whitespace-test",
+      "status": "pass",
+      "test_code": "(is (= \"Timezone not set\" (log-levels/message \"[WARNING]:   \\tTimezone not set  \\r\\n\")))"
+    },
+    {
+      "name": "log-level-error-test",
+      "status": "pass",
+      "test_code": "(is (= \"error\" (log-levels/log-level \"[ERROR]: Disk full\")))"
+    },
+    {
+      "name": "log-level-warning-test",
+      "status": "pass",
+      "test_code": "(is (= \"warning\" (log-levels/log-level \"[WARNING]: Unsafe password\")))"
+    },
+    {
+      "name": "log-level-info-test",
+      "status": "pass",
+      "test_code": "(is (= \"info\" (log-levels/log-level \"[INFO]: Timezone changed\")))"
+    },
+    {
+      "name": "reformat-error-test",
+      "status": "pass",
+      "test_code": "(is (= \"Segmentation fault (error)\" (log-levels/reformat \"[ERROR]: Segmentation fault\")))"
+    },
+    {
+      "name": "reformat-warning-test",
+      "status": "pass",
+      "test_code": "(is (= \"Decreased performance (warning)\" (log-levels/reformat \"[WARNING]: Decreased performance\")))"
+    },
+    {
+      "name": "reformat-info-test",
+      "status": "pass",
+      "test_code": "(is (= \"Disk defragmented (info)\" (log-levels/reformat \"[INFO]: Disk defragmented\")))"
+    },
+    {
+      "name": "reformat-trim-whitespace-test",
+      "status": "pass",
+      "test_code": "(is (= \"Corrupt disk (error)\" (log-levels/reformat \"[ERROR]: \\t Corrupt disk\\t \\t \\r\\n\")))"
+    }
+  ],
+  "version": 3
+}

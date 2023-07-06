@@ -1,0 +1,36 @@
+{
+  "status": "fail",
+  "tests": [
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (2) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "empty-accumulation",
+      "status": "error",
+      "test_code": "(is (= [] (accumulate/accumulate square [])))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (2) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "accumulate-squares",
+      "status": "error",
+      "test_code": "(is (= [1 4 9] (accumulate/accumulate square [1 2 3])))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (2) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "accumulate-upcases",
+      "status": "error",
+      "test_code": "(is (= [\"HELLO\" \"WORLD\"] (->> [\"hello\" \"world\"] (accumulate/accumulate clojure.string/upper-case) (map to-s))))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (2) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "accumulate-reversed-strings",
+      "status": "error",
+      "test_code": "(is (= [\"eht\" \"kciuq\" \"nworb\" \"xof\" \"cte\"] (->> [\"the\" \"quick\" \"brown\" \"fox\" \"etc\"] (accumulate/accumulate reverse) (map to-s))))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (2) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "accumulate-recursively",
+      "status": "error",
+      "test_code": "(is (= [[\"a1\" \"a2\" \"a3\"] [\"b1\" \"b2\" \"b3\"] [\"c1\" \"c2\" \"c3\"]] (-> (fn* [p1__3075#] (accumulate/accumulate (fn [n] (str p1__3075# n)) [1 2 3])) (accumulate/accumulate \"abc\"))))"
+    }
+  ],
+  "version": 3
+}

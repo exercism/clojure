@@ -1,0 +1,90 @@
+{
+  "status": "fail",
+  "tests": [
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (2) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "rotate-a-by-1",
+      "status": "error",
+      "test_code": "(is (= (rotational-cipher/rotate \"a\" 1) \"b\"))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (2) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "rotate-a-by-26-same-output",
+      "status": "error",
+      "test_code": "(is (= (rotational-cipher/rotate \"a\" 26) \"a\"))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (2) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "rotate-a-by-0-same-output",
+      "status": "error",
+      "test_code": "(is (= (rotational-cipher/rotate \"a\" 0) \"a\"))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (2) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "rotate-m-by-13",
+      "status": "error",
+      "test_code": "(is (= (rotational-cipher/rotate \"m\" 13) \"z\"))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (2) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "rotate-n-by-13-with-wrap",
+      "status": "error",
+      "test_code": "(is (= (rotational-cipher/rotate \"n\" 13) \"a\"))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (2) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "rotate-capital-letters",
+      "status": "error",
+      "test_code": "(is (= (rotational-cipher/rotate \"OMG\" 5) \"TRL\"))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (2) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "rotate-spaces",
+      "status": "error",
+      "test_code": "(is (= (rotational-cipher/rotate \"O M G\" 5) \"T R L\"))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (2) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "rotate-numbers",
+      "status": "error",
+      "test_code": "(is (= (rotational-cipher/rotate \"Testing 1 2 3 testing\" 4) \"Xiwxmrk 1 2 3 xiwxmrk\"))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (2) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "rotate-punctuation",
+      "status": "error",
+      "test_code": "(is (= (rotational-cipher/rotate \"Let's eat, Grandma!\" 21) \"Gzo'n zvo, Bmviyhv!\"))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (2) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "rotate-opposite-direction",
+      "status": "error",
+      "test_code": "(is (= (rotational-cipher/rotate \"b\" -1) \"a\"))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (2) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "rotate-opposite-past-first-letter",
+      "status": "error",
+      "test_code": "(is (= (rotational-cipher/rotate \"B\" -2) \"Z\"))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (2) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "rotate-opposite-past-letter-count",
+      "status": "error",
+      "test_code": "(is (= (rotational-cipher/rotate \"B\" -28) \"Z\"))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (2) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "rotate-forward-then-backwards-same-number-of-steps",
+      "status": "error",
+      "test_code": "(is (= (rotational-cipher/rotate (rotational-cipher/rotate \"B\" 28) -28) \"B\"))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (2) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "rotate-all-letters",
+      "status": "error",
+      "test_code": "(is (= (rotational-cipher/rotate \"The quick brown fox jumps over the lazy dog.\" 13) \"Gur dhvpx oebja sbk whzcf bire gur ynml qbt.\"))"
+    }
+  ],
+  "version": 3
+}

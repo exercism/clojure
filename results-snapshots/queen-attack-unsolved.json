@@ -1,0 +1,24 @@
+{
+  "status": "fail",
+  "tests": [
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "handles-empty-board",
+      "status": "error",
+      "test_code": "(is (= empty-board (queen-attack/board-string {})))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "build-board",
+      "status": "error",
+      "test_code": "(is (= board (queen-attack/board-string {:w [2 4], :b [6 6]})))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "finds-attack-positions",
+      "status": "error",
+      "test_code": "(is (= false (queen-attack/can-attack {:w [2 3], :b [4 7]})))"
+    }
+  ],
+  "version": 3
+}

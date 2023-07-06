@@ -1,0 +1,96 @@
+{
+  "status": "fail",
+  "tests": [
+    {
+      "message": "Expected (= \"zero\" (say/number 0)) but got (not (= \"zero\" nil))",
+      "name": "zero-test",
+      "status": "fail",
+      "test_code": "(is (= \"zero\" (say/number 0)))"
+    },
+    {
+      "message": "Expected (= \"one\" (say/number 1)) but got (not (= \"one\" nil))",
+      "name": "one-test",
+      "status": "fail",
+      "test_code": "(is (= \"one\" (say/number 1)))"
+    },
+    {
+      "message": "Expected (= \"fourteen\" (say/number 14)) but got (not (= \"fourteen\" nil))",
+      "name": "fourteen-test",
+      "status": "fail",
+      "test_code": "(is (= \"fourteen\" (say/number 14)))"
+    },
+    {
+      "message": "Expected (= \"twenty\" (say/number 20)) but got (not (= \"twenty\" nil))",
+      "name": "twenty-test",
+      "status": "fail",
+      "test_code": "(is (= \"twenty\" (say/number 20)))"
+    },
+    {
+      "message": "Expected (= \"twenty-two\" (say/number 22)) but got (not (= \"twenty-two\" nil))",
+      "name": "twenty-two-test",
+      "status": "fail",
+      "test_code": "(is (= \"twenty-two\" (say/number 22)))"
+    },
+    {
+      "message": "Expected (= \"one hundred\" (say/number 100)) but got (not (= \"one hundred\" nil))",
+      "name": "one-hundred-test",
+      "status": "fail",
+      "test_code": "(is (= \"one hundred\" (say/number 100)))"
+    },
+    {
+      "message": "Expected (= \"one hundred twenty-three\" (say/number 123)) but got (not (= \"one hundred twenty-three\" nil))",
+      "name": "one-hundred-twenty-three-test",
+      "status": "fail",
+      "test_code": "(is (= \"one hundred twenty-three\" (say/number 123)))"
+    },
+    {
+      "message": "Expected (= \"one thousand\" (say/number 1000)) but got (not (= \"one thousand\" nil))",
+      "name": "one-thousand-test",
+      "status": "fail",
+      "test_code": "(is (= \"one thousand\" (say/number 1000)))"
+    },
+    {
+      "message": "Expected (= \"one thousand two hundred thirty-four\" (say/number 1234)) but got (not (= \"one thousand two hundred thirty-four\" nil))",
+      "name": "one-thousand-two-hundred-thirty-four-test",
+      "status": "fail",
+      "test_code": "(is (= \"one thousand two hundred thirty-four\" (say/number 1234)))"
+    },
+    {
+      "message": "Expected (= \"one million\" (say/number 1000000)) but got (not (= \"one million\" nil))",
+      "name": "one-million-test",
+      "status": "fail",
+      "test_code": "(is (= \"one million\" (say/number 1000000)))"
+    },
+    {
+      "message": "Expected (= \"one million two thousand three hundred forty-five\" (say/number 1002345)) but got (not (= \"one million two thousand three hundred forty-five\" nil))",
+      "name": "one-million-two-thousand-three-hundred-forty-five-test",
+      "status": "fail",
+      "test_code": "(is (= \"one million two thousand three hundred forty-five\" (say/number 1002345)))"
+    },
+    {
+      "message": "Expected (= \"one billion\" (say/number 1000000000)) but got (not (= \"one billion\" nil))",
+      "name": "one-billion-test",
+      "status": "fail",
+      "test_code": "(is (= \"one billion\" (say/number 1000000000)))"
+    },
+    {
+      "message": "Expected (= \"nine hundred eighty-seven billion six hundred fifty-four million three hundred twenty-one thousand one hundred twenty-three\" (say/number 987654321123)) but got (not (= \"nine hundred eighty-seven billion six hundred fifty-four million three hundred twenty-one thousand one hundred twenty-three\" nil))",
+      "name": "a-big-number-test",
+      "status": "fail",
+      "test_code": "(is (= \"nine hundred eighty-seven billion six hundred fifty-four million three hundred twenty-one thousand one hundred twenty-three\" (say/number 987654321123)))"
+    },
+    {
+      "message": "Expected (thrown? IllegalArgumentException (say/number -1)) but got ",
+      "name": "below-zero-is-out-of-range-test",
+      "status": "fail",
+      "test_code": "(is (thrown? IllegalArgumentException (say/number -1)))"
+    },
+    {
+      "message": "Expected (thrown? IllegalArgumentException (say/number 1000000000000)) but got ",
+      "name": "numbers-above-999999999999-out-of-range-test",
+      "status": "fail",
+      "test_code": "(is (thrown? IllegalArgumentException (say/number 1000000000000)))"
+    }
+  ],
+  "version": 3
+}

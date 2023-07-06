@@ -1,0 +1,71 @@
+{
+  "status": "pass",
+  "tests": [
+    {
+      "name": "first-card-single-test",
+      "status": "pass",
+      "test_code": "(is (= (first-card [3]) 3))"
+    },
+    {
+      "name": "first-card-multiple-test",
+      "status": "pass",
+      "test_code": "(is (= (first-card [8 3 9 5]) 8))"
+    },
+    {
+      "name": "second-card-2-test",
+      "status": "pass",
+      "test_code": "(is (= (second-card [10 4]) 4))"
+    },
+    {
+      "name": "second-card-4-test",
+      "status": "pass",
+      "test_code": "(is (= (second-card [2 5 1 6]) 5))"
+    },
+    {
+      "name": "second-card-empty-test",
+      "status": "pass",
+      "test_code": "(is (nil? (second-card [])))"
+    },
+    {
+      "name": "second-card-single-test",
+      "status": "pass",
+      "test_code": "(is (nil? (second-card [8])))"
+    },
+    {
+      "name": "swap-top-two-cards-2-test",
+      "status": "pass",
+      "test_code": "(is (= (swap-top-two-cards [3 6]) [6 3]))"
+    },
+    {
+      "name": "swap-top-two-cards-5-test",
+      "status": "pass",
+      "test_code": "(is (= (swap-top-two-cards [10 4 3 7 8]) [4 10 3 7 8]))"
+    },
+    {
+      "name": "discard-top-card-single-test",
+      "status": "pass",
+      "test_code": "(is (= (discard-top-card [7]) [7 nil]))"
+    },
+    {
+      "name": "discard-top-card-4-test",
+      "status": "pass",
+      "test_code": "(is (= (discard-top-card [9 2 10 4]) [9 [2 10 4]]))"
+    },
+    {
+      "name": "insert-face-cards-3-test",
+      "status": "pass",
+      "test_code": "(is (= (insert-face-cards [3 10 7]) [3 \"jack\" \"queen\" \"king\" 10 7]))"
+    },
+    {
+      "name": "insert-face-cards-1-test",
+      "status": "pass",
+      "test_code": "(is (= (insert-face-cards [9]) [9 \"jack\" \"queen\" \"king\"]))"
+    },
+    {
+      "name": "insert-face-cards-empty-test",
+      "status": "pass",
+      "test_code": "(is (= (insert-face-cards []) [\"jack\" \"queen\" \"king\"]))"
+    }
+  ],
+  "version": 3
+}

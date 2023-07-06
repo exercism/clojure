@@ -1,0 +1,84 @@
+{
+  "status": "fail",
+  "tests": [
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "normalize-splunk",
+      "status": "error",
+      "test_code": "(is (= \"splunk\" (crypto-square/normalize-plaintext \"s#!@$%plunk\")))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "normalize-with-punctuation",
+      "status": "error",
+      "test_code": "(is (= \"123go\" (crypto-square/normalize-plaintext \"1, 2, 3 GO!\")))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "square-2",
+      "status": "error",
+      "test_code": "(is (= 2 (crypto-square/square-size \"1234\")))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "square-3",
+      "status": "error",
+      "test_code": "(is (= 3 (crypto-square/square-size \"123456789\")))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "square-4",
+      "status": "error",
+      "test_code": "(is (= 4 (crypto-square/square-size \"123456789abc\")))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "segments",
+      "status": "error",
+      "test_code": "(is (= [\"neverv\" \"exthin\" \"eheart\" \"withid\" \"lewoes\"] (crypto-square/plaintext-segments \"Never vex thine heart with idle woes.\")))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "segments-2",
+      "status": "error",
+      "test_code": "(is (= [\"zomg\" \"zomb\" \"ies\"] (crypto-square/plaintext-segments \"ZOMG! ZOMBIES!!!\")))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "cipher-1",
+      "status": "error",
+      "test_code": "(is (= \"tasneyinicdsmiohooelntuillibsuuml\" (crypto-square/ciphertext \"Time is an illusion. Lunchtime doubly so.\")))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "cipher-2",
+      "status": "error",
+      "test_code": "(is (= \"wneiaweoreneawssciliprerlneoidktcms\" (crypto-square/ciphertext \"We all know interspecies romance is weird.\")))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "cipher-3",
+      "status": "error",
+      "test_code": "(is (= \"vrel aepe mset paoo irpo\" (crypto-square/normalize-ciphertext \"Vampires are people too!\")))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "cipher-4",
+      "status": "error",
+      "test_code": "(is (= \"msemo aanin dnin  ndla  etlt  shui \" (crypto-square/normalize-ciphertext \"Madness, and then illumination.\")))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "cipher-5",
+      "status": "error",
+      "test_code": "(is (= (str \"ageihdsednsh lsagtoonaepe lannswnccair hrditeaetnrh \" \"ueethdnatoio mbqyewdnotto aouayicdwhod nranatosaef  \" \"bnldrhnhrrb  efirersodir  irnieecusno  nedgnailoat \") (let [plaintext (str \"All human beings are born free \" \"and equal in dignity and rights. \" \"They are endowed with reason and conscience \" \"and should act towards one another \" \"in a spirit of brotherhood.\")] (crypto-square/normalize-ciphertext plaintext))))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "cipher-6",
+      "status": "error",
+      "test_code": "(is (= \"imtgdvs fearwer mayoogo anouuio ntnnlvt wttddes aohghn  sseoau \" (crypto-square/normalize-ciphertext \"If man was meant to stay on the ground, god would have given us roots.\")))"
+    }
+  ],
+  "version": 3
+}

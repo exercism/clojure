@@ -1,0 +1,42 @@
+{
+  "status": "fail",
+  "tests": [
+    {
+      "message": "Expected (= 0 (collatz 1)) but got (not (= 0 nil))",
+      "name": "steps-for-1",
+      "status": "fail",
+      "test_code": "(testing \"zero steps for one\" (is (= 0 (collatz 1))))"
+    },
+    {
+      "message": "Expected (= 4 (collatz 16)) but got (not (= 4 nil))",
+      "name": "steps-for-16",
+      "status": "fail",
+      "test_code": "(testing \"divide if even\" (is (= 4 (collatz 16))))"
+    },
+    {
+      "message": "Expected (= 9 (collatz 12)) but got (not (= 9 nil))",
+      "name": "steps-for-12",
+      "status": "fail",
+      "test_code": "(testing \"even and odd steps\" (is (= 9 (collatz 12))))"
+    },
+    {
+      "message": "Expected (= 152 (collatz 1000000)) but got (not (= 152 nil))",
+      "name": "steps-for-1000000",
+      "status": "fail",
+      "test_code": "(testing \"Large number of even and odd steps\" (is (= 152 (collatz 1000000))))"
+    },
+    {
+      "message": "Expected (thrown? Throwable (collatz 0)) but got ",
+      "name": "steps-for-0",
+      "status": "fail",
+      "test_code": "(testing \"zero is an error\" (is (thrown? Throwable (collatz 0))))"
+    },
+    {
+      "message": "Expected (thrown? Throwable (collatz -15)) but got ",
+      "name": "steps-for-negative",
+      "status": "fail",
+      "test_code": "(testing \"negative value is an error\" (is (thrown? Throwable (collatz -15))))"
+    }
+  ],
+  "version": 3
+}

@@ -1,0 +1,18 @@
+{
+  "status": "fail",
+  "tests": [
+    {
+      "message": "Expected (= (g/territory example [0 1]) {:stones #{[0 0] [1 0] [0 1]}, :owner :black}) but got (not (= nil {:stones #{[0 0] [1 0] [0 1]}, :owner :black}))",
+      "name": "territory",
+      "status": "fail",
+      "test_code": "(is (= (g/territory example [0 1]) {:stones #{[0 0] [1 0] [0 1]}, :owner :black}))"
+    },
+    {
+      "message": "Expected (= (g/territories [\" \"]) {:black-territory #{}, :white-territory #{}, :null-territory #{[0 0]}}) but got (not (= nil {:black-territory #{}, :white-territory #{}, :null-territory #{[0 0]}}))",
+      "name": "territories",
+      "status": "fail",
+      "test_code": "(is (= (g/territories [\" \"]) {:null-territory #{[0 0]}, :white-territory #{}, :black-territory #{}}))"
+    }
+  ],
+  "version": 3
+}

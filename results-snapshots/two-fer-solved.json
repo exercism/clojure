@@ -1,0 +1,21 @@
+{
+  "status": "pass",
+  "tests": [
+    {
+      "name": "two-fer-test",
+      "status": "pass",
+      "test_code": "(is (= \"One for you, one for me.\" (two-fer/two-fer)))"
+    },
+    {
+      "name": "name-alice-test",
+      "status": "pass",
+      "test_code": "(is (= \"One for Alice, one for me.\" (two-fer/two-fer \"Alice\")))"
+    },
+    {
+      "name": "name-bob-test",
+      "status": "pass",
+      "test_code": "(is (= \"One for Bob, one for me.\" (two-fer/two-fer \"Bob\")))"
+    }
+  ],
+  "version": 3
+}

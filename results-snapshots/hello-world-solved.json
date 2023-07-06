@@ -1,0 +1,11 @@
+{
+  "status": "pass",
+  "tests": [
+    {
+      "name": "hello-world-test",
+      "status": "pass",
+      "test_code": "(is (= \"Hello, World!\" (hello-world/hello)))"
+    }
+  ],
+  "version": 3
+}

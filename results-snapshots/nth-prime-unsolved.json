@@ -1,0 +1,36 @@
+{
+  "status": "fail",
+  "tests": [
+    {
+      "message": "Expected (= 2 (nth-prime/nth-prime 1)) but got (not (= 2 nil))",
+      "name": "first-prime",
+      "status": "fail",
+      "test_code": "(testing \"the first prime is 2\" (is (= 2 (nth-prime/nth-prime 1))))"
+    },
+    {
+      "message": "Expected (= 3 (nth-prime/nth-prime 2)) but got (not (= 3 nil))",
+      "name": "second-prime",
+      "status": "fail",
+      "test_code": "(testing \"the second prime is 3\" (is (= 3 (nth-prime/nth-prime 2))))"
+    },
+    {
+      "message": "Expected (= 13 (nth-prime/nth-prime 6)) but got (not (= 13 nil))",
+      "name": "sixth-prime",
+      "status": "fail",
+      "test_code": "(testing \"the sixth prime is 13\" (is (= 13 (nth-prime/nth-prime 6))))"
+    },
+    {
+      "message": "Expected (= 104743 (nth-prime/nth-prime 10001)) but got (not (= 104743 nil))",
+      "name": "ten-thousand-first-prime",
+      "status": "fail",
+      "test_code": "(testing \"the ten thousand and first prime is 104743\" (is (= 104743 (nth-prime/nth-prime 10001))))"
+    },
+    {
+      "message": "Expected (thrown? IllegalArgumentException (nth-prime/nth-prime 0)) but got ",
+      "name": "zeroth-prime",
+      "status": "fail",
+      "test_code": "(testing \"there is no zeroth prime\" (is (thrown? IllegalArgumentException (nth-prime/nth-prime 0))))"
+    }
+  ],
+  "version": 3
+}

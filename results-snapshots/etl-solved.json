@@ -1,0 +1,26 @@
+{
+  "status": "pass",
+  "tests": [
+    {
+      "name": "transform-one-value",
+      "status": "pass",
+      "test_code": "(is (= {\"world\" 1} (etl/transform {1 [\"WORLD\"]})))"
+    },
+    {
+      "name": "transform-more-values",
+      "status": "pass",
+      "test_code": "(is (= {\"gschoolers\" 1, \"world\" 1} (etl/transform {1 [\"WORLD\" \"GSCHOOLERS\"]})))"
+    },
+    {
+      "name": "more-keys",
+      "status": "pass",
+      "test_code": "(is (= {\"boat\" 2, \"apple\" 1, \"artichoke\" 1, \"ballerina\" 2} (etl/transform {1 [\"APPLE\" \"ARTICHOKE\"], 2 [\"BOAT\" \"BALLERINA\"]})))"
+    },
+    {
+      "name": "full-dataset",
+      "status": "pass",
+      "test_code": "(is (= {\"d\" 2, \"n\" 1, \"z\" 10, \"w\" 4, \"s\" 1, \"f\" 4, \"e\" 1, \"q\" 10, \"p\" 3, \"j\" 8, \"x\" 8, \"v\" 4, \"a\" 1, \"t\" 1, \"i\" 1, \"k\" 5, \"b\" 3, \"r\" 1, \"y\" 4, \"g\" 2, \"l\" 1, \"u\" 1, \"h\" 4, \"m\" 3, \"o\" 1, \"c\" 3} (etl/transform {1 (re-seq (re-pattern \"\\\\w\") \"AEIOULNRST\"), 4 (re-seq (re-pattern \"\\\\w\") \"FHVWY\"), 3 (re-seq (re-pattern \"\\\\w\") \"BCMP\"), 2 (re-seq (re-pattern \"\\\\w\") \"DG\"), 5 (re-seq (re-pattern \"\\\\w\") \"K\"), 10 (re-seq (re-pattern \"\\\\w\") \"QZ\"), 8 (re-seq (re-pattern \"\\\\w\") \"JX\")})))"
+    }
+  ],
+  "version": 3
+}

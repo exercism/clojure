@@ -1,0 +1,24 @@
+{
+  "status": "fail",
+  "tests": [
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (0) passed to: sci.impl.fns/fun/arity-1--1166",
+      "name": "two-fer-test",
+      "status": "error",
+      "test_code": "(is (= \"One for you, one for me.\" (two-fer/two-fer)))"
+    },
+    {
+      "message": "Expected (= \"One for Alice, one for me.\" (two-fer/two-fer \"Alice\")) but got (not (= \"One for Alice, one for me.\" nil))",
+      "name": "name-alice-test",
+      "status": "fail",
+      "test_code": "(is (= \"One for Alice, one for me.\" (two-fer/two-fer \"Alice\")))"
+    },
+    {
+      "message": "Expected (= \"One for Bob, one for me.\" (two-fer/two-fer \"Bob\")) but got (not (= \"One for Bob, one for me.\" nil))",
+      "name": "name-bob-test",
+      "status": "fail",
+      "test_code": "(is (= \"One for Bob, one for me.\" (two-fer/two-fer \"Bob\")))"
+    }
+  ],
+  "version": 3
+}

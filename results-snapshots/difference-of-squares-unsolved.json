@@ -1,0 +1,60 @@
+{
+  "status": "fail",
+  "tests": [
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "square-of-sum-to-5",
+      "status": "error",
+      "test_code": "(is (= 225 (dos/square-of-sum 5)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "sum-of-squares-to-5",
+      "status": "error",
+      "test_code": "(is (= 55 (dos/sum-of-squares 5)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "difference-of-squares-to-5",
+      "status": "error",
+      "test_code": "(is (= 170 (dos/difference 5)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "square-of-sum-to-10",
+      "status": "error",
+      "test_code": "(is (= 3025 (dos/square-of-sum 10)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "sum-of-squares-to-10",
+      "status": "error",
+      "test_code": "(is (= 385 (dos/sum-of-squares 10)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "difference-of-squares-to-10",
+      "status": "error",
+      "test_code": "(is (= 2640 (dos/difference 10)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "square-of-sum-to-100",
+      "status": "error",
+      "test_code": "(is (= 25502500 (dos/square-of-sum 100)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "sum-of-squares-to-100",
+      "status": "error",
+      "test_code": "(is (= 338350 (dos/sum-of-squares 100)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "difference-of-squares-to-100",
+      "status": "error",
+      "test_code": "(is (= 25164150 (dos/difference 100)))"
+    }
+  ],
+  "version": 3
+}

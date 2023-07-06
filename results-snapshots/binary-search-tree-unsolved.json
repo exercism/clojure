@@ -1,0 +1,60 @@
+{
+  "status": "fail",
+  "tests": [
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "data-is-retained",
+      "status": "error",
+      "test_code": "(is (= 4 (bst/value (bst/singleton 4))))"
+    },
+    {
+      "message": "An unexpected error occurred:\nWrong number of args (1) passed to: binary-search-tree/singleton",
+      "name": "inserting-less",
+      "status": "error",
+      "test_code": "(let [t (bst/insert 2 (bst/singleton 4))] (is (= 4 (bst/value t))) (is (= 2 (bst/value (bst/left t)))))"
+    },
+    {
+      "message": "An unexpected error occurred:\nWrong number of args (1) passed to: binary-search-tree/singleton",
+      "name": "inserting-same",
+      "status": "error",
+      "test_code": "(let [t (bst/insert 4 (bst/singleton 4))] (is (= 4 (bst/value t))) (is (= 4 (bst/value (bst/left t)))))"
+    },
+    {
+      "message": "An unexpected error occurred:\nWrong number of args (1) passed to: binary-search-tree/singleton",
+      "name": "inserting-right",
+      "status": "error",
+      "test_code": "(let [t (bst/insert 5 (bst/singleton 4))] (is (= 4 (bst/value t))) (is (= 5 (bst/value (bst/right t)))))"
+    },
+    {
+      "message": "An unexpected error occurred:\nWrong number of args (1) passed to: binary-search-tree/from-list",
+      "name": "complex-tree",
+      "status": "error",
+      "test_code": "(let [t (bst/from-list [4 2 6 1 3 7 5])] (is (= 4 (bst/value t))) (is (= 2 (bst/value (bst/left t)))) (is (= 1 (bst/value (bst/left (bst/left t))))) (is (= 3 (bst/value (bst/right (bst/left t))))) (is (= 6 (bst/value (bst/right t)))) (is (= 5 (bst/value (bst/left (bst/right t))))) (is (= 7 (bst/value (bst/right (bst/right t))))))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "iterating-one-element",
+      "status": "error",
+      "test_code": "(is (= [4] (bst/to-list (bst/singleton 4))))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "iterating-over-smaller-element",
+      "status": "error",
+      "test_code": "(is (= [2 4] (bst/to-list (bst/from-list [4 2]))))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "iterating-over-larger-element",
+      "status": "error",
+      "test_code": "(is (= [4 5] (bst/to-list (bst/from-list [4 5]))))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "iterating-over-complex-tree",
+      "status": "error",
+      "test_code": "(is (= (range 1 8) (bst/to-list (bst/from-list [4 2 1 3 6 7 5]))))"
+    }
+  ],
+  "version": 3
+}

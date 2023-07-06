@@ -1,0 +1,90 @@
+{
+  "status": "fail",
+  "tests": [
+    {
+      "message": "Expected (= true (isbn? \"3-598-21508-8\")) but got (not (= true nil))",
+      "name": "valid-isbn-number",
+      "status": "fail",
+      "test_code": "(is (= true (isbn? \"3-598-21508-8\")))"
+    },
+    {
+      "message": "Expected (= false (isbn? \"3-598-21508-9\")) but got (not (= false nil))",
+      "name": "invalid-isbn-check-digit",
+      "status": "fail",
+      "test_code": "(is (= false (isbn? \"3-598-21508-9\")))"
+    },
+    {
+      "message": "Expected (= true (isbn? \"3-598-21507-X\")) but got (not (= true nil))",
+      "name": "valid-isbn-number-with-a-check-digit-of-10",
+      "status": "fail",
+      "test_code": "(is (= true (isbn? \"3-598-21507-X\")))"
+    },
+    {
+      "message": "Expected (= false (isbn? \"3-598-21507-A\")) but got (not (= false nil))",
+      "name": "check-digit-is-a-character-other-than-X",
+      "status": "fail",
+      "test_code": "(is (= false (isbn? \"3-598-21507-A\")))"
+    },
+    {
+      "message": "Expected (= false (isbn? \"3-598-2K507-0\")) but got (not (= false nil))",
+      "name": "invalid-character-in-isbn",
+      "status": "fail",
+      "test_code": "(is (= false (isbn? \"3-598-2K507-0\")))"
+    },
+    {
+      "message": "Expected (= false (isbn? \"3-598-2X507-9\")) but got (not (= false nil))",
+      "name": "X-is-only-valid-as-a-check-digit",
+      "status": "fail",
+      "test_code": "(is (= false (isbn? \"3-598-2X507-9\")))"
+    },
+    {
+      "message": "Expected (= true (isbn? \"3598215088\")) but got (not (= true nil))",
+      "name": "valid-isbn-without-separating-dashes",
+      "status": "fail",
+      "test_code": "(is (= true (isbn? \"3598215088\")))"
+    },
+    {
+      "message": "Expected (= true (isbn? \"359821507X\")) but got (not (= true nil))",
+      "name": "isbn-without-separating-dashes-and-X-as-check-digit",
+      "status": "fail",
+      "test_code": "(is (= true (isbn? \"359821507X\")))"
+    },
+    {
+      "message": "Expected (= false (isbn? \"359821507\")) but got (not (= false nil))",
+      "name": "isbn-without-check-digit-and-dashes",
+      "status": "fail",
+      "test_code": "(is (= false (isbn? \"359821507\")))"
+    },
+    {
+      "message": "Expected (= false (isbn? \"3598215078X\")) but got (not (= false nil))",
+      "name": "too-long-isbn-and-no-dashes",
+      "status": "fail",
+      "test_code": "(is (= false (isbn? \"3598215078X\")))"
+    },
+    {
+      "message": "Expected (= false (isbn? \"00\")) but got (not (= false nil))",
+      "name": "too-short-isbn",
+      "status": "fail",
+      "test_code": "(is (= false (isbn? \"00\")))"
+    },
+    {
+      "message": "Expected (= false (isbn? \"3-598-21507\")) but got (not (= false nil))",
+      "name": "isbn-without-check-digit",
+      "status": "fail",
+      "test_code": "(is (= false (isbn? \"3-598-21507\")))"
+    },
+    {
+      "message": "Expected (= false (isbn? \"3-598-21507-XX\")) but got (not (= false nil))",
+      "name": "too-long-isbn",
+      "status": "fail",
+      "test_code": "(is (= false (isbn? \"3-598-21507-XX\")))"
+    },
+    {
+      "message": "Expected (= false (isbn? \"3-598-21515-X\")) but got (not (= false nil))",
+      "name": "check-digit-of-X-should-not-be-used-for-0",
+      "status": "fail",
+      "test_code": "(is (= false (isbn? \"3-598-21515-X\")))"
+    }
+  ],
+  "version": 3
+}

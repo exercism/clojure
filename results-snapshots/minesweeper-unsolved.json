@@ -1,0 +1,48 @@
+{
+  "status": "fail",
+  "tests": [
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "zero-size-board",
+      "status": "error",
+      "test_code": "(is (= (draw \"\") \"\"))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "empty-board",
+      "status": "error",
+      "test_code": "(is (= (draw (join line-separator [\"   \" \"   \" \"   \"])) (join line-separator [\"   \" \"   \" \"   \"])))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "surrounded",
+      "status": "error",
+      "test_code": "(is (= (draw (join line-separator [\"***\" \"* *\" \"***\"])) (join line-separator [\"***\" \"*8*\" \"***\"])))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "board-full-of-mines",
+      "status": "error",
+      "test_code": "(is (= (draw (join line-separator [\"***\" \"***\" \"***\"])) (join line-separator [\"***\" \"***\" \"***\"])))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "horizontal-line",
+      "status": "error",
+      "test_code": "(is (= (draw \" * * \") \"1*2*1\"))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "vertical-line",
+      "status": "error",
+      "test_code": "(is (= (draw (join line-separator [\" \" \"*\" \" \" \"*\" \" \"])) (join line-separator [\"1\" \"*\" \"2\" \"*\" \"1\"])))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "cross",
+      "status": "error",
+      "test_code": "(is (= (draw (join line-separator [\"  *  \" \"  *  \" \"*****\" \"  *  \" \"  *  \"])) (join line-separator [\" 2*2 \" \"25*52\" \"*****\" \"25*52\" \" 2*2 \"])))"
+    }
+  ],
+  "version": 3
+}

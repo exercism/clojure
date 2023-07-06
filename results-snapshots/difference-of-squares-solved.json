@@ -1,0 +1,51 @@
+{
+  "status": "pass",
+  "tests": [
+    {
+      "name": "square-of-sum-to-5",
+      "status": "pass",
+      "test_code": "(is (= 225 (dos/square-of-sum 5)))"
+    },
+    {
+      "name": "sum-of-squares-to-5",
+      "status": "pass",
+      "test_code": "(is (= 55 (dos/sum-of-squares 5)))"
+    },
+    {
+      "name": "difference-of-squares-to-5",
+      "status": "pass",
+      "test_code": "(is (= 170 (dos/difference 5)))"
+    },
+    {
+      "name": "square-of-sum-to-10",
+      "status": "pass",
+      "test_code": "(is (= 3025 (dos/square-of-sum 10)))"
+    },
+    {
+      "name": "sum-of-squares-to-10",
+      "status": "pass",
+      "test_code": "(is (= 385 (dos/sum-of-squares 10)))"
+    },
+    {
+      "name": "difference-of-squares-to-10",
+      "status": "pass",
+      "test_code": "(is (= 2640 (dos/difference 10)))"
+    },
+    {
+      "name": "square-of-sum-to-100",
+      "status": "pass",
+      "test_code": "(is (= 25502500 (dos/square-of-sum 100)))"
+    },
+    {
+      "name": "sum-of-squares-to-100",
+      "status": "pass",
+      "test_code": "(is (= 338350 (dos/sum-of-squares 100)))"
+    },
+    {
+      "name": "difference-of-squares-to-100",
+      "status": "pass",
+      "test_code": "(is (= 25164150 (dos/difference 100)))"
+    }
+  ],
+  "version": 3
+}

@@ -1,0 +1,90 @@
+{
+  "status": "fail",
+  "tests": [
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "no-allergies-at-all",
+      "status": "error",
+      "test_code": "(is (= [] (allergies/allergies 0)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "allergic-to-just-eggs",
+      "status": "error",
+      "test_code": "(is (= [:eggs] (allergies/allergies 1)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "allergic-to-just-peanuts",
+      "status": "error",
+      "test_code": "(is (= [:peanuts] (allergies/allergies 2)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "allergic-to-just-strawberries",
+      "status": "error",
+      "test_code": "(is (= [:strawberries] (allergies/allergies 8)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "allergic-to-eggs-and-peanuts",
+      "status": "error",
+      "test_code": "(is (= [:eggs :peanuts] (allergies/allergies 3)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "allergic-to-more-than-eggs-but-not-peanuts",
+      "status": "error",
+      "test_code": "(is (= [:eggs :shellfish] (allergies/allergies 5)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "allergic-to-lots-of-stuff",
+      "status": "error",
+      "test_code": "(is (= [:strawberries :tomatoes :chocolate :pollen :cats] (allergies/allergies 248)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "allergic-to-everything",
+      "status": "error",
+      "test_code": "(is (= [:eggs :peanuts :shellfish :strawberries :tomatoes :chocolate :pollen :cats] (allergies/allergies 255)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (2) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "no-allergies-means-not-allergic-peanuts",
+      "status": "error",
+      "test_code": "(is (not (allergies/allergic-to? 0 :peanuts)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (2) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "no-allergies-means-not-allergic-cats",
+      "status": "error",
+      "test_code": "(is (not (allergies/allergic-to? 0 :cats)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (2) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "no-allergies-means-not-allergic-strawberries",
+      "status": "error",
+      "test_code": "(is (not (allergies/allergic-to? 0 :strawberries)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (2) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "is-allergic-to-eggs",
+      "status": "error",
+      "test_code": "(is (allergies/allergic-to? 1 :eggs))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (2) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "allergic-to-eggs-in-addition-to-other-stuff",
+      "status": "error",
+      "test_code": "(is (allergies/allergic-to? 5 :eggs))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "ignore-non-allergen-score-parts",
+      "status": "error",
+      "test_code": "(is (= [:eggs :shellfish :strawberries :tomatoes :chocolate :pollen :cats] (allergies/allergies 509)))"
+    }
+  ],
+  "version": 3
+}

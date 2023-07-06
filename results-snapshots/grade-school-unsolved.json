@@ -1,0 +1,48 @@
+{
+  "status": "fail",
+  "tests": [
+    {
+      "message": "Expected (= {2 [\"Aimee\"]} (grade-school/add db \"Aimee\" 2)) but got (not (= {2 [\"Aimee\"]} nil))",
+      "name": "add-student",
+      "status": "fail",
+      "test_code": "(is (= {2 [\"Aimee\"]} (grade-school/add db \"Aimee\" 2)))"
+    },
+    {
+      "message": "Expected (= {2 [\"James\" \"Blair\" \"Paul\"]} (-> db (grade-school/add \"James\" 2) (grade-school/add \"Blair\" 2) (grade-school/add \"Paul\" 2))) but got (not (= {2 [\"James\" \"Blair\" \"Paul\"]} nil))",
+      "name": "add-more-students-in-same-class",
+      "status": "fail",
+      "test_code": "(is (= {2 [\"James\" \"Blair\" \"Paul\"]} (-> db (grade-school/add \"James\" 2) (grade-school/add \"Blair\" 2) (grade-school/add \"Paul\" 2))))"
+    },
+    {
+      "message": "Expected (= {3 [\"Chelsea\"], 7 [\"Logan\"]} (-> db (grade-school/add \"Chelsea\" 3) (grade-school/add \"Logan\" 7))) but got (not (= {3 [\"Chelsea\"], 7 [\"Logan\"]} nil))",
+      "name": "add-students-to-different-grades",
+      "status": "fail",
+      "test_code": "(is (= {7 [\"Logan\"], 3 [\"Chelsea\"]} (-> db (grade-school/add \"Chelsea\" 3) (grade-school/add \"Logan\" 7))))"
+    },
+    {
+      "message": "Expected (= [\"Franklin\" \"Bradley\"] (-> db (grade-school/add \"Franklin\" 5) (grade-school/add \"Bradley\" 5) (grade-school/add \"Jeff\" 1) (grade-school/grade 5))) but got (not (= [\"Franklin\" \"Bradley\"] nil))",
+      "name": "get-students-in-a-grade",
+      "status": "fail",
+      "test_code": "(is (= [\"Franklin\" \"Bradley\"] (-> db (grade-school/add \"Franklin\" 5) (grade-school/add \"Bradley\" 5) (grade-school/add \"Jeff\" 1) (grade-school/grade 5))))"
+    },
+    {
+      "message": "Expected (= [] (grade-school/grade db 1)) but got (not (= [] nil))",
+      "name": "get-students-in-a-non-existent-grade",
+      "status": "fail",
+      "test_code": "(is (= [] (grade-school/grade db 1)))"
+    },
+    {
+      "message": "Expected (= (sorted-map 3 [\"Kyle\"] 4 [\"Christopher\" \"Jennifer\"] 6 [\"Kareem\"]) (-> db (grade-school/add \"Jennifer\" 4) (grade-school/add \"Kareem\" 6) (grade-school/add \"Christopher\" 4) (grade-school/add \"Kyle\" 3) (grade-school/sorted))) but got (not (= {3 [\"Kyle\"], 4 [\"Christopher\" \"Jennifer\"], 6 [\"Kareem\"]} nil))",
+      "name": "sorted-grade-school",
+      "status": "fail",
+      "test_code": "(is (= (sorted-map 3 [\"Kyle\"] 4 [\"Christopher\" \"Jennifer\"] 6 [\"Kareem\"]) (-> db (grade-school/add \"Jennifer\" 4) (grade-school/add \"Kareem\" 6) (grade-school/add \"Christopher\" 4) (grade-school/add \"Kyle\" 3) (grade-school/sorted))))"
+    },
+    {
+      "message": "Expected (= [3 4 6] (-> db (grade-school/add \"Jennifer\" 4) (grade-school/add \"Kareem\" 6) (grade-school/add \"Christopher\" 4) (grade-school/add \"Kyle\" 3) (grade-school/sorted) (keys))) but got (not (= [3 4 6] nil))",
+      "name": "sorted-grade_school-keys-sorted",
+      "status": "fail",
+      "test_code": "(is (= [3 4 6] (-> db (grade-school/add \"Jennifer\" 4) (grade-school/add \"Kareem\" 6) (grade-school/add \"Christopher\" 4) (grade-school/add \"Kyle\" 3) (grade-school/sorted) (keys))))"
+    }
+  ],
+  "version": 3
+}

@@ -1,0 +1,66 @@
+{
+  "status": "fail",
+  "tests": [
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "it-finds-position-of-middle-item",
+      "status": "error",
+      "test_code": "(is (= 3 (binary-search/middle short-vector)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (2) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "searches-a-singleton",
+      "status": "error",
+      "test_code": "(is (= 0 (binary-search/search-for 4 [4])))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (2) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "it-finds-position-of-search-data",
+      "status": "error",
+      "test_code": "(is (= 5 (binary-search/search-for 9 short-vector)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (2) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "it-finds-position-in-a-larger-list",
+      "status": "error",
+      "test_code": "(is (= 1 (binary-search/search-for 3 large-vector)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (2) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "it-finds-position-in-a-larger-list-again",
+      "status": "error",
+      "test_code": "(is (= 7 (binary-search/search-for 55 large-vector)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (2) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "it-finds-correct-position-in-a-list-with-an-even-number-of-elements",
+      "status": "error",
+      "test_code": "(is (= 5 (binary-search/search-for 21 even-length-vector)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (2) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "it-finds-correct-position-in-a-list-with-an-even-number-of-elements-again",
+      "status": "error",
+      "test_code": "(is (= 6 (binary-search/search-for 34 even-length-vector)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (2) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "it-works-on-lists",
+      "status": "error",
+      "test_code": "(is (= 7 (binary-search/search-for 7 (range 10))))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (2) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "it-works-on-lists-again",
+      "status": "error",
+      "test_code": "(is (= 4 (binary-search/search-for 3 (quote (-3 -2 0 1 3 4)))))"
+    },
+    {
+      "message": "Expected (thrown-with-msg? Throwable #\"not found\" (binary-search/search-for 20 short-vector)) but got clojure.lang.ArityException: Wrong number of args (2) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "throws-exception-when-element-not-found",
+      "status": "fail",
+      "test_code": "(is (thrown-with-msg? Throwable (re-pattern \"not found\") (binary-search/search-for 20 short-vector)))"
+    }
+  ],
+  "version": 3
+}

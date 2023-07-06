@@ -1,0 +1,55 @@
+{
+  "status": "fail",
+  "tests": [
+    {
+      "name": "year-not-divisible-by-4",
+      "status": "pass",
+      "test_code": "(is (not (leap/leap-year? 2015)))"
+    },
+    {
+      "name": "year-divisible-by-2-but-not-4",
+      "status": "pass",
+      "test_code": "(is (not (leap/leap-year? 1970)))"
+    },
+    {
+      "message": "Expected (leap/leap-year? 1996) but got (not (leap/leap-year? 1996))",
+      "name": "year-divisible-by-4-but-not-100",
+      "status": "fail",
+      "test_code": "(is (leap/leap-year? 1996))"
+    },
+    {
+      "message": "Expected (leap/leap-year? 1960) but got (not (leap/leap-year? 1960))",
+      "name": "year-divisible-by-4-and-5",
+      "status": "fail",
+      "test_code": "(is (leap/leap-year? 1960))"
+    },
+    {
+      "name": "year-divisible-by-100-but-not-400",
+      "status": "pass",
+      "test_code": "(is (not (leap/leap-year? 2100)))"
+    },
+    {
+      "name": "year-divisible-by-100-but-not-by-3",
+      "status": "pass",
+      "test_code": "(is (not (leap/leap-year? 1900)))"
+    },
+    {
+      "message": "Expected (leap/leap-year? 2000) but got (not (leap/leap-year? 2000))",
+      "name": "year-divisible-by-400",
+      "status": "fail",
+      "test_code": "(is (leap/leap-year? 2000))"
+    },
+    {
+      "message": "Expected (leap/leap-year? 2400) but got (not (leap/leap-year? 2400))",
+      "name": "year-divisible-by-400-but-not-125",
+      "status": "fail",
+      "test_code": "(is (leap/leap-year? 2400))"
+    },
+    {
+      "name": "year-divisible-by-200-but-not-by-400",
+      "status": "pass",
+      "test_code": "(is (not (leap/leap-year? 1800)))"
+    }
+  ],
+  "version": 3
+}

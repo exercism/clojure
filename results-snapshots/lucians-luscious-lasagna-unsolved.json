@@ -1,0 +1,42 @@
+{
+  "status": "fail",
+  "tests": [
+    {
+      "message": "Expected (= 40 lucians-luscious-lasagna/expected-time) but got (not (= 40 nil))",
+      "name": "expected-time-test",
+      "status": "fail",
+      "test_code": "(is (= 40 lucians-luscious-lasagna/expected-time))"
+    },
+    {
+      "message": "Expected (= 15 (lucians-luscious-lasagna/remaining-time 25)) but got (not (= 15 nil))",
+      "name": "remaining-time-test",
+      "status": "fail",
+      "test_code": "(is (= 15 (lucians-luscious-lasagna/remaining-time 25)))"
+    },
+    {
+      "message": "Expected (= 2 (lucians-luscious-lasagna/prep-time 1)) but got (not (= 2 nil))",
+      "name": "prep-time-one-layer-test",
+      "status": "fail",
+      "test_code": "(is (= 2 (lucians-luscious-lasagna/prep-time 1)))"
+    },
+    {
+      "message": "Expected (= 8 (lucians-luscious-lasagna/prep-time 4)) but got (not (= 8 nil))",
+      "name": "prep-time-multiple-layers-test",
+      "status": "fail",
+      "test_code": "(is (= 8 (lucians-luscious-lasagna/prep-time 4)))"
+    },
+    {
+      "message": "Expected (= 32 (lucians-luscious-lasagna/total-time 1 30)) but got (not (= 32 nil))",
+      "name": "total-time-one-layer-test",
+      "status": "fail",
+      "test_code": "(is (= 32 (lucians-luscious-lasagna/total-time 1 30)))"
+    },
+    {
+      "message": "Expected (= 16 (lucians-luscious-lasagna/total-time 4 8)) but got (not (= 16 nil))",
+      "name": "total-time-multiple-layers-test",
+      "status": "fail",
+      "test_code": "(is (= 16 (lucians-luscious-lasagna/total-time 4 8)))"
+    }
+  ],
+  "version": 3
+}

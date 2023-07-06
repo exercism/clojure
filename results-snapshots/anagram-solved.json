@@ -1,0 +1,51 @@
+{
+  "status": "pass",
+  "tests": [
+    {
+      "name": "no-matches",
+      "status": "pass",
+      "test_code": "(is (= [] (anagram/anagrams-for \"diaper\" [\"hello\" \"world\" \"zombies\" \"pants\"])))"
+    },
+    {
+      "name": "detect-simple-anagram",
+      "status": "pass",
+      "test_code": "(is (= [\"tan\"] (anagram/anagrams-for \"ant\" [\"tan\" \"stand\" \"at\"])))"
+    },
+    {
+      "name": "does-not-confuse-different-duplicates",
+      "status": "pass",
+      "test_code": "(is (= [] (anagram/anagrams-for \"galea\" [\"eagle\"])))"
+    },
+    {
+      "name": "eliminate-anagram-subsets",
+      "status": "pass",
+      "test_code": "(is (= [] (anagram/anagrams-for \"good\" [\"dog\" \"goody\"])))"
+    },
+    {
+      "name": "detect-anagram",
+      "status": "pass",
+      "test_code": "(is (= [\"inlets\"] (let [coll [\"enlists\" \"google\" \"inlets\" \"banana\"]] (anagram/anagrams-for \"listen\" coll))))"
+    },
+    {
+      "name": "multiple-anagrams",
+      "status": "pass",
+      "test_code": "(is (= [\"gallery\" \"regally\" \"largely\"] (let [coll [\"gallery\" \"ballerina\" \"regally\" \"clergy\" \"largely\" \"leading\"]] (anagram/anagrams-for \"allergy\" coll))))"
+    },
+    {
+      "name": "case-insensitive-anagrams",
+      "status": "pass",
+      "test_code": "(is (= [\"Carthorse\"] (let [coll [\"cashregister\" \"Carthorse\" \"radishes\"]] (anagram/anagrams-for \"Orchestra\" coll))))"
+    },
+    {
+      "name": "word-is-not-own-anagram",
+      "status": "pass",
+      "test_code": "(is (= [] (anagram/anagrams-for \"banana\" [\"banana\"])))"
+    },
+    {
+      "name": "capital-word-is-not-own-anagram",
+      "status": "pass",
+      "test_code": "(is (= [] (anagram/anagrams-for \"BANANA\" [\"banana\"])))"
+    }
+  ],
+  "version": 3
+}

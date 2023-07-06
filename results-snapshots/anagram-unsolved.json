@@ -1,0 +1,60 @@
+{
+  "status": "fail",
+  "tests": [
+    {
+      "message": "Expected (= [] (anagram/anagrams-for \"diaper\" [\"hello\" \"world\" \"zombies\" \"pants\"])) but got (not (= [] nil))",
+      "name": "no-matches",
+      "status": "fail",
+      "test_code": "(is (= [] (anagram/anagrams-for \"diaper\" [\"hello\" \"world\" \"zombies\" \"pants\"])))"
+    },
+    {
+      "message": "Expected (= [\"tan\"] (anagram/anagrams-for \"ant\" [\"tan\" \"stand\" \"at\"])) but got (not (= [\"tan\"] nil))",
+      "name": "detect-simple-anagram",
+      "status": "fail",
+      "test_code": "(is (= [\"tan\"] (anagram/anagrams-for \"ant\" [\"tan\" \"stand\" \"at\"])))"
+    },
+    {
+      "message": "Expected (= [] (anagram/anagrams-for \"galea\" [\"eagle\"])) but got (not (= [] nil))",
+      "name": "does-not-confuse-different-duplicates",
+      "status": "fail",
+      "test_code": "(is (= [] (anagram/anagrams-for \"galea\" [\"eagle\"])))"
+    },
+    {
+      "message": "Expected (= [] (anagram/anagrams-for \"good\" [\"dog\" \"goody\"])) but got (not (= [] nil))",
+      "name": "eliminate-anagram-subsets",
+      "status": "fail",
+      "test_code": "(is (= [] (anagram/anagrams-for \"good\" [\"dog\" \"goody\"])))"
+    },
+    {
+      "message": "Expected (= [\"inlets\"] (let [coll [\"enlists\" \"google\" \"inlets\" \"banana\"]] (anagram/anagrams-for \"listen\" coll))) but got (not (= [\"inlets\"] nil))",
+      "name": "detect-anagram",
+      "status": "fail",
+      "test_code": "(is (= [\"inlets\"] (let [coll [\"enlists\" \"google\" \"inlets\" \"banana\"]] (anagram/anagrams-for \"listen\" coll))))"
+    },
+    {
+      "message": "Expected (= [\"gallery\" \"regally\" \"largely\"] (let [coll [\"gallery\" \"ballerina\" \"regally\" \"clergy\" \"largely\" \"leading\"]] (anagram/anagrams-for \"allergy\" coll))) but got (not (= [\"gallery\" \"regally\" \"largely\"] nil))",
+      "name": "multiple-anagrams",
+      "status": "fail",
+      "test_code": "(is (= [\"gallery\" \"regally\" \"largely\"] (let [coll [\"gallery\" \"ballerina\" \"regally\" \"clergy\" \"largely\" \"leading\"]] (anagram/anagrams-for \"allergy\" coll))))"
+    },
+    {
+      "message": "Expected (= [\"Carthorse\"] (let [coll [\"cashregister\" \"Carthorse\" \"radishes\"]] (anagram/anagrams-for \"Orchestra\" coll))) but got (not (= [\"Carthorse\"] nil))",
+      "name": "case-insensitive-anagrams",
+      "status": "fail",
+      "test_code": "(is (= [\"Carthorse\"] (let [coll [\"cashregister\" \"Carthorse\" \"radishes\"]] (anagram/anagrams-for \"Orchestra\" coll))))"
+    },
+    {
+      "message": "Expected (= [] (anagram/anagrams-for \"banana\" [\"banana\"])) but got (not (= [] nil))",
+      "name": "word-is-not-own-anagram",
+      "status": "fail",
+      "test_code": "(is (= [] (anagram/anagrams-for \"banana\" [\"banana\"])))"
+    },
+    {
+      "message": "Expected (= [] (anagram/anagrams-for \"BANANA\" [\"banana\"])) but got (not (= [] nil))",
+      "name": "capital-word-is-not-own-anagram",
+      "status": "fail",
+      "test_code": "(is (= [] (anagram/anagrams-for \"BANANA\" [\"banana\"])))"
+    }
+  ],
+  "version": 3
+}

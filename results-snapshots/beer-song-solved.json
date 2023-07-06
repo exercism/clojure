@@ -1,0 +1,36 @@
+{
+  "status": "pass",
+  "tests": [
+    {
+      "name": "test-verse-8",
+      "status": "pass",
+      "test_code": "(is (= verse-8 (beer-song/verse 8)))"
+    },
+    {
+      "name": "test-verse-2",
+      "status": "pass",
+      "test_code": "(is (= verse-2 (beer-song/verse 2)))"
+    },
+    {
+      "name": "test-verse-1",
+      "status": "pass",
+      "test_code": "(is (= verse-1 (beer-song/verse 1)))"
+    },
+    {
+      "name": "test-verse-0",
+      "status": "pass",
+      "test_code": "(is (= verse-0 (beer-song/verse 0)))"
+    },
+    {
+      "name": "test-song-8-6",
+      "status": "pass",
+      "test_code": "(is (= song-8-6 (beer-song/sing 8 6)))"
+    },
+    {
+      "name": "test-song-3-0",
+      "status": "pass",
+      "test_code": "(is (= song-3-0 (beer-song/sing 3)))"
+    }
+  ],
+  "version": 3
+}

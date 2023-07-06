@@ -1,0 +1,48 @@
+{
+  "status": "fail",
+  "tests": [
+    {
+      "message": "Expected (= 0 (nucleotide-count/count-of-nucleotide-in-strand \\A \"\")) but got (not (= 0 nil))",
+      "name": "empty-dna-strand-has-no-adenosine",
+      "status": "fail",
+      "test_code": "(is (= 0 (nucleotide-count/count-of-nucleotide-in-strand \\A \"\")))"
+    },
+    {
+      "message": "Expected (= {\\A 0, \\T 0, \\C 0, \\G 0} (nucleotide-count/nucleotide-counts \"\")) but got (not (= {\\A 0, \\T 0, \\C 0, \\G 0} nil))",
+      "name": "empty-dna-strand-has-no-nucleotides",
+      "status": "fail",
+      "test_code": "(is (= {\\A 0, \\C 0, \\G 0, \\T 0} (nucleotide-count/nucleotide-counts \"\")))"
+    },
+    {
+      "message": "Expected (= 5 (nucleotide-count/count-of-nucleotide-in-strand \\C \"CCCCC\")) but got (not (= 5 nil))",
+      "name": "repetitive-cytidine-gets-counted",
+      "status": "fail",
+      "test_code": "(is (= 5 (nucleotide-count/count-of-nucleotide-in-strand \\C \"CCCCC\")))"
+    },
+    {
+      "message": "Expected (= {\\A 0, \\T 0, \\C 0, \\G 8} (nucleotide-count/nucleotide-counts \"GGGGGGGG\")) but got (not (= {\\A 0, \\T 0, \\C 0, \\G 8} nil))",
+      "name": "repetitive-sequence-has-only-guanosine",
+      "status": "fail",
+      "test_code": "(is (= {\\A 0, \\C 0, \\G 8, \\T 0} (nucleotide-count/nucleotide-counts \"GGGGGGGG\")))"
+    },
+    {
+      "message": "Expected (= 1 (nucleotide-count/count-of-nucleotide-in-strand \\T \"GGGGGTAACCCGG\")) but got (not (= 1 nil))",
+      "name": "counts-only-thymidine",
+      "status": "fail",
+      "test_code": "(is (= 1 (nucleotide-count/count-of-nucleotide-in-strand \\T \"GGGGGTAACCCGG\")))"
+    },
+    {
+      "message": "Expected (thrown? Throwable (nucleotide-count/count-of-nucleotide-in-strand \\X \"GACT\")) but got ",
+      "name": "validates-nucleotides",
+      "status": "fail",
+      "test_code": "(is (thrown? Throwable (nucleotide-count/count-of-nucleotide-in-strand \\X \"GACT\")))"
+    },
+    {
+      "message": "Expected (= {\\A 20, \\T 21, \\G 17, \\C 12} (nucleotide-count/nucleotide-counts s)) but got (not (= {\\A 20, \\T 21, \\G 17, \\C 12} nil))",
+      "name": "counts-all-nucleotides",
+      "status": "fail",
+      "test_code": "(let [s \"AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC\"] (is (= {\\A 20, \\C 12, \\G 17, \\T 21} (nucleotide-count/nucleotide-counts s))))"
+    }
+  ],
+  "version": 3
+}

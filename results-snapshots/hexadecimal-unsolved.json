@@ -1,0 +1,12 @@
+{
+  "status": "fail",
+  "tests": [
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "hex-to-int-test",
+      "status": "error",
+      "test_code": "(is (= 1 (hexadecimal/hex-to-int \"1\")))"
+    }
+  ],
+  "version": 3
+}

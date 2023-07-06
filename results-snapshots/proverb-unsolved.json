@@ -1,0 +1,42 @@
+{
+  "status": "fail",
+  "tests": [
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "zero-pieces",
+      "status": "error",
+      "test_code": "(is (= (recite ()) \"\"))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "one-piece",
+      "status": "error",
+      "test_code": "(is (= (recite (quote (\"nail\"))) \"And all for the want of a nail.\"))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "two-pieces",
+      "status": "error",
+      "test_code": "(is (= (recite (quote (\"nail\" \"shoe\"))) (str/join \"\\n\" [\"For want of a nail the shoe was lost.\" \"And all for the want of a nail.\"])))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "three-pieces",
+      "status": "error",
+      "test_code": "(is (= (recite (quote (\"nail\" \"shoe\" \"horse\"))) (str/join \"\\n\" [\"For want of a nail the shoe was lost.\" \"For want of a shoe the horse was lost.\" \"And all for the want of a nail.\"])))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "full-proverb",
+      "status": "error",
+      "test_code": "(is (= (recite (quote (\"nail\" \"shoe\" \"horse\" \"rider\" \"message\" \"battle\" \"kingdom\"))) (str/join \"\\n\" [\"For want of a nail the shoe was lost.\" \"For want of a shoe the horse was lost.\" \"For want of a horse the rider was lost.\" \"For want of a rider the message was lost.\" \"For want of a message the battle was lost.\" \"For want of a battle the kingdom was lost.\" \"And all for the want of a nail.\"])))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "four-pieces-modernized",
+      "status": "error",
+      "test_code": "(is (= (recite (quote (\"pin\" \"gun\" \"soldier\" \"battle\"))) (str/join \"\\n\" [\"For want of a pin the gun was lost.\" \"For want of a gun the soldier was lost.\" \"For want of a soldier the battle was lost.\" \"And all for the want of a pin.\"])))"
+    }
+  ],
+  "version": 3
+}

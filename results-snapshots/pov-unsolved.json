@@ -1,0 +1,84 @@
+{
+  "status": "fail",
+  "tests": [
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (2) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "singletons",
+      "status": "error",
+      "test_code": "(is (= singleton (pov/of :x singleton)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (2) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "simple-trees",
+      "status": "error",
+      "test_code": "(is (= simple-pulled (pov/of :x simple-tree)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (2) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "nested-trees",
+      "status": "error",
+      "test_code": "(is (= nested-pulled (pov/of :x deeply-nested)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (2) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "extract-node-from-siblings",
+      "status": "error",
+      "test_code": "(is (= flat-pulled (pov/of :x large-flat)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (2) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "moderate-trees",
+      "status": "error",
+      "test_code": "(is (= cousins-pulled (pov/of :x cousins)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (2) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "complex-trees",
+      "status": "error",
+      "test_code": "(is (= with-kids-pulled (pov/of :x target-with-children)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (2) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "not-found-cannot-reparent",
+      "status": "error",
+      "test_code": "(is (nil? (pov/of :not-found! target-with-children)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (2) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "not-found-input-empty",
+      "status": "error",
+      "test_code": "(is (nil? (pov/of :x [])))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (2) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "not-found-input-nil",
+      "status": "error",
+      "test_code": "(is (nil? (pov/of :x nil)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (3) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "path-from-target-to-parent",
+      "status": "error",
+      "test_code": "(is (= [:x :parent] (pov/path-from-to :x :parent simple-tree)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (3) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "path-from-target-to-sibling",
+      "status": "error",
+      "test_code": "(is (= [:x :parent :sib-c] (pov/path-from-to :x :sib-c large-flat)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (3) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "path-from-x-to-2nd-cousin-1",
+      "status": "error",
+      "test_code": "(is (= [:x :parent :grand-parent :aunt :cousin-1 :2nd-cousin-1] (pov/path-from-to :x :2nd-cousin-1 target-with-children)))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (3) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "no-path",
+      "status": "error",
+      "test_code": "(is (nil? (pov/path-from-to :x :not-there! cousins)))"
+    }
+  ],
+  "version": 3
+}

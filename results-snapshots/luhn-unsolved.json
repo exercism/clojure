@@ -1,0 +1,84 @@
+{
+  "status": "fail",
+  "tests": [
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "single-digit-strings",
+      "status": "error",
+      "test_code": "(is (false? (luhn/valid? \"1\")))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "single-zero",
+      "status": "error",
+      "test_code": "(is (false? (luhn/valid? \"0\")))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "sin",
+      "status": "error",
+      "test_code": "(is (true? (luhn/valid? \" 5 9 \")))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "Canadian-SIN",
+      "status": "error",
+      "test_code": "(is (true? (luhn/valid? \"046 454 286\")))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "invalid-Canadian-SIN",
+      "status": "error",
+      "test_code": "(is (false? (luhn/valid? \"046 454 287\")))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "invalid-credit-card",
+      "status": "error",
+      "test_code": "(is (false? (luhn/valid? \"8273 1232 7352 0569\")))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "non-digit-added",
+      "status": "error",
+      "test_code": "(is (false? (luhn/valid? \"046a 454 286\")))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "punctuation",
+      "status": "error",
+      "test_code": "(is (false? (luhn/valid? \"055-444-285\")))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "symbols",
+      "status": "error",
+      "test_code": "(is (false? (luhn/valid? \"055£ 444$ 285\")))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "single-zero-with-space",
+      "status": "error",
+      "test_code": "(is (false? (luhn/valid? \" 0\")))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "lots-of-zeros",
+      "status": "error",
+      "test_code": "(is (true? (luhn/valid? \" 00000\")))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "another-valid-sin",
+      "status": "error",
+      "test_code": "(is (true? (luhn/valid? \"055 444 285\")))"
+    },
+    {
+      "message": "An unexpected error occurred:\nclojure.lang.ArityException: Wrong number of args (1) passed to: sci.impl.fns/fun/arity-0--1162",
+      "name": "nine-doubled",
+      "status": "error",
+      "test_code": "(is (true? (luhn/valid? \"091\")))"
+    }
+  ],
+  "version": 3
+}

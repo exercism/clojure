@@ -1,0 +1,36 @@
+{
+  "status": "pass",
+  "tests": [
+    {
+      "name": "list-empty-test",
+      "status": "pass",
+      "test_code": "(is (= (quote ()) (tracks-on-tracks-on-tracks/new-list)))"
+    },
+    {
+      "name": "list-add-test",
+      "status": "pass",
+      "test_code": "(is (= (quote (\"JavaScript\" \"Java\" \"Lisp\" \"Clojure\")) (-> (tracks-on-tracks-on-tracks/new-list) (tracks-on-tracks-on-tracks/add-language \"Clojure\") (tracks-on-tracks-on-tracks/add-language \"Lisp\") (tracks-on-tracks-on-tracks/add-language \"Java\") (tracks-on-tracks-on-tracks/add-language \"JavaScript\"))))"
+    },
+    {
+      "name": "first-test",
+      "status": "pass",
+      "test_code": "(is (= \"Lisp\" (tracks-on-tracks-on-tracks/first-language (quote (\"Lisp\" \"Clojure\")))))"
+    },
+    {
+      "name": "list-remove-test",
+      "status": "pass",
+      "test_code": "(is (= (quote (\"Clojure\")) (tracks-on-tracks-on-tracks/remove-language (quote (\"Lisp\" \"Clojure\")))))"
+    },
+    {
+      "name": "list-count-test",
+      "status": "pass",
+      "test_code": "(is (= 3 (tracks-on-tracks-on-tracks/count-languages (quote (\"JavaScript\" \"Java\" \"Clojure\")))))"
+    },
+    {
+      "name": "learning-list-test",
+      "status": "pass",
+      "test_code": "(is (= 3 (tracks-on-tracks-on-tracks/learning-list)))"
+    }
+  ],
+  "version": 3
+}
