@@ -25,7 +25,7 @@
                           (System/exit 0))
       errors (do (doall (map println errors))
                  (System/exit 1))
-      :else (merge options {:clojure-repo-path (or (first arguments) ".")}))))
+      :else (merge options {:clojure-repo-path (or (first arguments) "../clojure")}))))
 
 (when-not (fs/directory? (:clojure-repo-path opts))
   (throw (IllegalArgumentException.
@@ -55,7 +55,7 @@
 
 (defn snapshot-path [{:keys [slug]} solved?]
   (let [filename (format "%s-%s.json" slug (if solved? "solved" "unsolved"))]
-    (path-str "results-snapshots" filename)))
+    (path-str *file* ".." ".." "results-snapshots" filename)))
 
 (defn cp [src dest & opts]
   (println "Copying" (str src) "to" (str dest))
@@ -117,9 +117,7 @@
 
 (defn run-all-tests []
   (let [temp-dir (fs/create-temp-dir {:prefix "exercism-clojure-"
-                                      :path 
-                                      "."
-                                      #_"/home/runner/work/clojure/clojure/clojure/"})]
+                                      :path "/home/runner/work/clojure/clojure/clojure/"})]
     (->> (for [{:keys [slug] :as ex} (get-exercises)]
            (let [test-dir (fs/path temp-dir slug)
                  _  (cp (exercise-path ex) test-dir)
@@ -130,7 +128,6 @@
          (reduce #(merge-with + %1 %2) {:total 0 :passed 0 :failed 0}))))
 
 (defn -main []
-  
   (let [results (run-all-tests)]
     (prn results)
     (System/exit (:failed results))))
