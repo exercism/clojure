@@ -32,7 +32,7 @@ its code is in the range '\u0000' through '\u001F'
 or in the range '\u007F' through '\u009F'.
 
 ```clojure
-(clean "my\0Id")
+(clean "my\u007FId")
 ;;=> "myCTRLId"
 ```
 
