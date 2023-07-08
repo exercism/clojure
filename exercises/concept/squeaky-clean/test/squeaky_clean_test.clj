@@ -15,7 +15,7 @@
   (is (= "" (squeaky-clean/clean ""))))
 
 (deftest ^{:task 2} clean-string-with-control-char
-  (is (= "myCTRLId" (squeaky-clean/clean "my\u0000Id"))))
+  (is (= "myCTRLId" (squeaky-clean/clean "my\u0080Id"))))
 
 (deftest ^{:task 3} convert-kebab-to-camel-case
   (is (= "àḂç" (squeaky-clean/clean "à-ḃç"))))
