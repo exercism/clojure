@@ -24,6 +24,6 @@ Raising e to a complex exponent can be expressed as `e^(a + i * b) = e^a * e^(i 
 Implement the following operations:
 
 - addition, subtraction, multiplication and division of two complex numbers,
-- conjugate, absolute value, exponent of a given complex number.
+- conjugate, absolute value of a given complex number.
 
 Assume the programming language you are using does not have an implementation of complex numbers.
