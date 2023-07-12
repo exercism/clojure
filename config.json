@@ -179,7 +179,7 @@
         "uuid": "0e0fec77-651a-45a7-af99-a768ebebef05",
         "practices": ["numbers"],
         "prerequisites": ["numbers"],
-        "difficulty": 1,
+        "difficulty": 4,
         "topics": [
           "math"
         ]
@@ -201,7 +201,7 @@
         "uuid": "0f7b1858-15d0-467d-9f94-56408249c2f7",
         "practices": [],
         "prerequisites": ["strings"],
-        "difficulty": 1,
+        "difficulty": 3,
         "topics": [
           "strings", "core_functions"
         ]
@@ -212,7 +212,7 @@
         "uuid": "49f62bbc-0f60-4922-b5a6-f266b80442f4",
         "practices": [],
         "prerequisites": ["numbers"],
-        "difficulty": 2,
+        "difficulty": 3,
         "topics": [
           "algorithms, core_functions"
         ]
@@ -223,7 +223,7 @@
         "uuid": "b99ed7da-98a8-43f0-8162-05c5408f6ac5",
         "practices": ["strings"],
         "prerequisites": ["strings", "booleans"],
-        "difficulty": 2,
+        "difficulty": 3,
         "topics": [
           "strings", "regular_expressions"
         ]
@@ -234,7 +234,7 @@
         "uuid": "7b8c5f7e-3c7d-4e69-ba8c-f29bb492a628",
         "practices": ["numbers"],
         "prerequisites": ["numbers", "vectors"],
-        "difficulty": 2,
+        "difficulty": 3,
         "topics": [
           "math"
         ]
@@ -245,7 +245,7 @@
         "uuid": "11818959-7e42-4a1d-8dfd-288cea744d66",
         "practices": ["strings"],
         "prerequisites": ["strings", "vectors"],
-        "difficulty": 2,
+        "difficulty": 3,
         "topics": [
           "strings"
         ]
@@ -267,7 +267,7 @@
         "uuid": "9516323c-721e-4bfc-84df-9bc32e467197",
         "practices": ["numbers"],
         "prerequisites": ["numbers", "conditionals"],
-        "difficulty": 2,
+        "difficulty": 3,
         "topics": [
           "math"
         ]
@@ -278,7 +278,7 @@
         "uuid": "ceaacb97-9c2c-43db-a9ac-28ebe6650f47",
         "practices": ["numbers"],
         "prerequisites": ["numbers"],
-        "difficulty": 2,
+        "difficulty": 4,
         "topics": [
           "math"
         ]
@@ -289,7 +289,7 @@
         "uuid": "befca7ee-fc29-4ef0-afd7-2d3f68aa47fb",
         "practices": [],
         "prerequisites": ["lists", "numbers", "strings"],
-        "difficulty": 2,
+        "difficulty": 4,
         "topics": [
           "integers", "maps"
         ]
@@ -300,7 +300,7 @@
         "uuid": "d120ad9a-98e9-4de7-9cb6-6aef3101cd1c",
         "practices": [],
         "prerequisites": ["numbers", "strings", "conditionals"],
-        "difficulty": 2,
+        "difficulty": 4,
         "topics": [
           "strings", "conditionals"
         ]
@@ -311,7 +311,7 @@
         "uuid": "167113f2-b015-4c04-809d-670193758c25",
         "practices": ["numbers"],
         "prerequisites": ["numbers"],
-        "difficulty": 2,
+        "difficulty": 4,
         "topics": [
           "math"
         ]
@@ -322,7 +322,7 @@
         "uuid": "223d10d6-539d-441f-89ba-77f7743e6092",
         "practices": [],
         "prerequisites": ["strings", "conditionals"],
-        "difficulty": 2,
+        "difficulty": 3,
         "topics": [
           "strings", "conditionals", "exception_handling"
         ]
@@ -752,7 +752,7 @@
         "uuid": "0ff7efbe-855e-4a81-9b64-f07d1557813f",
         "practices": ["numbers", "strings", "conditionals"],
         "prerequisites": ["numbers", "strings", "conditionals"],
-        "difficulty": 3,
+        "difficulty": 7,
         "topics": [
           "strings", "integers", "exception_handling"
         ]
@@ -807,7 +807,7 @@
         "uuid": "da04dfa4-5a66-49a5-a7ca-6320cfa4158f",
         "practices": [],
         "prerequisites": ["numbers", "booleans"],
-        "difficulty": 4,
+        "difficulty": 7,
         "topics": [
           "graph_theory", "games"
         ]
@@ -851,7 +851,7 @@
         "uuid": "71d92de0-9f54-4e07-9a8f-fcd477f00219",
         "practices": [],
         "prerequisites": ["vectors", "numbers", "conditionals"],
-        "difficulty": 4,
+        "difficulty": 7,
         "topics": [
           "recursivity"
         ]
@@ -873,7 +873,7 @@
         "uuid": "cc0d15ad-d562-458c-8d05-4b213693cfb9",
         "practices": [],
         "prerequisites": ["strings"],
-        "difficulty": 5,
+        "difficulty": 7,
         "topics": [
           "transforming"
         ]
@@ -906,7 +906,7 @@
         "uuid": "e69ecf2e-8629-4d20-a90f-6de7536247ce",
         "practices": ["conditionals"],
         "prerequisites": ["conditionals"],
-        "difficulty": 6,
+        "difficulty": 7,
         "topics": [
           "strings", "conditionals"
         ]
@@ -917,7 +917,7 @@
         "uuid": "5528f567-2b5b-498a-b166-984b2c90f6a5",
         "practices": ["numbers", "strings", "conditionals"],
         "prerequisites": ["numbers", "strings", "conditionals"],
-        "difficulty": 6,
+        "difficulty": 7,
         "topics": [
           "regular_expressions", "parsing"
         ]
