@@ -10,7 +10,7 @@
   - `first` returns the first item from a list.
   - `rest` returns the list without the first item.
   - `count` returns the number of items in the list.
-  - `conj` returns a list with items added at beginning in list. The difference between conj and cons is conj works with other datatype unlike cons.The conj function returns a clojure.lang.PersistentList, while the cons function returns a clojure.lang.Cons.
+  - `conj` returns a list with items added at beginning in list. The difference between conj and cons is conj works with other data types unlike cons.The conj function returns a clojure.lang.PersistentList, while the cons function returns a clojure.lang.Cons.
 ## Additional Resources
 
 - [list - clojure.core | ClojureDocs](https://clojuredocs.org/clojure.core/list)
