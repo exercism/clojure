@@ -10,6 +10,7 @@
   - `first` returns the first item from a list.
   - `rest` returns the list without the first item.
   - `count` returns the number of items in the list.
+  - `conj` returns a list with items appended in it.
 
 ## Additional Resources
 
