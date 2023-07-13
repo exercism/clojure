@@ -2,6 +2,12 @@
   (:require [clojure.test :refer [deftest is testing]]
             [complex-numbers :as c]))
 
+(defn- float-equal?
+  "Returns true if the complex number c1 is equal to the complex number c2.
+  This happens only if their corresponding parts are equal as floats."
+  [c1 c2]
+  (= (mapv float c1) (mapv float c2)))
+
 ;; Tests for Real Part
 (deftest real-of-purely-real-number
   (testing "Real part of a purely real number"
@@ -91,44 +97,44 @@
 ;; Tests for Division
 (deftest divide-purely-real-numbers
   (testing "Divide purely real numbers"
-    (is (= [0.5 0.0]
-           (c/div [1 0] [2 0])))))
+    (is (float-equal? [0.5 0.0]
+                      (c/div [1 0] [2 0])))))
 
 (deftest divide-purely-imaginary-numbers
   (testing "Divide purely imaginary numbers"
-    (is (= [0.5 0.0]
-           (c/div [0 1] [0 2])))))
+    (is (float-equal? [0.5 0.0]
+                      (c/div [0 1] [0 2])))))
 
 (deftest divide-numbers-with-real-and-imaginary-part
   (testing "Divide numbers with real and imaginary part"
-    (is (= [0.44 0.08]
-           (c/div [1 2] [3 4])))))
+    (is (float-equal? [0.44 0.08]
+                      (c/div [1 2] [3 4])))))
 
 ;; Tests for Absolute value
 (deftest absolute-of-positive-purely-real-number
   (testing "Absolute value of a positive purely real number"
-    (is (= 5.0
-           (c/abs [5 0])))))
+    (is (= (float 5.0)
+           (float (c/abs [5 0]))))))
 
 (deftest absolute-of-negative-purely-real-number
   (testing "Absolute value of a negative purely real number"
-    (is (= 5.0
-           (c/abs [-5 0])))))
+    (is (= (float 5.0)
+           (float (c/abs [-5 0]))))))
 
 (deftest absolute-of-positive-purely-imaginary-number
   (testing "Absolute value of a purely imaginary number with positive imaginary part"
-    (is (= 5.0
-           (c/abs [0 5])))))
+    (is (= (float 5.0)
+           (float (c/abs [0 5]))))))
 
 (deftest absolute-of-negative-purely-imaginary-number
   (testing "Absolute value of a purely imaginary number with negative imaginary part"
-    (is (= 5.0
-           (c/abs [0 -5])))))
+    (is (= (float 5.0)
+           (float (c/abs [0 -5]))))))
 
 (deftest absolute-of-real-and-imaginary-number
   (testing "Absolute value of a number with real and imaginary part"
-    (is (= 5.0
-           (c/abs [3 4])))))
+    (is (= (float 5.0)
+           (float (c/abs [3 4]))))))
 
 ;; Tests for Complex conjugate
 (deftest conjugate-of-purely-real-number
@@ -179,10 +185,10 @@
 
 (deftest divide-complex-by-real-number
   (testing "Divide complex number by real number"
-    (is (= [1.0 10.0]
-           (c/div [10 100] [10 0])))))
+    (is (float-equal? [1.0 10.0]
+                      (c/div [10 100] [10 0])))))
 
 (deftest divide-real-by-complex-number
   (testing "Divide real number by complex number"
-    (is (= [2.5 -2.5]
-           (c/div [5 0] [1 1])))))
+    (is (float-equal? [2.5 -2.5]
+                      (c/div [5 0] [1 1])))))
