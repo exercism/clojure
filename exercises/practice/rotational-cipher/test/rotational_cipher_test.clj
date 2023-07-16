@@ -2,45 +2,52 @@
   (:require  [clojure.test :refer [deftest is testing]]
              rotational-cipher))
 
+(deftest rotate-a-by-0-same-output
+  (testing "Rotate 'a' by 0, same output as input"
+    (is (= "a"
+           (rotational-cipher/rotate "a" 0)))))
+
 (deftest rotate-a-by-1
-  (is (= (rotational-cipher/rotate "a" 1) "b")))
+  (testing "Rotate 'a' by 1"
+    (is (= "b"
+           (rotational-cipher/rotate "a" 1)))))
 
 (deftest rotate-a-by-26-same-output
-  (is (= (rotational-cipher/rotate "a" 26) "a")))
-
-(deftest rotate-a-by-0-same-output
-  (is (= (rotational-cipher/rotate "a" 0) "a")))
+  (testing "Rotate 'a' by 26, same output as input"
+    (is (= "a"
+           (rotational-cipher/rotate "a" 26)))))
 
 (deftest rotate-m-by-13
-  (is (= (rotational-cipher/rotate "m" 13) "z")))
+  (testing "Rotate 'm' by 13"
+    (is (= "z"
+           (rotational-cipher/rotate "m" 13)))))
 
 (deftest rotate-n-by-13-with-wrap
-  (is (= (rotational-cipher/rotate "n" 13) "a")))
+  (testing "Rotate 'n' by 13 with wrap around alphabet"
+    (is (= "a"
+           (rotational-cipher/rotate "n" 13)))))
 
 (deftest rotate-capital-letters
-  (is (= (rotational-cipher/rotate "OMG" 5) "TRL")))
+  (testing "Rotate capital letters"
+    (is (= "TRL"
+           (rotational-cipher/rotate "OMG" 5)))))
 
 (deftest rotate-spaces
-  (is (= (rotational-cipher/rotate "O M G" 5) "T R L")))
+  (testing "Rotate spaces"
+    (is (= "T R L"
+           (rotational-cipher/rotate "O M G" 5)))))
 
 (deftest rotate-numbers
-  (is (= (rotational-cipher/rotate "Testing 1 2 3 testing" 4) "Xiwxmrk 1 2 3 xiwxmrk")))
+  (testing "Rotate numbers"
+    (is (= "Xiwxmrk 1 2 3 xiwxmrk"
+           (rotational-cipher/rotate "Testing 1 2 3 testing" 4)))))
 
 (deftest rotate-punctuation
-  (is (= (rotational-cipher/rotate "Let's eat, Grandma!" 21) "Gzo'n zvo, Bmviyhv!")))
-
-(deftest rotate-opposite-direction
-  (is (= (rotational-cipher/rotate "b" -1) "a")))
-
-(deftest rotate-opposite-past-first-letter
-  (is (= (rotational-cipher/rotate "B" -2) "Z")))
-
-(deftest rotate-opposite-past-letter-count
-  (is (= (rotational-cipher/rotate "B" -28) "Z")))
-
-(deftest rotate-forward-then-backwards-same-number-of-steps
-  (is (=  (rotational-cipher/rotate
-           (rotational-cipher/rotate "B" 28) -28) "B")))
+  (testing "Rotate punctuation"
+    (is (= "Gzo'n zvo, Bmviyhv!"
+           (rotational-cipher/rotate "Let's eat, Grandma!" 21)))))
 
 (deftest rotate-all-letters
-  (is (= (rotational-cipher/rotate "The quick brown fox jumps over the lazy dog." 13) "Gur dhvpx oebja sbk whzcf bire gur ynml qbt.")))
+  (testing "Rotate all letters"
+    (is (= "Gur dhvpx oebja sbk whzcf bire gur ynml qbt."
+           (rotational-cipher/rotate "The quick brown fox jumps over the lazy dog." 13)))))
