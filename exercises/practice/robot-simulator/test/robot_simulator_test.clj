@@ -91,10 +91,10 @@
              (simulate "A" molly))))))
 
 ;; Tests for Follow series of instructions
-(deftest moving-east-and-north
-  (testing "Follow series of instructions -> Moving east and north"
+(deftest moving-east-and-north-from-readme
+  (testing "Follow series of instructions -> Moving east and north from README"
     (let [molly (robot {:x 7 :y 3} :north)]
-      (is (= {:bearing :wes :coordinates {:x 9 :y 4}}
+      (is (= {:bearing :west :coordinates {:x 9 :y 4}}
              (simulate "RAALAL" molly))))))
 
 (deftest moving-west-and-north
