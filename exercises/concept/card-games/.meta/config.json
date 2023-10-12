@@ -1,0 +1,22 @@
+{
+    "authors": [
+      "bobbicodes"
+    ],
+    "forked_from": [
+        "python/card-games"
+      ],
+    "files": {
+      "solution": [
+        "src/card_games.clj"
+      ],
+      "test": [
+        "test/card_games_test.clj"
+      ],
+      "exemplar": [
+        ".meta/exemplar.clj"
+      ]
+    },
+    "icon": "poker",
+    "blurb": "Learn about lists by tracking hands in card games."
+  }
+  
