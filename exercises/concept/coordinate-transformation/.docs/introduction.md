@@ -16,7 +16,8 @@
 Using an atom allows for some state to be preserved:
 
 ```clojure
-;; This function closure increments the counter's state in the outer lexical context.
+;; This function closure increments the counter's state
+;; in the outer lexical context.
 ;; This way the counter can be shared between many calling contexts.
 
 (def increment
