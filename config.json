@@ -930,8 +930,8 @@
         "slug": "bank-account",
         "name": "Bank Account",
         "uuid": "d67a7a46-050c-4472-84bd-2e216079a452",
-        "practices": ["floating-point-numbers"],
-        "prerequisites": ["floating-point-numbers"],
+        "practices": [],
+        "prerequisites": ["conditionals", "numbers"],
         "difficulty": 7,
         "topics": [
           "conditionals"
