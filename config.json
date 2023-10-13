@@ -161,6 +161,14 @@
         "concepts": [],
         "prerequisites": [],
         "status": "wip"
+      },
+      {
+        "slug": "card-games",
+        "name": "Card Games",
+        "uuid": "01a06d2b-ffb1-4497-9bb3-d93ee2d0931b",
+        "concepts": ["lists"],
+        "prerequisites": ["basics", "conditionals", "booleans"],
+        "status": "wip"
       }
     ],
     "practice": [
