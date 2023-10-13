@@ -154,9 +154,9 @@
         "slug": "coordinate-transformation",
         "name": "Coordinate Transformation",
         "uuid": "5b23eabd-6ebb-4fed-b889-9324ad174a5f",
-        "concepts": [],
-        "prerequisites": [],
-        "status": "wip"
+        "concepts": ["closures"],
+        "prerequisites": ["vectors"],
+        "status": "beta"
       },
       {
         "slug": "card-games",

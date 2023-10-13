@@ -1,0 +1,10 @@
+[
+    {
+      "url": "https://clojure.org/guides/higher_order_functions#_functions_returning_functions_and_closures",
+      "description": "Clojure guide: Functions returning functions and closures"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Closure_(computer_programming)",
+      "description": "Wikipedia: Closure"
+    }
+  ]
