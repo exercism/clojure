@@ -2,7 +2,7 @@
 
 ## General
 
-- For each task, each function should return a function closure, using the supplied arguments.
+- For each task, each function should return a function closure, using the supplied arguments. See the section of the Clojure docs on [function closures][closures] for reference.
 
 ## 1. Translate the coordinates
 
@@ -24,3 +24,4 @@
 - To save the value of the arguments and the last result, you can use an [atom][atoms].
 
 [atoms]: https://clojure.org/reference/atoms
+[closures]: https://clojure.org/guides/higher_order_functions#_functions_returning_functions_and_closures
