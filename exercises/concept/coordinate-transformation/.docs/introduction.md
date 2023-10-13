@@ -24,7 +24,7 @@ Using an atom allows for some state to be preserved:
     (fn [] (swap! counter inc))))
 ```
 
-Each successive call to `increment' increments its counter:
+Each successive call to `increment` increments its counter:
 
 ``` clojure
 (increment)
