@@ -1,0 +1,4 @@
+{
+    "blurb": "Clojure transparently supports closures, that means variables from an outer scope can also be used inside of a function.",
+    "authors": ["bobbicodes"]
+  }

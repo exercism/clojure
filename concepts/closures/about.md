@@ -1,4 +1,4 @@
-# Introduction
+# About
 
 **Closures** are a programming pattern [in Clojure][clojure-guide-closures] which allows variables from an outer [lexical scope][wiki-lexical-scope] to be used inside of a function. Clojure supports closures transparently, and they are often used without knowing what they are.
 

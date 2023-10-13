@@ -1,0 +1,6 @@
+{
+    "blurb": "Atoms in Clojure are a reference type for managing shared state.",
+    "authors": [
+        "bobbicodes"
+    ]
+}
