@@ -48,12 +48,8 @@
         "slug": "tracks-on-tracks-on-tracks",
         "name": "Tracks on Tracks on Tracks",
         "uuid": "0d05620f-3ef9-43aa-8e89-660187e090f3",
-        "concepts": [
-          "lists"
-        ],
-        "prerequisites": [
-          "basics"
-        ],
+        "concepts": [],
+        "prerequisites": [],
         "status": "deprecated"
       },
       {
