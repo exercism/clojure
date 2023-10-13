@@ -42,7 +42,3 @@
   (is (= '((1 2 22) (5 9 22) (5 9 10) (1 2 3))
          (map card-games/maybe-double-last
               '((1 2 11) (5 9 11) (5 9 10) (1 2 3))))))
-
-(comment
-  (clojure.test/run-tests)
-  )

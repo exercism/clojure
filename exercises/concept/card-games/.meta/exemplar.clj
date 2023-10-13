@@ -48,17 +48,3 @@
   (if (= 11 (last hand))
     (concat (butlast hand) '(22))
     hand))
-
-(comment
-  (map rounds '(0 1 10 27 99 666))
-  (rounds 27)
-  (concat-rounds '(27 28 29) '(35 36))
-  (contains-round? '(27 28 29 35 36) 29)
-  (contains-round? '(27 28 29 35 36) 30)
-  (card-average '(5 6 7))
-  (approx-average? '(1 2 3))
-  (approx-average? '(2 3 4 8 8))
-  (approx-average? '(1 2 4 5 8))
-  (average-even-odd? '(1 2 3))
-  (average-even-odd? '(1 2 3 4))
-  (maybe-double-last '(5 9 11)))
