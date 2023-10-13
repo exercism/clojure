@@ -9,7 +9,6 @@ so you decide to use a function closure to create reusable transformations for `
 Implement the `translate2d` function that returns a function making use of a closure to perform a repeatable 2d translation of a coordinate pair.
 
 ```clojure
-
 (defn translate2d
   "Returns a function making use of a closure to
    perform a repeatable 2d translation of a coordinate pair."
