@@ -1077,6 +1077,16 @@
       "uuid": "268d79d7-1bdd-41a5-a7a9-275332d3967c",
       "slug": "sequential-destructuring",
       "name": "Sequential Destructuring"
+    },
+    {
+      "uuid": "6693b4e0-bba7-465c-b1f8-0ddb00fc3d23",
+      "slug": "atoms",
+      "name": "Atoms"
+    },
+    {
+      "uuid": "75d16185-4ca9-49d1-969f-3dd6fc377b96",
+      "slug": "closures",
+      "name": "Closures"
     }
   ],
   "key_features": [
