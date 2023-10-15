@@ -1,7 +1,7 @@
 (ns date-parser-test
   (:require [clojure.test :refer [deftest testing is]]
             date-parser))
-            
+
 (deftest ^{:task 1} day-test
   (testing "numeric pattern for day matches"
     (testing "un-padded 1"
@@ -84,7 +84,7 @@
       (is (= "08" (re-matches (re-pattern date-parser/day) "08"))))
     (testing "padded 09"
       (is (= "09" (re-matches (re-pattern date-parser/day) "09")))))
-  (testing "numeric pattern for day doesn't match"
+  (testing "numeric pattern for a day that doesn't match"
     (testing "too few digits"
       (is (nil? (re-matches (re-pattern date-parser/day) ""))))
     (testing "too many digits"
@@ -120,8 +120,8 @@
       (is (= "11" (re-matches (re-pattern date-parser/month) "11"))))
     (testing "un-padded 12"
       (is (= "12" (re-matches (re-pattern date-parser/month) "12"))))
-    (testing "un-padded 1"
-      (is (= "1" (re-matches (re-pattern date-parser/month) "1"))))
+    (testing "padded 01"
+      (is (= "01" (re-matches (re-pattern date-parser/month) "01"))))
     (testing "padded 02"
       (is (= "02" (re-matches (re-pattern date-parser/month) "02"))))
     (testing "padded 03"
@@ -138,7 +138,7 @@
       (is (= "08" (re-matches (re-pattern date-parser/month) "08"))))
     (testing "padded 09"
       (is (= "09" (re-matches (re-pattern date-parser/month) "09")))))
-  (testing "numeric pattern for month doesn't match"
+  (testing "numeric pattern for month that doesn't match"
     (testing "too few digits"
       (is (nil? (re-matches (re-pattern date-parser/month) ""))))
     (testing "too many digits"
@@ -182,7 +182,10 @@
     (testing "numeric day of the week (0-indexed)"
       (is (nil? (date-parser/day-names "0"))))
     (testing "numeric day of the week (1-indexed)"
-      (is (nil? (date-parser/day-names "1"))))))
+      (is (nil? (date-parser/day-names "1")))))
+  (testing "day names don't match with trailing or leading whitespace"
+    (is (nil? (date-parser/day-names " Sunday ")))))
+
 
 (deftest ^{:task 2} month-names-test
   (testing "month names match"
@@ -206,7 +209,9 @@
     (testing "numeric month of the year (0-indexed)"
       (is (nil? (date-parser/month-names "0"))))
     (testing "numeric month of the year (1-indexed)"
-      (is (nil? (date-parser/month-names "1"))))))
+      (is (nil? (date-parser/month-names "1")))))
+  (testing "month names don't match with trailing or leading whitespace"
+    (is (nil? (date-parser/day-names " January ")))))
 
 (deftest ^{:task 3} capture-test
   (testing "capture numeric month"
@@ -228,3 +233,39 @@
   (testing "day and month named date"
     (is (= {:year "1970", :month-name "January", :day "1", :day-name "Thursday"}
            (date-parser/capture-day-month-name-date "Thursday, January 1, 1970")))))
+
+(deftest match-numeric-date-test
+  (testing "pattern to match numeric date is a regex"
+    (is (= java.util.regex.Pattern (type date-parser/match-numeric-date))))
+  (testing "numeric date matches"
+    (is (= "01/02/1970"
+           (first (re-matches date-parser/match-numeric-date "01/02/1970")))))
+  (testing "numeric date has named captures"
+    (is (= ["01/02/1970" "01" "02" "1970"]
+           (re-matches date-parser/match-numeric-date "01/02/1970"))))
+  (testing "numeric date with a prefix doesn't match"
+    (is (nil? (re-matches date-parser/match-numeric-date "The day was 01/02/1970"))))
+  (testing "numeric date with a suffix doesn't match"
+    (is (nil? (re-matches date-parser/match-numeric-date "01/02/1970 was the day"))))
+  (testing "pattern to match month name date is a regex"
+    (is (= java.util.regex.Pattern (type date-parser/match-month-name-date))))
+  (testing "month named date matches"
+    (is (= "January 1, 1970"
+           (first (re-matches date-parser/match-month-name-date "January 1, 1970")))))
+  (testing "month named date has named captures"
+    (is (= ["January 1, 1970" "January" "1" "1970"]
+           (re-matches date-parser/match-month-name-date "January 1, 1970"))))
+  (testing "month named date with a prefix doesn't match"
+    (is (nil? (re-matches date-parser/match-month-name-date "The day was January 1, 1970"))))
+  (testing "month named date with a suffix doesn't match"
+    (is (nil? (re-matches date-parser/match-month-name-date "January 1, 1970 was the day"))))
+  (testing "day and month names date matches"
+    (is (= "Thursday, January 1, 1970"
+           (first (re-matches date-parser/match-day-month-name-date "Thursday, January 1, 1970")))))
+  (testing "month named date has named captures"
+    (is (= ["Thursday, January 1, 1970" "Thursday" "January" "1" "1970"]
+           (re-matches date-parser/match-day-month-name-date "Thursday, January 1, 1970"))))
+  (testing "day and month names date with a prefix doesn't match"
+    (is (nil? (re-matches date-parser/match-day-month-name-date "The day way Thursday, January 1, 1970"))))
+  (testing "day and month names date with a suffix doesn't match"
+    (is (nil? (re-matches date-parser/match-day-month-name-date "Thursday, January 1, 1970 was the day")))))
