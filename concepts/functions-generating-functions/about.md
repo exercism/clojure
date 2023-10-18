@@ -1,0 +1,3 @@
+# About
+
+Being a functional language, functions in Clojure are treated as first-level citizens. They can be processed by other functions just like data is, and they can also be generated, just like data is. Clojure in particular comes with a rich set of high-order functions that derive new functions based on existing ones. We will explore here four important cases: `partial`, `comp`, `memoize` and `juxt`. These function-generating functions fall into a broader category of higher-order functions, such as `map`, `reduce`, `apply`, `complement`, to name a few, which operate on existing functions.
