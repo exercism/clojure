@@ -9,7 +9,8 @@ In general, given an existing function `my-function`, with parameters `p1, p2, .
 The result is a new function which applies the original one `my-function` by fixing `p1=v1, p2=v2, ..., pM=vM`. Our new function takes as input the remaining parameters `pM+1, pM+2, ..., pN`, whose values have not been indicated when applying `partial`:
 
 ```clojure
-(def my-new-function (partial my-function v1 v2 ... vM))
+(def my-new-function 
+  (partial my-function v1 v2 ... vM))
 (my-new-function xM+1 xM+2 ... xN)
 ; => equivalent to (my-function v1 v2 ... vM xM+1 xM+2 ... xN)
 ```
@@ -33,7 +34,8 @@ As a second example, we have a function `generic-greetings` that uses the name o
 And use `partial` to always use a specific greetings message:
 
 ```clojure
-(def say-hello-and-how-are-you-doing (partial generic-greetings "Hello " ", how are you doing?"))
+(def say-hello-and-how-are-you-doing 
+  (partial generic-greetings "Hello " ", how are you doing?"))
 (say-hello-and-how-are-you-doing "Mary")
 ; => Hello Mary, how are you doing?
 ```
@@ -54,7 +56,8 @@ In clojure, this is equivalent to doing:
 By using comp, we can create a new function which performs this composition for us:
 
 ```clojure
-(def my-function-composition (comp f1 f2 ... fN))
+(def my-function-composition 
+  (comp f1 f2 ... fN))
 (my-function-composition x)
 ; equivalent to
 (f1 (f2 (... (fN x))))
@@ -64,7 +67,8 @@ As an example, let's say we want to sum a series of numbers and then multiply th
 
 
 ```clojure
-(def six-times-result-sum (comp (partial * 6) +))
+(def six-times-result-sum 
+  (comp (partial * 6) +))
 (six-times-result-sum 3 2)
 ; = ((partial * 6) (+ 3 2))
 ; = (* 6 (+ 3 2))
@@ -91,7 +95,8 @@ In order to see how this works, let us use a synthetic case where the function s
 ; => 6
 
 ; We define a memoized function
-(def my-memoized-fn (memoize my-time-consuming-fn) )
+(def my-memoized-fn 
+  (memoize my-time-consuming-fn) )
 
 ; We call the memoized function and measure its execution time. 
 ; The first execution actually runs the function, taking
@@ -133,6 +138,5 @@ In order to see how this works, let us use a synthetic case where the function s
 
 As a simple example, we generate a function that computes the product of x by successive factors, from 2 to 5:
 ```clojure
-(def multiply-by-successive-factors (juxt (partial * 2) (partial * 3) (partial * 4) (partial * 5)))
-(multiply-by-successive-factors 10) ; => [20 30 40 50]
+((juxt (partial * 2) (partial * 3) (partial * 4) (partial * 5)) 10) ; => [20 30 40 50]
 ```

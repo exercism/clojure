@@ -1,6 +1,26 @@
 [
-    {
-      "url": "https://clojure.org/reference/reader#_literals",
-      "description": "Clojure reference: Literals"
-    }
-  ]
+  {
+    "url": "https://clojure.github.io/clojure/clojure.core-api.html#clojure.core/partial",
+    "description": "Clojure API: partial"
+  },
+  {
+    "url": "https://clojure.github.io/clojure/clojure.core-api.html#clojure.core/comp",
+    "description": "Clojure API: comp"
+  },
+  {
+    "url": "https://clojure.github.io/clojure/clojure.core-api.html#clojure.core/comp",
+    "description": "Clojure API: comp"
+  },
+  {
+    "url": "https://clojuredocs.org/clojure.core/memoize",
+    "description": "Clojure docs: memoize"
+  },
+  {
+    "url": "https://clojuredocs.org/clojure.core/juxt",
+    "description": "Clojure docs: juxt"
+  },
+  {
+    "url": "https://clojure.org/guides/higher_order_functions",
+    "description": "Clojure guides: Higher Order Functions"
+  }
+]
