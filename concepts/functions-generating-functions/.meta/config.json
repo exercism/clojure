@@ -1,0 +1,4 @@
+{
+    "blurb": "We explore here four important cases of high-order functions that are used to generate new functions: `partial`, `comp`, `memoize` and `juxt`",
+    "authors": ["JaumeAmoresDS"]
+  }

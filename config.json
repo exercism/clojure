@@ -1087,6 +1087,11 @@
       "uuid": "75d16185-4ca9-49d1-969f-3dd6fc377b96",
       "slug": "closures",
       "name": "Closures"
+    },
+    {
+      "uuid": "9d9d7cf1-8504-4f7b-b2a0-1b3b638dc0d9",
+      "slug": "functions-generating-functions",
+      "name": "Functions generating functions"
     }
   ],
   "key_features": [
