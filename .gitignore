@@ -23,3 +23,4 @@ pom.xml.asc
 *.calva
 **/*/*.ipynb_checkpoints
 concepts/functions-generating-functions/introduction_files/
+concepts/functions-generating-functions/*.html
