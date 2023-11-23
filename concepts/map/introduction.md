@@ -1,12 +1,6 @@
 # Introduction
 
-This concept provides a basic introduction to the `map` higher-order function, where we explain its most common usage form. Advanced mechanisms for using `map` are deferred to a later concept.
-
-## Basic overview of map
-
-Let us first provide a simplified explanation that covers the most common usage of `map`, and briefly explain later more elaborate usage forms.
-
-In its most basic form, `map` accepts two arguments: a function `f` and a sequence of elements `s`. It then applies `f` to each element of the sequence, and returns a list where the i-th element is the result of applying `f` to the i-th element of `s`:
+In its most basic form, the higher-order function `map` accepts two arguments: a function `f` and a sequence of elements `s`. It then applies `f` to each element of the sequence, and returns a list where the i-th element is the result of applying `f` to the i-th element of `s`:
 
 ```clojure
 (map inc [1 2 3]) ; => (2 3 4)

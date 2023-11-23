@@ -1,9 +1,5 @@
 # Introduction
 
-This concept provides a basic introduction to the `reduce` higher-order function, where we explain its most common usage form. Advanced mechanisms for using `reduce` are deferred to later concepts from our syllabus.
-
-## Basic overview of reduce
-
 The higher-order funcion `reduce` accepts either two or three arguments. When called with three arguments, `(reduce f val coll)` applies the function `f` to  `val` and the first element `x_1` of the collection `coll`: `(f val x_1)`. Then, it applies the function `f` to its own result and the second element `x_2` of the collection `coll`: `(f (f val x_1) x_2)`. Then again, it applies `f` to its previous result and the third element of `coll`, and so on until all the elements of `coll` are used. Let's see a typical example using `+` as our function:
 
 ```clojure
@@ -57,5 +53,5 @@ Especial cases arise when we use an empty collection or a collection with only o
 
 ## Using collections of functions
 
-`reduce` accepts any type of collection, including one that contains functions. In that case, we will typically use three arguments `(reduce f val coll)`, and the function `f` applies the first function `g_1` from the collection to `val`, then the second function `g_2` to the result of the previous application, `(f (f val g_1) g_2)` and so on until all the functions are applied. While this is an interesting use case, we leave a detailed explanation to more advanced concepts in our syllabus.
+`reduce` accepts any type of collection, including one that contains functions. In that case, we will typically use three arguments `(reduce f val coll)`, and the function `f` applies the first function `g_1` from the collection to `val`, then the second function `g_2` to the result of the previous application, `(f (f val g_1) g_2)` and so on until all the functions are applied. 
 
