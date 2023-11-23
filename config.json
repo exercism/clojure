@@ -1092,6 +1092,16 @@
       "uuid": "9d9d7cf1-8504-4f7b-b2a0-1b3b638dc0d9",
       "slug": "functions-generating-functions",
       "name": "Functions generating functions"
+    },
+    {
+      "uuid": "2369e86f-6921-49b6-807d-b1bdf9e37cd2",
+      "slug": "map",
+      "name": "map"
+    },
+    {
+      "uuid": "1fcc926b-4e79-4377-874f-41626e59b87b",
+      "slug": "reduce",
+      "name": "reduce"
     }
   ],
   "key_features": [
