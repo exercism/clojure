@@ -43,15 +43,3 @@ In the previous example, the function `include-if-even` accepts two arguments: a
 ```
 
 Note that in the previous example we must necessarily pass three arguments to `reduce`: our function `include-if-even`, an initial collection `[]`, and a collection of numbers like `[1 2 3 4]`. The initial collection `[]` is necessary due to the fact that `include-if-even` needs it as its first argument.
-
-## Especial cases
-
-Especial cases arise when we use an empty collection or a collection with only one item:
-
-- If we apply `reduce` to an empty collection, `(reduce f val coll)` returns `(f val)`, and `(reduce f coll)` returns the result of applying `f` with no arguments. In this case, the function `f` must be able to use no arguments. 
-- If we apply `reduce` to a collection with only one item, `(reduce f val coll)` returns `(f val x_1)`, i.e., the result of applying `f` to `val` and the first element `x_1` of `coll`. If used with only two arguments, `(f coll)` returns the only element found in `coll`, and `f` is not called.
-
-## Using collections of functions
-
-`reduce` accepts any type of collection, including one that contains functions. In that case, we will typically use three arguments `(reduce f val coll)`, and the function `f` applies the first function `g_1` from the collection to `val`, then the second function `g_2` to the result of the previous application, `(f (f val g_1) g_2)` and so on until all the functions are applied. 
-
