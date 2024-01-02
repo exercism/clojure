@@ -48,20 +48,11 @@ Implement the `memoize-transform` function. It takes a function to _memoize_, th
 
 ```clojure
 (def triple-scale (scale2d 3 3))
-(def memoized-scale (memoize-transform triplescale))
-
-(memoized-scale 4 3)
-;; => [12, 9], this is computed since it hasn't been computed before for the arguments
-
-(memoized-scale 4 3)
-;; => [12, 9], this is remembered, since it was computed already
-
-(def triple-scale (scale2d 3 3))
 (def memoized-scale (memoize-transform triple-scale))
 
-(memoizedScale 4 3)
+(memoized-scale 4 3)
 ;; => [12, 9], this is computed since it hasn't been computed before for the arguments
 
-(memoizedScale 4 3)
+(memoized-scale 4 3)
 ;; => [12, 9], this is remembered, since it was computed already
 ```
