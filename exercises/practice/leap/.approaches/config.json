@@ -6,28 +6,19 @@
   },
   "approaches": [
     {
-      "uuid": "",
-      "slug": "and-or",
-      "title": "",
-      "blurb": "",
+      "uuid": "83290a7b-3e87-46a1-9b82-10b029716ad1",
+      "slug": "boolean",
+      "title": "Boolean Operations",
+      "blurb": "Solving Leap by using boolean operations `and`, `or` and `not`.",
       "authors": [
         "michalporeba"
       ]
     },
     {
-      "uuid": "",
-      "slug": "cond",
-      "title": "",
-      "blurb": "",
-      "authors": [
-        "michalporeba"
-      ]
-    },
-    {
-      "uuid": "",
-      "slug": "if",
-      "title": "",
-      "blurb": "",
+      "uuid": "a1927e29-b262-4a83-a66d-0e30699e6c21",
+      "slug": "conditional",
+      "title": "Conditional Branching",
+      "blurb": "Solving Leap by using conditional branching functions `if` and `cond`.",
       "authors": [
         "michalporeba"
       ]
