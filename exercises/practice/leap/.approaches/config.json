@@ -1,0 +1,36 @@
+{
+  "introduction": {
+    "authors": [
+      "michalporeba"
+    ]
+  },
+  "approaches": [
+    {
+      "uuid": "",
+      "slug": "and-or",
+      "title": "",
+      "blurb": "",
+      "authors": [
+        "michalporeba"
+      ]
+    },
+    {
+      "uuid": "",
+      "slug": "cond",
+      "title": "",
+      "blurb": "",
+      "authors": [
+        "michalporeba"
+      ]
+    },
+    {
+      "uuid": "",
+      "slug": "if",
+      "title": "",
+      "blurb": "",
+      "authors": [
+        "michalporeba"
+      ]
+    }
+  ]
+}
