@@ -17,10 +17,10 @@
        some?))
 ```
 
-We can define a data structure that describes the properties of a number. 
+We can define a data structure that describes the properties of a number.
 In this case, the number is a year, and the properties are whether it is divisible by 4, 100 and 400. Let's call any instance of such data structure the shape of a number.
 
-While there are many numbers, there are fewer shapes, so we can define all shapes corresponding to all leap years. There are only two. 
+While there are many numbers, there are fewer shapes, so we can define all shapes corresponding to all leap years. There are only two.
 
 ```clojure
 (def leap-shapes
@@ -28,7 +28,7 @@ While there are many numbers, there are fewer shapes, so we can define all shape
     {:by-4 true :by-100 false :by-400 false}})
 ```
 
-We now need a function to convert any number to its shape. 
+We now need a function to convert any number to its shape.
 
 ```clojure
 (defn- to-shape [year]
@@ -37,7 +37,7 @@ We now need a function to convert any number to its shape.
    :by-400 (zero? (mod year 400))})
 ```
 
-With the above, we can now take a year number and check if its shape is one of the leap shapes. 
+With the above, we can now take a year number and check if its shape is one of the leap shapes.
 
 ```clojure
 (defn leap-year? [year]
