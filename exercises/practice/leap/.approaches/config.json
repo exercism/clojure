@@ -7,8 +7,8 @@
   "approaches": [
     {
       "uuid": "83290a7b-3e87-46a1-9b82-10b029716ad1",
-      "slug": "boolean",
-      "title": "Boolean Operations",
+      "slug": "boolean-operations",
+      "title": "Boolean operations",
       "blurb": "Solving Leap by using boolean operations `and`, `or` and `not`.",
       "authors": [
         "michalporeba"
