@@ -22,6 +22,15 @@
       "authors": [
         "michalporeba"
       ]
+    },
+    {
+      "uuid": "bebc4e3d-2ba4-4c70-8f99-b6bdd1994be8",
+      "slug": "data-shapes",
+      "title": "Data shapes",
+      "blurb": "Solving Leap by using data shapes.",
+      "authors": [
+        "michalporeba"
+      ]
     }
   ]
 }
