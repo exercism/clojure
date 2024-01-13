@@ -1,4 +1,4 @@
-(defn leap-year? [year] 
-  (or (divides? year 400)
-    (and (not (divides? year 100)) 
-      (divides? year 4))))
+(defn leap-year? [year]
+  (and (divides? year 4)
+    (or (not (divides? year 100)) 
+      (divides? year 400))))
