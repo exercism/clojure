@@ -52,8 +52,8 @@ Instead of combining the logical expressions, we can use conditional branching w
   (divides? year 4)))
 ```
 
-In the [conditional branching approach][conditional-approach], we discuss the options comparing `if` and `cond` functions.
+In the [flow control expressions approach][flow-control-approach], we discuss the options comparing `if` and `cond` functions.
 
 [modulo]: https://en.wikipedia.org/wiki/Modulo
 [boolean-approach]: https://exercism.org/tracks/clojure/exercises/leap/approaches/boolean
-[conditional-approach]: https://exercism.org/tracks/clojure/exercises/leap/approaches/conditional
+[flow-control-approach]: https://exercism.org/tracks/clojure/exercises/leap/approaches/flow-control

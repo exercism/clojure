@@ -16,9 +16,9 @@
     },
     {
       "uuid": "a1927e29-b262-4a83-a66d-0e30699e6c21",
-      "slug": "conditional",
-      "title": "Conditional Branching",
-      "blurb": "Solving Leap by using conditional branching functions `if` and `cond`.",
+      "slug": "flow-control",
+      "title": "Flow control expressions",
+      "blurb": "Solving Leap by using conditional branching with `if` and `cond`.",
       "authors": [
         "michalporeba"
       ]
