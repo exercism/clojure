@@ -54,6 +54,21 @@ Instead of combining the logical expressions, we can use conditional branching w
 
 In the [flow control expressions approach][flow-control-approach], we discuss the options comparing `if` and `cond` functions.
 
+## Approach: data shapes
+
+This is a little less straight forward approach, but with a little bit of setup we can get to a `leap-year?` function that looks like so:
+
+```clojure
+(defn leap-year? [year]
+  (->> year
+       to-shape
+       leap-shapes
+       some?))
+```
+
+In the [data shapes approach][data-shapes-approach], we explore how it works.
+
 [modulo]: https://en.wikipedia.org/wiki/Modulo
 [boolean-approach]: https://exercism.org/tracks/clojure/exercises/leap/approaches/boolean
 [flow-control-approach]: https://exercism.org/tracks/clojure/exercises/leap/approaches/flow-control
+[data-shapes-approach]: https://exercism.org/tracks/clojure/exercises/leap/approaches/data-shapes
