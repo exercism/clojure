@@ -1,0 +1,36 @@
+{
+  "introduction": {
+    "authors": [
+      "michalporeba"
+    ]
+  },
+  "approaches": [
+    {
+      "uuid": "83290a7b-3e87-46a1-9b82-10b029716ad1",
+      "slug": "boolean-operations",
+      "title": "Boolean operations",
+      "blurb": "Solving Leap by using boolean operations `and`, `or` and `not`.",
+      "authors": [
+        "michalporeba"
+      ]
+    },
+    {
+      "uuid": "a1927e29-b262-4a83-a66d-0e30699e6c21",
+      "slug": "flow-control",
+      "title": "Flow control expressions",
+      "blurb": "Solving Leap by using conditional branching with `if` and `cond`.",
+      "authors": [
+        "michalporeba"
+      ]
+    },
+    {
+      "uuid": "bebc4e3d-2ba4-4c70-8f99-b6bdd1994be8",
+      "slug": "data-shapes",
+      "title": "Data shapes",
+      "blurb": "Solving Leap by using data shapes.",
+      "authors": [
+        "michalporeba"
+      ]
+    }
+  ]
+}
