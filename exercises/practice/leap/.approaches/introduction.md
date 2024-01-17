@@ -69,6 +69,6 @@ This is a little less straight forward approach, but with a little bit of setup 
 In the [data shapes approach][data-shapes-approach], we explore how it works.
 
 [modulo]: https://en.wikipedia.org/wiki/Modulo
-[boolean-approach]: https://exercism.org/tracks/clojure/exercises/leap/approaches/boolean
+[boolean-approach]: https://exercism.org/tracks/clojure/exercises/leap/approaches/boolean-operations
 [flow-control-approach]: https://exercism.org/tracks/clojure/exercises/leap/approaches/flow-control
 [data-shapes-approach]: https://exercism.org/tracks/clojure/exercises/leap/approaches/data-shapes
