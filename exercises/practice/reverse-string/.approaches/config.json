@@ -1,0 +1,36 @@
+{
+  "introduction": {
+    "authors": [
+      "michalporeba"
+    ]
+  },
+  "approaches": [
+    {
+      "uuid": "0ec50f64-a8f7-49b5-b0d0-3977149c23ba",
+      "slug": "string-builder",
+      "title": "StringBuilder",
+      "blurb": "Using the StringBuilder class.",
+      "authors": [
+        "michalporeba"
+      ]
+    },
+    {
+      "uuid": "9cc22152-82c3-49b1-95a7-8ee62cdeac21",
+      "slug": "its-a-sequence",
+      "title": "It's a sequence",
+      "blurb": "Reversing a string a sequence.",
+      "authors": [
+        "michalporeba"
+      ]
+    },
+    {
+      "uuid": "533b4795-7f1f-4048-b022-9cc500eebe62",
+      "slug": "recursion",
+      "title": "Recursion",
+      "blurb": "Reversing the string recursively.",
+      "authors": [
+        "michalporeba"
+      ]
+    }
+  ]
+}
