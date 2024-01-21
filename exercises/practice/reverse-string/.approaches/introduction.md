@@ -1,11 +1,11 @@
 # Introduction
 
-[Strings][string] in Clojure are immutable which means they cannot be reversed in place.
-Instead a new reversed string has to be created.
+[Strings][string] in Clojure are immutable, which means we cannot reverse them in place.
+Instead, typically, we will create a new string while reversing the original one.
 
 ## String builder
 
-One way to work around it is to use a string builder from the underlaying Java Virtual Machine.
+One way to work around it is to use a string builder from the underlying Java Virtual Machine.
 
 ```clojure
 (defn reverse-string [string]
@@ -14,12 +14,12 @@ One way to work around it is to use a string builder from the underlaying Java V
       (StringBuilder. string))))
 ```
 
-Let's look at the [string builder approach][string-builder-approach] and the shrotcut to it.
+Let's look at the [string builder approach][string-builder-approach] and a shortcut to it.
 
 ## It's a sequence
 
-Beyond the above, there are great many different solutions, but in general, they depend on one fact.
-[Strings][string] in Clojure are sequences of characters and there are many ways to reverse a sequence.
+Beyond the above, there are a great many different solutions, but in general, they depend on one fact.
+[Strings][string] in Clojure are sequences of characters, and there are many ways to reverse a sequence.
 
 ```clojure
 (defn reverse-string [string]
