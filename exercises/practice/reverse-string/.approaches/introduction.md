@@ -8,10 +8,10 @@ Instead, typically, we will create a new string while reversing the original one
 One way to work around it is to use a string builder from the underlying Java Virtual Machine.
 
 ```clojure
-(defn reverse-string [string]
+(defn reverse-string [s]
   (.toString
     (.reverse
-      (StringBuilder. string))))
+      (StringBuilder. s))))
 ```
 
 Let's look at the [string builder approach][string-builder-approach] and a shortcut to it.
@@ -22,8 +22,8 @@ Beyond the above, there are a great many different solutions, but in general, th
 [Strings][string] in Clojure are sequences of characters, and there are many ways to reverse a sequence.
 
 ```clojure
-(defn reverse-string [string]
-  (apply str (reverse string)))
+(defn reverse-string [s]
+  (apply str (reverse s)))
 ```
 
 We discuss some variations in [It's a sequence approach][its-a-sequence-approach].
