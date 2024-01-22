@@ -16,8 +16,8 @@
     },
     {
       "uuid": "9cc22152-82c3-49b1-95a7-8ee62cdeac21",
-      "slug": "its-a-sequence",
-      "title": "It's a sequence",
+      "slug": "sequence",
+      "title": "Use the fact that a string is also a sequence",
       "blurb": "Reversing a string a sequence.",
       "authors": [
         "michalporeba"
