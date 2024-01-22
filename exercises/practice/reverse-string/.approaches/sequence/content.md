@@ -5,8 +5,9 @@
   (apply str (reverse string)))
 ```
 
-In Clojure, strings are sequences of characters.
-["Most of Clojure's core library treats collections and sequences the same way"][collections-and-sequences].
+In Clojure, many functions that operate on sequences will automaticaly convert a string parameter into a sequence of characters.
+This is because many core functions call `seq` on its arguments.
+Also, ["most of Clojure's core library treats collections and sequences the same way"][collections-and-sequences].
 It follows that we can use any method to reverse a sequence or a collection to reverse a string.
 
 There will be three stops in this group of approaches:
@@ -27,7 +28,7 @@ The above is self-explanatory.
 ```
 This takes one character at a time from `s` and adds it to a sequence.
 Because in Clojure, by default, new elements are added to the beginning of the list,
-`into` reverses the character at the same time as changing a string into an explicit sequence.
+`into` reverses the characters at the same time as changing a string into an explicit sequence.
 
 The more explicit verbose version of this operation could be something like this:
 ```clojure
@@ -49,7 +50,7 @@ There are many options here, too.
 We also have an option to combine all three operations into a single function call:
 
 ```clojure
-(defn reverse-string [s] ;; <- arglist goes here
+(defn reverse-string [s]
   (reduce #(str %2 %1) "" s))
 ```
 

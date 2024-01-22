@@ -18,8 +18,10 @@ Let's look at the [string builder approach][string-builder-approach] and a short
 
 ## It's a sequence
 
-Beyond the above, there are a great many different solutions, but in general, they depend on one fact.
-[Strings][string] in Clojure are sequences of characters, and there are many ways to reverse a sequence.
+Beyond the above, there are a great many different solutions, but in general, they depend on two facts.
+[Strings][string] in Clojure are Java [string][java-string]s.
+Many core Clojure functions call `seq` on their arguments automatically converting a string into a seqence of characters.
+And there are many ways to reverse a sequence.
 
 ```clojure
 (defn reverse-string [s]
@@ -45,6 +47,7 @@ A distinct variation of the above is to process a sequence in a recursive functi
 Let's explore the [recursive approach][recursive-approach].
 
 [string]: https://clojure-doc.org/articles/cookbooks/strings
+[java-string]: https://docs.oracle.com/javase/8/docs/api/java/lang/String.html
 [string-builder-approach]: https://exercism.org/tracks/clojure/exercises/reverse-string/approaches/string-builder
 [its-a-sequence-approach]: https://exercism.org/tracks/clojure/exercises/reverse-string/approaches/its-a-sequence
 [recursive-approach]: https://exercism.org/tracks/clojure/exercises/reverse-string/approaches/recursion
