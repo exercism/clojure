@@ -9,7 +9,7 @@
       "uuid": "0ec50f64-a8f7-49b5-b0d0-3977149c23ba",
       "slug": "string-builder",
       "title": "StringBuilder",
-      "blurb": "Using the StringBuilder class.",
+      "blurb": "Use the StringBuilder class.",
       "authors": [
         "michalporeba"
       ]
