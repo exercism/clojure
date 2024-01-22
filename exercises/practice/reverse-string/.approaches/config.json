@@ -27,7 +27,7 @@
       "uuid": "533b4795-7f1f-4048-b022-9cc500eebe62",
       "slug": "recursion",
       "title": "Recursion",
-      "blurb": "Reversing the string recursively.",
+      "blurb": "Reverse the string recursively.",
       "authors": [
         "michalporeba"
       ]
