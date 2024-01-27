@@ -1,0 +1,10 @@
+(defn convert [num]
+  (cond
+    (zero? (rem num (* 3 5 7))) "PlingPlangPlong"
+    (zero? (rem num (* 5 7))) "PlangPlong"
+    (zero? (rem num (* 3 7))) "PlingPlong"
+    (zero? (rem num (* 3 5))) "PlingPlang"
+    (zero? (rem num 7)) "Plong"
+    (zero? (rem num 5)) "Plang"
+    (zero? (rem num 3)) "Pling"
+    :else (str num)))
