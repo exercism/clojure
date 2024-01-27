@@ -3,9 +3,11 @@
     {
       "uuid": "a4a1c287-3b0d-4704-856c-9229ab0976e2",
       "slug": "check-every-possibility",
-      "title": "Check Every Possibility",
-      "blurb": "",
-      "authors": []
+      "title": "Every possibility",
+      "blurb": "We can check every possibility.",
+      "authors": [
+        "michalporeba"
+      ]
     }
   ]
 }
