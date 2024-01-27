@@ -4,7 +4,16 @@
       "uuid": "a4a1c287-3b0d-4704-856c-9229ab0976e2",
       "slug": "check-every-possibility",
       "title": "Every possibility",
-      "blurb": "We can check every possibility.",
+      "blurb": "Check every possibility.",
+      "authors": [
+        "michalporeba"
+      ]
+    },
+    {
+      "uuid": "4d89aa3b-6237-4fa6-b4bb-0eba6057a314",
+      "slug": "step-by-step",
+      "title": "Step By Step",
+      "blurb": "Perform the checks one by one, step by step.",
       "authors": [
         "michalporeba"
       ]

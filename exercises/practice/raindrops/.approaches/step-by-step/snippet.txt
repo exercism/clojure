@@ -1,0 +1,6 @@
+(defn convert [num]
+  (let [pling (if (zero? (rem num 3)) "Pling" "")
+        plang (if (zero? (rem num 5)) "Plang" "")
+        plong (if (zero? (rem num 7)) "Plong" "")
+        sound (str pling plang plong)]
+      (if (empty? sound) (str num) sound)))
