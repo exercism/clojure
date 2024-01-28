@@ -37,5 +37,15 @@ We can also make the three checks sequentially and concatenate the results.
 
 This [step by step approach][step-by-step] reduces the number of operations as each check is performed only once.
 
+## Conditional thread
+
+Chaining operations in clojure is a common and well supported pattern with the `->`, the thread first macro.
+It is often the case that at each step we need to evaluate a condition to decide whether to go into that step.
+The `cond->`, the conditional thread first macro allows for an elegant way to implement raindrop checks.
+
+```clojure
+
+```
+
 [check-every-posibility]: https://exercism.org/tracks/clojure/exercises/raindrops/approaches/check-every-possibility
 [step-by-step]: https://exercism.org/tracks/clojure/exercises/raindrops/approaches/step-by-step

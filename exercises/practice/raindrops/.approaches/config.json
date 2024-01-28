@@ -12,8 +12,17 @@
     {
       "uuid": "4d89aa3b-6237-4fa6-b4bb-0eba6057a314",
       "slug": "step-by-step",
-      "title": "Step By Step",
+      "title": "Step by step",
       "blurb": "Perform the checks one by one, step by step.",
+      "authors": [
+        "michalporeba"
+      ]
+    },
+    {
+      "uuid": "6c92c0e6-0471-4b8f-ab6a-c6a9bc5a342b",
+      "slug": "conditional-thread",
+      "title": "Conditional thread",
+      "blurb": "Use the conditional thread.",
       "authors": [
         "michalporeba"
       ]
