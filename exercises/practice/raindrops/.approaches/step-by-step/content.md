@@ -9,8 +9,8 @@
       (if (empty? sound) (str num) sound)))
 ```
 
-In the above example the individual sounds of rain are calculated separately and then added to make up the overall sound.
-Then we can use the bindings created by `let` to check if the `sound` is empty and return either the sound or the nubmer.
+In the above example, the individual sounds of rain are calculated separately and then added to make up the overall sound.
+Then we can use the bindings created by `let` to check if the `sound` is empty and return either the sound or the number.
 
 A variant of this approach can use the thread first macro `->` and private functions.
 
@@ -28,4 +28,4 @@ A variant of this approach can use the thread first macro `->` and private funct
       sound))
 ```
 
-Using the thread first macro makes the `convert` function simpler if not clearer, but it comes at the cost of extra complexity in the `pling`, `plang`, `plong` and `sound` functions.
+Using the thread first macro makes the `convert` function simple, if not clearer, but it comes at the cost of extra complexity in the `pling`, `plang`, `plong` and `sound` functions.

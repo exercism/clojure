@@ -18,7 +18,7 @@ We could be more verbose in the checks using `and`.
 ```clojure
 (and (zero? (rem num 3)) (zero? (rem num 7)))
 ```
-The return is `"PlingPlong"` only if the number is divisable by 3 and 7 but not by 5.
+The return is `"PlingPlong"` only if the number is divisible by 3 and 7 but not by 5.
 We don't have to worry about the "not by 5" because of the order of operations.
 We can then use the fact that a number is only divisible by 3 and 7 only if it is divisible by 3 * 7.
 And so, we can express the above like this:
