@@ -34,3 +34,10 @@ To remember the updated value, we need to pass it along or capture it in a var:
 (get updated-numbers 2)
 ;;=> 9
 ```
+
+An element of a vector can be updated based on its current value and a function to compute the new value:
+
+```
+(update numbers 0 dec)
+;;=> [1 3 5]
+```
