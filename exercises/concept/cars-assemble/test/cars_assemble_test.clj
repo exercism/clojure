@@ -18,7 +18,7 @@
   (testing "Production rate for speed 4"
     (is (float-equal? 884.0 (cars-assemble/production-rate 4)))))
 
-(deftest ^{:task 1} production-rate-speeed-7-test
+(deftest ^{:task 1} production-rate-speed-7-test
   (testing "Production rate for speed 7"
     (is (float-equal? 1392.3 (cars-assemble/production-rate 7)))))
 
