@@ -5,7 +5,10 @@
 (deftest ^{:task 1} expected-time-test
   (is (= 40 lucians-luscious-lasagna/expected-time)))
 
-(deftest ^{:task 2} remaining-time-test
+(deftest ^{:task 2} remaining-time-test-for30m-actualtime
+  (is (= 10 (lucians-luscious-lasagna/remaining-time 30))))
+
+(deftest ^{:task 2} remaining-time-test-for25m-actualtime
   (is (= 15 (lucians-luscious-lasagna/remaining-time 25))))
 
 (deftest ^{:task 3} prep-time-one-layer-test
