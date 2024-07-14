@@ -1,34 +1,47 @@
-(ns luhn
-  (:require [clojure.string :as string]))
+(ns luhn)
 
-(defn to-reversed-digits
-  "returns a lazy sequence of least to most significant digits of n"
-  [n]
-  (->> [n 0]
-       (iterate (fn [[i _]] [(quot i 10) (mod i 10)]))
-       (take-while (complement #{[0 0]}))
-       (map second)
-       rest))
+(defn string->digits
+  [s]
+  (map #(Character/digit ^char % 10) s))
 
-(defn checksum
-  "returns the luhn checksum of n, assuming it has a check digit"
-  [n]
-  (-> (->> n
-           to-reversed-digits
-           (map * (cycle [1 2]))
-           (map #(if (>= % 10) (- % 9) %))
-           (apply +))
-      (mod 10)))
+(defn valid-integer?
+  [digits]
+  (and (> (count digits) 1)
+       (every? #(<= 0 % 9) digits)))
 
-(defn string->long
-  "Strips any non-digit characters and converts the string into a Long"
-  [n]
-  (-> n (string/replace #"[^0-9]+" "") Long/parseLong))
+(defn zero-pad
+  [digits]
+  (if (even? (count digits))
+    digits
+    (conj digits 0)))
+
+(defn transform-digit
+  [index val]
+  (if (odd? index)
+    val
+    (let [dval (* 2 val)]
+      (if (> dval 9)
+        (- dval 9)
+        dval))))
+
+(defn get-luhn-value
+  [digits]
+  (let [padded-digits (zero-pad digits)]
+    (->> padded-digits
+         (map-indexed transform-digit)
+         (reduce +))))
+
+(defn valid-luhn-value?
+  [val]
+  (int? (/ val 10)))
+
+(defn remove-spaces
+  [s]
+  (remove #{\space} s))
 
 (defn valid?
-  "whether n has a valid luhn check-digit"
-  [n]
-  ; Numbers with non digit/whitespace or only 1 digit are invalid
-  (if (or (re-find #"[^0-9\s]+" n) (>= 1 (count (string/trim n))))
-    false
-    (zero? (-> n string->long checksum))))
+  "Returns true if the given string represents a valid luhn number, else false"
+  [s]
+  (let [digits (string->digits (remove-spaces s))]
+    (and (valid-integer? digits)
+         (valid-luhn-value? (get-luhn-value digits)))))
