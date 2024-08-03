@@ -11,13 +11,13 @@
 
 ## 2. Get log level from a log line
 
-- A `string` can be converted to lowercase using [`lowercase`][lowercase].
+- A `string` can be converted to lowercase using [`lower-case`][lowercase].
 
 ## 3. Reformat a log line
 
 - The [`str`][str] function can be used to concatenate strings.
 
-[lowercase]: https://clojuredocs.org/clojure.string/lower-case
+[lower-case]: https://clojuredocs.org/clojure.string/lower-case
 [split]: https://clojuredocs.org/clojure.string/split
 [str]: https://clojuredocs.org/clojure.core/str
 [string-ns]: https://clojuredocs.org/clojure.string
