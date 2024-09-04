@@ -1,7 +1,7 @@
 # Instructions
 
-Implement the `keep` and `discard` operation on collections. Given a collection
-and a predicate on the collection's elements, `keep` returns a new collection
+Implement the `retain` and `discard` operation on collections. Given a collection
+and a predicate on the collection's elements, `retain` returns a new collection
 containing those elements where the predicate is true, while `discard` returns
 a new collection containing those elements where the predicate is false.
 
@@ -23,7 +23,7 @@ While your discard operation should produce:
 
 Note that the union of keep and discard is all the elements.
 
-The functions may be called `keep` and `discard`, or they may need different
+The functions may be called `retain` and `discard`, or they may need different
 names in order to not clash with existing functions or concepts in your
 language.
 
