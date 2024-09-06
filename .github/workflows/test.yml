@@ -25,7 +25,7 @@ jobs:
           path: clojure-test-runner
 
       - name: setup babashka
-        uses: turtlequeue/setup-babashka@83e81711f784e0dcb593e53b642fc9850067f234
+        uses: turtlequeue/setup-babashka@2d4df498c7a578b4f3e906283f9af913590bdec7
         with:
           babashka-version: 0.8.1
           
