@@ -2,7 +2,7 @@
 
 Since all of Clojure's standard data types are immutable, it offers *reference types* which offer controlled mutation. The simplest and most commonly used of these are called Atoms.
 
-Atoms are created with the `atom` function, which take an initial value:
+Atoms are created with the `atom` function, which takes an initial value:
 
 ```clojure
 (def players (atom ()))
