@@ -1,39 +1,67 @@
 (ns pascals-triangle-test
   (:require [clojure.test :refer [deftest is testing]]
-            [pascals-triangle :refer :all]))
+            pascals-triangle))
 
-(deftest test-one-row
-  (testing "First row"
-    (is (= (take 1 triangle) [[1]]))))
+(deftest zero-rows
+  (testing "Zero rows"
+    (is (= []
+           (take 0 pascals-triangle/triangle)))))
 
-(deftest test-two-rows
-  (testing "First two rows"
-    (is (= (take 2 triangle) [[1], [1 1]]))))
+(deftest single-row
+  (testing "Single row"
+    (is (= [[1]]
+           (take 1 pascals-triangle/triangle)))))
 
-(deftest test-three-rows
-  (testing "First 3 rows"
-    (is (= (take 3 triangle) [[1], [1 1], [1 2 1]]))))
+(deftest two-rows
+  (testing "Two rows"
+    (is (= [[1]
+            [1 1]]
+           (take 2 pascals-triangle/triangle)))))
 
-(deftest test-third-row
-  (testing "Third row"
-    (is (= (row 3) [1 2 1]))))
+(deftest three-rows
+  (testing "Three rows"
+    (is (= [[1]
+            [1 1]
+            [1 2 1]]
+           (take 3 pascals-triangle/triangle)))))
 
-(deftest test-fourth-row
-  (testing "Fourth row"
-    (is (= (row 4) [1 3 3 1]))))
+(deftest four-rows
+  (testing "Four rows"
+    (is (= [[1]
+            [1 1]
+            [1 2 1]
+            [1 3 3 1]]
+           (take 4 pascals-triangle/triangle)))))
 
-(deftest test-fifth-row
-  (testing "Fifth row"
-    (is (= (row 5) [1 4 6 4 1]))))
+(deftest five-rows
+  (testing "Five rows"
+    (is (= [[1]
+            [1 1]
+            [1 2 1]
+            [1 3 3 1]
+            [1 4 6 4 1]]
+           (take 5 pascals-triangle/triangle)))))
 
-(deftest triangle-20th-row
-  (testing "20th row"
-    (is (= (row 20)
-           (let [v [1 19 171 969 3876 11628 27132 50388 75582 92378]]
-             (into v (rseq v)))))))
+(deftest six-rows
+  (testing "Six rows"
+    (is (= [[1]
+            [1 1]
+            [1 2 1]
+            [1 3 3  1]
+            [1 4 6  4  1]
+            [1 5 10 10 5 1]]
+           (take 6 pascals-triangle/triangle)))))
 
-(deftest triangle-300th-row
-  (testing "300th row"
-    (is (some?
-         (some #{768408467483699505953134992026497450726137182648496343119395977464120N}
-               (row 300))))))
+(deftest ten-rows
+  (testing "Ten rows"
+    (is (= [[1]
+            [1 1]
+            [1 2 1]
+            [1 3 3  1]
+            [1 4 6  4  1]
+            [1 5 10 10 5   1]
+            [1 6 15 20 15  6   1]
+            [1 7 21 35 35  21  7  1]
+            [1 8 28 56 70  56  28 8  1]
+            [1 9 36 84 126 126 84 36 9 1]]
+           (take 10 pascals-triangle/triangle)))))

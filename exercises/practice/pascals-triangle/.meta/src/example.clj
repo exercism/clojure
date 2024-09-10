@@ -6,5 +6,3 @@
                  (cons 1))))
 
 (def triangle (iterate next-row [1]))
-
-(defn row [n] (nth triangle (dec n)))
