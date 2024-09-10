@@ -1,22 +1,39 @@
 (ns hamming-test
-  (:require [clojure.test :refer [deftest is]]
+  (:require [clojure.test :refer [deftest is testing]]
             hamming))
 
-(deftest no-difference-between-empty-strands
-  (is (= 0 (hamming/distance "" ""))))
+(deftest empty-strands
+  (testing "Empty strands"
+    (is (= 0 (hamming/distance "" "")))))
 
-(deftest no-difference-between-identical-strands
-  (is (= 0 (hamming/distance "GGACTGA" "GGACTGA"))))
+(deftest single-letter-identical-strands
+  (testing "Single letter identical strands"
+    (is (= 0 (hamming/distance "A" "A")))))
 
-(deftest complete-distance-in-small-strand
-  (is (= 3 (hamming/distance "ACT" "GGA"))))
+(deftest single-letter-different-strands
+  (testing "Single letter different strands"
+    (is (= 1 (hamming/distance "G" "T")))))
 
-(deftest small-distance-in-middle-somewhere
-  (is (= 1 (hamming/distance "GGACG" "GGTCG"))))
+(deftest long-identical-strands
+  (testing "Long identical strands"
+    (is (= 0 (hamming/distance "GGACTGAAATCTG" "GGACTGAAATCTG")))))
 
-(deftest larger-distance
-  (is (= 2 (hamming/distance "ACCAGGG" "ACTATGG"))))
+(deftest long-different-strands
+  (testing "Long different strands"
+    (is (= 9 (hamming/distance "GGACGGATTCTG" "AGGACGGATTCT")))))
 
-(deftest undefined-when-lengths-are-different
-  (is (= nil (hamming/distance "AAAC" "TAGGGGAGGCTAGCGGTAGGAC")))
-  (is (= nil (hamming/distance "GACTACGGACAGGGTAACATAG" "GACA"))))
+(deftest disallow-first-strand-longer
+  (testing "Disallow first strand longer"
+    (is (= nil (hamming/distance "AATG" "AAA")))))
+
+(deftest disallow-second-strand-longer
+  (testing "Disallow second strand longer"
+    (is (= nil (hamming/distance "ATA" "AGTG")))))
+
+(deftest disallow-empty-first-strand
+  (testing "Disallow empty first strand"
+    (is (= nil (hamming/distance "" "G")))))
+
+(deftest disallow-empty-second-strand
+  (testing "Disallow empty second strand"
+    (is (= nil (hamming/distance "G" "")))))
