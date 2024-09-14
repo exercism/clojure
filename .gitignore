@@ -21,3 +21,6 @@ pom.xml.asc
 .clj-kondo
 .lsp
 *.calva
+**/*/*.ipynb_checkpoints
+concepts/functions-generating-functions/introduction_files/
+concepts/functions-generating-functions/*.html

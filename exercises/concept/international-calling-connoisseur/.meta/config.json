@@ -1,10 +1,6 @@
 {
-  "blurb": "Learn about hashmaps while managing international calling codes",
   "authors": [
     "porkostomus"
-  ],
-  "forked_from": [
-    "csharp/international-calling-connoisseur"
   ],
   "files": {
     "solution": [
@@ -16,5 +12,9 @@
     "exemplar": [
       ".meta/exemplar.clj"
     ]
-  }
+  },
+  "forked_from": [
+    "csharp/international-calling-connoisseur"
+  ],
+  "blurb": "Learn about hashmaps while managing international calling codes"
 }

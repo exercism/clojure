@@ -10,7 +10,7 @@
 (defn- annual-yield [balance]
   (let [multiplier (bigdec (/ (interest-rate balance)
                               100))]
-    (* (if (neg? balance) (- balance) balance) multiplier)))
+    (* (abs balance) multiplier)))
 
 (defn annual-balance-update [balance]
   (+ balance (annual-yield balance)))

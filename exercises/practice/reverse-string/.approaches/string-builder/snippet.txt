@@ -1,0 +1,4 @@
+(defn reverse-string [s]
+  (.toString
+    (.reverse
+      (StringBuilder. s))))

@@ -1,14 +1,14 @@
 # Hints
 
-## Calculate the interest rate
+## 1. Calculate the interest rate
 
 - You can refer back to the [conditionals][conditionals] concept if you need to remember how to return values based on an input value.
 
-## Calculate the annual balance update
+## 2. Calculate the annual balance update
 
 - The [`bigdec`][bigdec] function can be used to coerce a number to a [BigDecimal][bigdecimal].
 
-## Calculate how much money to donate
+## 3. Calculate how much money to donate
 
 - The [`int`][int] function can be used to coerce a number to an integer.
 

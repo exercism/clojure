@@ -11,7 +11,7 @@ on:
 jobs:
   build:
     name: Tests
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
       - name: Checkout
         uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b
@@ -25,7 +25,7 @@ jobs:
           path: clojure-test-runner
 
       - name: setup babashka
-        uses: turtlequeue/setup-babashka@v1.3.0
+        uses: turtlequeue/setup-babashka@2d4df498c7a578b4f3e906283f9af913590bdec7
         with:
           babashka-version: 0.8.1
           

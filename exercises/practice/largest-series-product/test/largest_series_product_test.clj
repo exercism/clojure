@@ -33,10 +33,6 @@
     (is (= 0 (lsp/largest-product 3 "99099"))))
   (testing "rejects span longer than string length"
     (is (thrown? Throwable (lsp/largest-product 4 "123"))))
-  (testing "reports 1 for empty string and empty product (0 span)"
-    (is (= 1 (lsp/largest-product 0 ""))))
-  (testing "reports 1 for nonempty string and empty product (0 span)"
-    (is (= 1 (lsp/largest-product 0 "123"))))
   (testing "rejects empty string and nonzero span"
     (is (thrown? Throwable (lsp/largest-product 1 ""))))
   (testing "rejects invalid character in digits"

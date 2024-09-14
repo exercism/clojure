@@ -1,5 +1,4 @@
 {
-  "blurb": "Make a chain of dominoes.",
   "authors": [],
   "contributors": [
     "AndreaCrotti",
@@ -16,5 +15,6 @@
     "example": [
       ".meta/src/example.clj"
     ]
-  }
+  },
+  "blurb": "Make a chain of dominoes."
 }

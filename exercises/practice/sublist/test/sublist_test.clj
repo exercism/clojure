@@ -52,3 +52,6 @@
 
 (deftest same-digits-but-different-numbers
     (is (= :unequal (sublist/classify [1 0 1] [10 1]))))
+
+(deftest second-list-continues-first-list
+  (is (= :unequal (sublist/classify [1] [2 3]))))

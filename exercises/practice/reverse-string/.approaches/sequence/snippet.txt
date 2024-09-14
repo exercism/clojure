@@ -1,0 +1,2 @@
+(defn reverse-string [string]
+  (apply str (reverse string)))

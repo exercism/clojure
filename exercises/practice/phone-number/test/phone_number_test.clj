@@ -1,54 +1,75 @@
 (ns phone-number-test
-  (:require [clojure.test :refer [deftest is]]
-            phone-number))
+  (:require [clojure.test :refer [deftest testing is]]
+            [phone-number :as phone]))
 
 (deftest cleans-number
-  (is (= "2234567890" (phone-number/number "(223) 456-7890"))))
+  (testing "Cleans the number"
+    (is (= "2234567890" (phone/number "(223) 456-7890")))))
 
 (deftest cleans-number-with-dots
-  (is (= "5558675309" (phone-number/number "555.867.5309"))))
+  (testing "Cleans numbers with dots"
+    (is (= "2234567890" (phone/number "223.456.7890")))))
 
-(deftest valid-when-11-digits-and-first-is-1
-  (is (= "9876543210" (phone-number/number "19876543210"))))
-
-(deftest invalid-when-area-code-starts-with-0
-  (is (= "0000000000" (phone-number/number "0234567890"))))
-
-(deftest invalid-when-area-code-starts-with-1
-  (is (= "0000000000" (phone-number/number "1234567890"))))
-
-(deftest invalid-when--code-starts-with-0
-  (is (= "0000000000" (phone-number/number "0234567890"))))
-
-(deftest invalid-when-exchange-code-starts-with-1
-  (is (= "0000000000" (phone-number/number "2231567890"))))
-
-(deftest invalid-when-exchange-code-starts-with-0
-  (is (= "0000000000" (phone-number/number "2230567890"))))
-
-(deftest invalid-when-11-digits
-  (is (= "0000000000" (phone-number/number "22234567890"))))
+(deftest cleans-number-with-spaces
+  (testing "Cleans numbers with multiple spaces"
+    (is (= "2234567890" (phone/number "223 456   7890   ")))))
 
 (deftest invalid-when-9-digits
-  (is (= "0000000000" (phone-number/number "123456789"))))
+  (testing "Invalid when 9 digits"
+    (is (= "0000000000" (phone/number "123456789")))))
 
-(deftest area-code
-  (is (= "223" (phone-number/area-code "2234567890"))))
+(deftest invalid-when-11-digits-and-first-is-not-1
+  (testing "Invalid when 11 digits does not start with a 1"
+    (is (= "0000000000" (phone/number "22234567890")))))
 
-(deftest area-code-with-dots
-  (is (= "555" (phone-number/area-code "555.867.5309"))))
+(deftest valid-when-11-digits-and-first-is-1
+  (testing "Valid when 11 digits and starting with 1"
+    (is (= "2234567890" (phone/number "12234567890")))))
 
-(deftest area-code-with-parentheses
-  (is (= "987" (phone-number/area-code "(987) 654-3210"))))
+(deftest valid-when-11-digits-and-first-is-1-and-punctuation
+  (testing "Valid when 11 digits and starting with 1 even with punctuation"
+    (is (= "2234567890" (phone/number "+1 (223) 456-7890")))))
 
-(deftest area-code-with-full-us-phone-number
-  (is (= "223" (phone-number/area-code "12234567890"))))
+(deftest invalid-when-more-than-11-digits
+  (testing "Invalid when more than 11 digits"
+    (is (= "0000000000" (phone/number "321234567890")))))
 
-(deftest pretty-print
-  (is (= "(223) 456-7890" (phone-number/pretty-print "2234567890"))))
+(deftest invalid-with-letters
+  (testing "Invalid with letters"
+    (is (= "0000000000" (phone/number "523-abc-7890")))))
 
-(deftest pretty-print-with-dots
-  (is (= "(555) 867-5309" (phone-number/pretty-print "555.867.5309"))))
+(deftest invalid-with-punctuations
+  (testing "Invalid with punctuations"
+    (is (= "0000000000" (phone/number "523-@:!-7890")))))
 
-(deftest pretty-print-with-full-us-phone-number
-  (is (= "(987) 654-3210" (phone-number/pretty-print "19876543210"))))
+(deftest invalid-if-area-code-starts-with-0
+  (testing "Invalid if area code starts with 0"
+    (is (= "0000000000" (phone/number "(023) 456-7890")))))
+
+(deftest invalid-if-area-code-starts-with-1
+  (testing "invalid if area code starts with 1"
+    (is (= "0000000000" (phone/number "(123) 456-7890")))))
+
+(deftest invalid-if-exchange-code-starts-with-0
+  (testing "Invalid if exchange code starts with 0"
+    (is (= "0000000000" (phone/number "(223) 056-7890")))))
+
+(deftest invalid-if-exchange-code-starts-with-1
+  (testing "Invalid if exchange code starts with 1"
+    (is (= "0000000000" (phone/number "(223) 156-7890")))))
+
+(deftest invalid-if-area-code-starts-with-0-on-valid-11-digit-number
+  (testing "Invalid if area code starts with 0 on valid 11-digit number"
+    (is (= "0000000000" (phone/number "1 (023) 456-7890")))))
+
+(deftest invalid-if-area-code-starts-with-1-on-valid-11-digit-number
+  (testing "Invalid if area code starts with 1 on valid 11-digit number"
+    (is (= "0000000000" (phone/number "1 (123) 456-7890")))))
+
+(deftest invalid-if-exchange-code-starts-with-0-on-valid-11-digit-number
+  (testing "Invalid if exchange code starts with 0 on valid 11-digit number"
+    (is (= "0000000000" (phone/number "1 (223) 056-7890")))))
+
+(deftest invalid-if-exchange-code-starts-with-1-on-valid-11-digit-number
+  (testing "Invalid if exchange code starts with 1 on valid 11-digit number"
+    (is (= "0000000000" (phone/number "1 (223) 156-7890")))))

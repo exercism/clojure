@@ -1,0 +1,20 @@
+{
+  "blurb": "Practice your knowledge of closures by implementing various coordinate transformations.",
+  "authors": [
+    "bobbicodes"
+  ],
+  "forked_from": [
+    "javascript/coordinate-transformation"
+  ],
+  "files": {
+    "solution": [
+      "src/coordinate_transformation.clj"
+    ],
+    "test": [
+      "test/coordinate_transformation_test.clj"
+    ],
+    "exemplar": [
+      ".meta/exemplar.clj"
+    ]
+  }
+}

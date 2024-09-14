@@ -1,14 +1,15 @@
 (ns binary-search)
 
-(defn middle [alist]
-  (-> alist (count) (quot 2)))
-
 (defn search-for
-  [elem alist]
-  (let [middle (middle alist)
-        cur-elem (nth alist middle)]
-    (cond
-      (= cur-elem elem) middle
-      (or (= middle (count alist)) (zero? middle)) (throw (Exception. (format "%s not found in list" elem)))
-      (< cur-elem elem) (+ middle (search-for elem (drop middle alist)))
-      (> cur-elem elem) (search-for elem (take middle alist)))))
+  [n coll]
+  (let [coll (vec coll)]
+    (loop [low-idx 0
+           high-idx (dec (count coll))]
+      (if (> low-idx high-idx)
+        (throw (Exception. "not found"))
+        (let [mid-index (quot (+ high-idx low-idx) 2)
+              mid-item (get coll mid-index)]
+          (cond
+            (= n mid-item) mid-index
+            (> mid-item n) (recur low-idx (dec mid-index))
+            :else (recur (inc mid-index) high-idx)))))))

@@ -1,0 +1,7 @@
+(defn reverse-string [s]
+  (loop [s s acc ""]
+    (if (empty? s)
+      acc
+      (recur
+        (rest s)
+        (str (first s) acc)))))

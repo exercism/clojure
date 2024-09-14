@@ -1,16 +1,16 @@
 (ns interest-is-interesting)
 
 (defn interest-rate
-  "TODO: add docstring"
+  "Returns the interest rate based on the specified balance."
   [balance]
   )
 
 (defn annual-balance-update
-  "TODO: add docstring"
+  "Returns the annual balance update, taking into account the interest rate."
   [balance]
   )
 
 (defn amount-to-donate
-  "TODO: add docstring"
+  "Returns how much money to donate based on the balance and the tax-free percentage."
   [balance tax-free-percentage]
   )
