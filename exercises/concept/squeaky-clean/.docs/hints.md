@@ -17,9 +17,9 @@ If it contains no hyphens, you should return it as it is. You can check this usi
 
 You can filter characters using [`Character/isLetter`][java-isletter] as a predicate.
 
-## 5. Omit Greek lower case letters
+## 5. Omit Greek lowercase letters
 
-The lower-case Greek letters are Unicode points `\u03B1` to `\u03C9`, or integer values 945 through 969.
+The Greek lowercase letters are Unicode points `\u03B1` to `\u03C9`, or integer values 945 through 969.
 
 [str-join]: https://clojuredocs.org/clojure.string/join
 [str-upper-case]: https://clojuredocs.org/clojure.string/upper-case

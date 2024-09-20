@@ -55,7 +55,7 @@ Note: The underscores must be preserved from the previous step.
 ;; => ""
 ```
 
-## 5. Omit Greek lower case letters
+## 5. Omit Greek lowercase letters
 
 Modify the `clean` function to omit any Greek letters in the range 'α' to 'ω'.
 
