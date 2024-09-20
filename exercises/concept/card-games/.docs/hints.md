@@ -11,7 +11,7 @@
 ## 3. Finding Prior Rounds
 
 - The [`some`][some] function will return the first logically true value in a collection.
-- [`boolean`][boolean] is useful in cases where a function returns a value but the tests are expecting a boolean.
+- The [`boolean`][boolean] function is useful in cases where a function returns a value but the tests are expecting a boolean.
 
 ## 4. Averaging Card Values
 
