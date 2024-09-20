@@ -10,8 +10,8 @@ Here we need to use the [`isISOControl`][java-ctrl] method from Java's `Characte
 
 ## 3. Convert kebab-case to camelCase
 
-Try separating the string on the hyphens with [`string/split`][str-split].
-If there are no hyphens, we need to pass the original string. You can check using [string/includes?][str-includes]. Use [string/upper-case][str-upper-case] to make the "humps" of the camel. Finally, concatenate them with [string/join][str-join].
+Try separating the string on the hyphens with [`split`][str-split].
+If there are no hyphens, we need to pass the original string. You can check using [includes?][str-includes]. Use [upper-case][str-upper-case] to make the "humps" of the camel. Finally, concatenate them with [join][str-join].
 
 ## 4. Omit characters that are not letters
 
