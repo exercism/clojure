@@ -6,12 +6,12 @@ The built-in `clojure.string` library contains a [`replace`][str-replace] functi
 
 ## 2. Replace control characters with the upper case string "CTRL"
 
-Here we need to use the [`isISOControl`][java-ctrl] method from Java's `Character` class.
+You can use the [`isISOControl`][java-ctrl] method from Java's `Character` class.
 
 ## 3. Convert kebab-case to camelCase
 
 Try separating the string on the hyphens with [`split`][str-split].
-If there are no hyphens, we need to pass the original string. You can check using [`includes?`][str-includes]. Use [`upper-case`][str-upper-case] to make the "humps" of the camel. Finally, concatenate them with [`join`][str-join].
+If it contains no hyphens, you should return it as it is. You can check this using [`includes?`][str-includes]. Use [`upper-case`][str-upper-case] to make the "humps" of the camel. Finally, concatenate them with [`join`][str-join].
 
 ## 4. Omit characters that are not letters
 
