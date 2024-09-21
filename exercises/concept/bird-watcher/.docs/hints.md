@@ -20,9 +20,9 @@
 
 - The [`every?`][every?] function can be used to check if all items in a collection satisfy a given predicate.
 
-- The [`pos?`][pos?] predicate returns true if a number is greater than zero.
+- The [`pos?`][pos?] predicate returns `true` if a number is greater than zero.
 
-- The [`not`][not] function returns true if an expression evaluates to logical false.
+- The [`not`][not] function returns `true` if an expression evaluates to logical false.
 
 ## 5. Calculate the number of visiting birds for the first number of days
 
