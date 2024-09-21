@@ -62,7 +62,7 @@ Implement the `busy-days` function to return the number of busy days:
 
 ## 7. Check for odd week
 
-Over the last year, you've found that some weeks for the same, odd pattern, where the counts alternate between one and zero birds visiting. Implement the `odd-week?` function that returns `true` if the bird count pattern of this week matches the odd pattern:
+Over the last year, you've found that some weeks form the same, odd pattern, where the counts alternate between one and zero birds visiting. Implement the `odd-week?` function that returns `true` if the bird count pattern of this week matches the odd pattern:
 
 ```clojure
 (odd-week? [1 0 1 0 1 0 1])

@@ -26,7 +26,7 @@
 
 ## 5. Calculate the number of visiting birds for the first number of days
 
-- The [`take`][take] function can be used return a sequence of the first n items in a collection.
+- The [`take`][take] function can be used to return a sequence of the first n items in a collection.
 
 - The [`reduce`][reduce] function can be used to add a collection of values together.
 
@@ -36,7 +36,7 @@
 
 ## 7.  Check for odd week
 
-- The [`=`][equality] function can be used to test equality.
+- The [`=`][equality] function can be used to test for equality.
 
 [count]: https://clojuredocs.org/clojure.core/count
 [dec]: https://clojuredocs.org/clojure.core/dec
