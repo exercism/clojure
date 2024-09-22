@@ -1363,7 +1363,10 @@
         "name": "List Ops",
         "uuid": "699fb4ec-210d-454d-a41a-f7014abf8423",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "lists",
+          "closures"
+        ],
         "difficulty": 3
       }
     ]

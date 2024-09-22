@@ -1,6 +1,6 @@
 (ns list-ops)
 
-(defn append [list1 list2] 
+(defn append [list1 list2]
   (list-ops/foldl (fn [acc elem] (conj acc elem)) list2 list1))
 
 (defn concat [list]
@@ -10,7 +10,7 @@
 
 (defn filter [f list]
   (loop [acc [] l list]
-    (cond 
+    (cond
       (empty? l) acc
       (f (first l)) (recur (conj acc (first l)) (rest l))
       :else (recur acc (rest l)))))
