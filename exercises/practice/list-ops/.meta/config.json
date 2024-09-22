@@ -13,7 +13,7 @@
       "test/list_ops_test.clj"
     ],
     "example": [
-      "src/example.clj"
+      ".meta/src/example.clj"
     ]
   },
   "blurb": "Implement basic list operations."
