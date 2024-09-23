@@ -2,10 +2,11 @@
 
 (require '[cheshire.core :as json]
          '[babashka.fs :as fs]
-         '[clojure.string :as str])
+         '[clojure.string :as str]
+         '[clojure.edn :as edn])
 
 (comment
-  (def slug "zipper"))
+  (def slug "list-ops"))
 
 (def data
   (let [url "https://raw.githubusercontent.com/exercism/problem-specifications/main/exercises/"]
@@ -23,7 +24,7 @@
        (map #(map str/trim (str/split % #"="))
             (str/split-lines (:metadata data)))))
 
-(defn init-deps [data]
+(defn init-deps! [data]
   (fs/create-dirs (fs/path "exercises" "practice"
                            (:exercise (:canonical-data data)) "src"))
   (spit (str (fs/file "exercises" "practice"
@@ -36,15 +37,23 @@
                  :main-opts [\"-m\" \"cognitect.test-runner\"]
                  :exec-fn cognitect.test-runner.api/test}}}"))
 
-(defn init-lein [data]
+(comment
+  (init-deps! data)
+  )
+
+(defn init-lein! [data]
   (let [slug (:exercise (:canonical-data data))]
     (spit (str (fs/file "exercises" "practice"
                         (:exercise (:canonical-data data)) "project.clj"))
           (str "(defproject " slug " \"0.1.0-SNAPSHOT\"
   :description \"" slug " exercise.\"
-  :url \"https://github.com/exercism/clojure/tree/master/exercises/" slug "\"
+  :url \"https://github.com/exercism/clojure/tree/main/exercises/" slug "\"
   :dependencies [[org.clojure/clojure \"1.10.0\"]])
 "))))
+
+(comment
+  (init-lein! data)
+  )
 
 (defn test-ns-form [data]
   (str "(ns " (:exercise data) "-test
@@ -54,6 +63,19 @@
 (defn src-ns-form [data]
   (str "(ns " (:exercise data) ")\n\n"))
 
+(defn trans-fn [s]
+  (let [[args body] (str/split s #"->")
+        arg-strs (mapv str (edn/read-string args))
+        [arg1 op arg2] (str/split (str/trim body) #"\s")]
+    (str "(fn [" (apply str (interpose " " arg-strs)) "] " 
+         "(" op " " arg1 " " arg2 "))")))
+
+(comment
+  (trans-fn "(x) -> x + 1")  
+  (trans-fn "(x, y) -> x * y")
+  (trans-fn "(acc, el) -> el * acc")
+  )
+
 (defn testing-form [slug test-case]
   (let [property (symbol (str slug "/" (:property test-case)))
         input (:input test-case)
@@ -62,54 +84,65 @@
      (is (= " (:expected test-case) " "
          (reverse (into (list property) args)) ")))")))
 
-(defn zipper-generator [slug test-case]
-  (let [input (:input test-case)
-        ops (for [op (:operations input)]
-              (if (contains? op :item)
-                (str "(zipper/" (:operation op) " "
-                     (if (nil? (:item op))
-                       "nil"
-                       (str (:item op))) ")")
-                (str "zipper/" (:operation op))))]
-    (str "  (testing \"" (:description test-case) "\"
-     (is (= " (if (nil? (:value (:expected test-case)))
-                "nil" (:value (:expected test-case))) " "
-         "\n         (-> " (:initialTree input) "\n           "
-         (apply str (interpose "\n           " ops)) "))))")))
+(comment
+  (testing-form "list-ops" (first (:cases (first (:cases (:canonical-data data))))))
+  )
 
 (defn testing-forms
   "Outputs a sequence of the test cases for a given property name
    given its name as a string and the canonical data."
   [property data]
-  (let [test-cases (filter #(= property (:property %)) (:cases data))]
-    (map #(zipper-generator (:exercise data) %) test-cases)))
+  (let [test-cases (filter #(= property (:property %))
+                           (mapcat :cases
+                                   (:cases (:canonical-data data))))]
+    (map #(testing-form (:exercise (:canonical-data data)) %) test-cases)))
+
+(comment
+  (testing-forms "append" data)
+  )
 
 (defn deftest-forms [data]
-  (for [property (distinct (map :property (:cases (:canonical-data data))))]
+  (for [property (distinct (map :property (mapcat :cases
+                                                  (:cases (:canonical-data data)))))]
     (str "(deftest " property "-test\n"
          (apply str (interpose "\n"
-                               (testing-forms property (:canonical-data data))))
+                               (testing-forms property data)))
          ")")))
 
-(defn init-tests [data]
-  #_(fs/create-dir (fs/path "exercises" "practice"
-                            (:exercise (:canonical-data data)) "test"))
-  (spit (str (fs/file "exercises" "practice"
-                      (:exercise (:canonical-data data)) "test"
-                      (str (str/replace (:exercise (:canonical-data data)) "-" "_")
-                           "_test.clj")))
-        (str (test-ns-form (:canonical-data data))
-             (apply str (interpose "\n\n"
-                                   (deftest-forms data))))))
+(comment
+  (deftest-forms data)
+  )
 
-(defn init-src [data]
+(defn init-tests! [data]
+  (let [path (fs/path "exercises" "practice"
+                      (:exercise (:canonical-data data)) "test")]
+    (when-not (fs/directory? path)
+      (fs/create-dir path))
+    (spit (str (fs/file "exercises" "practice"
+                        (:exercise (:canonical-data data)) "test"
+                        (str (str/replace (:exercise (:canonical-data data)) "-" "_")
+                             "_test.clj")))
+          (str (test-ns-form (:canonical-data data))
+               (apply str (interpose "\n\n"
+                                     (deftest-forms data)))))))
+
+(comment
+  (init-tests! data)
+  )
+
+(defn init-src! [data]
   (spit (str (fs/file "exercises" "practice" (:exercise (:canonical-data data)) "src"
                       (str (str/replace (:exercise (:canonical-data data))
                                         "-" "_") ".clj")))
         (str (src-ns-form (:canonical-data data))
              (apply str (interpose "\n\n"
-                                   (for [property (distinct (map :property (:cases (:canonical-data data))))]
+                                   (for [property (distinct (map :property (mapcat :cases
+                                                                                   (:cases (:canonical-data data)))))]
                                      (str "(defn " property " []\n  )")))))))
+
+(comment
+  (init-src! data)
+  )
 
 (defn init-description! [data]
   (let [path ["exercises" "practice" (:exercise (:canonical-data data)) ".docs"]]
@@ -117,6 +150,10 @@
       (fs/create-dir (apply fs/path path))
       (spit (str (apply fs/file (conj path "instructions.md")))
             (:description data)))))
+
+(comment
+  (init-description! data)
+  )
 
 (defn config [data author blurb]
   (let [slug (:exercise (:canonical-data data))]
