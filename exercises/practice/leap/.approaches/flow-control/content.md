@@ -39,7 +39,7 @@ Another option is `cond` which allows for evaluating multiple conditions, simila
     :else false))
 ```
 
-A very similar alternative is to use the `condp` macro, which takes a predicate and applies it to a series of test value and expected result pairs.
+A very similar alternative is to use the `condp` macro, which takes a predicate and applies it to a series of test values and expected result pairs.
 
 ```clojure
 (defn leap-year? [year]
@@ -50,7 +50,7 @@ A very similar alternative is to use the `condp` macro, which takes a predicate 
         false))
 ```
 
-When using both `cond` and `condp,` the other matters as the first true condition stops evaluating the list and determines the result.
+When using both `cond` and `condp,` the order matters, as the first true condition stops evaluating the list and determines the result.
 
 ## Case
 

@@ -44,7 +44,7 @@ Explore the details in the [boolean operations approach][boolean-approach].
 
 ## Approach: conditional branching
 
-Instead of combining the logical expressions, we can use conditional branching with functions like `if` or `cond` to perform the necessary checks and determin if a given years is a leap one. 
+Instead of combining the logical expressions, we can use conditional branching with functions like `if` or `cond` to perform the necessary checks and determine if a given year is a leap year.
 
 ```clojure
 (if (divides? year 100) 
@@ -56,7 +56,7 @@ In the [flow control expressions approach][flow-control-approach], we discuss th
 
 ## Approach: data shapes
 
-This is a little less straight forward approach, but with a little bit of setup we can get to a `leap-year?` function that looks like so:
+This is a slightly less straightforward approach, but with a bit of setup, we can get to a `leap-year?` function that looks like so:
 
 ```clojure
 (defn leap-year? [year]
