@@ -20,7 +20,7 @@ You have four tasks: to implement the logic for determining if the above actions
 
 ## 1. Check if a fast attack can be made
 
-Implement the `can-fast-attack?` function that takes a boolean value that indicates if the knight is awake. This function returns `true` if a fast attack can be made based on the state of the knight. Otherwise, returns `false`:
+Implement the `can-fast-attack?` function that takes a boolean value that indicates if the knight is awake. This function returns `true` if a fast attack can be made based on the state of the knight. Otherwise, it returns `false`:
 
 ```clojure
 (def knight-awake? true)
@@ -31,7 +31,7 @@ Implement the `can-fast-attack?` function that takes a boolean value that indica
 
 ## 2. Check if the group can be spied upon
 
-Implement the `can-spy?` function that takes three boolean values, indicating if the knight, archer and the prisoner, respectively, are awake. The function returns `true` if the group can be spied upon, based on the state of the three characters. Otherwise, returns `false`:
+Implement the `can-spy?` function that takes three boolean values, indicating if the knight, archer and the prisoner, respectively, are awake. The function returns `true` if the group can be spied upon, based on the state of the three characters. Otherwise, it returns `false`:
 
 ```clojure
 (def knight-awake? false)
@@ -44,7 +44,7 @@ Implement the `can-spy?` function that takes three boolean values, indicating if
 
 ## 3. Check if the prisoner can be signalled
 
-Implement the `can-signal-prisoner?` function that takes two boolean values, indicating if the archer and the prisoner, respectively, are awake. The function returns `true` if the prisoner can be signalled, based on the state of the two characters. Otherwise, returns `false`:
+Implement the `can-signal-prisoner?` function that takes two boolean values, indicating if the archer and the prisoner, respectively, are awake. The function returns `true` if the prisoner can be signalled, based on the state of the two characters. Otherwise, it returns `false`:
 
 ```clojure
 (def archer-awake? false)
