@@ -1,34 +1,34 @@
 (ns list-ops)
 
-(defn foldl [f list init]
-  (loop [acc init l list]
+(defn foldl [f coll init]
+  (loop [acc init l coll]
     (cond
       (empty? l) acc
       :else (recur (f acc (first l)) (rest l)))))
 
-(defn append [list1 list2]
-  (list-ops/foldl (fn [acc elem] (conj acc elem)) list2 list1))
+(defn append [coll1 coll2]
+  (list-ops/foldl (fn [acc elem] (conj acc elem)) coll2 coll1))
 
-(defn concat [list]
+(defn concatenate [coll]
   (cond
-    (empty? list) []
-    :else (list-ops/foldl (fn [acc elem] (list-ops/append acc elem)) (rest list) (first list))))
+    (empty? coll) []
+    :else (list-ops/foldl (fn [acc elem] (list-ops/append acc elem)) (rest coll) (first coll))))
 
-(defn filter [f list]
-  (loop [acc [] l list]
+(defn select-if [pred coll]
+  (loop [acc [] l coll]
     (cond
       (empty? l) acc
-      (f (first l)) (recur (conj acc (first l)) (rest l))
+      (pred (first l)) (recur (conj acc (first l)) (rest l))
       :else (recur acc (rest l)))))
 
-(defn length [list]
-  (list-ops/foldl (fn [acc elem] (+ acc 1)) list 0))
+(defn length [coll]
+  (list-ops/foldl (fn [acc elem] (+ acc 1)) coll 0))
 
-(defn map [f list]
-  (list-ops/foldl (fn [acc elem] (conj acc (f elem))) list []))
+(defn apply-to-each [f coll]
+  (list-ops/foldl (fn [acc elem] (conj acc (f elem))) coll []))
 
-(defn reverse [list]
-  (list-ops/foldl (fn [acc elem] (cons elem acc)) list []))
+(defn reverse-order [coll]
+  (list-ops/foldl (fn [acc elem] (cons elem acc)) coll []))
 
-(defn foldr [f list init]
-  (list-ops/foldl f (list-ops/reverse list) init))
+(defn foldr [f coll init]
+  (list-ops/foldl f (list-ops/reverse-order coll) init))

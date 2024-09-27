@@ -12,19 +12,19 @@
   (testing "non-empty lists"
      (is (= [1 2 2 3 4 5] (list-ops/append [1 2] [2 3 4 5])))))
 
-(deftest concat-test
+(deftest concatenate-test
   (testing "empty list"
-     (is (= [] (list-ops/concat []))))
+     (is (= [] (list-ops/concatenate []))))
   (testing "list of lists"
-     (is (= [1 2 3 4 5 6] (list-ops/concat [[1 2] [3] [] [4 5 6]]))))
+     (is (= [1 2 3 4 5 6] (list-ops/concatenate [[1 2] [3] [] [4 5 6]]))))
   (testing "list of nested lists"
-     (is (= [[1] [2] [3] [] [4 5 6]] (list-ops/concat [[[1] [2]] [[3]] [[]] [[4 5 6]]])))))
+     (is (= [[1] [2] [3] [] [4 5 6]] (list-ops/concatenate [[[1] [2]] [[3]] [[]] [[4 5 6]]])))))
 
-(deftest filter-test
+(deftest select-if-test
   (testing "empty list"
-     (is (= [] (list-ops/filter (fn [x] (= (mod x 2) 1)) [])))
+     (is (= [] (list-ops/select-if (fn [x] (= (mod x 2) 1)) [])))
   (testing "non-empty list"
-     (is (= [1 3 5] (list-ops/filter (fn [x] (= (mod x 2) 1)) [1 2 3 5]))))))
+     (is (= [1 3 5] (list-ops/select-if (fn [x] (= (mod x 2) 1)) [1 2 3 5]))))))
 
 (deftest length-test
   (testing "empty list"
@@ -32,11 +32,11 @@
   (testing "non-empty list"
      (is (= 4 (list-ops/length [1 2 3 4])))))
 
-(deftest map-test
+(deftest apply-to-each-test
   (testing "empty list"
-     (is (= [] (list-ops/map (fn [x] (+ x 1)) []))))
+     (is (= [] (list-ops/apply-to-each (fn [x] (+ x 1)) []))))
   (testing "non-empty list"
-     (is (= [2 4 6 8] (list-ops/map (fn [x] (+ x 1)) [1 3 5 7])))))
+     (is (= [2 4 6 8] (list-ops/apply-to-each (fn [x] (+ x 1)) [1 3 5 7])))))
 
 (deftest foldl-test
   (testing "empty list"
@@ -54,12 +54,12 @@
   (testing "direction dependent function applied to non-empty list"
      (is (= 9 (list-ops/foldr (fn [acc el] (/ el acc)) [1 2 3 4] 24)))))
 
-(deftest reverse-test
+(deftest reverse-order-test
   (testing "empty list"
-     (is (= [] (list-ops/reverse []))))
+     (is (= [] (list-ops/reverse-order []))))
   (testing "non-empty list"
-     (is (= [7 5 3 1] (list-ops/reverse [1 3 5 7]))))
+     (is (= [7 5 3 1] (list-ops/reverse-order [1 3 5 7]))))
   (testing "list of lists is not flattened"
-     (is (= [[4 5 6] [] [3] [1 2]] (list-ops/reverse [[1 2] [3] [] [4 5 6]])))))
+     (is (= [[4 5 6] [] [3] [1 2]] (list-ops/reverse-order [[1 2] [3] [] [4 5 6]])))))
 
 ;(clojure.test/run-tests)
