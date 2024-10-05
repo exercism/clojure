@@ -1,49 +1,48 @@
 (ns list-ops)
 
 (defn append 
-  "Given two collections, it adds all the items in the second collection to the end of the first collection"
+  "Given two vectors, it adds all the items in the second vector to the end of the first vector"
   [coll1 coll2]
   ;; your code goes here
 )
 
 (defn concatenate 
-  "Given a series of collections, it combines all the collections into one flattened collection"
-  [colls]
+  "Given a series of vectors, it combines all the vectors into one flattened vector"
+  [coll]
   ;; your code goes here
 )
 
 (defn select-if
-  "Given a predicate and a collection, it returns the collection of all items for which predicate(item) is true"
+  "Given a predicate and a vector, it returns the vector of all items for which `predicate(item)` is True"
   [pred coll]
   ;; your code goes here
 )
 
 (defn length 
-  "Given a collection, it returns the number of items within it"
+  "Given a vector, it returns the number of items within it"
   [coll]
   ;; your code goes here
 )
 
 (defn apply-to-each 
-  "Given a function and a collection, it returns the collection of the results of applying function(item) on all items"
+  "Given a function and a vector, it returns the vector of the results of applying `function(item)` on all items"
   [f coll]
   ;; your code goes here
 )
 
 (defn foldl 
-  "Given a function, a collection, and initial accumulator, it folds (reduces) each item into the accumulator from the left"
+  "Given a function, a vector, and initial accumulator, it folds (reduces) each item into the accumulator from the left"
   [f coll init]
   ;; your code goes here
 )
 
-(defn foldr
-  "Given a function, a collection, and an initial accumulator, it folds (reduces) each item into the accumulator from the right"
-  [f coll init]
+(defn foldr [f coll init]
+  "Given a function, a vector, and an initial accumulator, it folds (reduces) each item into the accumulator from the right"
   ;; your code goes here
 )
 
 (defn reverse-order 
-  "Given a collection, it returns a collection with all the original items, but in reverse order"
+  "Given a vector, it returns a vector with all the original items, but in reverse order"
   [coll]
   ;; your code goes here
 )
