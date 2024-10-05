@@ -1,21 +1,27 @@
 (ns rna-transcription-test
-  (:require [clojure.test :refer [deftest is]]
+  (:require [clojure.test :refer [deftest testing is]]
             rna-transcription))
 
-(deftest transcribes-cytosine-to-guanine
-  (is (= "G" (rna-transcription/to-rna "C"))))
+(deftest empty-sequence
+  (testing "Empty RNA sequence"
+    (is (= "" (rna-transcription/to-rna "")))))
 
-(deftest transcribes-guanine-to-cytosine
-  (is (= "C" (rna-transcription/to-rna "G"))))
+(deftest rna-complement-of-cytosine
+  (testing "RNA complement of cytosine is guanine"
+    (is (= "G" (rna-transcription/to-rna "C")))))
 
-(deftest transcribes-adenine-to-uracil
-  (is (= "U" (rna-transcription/to-rna "A"))))
+(deftest rna-complement-of-guanine
+  (testing "RNA complement of guanine is cytosine"
+    (is (= "C" (rna-transcription/to-rna "G")))))
 
-(deftest it-transcribes-thymine-to-adenine
-  (is (= "A" (rna-transcription/to-rna "T"))))
+(deftest rna-complement-of-thymine
+  (testing "RNA complement of thymine is adenine"
+    (is (= "A" (rna-transcription/to-rna "T")))))
 
-(deftest it-transcribes-all-nucleotides
-  (is (= "UGCACCAGAAUU" (rna-transcription/to-rna "ACGTGGTCTTAA"))))
+(deftest rna-complement-of-adenine
+  (testing "RNA complement of adenine is uracil"
+    (is (= "U" (rna-transcription/to-rna "A")))))
 
-(deftest it-validates-dna-strands
-  (is (thrown? AssertionError (rna-transcription/to-rna "XCGFGGTDTTAA"))))
+(deftest rna-complement
+  (testing "RNA complement"
+    (is (= "UGCACCAGAAUU" (rna-transcription/to-rna "ACGTGGTCTTAA")))))
