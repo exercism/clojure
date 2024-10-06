@@ -7,7 +7,7 @@
 )
 
 (defn concatenate 
-  "Given a series of vectors, it combines all the vectors into one flattened vector"
+  "Given a vector of vectors, it combines all the vectors into one flattened vector"
   [colls]
   ;; your code goes here
 )
