@@ -8,12 +8,12 @@
 
 (defn concatenate 
   "Given a series of vectors, it combines all the vectors into one flattened vector"
-  [coll]
+  [colls]
   ;; your code goes here
 )
 
 (defn select-if
-  "Given a predicate and a vector, it returns the vector of all items for which `predicate(item)` is True"
+  "Given a predicate and a vector, it returns the vector of all items for which predicate(item) is true"
   [pred coll]
   ;; your code goes here
 )
@@ -25,7 +25,7 @@
 )
 
 (defn apply-to-each 
-  "Given a function and a vector, it returns the vector of the results of applying `function(item)` on all items"
+  "Given a function and a vector, it returns the vector of the results of applying function(item) on all items"
   [f coll]
   ;; your code goes here
 )
@@ -36,8 +36,9 @@
   ;; your code goes here
 )
 
-(defn foldr [f coll init]
+(defn foldr
   "Given a function, a vector, and an initial accumulator, it folds (reduces) each item into the accumulator from the right"
+  [f coll init]
   ;; your code goes here
 )
 

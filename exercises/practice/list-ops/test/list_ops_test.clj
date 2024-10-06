@@ -61,5 +61,3 @@
      (is (= [7 5 3 1] (list-ops/reverse-order [1 3 5 7]))))
   (testing "vector of vectors is not flattened"
      (is (= [[4 5 6] [] [3] [1 2]] (list-ops/reverse-order [[1 2] [3] [] [4 5 6]])))))
-
-;(clojure.test/run-tests)
