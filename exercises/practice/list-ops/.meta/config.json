@@ -1,0 +1,21 @@
+{
+  "authors": [
+    "bobbicodes"
+  ],
+  "contributors": [
+    "kahgoh",
+    "tasxatzial"
+  ],
+  "files": {
+    "solution": [
+      "src/list_ops.clj"
+    ],
+    "test": [
+      "test/list_ops_test.clj"
+    ],
+    "example": [
+      ".meta/src/example.clj"
+    ]
+  },
+  "blurb": "Implement basic list operations."
+}
