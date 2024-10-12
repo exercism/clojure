@@ -1365,7 +1365,8 @@
         "practices": [],
         "prerequisites": [
           "lists",
-          "closures"
+          "closures",
+          "vectors"
         ],
         "difficulty": 5
       }
