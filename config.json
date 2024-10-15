@@ -243,13 +243,12 @@
         "name": "Accumulate",
         "uuid": "49f62bbc-0f60-4922-b5a6-f266b80442f4",
         "practices": [],
-        "prerequisites": [
-          "numbers"
-        ],
+        "prerequisites": [],
         "difficulty": 2,
         "topics": [
           "algorithms, core_functions"
-        ]
+        ],
+        "status": "deprecated"
       },
       {
         "slug": "acronym",
