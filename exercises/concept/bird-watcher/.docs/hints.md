@@ -6,7 +6,7 @@
 
 ## 2. Check how many birds visited today
 
-- The [`last`][last] function can be used to return the last item in a sequential collection.
+- The [`peek`][peek] function can be used to return the last item in a vector.
 
 ## 3. Increment today's count
 
@@ -44,7 +44,7 @@
 [every?]: https://clojuredocs.org/clojure.core/every_q
 [filter]: https://clojuredocs.org/clojure.core/filter
 [inc]: https://clojuredocs.org/clojure.core/inc
-[last]: https://clojuredocs.org/clojure.core/last
+[peek]: https://clojuredocs.org/clojure.core/peek
 [not]: https://clojuredocs.org/clojure.core/not
 [pos?]: https://clojuredocs.org/clojure.core/pos_q
 [reduce]: https://clojuredocs.org/clojure.core/reduce
