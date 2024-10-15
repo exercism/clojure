@@ -734,13 +734,12 @@
         "name": "Binary",
         "uuid": "daf3daed-61ef-4964-8d33-e7a739c7a470",
         "practices": [],
-        "prerequisites": [
-          "numbers"
-        ],
+        "prerequisites": [],
         "difficulty": 3,
         "topics": [
           "math"
-        ]
+        ],
+        "status": "deprecated"
       },
       {
         "slug": "binary-search",
@@ -846,13 +845,12 @@
         "name": "Hexadecimal",
         "uuid": "a4b1b39a-d942-4921-9b67-2bd913ff52a0",
         "practices": [],
-        "prerequisites": [
-          "numbers"
-        ],
+        "prerequisites": [],
         "difficulty": 3,
         "topics": [
           "math"
-        ]
+        ],
+        "status": "deprecated"
       },
       {
         "slug": "isbn-verifier",
@@ -1009,14 +1007,12 @@
         "name": "Trinary",
         "uuid": "f8a7f5eb-e317-4ffa-bdef-6e30a36511eb",
         "practices": [],
-        "prerequisites": [
-          "numbers",
-          "strings"
-        ],
+        "prerequisites": [],
         "difficulty": 3,
         "topics": [
           "math"
-        ]
+        ],
+        "status": "deprecated"
       },
       {
         "slug": "allergies",
@@ -1111,16 +1107,13 @@
         "slug": "octal",
         "name": "Octal",
         "uuid": "fa596153-0cbe-40e9-a4d6-1a66fe6ef7e5",
-        "practices": [
-          "numbers"
-        ],
-        "prerequisites": [
-          "numbers"
-        ],
+        "practices": [],
+        "prerequisites": [],
         "difficulty": 4,
         "topics": [
           "math"
-        ]
+        ],
+        "status": "deprecated"
       },
       {
         "slug": "spiral-matrix",
@@ -1365,10 +1358,10 @@
         "practices": [],
         "prerequisites": [
           "lists",
-          "closures"
+          "closures",
+          "vectors"
         ],
-        "difficulty": 5,
-        "status": "wip"
+        "difficulty": 5
       }
     ]
   },
