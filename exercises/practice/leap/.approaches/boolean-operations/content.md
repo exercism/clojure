@@ -11,7 +11,7 @@
 ```
 
 At the core of this approach, three checks are returning three boolean values.
-We can use [Boolean logic](https://en.wikipedia.org/wiki/Boolean_algebra) to combine the results. Multiple variations are possible. One is shown above, but the below is also possible.
+We can use [Boolean logic](https://en.wikipedia.org/wiki/Boolean_algebra) to combine the results. Multiple variations are possible. One is shown above, but the one below is also possible.
 
 ```clojure
 (defn leap-year? [year]
@@ -22,7 +22,7 @@ We can use [Boolean logic](https://en.wikipedia.org/wiki/Boolean_algebra) to com
 
 ## Being explicit
 
-The above examples use a private function `divides?` to be more explicit, to show what logical check is done rather than what operation is performed.
+The above examples use a private function `divides?` to be more explicit, showing what logical check is done rather than what operation is performed.
 This is common in Clojure code, but it is also possible to do the checks directly.
 
 ```clojure
@@ -34,7 +34,7 @@ This is common in Clojure code, but it is also possible to do the checks directl
 
 In this example, in addition, instead of negating the second check, we check if the reminder from the division is greater than zero.
 
-If the concern is that defining `divides?` adds confusion, because it is not known in the only place where it is used, `letfn` can be used. Here is another example.
+If the concern is that defining `divides?` adds confusion because it is not known in the only place where it is used, `letfn` can be used instead. Here is another example.
 
 ```clojure
 (defn leap-year? [year]
