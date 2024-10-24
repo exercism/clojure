@@ -11,18 +11,18 @@
 ## 3. Finding Prior Rounds
 
 - The [`some`][some] function will return the first logically true value in a collection.
-- [`boolean`][boolean] is useful in cases where a function returns a value but the tests are expecting a boolean.
+- The [`boolean`][boolean] function is useful in cases where a function returns a value but the tests are expecting a boolean.
 
 ## 4. Averaging Card Values
 
 - Recall basic arithmetic operators such as [`/`][division] and [`+`][addition].
 - A collection of numbers can be summed using either [`apply`][apply] or [`reduce`][reduce].
 - The [`count`][count] function returns the number of items in a collection.
-- The `/` function returns a ratio type when operating on integers. You can use [`double`][double] to convert a ratio to a decimal.
+- The [`/`][division] function returns a ratio type when operating on integers. You can use [`double`][double] to convert a ratio to a decimal.
 
 ## 5. Alternate Averages
 
-- There are sequence functions to return the [`first`][first] or [`last`] element of a sequential collection.
+- There are sequence functions to return the [`first`][first] or [`last`][last] element of a sequential collection.
 - To find the middle card you can divide the number of cards by 2, round to the lowest integer with [`int`][int], and retrieve the card at that index using [`nth`][nth].
 - Use [`or`][or] to determine if either condition is true.
 
