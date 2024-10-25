@@ -32,13 +32,13 @@
 
 (defn foldl 
   "Given a function, a vector, and initial accumulator, it folds (reduces) each item into the accumulator from the left"
-  [f coll init]
+  [f coll acc]
   ;; your code goes here
 )
 
 (defn foldr
   "Given a function, a vector, and an initial accumulator, it folds (reduces) each item into the accumulator from the right"
-  [f coll init]
+  [f coll acc]
   ;; your code goes here
 )
 
