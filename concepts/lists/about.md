@@ -6,11 +6,10 @@
 - Lists can be created using `list` or by using a single quote.
 - Clojure will try to evaluate lists, treating the first item as a function.
 - Core functions:
-  - `cons` returns a list with the new item added to beginning.
-  - `first` returns the first item from a list.
-  - `rest` returns the list without the first item.
+  - `first` returns the first item in the list.
+  - `rest` returns the list without its first item.
   - `count` returns the number of items in the list.
-  - `conj` returns a list with items appended in it.
+  - `conj` adds one or more items to the beginning of the list.
 
 ## Additional Resources
 
