@@ -350,6 +350,16 @@
         ]
       },
       {
+        "slug": "eliuds-eggs",
+        "name": "Eliud's Eggs",
+        "uuid": "bfe1789f-8388-4285-bed9-26f694e12c70",
+        "practices": [],
+        "prerequisites": [
+          "basics"
+        ],
+        "difficulty": 2
+      },
+      {
         "slug": "etl",
         "name": "ETL",
         "uuid": "befca7ee-fc29-4ef0-afd7-2d3f68aa47fb",
@@ -1369,14 +1379,6 @@
         ],
         "difficulty": 5,
         "status": "wip"
-      },
-      {
-        "slug": "eliuds-eggs",
-        "name": "Eliud's Eggs",
-        "uuid": "bfe1789f-8388-4285-bed9-26f694e12c70",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 2
       }
     ]
   },
