@@ -1,5 +1,7 @@
 (ns gigasecond)
 
-(defn from []  ;; <- arglist goes here
-    ;; your code goes here
-)
+(defn from
+  "Determines the date one gigasecond after the given date"
+  [date]
+  ;; function body
+  )
