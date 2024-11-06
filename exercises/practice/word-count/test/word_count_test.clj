@@ -59,17 +59,8 @@
             "stop" 2}
            (word-count/word-count "go Go GO Stop stop")))))
 
-(deftest test-4185a902-bdb0-4074-864c-f416e42a0f19
-  (testing "with apostrophes 1"
-    (is (= {"first" 1
-            "don't" 2
-            "laugh" 1
-            "then" 1
-            "cry" 1}
-           (word-count/word-count "First: don't laugh. Then: don't cry.")))))
-
 (deftest test-4ff6c7d7-fcfc-43ef-b8e7-34ff1837a2d3
-  (testing "with apostrophes 2"
+  (testing "with apostrophes"
     (is (= {"first" 1
             "don't" 2
             "laugh" 1
