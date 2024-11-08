@@ -2,6 +2,9 @@
   "authors": [
     "porkostomus"
   ],
+  "contributors": [
+    "tasxatzial"
+  ],
   "files": {
     "solution": [
       "src/squeaky_clean.clj"
