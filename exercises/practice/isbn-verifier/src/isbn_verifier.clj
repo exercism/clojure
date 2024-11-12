@@ -1,5 +1,7 @@
 (ns isbn-verifier)
 
-(defn isbn? [isbn] ;; <- arglist goes here
-  ;; your code goes here
-)
+(defn isbn?
+  "Returns true if the given isbn is valid; otherwise, returns false"
+  [isbn]
+  ;; function body
+  )
