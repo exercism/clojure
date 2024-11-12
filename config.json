@@ -1375,10 +1375,10 @@
         "practices": [],
         "prerequisites": [
           "lists",
-          "closures"
+          "closures",
+          "vectors"
         ],
-        "difficulty": 5,
-        "status": "wip"
+        "difficulty": 5
       }
     ]
   },

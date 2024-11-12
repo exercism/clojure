@@ -5,11 +5,11 @@
 
 (defn append
   [coll1 coll2]
-  (foldl conj coll2 coll1))
+  (reverse-order (foldl conj coll2 (reverse-order coll1))))
 
 (defn concatenate
   [colls]
-  (foldl append colls []))
+  (foldl append colls ()))
 
 (defn select-if
   [pred coll]
@@ -17,7 +17,7 @@
                   (if (pred el)
                     (conj acc el)
                     acc))]
-    (foldl reducer coll [])))
+    (reverse-order (foldl reducer coll ()))))
 
 (defn length
   [coll]
@@ -29,7 +29,7 @@
   [f coll]
   (let [reducer (fn [acc el]
                   (conj acc (f el)))]
-    (foldl reducer coll [])))
+    (reverse-order (foldl reducer coll ()))))
 
 (defn foldl
   [f coll acc]
@@ -43,8 +43,4 @@
 
 (defn reverse-order
   [coll]
-  (loop [index (dec (length coll))
-         result []]
-    (if (neg? index)
-      result
-      (recur (dec index) (conj result (coll index))))))
+  (foldl conj coll ()))
