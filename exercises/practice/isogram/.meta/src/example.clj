@@ -1,5 +1,10 @@
-(ns isogram
-  (:require [clojure.string :as str]))
+(ns isogram)
 
-(defn isogram? [word]
-  (apply distinct? (filter #(Character/isLetter %) (str/lower-case word))))
+(defn isogram?
+  [s]
+  (->> s
+       clojure.string/lower-case
+       (filter #(Character/isAlphabetic (int %)))
+       frequencies
+       vals
+       (every? #{1})))
