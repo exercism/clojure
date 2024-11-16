@@ -8,7 +8,7 @@ We need to check if the knight is awake and _invert_ the boolean value represent
 
 We want to return `true` if _any_ of the supplied predicates are `true`. This can be done with the [`or`][or] function.
 
-## 3. Check if the prisoner can be signalled
+## 3. Check if the prisoner can be signaled
 
 We want to return `true` if and only if _all_ of the supplied predicates are `true`. This can be done with the [`and`][and] function.
 
