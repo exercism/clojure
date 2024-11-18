@@ -1,5 +1,7 @@
 {
-  "authors": [],
+  "authors": [
+    "tasxatzial"
+  ],
   "files": {
     "solution": [
       "src/pythagorean_triplet.clj"
