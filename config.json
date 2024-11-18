@@ -245,10 +245,10 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 2,
+        "status": "deprecated",
         "topics": [
           "algorithms, core_functions"
-        ],
-        "status": "deprecated"
+        ]
       },
       {
         "slug": "acronym",
@@ -745,10 +745,10 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 3,
+        "status": "deprecated",
         "topics": [
           "math"
-        ],
-        "status": "deprecated"
+        ]
       },
       {
         "slug": "binary-search",
@@ -856,10 +856,10 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 3,
+        "status": "deprecated",
         "topics": [
           "math"
-        ],
-        "status": "deprecated"
+        ]
       },
       {
         "slug": "isbn-verifier",
@@ -1018,10 +1018,10 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 3,
+        "status": "deprecated",
         "topics": [
           "math"
-        ],
-        "status": "deprecated"
+        ]
       },
       {
         "slug": "allergies",
@@ -1119,10 +1119,10 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 4,
+        "status": "deprecated",
         "topics": [
           "math"
-        ],
-        "status": "deprecated"
+        ]
       },
       {
         "slug": "spiral-matrix",
@@ -1371,6 +1371,14 @@
           "vectors"
         ],
         "difficulty": 5
+      },
+      {
+        "slug": "pythagorean-triplet",
+        "name": "Pythagorean Triplet",
+        "uuid": "7a9e219b-a830-4813-8274-e4473fef29e8",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1
       }
     ]
   },
