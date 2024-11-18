@@ -1196,6 +1196,18 @@
         ]
       },
       {
+        "slug": "pythagorean-triplet",
+        "name": "Pythagorean Triplet",
+        "uuid": "7a9e219b-a830-4813-8274-e4473fef29e8",
+        "practices": [],
+        "prerequisites": [
+          "basics",
+          "integers",
+          "numbers"
+        ],
+        "difficulty": 6
+      },
+      {
         "slug": "robot-simulator",
         "name": "Robot Simulator",
         "uuid": "e69ecf2e-8629-4d20-a90f-6de7536247ce",
@@ -1371,14 +1383,6 @@
           "vectors"
         ],
         "difficulty": 5
-      },
-      {
-        "slug": "pythagorean-triplet",
-        "name": "Pythagorean Triplet",
-        "uuid": "7a9e219b-a830-4813-8274-e4473fef29e8",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 1
       }
     ]
   },
