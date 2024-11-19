@@ -1,4 +1,4 @@
-(ns pythagorean-triplets)
+(ns pythagorean-triplet)
 
 (defn find-pythagorean-triplets
   [N]
