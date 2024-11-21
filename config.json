@@ -1202,7 +1202,6 @@
         "practices": [],
         "prerequisites": [
           "basics",
-          "integers",
           "numbers"
         ],
         "difficulty": 6
