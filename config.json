@@ -1212,6 +1212,19 @@
         ]
       },
       {
+        "slug": "transpose",
+        "name": "Transpose",
+        "uuid": "a5dbea81-e24b-453e-bec9-bae4549ae52a",
+        "practices": [],
+        "prerequisites": [
+          "basics",
+          "chars",
+          "strings",
+          "vectors"
+        ],
+        "difficulty": 5
+      },
+      {
         "slug": "wordy",
         "name": "Wordy",
         "uuid": "5528f567-2b5b-498a-b166-984b2c90f6a5",
@@ -1371,14 +1384,6 @@
           "vectors"
         ],
         "difficulty": 5
-      },
-      {
-        "slug": "transpose",
-        "name": "Transpose",
-        "uuid": "a5dbea81-e24b-453e-bec9-bae4549ae52a",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 1
       }
     ]
   },
