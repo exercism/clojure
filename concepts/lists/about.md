@@ -7,7 +7,7 @@
 - Clojure will try to evaluate lists, treating the first item as a function.
 - Core functions:
   - [`first`][first] returns the first item in the list.
-  - [`rest`][rest] returns a sequence of all items of the list except the first.
+  - [`rest`][rest] returns a list of all items of the list except the first.
   - [`count`][count] returns the number of items in the list.
   - [`conj`][conj] adds one or more items to the beginning of the list.
 
