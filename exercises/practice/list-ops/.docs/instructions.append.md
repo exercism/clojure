@@ -2,7 +2,9 @@
 
 ## Appendix
 
-The instructions are synced with a shared repository to ensure consistency across all language tracks.
+**Note**: The above instructions are synced with a shared repository to ensure consistency across all language tracks.
+Any instructions listed in this appendix override the ones above.
+
 For this exercise in the Clojure track, assume both the input and output are vectors.
 As a stretch goal, consider how you could implement the solution without using lists anywhere in your code.
 Also, think about the efficiency of your program.
@@ -12,8 +14,14 @@ Key functions from the **clojure.core** namespace to avoid include `into`, `conc
 
 ### Optional goals
 
-Try to pass the tests by devising a solution that assumes both the input and output are lists instead of vectors.
-The test suite does not need to be modified.
-This time, consider how you could implement the solution without using vectors anywhere in your code.
+Try to pass the tests by devising a solution that assumes:
 
-If you decide to publish this solution, be sure to include a comment indicating that it addresses the optional goal of using lists. Don't forget to update the docstrings!
+- both the input and output are lists instead of vectors
+- the test suite isn't modified
+
+These assumptions directly influence the types of the functions that can be used.
+
+As a stretch goal, consider how you could implement the solution without using vectors anywhere in your code.
+
+If you decide to publish this solution, be sure to include a comment indicating that it addresses the optional goal of using lists.
+Don't forget to update the docstrings!
