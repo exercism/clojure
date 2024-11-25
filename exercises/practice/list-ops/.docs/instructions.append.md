@@ -10,7 +10,7 @@ As a stretch goal, consider how you could implement the solution without using l
 Also, think about the efficiency of your program.
 
 It is important not to reuse existing Clojure built-in functions with similar functionality, as doing so would diminish the intended learning value of the exercise.
-Key functions from the **clojure.core** namespace to avoid include `into`, `concat`, `cat`, `lazy-cat`, `mapcat`, `flatten`, `filter`, `filterv`, `remove`, `count`, `map`, `mapv`, `reduce`, `transduce`, `reverse`, and `rseq`.
+Key functions from the `clojure.core` namespace to avoid include `into`, `concat`, `cat`, `lazy-cat`, `mapcat`, `flatten`, `filter`, `filterv`, `remove`, `count`, `map`, `mapv`, `reduce`, `transduce`, `reverse`, and `rseq`.
 
 ### Optional goals
 
