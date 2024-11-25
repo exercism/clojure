@@ -1,9 +1,5 @@
 [
   {
-    "url": "https://clojure.org/reference/sequences",
-    "description": "Sequences"
-  },
-  {
     "url": "https://clojure.org/reference/data_structures",
     "description": "Data Structures"
   }
