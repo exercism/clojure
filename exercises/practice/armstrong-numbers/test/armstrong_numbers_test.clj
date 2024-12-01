@@ -4,36 +4,36 @@
 
 (deftest armstrong-number-0
   (testing "Zero is an Armstrong number"
-    (is (armstrong-numbers/armstrong? 0))))
+    (is (true? (armstrong-numbers/armstrong? 0)))))
 
 (deftest armstrong-number-5
   (testing "Single-digit numbers are Armstrong numbers"
-    (is (armstrong-numbers/armstrong? 5))))
+    (is (true? (armstrong-numbers/armstrong? 5)))))
 
 (deftest not-armstrong-number-10
   (testing "There are no two-digit Armstrong numbers"
-    (is (not (armstrong-numbers/armstrong? 10)))))
+    (is (false? (armstrong-numbers/armstrong? 10)))))
 
 (deftest armstrong-number-153
   (testing "Three-digit number that is an Armstrong number"
-    (is (armstrong-numbers/armstrong? 153))))
+    (is (true? (armstrong-numbers/armstrong? 153)))))
 
 (deftest not-armstrong-number-100
   (testing "Three-digit number that is not an Armstrong number"
-    (is (not (armstrong-numbers/armstrong? 100)))))
+    (is (false? (armstrong-numbers/armstrong? 100)))))
 
 (deftest armstrong-number-9474
   (testing "Four-digit number that is an Armstrong number"
-    (is (armstrong-numbers/armstrong? 9474))))
+    (is (true? (armstrong-numbers/armstrong? 9474)))))
 
 (deftest not-armstrong-number-9475
   (testing "Four-digit number that is not an Armstrong number"
-    (is (not (armstrong-numbers/armstrong? 9475)))))
+    (is (false? (armstrong-numbers/armstrong? 9475)))))
 
 (deftest armstrong-number-9926315
   (testing "Seven-digit number that is an Armstrong number"
-    (is (armstrong-numbers/armstrong? 9926315))))
+    (is (true? (armstrong-numbers/armstrong? 9926315)))))
 
 (deftest not-armstrong-number-9926314
   (testing "Seven-digit number that is not an Armstrong number"
-    (is (not (armstrong-numbers/armstrong? 9926314)))))
+    (is (false? (armstrong-numbers/armstrong? 9926314)))))
