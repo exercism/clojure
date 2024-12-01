@@ -1,39 +1,39 @@
 (ns armstrong-numbers-test
   (:require [clojure.test :refer [deftest is testing]]
-            [armstrong-numbers :refer [armstrong?]]))
+            armstrong-numbers))
 
 (deftest armstrong-number-0
   (testing "Zero is an Armstrong number"
-    (is (armstrong? 0))))
+    (is (armstrong-numbers/armstrong? 0))))
 
 (deftest armstrong-number-5
   (testing "Single-digit numbers are Armstrong numbers"
-    (is (armstrong? 5))))
+    (is (armstrong-numbers/armstrong? 5))))
 
 (deftest not-armstrong-number-10
   (testing "There are no two-digit Armstrong numbers"
-    (is (not (armstrong? 10)))))
+    (is (not (armstrong-numbers/armstrong? 10)))))
 
 (deftest armstrong-number-153
   (testing "Three-digit number that is an Armstrong number"
-    (is (armstrong? 153))))
+    (is (armstrong-numbers/armstrong? 153))))
 
 (deftest not-armstrong-number-100
   (testing "Three-digit number that is not an Armstrong number"
-    (is (not (armstrong? 100)))))
+    (is (not (armstrong-numbers/armstrong? 100)))))
 
 (deftest armstrong-number-9474
   (testing "Four-digit number that is an Armstrong number"
-    (is (armstrong? 9474))))
+    (is (armstrong-numbers/armstrong? 9474))))
 
 (deftest not-armstrong-number-9475
   (testing "Four-digit number that is not an Armstrong number"
-    (is (not (armstrong? 9475)))))
+    (is (not (armstrong-numbers/armstrong? 9475)))))
 
 (deftest armstrong-number-9926315
   (testing "Seven-digit number that is an Armstrong number"
-    (is (armstrong? 9926315))))
+    (is (armstrong-numbers/armstrong? 9926315))))
 
 (deftest not-armstrong-number-9926314
   (testing "Seven-digit number that is not an Armstrong number"
-    (is (not (armstrong? 9926314)))))
+    (is (not (armstrong-numbers/armstrong? 9926314)))))
