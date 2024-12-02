@@ -2,8 +2,10 @@
 
 ## Appendix
 
-**Note**: The instructions above are synchronized with a shared repository to ensure consistency across all language tracks.
+~~~~exercism/note
+The instructions above are synchronized with a shared repository to ensure consistency across all language tracks.
 This appendix provides additional clarification or modifies the instructions as needed to better align with the goals of the Clojure track.
+~~~~
 
 For this exercise in the Clojure track, **assume both the input and output are vectors**.
 As a stretch goal, consider how you could implement the solution without using lists anywhere in your code.
