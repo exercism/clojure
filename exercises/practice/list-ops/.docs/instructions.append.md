@@ -8,7 +8,7 @@ This appendix provides additional clarification or modifies the instructions as 
 ~~~~
 
 For this exercise in the Clojure track, **assume both the input and output are vectors**, as indicated by the tests.
-As a stretch goal, consider how you could implement the solution without using lists anywhere in your code.
+As a stretch goal, consider how to implement an approach that does not use lists for intermediate steps.
 
 It is important not to reuse existing Clojure built-in functions with similar functionality, as doing so would diminish the intended learning value of the exercise.
 Key functions from the `clojure.core` namespace to avoid include `into`, `concat`, `cat`, `lazy-cat`, `mapcat`, `flatten`, `filter`, `filterv`, `remove`, `count`, `map`, `mapv`, `reduce`, `transduce`, `reverse`, and `rseq`.
@@ -21,7 +21,7 @@ Try to pass the tests by devising an approach that assumes:
 
 * Both the input and output are lists instead of vectors.
   Note that, as usual, the tests do not need to be modified.
-* Vectors cannot be used anywhere in your solution.
+* Vectors cannot be used for intermediate steps.
 
 If you decide to publish this, be sure to include a comment indicating that it addresses the optional goal of using lists.
 Don't forget to update the docstrings!
