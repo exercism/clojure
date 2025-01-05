@@ -1,4 +1,10 @@
 # Instructions append
 
-**Note:** The instructions ask for the exponent function because they are synced with a shared repository to maintain consistency across all language tracks.
-However, for this exercise in the Clojure track, you don't need to implement it.
+## Appendix
+
+~~~~exercism/note
+The instructions above are synchronized with a shared repository to ensure consistency across all language tracks.
+This appendix provides additional clarification or modifies the instructions as needed to better align with the goals of the Clojure track.
+~~~~
+
+For this exercise in the Clojure track, you don't need to implement the exponentiation operation.
