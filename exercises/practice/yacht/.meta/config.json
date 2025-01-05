@@ -2,7 +2,6 @@
   "authors": [
     "porkostomus"
   ],
-  "contributors": [],
   "files": {
     "solution": [
       "src/yacht.clj"
