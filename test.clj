@@ -30,18 +30,18 @@
 
 (defn test-exercise [slug]
   (let [practice? (contains? (set practice-exercises) slug)
+        type (if practice? "practice" "concept")
+        dir (str root "exercises/" type "/" slug "/")
         example (if practice?
-                  (str root "exercises/practice/" slug "/.meta/src/example.clj")
-                  (str root "exercises/concept/" slug "/.meta/exemplar.clj"))
-        src (if practice?
-              (str root "exercises/practice/" slug "/src/" (->snake_case slug) ".clj")
-              (str root "exercises/concept/" slug "/src/" (->snake_case slug) ".clj"))]
+                  (str dir ".meta/src/example.clj")
+                  (str dir ".meta/exemplar.clj"))
+        src (str dir "src/" (->snake_case slug) ".clj")]
     (shell/sh "cp" example src)
     (= "pass" ((json/parse-string
                 (:out (shell/sh (str test-runner-dir "test-runner.clj")
                                 slug
-                                (str root (if practice? "exercises/practice/" "exercises/concept/") slug "/")
-                                (str root (if practice? "exercises/practice/" "exercises/concept/") slug "/"))))
+                                dir
+                                dir)))
                "status"))))
 
 (defn test-exercises! []
