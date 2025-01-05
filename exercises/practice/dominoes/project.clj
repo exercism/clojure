@@ -1,4 +1,4 @@
 (defproject dominoes "0.1.0-SNAPSHOT"
   :description "dominoes exercise."
-  :url "https://github.com/exercism/clojure/tree/master/exercises/dominoes"
+  :url "https://github.com/exercism/clojure/tree/main/exercises/practice/dominoes"
   :dependencies [[org.clojure/clojure "1.10.0"]])

@@ -1,4 +1,4 @@
 (defproject rna-transcription "0.1.0-SNAPSHOT"
   :description "rna-transcription exercise."
-  :url "https://github.com/exercism/clojure/tree/master/exercises/rna-transcription"
+  :url "https://github.com/exercism/clojure/tree/main/exercises/practice/rna-transcription"
   :dependencies [[org.clojure/clojure "1.10.0"]])

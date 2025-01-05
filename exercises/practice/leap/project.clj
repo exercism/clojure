@@ -1,4 +1,4 @@
 (defproject leap "0.1.0-SNAPSHOT"
   :description "leap exercise."
-  :url "https://github.com/exercism/clojure/tree/master/exercises/leap"
+  :url "https://github.com/exercism/clojure/tree/main/exercises/practice/leap"
   :dependencies [[org.clojure/clojure "1.10.0"]])
