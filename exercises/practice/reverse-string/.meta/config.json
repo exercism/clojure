@@ -16,7 +16,7 @@
       "test/reverse_string_test.clj"
     ],
     "example": [
-      ".meta/src/example.clj"
+      ".meta/example.clj"
     ]
   },
   "blurb": "Reverse a given string.",

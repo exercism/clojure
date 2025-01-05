@@ -26,7 +26,7 @@
       "test/%{snake_slug}_test.clj"
     ],
     "example": [
-      ".meta/src/example.clj"
+      ".meta/example.clj"
     ],
     "exemplar": [
       ".meta/exemplar.clj"

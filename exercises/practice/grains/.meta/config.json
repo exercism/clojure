@@ -21,7 +21,7 @@
       "test/grains_test.clj"
     ],
     "example": [
-      ".meta/src/example.clj"
+      ".meta/example.clj"
     ]
   },
   "blurb": "Calculate the number of grains of wheat on a chessboard given that the number on each square doubles.",

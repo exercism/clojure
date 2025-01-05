@@ -10,7 +10,7 @@
       "test/pythagorean_triplet_test.clj"
     ],
     "example": [
-      ".meta/src/example.clj"
+      ".meta/example.clj"
     ]
   },
   "blurb": "Given an integer N, find all Pythagorean triplets for which a + b + c = N.",

@@ -20,7 +20,7 @@
       "test/binary_search_test.clj"
     ],
     "example": [
-      ".meta/src/example.clj"
+      ".meta/example.clj"
     ]
   },
   "blurb": "Implement a binary search algorithm.",

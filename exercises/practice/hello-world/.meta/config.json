@@ -17,7 +17,7 @@
       "test/hello_world_test.clj"
     ],
     "example": [
-      ".meta/src/example.clj"
+      ".meta/example.clj"
     ]
   },
   "blurb": "Exercism's classic introductory exercise. Just say \"Hello, World!\".",

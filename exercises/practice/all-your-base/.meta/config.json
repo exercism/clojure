@@ -15,7 +15,7 @@
       "test/all_your_base_test.clj"
     ],
     "example": [
-      ".meta/src/example.clj"
+      ".meta/example.clj"
     ]
   },
   "blurb": "Convert a number, represented as a sequence of digits in one base, to any other base."

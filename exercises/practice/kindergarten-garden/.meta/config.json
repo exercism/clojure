@@ -25,7 +25,7 @@
       "test/kindergarten_garden_test.clj"
     ],
     "example": [
-      ".meta/src/example.clj"
+      ".meta/example.clj"
     ]
   },
   "blurb": "Given a diagram, determine which plants each child in the kindergarten class is responsible for.",

@@ -15,7 +15,7 @@
       "test/minesweeper_test.clj"
     ],
     "example": [
-      ".meta/src/example.clj"
+      ".meta/example.clj"
     ]
   },
   "blurb": "Add the numbers to a minesweeper board."

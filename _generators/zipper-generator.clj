@@ -124,7 +124,7 @@
      :contributors [],
      :files {:solution [(str "src/" (str/replace slug "-" "_") ".clj")],
              :test [(str "test/" (str/replace slug "-" "_") "_test.clj")],
-             :example [".meta/src/example.clj"]},
+             :example [".meta/example.clj"]},
      :blurb blurb}))
 
 (defn init-config! [data]

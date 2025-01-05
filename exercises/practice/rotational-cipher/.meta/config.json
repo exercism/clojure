@@ -17,7 +17,7 @@
       "test/rotational_cipher_test.clj"
     ],
     "example": [
-      ".meta/src/example.clj"
+      ".meta/example.clj"
     ]
   },
   "blurb": "Create an implementation of the rotational cipher, also sometimes called the Caesar cipher.",

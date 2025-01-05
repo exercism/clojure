@@ -14,7 +14,7 @@
       "test/clock_test.clj"
     ],
     "example": [
-      ".meta/src/example.clj"
+      ".meta/example.clj"
     ]
   },
   "blurb": "Implement a clock that handles times without dates.",

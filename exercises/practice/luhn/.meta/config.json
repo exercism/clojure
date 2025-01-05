@@ -17,7 +17,7 @@
       "test/luhn_test.clj"
     ],
     "example": [
-      ".meta/src/example.clj"
+      ".meta/example.clj"
     ]
   },
   "blurb": "Given a number determine whether or not it is valid per the Luhn formula.",
