@@ -1,5 +1,7 @@
 (ns word-count)
 
-(defn word-count [s] ;; <- arglist goes here
-  ;; your code goes here
-)
+(defn word-count
+  "Counts how many times each word occurs in the given string"
+  [s]
+  ;; function body
+  )
