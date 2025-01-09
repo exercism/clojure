@@ -4,7 +4,7 @@
  '[cheshire.core :as json]
  '[clojure.string :as str]
  '[clojure.java.shell :as shell]
- '[clojure.java.io :as io])
+ '[babashka.fs :as fs])
 
 (def root (str (fs/parent *file*) "/"))
 
