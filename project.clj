@@ -6,4 +6,5 @@
   :aliases {"generate" ["run" "-m" "generator"]}
   :dependencies [[org.clojure/clojure "1.10.0"]
                  [cheshire            "5.5.0"]
-                 [stencil             "0.5.0"]])
+                 [stencil             "0.5.0"]
+                 [org.clojure/data.json "2.5.1"]])

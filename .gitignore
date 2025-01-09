@@ -25,3 +25,5 @@ pom.xml.asc
 concepts/functions-generating-functions/introduction_files/
 concepts/functions-generating-functions/*.html
 exercises/**/*.bak
+.problem-specifications/
+.cpcache/
