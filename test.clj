@@ -45,8 +45,10 @@
                "status"))))
 
 (defn test-exercises! []
-  (for [exercise (into practice-exercises concept-exercises)]
-    {(keyword exercise) (test-exercise exercise)}))
+  (let [exercises (or (seq (take 1 *command-line-args*))
+                      (into practice-exercises concept-exercises))]
+    (for [exercise exercises]
+      {(keyword exercise) (test-exercise exercise)})))
 
 (let [results (test-exercises!)
       fails (filter #(false? (first (vals %))) results)]
