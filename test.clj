@@ -35,14 +35,18 @@
         example (if practice?
                   (str dir ".meta/example.clj")
                   (str dir ".meta/exemplar.clj"))
-        src (str dir "src/" (->snake_case slug) ".clj")]
-    (shell/sh "cp" example src)
-    (= "pass" ((json/parse-string
-                (:out (shell/sh (str test-runner-dir "test-runner.clj")
-                                slug
-                                dir
-                                dir)))
-               "status"))))
+        src (str dir "src/" (->snake_case slug) ".clj")
+        src-copy (str src ".bak")]
+    (shell/sh "cp" src src-copy)
+    (try
+      ((shell/sh "cp" example src)
+       (= "pass" ((json/parse-string
+                   (:out (shell/sh (str test-runner-dir "test-runner.clj")
+                                   slug
+                                   dir
+                                   dir)))
+                  "status")))
+      (finally (shell/sh "mv" src-copy src)))))
 
 (defn test-exercises! []
   (let [exercises (or (seq (take 1 *command-line-args*))
