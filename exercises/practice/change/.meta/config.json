@@ -16,7 +16,7 @@
       "test/change_test.clj"
     ],
     "example": [
-      ".meta/src/example.clj"
+      ".meta/example.clj"
     ]
   },
   "blurb": "Correctly determine change to be given using the least number of coins.",

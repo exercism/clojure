@@ -23,7 +23,7 @@
       "test/scrabble_score_test.clj"
     ],
     "example": [
-      ".meta/src/example.clj"
+      ".meta/example.clj"
     ]
   },
   "blurb": "Given a word, compute the Scrabble score for that word.",

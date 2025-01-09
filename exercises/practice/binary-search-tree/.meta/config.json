@@ -20,7 +20,7 @@
       "test/binary_search_tree_test.clj"
     ],
     "example": [
-      ".meta/src/example.clj"
+      ".meta/example.clj"
     ]
   },
   "blurb": "Insert and search for numbers in a binary tree.",

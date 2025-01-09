@@ -16,7 +16,7 @@
       "test/isogram_test.clj"
     ],
     "example": [
-      ".meta/src/example.clj"
+      ".meta/example.clj"
     ]
   },
   "blurb": "Determine if a word or phrase is an isogram.",

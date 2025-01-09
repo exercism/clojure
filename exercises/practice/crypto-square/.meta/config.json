@@ -22,7 +22,7 @@
       "test/crypto_square_test.clj"
     ],
     "example": [
-      ".meta/src/example.clj"
+      ".meta/example.clj"
     ]
   },
   "blurb": "Implement the classic method for composing secret messages called a square code.",

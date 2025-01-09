@@ -14,7 +14,7 @@
       "test/isbn_verifier_test.clj"
     ],
     "example": [
-      ".meta/src/example.clj"
+      ".meta/example.clj"
     ]
   },
   "blurb": "Check if a given string is a valid ISBN-10 number.",

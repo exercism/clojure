@@ -18,7 +18,7 @@
       "test/pov_test.clj"
     ],
     "example": [
-      ".meta/src/example.clj"
+      ".meta/example.clj"
     ]
   },
   "blurb": "Reparent a graph on a selected node.",

@@ -13,7 +13,7 @@
       "test/nth_prime_test.clj"
     ],
     "example": [
-      ".meta/src/example.clj"
+      ".meta/example.clj"
     ]
   },
   "blurb": "Given a number n, determine what the nth prime is.",

@@ -17,7 +17,7 @@
       "test/pangram_test.clj"
     ],
     "example": [
-      ".meta/src/example.clj"
+      ".meta/example.clj"
     ]
   },
   "blurb": "Determine if a sentence is a pangram.",

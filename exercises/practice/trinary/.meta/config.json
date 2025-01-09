@@ -1,22 +1,10 @@
 {
-  "authors": [
-    "yurrriq"
-  ],
-  "contributors": [
-    "AndreaCrotti",
-    "haus",
-    "sjwarner-bp"
-  ],
+  "authors": ["yurrriq"],
+  "contributors": ["AndreaCrotti", "haus", "sjwarner-bp"],
   "files": {
-    "solution": [
-      "src/trinary.clj"
-    ],
-    "test": [
-      "test/trinary_test.clj"
-    ],
-    "example": [
-      ".meta/src/example.clj"
-    ]
+    "solution": ["src/trinary.clj"],
+    "test": ["test/trinary_test.clj"],
+    "example": [".meta/example.clj"]
   },
   "blurb": "Convert a trinary number, represented as a string (e.g. '102012'), to its decimal equivalent using first principles.",
   "source": "All of Computer Science",

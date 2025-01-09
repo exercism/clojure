@@ -20,7 +20,7 @@
       "test/atbash_cipher_test.clj"
     ],
     "example": [
-      ".meta/src/example.clj"
+      ".meta/example.clj"
     ]
   },
   "blurb": "Create an implementation of the atbash cipher, an ancient encryption system created in the Middle East.",

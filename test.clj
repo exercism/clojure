@@ -33,7 +33,7 @@
         type (if practice? "practice" "concept")
         dir (str root "exercises/" type "/" slug "/")
         example (if practice?
-                  (str dir ".meta/src/example.clj")
+                  (str dir ".meta/example.clj")
                   (str dir ".meta/exemplar.clj"))
         src (str dir "src/" (->snake_case slug) ".clj")]
     (shell/sh "cp" example src)

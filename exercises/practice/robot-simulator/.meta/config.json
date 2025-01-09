@@ -21,7 +21,7 @@
       "test/robot_simulator_test.clj"
     ],
     "example": [
-      ".meta/src/example.clj"
+      ".meta/example.clj"
     ]
   },
   "blurb": "Write a robot simulator.",

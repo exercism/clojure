@@ -29,7 +29,7 @@
       "test/bob_test.clj"
     ],
     "example": [
-      ".meta/src/example.clj"
+      ".meta/example.clj"
     ]
   },
   "blurb": "Bob is a lackadaisical teenager. In conversation, his responses are very limited.",
