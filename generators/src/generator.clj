@@ -1,3 +1,5 @@
+(ns generator)
+
 (require
  '[clojure.data.json :as json]
  '[clojure.java.shell :refer [sh]]

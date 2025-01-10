@@ -3,12 +3,16 @@
             [log]
             [paths]))
 
-(defn render [slug test-cases]
-  (let [data {:slug slug :test_cases test-cases}
-        template-file (paths/generator-template-file slug)
-        tests-file (paths/tests-file slug)]
-    (->> data
-         (selmer/render (slurp template-file))
-         (spit tests-file))))
+(defn render-template [data template]
+  (selmer/render (slurp template) data))
 
-(templates/render "isogram" (canonical-data/test-cases "isogram"))
+(defn render [slug test-cases]
+  (let [data {:slug slug :test_cases test-cases}]
+    (render-template data (paths/generator-template-file slug))))
+
+(defn generate-tests-file [slug test-cases]
+  (->> test-cases
+       (render slug)
+       (spit (paths/tests-file slug))))
+
+(templates/generate-tests-file "isogram" (canonical-data/test-cases "isogram"))
