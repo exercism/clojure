@@ -1,0 +1,10 @@
+(ns roman-numerals-test
+  (:require [clojure.test :refer [deftest testing is]]
+             roman-numerals))
+
+{{#test_cases}}
+(deftest roman-numerals_test_{{idx}}
+  (testing "{{description}}"
+    (is (= "{{expected}}" (roman-numerals/numerals {{input.number}})))))
+
+{{/test_cases}}
