@@ -1,18 +1,19 @@
 (ns generator
-  (:require [canonical-data]
+  (:require [clojure.string :as str]
+            [canonical-data]
             [templates]
             [log]))
 
-(defn- slugs-to-generate [args]
+(defn- slugs-to-generate [slug]
   (let [slugs templates/exercises-with-template]
-    (if-let [slug (first args)]
+    (if (str/blank? slug)
+      slugs
       (if (contains? slugs slug)
         [slug]
-        (log/error (str "No template found for exercise '" slug "'")))
-      slugs)))
+        (log/error (str "No template found for exercise '" slug "'"))))))
 
-(defn- run [args]
+(defn- run [{:keys [exercise]}]
   (canonical-data/sync-repo)
-  (doseq [slug (slugs-to-generate args)]
+  (doseq [slug (slugs-to-generate (str exercise))]
     (log/normal (str "Generating tests for exercise '" slug "'"))
     (templates/generate-tests-file slug (canonical-data/test-cases slug))))  

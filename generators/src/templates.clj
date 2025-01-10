@@ -8,7 +8,8 @@
        (file-seq)
        (filter #(.isFile %))
        (filter #(= "generator.template" (.getName %)))
-       (mapv #(-> % (.getParentFile) (.getParentFile) (.getName)))))
+       (map #(-> % (.getParentFile) (.getParentFile) (.getName)))
+       (set)))
 
 (defn- render-template [data template]
   (selmer/render (slurp template) data))
