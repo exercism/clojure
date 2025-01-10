@@ -1,6 +1,5 @@
 (ns templates
-  (:require [pogonos.core :as pg]
-            [pogonos.output :as output]
+  (:require [hbs.core :as hbs]
             [log]
             [paths]))
 
@@ -13,7 +12,7 @@
        (set)))
 
 (defn generate-tests-file [slug test-cases]
-  (pg/render-file
-   (paths/generator-template-file slug)
-   {:test_cases test-cases}
-   {:output (output/to-file (paths/tests-file slug))}))
+  (let [template (slurp (paths/generator-template-file slug))
+        data {:test_cases test-cases}]
+    (->> (hbs/render template data)
+         (spit (paths/tests-file slug)))))
