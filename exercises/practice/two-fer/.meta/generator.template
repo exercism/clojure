@@ -1,5 +1,5 @@
 (ns two-fer-test
-   (:require [clojure.test :refer [deftest testing is]]
+  (:require [clojure.test :refer [deftest testing is]]
              two-fer))
 {% for test_case in test_cases %}
 (deftest two-fer_test_{{forloop.counter}}

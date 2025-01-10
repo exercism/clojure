@@ -1,5 +1,5 @@
 (ns two-fer-test
-   (:require [clojure.test :refer [deftest testing is]]
+  (:require [clojure.test :refer [deftest testing is]]
              two-fer))
 
 (deftest two-fer_test_1
