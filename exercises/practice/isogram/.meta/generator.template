@@ -1,8 +1,15 @@
 (ns isogram-test
   (:require [clojure.test :refer [deftest testing is]]
              isogram))
-{% for test_case in test_cases %}
-(deftest isogram_test_{{forloop.counter}}
-  (testing "{{test_case.path|join:" - "}}"
-    {% if test_case.expected %}(is (isogram/isogram? "{{test_case.input.phrase}}")))) {% else %}(is (not (isogram/isogram? "{{test_case.input.phrase}}")))){% endif %}
-{% endfor %}
+
+{{#test_cases}}
+(deftest isogram_test_{{idx}}
+  (testing "{{description}}"
+    {{#expected}}
+    (is (isogram/isogram? "{{input.phrase}}"))))
+    {{/expected}}
+    {{^expected}}
+    (is (not (isogram/isogram? "{{input.phrase}}")))))
+    {{/expected}}
+
+{{/test_cases}}

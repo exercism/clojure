@@ -1,8 +1,10 @@
 (ns two-fer-test
   (:require [clojure.test :refer [deftest testing is]]
              two-fer))
-{% for test_case in test_cases %}
-(deftest two-fer_test_{{forloop.counter}}
-  (testing "{{test_case.path|join:" - "}}"
-    (is (= "{{test_case.expected}}" (two-fer/two-fer{% if test_case.input.name %} "{{test_case.input.name}}"{% endif %})))))
-{% endfor %}
+
+{{#test_cases}}
+(deftest two-fer_test_{{idx}}
+  (testing "{{description}}"
+    (is (= "{{expected}}" (two-fer/two-fer{{#input.name}} "{{input.name}}"{{/input.name}})))))
+
+{{/test_cases}}

@@ -1,5 +1,6 @@
 (ns templates
-  (:require [selmer.parser :as selmer]
+  (:require [pogonos.core :as pg]
+            [pogonos.output :as output]
             [log]
             [paths]))
 
@@ -11,14 +12,8 @@
        (map #(-> % (.getParentFile) (.getParentFile) (.getName)))
        (set)))
 
-(defn- render-template [data template]
-  (selmer/render (slurp template) data))
-
-(defn- render [slug test-cases]
-  (let [data {:slug slug :test_cases test-cases}]
-    (render-template data (paths/generator-template-file slug))))
-
 (defn generate-tests-file [slug test-cases]
-  (->> test-cases
-       (render slug)
-       (spit (paths/tests-file slug))))
+  (pg/render-file
+   (paths/generator-template-file slug)
+   {:test_cases test-cases}
+   {:output (output/to-file (paths/tests-file slug))}))
