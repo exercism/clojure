@@ -10,5 +10,5 @@
 (defn canonical-data-file [slug] (io/file prob-specs-dir "exercises" slug "canonical-data.json"))
 (defn tests-toml-file [slug] (io/file (exercise-dir slug) ".meta" "tests.toml"))
 (defn generator-template-file [slug] (io/file (exercise-dir slug) ".meta" "generator.template"))
-(defn tests-file-name [slug] (str "test_" (str/replace slug "-" "_") ".clj"))
+(defn tests-file-name [slug] (str (str/replace slug "-" "_") "_test.clj"))
 (defn tests-file [slug] (io/file (exercise-dir slug) "test" (tests-file-name slug)))
