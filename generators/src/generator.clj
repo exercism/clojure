@@ -1,16 +1,9 @@
-#!/usr/bin/env bb
-
 (require
- '[babashka.deps :as deps]
- '[babashka.classpath :as cp])
-
-(deps/add-deps '{:deps {selmer/selmer {:mvn/version "1.12.61"}}})
-
-(require
- '[cheshire.core :as json]
+ '[clojure.data.json :as json]
  '[clojure.java.shell :refer [sh]]
  '[clojure.java.io :as io]
- '[selmer.parser :refer [render render-file]])
+ '[selmer.parser :refer [render render-file]]
+ '[toml-clj.core :as toml])
 
 (defn error [message]
   (println message)
@@ -26,7 +19,7 @@
 (defn canonical-data [slug]
   (let [file (io/file prob-specs-dir "exercises" slug "canonical-data.json")]
     (if (.exists file)
-      (json/parse-stream (io/reader file) keyword)
+      (json/read (io/reader file) :key-fn keyword)
       (error (str "No canonical data found for slug '" slug "'")))))
 
 (defn filter-reimplemented [case-nodes]
