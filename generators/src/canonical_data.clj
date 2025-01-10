@@ -15,7 +15,7 @@
 
 (defn- clone-repo [] (git-clone git-url :branch "main" :dir paths/prob-specs-dir))
 
-(defn- sync-repo []
+(defn sync-repo []
   (try
     (pull-repo)
     (catch java.io.FileNotFoundException  _ (clone-repo))))
@@ -63,4 +63,3 @@
        (remove (excluded? slug))
        (into [])))
 
-(sync-repo)

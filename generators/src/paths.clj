@@ -2,7 +2,7 @@
   (:require [clojure.java.io :as io]
             [clojure.string :as str]))
 
-(def generators-dir (.getCanonicalPath (io/file *file* ".." "..")))
+(def generators-dir (.getCanonicalPath (io/file ".")))
 (def root-dir (.getCanonicalPath (io/file generators-dir "..")))
 (def prob-specs-dir (io/file generators-dir ".problem-specifications"))
 (def exercises-dir (io/file root-dir "exercises" "practice"))

@@ -3,10 +3,17 @@
             [log]
             [paths]))
 
-(defn render-template [data template]
+(def exercises-with-template
+  (->> paths/exercises-dir
+       (file-seq)
+       (filter #(.isFile %))
+       (filter #(= "generator.template" (.getName %)))
+       (mapv #(-> % (.getParentFile) (.getParentFile) (.getName)))))
+
+(defn- render-template [data template]
   (selmer/render (slurp template) data))
 
-(defn render [slug test-cases]
+(defn- render [slug test-cases]
   (let [data {:slug slug :test_cases test-cases}]
     (render-template data (paths/generator-template-file slug))))
 
@@ -14,5 +21,3 @@
   (->> test-cases
        (render slug)
        (spit (paths/tests-file slug))))
-
-(templates/generate-tests-file "isogram" (canonical-data/test-cases "isogram"))
