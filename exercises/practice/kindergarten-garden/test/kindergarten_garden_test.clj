@@ -2,87 +2,87 @@
   (:require [clojure.test :refer [deftest testing is]]
             kindergarten-garden))
 
-(deftest test-1fc316ed-17ab-4fba-88ef-3ae78296b692
+(deftest garden_test_1
   (testing "partial garden -> garden with single student"
     (is (= [:radishes :clover :grass :grass]
            (:alice (kindergarten-garden/garden "RC\nGG"))))))
 
-(deftest test-acd19dc1-2200-4317-bc2a-08f021276b40
+(deftest garden_test_2
   (testing "partial garden -> different garden with single student"
     (is (= [:violets :clover :radishes :clover]
            (:alice (kindergarten-garden/garden "VC\nRC"))))))
 
-(deftest test-c376fcc8-349c-446c-94b0-903947315757
+(deftest garden_test_3
   (testing "partial garden -> garden with two students"
     (is (= [:clover :grass :radishes :clover]
            (:bob (kindergarten-garden/garden "VVCG\nVVRC"))))))
 
-(deftest test-2d620f45-9617-4924-9d27-751c80d17db9
+(deftest garden_test_4
   (testing "partial garden -> multiple students for the same garden with three students -> second student's garden"
     (is (= [:clover :clover :clover :clover]
            (:bob (kindergarten-garden/garden "VVCCGG\nVVCCGG"))))))
 
-(deftest test-57712331-4896-4364-89f8-576421d69c44
+(deftest garden_test_5
   (testing "partial garden -> multiple students for the same garden with three students -> third student's garden"
     (is (= [:grass :grass :grass :grass]
            (:charlie (kindergarten-garden/garden "VVCCGG\nVVCCGG"))))))
 
-(deftest test-149b4290-58e1-40f2-8ae4-8b87c46e765b
+(deftest garden_test_6
   (testing "full garden -> for Alice first student's garden"
     (is (= [:violets :radishes :violets :radishes]
            (:alice (kindergarten-garden/garden "VRCGVVRVCGGCCGVRGCVCGCGV\nVRCCCGCRRGVCGCRVVCVGCGCV"))))))
 
-(deftest test-ba25dbbc-10bd-4a37-b18e-f89ecd098a5e
+(deftest garden_test_7
   (testing "full garden -> for Bob second student's garden"
     (is (= [:clover :grass :clover :clover]
            (:bob (kindergarten-garden/garden "VRCGVVRVCGGCCGVRGCVCGCGV\nVRCCCGCRRGVCGCRVVCVGCGCV"))))))
 
-(deftest test-566b621b-f18e-4c5f-873e-be30544b838c
+(deftest garden_test_8
   (testing "full garden -> for Charlie"
     (is (= [:violets :violets :clover :grass]
            (:charlie (kindergarten-garden/garden "VRCGVVRVCGGCCGVRGCVCGCGV\nVRCCCGCRRGVCGCRVVCVGCGCV"))))))
 
-(deftest test-3ad3df57-dd98-46fc-9269-1877abf612aa
+(deftest garden_test_9
   (testing "full garden -> for David"
     (is (= [:radishes :violets :clover :radishes]
            (:david (kindergarten-garden/garden "VRCGVVRVCGGCCGVRGCVCGCGV\nVRCCCGCRRGVCGCRVVCVGCGCV"))))))
 
-(deftest test-0f0a55d1-9710-46ed-a0eb-399ba8c72db2
+(deftest garden_test_10
   (testing "full garden -> for Eve"
     (is (= [:clover :grass :radishes :grass]
            (:eve (kindergarten-garden/garden "VRCGVVRVCGGCCGVRGCVCGCGV\nVRCCCGCRRGVCGCRVVCVGCGCV"))))))
 
-(deftest test-a7e80c90-b140-4ea1-aee3-f4625365c9a4
+(deftest garden_test_11
   (testing "full garden -> for Fred"
     (is (= [:grass :clover :violets :clover]
            (:fred (kindergarten-garden/garden "VRCGVVRVCGGCCGVRGCVCGCGV\nVRCCCGCRRGVCGCRVVCVGCGCV"))))))
 
-(deftest test-9d94b273-2933-471b-86e8-dba68694c615
+(deftest garden_test_12
   (testing "full garden -> for Ginny"
     (is (= [:clover :grass :grass :clover]
            (:ginny (kindergarten-garden/garden "VRCGVVRVCGGCCGVRGCVCGCGV\nVRCCCGCRRGVCGCRVVCVGCGCV"))))))
 
-(deftest test-f55bc6c2-ade8-4844-87c4-87196f1b7258
+(deftest garden_test_13
   (testing "full garden -> for Harriet"
     (is (= [:violets :radishes :radishes :violets]
            (:harriet (kindergarten-garden/garden "VRCGVVRVCGGCCGVRGCVCGCGV\nVRCCCGCRRGVCGCRVVCVGCGCV"))))))
 
-(deftest test-759070a3-1bb1-4dd4-be2c-7cce1d7679ae
+(deftest garden_test_14
   (testing "full garden -> for Ileana"
     (is (= [:grass :clover :violets :clover]
            (:ileana (kindergarten-garden/garden "VRCGVVRVCGGCCGVRGCVCGCGV\nVRCCCGCRRGVCGCRVVCVGCGCV"))))))
 
-(deftest test-78578123-2755-4d4a-9c7d-e985b8dda1c6
+(deftest garden_test_15
   (testing "full garden -> for Joseph"
     (is (= [:violets :clover :violets :grass]
            (:joseph (kindergarten-garden/garden "VRCGVVRVCGGCCGVRGCVCGCGV\nVRCCCGCRRGVCGCRVVCVGCGCV"))))))
 
-(deftest test-6bb66df7-f433-41ab-aec2-3ead6e99f65b
+(deftest garden_test_16
   (testing "full garden -> for Kincaid second to last student's garden"
     (is (= [:grass :clover :clover :grass]
            (:kincaid (kindergarten-garden/garden "VRCGVVRVCGGCCGVRGCVCGCGV\nVRCCCGCRRGVCGCRVVCVGCGCV"))))))
 
-(deftest test-d7edec11-6488-418a-94e6-ed509e0fa7eb
+(deftest garden_test_17
   (testing "full garden -> for Larry last student's garden"
     (is (= [:grass :violets :clover :violets]
            (:larry (kindergarten-garden/garden "VRCGVVRVCGGCCGVRGCVCGCGV\nVRCCCGCRRGVCGCRVVCVGCGCV"))))))
