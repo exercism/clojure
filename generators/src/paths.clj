@@ -4,7 +4,7 @@
 
 (def generators-dir (.getCanonicalPath (io/file ".")))
 (def root-dir (.getCanonicalPath (io/file generators-dir "..")))
-(def prob-specs-dir (io/file generators-dir ".problem-specifications"))
+(def prob-specs-dir (io/file root-dir ".problem-specifications"))
 (def exercises-dir (io/file root-dir "exercises" "practice"))
 (defn exercise-dir [slug] (io/file exercises-dir slug))
 (defn canonical-data-file [slug] (io/file prob-specs-dir "exercises" slug "canonical-data.json"))
