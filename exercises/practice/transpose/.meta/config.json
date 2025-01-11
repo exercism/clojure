@@ -10,7 +10,7 @@
       "test/transpose_test.clj"
     ],
     "example": [
-      ".meta/src/example.clj"
+      ".meta/example.clj"
     ]
   },
   "blurb": "Take input text and output it transposed.",
