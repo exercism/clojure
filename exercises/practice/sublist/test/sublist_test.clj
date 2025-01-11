@@ -1,75 +1,75 @@
 (ns sublist-test
-  (:require [clojure.test :refer [deftest is testing]]
+  (:require [clojure.test :refer [deftest testing is]]
             sublist))
 
-(deftest test-97319c93-ebc5-47ab-a022-02a1980e1d29
-  (testing "Empty lists"
+(deftest classify_test_1
+  (testing "empty lists"
     (is (= :equal (sublist/classify [] [])))))
 
-(deftest test-de27dbd4-df52-46fe-a336-30be58457382
-  (testing "Empty list within non empty list"
+(deftest classify_test_2
+  (testing "empty list within non empty list"
     (is (= :sublist (sublist/classify [] [1 2 3])))))
 
-(deftest test-5487cfd1-bc7d-429f-ac6f-1177b857d4fb
-  (testing "Non empty list contains empty list"
+(deftest classify_test_3
+  (testing "non empty list contains empty list"
     (is (= :superlist (sublist/classify [1 2 3] [])))))
 
-(deftest test-1f390b47-f6b2-4a93-bc23-858ba5dda9a6
-  (testing "List equals itself"
+(deftest classify_test_4
+  (testing "list equals itself"
     (is (= :equal (sublist/classify [1 2 3] [1 2 3])))))
 
-(deftest test-7ed2bfb2-922b-4363-ae75-f3a05e8274f5
-  (testing "Different lists"
+(deftest classify_test_5
+  (testing "different lists"
     (is (= :unequal (sublist/classify [1 2 3] [2 3 4])))))
 
-(deftest test-3b8a2568-6144-4f06-b0a1-9d266b365341
-  (testing "False start"
+(deftest classify_test_6
+  (testing "false start"
     (is (= :sublist (sublist/classify [1 2 5] [0 1 2 3 1 2 5 6])))))
 
-(deftest test-dc39ed58-6311-4814-be30-05a64bc8d9b1
-  (testing "Consecutive"
+(deftest classify_test_7
+  (testing "consecutive"
     (is (= :sublist (sublist/classify [1 1 2] [0 1 1 1 2 1 2])))))
 
-(deftest test-d1270dab-a1ce-41aa-b29d-b3257241ac26
-  (testing "Sublist at start"
+(deftest classify_test_8
+  (testing "sublist at start"
     (is (= :sublist (sublist/classify [0 1 2] [0 1 2 3 4 5])))))
 
-(deftest test-81f3d3f7-4f25-4ada-bcdc-897c403de1b6
-  (testing "Sublist in middle"
+(deftest classify_test_9
+  (testing "sublist in middle"
     (is (= :sublist (sublist/classify [2 3 4] [0 1 2 3 4 5])))))
 
-(deftest test-43bcae1e-a9cf-470e-923e-0946e04d8fdd
-  (testing "Sublist at end"
+(deftest classify_test_10
+  (testing "sublist at end"
     (is (= :sublist (sublist/classify [3 4 5] [0 1 2 3 4 5])))))
 
-(deftest test-76cf99ed-0ff0-4b00-94af-4dfb43fe5caa
-  (testing "At start of superlist"
+(deftest classify_test_11
+  (testing "at start of superlist"
     (is (= :superlist (sublist/classify [0 1 2 3 4 5] [0 1 2])))))
 
-(deftest test-b83989ec-8bdf-4655-95aa-9f38f3e357fd
-  (testing "In middle of superlist"
+(deftest classify_test_12
+  (testing "in middle of superlist"
     (is (= :superlist (sublist/classify [0 1 2 3 4 5] [2 3])))))
 
-(deftest test-26f9f7c3-6cf6-4610-984a-662f71f8689b
-  (testing "At end of superlist"
+(deftest classify_test_13
+  (testing "at end of superlist"
     (is (= :superlist (sublist/classify [0 1 2 3 4 5] [3 4 5])))))
 
-(deftest test-0a6db763-3588-416a-8f47-76b1cedde31e
-  (testing "First list missing element from second list"
+(deftest classify_test_14
+  (testing "first list missing element from second list"
     (is (= :unequal (sublist/classify [1 3] [1 2 3])))))
 
-(deftest test-83ffe6d8-a445-4a3c-8795-1e51a95e65c3
-  (testing "Second list missing element from first list"
+(deftest classify_test_15
+  (testing "second list missing element from first list"
     (is (= :unequal (sublist/classify [1 2 3] [1 3])))))
 
-(deftest test-7bc76cb8-5003-49ca-bc47-cdfbe6c2bb89
-  (testing "First list missing additional digits from second list"
+(deftest classify_test_16
+  (testing "first list missing additional digits from second list"
     (is (= :unequal (sublist/classify [1 2] [1 22])))))
 
-(deftest test-0d7ee7c1-0347-45c8-9ef5-b88db152b30b
-  (testing "Order matters to a list"
+(deftest classify_test_17
+  (testing "order matters to a list"
     (is (= :unequal (sublist/classify [1 2 3] [3 2 1])))))
 
-(deftest test-5f47ce86-944e-40f9-9f31-6368aad70aa6
-  (testing "Same digits but different numbers"
+(deftest classify_test_18
+  (testing "same digits but different numbers"
     (is (= :unequal (sublist/classify [1 0 1] [10 1])))))
