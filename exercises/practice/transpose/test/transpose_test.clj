@@ -6,27 +6,27 @@
   [coll]
   (clojure.string/join "\n" coll))
 
-(deftest test-404b7262-c050-4df0-a2a2-0cb06cd6a821
+(deftest transpose_test_1
   (testing "empty string"
     (is (= (join-with-line-separator [""])
            (transpose/transpose
              (join-with-line-separator [""]))))))
 
-(deftest test-a89ce8a3-c940-4703-a688-3ea39412fbcb
+(deftest transpose_test_2
   (testing "two characters in a row"
     (is (= (join-with-line-separator ["A"
                                       "1"])
            (transpose/transpose
              (join-with-line-separator ["A1"]))))))
 
-(deftest test-855bb6ae-4180-457c-abd0-ce489803ce98
+(deftest transpose_test_3
   (testing "two characters in a column"
     (is (= (join-with-line-separator ["A1"])
            (transpose/transpose
              (join-with-line-separator ["A"
                                         "1"]))))))
 
-(deftest test-5ceda1c0-f940-441c-a244-0ced197769c8
+(deftest transpose_test_4
   (testing "simple"
     (is (= (join-with-line-separator ["A1"
                                       "B2"
@@ -35,7 +35,7 @@
              (join-with-line-separator ["ABC"
                                         "123"]))))))
 
-(deftest test-a54675dd-ae7d-4a58-a9c4-0c20e99a7c1f
+(deftest transpose_test_5
   (testing "single line"
     (is (= (join-with-line-separator ["S"
                                       "i"
@@ -52,7 +52,7 @@
            (transpose/transpose
              (join-with-line-separator ["Single line."]))))))
 
-(deftest test-0dc2ec0b-549d-4047-aeeb-8029fec8d5c5
+(deftest transpose_test_6
   (testing "first line longer than second line"
     (is (= (join-with-line-separator ["TT"
                                       "hh"
@@ -74,7 +74,7 @@
              (join-with-line-separator ["The fourth line."
                                         "The fifth line."]))))))
 
-(deftest test-984e2ec3-b3d3-4b53-8bd6-96f5ef404102
+(deftest transpose_test_7
   (testing "second line longer than first line"
     (is (= (join-with-line-separator ["TT"
                                       "hh"
@@ -96,7 +96,7 @@
              (join-with-line-separator ["The first line.",
                                         "The second line."]))))))
 
-(deftest test-eccd3784-45f0-4a3f-865a-360cb323d314
+(deftest transpose_test_8
   (testing "mixed line length"
     (is (= (join-with-line-separator ["TAAA"
                                       "h   "
@@ -121,7 +121,7 @@
                                         "A longer line."
                                         "A line."]))))))
 
-(deftest test-85b96b3f-d00c-4f80-8ca2-c8a5c9216c2d
+(deftest transpose_test_9
   (testing "square"
     (is (= (join-with-line-separator ["HEART"
                                       "EMBER"
@@ -135,7 +135,7 @@
                                         "RESIN"
                                         "TREND"]))))))
 
-(deftest test-b9257625-7a53-4748-8863-e08e9d27071d
+(deftest transpose_test_10
   (testing "rectangle"
     (is (= (join-with-line-separator ["FOBS"
                                       "RULE"
@@ -151,7 +151,7 @@
                                         "BLOOMING"
                                         "SEPTETTE"]))))))
 
-(deftest test-b80badc9-057e-4543-bd07-ce1296a1ea2c
+(deftest transpose_test_11
   (testing "triangle"
     (is (= (join-with-line-separator ["TEASER"
                                       " EASER"
@@ -167,7 +167,7 @@
                                         "EEEEE"
                                         "RRRRRR"]))))))
 
-(deftest test-76acfd50-5596-4d05-89f1-5116328a7dd9
+(deftest transpose_test_12
   (testing "jagged triangle"
     (is (= (join-with-line-separator ["123456"
                                       "1 3456"
