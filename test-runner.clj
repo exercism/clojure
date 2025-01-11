@@ -6,20 +6,12 @@
          '[clojure.string :as str]
          '[rewrite-clj.zip :as z])
 
-;(cp/add-classpath "libs.jar")
-
-#_(require '[clojure.spec.alpha :as s]
-           '[clojure.spec.gen.alpha :as gen])
-
 ;; Add solution source and tests to classpath
 (def slug (first *command-line-args*))
 (def in-dir (second *command-line-args*))
 (def test-ns (symbol (str slug "-test")))
 (cp/add-classpath (str in-dir "src:" in-dir "test"))
 (require test-ns)
-
-;; clojure.test runs the tests in random order,
-;; but the spec requires that we report them in order.
 
 ;; Parse test file into zipper using rewrite-clj
 (def zloc (z/of-file (str in-dir "/test/" (str/replace slug "-" "_") "_test.clj")))
@@ -69,9 +61,9 @@
 
 ;; Override clojure.test reporting methods to capture their results
 
-(defmethod t/report :begin-test-ns [m])
+(defmethod t/report :begin-test-ns [_m])
 
-(defmethod t/report :pass [m]
+(defmethod t/report :pass [_m]
   (swap! passes conj {:name (:name (meta (first t/*testing-vars*)))
                       :status "pass"}))
 
@@ -80,10 +72,10 @@
                      :status "fail"
                      :message (str "Expected " (:expected m) " but got " (:actual m))}))
 
-(defmethod t/report :error [m]
+(defmethod t/report :error [_m]
   (swap! errors conj (:name (meta (first t/*testing-vars*)))))
 
-(defmethod t/report :summary [m])
+(defmethod t/report :summary [_m])
 
 (t/run-tests test-ns)
 
