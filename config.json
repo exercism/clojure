@@ -26,7 +26,7 @@
       "test/%{snake_slug}_test.clj"
     ],
     "example": [
-      ".meta/src/example.clj"
+      ".meta/example.clj"
     ],
     "exemplar": [
       ".meta/exemplar.clj"
@@ -243,10 +243,9 @@
         "name": "Accumulate",
         "uuid": "49f62bbc-0f60-4922-b5a6-f266b80442f4",
         "practices": [],
-        "prerequisites": [
-          "numbers"
-        ],
+        "prerequisites": [],
         "difficulty": 2,
+        "status": "deprecated",
         "topics": [
           "algorithms, core_functions"
         ]
@@ -348,6 +347,16 @@
         "topics": [
           "math"
         ]
+      },
+      {
+        "slug": "eliuds-eggs",
+        "name": "Eliud's Eggs",
+        "uuid": "bfe1789f-8388-4285-bed9-26f694e12c70",
+        "practices": [],
+        "prerequisites": [
+          "basics"
+        ],
+        "difficulty": 2
       },
       {
         "slug": "etl",
@@ -734,10 +743,9 @@
         "name": "Binary",
         "uuid": "daf3daed-61ef-4964-8d33-e7a739c7a470",
         "practices": [],
-        "prerequisites": [
-          "numbers"
-        ],
+        "prerequisites": [],
         "difficulty": 3,
+        "status": "deprecated",
         "topics": [
           "math"
         ]
@@ -846,10 +854,9 @@
         "name": "Hexadecimal",
         "uuid": "a4b1b39a-d942-4921-9b67-2bd913ff52a0",
         "practices": [],
-        "prerequisites": [
-          "numbers"
-        ],
+        "prerequisites": [],
         "difficulty": 3,
+        "status": "deprecated",
         "topics": [
           "math"
         ]
@@ -1009,11 +1016,9 @@
         "name": "Trinary",
         "uuid": "f8a7f5eb-e317-4ffa-bdef-6e30a36511eb",
         "practices": [],
-        "prerequisites": [
-          "numbers",
-          "strings"
-        ],
+        "prerequisites": [],
         "difficulty": 3,
+        "status": "deprecated",
         "topics": [
           "math"
         ]
@@ -1111,13 +1116,10 @@
         "slug": "octal",
         "name": "Octal",
         "uuid": "fa596153-0cbe-40e9-a4d6-1a66fe6ef7e5",
-        "practices": [
-          "numbers"
-        ],
-        "prerequisites": [
-          "numbers"
-        ],
+        "practices": [],
+        "prerequisites": [],
         "difficulty": 4,
+        "status": "deprecated",
         "topics": [
           "math"
         ]
@@ -1192,6 +1194,17 @@
         "topics": [
           "math"
         ]
+      },
+      {
+        "slug": "pythagorean-triplet",
+        "name": "Pythagorean Triplet",
+        "uuid": "7a9e219b-a830-4813-8274-e4473fef29e8",
+        "practices": [],
+        "prerequisites": [
+          "basics",
+          "numbers"
+        ],
+        "difficulty": 6
       },
       {
         "slug": "robot-simulator",
@@ -1365,10 +1378,10 @@
         "practices": [],
         "prerequisites": [
           "lists",
-          "closures"
+          "closures",
+          "vectors"
         ],
-        "difficulty": 5,
-        "status": "wip"
+        "difficulty": 5
       }
     ]
   },

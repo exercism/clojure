@@ -5,7 +5,8 @@
   "contributors": [
     "AndreaCrotti",
     "sjwarner-bp",
-    "yurrriq"
+    "yurrriq",
+    "tasxatzial"
   ],
   "files": {
     "solution": [
@@ -15,7 +16,7 @@
       "test/pascals_triangle_test.clj"
     ],
     "example": [
-      ".meta/src/example.clj"
+      ".meta/example.clj"
     ]
   },
   "blurb": "Compute Pascal's triangle up to a given number of rows.",

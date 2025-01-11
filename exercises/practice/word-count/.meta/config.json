@@ -15,7 +15,8 @@
     "sjwarner-bp",
     "tejasbubane",
     "walkermatt",
-    "yurrriq"
+    "yurrriq",
+    "tasxatzial"
   ],
   "files": {
     "solution": [
@@ -25,7 +26,7 @@
       "test/word_count_test.clj"
     ],
     "example": [
-      ".meta/src/example.clj"
+      ".meta/example.clj"
     ]
   },
   "blurb": "Given a phrase, count the occurrences of each word in that phrase.",

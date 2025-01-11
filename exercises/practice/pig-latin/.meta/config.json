@@ -17,7 +17,7 @@
       "test/pig_latin_test.clj"
     ],
     "example": [
-      ".meta/src/example.clj"
+      ".meta/example.clj"
     ]
   },
   "blurb": "Implement a program that translates from English to Pig Latin.",

@@ -20,7 +20,7 @@
       "test/raindrops_test.clj"
     ],
     "example": [
-      ".meta/src/example.clj"
+      ".meta/example.clj"
     ]
   },
   "blurb": "Convert a number into its corresponding raindrop sounds - Pling, Plang and Plong.",

@@ -21,7 +21,7 @@
       "test/allergies_test.clj"
     ],
     "example": [
-      ".meta/src/example.clj"
+      ".meta/example.clj"
     ]
   },
   "blurb": "Given a person's allergy score, determine whether or not they're allergic to a given item, and their full list of allergies.",

@@ -21,7 +21,7 @@
       "test/space_age_test.clj"
     ],
     "example": [
-      ".meta/src/example.clj"
+      ".meta/example.clj"
     ]
   },
   "blurb": "Given an age in seconds, calculate how old someone is in terms of a given planet's solar years.",

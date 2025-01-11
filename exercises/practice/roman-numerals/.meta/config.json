@@ -21,7 +21,7 @@
       "test/roman_numerals_test.clj"
     ],
     "example": [
-      ".meta/src/example.clj"
+      ".meta/example.clj"
     ]
   },
   "blurb": "Convert modern Arabic numbers into Roman numerals.",

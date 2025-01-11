@@ -2,7 +2,6 @@
   "authors": [
     "porkostomus"
   ],
-  "contributors": [],
   "files": {
     "solution": [
       "src/yacht.clj"
@@ -11,7 +10,7 @@
       "test/yacht_test.clj"
     ],
     "example": [
-      ".meta/src/example.clj"
+      ".meta/example.clj"
     ]
   },
   "blurb": "Score a single throw of dice in the game Yacht.",
