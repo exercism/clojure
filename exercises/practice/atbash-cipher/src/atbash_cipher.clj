@@ -1,5 +1,11 @@
 (ns atbash-cipher)
 
-(defn encode [] ;; <- arglist goes here
-  ;; your code goes here
-)
+(defn encode
+  [s]
+  ;; function body
+  )
+
+(defn decode
+  [s]
+  ;; function body
+  )
