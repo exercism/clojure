@@ -1,5 +1,5 @@
 (ns armstrong-numbers-test
-  (:require [clojure.test :refer [deftest is testing]]
+  (:require [clojure.test :refer [deftest testing is]]
             armstrong-numbers))
 
 (deftest armstrong?_test_1
