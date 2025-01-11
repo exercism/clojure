@@ -1,5 +1,5 @@
 (ns sublist-test
-  (:require [clojure.test :refer [deftest is testing]]
+  (:require [clojure.test :refer [deftest testing is]]
             sublist))
 
 (deftest test-97319c93-ebc5-47ab-a022-02a1980e1d29
