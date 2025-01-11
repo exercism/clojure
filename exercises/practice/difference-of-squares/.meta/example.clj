@@ -1,13 +1,12 @@
 (ns difference-of-squares)
 
-(defn- square [n] (* n n))
 (defn- sum [xs] (reduce + xs))
 
 (defn sum-of-squares [n]
-  (sum (map square (range 1 (inc n)))))
+  (sum (map #(int (Math/pow % 2)) (range 0 (inc n)))))
 
 (defn square-of-sum [n]
-  (square (sum (range 1 (inc n)))))
+  (int (Math/pow (sum (range 0 (inc n))) 2)))
 
 (defn difference [x]
   (- (square-of-sum x) (sum-of-squares x)))
