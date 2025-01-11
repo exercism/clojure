@@ -24,3 +24,4 @@ pom.xml.asc
 **/*/*.ipynb_checkpoints
 concepts/functions-generating-functions/introduction_files/
 concepts/functions-generating-functions/*.html
+exercises/**/*.bak
