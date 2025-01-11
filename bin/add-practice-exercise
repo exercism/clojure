@@ -69,7 +69,10 @@ fi
 
 exercise_dir="exercises/practice/${slug}"
 config_json_file="${exercise_dir}/.meta/config.json"
+generator_tpl_file="${exercise_dir}/.meta/generator.tpl"
 files=$(jq -r --arg dir "${exercise_dir}" '.files | to_entries | map({key: .key, value: (.value | map("'"'"'" + $dir + "/" + . + "'"'"'") | join(" and "))}) | from_entries' "${config_json_file}")
+prob_specs_dir=$(./bin/configlet info --verbosity detailed | head -n 1 | sed 's/.*dir: //')
+canonical_data_json_file="${prob_specs_dir}/exercises/${slug}/canonical-data.json"
 
 sample_exercise_dir="exercises/practice/acronym"
 for sample_file in deps.edn project.clj; do
@@ -96,11 +99,28 @@ for file_type in solution example; do
 FILE
 done
 
-cat << NEXT_STEPS
-Your next steps are:
+if [[ -f "${prob_specs_dir}/exercises/${slug}/canonical-data.json" ]]; then
+    cp "${exercise_dir}/${test_file}" "${generator_tpl_file}"
+
+    TEST_STEPS=$(cat << EOF
+- Create the test generator in '${generator_tpl_file}'
+    - The test generator uses the canonical data from 'https://github.com/exercism/problem-specifications/blob/main/exercises/${slug}/canonical-data.json'
+  - Any test cases you don't want to implement, mark them in 'exercises/practice/${slug}/.meta/tests.toml' with "include = false"
+  - Run 'bin/generate-exercise-tests ${slug}' to generate the tests
+EOF
+)
+else
+    TEST_STEPS=$(cat << EOF
 - Create the test suite in $(jq -r '.test' <<< "${files}")
   - The tests should be based on the canonical data at 'https://github.com/exercism/problem-specifications/blob/main/exercises/${slug}/canonical-data.json'
   - Any test cases you don't implement, mark them in 'exercises/practice/${slug}/.meta/tests.toml' with "include = false"
+EOF
+)
+fi
+
+cat << NEXT_STEPS
+Your next steps are:
+${TEST_STEPS}
 - Create the example solution in $(jq -r '.example' <<< "${files}")
 - Verify the example solution passes the tests by running 'bin/verify-exercises ${slug}'
 - Create the stub solution in $(jq -r '.solution' <<< "${files}")
