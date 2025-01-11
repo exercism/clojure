@@ -1,5 +1,5 @@
 (ns spiral-matrix-test
-  (:require [clojure.test :refer [deftest is testing]]
+  (:require [clojure.test :refer [deftest testing is]]
             spiral-matrix))
 
 (deftest spiral_test_1
