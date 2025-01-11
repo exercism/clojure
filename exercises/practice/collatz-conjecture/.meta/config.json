@@ -14,7 +14,7 @@
       "test/collatz_conjecture_test.clj"
     ],
     "example": [
-      ".meta/src/example.clj"
+      ".meta/example.clj"
     ]
   },
   "blurb": "Calculate the number of steps to reach 1 using the Collatz conjecture.",

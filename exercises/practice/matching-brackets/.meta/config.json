@@ -16,7 +16,7 @@
       "test/matching_brackets_test.clj"
     ],
     "example": [
-      ".meta/src/example.clj"
+      ".meta/example.clj"
     ]
   },
   "blurb": "Make sure the brackets and braces all match.",

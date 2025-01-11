@@ -13,7 +13,7 @@
       "test/poker_test.clj"
     ],
     "example": [
-      ".meta/src/example.clj"
+      ".meta/example.clj"
     ]
   },
   "blurb": "Pick the best hand(s) from a list of poker hands.",

@@ -3,7 +3,8 @@
   "contributors": [
     "AndreaCrotti",
     "haus",
-    "sjwarner-bp"
+    "sjwarner-bp",
+    "tasxatzial"
   ],
   "files": {
     "solution": [
@@ -13,7 +14,7 @@
       "test/dominoes_test.clj"
     ],
     "example": [
-      ".meta/src/example.clj"
+      ".meta/example.clj"
     ]
   },
   "blurb": "Make a chain of dominoes."

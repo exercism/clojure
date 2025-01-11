@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+# Synopsis:
+# Verify that each exercise's example/exemplar solution passes the tests.
+# You can either verify all exercises or a single exercise.
+
+# Example: verify all exercises
+# bin/verify-exercises
+
+# Example: verify single exercise
+# bin/verify-exercises two-fer
+
+set -eo pipefail
+
+die() { echo "$*" >&2; exit 1; }
+
+required_tool() {
+    command -v "${1}" >/dev/null 2>&1 ||
+        die "${1} is required but not installed. Please install it and make sure it's in your PATH."
+}
+
+required_tool bb
+
+bb test.clj "$@"

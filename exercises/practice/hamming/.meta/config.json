@@ -16,7 +16,7 @@
       "test/hamming_test.clj"
     ],
     "example": [
-      ".meta/src/example.clj"
+      ".meta/example.clj"
     ]
   },
   "blurb": "Calculate the Hamming difference between two DNA strands.",

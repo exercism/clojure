@@ -20,7 +20,7 @@
       "test/prime_factors_test.clj"
     ],
     "example": [
-      ".meta/src/example.clj"
+      ".meta/example.clj"
     ]
   },
   "blurb": "Compute the prime factors of a given natural number.",

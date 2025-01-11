@@ -42,7 +42,7 @@
                         (:exercise (:canonical-data data)) "project.clj"))
           (str "(defproject " slug " \"0.1.0-SNAPSHOT\"
   :description \"" slug " exercise.\"
-  :url \"https://github.com/exercism/clojure/tree/master/exercises/" slug "\"
+  :url \"https://github.com/exercism/clojure/tree/main/exercises/practice/" slug "\"
   :dependencies [[org.clojure/clojure \"1.10.0\"]])
 "))))
 
@@ -124,7 +124,7 @@
      :contributors [],
      :files {:solution [(str "src/" (str/replace slug "-" "_") ".clj")],
              :test [(str "test/" (str/replace slug "-" "_") "_test.clj")],
-             :example [".meta/src/example.clj"]},
+             :example [".meta/example.clj"]},
      :blurb blurb}))
 
 (defn init-config! [data]

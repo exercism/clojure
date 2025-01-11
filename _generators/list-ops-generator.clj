@@ -17,12 +17,12 @@
 (second
  (str/split (:metadata data) #"="))
 
-(defn get-meta 
+(defn get-meta
   "Returns a vector containing the exercise title and blurb"
   [data]
   (mapv last
-       (map #(map str/trim (str/split % #"="))
-            (str/split-lines (:metadata data)))))
+        (map #(map str/trim (str/split % #"="))
+             (str/split-lines (:metadata data)))))
 
 (defn init-deps! [data]
   (fs/create-dirs (fs/path "exercises" "practice"
@@ -38,8 +38,7 @@
                  :exec-fn cognitect.test-runner.api/test}}}"))
 
 (comment
-  (init-deps! data)
-  )
+  (init-deps! data))
 
 (defn init-lein! [data]
   (let [slug (:exercise (:canonical-data data))]
@@ -52,8 +51,7 @@
 "))))
 
 (comment
-  (init-lein! data)
-  )
+  (init-lein! data))
 
 (defn test-ns-form [data]
   (str "(ns " (:exercise data) "-test
@@ -67,14 +65,13 @@
   (let [[args body] (str/split s #"->")
         arg-strs (mapv str (edn/read-string args))
         [arg1 op arg2] (str/split (str/trim body) #"\s")]
-    (str "(fn [" (apply str (interpose " " arg-strs)) "] " 
+    (str "(fn [" (apply str (interpose " " arg-strs)) "] "
          "(" op " " arg1 " " arg2 "))")))
 
 (comment
-  (trans-fn "(x) -> x + 1")  
+  (trans-fn "(x) -> x + 1")
   (trans-fn "(x, y) -> x * y")
-  (trans-fn "(acc, el) -> el * acc")
-  )
+  (trans-fn "(acc, el) -> el * acc"))
 
 (defn testing-form [slug test-case]
   (let [property (symbol (str slug "/" (:property test-case)))
@@ -85,8 +82,7 @@
          (reverse (into (list property) args)) ")))")))
 
 (comment
-  (testing-form "list-ops" (first (:cases (first (:cases (:canonical-data data))))))
-  )
+  (testing-form "list-ops" (first (:cases (first (:cases (:canonical-data data)))))))
 
 (defn testing-forms
   "Outputs a sequence of the test cases for a given property name
@@ -98,8 +94,7 @@
     (map #(testing-form (:exercise (:canonical-data data)) %) test-cases)))
 
 (comment
-  (testing-forms "append" data)
-  )
+  (testing-forms "append" data))
 
 (defn deftest-forms [data]
   (for [property (distinct (map :property (mapcat :cases
@@ -110,8 +105,7 @@
          ")")))
 
 (comment
-  (deftest-forms data)
-  )
+  (deftest-forms data))
 
 (defn init-tests! [data]
   (let [path (fs/path "exercises" "practice"
@@ -127,8 +121,7 @@
                                      (deftest-forms data)))))))
 
 (comment
-  (init-tests! data)
-  )
+  (init-tests! data))
 
 (defn init-src! [data]
   (spit (str (fs/file "exercises" "practice" (:exercise (:canonical-data data)) "src"
@@ -141,8 +134,7 @@
                                      (str "(defn " property " []\n  )")))))))
 
 (comment
-  (init-src! data)
-  )
+  (init-src! data))
 
 (defn init-description! [data]
   (let [path ["exercises" "practice" (:exercise (:canonical-data data)) ".docs"]]
@@ -152,26 +144,24 @@
             (:description data)))))
 
 (comment
-  (init-description! data)
-  )
+  (init-description! data))
 
 (defn config [data author blurb]
   (let [slug (:exercise (:canonical-data data))]
     {:authors [author],
      :contributors [],
-     :files {:solution [(str "src/" (str/replace slug "-" "_") ".clj")], 
-             :test [(str "test/" (str/replace slug "-" "_") "_test.clj")], 
-             :example [".meta/src/example.clj"]},
+     :files {:solution [(str "src/" (str/replace slug "-" "_") ".clj")],
+             :test [(str "test/" (str/replace slug "-" "_") "_test.clj")],
+             :example [".meta/example.clj"]},
      :blurb blurb}))
 
 (defn init-config! [data]
   (let [path ["exercises" "practice" (:exercise (:canonical-data data)) ".meta"]]
     (when-not (fs/directory? (apply fs/path path))
-   (fs/create-dirs (apply fs/path (conj path "src")))
+      (fs/create-dirs (apply fs/path (conj path "src")))
       (spit (str (apply fs/file (conj path "config.json")))
             (json/generate-string (config data "porkostomus" (last (get-meta data)))
                                   {:pretty true})))))
 
 (comment
-  (init-config! data)
-  )
+  (init-config! data))

@@ -24,7 +24,7 @@
       "test/etl_test.clj"
     ],
     "example": [
-      ".meta/src/example.clj"
+      ".meta/example.clj"
     ]
   },
   "blurb": "Change the data format for scoring a game to more easily add other languages.",

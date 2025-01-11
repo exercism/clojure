@@ -1,0 +1,109 @@
+#!/usr/bin/env bash
+
+# Synopsis:
+# Scaffold the files for a new practice exercise.
+# After creating the exercise, follow the instructions in the output.
+
+# Example:
+# bin/add-practice-exercise two-fer
+
+# Example with difficulty:
+# bin/add-practice-exercise -d 5 two-fer
+
+# Example with author and difficulty:
+# bin/add-practice-exercise -a foo -d 3 two-fer
+
+set -euo pipefail
+scriptname=$0
+
+help_and_exit() {
+    echo >&2 "Scaffold the files for a new practice exercise."
+    echo >&2 "Usage: ${scriptname} [-h] [-a author] [-d difficulty] <exercise-slug>"
+    echo >&2 "Where: author is the GitHub username of the exercise creator."
+    echo >&2 "Where: difficulty is between 1 (easiest) to 10 (hardest)."
+    exit 1
+}
+
+die() { echo >&2 "$*"; exit 1; }
+
+required_tool() {
+    command -v "${1}" >/dev/null 2>&1 ||
+        die "${1} is required but not installed. Please install it and make sure it's in your PATH."
+}
+
+require_files_template() {
+    jq -e --arg key "${1}" '.files[$key] | length > 0' config.json > /dev/null ||
+        die "The '.files.${1}' array in the 'config.json' file is empty. Please add at least one file. See https://exercism.org/docs/building/tracks/config-json#h-files for more information."
+}
+
+required_tool jq
+
+require_files_template "solution"
+require_files_template "test"
+require_files_template "example"
+
+[[ -f ./bin/fetch-configlet ]] || die "Run this script from the repo's root directory."
+
+author=''
+difficulty='1'
+while getopts :ha:d: opt; do
+    case $opt in
+        h) help_and_exit ;;
+        a) author=$OPTARG ;;
+        d) difficulty=$OPTARG ;;
+        ?) echo >&2 "Unknown option: -$OPTARG"; help_and_exit ;;
+    esac
+done
+shift "$((OPTIND - 1))"
+
+(( $# >= 1 )) || help_and_exit
+
+slug="${1}"
+
+if [[ -z "${author}" ]]; then
+    read -rp 'Your GitHub username: ' author
+fi
+
+./bin/fetch-configlet
+./bin/configlet create --practice-exercise "${slug}" --author "${author}" --difficulty "${difficulty}"
+
+exercise_dir="exercises/practice/${slug}"
+config_json_file="${exercise_dir}/.meta/config.json"
+files=$(jq -r --arg dir "${exercise_dir}" '.files | to_entries | map({key: .key, value: (.value | map("'"'"'" + $dir + "/" + . + "'"'"'") | join(" and "))}) | from_entries' "${config_json_file}")
+
+sample_exercise_dir="exercises/practice/acronym"
+for sample_file in deps.edn project.clj; do
+    if [[ ! -f "${sample_exercise_dir}/${sample_file}" ]]; then
+        die "The sample exercise directory is missing the '${sample_file}' file."
+    fi
+
+    cp "${sample_exercise_dir}/${sample_file}" "${exercise_dir}/${sample_file}"
+done
+
+sed -i "s/acronym/${slug}/g" "${exercise_dir}/project.clj"
+
+test_file=$(jq -r '.files.test[0]' "${config_json_file}")
+cat >"${exercise_dir}/${test_file}" << TEST_FILE
+(ns ${slug}-test
+  (:require [clojure.test :refer [deftest testing is]]
+            ${slug}))
+TEST_FILE
+
+for file_type in solution example; do
+    solution_file=$(jq -r --arg file_type "${file_type}" '.files[$file_type][0]' "${config_json_file}")
+    cat >"${exercise_dir}/${solution_file}" << FILE
+(ns ${slug})
+FILE
+done
+
+cat << NEXT_STEPS
+Your next steps are:
+- Create the test suite in $(jq -r '.test' <<< "${files}")
+  - The tests should be based on the canonical data at 'https://github.com/exercism/problem-specifications/blob/main/exercises/${slug}/canonical-data.json'
+  - Any test cases you don't implement, mark them in 'exercises/practice/${slug}/.meta/tests.toml' with "include = false"
+- Create the example solution in $(jq -r '.example' <<< "${files}")
+- Verify the example solution passes the tests by running 'bin/verify-exercises ${slug}'
+- Create the stub solution in $(jq -r '.solution' <<< "${files}")
+- Update the 'difficulty' value for the exercise's entry in the 'config.json' file in the repo's root
+- Validate CI using 'bin/configlet lint' and 'bin/configlet fmt'
+NEXT_STEPS

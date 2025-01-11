@@ -1,5 +1,7 @@
 (ns armstrong-numbers)
 
-(defn armstrong? [num] ;; <- arglist goes here
-  ;; your code goes here
-)
+(defn armstrong?
+  "Returns true if the given number is an Armstrong number; otherwise, returns false"
+  [num]
+  ;; function body
+  )

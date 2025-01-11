@@ -15,7 +15,7 @@
       "test/protein_translation_test.clj"
     ],
     "example": [
-      ".meta/src/example.clj"
+      ".meta/example.clj"
     ]
   },
   "blurb": "Translate RNA sequences into proteins.",

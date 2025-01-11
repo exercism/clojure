@@ -13,7 +13,7 @@
       "test/complex_numbers_test.clj"
     ],
     "example": [
-      ".meta/src/example.clj"
+      ".meta/example.clj"
     ]
   },
   "blurb": "Implement complex numbers.",

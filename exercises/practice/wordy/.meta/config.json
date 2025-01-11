@@ -16,7 +16,7 @@
       "test/wordy_test.clj"
     ],
     "example": [
-      ".meta/src/example.clj"
+      ".meta/example.clj"
     ]
   },
   "blurb": "Parse and evaluate simple math word problems returning the answer as an integer.",

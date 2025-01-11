@@ -1,4 +1,11 @@
 {
   "blurb": "Lists are immutable, sequential collections representing function calls unless quoted.",
-  "authors": ["porkostomus", "bemself", "cstby"]
+  "authors": [
+    "porkostomus",
+    "bemself",
+    "cstby"
+  ],
+  "contributors": [
+    "tasxatzial"
+  ]
 }

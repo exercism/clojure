@@ -3,7 +3,8 @@
   "contributors": [
     "AndreaCrotti",
     "haus",
-    "sjwarner-bp"
+    "sjwarner-bp",
+    "tasxatzial"
   ],
   "files": {
     "solution": [
@@ -13,7 +14,7 @@
       "test/spiral_matrix_test.clj"
     ],
     "example": [
-      ".meta/src/example.clj"
+      ".meta/example.clj"
     ]
   },
   "blurb": "Given the size, return a square matrix of numbers in spiral order.",

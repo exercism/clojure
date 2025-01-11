@@ -21,7 +21,7 @@
       "test/largest_series_product_test.clj"
     ],
     "example": [
-      ".meta/src/example.clj"
+      ".meta/example.clj"
     ]
   },
   "blurb": "Given a string of digits, calculate the largest product for a contiguous substring of digits of length n.",

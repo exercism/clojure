@@ -7,7 +7,8 @@
     "imtayadeway",
     "mawis",
     "mtkp",
-    "sjwarner-bp"
+    "sjwarner-bp",
+    "tasxatzial"
   ],
   "files": {
     "solution": [
@@ -17,7 +18,7 @@
       "test/armstrong_numbers_test.clj"
     ],
     "example": [
-      ".meta/src/example.clj"
+      ".meta/example.clj"
     ]
   },
   "blurb": "Determine if a number is an Armstrong number.",
