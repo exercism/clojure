@@ -1,5 +1,6 @@
 (ns atbash-cipher
-  (:require [clojure.string :as str]))
+  (:require [clojure.set]
+            [clojure.string :as str]))
 
 (def ^:private letters
   (map char
@@ -9,13 +10,24 @@
   (apply hash-map
          (interleave letters (reverse letters))))
 
+(def ^:private from-cipher
+  (clojure.set/map-invert to-cipher))
+
 (defn- sanitize
   [plaintext]
   (str/replace (str/lower-case plaintext) #"\W" ""))
 
-(defn- cipher
+(defn- remove-spaces
+  [ciphertext]
+  (str/replace ciphertext #" " ""))
+
+(defn- cipher-char
   [plain-char]
   (or (to-cipher plain-char) plain-char))
+
+(defn- plain-char
+  [cipher-char]
+  (or (from-cipher cipher-char) cipher-char))
 
 (defn- to-chunks
   [character-list]
@@ -25,6 +37,13 @@
   [plaintext]
   (->> plaintext
        sanitize
-       (map cipher)
+       (map cipher-char)
        to-chunks
        (str/join " ")))
+
+(defn decode
+  [ciphertext]
+  (->> ciphertext
+       remove-spaces
+       (map plain-char)
+       (apply str)))
