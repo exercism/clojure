@@ -4,8 +4,7 @@
             [toml-clj.core :as toml]
             [clj-jgit.porcelain :refer [git-clone git-pull load-repo]]
             [log]
-            [paths]
-            [clojure.string :as str]))
+            [paths]))
 
 (def git-url "https://github.com/exercism/problem-specifications.git")
 
@@ -42,27 +41,19 @@
   (let [excluded (excluded-uuids slug)]
     (fn [node] (contains? excluded (:uuid node)))))
 
-(defn- node->test-case [idx node]
-  (-> node
-      (assoc :idx (inc idx)
-             :description (str/join " - " (:path node))
-             :error (get-in node [:expected :error]))
-      (dissoc :reimplements :comments :scenarios)))
-
-(defn- test-case-nodes
-  ([node] (test-case-nodes node []))
+(defn- cases
+  ([node] (cases node []))
   ([node path]
    (let [description (:description node)
          children (:cases node)
          updated-path (if description (conj path description) path)]
      (if children
-       (mapcat #(test-case-nodes % updated-path) children)
+       (mapcat #(cases % updated-path) children)
        [(assoc node :path updated-path)]))))
 
 (defn test-cases [slug]
   (->> slug
        (canonical-data)
-       (test-case-nodes)
+       (cases)
        (remove (excluded? slug))
-       (map-indexed node->test-case)
        (into [])))

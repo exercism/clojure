@@ -16,4 +16,4 @@
   (canonical-data/sync-repo)
   (doseq [slug (slugs-to-generate (str exercise))]
     (log/normal (str "Generating tests for exercise '" slug "'"))
-    (templates/generate-tests-file slug (canonical-data/test-cases slug))))  
+    (templates/generate-test-files slug (canonical-data/test-cases slug))))  
