@@ -2,19 +2,19 @@
   (:require [clojure.test :refer [deftest testing is]]
             word-count))
 
-(deftest test-61559d5f-2cad-48fb-af53-d3973a9ee9ef
+(deftest word-count_test_1
   (testing "count one word"
     (is (= {"word" 1}
            (word-count/word-count "word")))))
 
-(deftest test-5abd53a3-1aed-43a4-a15a-29f88c09cbbd
+(deftest word-count_test_2
   (testing "count one of each word"
     (is (= {"one" 1
             "of" 1
             "each" 1}
            (word-count/word-count "one of each")))))
 
-(deftest test-2a3091e5-952e-4099-9fac-8f85d9655c0e
+(deftest word-count_test_3
   (testing "multiple occurrences of a word"
     (is (= {"one" 1
             "fish" 4
@@ -23,21 +23,21 @@
             "blue" 1}
            (word-count/word-count "one fish two fish red fish blue fish")))))
 
-(deftest test-e81877ae-d4da-4af4-931c-d923cd621ca6
+(deftest word-count_test_4
   (testing "handles cramped lists"
     (is (= {"one" 1
             "two" 1
             "three" 1}
            (word-count/word-count "one,two,three")))))
 
-(deftest test-7349f682-9707-47c0-a9af-be56e1e7ff30
+(deftest word-count_test_5
   (testing "handles expanded lists"
     (is (= {"one" 1
             "two" 1
             "three" 1}
            (word-count/word-count "one,\ntwo,\nthree")))))
 
-(deftest test-a514a0f2-8589-4279-8892-887f76a14c82
+(deftest word-count_test_6
   (testing "ignore punctuation"
     (is (= {"car" 1
             "carpet" 1
@@ -46,20 +46,20 @@
             "javascript" 1}
            (word-count/word-count "car: carpet as java: javascript!!&@$%^&")))))
 
-(deftest test-d2e5cee6-d2ec-497b-bdc9-3ebe092ce55e
+(deftest word-count_test_7
   (testing "include numbers"
     (is (= {"testing" 2
             "1" 1
             "2" 1}
            (word-count/word-count "testing, 1, 2 testing")))))
 
-(deftest test-dac6bc6a-21ae-4954-945d-d7f716392dbf
+(deftest word-count_test_8
   (testing "normalize case"
     (is (= {"go" 3
             "stop" 2}
            (word-count/word-count "go Go GO Stop stop")))))
 
-(deftest test-4ff6c7d7-fcfc-43ef-b8e7-34ff1837a2d3
+(deftest word-count_test_9
   (testing "with apostrophes"
     (is (= {"first" 1
             "don't" 2
@@ -71,7 +71,7 @@
             "it" 1}
            (word-count/word-count "'First: don't laugh. Then: don't cry. You're getting it.'")))))
 
-(deftest test-be72af2b-8afe-4337-b151-b297202e4a7b
+(deftest word-count_test_10
   (testing "with quotations"
     (is (= {"joe" 1
             "can't" 1
@@ -81,7 +81,7 @@
             "and" 1}
            (word-count/word-count "Joe can't tell between 'large' and large.")))))
 
-(deftest test-8d6815fe-8a51-4a65-96f9-2fb3f6dc6ed6
+(deftest word-count_test_11
   (testing "substrings from the beginning"
     (is (= {"joe" 1
             "can't" 1
@@ -93,20 +93,20 @@
             "a" 1}
            (word-count/word-count "Joe can't tell between app, apple and a.")))))
 
-(deftest test-c5f4ef26-f3f7-4725-b314-855c04fb4c13
+(deftest word-count_test_12
   (testing "multiple spaces not detected as a word"
     (is (= {"multiple" 1
             "whitespaces" 1}
            (word-count/word-count " multiple   whitespaces")))))
 
-(deftest test-50176e8a-fe8e-4f4c-b6b6-aa9cf8f20360
+(deftest word-count_test_13
   (testing "alternating word separators not detected as a word"
     (is (= {"one" 1
             "two" 1
             "three" 1}
            (word-count/word-count ",\n,one,\n ,two \n 'three'")))))
 
-(deftest test-6d00f1db-901c-4bec-9829-d20eb3044557
+(deftest word-count_test_14
   (testing "quotation for word with apostrophe"
     (is (= {"can" 1
             "can't" 2}
