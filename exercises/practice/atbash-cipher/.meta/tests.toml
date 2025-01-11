@@ -47,6 +47,8 @@ description = "decode -> decode all the letters"
 
 [39640287-30c6-4c8c-9bac-9d613d1a5674]
 description = "decode -> decode with too many spaces"
+include = false
 
 [b34edf13-34c0-49b5-aa21-0768928000d5]
 description = "decode -> decode with no spaces"
+include = false

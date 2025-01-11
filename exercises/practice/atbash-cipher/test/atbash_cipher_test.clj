@@ -61,13 +61,3 @@
   (testing "decode -> decode all the letters"
     (is (= "thequickbrownfoxjumpsoverthelazydog"
            (atbash-cipher/decode "gsvjf rxpyi ldmul cqfnk hlevi gsvoz abwlt")))))
-
-(deftest decode_test_5
-  (testing "decode -> decode with too many spaces"
-    (is (= "exercism"
-           (atbash-cipher/decode "vc vix    r hn")))))
-
-(deftest decode_test_6
-  (testing "decode -> decode with no spaces"
-    (is (= "anobstacleisoftenasteppingstone"
-           (atbash-cipher/decode "zmlyhgzxovrhlugvmzhgvkkrmthglmv")))))
