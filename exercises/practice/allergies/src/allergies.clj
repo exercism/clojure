@@ -1,9 +1,13 @@
 (ns allergies)
 
-(defn allergies [] ;; <- arglist goes here
-  ;; your code goes here
-)
+(defn allergic-to?
+  "Returns true if the score indicates an allergy to the allergen; otherwise, returns false"
+  [score allergen]
+  ;; function body
+  )
 
-(defn allergic-to? [] ;; <- arglist goes here
-  ;; your code goes here
-)
+(defn allergies
+  "Returns all allergens associated with the score"
+  [score]
+  ;; function body
+  )
