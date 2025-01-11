@@ -19,13 +19,24 @@
              :error (get-in node [:expected :error]))
       (dissoc :reimplements :comments :scenarios)))
 
-(defn- test-cases->data [test-cases]
-  (let [test-cases-by-property (update-vals (group-by :property test-cases) #(map-indexed test-case->data %))]
-    {:test_cases (reduce concat (vals test-cases-by-property))
-     :test_cases_by_property test-cases-by-property}))
+(defn- transform [slug test-cases]
+  (let [transform-file (paths/generator-clojure-file slug)]
+    (if (.exists transform-file)
+      (let [generator-ns (symbol (str slug "-generator"))]
+        (load-file (str transform-file))
+        (if-let [transform-fn (ns-resolve generator-ns (symbol "transform"))]
+          (transform-fn test-cases)
+          test-cases))
+      test-cases)))
+
+(defn- test-cases->data [slug test-cases]
+  (let [transformed (transform slug test-cases)
+        grouped (group-by :property transformed)
+        data (update-vals grouped #(map-indexed test-case->data %))]
+    {:test_cases data}))
 
 (defn generate-test-files [slug test-cases]
   (let [template (slurp (paths/generator-template-file slug))
-        data (test-cases->data test-cases)]
+        data (test-cases->data slug test-cases)]
     (->> (hbs/render template data)
          (spit (paths/tests-file slug)))))

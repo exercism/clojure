@@ -2,7 +2,7 @@
   (:require [clojure.test :refer [deftest testing is]]
              isogram))
 
-{{#test_cases~}}
+{{#test_cases.isIsogram~}}
 (deftest isogram_test_{{idx}}
   (testing "{{description}}"
     {{#expected~}}
@@ -10,4 +10,4 @@
     {{else~}}
     (is (not (isogram/isogram? "{{input.phrase}}")))))
     {{/expected}}
-{{/test_cases}}
+{{/test_cases.isIsogram}}
