@@ -1,47 +1,47 @@
 (ns scrabble-score-test
   (:require [clojure.test :refer [deftest testing is]]
-            scrabble-score))
+             scrabble-score))
 
-(deftest lowercase-letter
-  (testing "Lowercase letter"
+(deftest score-word_test_1
+  (testing "lowercase letter"
     (is (= 1 (scrabble-score/score-word "a")))))
 
-(deftest uppercase-letter
-  (testing "Uppercase letter"
+(deftest score-word_test_2
+  (testing "uppercase letter"
     (is (= 1 (scrabble-score/score-word "A")))))
 
-(deftest valuable-letter
-  (testing "Valuable letter"
+(deftest score-word_test_3
+  (testing "valuable letter"
     (is (= 4 (scrabble-score/score-word "f")))))
 
-(deftest short-word
-  (testing "Short word"
+(deftest score-word_test_4
+  (testing "short word"
     (is (= 2 (scrabble-score/score-word "at")))))
 
-(deftest short-valuable-word
-  (testing "Short, valuable word"
+(deftest score-word_test_5
+  (testing "short, valuable word"
     (is (= 12 (scrabble-score/score-word "zoo")))))
 
-(deftest medium-word
-  (testing "Medium word"
+(deftest score-word_test_6
+  (testing "medium word"
     (is (= 6 (scrabble-score/score-word "street")))))
 
-(deftest medium-valuable-word
+(deftest score-word_test_7
   (testing "medium, valuable word"
     (is (= 22 (scrabble-score/score-word "quirky")))))
 
-(deftest long-mixed-case-word
-  (testing "Long, mixed-case word"
+(deftest score-word_test_8
+  (testing "long, mixed-case word"
     (is (= 41 (scrabble-score/score-word "OxyphenButazone")))))
 
-(deftest english-like-word
-  (testing "English-like word"
+(deftest score-word_test_9
+  (testing "english-like word"
     (is (= 8 (scrabble-score/score-word "pinata")))))
 
-(deftest empty-input
-  (testing "Empty input"
+(deftest score-word_test_10
+  (testing "empty input"
     (is (= 0 (scrabble-score/score-word "")))))
 
-(deftest entire-alphabet-available
-  (testing "Entire alphabet available"
+(deftest score-word_test_11
+  (testing "entire alphabet available"
     (is (= 87 (scrabble-score/score-word "abcdefghijklmnopqrstuvwxyz")))))
