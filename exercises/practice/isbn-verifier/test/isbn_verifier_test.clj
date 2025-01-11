@@ -1,45 +1,79 @@
 (ns isbn-verifier-test
-  (:require [clojure.test :refer [deftest is]]
-            [isbn-verifier :refer [isbn?]]))
+  (:require [clojure.test :refer [deftest testing is]]
+            isbn-verifier))
 
-(deftest valid-isbn-number
-  (is (= true (isbn? "3-598-21508-8"))))
+(deftest isbn?_test_1
+  (testing "valid isbn"
+    (is (true? (isbn-verifier/isbn? "3-598-21508-8")))))
 
-(deftest invalid-isbn-check-digit
-  (is (= false (isbn? "3-598-21508-9"))))
+(deftest isbn?_test_2
+  (testing "invalid isbn check digit"
+    (is (false? (isbn-verifier/isbn? "3-598-21508-9")))))
 
-(deftest valid-isbn-number-with-a-check-digit-of-10
-  (is (= true (isbn? "3-598-21507-X"))))
+(deftest isbn?_test_3
+  (testing "valid isbn with a check digit of 10"
+    (is (true? (isbn-verifier/isbn? "3-598-21507-X")))))
 
-(deftest check-digit-is-a-character-other-than-X
-  (is (= false (isbn? "3-598-21507-A"))))
+(deftest isbn?_test_4
+  (testing "check digit is a character other than X"
+    (is (false? (isbn-verifier/isbn? "3-598-21507-A")))))
 
-(deftest invalid-character-in-isbn
-  (is (= false (isbn? "3-598-2K507-0"))))
+(deftest isbn?_test_5
+  (testing "invalid check digit in isbn is not treated as zero"
+    (is (false? (isbn-verifier/isbn? "4-598-21507-B")))))
 
-(deftest X-is-only-valid-as-a-check-digit
-  (is (= false (isbn? "3-598-2X507-9"))))
+(deftest isbn?_test_6
+  (testing "invalid character in isbn is not treated as zero"
+    (is (false? (isbn-verifier/isbn? "3-598-P1581-X")))))
 
-(deftest valid-isbn-without-separating-dashes
-  (is (= true (isbn? "3598215088"))))
+(deftest isbn?_test_7
+  (testing "X is only valid as a check digit"
+    (is (false? (isbn-verifier/isbn? "3-598-2X507-9")))))
 
-(deftest isbn-without-separating-dashes-and-X-as-check-digit
-  (is (= true (isbn? "359821507X"))))
+(deftest isbn?_test_8
+  (testing "valid isbn without separating dashes"
+    (is (true? (isbn-verifier/isbn? "3598215088")))))
 
-(deftest isbn-without-check-digit-and-dashes
-  (is (= false (isbn? "359821507"))))
+(deftest isbn?_test_9
+  (testing "isbn without separating dashes and X as check digit"
+    (is (true? (isbn-verifier/isbn? "359821507X")))))
 
-(deftest too-long-isbn-and-no-dashes
-  (is (= false (isbn? "3598215078X"))))
+(deftest isbn?_test_10
+  (testing "isbn without check digit and dashes"
+    (is (false? (isbn-verifier/isbn? "359821507")))))
 
-(deftest too-short-isbn
-  (is (= false (isbn? "00"))))
+(deftest isbn?_test_11
+  (testing "too long isbn and no dashes"
+    (is (false? (isbn-verifier/isbn? "3598215078X")))))
 
-(deftest isbn-without-check-digit
-  (is (= false (isbn? "3-598-21507"))))
+(deftest isbn?_test_12
+  (testing "too short isbn"
+    (is (false? (isbn-verifier/isbn? "00")))))
 
-(deftest too-long-isbn
-  (is (= false (isbn? "3-598-21507-XX"))))
+(deftest isbn?_test_13
+  (testing "isbn without check digit"
+    (is (false? (isbn-verifier/isbn? "3-598-21507")))))
 
-(deftest check-digit-of-X-should-not-be-used-for-0
-  (is (= false (isbn? "3-598-21515-X"))))
+(deftest isbn?_test_14
+  (testing "check digit of X should not be used for 0"
+    (is (false? (isbn-verifier/isbn? "3-598-21515-X")))))
+
+(deftest isbn?_test_15
+  (testing "empty isbn"
+    (is (false? (isbn-verifier/isbn? "")))))
+
+(deftest isbn?_test_16
+  (testing "input is 9 characters"
+    (is (false? (isbn-verifier/isbn? "134456729")))))
+
+(deftest isbn?_test_17
+  (testing "invalid characters are not ignored after checking length"
+    (is (false? (isbn-verifier/isbn? "3132P34035")))))
+
+(deftest isbn?_test_18
+  (testing "invalid characters are not ignored before checking length"
+    (is (false? (isbn-verifier/isbn? "3598P215088")))))
+
+(deftest isbn?_test_19
+  (testing "input is too long but contains a valid isbn"
+    (is (false? (isbn-verifier/isbn? "98245726788")))))
