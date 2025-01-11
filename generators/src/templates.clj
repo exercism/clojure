@@ -1,8 +1,20 @@
 (ns templates
-  (:require [hbs.core :as hbs]
+  (:require [hbs.core :refer [*hbs* render]]
+            [hbs.helper :refer [defhelper register-helper! safe-str]]
+            [hbs.ext :refer :all :exclude [hash]]
             [clojure.string :as str]
             [log]
             [paths]))
+
+(defhelper list-helper [ctx options]
+  (safe-str (str "'" (seq ctx))))
+
+(register-helper! *hbs* "list" list-helper)
+(register-helper! *hbs* "ifequals" ifequals)
+(register-helper! *hbs* "ifgreater" ifgreater)
+(register-helper! *hbs* "ifless" ifless)
+(register-helper! *hbs* "ifcontains" ifcontains)
+(register-helper! *hbs* "ifempty" ifempty)
 
 (def exercises-with-template
   (->> paths/exercises-dir
@@ -38,5 +50,5 @@
 (defn generate-test-files [slug test-cases]
   (let [template (slurp (paths/generator-template-file slug))
         data (test-cases->data slug test-cases)]
-    (->> (hbs/render template data)
+    (->> (render template data)
          (spit (paths/tests-file slug)))))
