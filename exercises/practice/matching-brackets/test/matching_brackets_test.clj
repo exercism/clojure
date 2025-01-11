@@ -2,82 +2,82 @@
   (:require [clojure.test :refer [deftest testing is]]
             matching-brackets))
 
-(deftest paired-square-brackets
+(deftest valid?_test_1
   (testing "paired square brackets"
-    (is (matching-brackets/valid? "[]"))))
+    (is (true? (matching-brackets/valid? "[]")))))
 
-(deftest empty-string
-  (testing "Empty string"
-    (is (matching-brackets/valid? ""))))
+(deftest valid?_test_2
+  (testing "empty string"
+    (is (true? (matching-brackets/valid? "")))))
 
-(deftest unpaired-brackets
-  (testing "Unpaired brackets"
+(deftest valid?_test_3
+  (testing "unpaired brackets"
     (is (false? (matching-brackets/valid? "[[")))))
 
-(deftest wrong-ordered-brackets
-  (testing "Wrong ordered brackets"
+(deftest valid?_test_4
+  (testing "wrong ordered brackets"
     (is (false? (matching-brackets/valid? "}{")))))
 
-(deftest wrong-closing-bracket
-  (testing "Wrong closing bracket"
+(deftest valid?_test_5
+  (testing "wrong closing bracket"
     (is (false? (matching-brackets/valid? "{]")))))
 
-(deftest paired-with-whitespace
-  (testing "Paired with whitespace"
-    (is (matching-brackets/valid? "{ }"))))
+(deftest valid?_test_6
+  (testing "paired with whitespace"
+    (is (true? (matching-brackets/valid? "{ }")))))
 
-(deftest partially-paired-brackets
-  (testing "Partially paired brackets"
+(deftest valid?_test_7
+  (testing "partially paired brackets"
     (is (false? (matching-brackets/valid? "{[])")))))
 
-(deftest simple-nested-brackets
-  (testing "Simple nested brackets"
-    (is (matching-brackets/valid? "{[]}"))))
+(deftest valid?_test_8
+  (testing "simple nested brackets"
+    (is (true? (matching-brackets/valid? "{[]}")))))
 
-(deftest several-paired-brackets
-  (testing "Several paired brackets"
-    (is (matching-brackets/valid? "{}[]"))))
+(deftest valid?_test_9
+  (testing "several paired brackets"
+    (is (true? (matching-brackets/valid? "{}[]")))))
 
-(deftest paired-and-nested-brackets
-  (testing "Paired and nested brackets"
-    (is (matching-brackets/valid? "([{}({}[])])"))))
+(deftest valid?_test_10
+  (testing "paired and nested brackets"
+    (is (true? (matching-brackets/valid? "([{}({}[])])")))))
 
-(deftest unopened-closing-brackets
-  (testing "Unopened closing brackets"
+(deftest valid?_test_11
+  (testing "unopened closing brackets"
     (is (false? (matching-brackets/valid? "{[)][]}")))))
  
-(deftest unpaired-and-nested-brackets
-  (testing "Unpaired and nested brackets"
+(deftest valid?_test_12
+  (testing "unpaired and nested brackets"
     (is (false? (matching-brackets/valid? "([{])")))))
 
-(deftest paired-and-wrong-nested-brackets
-  (testing "Paired and wrong nested brackets"
+(deftest valid?_test_13
+  (testing "paired and wrong nested brackets"
     (is (false? (matching-brackets/valid? "[({]})")))))
 
-(deftest paired-and-wrong-nested-brackets-but-innermost-are-correct
-  (testing "Paired and wrong nested brackets but innermost are correct"
+(deftest valid?_test_14
+  (testing "paired and wrong nested brackets but innermost are correct"
     (is (false? (matching-brackets/valid? "[({}])")))))
 
-(deftest paired-and-incomplete-brackets
-  (testing "Paired and incomplete brackets"
+(deftest valid?_test_15
+  (testing "paired and incomplete brackets"
     (is (false? (matching-brackets/valid? "{}[")))))
 
-(deftest too-many-closing-brackets
-  (testing "Too many closing brackets"
+(deftest valid?_test_16
+  (testing "too many closing brackets"
     (is (false? (matching-brackets/valid? "[]]")))))
 
-(deftest early-unexpected-brackets
-  (testing "Early unexpected brackets"
+(deftest valid?_test_17
+  (testing "early unexpected brackets"
     (is (false? (matching-brackets/valid? ")()")))))
 
-(deftest early-mismatched-brackets
-  (testing "Early mismatched brackets"
+(deftest valid?_test_18
+  (testing "early mismatched brackets"
     (is (false? (matching-brackets/valid? "{)()")))))
 
-(deftest math-expression
-  (testing "Math expression"
-    (is (matching-brackets/valid? "(((185 + 223.85) * 15) - 543)/2"))))
+(deftest valid?_test_19
+  (testing "math expression"
+    (is (true? (matching-brackets/valid? "(((185 + 223.85) * 15) - 543)/2")))))
 
-(deftest complex-latex-expression
-  (testing "Complex latex expression"
-    (is (matching-brackets/valid? "\\\\left(\\\\begin{array}{cc} \\\\frac{1}{3} & x\\\\\\\\ \\\\mathrm{e}^{x} &... x^2 \\\\end{array}\\\\right)"))))
+(deftest valid?_test_20
+  (testing "complex latex expression"
+    (is (true? (matching-brackets/valid? "\\\\left(\\\\begin{array}{cc} \\\\frac{1}{3} & x\\\\\\\\ \\\\mathrm{e}^{x} &... x^2 \\\\end{array}\\\\right)")))))
