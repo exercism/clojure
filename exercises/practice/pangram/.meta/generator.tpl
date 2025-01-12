@@ -8,6 +8,6 @@
     {{#expected~}}
     (is (pangram/pangram? "{{input.sentence}}"))))
     {{else~}}
-    (is (not (pangram/pangram? "{{input.sentence}}")))))
+    (is (false? (pangram/pangram? "{{input.sentence}}")))))
     {{/expected}}
 {{/test_cases.isPangram}}
