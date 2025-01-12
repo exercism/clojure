@@ -15,11 +15,11 @@
     (is (true? (pangram/pangram? "the quick brown fox jumps over the lazy dog")))))
 
 (deftest pangram?_test_4
-  (testing "missing the letter 'x'"
+  (testing "missing the letter &#x27;x&#x27;"
     (is (false? (pangram/pangram? "a quick movement of the enemy will jeopardize five gunboats")))))
 
 (deftest pangram?_test_5
-  (testing "missing the letter 'h'"
+  (testing "missing the letter &#x27;h&#x27;"
     (is (false? (pangram/pangram? "five boxing wizards jump quickly at it")))))
 
 (deftest pangram?_test_6
@@ -36,7 +36,7 @@
 
 (deftest pangram?_test_9
   (testing "mixed case and punctuation"
-    (is (true? (pangram/pangram? "\"Five quacking Zephyrs jolt my wax bed.\"")))))
+    (is (true? (pangram/pangram? "&quot;Five quacking Zephyrs jolt my wax bed.&quot;")))))
 
 (deftest pangram?_test_10
   (testing "a-m and A-M are 26 different characters but not a pangram"
