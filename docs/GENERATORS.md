@@ -1,6 +1,6 @@
 # Generators
 
-The Clojure track uses a [test generator](https://exercism.org/docs/building/tooling/test-generators) to auto-generate (some) of the practice exercise's tests.
+The Clojure track uses a [test generator](https://exercism.org/docs/building/tooling/test-generators) to auto-generate practice exercise tests.
 It uses the fact that most exercises defined in the [problem-specifications repo](https://github.com/exercism/problem-specifications/) also have a `canonical-data.json` file, which contains standardized test inputs and outputs that can be used to implement the exercise.
 
 ## Steps
