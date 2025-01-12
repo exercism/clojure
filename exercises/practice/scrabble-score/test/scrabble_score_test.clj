@@ -1,6 +1,6 @@
 (ns scrabble-score-test
   (:require [clojure.test :refer [deftest testing is]]
-             scrabble-score))
+            scrabble-score))
 
 (deftest score-word_test_1
   (testing "lowercase letter"
