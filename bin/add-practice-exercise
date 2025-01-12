@@ -106,7 +106,7 @@ if [[ -f "${prob_specs_dir}/exercises/${slug}/canonical-data.json" ]]; then
 - Create the test generator in '${generator_tpl_file}'
     - The test generator uses the canonical data from 'https://github.com/exercism/problem-specifications/blob/main/exercises/${slug}/canonical-data.json'
   - Any test cases you don't want to implement, mark them in 'exercises/practice/${slug}/.meta/tests.toml' with "include = false"
-  - Run 'bin/generate-exercise-tests ${slug}' to generate the tests
+  - Run 'bin/generate-tests ${slug}' to generate the tests
 EOF
 )
 else
