@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+
+# Synopsis:
+# Update an exercise
+
+# Example:
+# bin/update-practice-exercise two-fer
+
+set -euo pipefail
+scriptname=$0
+
+help_and_exit() {
+    echo >&2 "Update a practice exercise."
+    echo >&2 "Usage: ${scriptname} <exercise-slug>"
+    exit 1
+}
+
+die() { echo >&2 "$*"; exit 1; }
+
+[[ -f ./bin/fetch-configlet ]] || die "Run this script from the repo's root directory."
+
+(( $# >= 1 )) || help_and_exit
+
+slug="${1}"
+
+./bin/fetch-configlet
+./bin/configlet sync --tests include --metadata --filepaths --exercise "${slug}" --update --yes
+
+generator_tpl_file="exercises/practice/${slug}/.meta/generator.tpl"
+
+if [[ -f "${generator_tpl_file}" ]]; then
+    ./bin/generate-tests "${slug}"
+    ./bin/verify-exercises "${slug}"
+fi
