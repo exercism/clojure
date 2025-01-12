@@ -8,10 +8,10 @@ It uses the fact that most exercises defined in the [problem-specifications repo
 To generate a practice exercise's tests, the test generator:
 
 1. Reads the exercise's test cases from its [`canonical-data.json` file]
-2. Use `tests.toml` file to omit and excluded test cases
-3. Transform the test cases (optional)
-4. Render the test cases using the exercise's generator template
-5. Write the rendered template to the exercise's test file
+2. Uses `tests.toml` file to omit and excluded test cases
+3. Transforms the test cases (optional)
+4. Renders the test cases using the exercise's generator template
+5. Writes the rendered template to the exercise's test file
 
 ### Step 1: read `canonical-data.json` file
 
