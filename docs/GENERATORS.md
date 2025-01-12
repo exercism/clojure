@@ -50,7 +50,7 @@ This step is entirely optional.
 
 ### Step 4: render the test cases
 
-The (potentially transformed) test cases are then passed to the `.meta/generator.tpl` file, which defines how the tests should be rendered based on the test cases.
+The (potentially transformed) test cases are then passed to the `.meta/generator.tpl` file, which defines how the tests should be rendered based on those test cases.
 
 ### Step 5: write the rendered template to the exercise's test file
 
