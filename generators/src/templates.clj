@@ -4,17 +4,20 @@
             [hbs.ext :refer :all :exclude [hash]]
             [clojure.string :as str]
             [log]
-            [paths]))
+            [paths])
+  (:import [com.github.jknack.handlebars EscapingStrategy]))
 
 (defhelper list-helper [ctx options]
   (safe-str (str "'" (seq ctx))))
 
-(register-helper! *hbs* "list" list-helper)
-(register-helper! *hbs* "ifequals" ifequals)
-(register-helper! *hbs* "ifgreater" ifgreater)
-(register-helper! *hbs* "ifless" ifless)
-(register-helper! *hbs* "ifcontains" ifcontains)
-(register-helper! *hbs* "ifempty" ifempty)
+(def reg (. *hbs* with EscapingStrategy/NOOP))
+
+(register-helper! reg "list" list-helper)
+(register-helper! reg "ifequals" ifequals)
+(register-helper! reg "ifgreater" ifgreater)
+(register-helper! reg "ifless" ifless)
+(register-helper! reg "ifcontains" ifcontains)
+(register-helper! reg "ifempty" ifempty)
 
 (def exercises-with-template
   (->> paths/exercises-dir
@@ -50,5 +53,5 @@
 (defn generate-test-files [slug test-cases]
   (let [template (slurp (paths/generator-template-file slug))
         data (test-cases->data slug test-cases)]
-    (->> (render template data)
+    (->> (render reg template data)
          (spit (paths/tests-file slug)))))
