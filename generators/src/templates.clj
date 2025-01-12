@@ -10,9 +10,13 @@
 (defhelper list-helper [ctx options]
   (safe-str (str "'" (seq ctx))))
 
+(defhelper string-helper [ctx options]
+  (safe-str (str "\"" (str/escape ctx char-escape-string) "\"")))
+
 (def reg (. *hbs* with EscapingStrategy/NOOP))
 
 (register-helper! reg "list" list-helper)
+(register-helper! reg "string" string-helper)
 (register-helper! reg "ifequals" ifequals)
 (register-helper! reg "ifgreater" ifgreater)
 (register-helper! reg "ifless" ifless)
