@@ -27,6 +27,13 @@
       "path": "docs/RESOURCES.md",
       "title": "Useful Clojure resources",
       "blurb": "A collection of useful resources to help you master Clojure"
+    },
+    {
+      "uuid": "b091add0-0047-42ad-ae0c-adeebf984365",
+      "slug": "generators",
+      "path": "docs/GENERATORS.md",
+      "title": "Learn about test generators",
+      "blurb": "Learn how the Clojure track uses test generators to generate tests for exercises"
     }
   ]
 }

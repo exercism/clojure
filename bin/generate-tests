@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+
+# Synopsis:
+# Generate the tests for each exercise with a generator template.
+
+# Example: generate tests for all exercises with a generator template
+# bin/generate-tests
+
+# Example: generate tests for a single exercise with a generator template
+# bin/generate-tests two-fer
+
+set -eo pipefail
+
+die() { echo "$*" >&2; exit 1; }
+
+required_tool() {
+    command -v "${1}" >/dev/null 2>&1 ||
+        die "${1} is required but not installed. Please install it and make sure it's in your PATH."
+}
+
+required_tool clj
+
+exercise_slug="${1}"
+
+pushd generators >/dev/null || die "Could not change to the 'generators' directory"
+
+if [ -z "${exercise_slug}" ]; then
+    clj -X generator/run
+else
+    clj -X generator/run :exercise "${exercise_slug}"
+fi
+
+popd >/dev/null
