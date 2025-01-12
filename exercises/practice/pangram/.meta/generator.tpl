@@ -1,6 +1,6 @@
 (ns pangram-test
   (:require [clojure.test :refer [deftest testing is]]
-             pangram))
+            pangram))
 
 {{#test_cases.isPangram~}}
 (deftest pangram?_test_{{idx}}
