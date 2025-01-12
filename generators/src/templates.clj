@@ -8,7 +8,7 @@
   (->> paths/exercises-dir
        (file-seq)
        (filter #(.isFile %))
-       (filter #(= "generator.template" (.getName %)))
+       (filter #(= "generator.tpl" (.getName %)))
        (map #(-> % (.getParentFile) (.getParentFile) (.getName)))
        (set)))
 
