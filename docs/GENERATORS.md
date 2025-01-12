@@ -17,7 +17,7 @@ To generate a practice exercise's tests, the test generator:
 
 The test generator parses the test cases from the exercise's `canonical-data.json` using the [clojure/data.json library](https://github.com/clojure/data.json).
 
-As some canonical data uses nesting, the parsed test case gets an additional `path` field, which contains the `description` properties of any parents as well as the test case's `description` property itself.
+Since some canonical data uses nesting, the parsed test case includes an additional `path` field that contains the `description` properties of any parent elements, as well as the test case's own `description` property.
 
 Note: keys are parsed as keywords.
 
