@@ -32,7 +32,7 @@ Some exercises might need some tweaks before rendering the data.
 For example, you might want to make the description less verbose.
 
 To tweak the test cases, define a `.meta/generator.clj` file with a `<slug>-generator` namespace .
-You then defined a function called `transform` that takes (and returns) a single value: the parsed test cases.
+Then, define a function called `transform` that takes a single argument — the parsed test cases — and returns the transformed test cases.
 
 Example:
 
