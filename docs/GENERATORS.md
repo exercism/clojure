@@ -28,7 +28,7 @@ The test generator will remove any test cases that are marked as excluded (`incl
 
 ### Step 3: transform the test cases (optional)
 
-Some exercises might need some (minor) tweaks before rendering the data.
+Some exercises might need some tweaks before rendering the data.
 For example, you might want to make the description less verbose.
 
 To tweak the test cases, define a `.meta/generator.clj` file with a `<slug>-generator` namespace .
