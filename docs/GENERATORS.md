@@ -64,5 +64,5 @@ The templates are rendered using the [hbs library](https://github.com/sunng87/hb
 
 There are two ways in which the test generator can be run:
 
-1. `bin/generate-tests`: generate the tests for all exercises with a test generator
-2. `bin/generate-tests <slug>`: generate the tests for the specified exercise
+1. `bin/generate-tests`: generate the tests for all exercises that have a generator template
+2. `bin/generate-tests <slug>`: generate the tests for the specified exercise, if it has a generator template
