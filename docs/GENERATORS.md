@@ -54,7 +54,7 @@ The (potentially transformed) test cases are then passed to the `.meta/generator
 
 ### Step 5: write the rendered template to the exercise's test file
 
-Finally, the rendered template's output is written to the exercise's test file.
+Finally, the output of the rendered template is written to the exercise's test file.
 
 ## Templates
 
