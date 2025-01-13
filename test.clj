@@ -39,13 +39,14 @@
         src-copy (str src ".bak")]
     (shell/sh "cp" src src-copy)
     (try
-      ((shell/sh "cp" example src)
-       (= "pass" ((json/parse-string
-                   (:out (shell/sh (str test-runner-dir "test-runner.clj")
-                                   slug
-                                   dir
-                                   dir)))
-                  "status")))
+      (do
+        (shell/sh "cp" example src)
+        (= "pass" ((json/parse-string
+                    (:out (shell/sh (str test-runner-dir "test-runner.clj")
+                                    slug
+                                    dir
+                                    dir)))
+                   "status")))
       (finally (shell/sh "mv" src-copy src)))))
 
 (defn test-exercises! []
