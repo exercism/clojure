@@ -1154,6 +1154,18 @@
         ]
       },
       {
+        "slug": "list-ops",
+        "name": "List Ops",
+        "uuid": "699fb4ec-210d-454d-a41a-f7014abf8423",
+        "practices": [],
+        "prerequisites": [
+          "lists",
+          "closures",
+          "vectors"
+        ],
+        "difficulty": 5
+      },
+      {
         "slug": "diamond",
         "name": "Diamond",
         "uuid": "cc0d15ad-d562-458c-8d05-4b213693cfb9",
@@ -1383,18 +1395,6 @@
         "topics": [
           "conditionals"
         ]
-      },
-      {
-        "slug": "list-ops",
-        "name": "List Ops",
-        "uuid": "699fb4ec-210d-454d-a41a-f7014abf8423",
-        "practices": [],
-        "prerequisites": [
-          "lists",
-          "closures",
-          "vectors"
-        ],
-        "difficulty": 5
       }
     ]
   },
