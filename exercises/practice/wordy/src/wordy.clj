@@ -1,5 +1,7 @@
 (ns wordy)
 
-(defn evaluate [] ;; <- arglist goes here
-      ;; your code goes here
-)
+(defn evaluate
+  "Evaluate a simple math problem"
+  [question]
+  ;; function body
+  )
