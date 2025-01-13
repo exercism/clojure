@@ -4,5 +4,5 @@
 {{#test_cases.sum}}
 (deftest sum-of-multiples?_test_{{idx}}
   (testing "{{description}}"
-    (is ({{#ifequals expected compare=0}}zero?{{else}}= {{expected}}{{/ifequals}} (sum-of-multiples/sum-of-multiples {{list input.factors}} {{input.limit}})))))
+    (is ({{#ifzero expected}}zero?{{else}}= {{expected}}{{/ifzero}} (sum-of-multiples/sum-of-multiples {{list input.factors}} {{input.limit}})))))
 {{/test_cases.sum~}}

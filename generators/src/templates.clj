@@ -1,6 +1,6 @@
 (ns templates
   (:require [hbs.core :refer [*hbs* render]]
-            [hbs.helper :refer [defhelper register-helper! safe-str]]
+            [hbs.helper :refer [defhelper register-helper! safe-str block-body else-body]]
             [hbs.ext :refer :all :exclude [hash]]
             [clojure.string :as str]
             [log]
@@ -14,6 +14,11 @@
 (defhelper string-helper [ctx options]
   (safe-str (str "\"" (str/escape ctx char-escape-string) "\"")))
 
+(defhelper ifzero [ctx options]
+  (if (zero? ctx)
+    (block-body options ctx)
+    (else-body options ctx)))
+
 (def reg (. *hbs* with EscapingStrategy/NOOP))
 
 (register-helper! reg "list" list-helper)
@@ -23,6 +28,7 @@
 (register-helper! reg "ifless" ifless)
 (register-helper! reg "ifcontains" ifcontains)
 (register-helper! reg "ifempty" ifempty)
+(register-helper! reg "ifzero" ifzero)
 
 (def exercises-with-template
   (->> paths/exercises-dir
