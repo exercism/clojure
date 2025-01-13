@@ -991,6 +991,14 @@
         ]
       },
       {
+        "slug": "square-root",
+        "name": "Square Root",
+        "uuid": "140acd81-dfa6-42ad-b2ac-bbb5917706c1",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
         "slug": "say",
         "name": "Say",
         "uuid": "0ff7efbe-855e-4a81-9b64-f07d1557813f",
