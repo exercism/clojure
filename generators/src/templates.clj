@@ -8,7 +8,8 @@
   (:import [com.github.jknack.handlebars EscapingStrategy]))
 
 (defhelper list-helper [ctx options]
-  (safe-str (str "'" (seq ctx))))
+  (let [s (seq ctx)]
+    (safe-str (str "'" (if (empty? s) "()" s)))))
 
 (defhelper string-helper [ctx options]
   (safe-str (str "\"" (str/escape ctx char-escape-string) "\"")))

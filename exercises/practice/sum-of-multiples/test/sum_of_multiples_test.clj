@@ -52,7 +52,7 @@
 
 (deftest sum-of-multiples?_test_13
   (testing "no factors means an empty sum"
-    (is (zero? (sum-of-multiples/sum-of-multiples ' 10000)))))
+    (is (zero? (sum-of-multiples/sum-of-multiples '() 10000)))))
 
 (deftest sum-of-multiples?_test_14
   (testing "solutions using include-exclude must extend to cardinality greater than 3"
