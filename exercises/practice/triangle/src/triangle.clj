@@ -1,8 +1,8 @@
 (ns triangle)
 
 (defn equilateral?
-  "Determine if a triangle is equilateral"
-  [sides]
+  "Returns true if the triangle with sides a, b, and c is equilateral; otherwise, returns false"
+  [a b c]
   ;; function body
   )
 
