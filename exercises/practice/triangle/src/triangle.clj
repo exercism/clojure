@@ -13,7 +13,7 @@
   )
 
 (defn scalene?
-  "Determine if a triangle is scalene"
-  [sides]
+  "Returns true if the triangle with sides a, b, and c is scalene; otherwise, returns false"
+  [a b c]
   ;; function body
   )
