@@ -1,17 +1,19 @@
 (ns triangle)
 
-(defn is-valid? [] ;; <- arglist goes here
-  ;; your code goes here
-)
+(defn equilateral?
+  "Determine if a triangle is equilateral"
+  [sides]
+  ;; function body
+  )
 
-(defn equilateral? [] ;; <- arglist goes here
-  ;; your code goes here
-)
+(defn isosceles?
+  "Determine if a triangle is isosceles"
+  [sides]
+  ;; function body
+  )
 
-(defn isosceles? [] ;; <- arglist goes here
-  ;; your code goes here
-)
-
-(defn scalene? [] ;; <- arglist goes here
-  ;; your code goes here
-)
+(defn scalene?
+  "Determine if a triangle is scalene"
+  [sides]
+  ;; function body
+  )
