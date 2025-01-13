@@ -7,8 +7,8 @@
   )
 
 (defn isosceles?
-  "Determine if a triangle is isosceles"
-  [sides]
+  "Returns true if the triangle with sides a, b, and c is isosceles; otherwise, returns false"
+  [a b c]
   ;; function body
   )
 
