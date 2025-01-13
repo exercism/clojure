@@ -1,5 +1,7 @@
 (ns roman-numerals)
 
-(defn numerals [] ;; <- arglist goes here
-      ;; your code goes here
-)
+(defn numerals
+  "Convert a number to its roman numeral(s)"
+  [n]
+  ;; function body
+  )
