@@ -3,6 +3,6 @@
             pangram))
 {{#test_cases.isPangram}}
 (deftest pangram?_test_{{idx}}
-  (testing "{{description}}"
+  (testing {{string description}}
     (is ({{#expected}}true?{{else}}false?{{/expected}} (pangram/pangram? {{string input.sentence}})))))
 {{/test_cases.isPangram~}}
