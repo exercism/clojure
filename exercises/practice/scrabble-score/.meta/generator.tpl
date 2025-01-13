@@ -3,6 +3,6 @@
             scrabble-score))
 {{#test_cases.score}}
 (deftest score-word_test_{{idx}}
-  (testing "{{description}}"
-    (is (= {{expected}} (scrabble-score/score-word "{{input.word}}")))))
+  (testing {{string description}}
+    (is (= {{expected}} (scrabble-score/score-word {{string input.word}})))))
 {{/test_cases.score~}}
