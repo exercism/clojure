@@ -677,7 +677,10 @@
         "name": "High Scores",
         "uuid": "e0e4006a-7720-4ef9-adf1-95c19b93284d",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "lists",
+          "numbers"
+        ],
         "difficulty": 2
       },
       {
