@@ -1,8 +1,8 @@
 (ns high-scores)
 
 (defn scores
-  "Return all scores"
-  [scores']
+  "Returns all scores"
+  [scores]
   ;; function body
   )
 
