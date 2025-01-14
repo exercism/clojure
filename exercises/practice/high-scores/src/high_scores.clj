@@ -13,7 +13,7 @@
   )
 
 (defn personal-best
-  "Return the top (highest) score"
+  "Returns the top (highest) score"
   [scores]
   ;; function body
   )
