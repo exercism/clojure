@@ -995,7 +995,9 @@
         "name": "Square Root",
         "uuid": "140acd81-dfa6-42ad-b2ac-bbb5917706c1",
         "practices": [],
-        "prerequisites": [],
+        "prerequisites": [
+          "numbers"
+        ],
         "difficulty": 3
       },
       {
