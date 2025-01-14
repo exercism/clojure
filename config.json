@@ -707,6 +707,17 @@
         ]
       },
       {
+        "slug": "darts",
+        "name": "Darts",
+        "uuid": "c5331fc2-54de-4ee8-b35c-d55b062d622e",
+        "practices": [],
+        "prerequisites": [
+          "numbers",
+          "conditionals"
+        ],
+        "difficulty": 2
+      },
+      {
         "slug": "atbash-cipher",
         "name": "Atbash Cipher",
         "uuid": "7d37e817-d2b7-4554-8885-b02d57d1d788",
