@@ -1194,6 +1194,17 @@
         ]
       },
       {
+        "slug": "saddle-points",
+        "name": "Saddle Points",
+        "uuid": "828481e1-9f68-4a7e-b4dc-698843985100",
+        "practices": [],
+        "prerequisites": [
+          "vectors",
+          "numbers"
+        ],
+        "difficulty": 4
+      },
+      {
         "slug": "clock",
         "name": "Clock",
         "uuid": "83b7ffc2-aadd-4c26-9794-5e7f851eea8b",

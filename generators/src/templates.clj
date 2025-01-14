@@ -10,9 +10,15 @@
 (defn format-string [s _next]
   (str "\"" (str/escape s char-escape-string) "\""))
 
-(defn format-list [coll next]
+(defn format-collection [coll next open close]
   (let [formatted-elements (str/join " " (map #(. next format %) coll))]
-    (str "'(" formatted-elements ")")))
+    (str open formatted-elements close)))
+
+(defn format-list [coll next]
+  (format-collection coll next "'(" ")"))
+
+(defn format-set [coll next]
+  (format-collection coll next "#{" "}"))
 
 (defn formatter [test conv]
   (proxy [Formatter] []
@@ -23,6 +29,7 @@
 
 (def reg
   (-> *hbs*
+      (. with (formatter set? format-set))
       (. with (formatter list? format-list))
       (. with (formatter string? format-string))
       (. with EscapingStrategy/NOOP)))
