@@ -18,7 +18,8 @@
   ;; function body
   )
 
-(defn personal-top-three [scores]
-  "Return the top three scores"
+(defn personal-top-three
+  "Returns the top three scores"
+  [scores]
   ;; function body
   )
