@@ -1,0 +1,17 @@
+{
+  "authors": [
+    "erikschierboom"
+  ],
+  "files": {
+    "solution": [
+      "src/parallel_letter_frequency.clj"
+    ],
+    "test": [
+      "test/parallel_letter_frequency_test.clj"
+    ],
+    "example": [
+      ".meta/example.clj"
+    ]
+  },
+  "blurb": "Count the frequency of letters in texts using parallel computation."
+}

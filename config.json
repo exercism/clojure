@@ -1194,6 +1194,18 @@
         ]
       },
       {
+        "slug": "parallel-letter-frequency",
+        "name": "Parallel Letter Frequency",
+        "uuid": "ed37b573-d299-42e1-90c6-b2bb63cdb310",
+        "practices": [],
+        "prerequisites": [
+          "numbers",
+          "strings",
+          "vectors"
+        ],
+        "difficulty": 5
+      },
+      {
         "slug": "sieve",
         "name": "Sieve",
         "uuid": "0e87bb30-3e7e-49dc-9f80-2d291dfb0111",
