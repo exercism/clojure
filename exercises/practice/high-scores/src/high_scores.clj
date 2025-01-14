@@ -7,7 +7,7 @@
   )
 
 (defn latest
-  "Return the latest score"
+  "Returns the latest score"
   [scores]
   ;; function body
   )
