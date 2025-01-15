@@ -27,7 +27,7 @@ jobs:
       - name: setup babashka
         uses: turtlequeue/setup-babashka@fda33428c8b62fb5bb9802ca7a2c750a6cc11b5a
         with:
-          babashka-version: 0.8.1
+          babashka-version: 1.12.196
 
       - name: babashka script
         id: bb_script
