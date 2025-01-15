@@ -1,0 +1,19 @@
+{
+  "authors": [
+    "erikschierboom"
+  ],
+  "files": {
+    "solution": [
+      "src/saddle_points.clj"
+    ],
+    "test": [
+      "test/saddle_points_test.clj"
+    ],
+    "example": [
+      ".meta/example.clj"
+    ]
+  },
+  "blurb": "Detect saddle points in a matrix.",
+  "source": "J Dalbey's Programming Practice problems",
+  "source_url": "https://users.csc.calpoly.edu/~jdalbey/103/Projects/ProgrammingPractice.html"
+}
