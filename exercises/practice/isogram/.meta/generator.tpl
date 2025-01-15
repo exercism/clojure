@@ -3,6 +3,6 @@
             isogram))
 {{#test_cases.isIsogram}}
 (deftest isogram?_test_{{idx}}
-  (testing {{string description}}
-    (is ({{#expected~}}true?{{else}}false?{{/expected}} (isogram/isogram? {{string input.phrase}})))))
+  (testing {{description}}
+    (is ({{#expected~}}true?{{else}}false?{{/expected}} (isogram/isogram? {{input.phrase}})))))
 {{/test_cases.isIsogram~}}

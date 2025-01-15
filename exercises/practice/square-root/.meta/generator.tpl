@@ -3,6 +3,6 @@
             square-root))
 {{#test_cases.squareRoot}}
 (deftest square-root_test_{{idx}}
-  (testing "{{description}}"
+  (testing {{description}}
     (is (= {{expected}} (square-root/square-root {{input.radicand}})))))
 {{/test_cases.squareRoot~}}
