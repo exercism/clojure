@@ -8,4 +8,3 @@ This appendix provides additional clarification or modifies the instructions as 
 ~~~~
 
 For this exercise in the Clojure track, you may **assume the input is a vector**, as indicated by the tests.
-However, this is not a strict requirement.
