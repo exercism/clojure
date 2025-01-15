@@ -702,6 +702,17 @@
         ]
       },
       {
+        "slug": "resistor-color",
+        "name": "Resistor Color",
+        "uuid": "a5db6df9-88e3-4188-a45e-f25ad6565083",
+        "practices": [],
+        "prerequisites": [
+          "strings",
+          "vectors"
+        ],
+        "difficulty": 2
+      },
+      {
         "slug": "word-count",
         "name": "Word Count",
         "uuid": "ea3cf3f6-35de-4da1-a74f-b7a13d89c39a",
