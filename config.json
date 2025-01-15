@@ -1396,6 +1396,16 @@
         ]
       },
       {
+        "slug": "zebra-puzzle",
+        "name": "Zebra Puzzle",
+        "uuid": "26bfa6b6-3c97-4e6d-9f8d-ef240181cbd8",
+        "practices": [],
+        "prerequisites": [
+          "conditionals"
+        ],
+        "difficulty": 8
+      },
+      {
         "slug": "go-counting",
         "name": "Go Counting",
         "uuid": "f0210181-7fe5-49f9-9036-be4256612b3e",
