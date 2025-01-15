@@ -696,7 +696,6 @@
         "uuid": "a5db6df9-88e3-4188-a45e-f25ad6565083",
         "practices": [],
         "prerequisites": [
-          "numbers",
           "strings",
           "vectors"
         ],
