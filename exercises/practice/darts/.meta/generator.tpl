@@ -3,6 +3,6 @@
             darts))
 {{#test_cases.score}}
 (deftest score_test_{{idx}}
-  (testing {{string description}}
+  (testing {{description}}
     (is (= {{expected}} (darts/score {{input.x}} {{input.y}})))))
 {{/test_cases.score~}}
