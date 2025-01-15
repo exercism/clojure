@@ -45,14 +45,24 @@
              :error (get-in node [:expected :error]))
       (dissoc :reimplements :comments :scenarios)))
 
+(defn- transform-all-test-cases [generator-ns test-cases]
+  (if-let [transform-fn (ns-resolve generator-ns (symbol "transform"))]
+    (transform-fn test-cases)
+    test-cases))
+
+(defn- transform-individual-test-cases [generator-ns test-cases]
+  (if-let [transform-test-case-fn (ns-resolve generator-ns (symbol "transform-test-case"))]
+    (mapv transform-test-case-fn test-cases)
+    test-cases))
+
 (defn- transform [slug test-cases]
   (let [transform-file (paths/generator-clojure-file slug)]
     (if (.exists transform-file)
       (let [generator-ns (symbol (str slug "-generator"))]
         (load-file (str transform-file))
-        (if-let [transform-fn (ns-resolve generator-ns (symbol "transform"))]
-          (transform-fn test-cases)
-          test-cases))
+        (->> test-cases
+             (transform-all-test-cases generator-ns)
+             (transform-individual-test-cases generator-ns)))
       test-cases)))
 
 (defn- test-cases->data [slug test-cases]

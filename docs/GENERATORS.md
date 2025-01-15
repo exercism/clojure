@@ -31,22 +31,50 @@ The test generator will remove any test cases that are marked as excluded (`incl
 Some exercises might need some tweaks before rendering the data.
 For example, you might want to make the description less verbose.
 
-To tweak the test cases, define a `.meta/generator.clj` file with a `<slug>-generator` namespace .
-Then, define a function called `transform` that takes a single argument — the parsed test cases — and returns the transformed test cases.
+To tweak test cases, define a `.meta/generator.clj` file with a `<slug>-generator` namespace.
+There are two ways in which you can transform test cases:
 
-Example:
+- Update test case(s)
+- Add/remove test case(s)
+
+#### Update test case(s)
+
+To update individual test cases, define the following function:
+
+```clojure
+(defn- transform-test-case
+  "Update a test case"
+  [test-case]
+  ;; function body
+)
+```
+
+##### Example
+
+This example removes all but the last element of the `:path` value (shortening the description):
 
 ```clojure
 (ns difference-of-squares-generator)
 
-(defn- update-path [path]
-  (take-last 1 path))
-
-(defn transform [test-cases]
-  (map #(update % :path update-path) test-cases))
+(defn- transform-test-case [test-case]
+  (update test-case :path #(take-last 1 %)))
 ```
 
-This step is entirely optional.
+#### Add or remove test case(s)
+
+To update individual test cases, define the following function:
+
+```clojure
+(defn- transform-test-cases
+  "Add/remove test case(s)"
+  [test-cases]
+  ;; function body
+)
+```
+
+```exercism/note
+If you define _both_ functions, `transform-test-cases` is called first and `transform-test-case` second.
+```
 
 ### Step 4: render the test cases
 
