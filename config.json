@@ -1142,6 +1142,17 @@
         ]
       },
       {
+        "slug": "matrix",
+        "name": "Matrix",
+        "uuid": "24ff1abf-c242-4054-ada4-19d6fd4f8c3c",
+        "practices": [],
+        "prerequisites": [
+          "strings",
+          "vectors"
+        ],
+        "difficulty": 4
+      },
+      {
         "slug": "meetup",
         "name": "Meetup",
         "uuid": "81e37fc7-13cd-46a9-987c-c9bda4ff1ead",
