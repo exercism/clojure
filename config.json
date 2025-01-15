@@ -1178,6 +1178,17 @@
         ]
       },
       {
+        "slug": "simple-cipher",
+        "name": "Simple Cipher",
+        "uuid": "ce982624-94ac-4bcd-8946-0a20f99545d7",
+        "practices": [],
+        "prerequisites": [
+          "conditionals",
+          "strings"
+        ],
+        "difficulty": 4
+      },
+      {
         "slug": "octal",
         "name": "Octal",
         "uuid": "fa596153-0cbe-40e9-a4d6-1a66fe6ef7e5",
