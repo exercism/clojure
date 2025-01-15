@@ -1,28 +1,37 @@
 (ns templates
   (:require [hbs.core :refer [*hbs* render]]
-            [hbs.helper :refer [defhelper register-helper! safe-str block-body else-body]]
+            [hbs.helper :refer [defhelper register-helper! block-body else-body]]
             [hbs.ext :refer :all :exclude [hash]]
             [clojure.string :as str]
             [log]
             [paths])
-  (:import [com.github.jknack.handlebars EscapingStrategy]))
+  (:import [com.github.jknack.handlebars Formatter EscapingStrategy]))
 
-(defhelper list-helper [ctx options]
-  (let [s (seq ctx)]
-    (safe-str (str "'" (if (empty? s) "()" s)))))
+(defn format-string [s _next]
+  (str "\"" (str/escape s char-escape-string) "\""))
 
-(defhelper string-helper [ctx options]
-  (safe-str (str "\"" (str/escape ctx char-escape-string) "\"")))
+(defn format-list [coll next]
+  (let [formatted-elements (str/join " " (map #(. next format %) coll))]
+    (str "'(" formatted-elements ")")))
+
+(defn formatter [test conv]
+  (proxy [Formatter] []
+    (format [value next]
+      (if (test value)
+        (conv value next)
+        (. next format value)))))
+
+(def reg
+  (-> *hbs*
+      (. with (formatter list? format-list))
+      (. with (formatter string? format-string))
+      (. with EscapingStrategy/NOOP)))
 
 (defhelper ifzero [ctx options]
   (if (zero? ctx)
     (block-body options ctx)
     (else-body options ctx)))
 
-(def reg (. *hbs* with EscapingStrategy/NOOP))
-
-(register-helper! reg "list" list-helper)
-(register-helper! reg "string" string-helper)
 (register-helper! reg "ifequals" ifequals)
 (register-helper! reg "ifgreater" ifgreater)
 (register-helper! reg "ifless" ifless)
