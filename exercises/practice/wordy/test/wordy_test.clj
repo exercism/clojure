@@ -64,33 +64,33 @@
     
 (deftest evaluate_test_16
   (testing "unknown operation"
-    (is (thrown-with-msg? IllegalArgumentException #"unknown operation" (wordy/evaluate "What is 52 cubed?")))))
+    (is (thrown-with-msg? IllegalArgumentException #"^unknown operation$" (wordy/evaluate "What is 52 cubed?")))))
     
 (deftest evaluate_test_17
   (testing "Non math question"
-    (is (thrown-with-msg? IllegalArgumentException #"syntax error" (wordy/evaluate "Who is the President of the United States?")))))
+    (is (thrown-with-msg? IllegalArgumentException #"^syntax error$" (wordy/evaluate "Who is the President of the United States?")))))
     
 (deftest evaluate_test_18
   (testing "reject problem missing an operand"
-    (is (thrown-with-msg? IllegalArgumentException #"syntax error" (wordy/evaluate "What is 1 plus?")))))
+    (is (thrown-with-msg? IllegalArgumentException #"^syntax error$" (wordy/evaluate "What is 1 plus?")))))
     
 (deftest evaluate_test_19
   (testing "reject problem with no operands or operators"
-    (is (thrown-with-msg? IllegalArgumentException #"syntax error" (wordy/evaluate "What is?")))))
+    (is (thrown-with-msg? IllegalArgumentException #"^syntax error$" (wordy/evaluate "What is?")))))
     
 (deftest evaluate_test_20
   (testing "reject two operations in a row"
-    (is (thrown-with-msg? IllegalArgumentException #"syntax error" (wordy/evaluate "What is 1 plus plus 2?")))))
+    (is (thrown-with-msg? IllegalArgumentException #"^syntax error$" (wordy/evaluate "What is 1 plus plus 2?")))))
     
 (deftest evaluate_test_21
   (testing "reject two numbers in a row"
-    (is (thrown-with-msg? IllegalArgumentException #"syntax error" (wordy/evaluate "What is 1 plus 2 1?")))))
+    (is (thrown-with-msg? IllegalArgumentException #"^syntax error$" (wordy/evaluate "What is 1 plus 2 1?")))))
     
 (deftest evaluate_test_22
   (testing "reject postfix notation"
-    (is (thrown-with-msg? IllegalArgumentException #"syntax error" (wordy/evaluate "What is 1 2 plus?")))))
+    (is (thrown-with-msg? IllegalArgumentException #"^syntax error$" (wordy/evaluate "What is 1 2 plus?")))))
     
 (deftest evaluate_test_23
   (testing "reject prefix notation"
-    (is (thrown-with-msg? IllegalArgumentException #"syntax error" (wordy/evaluate "What is plus 1 2?")))))
+    (is (thrown-with-msg? IllegalArgumentException #"^syntax error$" (wordy/evaluate "What is plus 1 2?")))))
     

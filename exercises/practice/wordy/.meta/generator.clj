@@ -1,6 +1,11 @@
 (ns wordy-generator)
 
-(defn transform-test-case [test-case]
+(defn normalize-error [test-case error]
   (if (= "Non math question" (:description test-case))
-    (assoc-in test-case [:expected :error] "syntax error")
+    "^syntax error$"
+    (str "^" error "$")))
+
+(defn transform-test-case [test-case]
+  (if-let [error (get-in test-case [:expected :error])]
+    (assoc-in test-case [:expected :error] (normalize-error test-case error))
     test-case))
