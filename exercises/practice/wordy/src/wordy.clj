@@ -1,7 +1,7 @@
 (ns wordy)
 
 (defn evaluate
-  "Evaluate a simple math problem"
+  "Evaluates a simple math problem"
   [question]
   ;; function body
   )
