@@ -3,4 +3,4 @@
             [clojure.string :as str]))
 
 (defn transform-test-case [test-case]
-  (update test-case :expected #(safe-str (str/lower-case (str ":" %)))))
+  (update test-case :expected #(safe-str (str/lower-case (keyword %)))))
