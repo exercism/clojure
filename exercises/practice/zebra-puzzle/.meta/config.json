@@ -1,0 +1,19 @@
+{
+  "authors": [
+    "erikschierboom"
+  ],
+  "files": {
+    "solution": [
+      "src/zebra_puzzle.clj"
+    ],
+    "test": [
+      "test/zebra_puzzle_test.clj"
+    ],
+    "example": [
+      ".meta/example.clj"
+    ]
+  },
+  "blurb": "Solve the zebra puzzle.",
+  "source": "Wikipedia",
+  "source_url": "https://en.wikipedia.org/wiki/Zebra_Puzzle"
+}
