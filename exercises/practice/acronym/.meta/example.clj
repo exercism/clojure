@@ -1,8 +1,7 @@
-(ns acronym
-  (:require [clojure.string :as str]))
+(ns acronym)
 
 (defn acronym [text]
-  (->> (re-seq #"[A-Z]+[a-z]*|[a-z]+" text)
+  (->> (re-seq #"(?<=^|[-_ ])[A-Za-z]" text)
        (map first)
        (apply str)
-       str/upper-case))
+       clojure.string/upper-case))
