@@ -11,13 +11,22 @@
 
 (defn- parse-op [op-str]
   (or (ops op-str)
-      (throw (IllegalArgumentException. (str "unknown operator " op-str)))))
+      (if (every? Character/isDigit op-str)
+        (throw (IllegalArgumentException. "syntax error"))
+        (throw (IllegalArgumentException. "unknown operation")))))
+
+(defn- parse-operand [operand-str]
+  (try
+    (Integer/parseInt operand-str)
+    (catch java.lang.NumberFormatException _ (throw (IllegalArgumentException. "syntax error")))))
 
 (defn evaluate [expr]
-  (if-let [[_ exprs] (re-matches #"What is (.+)\?" expr)]
-    (if-let [[token & tokens] (re-seq tokens-pattern exprs)]
-      (reduce (fn [acc [op x]]
-                ((parse-op op) acc (Integer/parseInt x)))
-              (Integer/parseInt token) (partition-all 2 tokens))
-      (throw (IllegalArgumentException. "no arithmetic expression found")))
-    (throw (IllegalArgumentException. "cannot recognize question"))))
+  (if-let [[_ exprs] (re-matches #"What is(.*)\?" expr)]
+    (if (empty? exprs)
+      (throw (IllegalArgumentException. "syntax error"))
+      (if-let [[token & tokens] (re-seq tokens-pattern exprs)]
+        (reduce (fn [acc [op x]]
+                  ((parse-op op) acc (parse-operand x)))
+                (parse-operand token) (partition-all 2 tokens))
+        (throw (IllegalArgumentException. "unknown operation"))))
+    (throw (IllegalArgumentException. "syntax error"))))
