@@ -1,6 +1,6 @@
 (ns resistor-color-duo)
 
-(defn value
+(defn resistor-value
   "Returns the resistor value based on the given colors"
   [colors]
   ;; function body
