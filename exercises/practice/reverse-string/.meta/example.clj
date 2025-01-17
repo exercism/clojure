@@ -2,4 +2,4 @@
 
 (defn reverse-string
   [s]
-  (into () s))
+  (apply str (into () s)))
