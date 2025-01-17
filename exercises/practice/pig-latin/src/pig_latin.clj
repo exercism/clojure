@@ -1,5 +1,7 @@
 (ns pig-latin)
 
-(defn translate [] ;; <- arglist goes here
-      ;; your code goes here
-)
+(defn translate
+  "Translates phrase from English to Pig Latin"
+  [phrase]
+  ;; function body
+  )
