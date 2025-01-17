@@ -1,0 +1,19 @@
+{
+  "authors": [
+    "erikschierboom"
+  ],
+  "files": {
+    "solution": [
+      "src/twelve_days.clj"
+    ],
+    "test": [
+      "test/twelve_days_test.clj"
+    ],
+    "example": [
+      ".meta/example.clj"
+    ]
+  },
+  "blurb": "Output the lyrics to 'The Twelve Days of Christmas'.",
+  "source": "Wikipedia",
+  "source_url": "https://en.wikipedia.org/wiki/The_Twelve_Days_of_Christmas_(song)"
+}

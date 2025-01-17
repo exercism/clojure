@@ -1179,6 +1179,18 @@
         ]
       },
       {
+        "slug": "twelve-days",
+        "name": "Twelve Days",
+        "uuid": "dc3b4248-6e77-46ec-b182-52d1727b3071",
+        "practices": [],
+        "prerequisites": [
+          "strings",
+          "conditionals",
+          "vectors"
+        ],
+        "difficulty": 4
+      },
+      {
         "slug": "spiral-matrix",
         "name": "Spiral Matrix",
         "uuid": "71d92de0-9f54-4e07-9a8f-fcd477f00219",
