@@ -5,7 +5,7 @@
     "^syntax error$"
     (str "^" error "$")))
 
-(defn transform-test-case [test-case]
+(defn update-test-case [test-case]
   (if-let [error (get-in test-case [:expected :error])]
     (assoc-in test-case [:expected :error] (normalize-error test-case error))
     test-case))

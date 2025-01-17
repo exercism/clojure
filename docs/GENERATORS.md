@@ -7,7 +7,7 @@ It uses the fact that most exercises defined in the [problem-specifications repo
 
 To generate a practice exercise's tests, the test generator:
 
-1. Reads the exercise's test cases from its [`canonical-data.json` file]
+1. Reads the exercise's test cases from its `canonical-data.json` file
 2. Uses `tests.toml` file to omit and excluded test cases
 3. Transforms the test cases (optional)
 4. Renders the test cases using the exercise's generator template
@@ -42,7 +42,7 @@ There are two ways in which you can transform test cases:
 To update individual test cases, define the following function:
 
 ```clojure
-(defn- transform-test-case
+(defn update-test-case
   "Update a test case"
   [test-case]
   ;; function body
@@ -56,16 +56,16 @@ This example removes all but the last element of the `:path` value (shortening t
 ```clojure
 (ns difference-of-squares-generator)
 
-(defn- transform-test-case [test-case]
+(defn update-test-case [test-case]
   (update test-case :path #(take-last 1 %)))
 ```
 
 #### Add or remove test case(s)
 
-To update individual test cases, define the following function:
+To add or remove test cases, define the following function:
 
 ```clojure
-(defn- transform-test-cases
+(defn add-remove-test-cases
   "Add/remove test case(s)"
   [test-cases]
   ;; function body
@@ -73,7 +73,7 @@ To update individual test cases, define the following function:
 ```
 
 ```exercism/note
-If you define _both_ functions, `transform-test-cases` is called first and `transform-test-case` second.
+If you define _both_ functions, `add-remove-test-cases` is called first and `update-test-case` second.
 ```
 
 ### Step 4: render the test cases
