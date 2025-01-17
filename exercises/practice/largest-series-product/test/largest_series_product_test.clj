@@ -40,17 +40,17 @@
     
 (deftest largest-product_test_10
   (testing "rejects span longer than string length"
-    (is (thrown-with-msg? IllegalArgumentException #"span must be smaller than string length" (largest-series-product/largest-product 4 "123")))))
+    (is (thrown-with-msg? IllegalArgumentException #"^span must be smaller than string length$" (largest-series-product/largest-product 4 "123")))))
     
 (deftest largest-product_test_11
   (testing "rejects empty string and nonzero span"
-    (is (thrown-with-msg? IllegalArgumentException #"span must be smaller than string length" (largest-series-product/largest-product 1 "")))))
+    (is (thrown-with-msg? IllegalArgumentException #"^span must be smaller than string length$" (largest-series-product/largest-product 1 "")))))
     
 (deftest largest-product_test_12
   (testing "rejects invalid character in digits"
-    (is (thrown-with-msg? IllegalArgumentException #"digits input must only contain digits" (largest-series-product/largest-product 2 "1234a5")))))
+    (is (thrown-with-msg? IllegalArgumentException #"^digits input must only contain digits$" (largest-series-product/largest-product 2 "1234a5")))))
     
 (deftest largest-product_test_13
   (testing "rejects negative span"
-    (is (thrown-with-msg? IllegalArgumentException #"span must not be negative" (largest-series-product/largest-product -1 "12345")))))
+    (is (thrown-with-msg? IllegalArgumentException #"^span must not be negative$" (largest-series-product/largest-product -1 "12345")))))
     
