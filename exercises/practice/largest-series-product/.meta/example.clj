@@ -1,15 +1,21 @@
 (ns largest-series-product)
 
-(defn- char->digit [c]
-  {:pre [(Character/isDigit c)]}
-  (Character/digit c 10))
-
-(defn- digits [ds] (map char->digit ds))
-
-(defn- slices [n ds] (partition n 1 (digits ds)))
-
-(defn largest-product [size ds]
+(defn check-input
+  [n digits]
   (cond
-    (zero? size)        1
-    (> size (count ds)) (throw (Exception. "Span must not exceed length."))
-    :else               (apply max (map (partial apply *) (slices size ds)))))
+    (neg? n) (throw (IllegalArgumentException. "span must not be negative"))
+    (or (> n (count digits)) (and (pos? n) (empty? digits))) (throw (IllegalArgumentException. "span must be smaller than string length"))
+    (and (pos? n) (empty? digits)) (throw (IllegalArgumentException. "span must be smaller than string length"))
+    (not-every? #(<= 0 % 9) digits) (throw (IllegalArgumentException. "digits input must only contain digits"))
+    :else false))
+
+(defn largest-product
+  [n s]
+  (let [digits (map #(Character/digit ^char % 10) s)]
+    (or (check-input n digits)
+        (if (zero? n)
+          1
+          (->> digits
+               (partition n 1)
+               (map #(reduce * %))
+               (apply max))))))
