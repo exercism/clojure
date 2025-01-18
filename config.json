@@ -1229,6 +1229,18 @@
         ]
       },
       {
+        "slug": "state-of-tic-tac-toe",
+        "name": "State of Tic-Tac-Toe",
+        "uuid": "8a3e9f5d-9145-456c-b573-8c9e32297213",
+        "practices": [],
+        "prerequisites": [
+          "strings",
+          "conditionals",
+          "vectors"
+        ],
+        "difficulty": 5
+      },
+      {
         "slug": "saddle-points",
         "name": "Saddle Points",
         "uuid": "828481e1-9f68-4a7e-b4dc-698843985100",
