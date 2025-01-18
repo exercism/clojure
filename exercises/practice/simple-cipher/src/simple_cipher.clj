@@ -13,7 +13,7 @@
   )
 
 (defn decode
-  "Decode text using the specified key"
+  "Decodes text using the specified key"
   [key ciphertext]
   ;; function body
   )
