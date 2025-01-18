@@ -1,6 +1,6 @@
 (ns yacht-test
   (:require [clojure.test :refer [deftest testing is]]
-             yacht))
+            yacht))
 
 (deftest score_test_1
   (testing "Yacht"
