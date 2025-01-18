@@ -818,8 +818,9 @@
         "uuid": "7945eb6a-20eb-489d-90bd-020df3d9e2cb",
         "practices": [],
         "prerequisites": [
+          "conditionals",
           "numbers",
-          "vectors"
+          "lists"
         ],
         "difficulty": 3,
         "topics": [
