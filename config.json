@@ -1008,6 +1008,17 @@
         ]
       },
       {
+        "slug": "resistor-color-duo",
+        "name": "Resistor Color Duo",
+        "uuid": "6d127442-d181-4654-8aec-36d42f09a949",
+        "practices": [],
+        "prerequisites": [
+          "vectors",
+          "numbers"
+        ],
+        "difficulty": 3
+      },
+      {
         "slug": "proverb",
         "name": "Proverb",
         "uuid": "540d93a9-707f-4043-b46c-1dc83f2d50d8",
