@@ -1254,6 +1254,18 @@
         ]
       },
       {
+        "slug": "food-chain",
+        "name": "Food Chain",
+        "uuid": "188f12ad-e6ed-40d4-b515-d2b4d49cbb69",
+        "practices": [],
+        "prerequisites": [
+          "strings",
+          "conditionals",
+          "vectors"
+        ],
+        "difficulty": 5
+      },
+      {
         "slug": "list-ops",
         "name": "List Ops",
         "uuid": "699fb4ec-210d-454d-a41a-f7014abf8423",
