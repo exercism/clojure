@@ -2,7 +2,7 @@
   (:require [clojure.test :refer [deftest testing is]]
             simple-cipher))
 {{#test_cases.key}}
-(deftest key_test_{{idx}}
+(deftest rand-key_test_{{idx}}
   (testing {{description}}
     (is (true? (boolean (re-matches #{{expected.match}} (simple-cipher/rand-key)))))))
 {{/test_cases.key~}}
