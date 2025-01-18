@@ -7,7 +7,7 @@
   )
 
 (defn encode
-  "Encode text using the specified key"
+  "Encodes text using the specified key"
   [key plaintext]
   ;; function body
   )
