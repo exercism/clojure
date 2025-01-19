@@ -88,9 +88,14 @@
         data (update-vals grouped #(map-indexed test-case->data %))]
     {:test_cases data}))
 
+(defn template [slug]
+  (->> slug
+       (paths/generator-template-file)
+       (slurp)
+       (str/trim-newline)))
+
 (defn generate-test-files [slug test-cases]
-  (let [template (slurp (paths/generator-template-file slug))
-        data (test-cases->data slug test-cases)]
-    (->> (render reg template data)
-         (formatting/format-code)
-         (spit (paths/tests-file slug)))))
+  (->> (test-cases->data slug test-cases)
+       (render reg (template slug))
+       (formatting/format-code)
+       (spit (paths/tests-file slug))))
