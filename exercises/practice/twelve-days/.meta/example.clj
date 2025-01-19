@@ -38,4 +38,4 @@
   (str "On the " (nth days (dec n)) " day of Christmas my true love gave to me: " (line-gifts n) "."))
 
 (defn recite [start-verse end-verse]
-  (map line (range start-verse (inc end-verse))))
+  (str/join "\n" (map line (range start-verse (inc end-verse)))))
