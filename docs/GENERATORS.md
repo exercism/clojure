@@ -11,7 +11,8 @@ To generate a practice exercise's tests, the test generator:
 2. Uses `tests.toml` file to omit and excluded test cases
 3. Transforms the test cases (optional)
 4. Renders the test cases using the exercise's generator template
-5. Writes the rendered template to the exercise's test file
+5. Format the rendered template using [cljfmt](https://github.com/weavejester/cljfmt)
+6. Writes the formatted template to the exercise's test file
 
 ### Step 1: read `canonical-data.json` file
 
@@ -80,7 +81,15 @@ If you define _both_ functions, `add-remove-test-cases` is called first and `upd
 
 The (potentially transformed) test cases are then passed to the `.meta/generator.tpl` file, which defines how the tests should be rendered based on those test cases.
 
-### Step 5: write the rendered template to the exercise's test file
+### Step 5: format the rendered template using cljfmt
+
+The rendered template is then formatted using [cljfmt](https://github.com/weavejester/cljfmt).
+This has the following benefits:
+
+- Exercises are formatted consistently
+- You're not required to worry much about whitespace and alignment when writing templates
+
+### Step 6: write the rendered template to the exercise's test file
 
 Finally, the output of the rendered template is written to the exercise's test file.
 
