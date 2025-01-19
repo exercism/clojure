@@ -6,33 +6,13 @@
             [log]
             [paths]
             [formatting])
-  (:import [com.github.jknack.handlebars Formatter EscapingStrategy]))
-
-(defn format-string [s _next]
-  (str "\"" (str/escape s char-escape-string) "\""))
-
-(defn format-collection [coll next open close]
-  (let [formatted-elements (str/join " " (map #(. next format %) coll))]
-    (str open formatted-elements close)))
-
-(defn format-list [coll next]
-  (format-collection coll next "'(" ")"))
-
-(defn format-set [coll next]
-  (format-collection coll next "#{" "}"))
-
-(defn formatter [test conv]
-  (proxy [Formatter] []
-    (format [value next]
-      (if (test value)
-        (conv value next)
-        (. next format value)))))
+  (:import [com.github.jknack.handlebars EscapingStrategy]))
 
 (def reg
   (-> *hbs*
-      (. with (formatter set? format-set))
-      (. with (formatter list? format-list))
-      (. with (formatter string? format-string))
+      (. with (formatting/formatter set? formatting/format-set))
+      (. with (formatting/formatter list? formatting/format-list))
+      (. with (formatting/formatter string? formatting/format-string))
       (. with EscapingStrategy/NOOP)))
 
 (defhelper ifzero [ctx options]
