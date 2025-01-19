@@ -49,7 +49,8 @@
     
 (deftest issue_test_10
   (testing "no coins make 0 change"
-    (is (= () (change/issue 0 #{1 5 10 21 25})))))
+    (is (= '()
+           (change/issue 0 #{1 5 10 21 25})))))
     
 (deftest issue_test_11
   (testing "error testing for change smaller than the smallest of coins"
