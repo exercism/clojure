@@ -4,7 +4,8 @@
             [hbs.ext :refer :all :exclude [hash]]
             [clojure.string :as str]
             [log]
-            [paths])
+            [paths]
+            [formatting])
   (:import [com.github.jknack.handlebars Formatter EscapingStrategy]))
 
 (defn format-string [s _next]
@@ -91,4 +92,5 @@
   (let [template (slurp (paths/generator-template-file slug))
         data (test-cases->data slug test-cases)]
     (->> (render reg template data)
+         (formatting/format-code)
          (spit (paths/tests-file slug)))))
