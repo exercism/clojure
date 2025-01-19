@@ -1,6 +1,7 @@
 (ns change-test
   (:require [clojure.test :refer [deftest testing is]]
             change))
+
 {{#test_cases.findFewestCoins}}
 (deftest issue_test_{{idx}}
   (testing {{description}}
@@ -11,4 +12,4 @@
     (is (= {{expected}}
            (change/issue {{input.target}} {{input.coins}})))))
     {{/if~}}
-{{/test_cases.findFewestCoins~}}
+{{/test_cases.findFewestCoins}}

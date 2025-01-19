@@ -1,6 +1,7 @@
 (ns wordy-test
   (:require [clojure.test :refer [deftest testing is]]
             wordy))
+
 {{#test_cases.answer}}
 (deftest evaluate_test_{{idx}}
   (testing {{description}}
@@ -9,4 +10,4 @@
     {{else}}
     (is (= {{expected}} (wordy/evaluate {{input.question}})))))
     {{/if~}}
-{{/test_cases.answer~}}
+{{/test_cases.answer}}

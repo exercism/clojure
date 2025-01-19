@@ -1,6 +1,7 @@
 (ns largest-series-product-test
   (:require [clojure.test :refer [deftest testing is]]
             largest-series-product))
+
 {{#test_cases.largestProduct}}
 (deftest largest-product_test_{{idx}}
   (testing {{description}}
@@ -9,4 +10,4 @@
     {{else}}
     (is (= {{expected}} (largest-series-product/largest-product {{input.span}} {{input.digits}})))))
     {{/if~}}
-{{/test_cases.largestProduct~}}
+{{/test_cases.largestProduct}}
