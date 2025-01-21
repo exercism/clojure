@@ -3,7 +3,7 @@
             dnd-character))
 
 {{#test_cases.modifier}}
-(deftest modifier_test_{{idx}}
+(deftest score-modifier_test_{{idx}}
   (testing {{description}}
     (is (= {{expected}} (dnd-character/score-modifier {{input.score}})))))
 {{/test_cases.modifier}}
