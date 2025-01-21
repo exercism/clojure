@@ -8,7 +8,7 @@
     (is (= {{expected}} (dnd-character/score-modifier {{input.score}})))))
 {{/test_cases.modifier}}
 
-(deftest ability_test_1
+(deftest rand-ability_test_1
   (testing "random ability is within range"
     (is (<= 3 (dnd-character/rand-ability) 18))))
 
