@@ -13,7 +13,7 @@
   )
 
 (defn rand-character
-  "Generate a random character"
+  "Generates a random character"
   []
   ;; function body
   )
