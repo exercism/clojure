@@ -1319,6 +1319,18 @@
         "difficulty": 6
       },
       {
+        "slug": "killer-sudoku-helper",
+        "name": "Killer Sudoku Helper",
+        "uuid": "c8b4c5e9-6567-48fe-b01a-462cbbf84805",
+        "practices": [],
+        "prerequisites": [
+          "numbers",
+          "conditionals",
+          "vectors"
+        ],
+        "difficulty": 6
+      },
+      {
         "slug": "robot-simulator",
         "name": "Robot Simulator",
         "uuid": "e69ecf2e-8629-4d20-a90f-6de7536247ce",
