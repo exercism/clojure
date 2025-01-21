@@ -1,39 +1,43 @@
 (ns hamming-test
-  (:require [clojure.test :refer [deftest is testing]]
+  (:require [clojure.test :refer [deftest testing is]]
             hamming))
 
-(deftest empty-strands
-  (testing "Empty strands"
+(deftest distance_test_1
+  (testing "empty strands"
     (is (= 0 (hamming/distance "" "")))))
 
-(deftest single-letter-identical-strands
-  (testing "Single letter identical strands"
+(deftest distance_test_2
+  (testing "single letter identical strands"
     (is (= 0 (hamming/distance "A" "A")))))
 
-(deftest single-letter-different-strands
-  (testing "Single letter different strands"
+(deftest distance_test_3
+  (testing "single letter different strands"
     (is (= 1 (hamming/distance "G" "T")))))
 
-(deftest long-identical-strands
-  (testing "Long identical strands"
+(deftest distance_test_4
+  (testing "long identical strands"
     (is (= 0 (hamming/distance "GGACTGAAATCTG" "GGACTGAAATCTG")))))
 
-(deftest long-different-strands
-  (testing "Long different strands"
+(deftest distance_test_5
+  (testing "long different strands"
     (is (= 9 (hamming/distance "GGACGGATTCTG" "AGGACGGATTCT")))))
 
-(deftest disallow-first-strand-longer
-  (testing "Disallow first strand longer"
-    (is (= nil (hamming/distance "AATG" "AAA")))))
+(deftest distance_test_6
+  (testing "disallow first strand longer"
+    (is (thrown-with-msg? IllegalArgumentException #"^strands must be of equal length$"
+                          (hamming/distance "AATG" "AAA")))))
 
-(deftest disallow-second-strand-longer
-  (testing "Disallow second strand longer"
-    (is (= nil (hamming/distance "ATA" "AGTG")))))
+(deftest distance_test_7
+  (testing "disallow second strand longer"
+    (is (thrown-with-msg? IllegalArgumentException #"^strands must be of equal length$"
+                          (hamming/distance "ATA" "AGTG")))))
 
-(deftest disallow-empty-first-strand
-  (testing "Disallow empty first strand"
-    (is (= nil (hamming/distance "" "G")))))
+(deftest distance_test_8
+  (testing "disallow empty first strand"
+    (is (thrown-with-msg? IllegalArgumentException #"^strands must be of equal length$"
+                          (hamming/distance "" "G")))))
 
-(deftest disallow-empty-second-strand
-  (testing "Disallow empty second strand"
-    (is (= nil (hamming/distance "G" "")))))
+(deftest distance_test_9
+  (testing "disallow empty second strand"
+    (is (thrown-with-msg? IllegalArgumentException #"^strands must be of equal length$"
+                          (hamming/distance "G" "")))))
