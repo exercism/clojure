@@ -1384,6 +1384,17 @@
         "difficulty": 5
       },
       {
+        "slug": "game-of-life",
+        "name": "Conway's Game of Life",
+        "uuid": "136eef87-a87b-4f3e-b587-6f45b4e96d6e",
+        "practices": [],
+        "prerequisites": [
+          "vectors",
+          "numbers"
+        ],
+        "difficulty": 5
+      },
+      {
         "slug": "wordy",
         "name": "Wordy",
         "uuid": "5528f567-2b5b-498a-b166-984b2c90f6a5",
