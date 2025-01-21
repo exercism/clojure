@@ -2,26 +2,26 @@
   (:require [clojure.test :refer [deftest testing is]]
             rna-transcription))
 
-(deftest empty-sequence
+(deftest to-rna_test_1
   (testing "Empty RNA sequence"
     (is (= "" (rna-transcription/to-rna "")))))
 
-(deftest rna-complement-of-cytosine
+(deftest to-rna_test_2
   (testing "RNA complement of cytosine is guanine"
     (is (= "G" (rna-transcription/to-rna "C")))))
 
-(deftest rna-complement-of-guanine
+(deftest to-rna_test_3
   (testing "RNA complement of guanine is cytosine"
     (is (= "C" (rna-transcription/to-rna "G")))))
 
-(deftest rna-complement-of-thymine
+(deftest to-rna_test_4
   (testing "RNA complement of thymine is adenine"
     (is (= "A" (rna-transcription/to-rna "T")))))
 
-(deftest rna-complement-of-adenine
+(deftest to-rna_test_5
   (testing "RNA complement of adenine is uracil"
     (is (= "U" (rna-transcription/to-rna "A")))))
 
-(deftest rna-complement
+(deftest to-rna_test_6
   (testing "RNA complement"
     (is (= "UGCACCAGAAUU" (rna-transcription/to-rna "ACGTGGTCTTAA")))))
