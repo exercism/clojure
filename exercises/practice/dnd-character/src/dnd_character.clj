@@ -1,7 +1,7 @@
 (ns dnd-character)
 
 (defn score-modifier
-  "Calculate a score's modifier"
+  "Calculates a score's modifier"
   [score]
   ;; function body
   )
