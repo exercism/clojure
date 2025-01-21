@@ -7,7 +7,7 @@
   )
 
 (defn rand-ability
-  "Generate a random ability"
+  "Generates a random ability"
   []
   ;; function body
   )
