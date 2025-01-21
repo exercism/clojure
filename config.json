@@ -1291,6 +1291,18 @@
         ]
       },
       {
+        "slug": "knapsack",
+        "name": "Knapsack",
+        "uuid": "f1827715-0e86-42f2-b07d-4d70e8c2e043",
+        "practices": [],
+        "prerequisites": [
+          "numbers",
+          "vectors",
+          "conditionals"
+        ],
+        "difficulty": 5
+      },
+      {
         "slug": "luhn",
         "name": "Luhn",
         "uuid": "e2d0287c-2fe9-4f46-abfb-4db855d7489b",
