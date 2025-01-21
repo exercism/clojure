@@ -27,7 +27,7 @@
     {{/if~}}
 {{/test_cases.character}}
 
-(deftest character_test_13
+(deftest rand-character_test_13
   (testing "random character is valid ▶ hitpoints"
     (let [character (dnd-character/rand-character)
           expected (+ 10 (dnd-character/score-modifier (:constitution character)))]
