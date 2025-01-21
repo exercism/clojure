@@ -12,7 +12,7 @@
   (testing "random ability is within range"
     (is (<= 3 (dnd-character/rand-ability) 18))))
 
-(deftest ability_test_2
+(deftest rand-ability_test_2
   (testing "ability is generated randomly"
     (is (>= (count (set (repeatedly 100 #(dnd-character/rand-ability)))) 5))))
 
