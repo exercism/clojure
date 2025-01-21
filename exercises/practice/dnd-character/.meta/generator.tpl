@@ -17,7 +17,7 @@
     (is (>= (count (set (repeatedly 100 #(dnd-character/rand-ability)))) 5))))
 
 {{#test_cases.character}}
-(deftest character_test_{{idx}}
+(deftest rand-character_test_{{idx}}
   (testing {{description}}
     {{#if once ~}}
     (let [character (dnd-character/rand-character)]
