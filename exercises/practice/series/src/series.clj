@@ -1,5 +1,7 @@
 (ns series)
 
-(defn slices [string length] ;; <- arglist goes here
-  ;; your code goes here
-)
+(defn slices
+  "Returns all contiguous substrings of length n from the string s."
+  [s n]
+  ;; function body
+  )
