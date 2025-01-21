@@ -33,6 +33,6 @@
           expected (+ 10 (dnd-character/score-modifier (:constitution character)))]
       (is (= expected (:hitpoints character))))))
 
-(deftest character_test_14
+(deftest rand-character_test_14
   (testing "random character is generated randomly"
     (is (>= (count (set (repeatedly 100 #(dnd-character/rand-character)))) 5))))
