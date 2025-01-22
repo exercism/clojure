@@ -1,5 +1,7 @@
 (ns diamond)
 
-(defn diamond [] ;; <- arglist goes here
-  ;; your code goes here
-)
+(defn diamond
+  "Returns the diamond shape for a letter."
+  [letter]
+  ;; function body
+  )

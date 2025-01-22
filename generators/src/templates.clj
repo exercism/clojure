@@ -13,6 +13,7 @@
       (. with (formatting/formatter set? formatting/format-set))
       (. with (formatting/formatter list? formatting/format-list))
       (. with (formatting/formatter string? formatting/format-string))
+      (. with (formatting/formatter char? formatting/format-char))
       (. with EscapingStrategy/NOOP)))
 
 (defhelper ifzero [ctx options]

@@ -1,4 +1,5 @@
-(ns diamond)
+(ns diamond
+  (:require [clojure.string :as str]))
 
 (def alphabet (map char (range (int \A) (inc (int \Z)))))
 
@@ -18,5 +19,5 @@
 (defn diamond [c]
   (let [num-letters (- (int c) (dec (int \A)))
         top-half (map one-row alphabet (row-paddings num-letters))]
-    (concat top-half (rest (reverse top-half)))))
+    (str/join "\n" (concat top-half (rest (reverse top-half))))))
 

@@ -6,6 +6,9 @@
 (defn format-code [code]
   (reformat-string code))
 
+(defn format-char [c _next]
+  (str "\\" c))
+
 (defn format-string [s _next]
   (str "\"" (str/escape s char-escape-string) "\""))
 
