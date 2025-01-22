@@ -6,12 +6,11 @@
 (deftest tick_test_{{idx}}
   (testing {{description}}
     (is
-      (= 
-        [{{#expected~}}
-        {{.}}
-        {{/expected}}]
-        (game-of-life/tick
-          [{{#input.matrix~}}
+      (= [{{#expected~}}
           {{.}}
-          {{/input.matrix}}])))))
+          {{/expected}}]
+         (game-of-life/tick
+           [{{#input.matrix~}}
+            {{.}}
+            {{/input.matrix}}])))))
 {{/test_cases.tick}}
