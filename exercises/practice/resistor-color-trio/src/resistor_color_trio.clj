@@ -1,6 +1,6 @@
 (ns resistor-color-trio)
 
-(defn label
+(defn resistor-label
   "Returns the resistor label based on the given color bands."
   [colors]
   ;; function body

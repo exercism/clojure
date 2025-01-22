@@ -14,7 +14,7 @@
 
 (defn unit-label [[amount unit]] (str amount " " unit "ohms"))
 
-(defn label [colors]
+(defn resistor-label [colors]
   (let [value (colors->value colors)]
     (->> units
          (map-indexed vector)

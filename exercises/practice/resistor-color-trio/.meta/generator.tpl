@@ -3,7 +3,7 @@
             resistor-color-trio))
 
 {{#test_cases.label}}
-(deftest label_test_{{idx}}
+(deftest resistor-label_test_{{idx}}
   (testing {{description}}
-    (is (= {{expected}} (resistor-color-trio/label {{input.colors}})))))
+    (is (= {{expected}} (resistor-color-trio/resistor-label {{input.colors}})))))
 {{/test_cases.label}}
