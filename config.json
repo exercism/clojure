@@ -1278,6 +1278,19 @@
         "difficulty": 5
       },
       {
+        "slug": "resistor-color-trio",
+        "name": "Resistor Color Trio",
+        "uuid": "4f8bc34b-59bd-4a93-a120-d5e5ee3bd4a3",
+        "practices": [],
+        "prerequisites": [
+          "numbers",
+          "vectors",
+          "strings",
+          "conditionals"
+        ],
+        "difficulty": 5
+      },
+      {
         "slug": "list-ops",
         "name": "List Ops",
         "uuid": "699fb4ec-210d-454d-a41a-f7014abf8423",
