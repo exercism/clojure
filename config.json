@@ -1190,6 +1190,16 @@
         "difficulty": 4
       },
       {
+        "slug": "dnd-character",
+        "name": "D&D Character",
+        "uuid": "d6a7a17f-dd95-46cd-93a8-6b536b2ff4e4",
+        "practices": [],
+        "prerequisites": [
+          "numbers"
+        ],
+        "difficulty": 4
+      },
+      {
         "slug": "octal",
         "name": "Octal",
         "uuid": "fa596153-0cbe-40e9-a4d6-1a66fe6ef7e5",
