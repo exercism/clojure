@@ -1,5 +1,7 @@
 (ns hamming)
 
-(defn distance [strand1 strand2] ; <- arglist goes here
-  ;; your code goes here
+(defn distance
+  "Returns the hamming distance between two DNA strands."
+  [strand1 strand2]
+  ;; function body
 )
