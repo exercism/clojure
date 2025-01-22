@@ -5,9 +5,5 @@
                \A \U
                \T \A})
 
-(defn- translate [c]
-  {:post [%]}
-  (dna->rna c))
-
 (defn to-rna [dna]
-  (apply str (map translate dna)))
+  (apply str (map dna->rna dna)))

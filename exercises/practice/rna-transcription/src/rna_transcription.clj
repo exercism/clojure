@@ -1,5 +1,7 @@
 (ns rna-transcription)
 
-(defn to-rna [dna] ;; <- arglist goes here
-  ;; your code goes here
-)
+(defn to-rna
+  "Returns the RNA complement of the given DNA string sequence."
+  [dna]
+  ;; function body
+  )
