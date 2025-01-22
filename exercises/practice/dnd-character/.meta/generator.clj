@@ -8,7 +8,6 @@
    (fn [ability]
      (-> test-case
          (update :path #(conj % (name ability)))
-         (assoc :once (= (:description test-case) "each ability is only calculated once"))
          (assoc :ability (safe-str (str ability))))) random-abilities))
 
 (defn- expand-test-case [test-case]

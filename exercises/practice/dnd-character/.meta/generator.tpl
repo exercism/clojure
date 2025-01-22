@@ -10,7 +10,8 @@
 
 (deftest rand-ability_test_1
   (testing "random ability is within range"
-    (is (<= 3 (dnd-character/rand-ability) 18))))
+    (dotimes [_ 100]
+      (is (<= 3 (dnd-character/rand-ability) 18)))))
 
 (deftest rand-ability_test_2
   (testing "ability is generated randomly"
@@ -19,20 +20,16 @@
 {{#test_cases.character}}
 (deftest rand-character_test_{{idx}}
   (testing {{description}}
-    {{#if once ~}}
-    (let [character (dnd-character/rand-character)]
-      (is (= ({{ability}} character) ({{ability}} character))))))
-    {{else~}}
-    (is (<= 3 ({{ability}} (dnd-character/rand-character)) 18))))
-    {{/if~}}
+    (dotimes [_ 100]
+      (is (<= 3 ({{ability}} (dnd-character/rand-character)) 18)))))
 {{/test_cases.character}}
 
-(deftest rand-character_test_13
+(deftest rand-character_test_7
   (testing "random character is valid ▶ hitpoints"
     (let [character (dnd-character/rand-character)
           expected (+ 10 (dnd-character/score-modifier (:constitution character)))]
       (is (= expected (:hitpoints character))))))
 
-(deftest rand-character_test_14
+(deftest rand-character_test_8
   (testing "random character is generated randomly"
     (is (>= (count (set (repeatedly 100 #(dnd-character/rand-character)))) 5))))
