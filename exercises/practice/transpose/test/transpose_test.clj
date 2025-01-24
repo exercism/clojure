@@ -5,9 +5,9 @@
 
 (deftest transpose_test_1
   (testing "empty string"
-    (is (= (str/join "\n" [])
+    (is (= (str/join "\n" [""])
            (transpose/transpose
-            (str/join "\n" []))))))
+            (str/join "\n" [""]))))))
 
 (deftest transpose_test_2
   (testing "two characters in a row"
