@@ -1,0 +1,17 @@
+{
+  "authors": [
+    "tasxatzial"
+  ],
+  "files": {
+    "solution": [
+      "src/connect.clj"
+    ],
+    "test": [
+      "test/connect_test.clj"
+    ],
+    "example": [
+      ".meta/example.clj"
+    ]
+  },
+  "blurb": "Compute the result for a game of Hex / Polygon."
+}
