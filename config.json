@@ -1524,6 +1524,18 @@
         ]
       },
       {
+        "slug": "connect",
+        "name": "Connect",
+        "uuid": "7e3e449d-4c2f-4b06-89b4-a9d9efe9e68f",
+        "practices": [],
+        "prerequisites": [
+          "strings",
+          "conditionals",
+          "vectors"
+        ],
+        "difficulty": 8
+      },
+      {
         "slug": "zebra-puzzle",
         "name": "Zebra Puzzle",
         "uuid": "26bfa6b6-3c97-4e6d-9f8d-ef240181cbd8",
