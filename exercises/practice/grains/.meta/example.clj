@@ -1,16 +1,23 @@
 (ns grains)
 
 (defn- pow [x n]
-  (loop [x (bigint x) n (bigint n) r 1]
+  (loop [x x
+         n n
+         r 1]
     (cond
       (= n 0) r
-      (even? n) (recur (* x x) (/ n 2) r)
-      :else (recur x (dec n) (* r x)))))
+      (even? n) (recur (*' x x) (/ n 2) r)
+      :else (recur x (dec n) (*' r x)))))
 
-(defn square [number]
-  (pow 2 (dec number)))
+(defn valid-square? [n]
+  (<= 1 n 64))
 
-(def ^:private square-numbers (rest (range 65)))
+(defn square [n]
+  (cond
+    (valid-square? n) (pow 2 (dec n))
+    :else (throw (IllegalArgumentException. "square must be between 1 and 64"))))
 
 (defn total []
-  (apply + (map square square-numbers)))
+  (->> (range 1 65)
+       (map square)
+       (reduce +)))
