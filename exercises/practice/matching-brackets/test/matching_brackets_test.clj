@@ -45,7 +45,7 @@
 (deftest valid?_test_11
   (testing "unopened closing brackets"
     (is (false? (matching-brackets/valid? "{[)][]}")))))
- 
+
 (deftest valid?_test_12
   (testing "unpaired and nested brackets"
     (is (false? (matching-brackets/valid? "([{])")))))
@@ -80,4 +80,4 @@
 
 (deftest valid?_test_20
   (testing "complex latex expression"
-    (is (true? (matching-brackets/valid? "\\\\left(\\\\begin{array}{cc} \\\\frac{1}{3} & x\\\\\\\\ \\\\mathrm{e}^{x} &... x^2 \\\\end{array}\\\\right)")))))
+    (is (true? (matching-brackets/valid? "\\left(\\begin{array}{cc} \\frac{1}{3} & x\\\\ \\mathrm{e}^{x} &... x^2 \\end{array}\\right)")))))
