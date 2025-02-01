@@ -4,19 +4,23 @@
 
 (deftest find-pythagorean-triplets_test_1
   (testing "triplets whose sum is 12"
-    (is (= [[3 4 5]] (pythagorean-triplet/find-pythagorean-triplets 12)))))
+    (is (= [[3 4 5]]
+           (pythagorean-triplet/find-pythagorean-triplets 12)))))
 
 (deftest find-pythagorean-triplets_test_2
   (testing "triplets whose sum is 108"
-    (is (= [[27 36 45]] (pythagorean-triplet/find-pythagorean-triplets 108)))))
+    (is (= [[27 36 45]]
+           (pythagorean-triplet/find-pythagorean-triplets 108)))))
 
 (deftest find-pythagorean-triplets_test_3
   (testing "triplets whose sum is 1000"
-    (is (= [[200 375 425]] (pythagorean-triplet/find-pythagorean-triplets 1000)))))
+    (is (= [[200 375 425]]
+           (pythagorean-triplet/find-pythagorean-triplets 1000)))))
 
 (deftest find-pythagorean-triplets_test_4
   (testing "no matching triplets for 1001"
-    (is (= [] (pythagorean-triplet/find-pythagorean-triplets 1001)))))
+    (is (= []
+           (pythagorean-triplet/find-pythagorean-triplets 1001)))))
 
 (deftest find-pythagorean-triplets_test_5
   (testing "returns all matching triplets"
