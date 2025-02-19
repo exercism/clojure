@@ -1,5 +1,7 @@
 (ns sieve)
 
-(defn sieve [] ;; <- arglist goes here
-      ;; your code goes here
-)
+(defn sieve
+  "Returns the primes that are less than or equal to num."
+  [num]
+  ;; function body
+  )
