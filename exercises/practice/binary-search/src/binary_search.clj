@@ -1,7 +1,7 @@
 (ns binary-search)
 
 (defn search-for
-  "Returns the index of n in coll, or -1 if n is not found."
-  [n coll]
+  "Returns the index of num in coll, or -1 if num is not found."
+  [num coll]
   ;; function body
   )
