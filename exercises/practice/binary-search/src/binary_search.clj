@@ -1,9 +1,7 @@
 (ns binary-search)
 
-(defn search-for [] ;; <- arglist goes here
-  ;; your code goes here
-)
-
-(defn middle [] ;; <- arglist goes here
-  ;; your code goes here
-)
+(defn search-for
+  "Returns the index of n in coll, or -1 if n is not found."
+  [n coll]
+  ;; function body
+  )
