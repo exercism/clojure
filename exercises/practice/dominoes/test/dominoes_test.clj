@@ -16,7 +16,7 @@
 
 (deftest can-chain?_test_4
   (testing "three elements"
-    (is (true? (dominoes/can-chain?  [[1 2] [3 1] [2 3]])))))
+    (is (true? (dominoes/can-chain? [[1 2] [3 1] [2 3]])))))
 
 (deftest can-chain?_test_5
   (testing "can reverse dominoes"
@@ -52,4 +52,4 @@
 
 (deftest can-chain?_test_13
   (testing "separate three-domino loops"
-    (is (false? (dominoes/can-chain?  [[1 2] [2 3] [3 1] [4 5] [5 6] [6 4]])))))
+    (is (false? (dominoes/can-chain? [[1 2] [2 3] [3 1] [4 5] [5 6] [6 4]])))))
