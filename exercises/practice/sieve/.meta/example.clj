@@ -1,18 +1,16 @@
-(ns sieve)
+(ns sieve
+  (:require [clojure.math :as math]))
+
+(defn non-even-composites
+  [n]
+  (for [i (range 3 (inc (int (math/sqrt n))) 2)
+        k (range i (inc (int (/ n i))) 2)]
+    (* i k)))
 
 (defn sieve
-  "Returns a list of primes less than or equal to limit"
-  [limit]
-  (loop [current-sieve (concat [false false] (range 2 (inc limit)))
-         last-prime 1]
-    (let [current-prime (->> current-sieve
-                             (drop (inc last-prime))
-                             (some identity))]
-      (if current-prime
-        (recur (map #(and %1 %2)
-                    (concat (repeat (inc current-prime) true)
-                            (cycle (concat (repeat (dec current-prime) true)
-                                           [false])))
-                    current-sieve)
-               current-prime)
-        (filter identity current-sieve)))))
+  [n]
+  (if (< n 2)
+    ()
+    (let [candidates (cons 2 (range 3 (inc n) 2))
+          composites (set (non-even-composites n))]
+      (remove composites candidates))))
