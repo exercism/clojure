@@ -4,13 +4,13 @@
 
 {{#test_cases.colors}}
 (deftest colors_test_{{idx}}
-  (testing {{description}}
+  (testing {{context}}
     (is (= {{expected}}
            resistor-color/colors))))
 {{/test_cases.colors}}
 
 {{#test_cases.colorCode}}
 (deftest color-code_test_{{idx}}
-  (testing {{description}}
+  (testing {{context}}
     (is (= {{expected}} (resistor-color/color-code {{input.color}})))))
 {{/test_cases.colorCode}}

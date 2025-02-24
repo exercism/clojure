@@ -4,6 +4,6 @@
 
 {{#test_cases.translate}}
 (deftest translate_test_{{idx}}
-  (testing {{description}}
+  (testing {{context}}
     (is (= {{expected}} (pig-latin/translate {{input.phrase}})))))
 {{/test_cases.translate}}

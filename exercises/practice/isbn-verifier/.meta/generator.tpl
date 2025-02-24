@@ -4,6 +4,6 @@
 
 {{#test_cases.isValid}}
 (deftest isbn?_test_{{idx}}
-  (testing {{description}}
+  (testing {{context}}
     (is ({{#expected}}true?{{else}}false?{{/expected}} (isbn-verifier/isbn? {{input.isbn}})))))
 {{/test_cases.isValid}}

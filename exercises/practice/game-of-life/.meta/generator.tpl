@@ -4,7 +4,7 @@
 
 {{#test_cases.tick}}
 (deftest tick_test_{{idx}}
-  (testing {{description}}
+  (testing {{context}}
     (is
       (= [{{#expected~}}
           {{.}}

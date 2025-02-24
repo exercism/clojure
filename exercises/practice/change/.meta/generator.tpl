@@ -4,7 +4,7 @@
 
 {{#test_cases.findFewestCoins}}
 (deftest issue_test_{{idx}}
-  (testing {{description}}
+  (testing {{context}}
     {{~#if error}}
     (is (thrown-with-msg? IllegalArgumentException #{{error}}
                           (change/issue {{input.target}} {{input.coins}})))))

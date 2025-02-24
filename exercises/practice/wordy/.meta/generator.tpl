@@ -4,7 +4,7 @@
 
 {{#test_cases.answer}}
 (deftest evaluate_test_{{idx}}
-  (testing {{description}}
+  (testing {{context}}
     {{~#if error}}
     (is (thrown-with-msg? IllegalArgumentException #{{error}} (wordy/evaluate {{input.question}})))))
     {{else}}

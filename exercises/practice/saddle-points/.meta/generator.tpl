@@ -4,7 +4,7 @@
 
 {{#test_cases.saddlePoints}}
 (deftest saddle-points_test_{{idx}}
-  (testing {{description}}
+  (testing {{context}}
     (is (= {{expected}}
            (saddle-points/saddle-points
              [{{#input.matrix}}

@@ -4,6 +4,6 @@
 
 {{#test_cases.combinations}}
 (deftest combinations_test_{{idx}}
-  (testing {{description}}
+  (testing {{context}}
     (is (= {{expected}} (killer-sudoku-helper/combinations {:sum {{input.cage.sum}} :size {{input.cage.size}} :exclude {{input.cage.exclude~}} })))))
 {{/test_cases.combinations}}

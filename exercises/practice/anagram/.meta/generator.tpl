@@ -4,7 +4,7 @@
 
 {{#test_cases.findAnagrams}}
 (deftest anagrams-for_test_{{idx}}
-  (testing {{description}}
+  (testing {{context}}
     (is (= {{expected}}
            (anagram/anagrams-for {{input.subject}} {{input.candidates}})))))
 {{/test_cases.findAnagrams}}

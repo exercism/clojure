@@ -4,6 +4,6 @@
 
 {{#test_cases.value}}
 (deftest resistor-value_test_{{idx}}
-  (testing {{description}}
+  (testing {{context}}
     (is (= {{expected}} (resistor-color-duo/resistor-value {{input.colors}})))))
 {{/test_cases.value}}

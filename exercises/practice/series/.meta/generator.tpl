@@ -4,7 +4,7 @@
 
 {{#test_cases.slices}}
 (deftest slices_test_{{idx}}
-  (testing {{description}}
+  (testing {{context}}
     {{~#if error}}
     (is (thrown-with-msg? IllegalArgumentException #{{error}}
                           (series/slices {{input.series}} {{input.sliceLength}})))))

@@ -4,6 +4,6 @@
 
 {{#test_cases.toRna}}
 (deftest to-rna_test_{{idx}}
-  (testing {{description}}
+  (testing {{context}}
     (is (= {{expected}} (rna-transcription/to-rna {{input.dna}})))))
 {{/test_cases.toRna}}

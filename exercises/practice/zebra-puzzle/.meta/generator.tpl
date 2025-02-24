@@ -4,12 +4,12 @@
 
 {{#test_cases.drinksWater}}
 (deftest drinks-water_test_{{idx}}
-  (testing {{description}}
+  (testing {{context}}
     (is (= {{expected}} (zebra-puzzle/drinks-water)))))
 {{/test_cases.drinksWater}}
 
 {{#test_cases.ownsZebra}}
 (deftest owns-zebra_test_{{idx}}
-  (testing {{description}}
+  (testing {{context}}
     (is (= {{expected}} (zebra-puzzle/owns-zebra)))))
 {{/test_cases.ownsZebra}}

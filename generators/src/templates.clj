@@ -39,7 +39,7 @@
 (defn- test-case->data [idx node]
   (-> node
       (assoc :idx (inc idx)
-             :description (str/join " ▶ " (:path node))
+             :context (str/join " ▶ " (:path node))
              :error (get-in node [:expected :error]))
       (dissoc :reimplements :comments :scenarios)))
 

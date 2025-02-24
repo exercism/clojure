@@ -4,7 +4,7 @@
 
 {{#test_cases.square}}
 (deftest square_test_{{idx}}
-  (testing {{description}}
+  (testing {{context}}
     {{~#if error}}
     (is (thrown-with-msg? IllegalArgumentException #{{error}}
                           (grains/square {{input.square}})))))
@@ -15,6 +15,6 @@
 
 {{#test_cases.total}}
 (deftest total_test_{{idx}}
-  (testing {{description}}
+  (testing {{context}}
     (is (= {{expected}} (grains/total)))))
 {{/test_cases.total}}
