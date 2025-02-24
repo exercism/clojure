@@ -60,15 +60,15 @@
         (load-file (str transform-file))
         generator-ns))))
 
-(defn- transform [test-cases generator-ns]
+(defn- transform [generator-ns test-cases]
   (if generator-ns
     (->> test-cases
          (add-remove-test-cases generator-ns)
          (update-test-cases generator-ns))
     test-cases))
 
-(defn- test-cases->data [test-cases generator-ns]
-  (let [transformed (transform test-cases generator-ns)
+(defn- test-cases->data [generator-ns test-cases]
+  (let [transformed (transform generator-ns test-cases)
         grouped (group-by :property transformed)
         data (update-vals grouped #(map-indexed test-case->data %))]
     {:test_cases data}))
@@ -79,9 +79,17 @@
        (slurp)
        (str/trim-newline)))
 
+(defn format-code [generator-ns code]
+  (if-let [skip-formatting-var (ns-resolve generator-ns (symbol "skip-formatting"))]
+    (if (true? (deref skip-formatting-var))
+      code
+      (formatting/format-code code))
+    (formatting/format-code code)))
+
 (defn generate-test-files [slug test-cases]
   (let [generator-ns (load-generator-ns slug)]
-    (->> (test-cases->data test-cases generator-ns)
+    (->> test-cases
+         (test-cases->data generator-ns)
          (render reg (template slug))
-         (formatting/format-code)
+         (format-code generator-ns)
          (spit (paths/tests-file slug)))))
