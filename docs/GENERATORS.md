@@ -89,6 +89,17 @@ This has the following benefits:
 - Exercises are formatted consistently
 - You're not required to worry much about whitespace and alignment when writing templates
 
+#### Skip formatting
+
+In some cases, you might want to skip auto-formatting the generated test file's code.
+If so, define a `.meta/generator.clj` file with a `<slug>-generator` namespace and add a `skip-formatting` def with its value set to `true`:
+
+```clojure
+(ns acronym-generator)
+
+(def skip-formatting true)
+```
+
 ### Step 6: write the rendered template to the exercise's test file
 
 Finally, the output of the rendered template is written to the exercise's test file.
