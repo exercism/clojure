@@ -4,7 +4,7 @@
 
 {{#test_cases.distance}}
 (deftest distance_test_{{idx}}
-  (testing {{description}}
+  (testing {{context}}
     {{~#if error}}
     (is (thrown-with-msg? IllegalArgumentException #{{error}}
                           (hamming/distance {{input.strand1}} {{input.strand2}})))))

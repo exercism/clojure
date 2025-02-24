@@ -4,7 +4,7 @@
 
 {{#test_cases.modifier}}
 (deftest score-modifier_test_{{idx}}
-  (testing {{description}}
+  (testing {{context}}
     (is (= {{expected}} (dnd-character/score-modifier {{input.score}})))))
 {{/test_cases.modifier}}
 
@@ -19,7 +19,7 @@
 
 {{#test_cases.character}}
 (deftest rand-character_test_{{idx}}
-  (testing {{description}}
+  (testing {{context}}
     (dotimes [_ 100]
       (is (<= 3 ({{ability}} (dnd-character/rand-character)) 18)))))
 {{/test_cases.character}}

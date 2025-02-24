@@ -4,6 +4,6 @@
 
 {{#test_cases.reverse}}
 (deftest reverse-string_test_{{idx}}
-  (testing {{description}}
+  (testing {{context}}
     (is (= {{expected}} (reverse-string/reverse-string {{input.value}})))))
 {{/test_cases.reverse}}

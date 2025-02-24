@@ -4,6 +4,6 @@
 
 {{#test_cases.twoFer}}
 (deftest two-fer_test_{{idx}}
-  (testing {{description}}
+  (testing {{context}}
     (is (= {{expected}} (two-fer/two-fer{{#input.name}} {{input.name}}{{/input.name}})))))
 {{/test_cases.twoFer}}

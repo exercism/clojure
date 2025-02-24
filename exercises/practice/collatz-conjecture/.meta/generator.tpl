@@ -4,7 +4,7 @@
 
 {{#test_cases.steps}}
 (deftest collatz_test_{{idx}}
-  (testing {{description}}
+  (testing {{context}}
     {{~#if error}}
     (is (thrown-with-msg? IllegalArgumentException #{{error}}
                           (collatz-conjecture/collatz {{input.number}})))))

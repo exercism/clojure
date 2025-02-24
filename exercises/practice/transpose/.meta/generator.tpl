@@ -5,7 +5,7 @@
 
 {{#test_cases.transpose}}
 (deftest transpose_test_{{idx}}
-  (testing {{description}}
+  (testing {{context}}
     (is (= (str/join "\n" [{{#expected~}}
                            {{.}}
                            {{/expected}}])

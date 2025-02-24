@@ -4,6 +4,6 @@
 
 {{#test_cases.roman}}
 (deftest numerals_test_{{idx}}
-  (testing {{description}}
+  (testing {{context}}
     (is (= {{expected}} (roman-numerals/numerals {{input.number}})))))
 {{/test_cases.roman}}

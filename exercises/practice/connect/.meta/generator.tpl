@@ -4,7 +4,7 @@
 
 {{#test_cases.winner}}
 (deftest connect-winner_test_{{idx}}
-  (testing {{description}}
+  (testing {{context}}
     (is (= {{expected}}
            (connect/connect-winner
              [{{#input.board~}}

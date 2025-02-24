@@ -3,7 +3,7 @@
             state-of-tic-tac-toe))
 {{#test_cases.gamestate}}
 (deftest gamestate_test_{{idx}}
-  (testing {{description}}
+  (testing {{context}}
     {{~#if expected.error}}
     (is (thrown-with-msg? IllegalArgumentException #{{expected.error}}
                           (state-of-tic-tac-toe/gamestate 

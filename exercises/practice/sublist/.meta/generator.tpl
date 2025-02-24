@@ -3,6 +3,6 @@
             sublist))
 {{#test_cases.sublist}}
 (deftest classify_test_{{idx}}
-  (testing {{description}}
+  (testing {{context}}
     (is (= {{expected}} (sublist/classify {{input.listOne}} {{input.listTwo}})))))
 {{/test_cases.sublist~}}

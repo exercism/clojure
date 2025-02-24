@@ -4,6 +4,6 @@
 
 {{#test_cases.label}}
 (deftest resistor-label_test_{{idx}}
-  (testing {{description}}
+  (testing {{context}}
     (is (= {{expected}} (resistor-color-trio/resistor-label {{input.colors}})))))
 {{/test_cases.label}}

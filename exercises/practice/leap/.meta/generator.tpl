@@ -4,6 +4,6 @@
 
 {{#test_cases.leapYear}}
 (deftest leap-year?_test_{{idx}}
-  (testing {{description}}
+  (testing {{context}}
     (is ({{#expected}}true?{{else}}false?{{/expected}} (leap/leap-year? {{input.year}})))))
 {{/test_cases.leapYear}}

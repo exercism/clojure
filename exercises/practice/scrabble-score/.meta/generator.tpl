@@ -4,6 +4,6 @@
 
 {{#test_cases.score}}
 (deftest score-word_test_{{idx}}
-  (testing {{description}}
+  (testing {{context}}
     (is (= {{expected}} (scrabble-score/score-word {{input.word}})))))
 {{/test_cases.score}}

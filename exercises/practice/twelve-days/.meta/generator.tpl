@@ -5,7 +5,7 @@
 
 {{#test_cases.recite}}
 (deftest recite_test_{{idx}}
-  (testing {{description}}
+  (testing {{context}}
     (is (= (str/join "\n" [{{#expected}}{{.}}{{#if @last}}]){{else}}
                            {{/if}}{{/expected}}
            (twelve-days/recite {{input.startVerse}} {{input.endVerse}})))))

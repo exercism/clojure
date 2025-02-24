@@ -4,6 +4,6 @@
 
 {{#test_cases.abbreviate}}
 (deftest acronym_test_{{idx}}
-  (testing {{description}}
+  (testing {{context}}
     (is (= {{expected}} (acronym/acronym {{input.phrase}})))))
 {{/test_cases.abbreviate}}

@@ -4,7 +4,7 @@
 
 {{#test_cases.tripletsWithSum}}
 (deftest find-pythagorean-triplets_test_{{idx}}
-  (testing {{description}}
+  (testing {{context}}
     (is (= [{{#expected~}}
             {{.}}
             {{/expected}}]

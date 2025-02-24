@@ -5,7 +5,7 @@
 
 {{#test_cases.rows}}
 (deftest diamond_test_{{idx}}
-  (testing {{description}}
+  (testing {{context}}
     (is (= (str/join "\n" [{{#expected}}
                            {{.}}{{/expected}}])
            (diamond/diamond {{input.letter}})))))

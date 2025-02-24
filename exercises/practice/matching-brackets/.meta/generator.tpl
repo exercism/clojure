@@ -4,6 +4,6 @@
 
 {{#test_cases.isPaired}}
 (deftest valid?_test_{{idx}}
-  (testing {{description}}
+  (testing {{context}}
     (is ({{#expected}}true?{{else}}false?{{/expected}} (matching-brackets/valid? {{input.value}})))))
 {{/test_cases.isPaired}}

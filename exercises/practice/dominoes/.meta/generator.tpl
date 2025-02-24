@@ -4,6 +4,6 @@
 
 {{#test_cases.canChain}}
 (deftest can-chain?_test_{{idx}}
-  (testing {{description}}
+  (testing {{context}}
     (is ({{#expected}}true?{{else}}false?{{/expected}} (dominoes/can-chain? {{input.dominoes}})))))
 {{/test_cases.canChain}}

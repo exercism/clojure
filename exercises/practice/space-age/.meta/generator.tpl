@@ -9,6 +9,6 @@
 
 {{#test_cases.age}}
 (deftest on-{{input.planet}}_test_1
-  (testing {{description}}  
+  (testing {{context}}  
     (rounds-to {{expected}} (space-age/on-{{input.planet}} {{input.seconds}}))))
 {{/test_cases.age}}

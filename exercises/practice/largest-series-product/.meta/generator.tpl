@@ -4,7 +4,7 @@
 
 {{#test_cases.largestProduct}}
 (deftest largest-product_test_{{idx}}
-  (testing {{description}}
+  (testing {{context}}
     {{~#if error}}
     (is (thrown-with-msg? IllegalArgumentException #{{error}} (largest-series-product/largest-product {{input.span}} {{input.digits}})))))
     {{else}}
