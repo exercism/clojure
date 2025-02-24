@@ -53,18 +53,22 @@
     (mapv update-test-case-fn test-cases)
     test-cases))
 
-(defn- transform [slug test-cases]
+(defn- load-generator-ns [slug]
   (let [transform-file (paths/generator-clojure-file slug)]
-    (if (.exists transform-file)
+    (when (.exists transform-file)
       (let [generator-ns (symbol (str slug "-generator"))]
         (load-file (str transform-file))
-        (->> test-cases
-             (add-remove-test-cases generator-ns)
-             (update-test-cases generator-ns)))
-      test-cases)))
+        generator-ns))))
 
-(defn- test-cases->data [slug test-cases]
-  (let [transformed (transform slug test-cases)
+(defn- transform [test-cases generator-ns]
+  (if generator-ns
+    (->> test-cases
+         (add-remove-test-cases generator-ns)
+         (update-test-cases generator-ns))
+    test-cases))
+
+(defn- test-cases->data [test-cases generator-ns]
+  (let [transformed (transform test-cases generator-ns)
         grouped (group-by :property transformed)
         data (update-vals grouped #(map-indexed test-case->data %))]
     {:test_cases data}))
@@ -76,7 +80,8 @@
        (str/trim-newline)))
 
 (defn generate-test-files [slug test-cases]
-  (->> (test-cases->data slug test-cases)
-       (render reg (template slug))
-       (formatting/format-code)
-       (spit (paths/tests-file slug))))
+  (let [generator-ns (load-generator-ns slug)]
+    (->> (test-cases->data test-cases generator-ns)
+         (render reg (template slug))
+         (formatting/format-code)
+         (spit (paths/tests-file slug)))))
