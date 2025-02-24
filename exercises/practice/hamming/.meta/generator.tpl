@@ -9,6 +9,6 @@
     (is (thrown-with-msg? IllegalArgumentException #{{error}}
                           (hamming/distance {{input.strand1}} {{input.strand2}})))))
     {{else}}
-    (is (= {{expected}} (hamming/hamming {{input.strand1}} {{input.strand2}})))))
+    (is (= {{expected}} (hamming/distance {{input.strand1}} {{input.strand2}})))))
     {{/if~}}
 {{/test_cases.distance}}
