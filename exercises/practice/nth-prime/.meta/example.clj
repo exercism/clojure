@@ -1,33 +1,41 @@
-(ns nth-prime)
+(ns nth-prime
+  (:require [clojure.math :as math]))
 
-(defn sqrt
-  "Wrapper around java's sqrt method."
-  [number]
-  (int (Math/ceil (Math/sqrt number))))
+(defn- prime?
+  "Returns true if N is prime. This will happen if N is a not multiple
+  of any number in the given vector of primes."
+  [N primes]
+  (let [sqrt-N (math/sqrt N)]
+    (reduce (fn [result prime]
+              (if (> prime sqrt-N)
+                (reduced true)
+                (if (= 0 (mod N prime))
+                  (reduced false)
+                  result)))
+            true
+            primes)))
 
-(defn divides?
-  "Helper function to decide if a number is evenly divided by divisor."
-  [number divisor]
-  (zero? (mod number divisor)))
+(defn- add-next-prime
+  "Adds the next prime to the given vector of all previous primes."
+  [primes]
+  (let [n (inc (peek primes))]
+    (loop [n n]
+      (if (prime? n primes)
+        (conj primes n)
+        (recur (inc n))))))
 
-(defn- prime-by-trial-division?
-  "Simple trial division prime check."
-  [number]
-  (empty? (for [n (range 3 (inc (sqrt number)) 2) :when (divides? number n)] n)))
+(defn- gen-primes-seq
+  "Returns a lazy sequence of primes."
+  ([]
+   (gen-primes-seq [2]))
+  ([primes]
+   (lazy-seq
+     (cons (peek primes) (gen-primes-seq (add-next-prime primes))))))
 
-(defn prime? [number]
-  (or (= 2 number)
-      (and (odd? number) (prime-by-trial-division? number))))
+(def primes-seq (gen-primes-seq))
 
-(defn next-prime [start]
-  (loop [n (inc start)]
-    (if (prime? n)
-      n
-      (recur (inc n)))))
-
-(def primes (iterate next-prime 1))
-
-(defn nth-prime [index]
-  (when-not (pos? index)
-    (throw (IllegalArgumentException. "nth-prime expects a positive integer for an argument")))
-  (nth primes index))
+(defn nth-prime
+  [n]
+  (if (zero? n)
+    (throw (IllegalArgumentException. "there is no zeroth prime"))
+    (nth primes-seq (dec n))))
