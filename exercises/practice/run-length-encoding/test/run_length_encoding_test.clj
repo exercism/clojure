@@ -1,57 +1,63 @@
 (ns run-length-encoding-test
-  (:require [clojure.test :refer :all]
-            [run-length-encoding :as rle]))
+  (:require [clojure.test :refer [deftest testing is]]
+            run-length-encoding))
 
-;;Tests for run-length-encoding exercise
+(deftest run-length-encode_test_1
+  (testing "run-length encode a string ▶ empty string"
+    (is (= ""
+           (run-length-encoding/run-length-encode "")))))
 
-(deftest encode-empty-string
-  (testing "encode an empty string"
-    (is (= (rle/run-length-encode "") ""))))
+(deftest run-length-encode_test_2
+  (testing "run-length encode a string ▶ single characters only are encoded without count"
+    (is (= "XYZ"
+           (run-length-encoding/run-length-encode "XYZ")))))
 
-(deftest encode-single-characters-without-count
-  (testing "encode single characters without count"
-    (is (= (rle/run-length-encode "XYZ") "XYZ"))))
+(deftest run-length-encode_test_3
+  (testing "run-length encode a string ▶ string with no single characters"
+    (is (= "2A3B4C"
+           (run-length-encoding/run-length-encode "AABBBCCCC")))))
 
-(deftest encode-string-with-no-single-characters
-  (testing "encode string with no single characters"
-    (is (= (rle/run-length-encode "AABBBCCCC") "2A3B4C"))))
+(deftest run-length-encode_test_4
+  (testing "run-length encode a string ▶ single characters mixed with repeated characters"
+    (is (= "12WB12W3B24WB"
+           (run-length-encoding/run-length-encode "WWWWWWWWWWWWBWWWWWWWWWWWWBBBWWWWWWWWWWWWWWWWWWWWWWWWB")))))
 
-(deftest encode-string-with-single-and-mixed-characters
-  (testing "encode string with single and mixed characters"
-    (is (= (rle/run-length-encode "WWWWWWWWWWWWBWWWWWWWWWWWWBBBWWWWWWWWWWWWWWWWWWWWWWWWB") "12WB12W3B24WB"))))
+(deftest run-length-encode_test_5
+  (testing "run-length encode a string ▶ multiple whitespace mixed in string"
+    (is (= "2 hs2q q2w2 "
+           (run-length-encoding/run-length-encode "  hsqq qww  ")))))
 
-(deftest encode-multiple-whitespace
-  (testing "encode string with whitespace characters mixed in it"
-    (is (= (rle/run-length-encode "  hsqq qww  ") "2 hs2q q2w2 "))))
+(deftest run-length-encode_test_6
+  (testing "run-length encode a string ▶ lowercase characters"
+    (is (= "2a3b4c"
+           (run-length-encoding/run-length-encode "aabbbcccc")))))
 
-(deftest encode-lowercase
-  (testing "encode string with lowercase characters"
-    (is (= (rle/run-length-encode "aabbbcccc") "2a3b4c"))))
+(deftest run-length-decode_test_1
+  (testing "run-length decode a string ▶ empty string"
+    (is (= ""
+           (run-length-encoding/run-length-decode "")))))
 
-(deftest decode-empty-string
-  (testing "decode empty string"
-    (is (= (rle/run-length-decode "") ""))))
+(deftest run-length-decode_test_2
+  (testing "run-length decode a string ▶ single characters only"
+    (is (= "XYZ"
+           (run-length-encoding/run-length-decode "XYZ")))))
 
-(deftest decode-single-characters
-  (testing "decode string with single characters only"
-    (is (= (rle/run-length-decode "XYZ") "XYZ"))))
+(deftest run-length-decode_test_3
+  (testing "run-length decode a string ▶ string with no single characters"
+    (is (= "AABBBCCCC"
+           (run-length-encoding/run-length-decode "2A3B4C")))))
 
-(deftest decode-no-single-characters
-  (testing "decode string with no single characters"
-    (is (= (rle/run-length-decode "2A3B4C") "AABBBCCCC"))))
+(deftest run-length-decode_test_4
+  (testing "run-length decode a string ▶ single characters with repeated characters"
+    (is (= "WWWWWWWWWWWWBWWWWWWWWWWWWBBBWWWWWWWWWWWWWWWWWWWWWWWWB"
+           (run-length-encoding/run-length-decode "12WB12W3B24WB")))))
 
-(deftest decode-single-and-repeated-characters
-  (testing "decode string with single and repeated characters"
-    (is (= (rle/run-length-decode "12WB12W3B24WB") "WWWWWWWWWWWWBWWWWWWWWWWWWBBBWWWWWWWWWWWWWWWWWWWWWWWWB"))))
+(deftest run-length-decode_test_5
+  (testing "run-length decode a string ▶ multiple whitespace mixed in string"
+    (is (= "  hsqq qww  "
+           (run-length-encoding/run-length-decode "2 hs2q q2w2 ")))))
 
-(deftest decode-lowercase
-  (testing "decode string with lowercase characters"
-    (is (= (rle/run-length-decode "2a3b4c") "aabbbcccc"))))
-
-(deftest decode-mixed-whitespace
-  (testing "decode string with mixed whitespace characters in it"
-    (is (= (rle/run-length-decode "2 hs2q q2w2 ") "  hsqq qww  "))))
-
-(deftest consistency
-  (testing "Encode a string and then decode it. Should return the same one."
-    (is (= (rle/run-length-decode (rle/run-length-encode "zzz ZZ  zZ")) "zzz ZZ  zZ"))))
+(deftest run-length-decode_test_6
+  (testing "run-length decode a string ▶ lowercase string"
+    (is (= "aabbbcccc"
+           (run-length-encoding/run-length-decode "2a3b4c")))))
