@@ -1,7 +1,7 @@
 (ns nth-prime)
 
 (defn nth-prime 
-  "Returns the prime number in the nth position."
-  [n] ;; <- arglist goes here
-  ;; your code goes here
+  "Returns the nth prime number."
+  [n]
+  ;; function body
   )
