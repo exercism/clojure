@@ -36,12 +36,14 @@
        (map #(-> % (.getParentFile) (.getParentFile) (.getName)))
        (set)))
 
-(defn- test-case->data [idx node]
+(defn- test-case->data [node]
   (-> node
-      (assoc :idx (inc idx)
-             :context (str/join " ▶ " (:path node))
+      (assoc :context (str/join " ▶ " (:path node))
              :error (get-in node [:expected :error]))
       (dissoc :reimplements :comments :scenarios)))
+
+(defn- add-idx [idx node]
+  (assoc node :idx (inc idx)))
 
 (defn- add-remove-test-cases [generator-ns test-cases]
   (if-let [add-remove-test-cases-fn (ns-resolve generator-ns (symbol "add-remove-test-cases"))]
@@ -64,9 +66,10 @@
       test-cases)))
 
 (defn- test-cases->data [slug test-cases]
-  (let [transformed (transform slug test-cases)
+  (let [augmented (map test-case->data test-cases)
+        transformed (transform slug augmented)
         grouped (group-by :property transformed)
-        data (update-vals grouped #(map-indexed test-case->data %))]
+        data (update-vals grouped #(map-indexed add-idx %))]
     {:test_cases data}))
 
 (defn template [slug]
