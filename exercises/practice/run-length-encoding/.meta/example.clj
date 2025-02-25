@@ -1,20 +1,26 @@
 (ns run-length-encoding)
 
-(defn run-length-encode
-  "encodes a string with run-length-encoding"
-  [s]
-  (apply str
-         (for
-          [x (partition-by identity s)]
-           (str
-            (when-not (= 1 (count x)) (count x)) (first x)))))
+(defn encode-group
+  [group]
+  (let [n (count group)]
+    (if (> n 1)
+      (str n (first group))
+      (str (first group)))))
 
-(defn run-length-decode
-  "decodes a run-length-encoded string"
+(defn run-length-encode
   [s]
   (->> s
-       (re-seq #"[0-9]+.|[a-zA-Z\s]")
-       (map #(if (= (count %) 1) (str "1" %) %))
-       (map #(list (Integer. (reduce str "" (butlast %))) (str (last %))))
-       (map #(apply str (repeat (first %) (second %))))
-       (reduce str)))
+       (into [] (comp (partition-by identity) (map encode-group)))
+       (apply str)))
+
+(defn decode-rule
+  [[_ n ch]]
+  (let [len (Integer/parseInt (or (not-empty n) "1"))]
+    (apply str (repeat len ch))))
+
+(defn run-length-decode
+  [s]
+  (->> s
+       (re-seq #"(\d*)(\D)")
+       (map decode-rule)
+       (apply str)))
