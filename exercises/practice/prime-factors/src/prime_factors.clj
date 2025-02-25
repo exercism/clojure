@@ -1,5 +1,7 @@
 (ns prime-factors)
 
-(defn of [] ;; <- arglist goes here
-      ;; your code goes here
-)
+(defn of
+  "Returns the prime factors of the given number."
+  [num]
+  ;; function body
+  )
