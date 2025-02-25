@@ -4,7 +4,7 @@
 
 {{#test_cases.primes}}
 (deftest sieve_test_{{idx}}
-  (testing {{description}}
+  (testing {{context}}
     (is (= {{expected}}
            (sieve/sieve {{input.limit}})))))
 {{/test_cases.primes}}
