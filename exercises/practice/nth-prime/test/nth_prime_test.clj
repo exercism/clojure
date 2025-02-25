@@ -2,22 +2,23 @@
   (:require [clojure.test :refer [deftest testing is]]
             nth-prime))
 
-(deftest first-prime
-  (testing "the first prime is 2"
+(deftest nth-prime_test_1
+  (testing "first prime"
     (is (= 2 (nth-prime/nth-prime 1)))))
 
-(deftest second-prime
-  (testing "the second prime is 3"
+(deftest nth-prime_test_2
+  (testing "second prime"
     (is (= 3 (nth-prime/nth-prime 2)))))
 
-(deftest sixth-prime
-  (testing "the sixth prime is 13"
+(deftest nth-prime_test_3
+  (testing "sixth prime"
     (is (= 13 (nth-prime/nth-prime 6)))))
 
-(deftest ten-thousand-first-prime
-  (testing "the ten thousand and first prime is 104743"
+(deftest nth-prime_test_4
+  (testing "big prime"
     (is (= 104743 (nth-prime/nth-prime 10001)))))
 
-(deftest zeroth-prime
+(deftest nth-prime_test_5
   (testing "there is no zeroth prime"
-    (is (thrown? IllegalArgumentException (nth-prime/nth-prime 0)))))
+    (is (thrown-with-msg? IllegalArgumentException #"^there is no zeroth prime$"
+                          (nth-prime/nth-prime 0)))))
