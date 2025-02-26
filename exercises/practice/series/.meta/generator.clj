@@ -2,5 +2,5 @@
 
 (defn update-test-case [test-case]
   (if-let [error (get-in test-case [:expected :error])]
-    (assoc-in test-case [:expected :error] (str "^" error "$"))
+    (assoc test-case :error (str "^" error "$"))
     test-case))
