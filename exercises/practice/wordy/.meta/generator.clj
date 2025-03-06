@@ -7,5 +7,5 @@
 
 (defn update-test-case [test-case]
   (if-let [error (get-in test-case [:expected :error])]
-    (assoc test-case :error (normalize-error test-case error))
+    (assoc-in test-case [:expected :error] (normalize-error test-case error))
     test-case))
