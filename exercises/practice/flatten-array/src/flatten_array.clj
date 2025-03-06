@@ -1,5 +1,8 @@
 (ns flatten-array)
 
-(defn flatten [arr] ;; <- arglist goes here
-  ;; your code goes here
-)
+(defn flatten
+  "Flattens the given sequential collection.
+  Nil values are excluded from the result."
+  [coll]
+  ;; function body
+  )
