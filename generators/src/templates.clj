@@ -34,7 +34,7 @@
        (filter #(.isFile %))
        (filter #(= "generator.tpl" (.getName %)))
        (map #(-> % (.getParentFile) (.getParentFile) (.getName)))
-       (set)))
+       (into (sorted-set))))
 
 (defn- test-case->data [idx node]
   (-> node
