@@ -4,7 +4,7 @@
 
 {{#test_cases.find}}
 (deftest search-for_test_{{idx}}
-  (testing {{description}}
+  (testing {{context}}
     {{~#if error}}
     (is (= -1 (binary-search/search-for {{input.value}} {{input.array}})))))
     {{else}}
