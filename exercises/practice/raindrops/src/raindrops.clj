@@ -1,5 +1,7 @@
 (ns raindrops)
 
-(defn convert [] ;; <- arglist goes here
-      ;; your code goes here
-)
+(defn convert
+  "Converts a number to its corresponding string of raindrop sounds."
+  [num]
+  ;; function body
+  )
