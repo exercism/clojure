@@ -8,4 +8,4 @@
 (defn update-test-case [test-case]
   (-> test-case
       (update :expected update-expected)
-      (update :path #(take-last 1 %))))
+      (assoc :context (:description test-case))))

@@ -1,5 +1,6 @@
 (ns dnd-character-generator
-  (:require [hbs.helper :refer [safe-str]]))
+  (:require [hbs.helper :refer [safe-str]]
+            [clojure.string :as str]))
 
 (def random-abilities [:strength :dexterity :charisma :wisdom :intelligence :constitution])
 
@@ -7,13 +8,13 @@
   (map
    (fn [ability]
      (-> test-case
-         (update :path #(conj % (name ability)))
+         (assoc :context (str/join " ▶ " (conj (:path test-case) (name ability))))
          (assoc :ability (safe-str (str ability))))) random-abilities))
 
 (defn- expand-test-case [test-case]
   (case (:property test-case)
     "character" (expand-character-test-case test-case)
-    "modifier" [(update test-case :path #(take-last 1 %))]
+    "modifier" [(assoc test-case :context (:description test-case))]
     [test-case]))
 
 (defn add-remove-test-cases [test-cases]
