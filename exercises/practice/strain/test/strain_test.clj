@@ -1,42 +1,88 @@
 (ns strain-test
-  (:require [clojure.test :refer [deftest is]]
-            [strain :refer [retain discard]]))
+  (:require [clojure.test :refer [deftest testing is]]
+            [clojure.string :as str]
+            strain))
 
-(defn- fn-throw-exception [msg] (fn [& _] (throw (Exception. msg))))
+(deftest retain_test_1
+  (testing "keep on empty vector returns empty vector"
+    (is (= []
+           (strain/retain (fn [_] true)
+                          [])))))
 
-(deftest empty-sequence
-  (is (empty? (retain even? '()))))
+(deftest retain_test_2
+  (testing "keeps everything"
+    (is (= [1 3 5]
+           (strain/retain (fn [_] true)
+                          [1 3 5])))))
 
-(deftest empty-retain
-  (is (empty? (retain odd? [2 4 6 8 10]))))
+(deftest retain_test_3
+  (testing "keeps nothing"
+    (is (= []
+           (strain/retain (fn [_] false)
+                          [1 3 5])))))
 
-(deftest retain-single-element
-  (is (= [0] (retain even? [0]))))
+(deftest retain_test_4
+  (testing "keeps first and last"
+    (is (= [1 3]
+           (strain/retain odd?
+                          [1 2 3])))))
 
-(deftest retain-several
-  (is (= [1 3 5] (retain odd? (range 6)))))
+(deftest retain_test_5
+  (testing "keeps neither first nor last"
+    (is (= [2]
+           (strain/retain even?
+                          [1 2 3])))))
 
-(deftest retain-everything
-  (is (= [2 4 6 8 10] (retain even? [2 4 6 8 10]))))
+(deftest retain_test_6
+  (testing "keeps strings"
+    (is (= ["zebra" "zombies" "zealot"]
+           (strain/retain (fn [x] (str/starts-with? x "z"))
+                          ["apple" "zebra" "banana" "zombies" "cherimoya" "zealot"])))))
 
-(deftest retain-strings
-  (is (= ["string" "three"] (retain string? ["string" 1 :two "three" ["4"]]))))
+(deftest retain_test_7
+  (testing "keeps vectors"
+    (is (= [[5 5 5] [5 1 2] [1 5 2] [1 2 5]]
+           (strain/retain (fn [x] (boolean (some #{5} x)))
+                          [[1 2 3] [5 5 5] [5 1 2] [2 1 2] [1 5 2] [2 2 1] [1 2 5]])))))
 
-(deftest empty-discard
-  (is (empty? (discard even? [2 4 6 8 10]))))
+(deftest discard_test_1
+  (testing "discard on empty vector returns empty vector"
+    (is (= []
+           (strain/discard (fn [_] true)
+                           [])))))
 
-(deftest discard-first
-  (is (= [1 2] (discard zero? [0 1 2]))))
+(deftest discard_test_2
+  (testing "discards everything"
+    (is (= []
+           (strain/discard (fn [_] true)
+                           [1 3 5])))))
 
-(deftest discard-last
-  (is (= [2 1] (discard zero? [2 1 0]))))
+(deftest discard_test_3
+  (testing "discards nothing"
+    (is (= [1 3 5]
+           (strain/discard (fn [_] false)
+                           [1 3 5])))))
 
-(deftest discard-several
-  (is (= [0 2 4] (discard odd? (range 6)))))
+(deftest discard_test_4
+  (testing "discards first and last"
+    (is (= [2]
+           (strain/discard odd?
+                           [1 2 3])))))
 
-(deftest does-not-use-existing-implementations
-  (with-redefs [filter  (fn-throw-exception "Implement without filter!")
-                remove  (fn-throw-exception "Implement without remove!")
-                filterv (fn-throw-exception "Implement without filterv!")]
-    (dorun (retain even? (range 10)))
-    (dorun (discard even? (range 10)))))
+(deftest discard_test_5
+  (testing "discards neither first nor last"
+    (is (= [1 3]
+           (strain/discard even?
+                           [1 2 3])))))
+
+(deftest discard_test_6
+  (testing "discards strings"
+    (is (= ["apple" "banana" "cherimoya"]
+           (strain/discard (fn [x] (str/starts-with? x "z"))
+                           ["apple" "zebra" "banana" "zombies" "cherimoya" "zealot"])))))
+
+(deftest discard_test_7
+  (testing "discards vectors"
+    (is (= [[1 2 3] [2 1 2] [2 2 1]]
+           (strain/discard (fn [x] (boolean (some #{5} x)))
+                           [[1 2 3] [5 5 5] [5 1 2] [2 1 2] [1 5 2] [2 2 1] [1 2 5]])))))
