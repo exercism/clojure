@@ -9,7 +9,7 @@
 (defn classify [number]
   "Classifies a positive integer as deficient, abundant or perfect"
   (if-not (pos? number)
-    (throw (IllegalArgumentException. "Only positive numbers can be classified."))
+    (throw (IllegalArgumentException. "Classification is only possible for positive integers."))
     (let [divisor-sum (apply + (get-divisors number))]
       (cond
         (> divisor-sum number) :abundant
