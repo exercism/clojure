@@ -1,5 +1,8 @@
 (ns luhn)
 
-(defn valid? [] ;; <- arglist goes here
-  ;; your code goes here
-)
+(defn valid?
+  "Returns true if the given number is valid according
+  to the luhn algorithm; otherwise, returns false."
+  [s]
+  ;; function body
+  )
