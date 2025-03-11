@@ -1,9 +1,7 @@
 (ns protein-translation)
 
-(defn translate-codon [] ;; <- arglist goes here
-      ;; your code goes here
-)
-
-(defn translate-rna [] ;; <- arglist goes here
-  ;; your code goes here
-)
+(defn translate-rna
+  "Translates an RNA string into amino acids."
+  [rna]
+  ;; function body
+  )
