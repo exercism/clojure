@@ -1,5 +1,7 @@
 (ns perfect-numbers)
 
-(defn classify [] ;; <- arglist goes here
-      ;; your code goes here
-)
+(defn classify
+  "Classifies the given number as perfect, abundant, or deficient."
+  [num]
+  ;; function body
+  )
