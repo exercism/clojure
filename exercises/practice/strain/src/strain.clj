@@ -1,9 +1,13 @@
 (ns strain)
 
-(defn retain [] ;; <- arglist goes here
-      ;; your code goes here
-)
+(defn retain
+  "Keeps the items in coll for which (pred item) returns true."
+  [pred coll]
+  ;; function body
+  )
 
-(defn discard [] ;; <- arglist goes here
-  ;; your code goes here
-)
+(defn discard
+  "Removes the items in coll for which (pred item) returns true."
+  [pred coll]
+  ;; function body
+  )

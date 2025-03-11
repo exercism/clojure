@@ -1,15 +1,14 @@
 (ns strain)
 
 (defn retain
-  "a simple (nonlazy) reimplementation of filter"
-  [pred s]
-  (let [[first & rest] s]
-    (cond
-      (empty? s) '()
-      (pred first) (cons first (retain pred rest))
-      :else (retain pred rest))))
+  [pred coll]
+  (reduce (fn [result el]
+            (if (pred el)
+              (conj result el)
+              result))
+          []
+          coll))
 
 (defn discard
-  "a simple (nonlazy) reimplementation of remove"
-  [pred s]
-  (retain (complement pred) s))
+  [pred coll]
+  (retain (complement pred) coll))
