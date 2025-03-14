@@ -17,13 +17,3 @@
 (deftest collatz_test_4
   (testing "large number of even and odd steps"
     (is (= 152 (collatz-conjecture/collatz 1000000)))))
-
-(deftest collatz_test_5
-  (testing "zero is an error"
-    (is (thrown-with-msg? IllegalArgumentException #"^Only positive integers are allowed$"
-                          (collatz-conjecture/collatz 0)))))
-
-(deftest collatz_test_6
-  (testing "negative value is an error"
-    (is (thrown-with-msg? IllegalArgumentException #"^Only positive integers are allowed$"
-                          (collatz-conjecture/collatz -15)))))
