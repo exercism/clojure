@@ -1,0 +1,10 @@
+[
+  {
+    "url": "https://clojure.github.io/clojure/clojure.core-api.html#clojure.core/map",
+    "description": "Clojure API: map"
+  },
+  {
+    "url": "https://clojure.org/guides/higher_order_functions",
+    "description": "Clojure guides: Higher Order Functions"
+  }
+]
