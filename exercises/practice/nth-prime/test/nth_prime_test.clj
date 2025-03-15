@@ -17,8 +17,3 @@
 (deftest nth-prime_test_4
   (testing "big prime"
     (is (= 104743 (nth-prime/nth-prime 10001)))))
-
-(deftest nth-prime_test_5
-  (testing "there is no zeroth prime"
-    (is (thrown-with-msg? IllegalArgumentException #"^there is no zeroth prime$"
-                          (nth-prime/nth-prime 0)))))

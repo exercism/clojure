@@ -36,6 +36,4 @@
 
 (defn nth-prime
   [n]
-  (if (zero? n)
-    (throw (IllegalArgumentException. "there is no zeroth prime"))
-    (nth primes-seq (dec n))))
+  (nth primes-seq (dec n)))
