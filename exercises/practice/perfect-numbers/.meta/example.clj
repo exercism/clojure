@@ -35,10 +35,8 @@
 
 (defn classify
   [n]
-  (if (pos? n)
-    (let [sum (reduce + (disj (set (generate-factors n)) n))]
-      (cond
-        (> sum n) :abundant
-        (= sum n) :perfect
-        (< sum n) :deficient))
-    (throw (IllegalArgumentException. "Classification is only possible for positive integers."))))
+  (let [sum (reduce + (disj (set (generate-factors n)) n))]
+    (cond
+      (> sum n) :abundant
+      (= sum n) :perfect
+      (< sum n) :deficient)))
