@@ -7,6 +7,4 @@
     :else (inc (* 3 n))))
 
 (defn collatz [n]
-  (if (> n 0)
-    (count (take-while #(not= 1 %) (iterate collatz-helper n)))
-    (throw (IllegalArgumentException. "Only positive integers are allowed"))))
+  (count (take-while #(not= 1 %) (iterate collatz-helper n))))
