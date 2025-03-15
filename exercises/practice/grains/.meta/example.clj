@@ -9,13 +9,8 @@
       (even? n) (recur (*' x x) (/ n 2) r)
       :else (recur x (dec n) (*' r x)))))
 
-(defn valid-square? [n]
-  (<= 1 n 64))
-
 (defn square [n]
-  (cond
-    (valid-square? n) (pow 2 (dec n))
-    :else (throw (IllegalArgumentException. "square must be between 1 and 64"))))
+ (pow 2 (dec n)))
 
 (defn total []
   (->> (range 1 65)
