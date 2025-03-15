@@ -1,44 +1,47 @@
 (ns robot-simulator)
 
-(def directions [:north :east :south :west])
+(defn robot
+  [coordinates direction]
+  {:coordinates coordinates :bearing direction})
 
-(defn robot [coordinates bearing]
-  {:coordinates coordinates :bearing bearing})
+(def turn-right->
+  {:east :south
+   :south :west
+   :west :north
+   :north :east})
 
-(defn turn [bearing direction-list]
-  (let [dir-stream (drop-while #(not (= bearing %1)) (cycle direction-list))]
-    (nth dir-stream 1)))
+(def turn-left->
+  {:east :north
+   :north :west
+   :west :south
+   :south :east})
 
-(defn turn-right [bearing]
-  (turn bearing directions))
+(def move-direction->update-vector
+  {:north [:y inc]
+   :east [:x inc]
+   :west  [:x dec]
+   :south [:y dec]})
 
-(defn turn-left [bearing]
-  (turn bearing (reverse directions)))
+(defn turn-robot-left
+  [robot]
+  (update robot :bearing turn-left->))
 
-(defn advance [coordinates bearing]
-  (let [x (:x coordinates)
-        y (:y coordinates)]
-    (cond
-      (= :north bearing) {:x x :y (inc y)}
-      (= :south bearing) {:x x :y (dec y)}
-      (= :east  bearing) {:x (inc x) :y y}
-      (= :west  bearing) {:x (dec x) :y y})))
+(defn turn-robot-right
+  [robot]
+  (update robot :bearing turn-right->))
 
-(defn simulate [instructions current-state]
-  (loop [instructions  instructions
-         current-state current-state]
-    (let [instruction (first instructions)
-          remainder   (rest  instructions)
-          coordinates (:coordinates current-state)
-          bearing     (:bearing current-state)
-          next-state  (cond
-                        (= \L instruction)
-                        (robot coordinates (turn-left bearing))
-                        (= \R instruction)
-                        (robot coordinates (turn-right bearing))
-                        :else
-                        (robot (advance coordinates bearing) bearing))]
-      (if (seq remainder)
-        (recur remainder next-state)
-        next-state))))
+(defn advance-robot
+  [robot]
+  (let [[k f] (-> :bearing robot move-direction->update-vector)]
+    (update-in robot [:coordinates k] f)))
 
+(defn execute-instruction
+  [robot instruction]
+  (case instruction
+    \L (turn-robot-left robot)
+    \R (turn-robot-right robot)
+    \A (advance-robot robot)))
+
+(defn simulate
+  [instructions robot]
+  (reduce execute-instruction robot instructions))

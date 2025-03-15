@@ -1,11 +1,14 @@
 (ns robot-simulator)
 
 (defn robot
-  [] ;; <- arglist goes here
-  ;; your code goes here
+  "Creates a robot at the given coordinates, facing the given direction."
+  [coordinates direction]
+  ;; function body
   )
 
 (defn simulate
-  [] ;; <- arglist goes here
-  ;; your code goes here
+  "Simulates the robot's movements based on the given instructions
+  and updates its state."
+  [instructions robot-state]
+  ;; function body
   )
