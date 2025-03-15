@@ -32,12 +32,18 @@ description = "returns the number of grains on the square -> grains on square 64
 
 [1d47d832-3e85-4974-9466-5bd35af484e3]
 description = "returns the number of grains on the square -> square 0 is invalid"
+include = false
+comment = "excluded because we don't want to add error handling to the exercise"
 
 [61974483-eeb2-465e-be54-ca5dde366453]
 description = "returns the number of grains on the square -> negative square is invalid"
+include = false
+comment = "excluded because we don't want to add error handling to the exercise"
 
 [a95e4374-f32c-45a7-a10d-ffec475c012f]
 description = "returns the number of grains on the square -> square greater than 64 is invalid"
+include = false
+comment = "excluded because we don't want to add error handling to the exercise"
 
 [6eb07385-3659-4b45-a6be-9dc474222750]
 description = "returns the total number of grains on the board"

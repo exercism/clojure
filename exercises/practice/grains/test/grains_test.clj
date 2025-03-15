@@ -30,21 +30,6 @@
   (testing "grains on square 64"
     (is (= 9223372036854775808 (grains/square 64)))))
 
-(deftest square_test_8
-  (testing "square 0 is invalid"
-    (is (thrown-with-msg? IllegalArgumentException #"^square must be between 1 and 64$"
-                          (grains/square 0)))))
-
-(deftest square_test_9
-  (testing "negative square is invalid"
-    (is (thrown-with-msg? IllegalArgumentException #"^square must be between 1 and 64$"
-                          (grains/square -1)))))
-
-(deftest square_test_10
-  (testing "square greater than 64 is invalid"
-    (is (thrown-with-msg? IllegalArgumentException #"^square must be between 1 and 64$"
-                          (grains/square 65)))))
-
 (deftest total_test_1
   (testing "returns the total number of grains on the board"
     (is (= 18446744073709551615 (grains/total)))))
