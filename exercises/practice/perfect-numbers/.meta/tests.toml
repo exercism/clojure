@@ -44,6 +44,10 @@ description = "Deficient numbers -> Edge case (no factors other than itself) is 
 
 [72445cee-660c-4d75-8506-6c40089dc302]
 description = "Invalid inputs -> Zero is rejected (as it is not a positive integer)"
+include = false
+comment = "excluded because we don't want to add error handling to the exercise"
 
 [2d72ce2c-6802-49ac-8ece-c790ba3dae13]
 description = "Invalid inputs -> Negative integer is rejected (as it is not a positive integer)"
+include = false
+comment = "excluded because we don't want to add error handling to the exercise"

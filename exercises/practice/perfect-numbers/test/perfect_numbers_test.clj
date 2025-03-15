@@ -45,13 +45,3 @@
 (deftest classify_test_11
   (testing "Deficient numbers ▶ Edge case (no factors other than itself) is classified correctly"
     (is (= :deficient (perfect-numbers/classify 1)))))
-
-(deftest classify_test_12
-  (testing "Invalid inputs ▶ Zero is rejected (as it is not a positive integer)"
-    (is (thrown-with-msg? IllegalArgumentException #"^Classification is only possible for positive integers.$"
-                          (perfect-numbers/classify 0)))))
-
-(deftest classify_test_13
-  (testing "Invalid inputs ▶ Negative integer is rejected (as it is not a positive integer)"
-    (is (thrown-with-msg? IllegalArgumentException #"^Classification is only possible for positive integers.$"
-                          (perfect-numbers/classify -1)))))
