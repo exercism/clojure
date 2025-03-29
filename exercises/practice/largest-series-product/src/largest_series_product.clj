@@ -1,7 +1,7 @@
 (ns largest-series-product)
 
 (defn largest-product
-  "Returns the largest product of consecutive digits in a series of length n from the string s"
-  [n s]
+  "Returns the largest product of any consecutive digits of length span in the string s."
+  [span s]
   ;; function body
   )
