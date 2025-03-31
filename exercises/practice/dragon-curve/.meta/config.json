@@ -1,0 +1,20 @@
+{
+  "authors": [
+    "tasxatzial"
+  ],
+  "contributors": [],
+  "files": {
+    "solution": [
+      "src/dragon_curve.clj"
+    ],
+    "test": [
+      "test/dragon_curve_test.clj"
+    ],
+    "example": [
+      ".meta/example.clj"
+    ]
+  },
+  "blurb": "",
+  "source": "",
+  "source_url": ""
+}
