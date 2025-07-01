@@ -1,4 +1,4 @@
 {
-    "blurb": "We provide here a basic explanation about the reduce higher-order function and its most common usage.",
+    "blurb": "The reduce function combines all elements of a collection into a single value by applying a function cumulatively",
     "authors": ["JaumeAmoresDS"]
   }

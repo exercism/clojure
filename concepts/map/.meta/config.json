@@ -1,4 +1,4 @@
 {
-    "blurb": "We provide here a basic explanation about the map higher-order function and its most common usage.",
+    "blurb": "The map function applies a given function to each element of one or more collections.",
     "authors": ["JaumeAmoresDS"]
   }
