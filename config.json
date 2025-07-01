@@ -1315,6 +1315,22 @@
         "difficulty": 5
       },
       {
+        "slug": "flower-field",
+        "name": "Flower Field",
+        "uuid": "1ef895e1-1818-42dc-b6dd-2bbe9d470e2d",
+        "practices": [],
+        "prerequisites": [
+          "vectors",
+          "conditionals",
+          "strings"
+        ],
+        "difficulty": 6,
+        "topics": [
+          "algorithms",
+          "games"
+        ]
+      },
+      {
         "slug": "food-chain",
         "name": "Food Chain",
         "uuid": "188f12ad-e6ed-40d4-b515-d2b4d49cbb69",
@@ -1374,12 +1390,9 @@
         "name": "Minesweeper",
         "uuid": "e07e545c-997f-424b-b4ca-34fd7cc06bf7",
         "practices": [],
-        "prerequisites": [
-          "vectors",
-          "conditionals",
-          "strings"
-        ],
+        "prerequisites": [],
         "difficulty": 6,
+        "status": "deprecated",
         "topics": [
           "algorithms",
           "games"

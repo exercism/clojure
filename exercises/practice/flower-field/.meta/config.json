@@ -1,0 +1,23 @@
+{
+  "authors": [
+    "leeqleeq"
+  ],
+  "contributors": [
+    "AndreaCrotti",
+    "BNAndras",
+    "haus",
+    "tasxatzial"
+  ],
+  "files": {
+    "solution": [
+      "src/flower_field.clj"
+    ],
+    "test": [
+      "test/flower_field_test.clj"
+    ],
+    "example": [
+      ".meta/example.clj"
+    ]
+  },
+  "blurb": "Mark all the flowers in a garden."
+}
