@@ -10,19 +10,57 @@ It holds all the _exercises_ that are currently implemented and available for st
 The track consists of various **concept** exercises which teach the [Clojure syllabus][web-syllabus], and various practice exercises, which are unlocked by progressing in the syllabus and can be used to practice concepts learned.
 You can find this in the [`config.json`][file-config].
 
-## Running the test suite
+## Tooling
 
-To test all exercises with sample solutions using [babashka](https://babashka.org/):
+Next to the exercises, the Clojure track also consists of the following tooling:
+
+- [exercism/clojure-test-runner] - The Exercism [test runner][docs-test-runners] for the Clojure track that automatically verifies if a submitted solution passes all of the exercise's tests.
+- [exercism/clojure-representer] - The Exercism [representer][docs-representers] for the Clojure track that creates normalized representations of submitted solutions.
+- [exercism/clojure-analyzer] - The Exercism [analyzer][docs-analyzers] for the Clojure track that automatically provides comments on submitted solutions.
+
+## Running the tests
+
+The Clojure track uses [babashka][babashka] as its test runner, which is also how the exercises in this repository are verified.
+Each exercise contains an example solution named `example.clj`.
+This file is run against the tests during verification.
+
+After installing babashka, you can verify all exercises with:
 
 ```bash
-./test.clj .
+$ bin/verify-exercises
+
+{:tested 114, :fails ()}
 ```
-{:tested 86, :fails ()}
 
-## Contributing Guide
+Verify a single exercise with:
 
-Please see the [contributing guide](https://exercism.org/docs/building).
+```bash
+bin/verify-exercises {slug}
+```
 
+For example:
+
+```bash
+$ bin/verify-exercises bob
+
+{:tested 1, :fails ()}
+```
+
+## Contributing guide
+
+If you have any suggestions or comments, it is recommended to start a topic on the [Exercism forum][forum-clojure] first.
+
+For general information about how to contribute to Exercism, please refer to the [contributing guide][contributing].
+
+[babashka]: https://babashka.org
 [web-exercism]: https://exercism.org
 [web-syllabus]: https://exercism.org/tracks/clojure/concepts
 [file-config]: https://github.com/exercism/clojure/blob/main/config.json
+[forum-clojure]: https://forum.exercism.org/c/programming/clojure/73
+[docs-analyzers]: https://exercism.org/docs/building/tooling/analyzers
+[docs-representers]: https://exercism.org/docs/building/tooling/representers
+[docs-test-runners]: https://exercism.org/docs/building/tooling/test-runners
+[exercism/clojure-analyzer]: https://github.com/exercism/clojure-analyzer
+[exercism/clojure-representer]: https://github.com/exercism/clojure-representer
+[exercism/clojure-test-runner]: https://github.com/exercism/clojure-test-runner
+[contributing]: https://exercism.org/docs/building
