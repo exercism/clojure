@@ -10,12 +10,19 @@ It holds all the _exercises_ that are currently implemented and available for st
 The track consists of various **concept** exercises which teach the [Clojure syllabus][web-syllabus], and various practice exercises, which are unlocked by progressing in the syllabus and can be used to practice concepts learned.
 You can find this in the [`config.json`][file-config].
 
-## Running the test suite
+## Tooling
 
-The Clojure track is using [babashka][babashka] as its test runner.
+Next to the exercises, the Clojure track also consists of the following tooling:
 
+- [exercism/clojure-test-runner] - The Exercism [test runner][docs-test-runners] for the Clojure track that automatically verifies if a submitted solution passes all of the exercise's tests.
+- [exercism/clojure-representer] - The Exercism [representer][docs-representers] for the Clojure track that creates normalized representations of submitted solutions.
+- [exercism/clojure-analyzer] - The Exercism [analyzer][docs-analyzers] for the Clojure track that automatically provides comments on submitted solutions.
+
+## Running the tests
+
+The Clojure track uses [babashka][babashka] as its test runner, which is also how the exercises in this repository are verified.
 Each exercise contains an example solution named `example.clj`.
-This file is run against the tests when verifying the exercise.
+This file is run against the tests during verification.
 
 After installing babashka, you can verify all exercises with:
 
@@ -39,15 +46,7 @@ $ bin/verify-exercises bob
 {:tested 1, :fails ()}
 ```
 
-## Clojure Track Tooling
-
-Next to the exercises, the Clojure track also consists of the following tooling:
-
-- [exercism/clojure-test-runner] - The Exercism [test runner][docs-test-runners] for the Clojure track that automatically verifies if a submitted solution passes all of the exercise's tests.
-- [exercism/clojure-representer] - The Exercism [representer][docs-representers] for the Clojure track that creates normalized representations of submitted solutions.
-- [exercism/clojure-analyzer] - The Exercism [analyzer][docs-analyzers] for the Clojure track that automatically provides comments on submitted solutions.
-
-## Contributing Guide
+## Contributing guide
 
 If you have any suggestions or comments, it is recommended to start a topic on the [Exercism forum][forum-clojure] first.
 
