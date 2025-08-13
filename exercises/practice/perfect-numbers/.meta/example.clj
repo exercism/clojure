@@ -2,20 +2,20 @@
   (:require [clojure.math :as math]))
 
 (defn prime-factors-of
-  [n]
+  [num]
   (loop [result []
          candidate 2
-         n n]
+         n num]
     (cond
       (= n 1) (frequencies result)
       (> candidate (math/sqrt n)) (recur (conj result n) candidate 1)
       (zero? (mod n candidate))  (recur (conj result candidate) candidate (quot n candidate))
       :else (recur result (inc candidate) n))))
 
-(defn generate-factor-powers
-  [factor max-power]
+(defn powers-of
+  [num max-power]
   (for [power (range (inc max-power))]
-    (reduce * (repeat power factor))))
+    (reduce * (repeat power num))))
 
 (defn cartesian-product
   [& collections]
@@ -25,18 +25,20 @@
               (* a b)))
           [1] collections))
 
-(defn generate-factors
-  [n]
-  (let [prime-factors (prime-factors-of n)]
-    (->> prime-factors
-         (or (seq prime-factors) [])
-         (map #(generate-factor-powers (key %) (val %)))
-         (apply cartesian-product))))
+(defn factors-of
+  [num]
+  (->> (prime-factors-of num)
+       (map #(powers-of (first %) (second %)))
+       (apply cartesian-product)))
+
+(defn aliquot-sum
+  [num]
+  (reduce + (disj (set (factors-of num)) num)))
 
 (defn classify
-  [n]
-  (let [sum (reduce + (disj (set (generate-factors n)) n))]
+  [num]
+  (let [sum (aliquot-sum num)]
     (cond
-      (> sum n) :abundant
-      (= sum n) :perfect
-      (< sum n) :deficient)))
+      (> sum num) :abundant
+      (= sum num) :perfect
+      (< sum num) :deficient)))
