@@ -2,12 +2,12 @@
 
 (defn run-length-encode
   "Encodes a string with run-length encoding."
-  [plain-text]
+  [plaintext]
   ;; function body
   )
 
 (defn run-length-decode
   "Decodes a run-length-encoded string."
-  [cipher-text]
+  [ciphertext]
   ;; function body
   )
