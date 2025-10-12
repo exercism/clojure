@@ -13,9 +13,6 @@ Exercism provides exercises and feedback but can be difficult to jump into for t
 - [4Clojure](https://4clojure.oxal.org) A resource to help fledgling clojurians learn the language through interactive problems.
 - [Clojure Koans](http://clojurekoans.com) Exercises meant to initiate you to the mysteries of the Clojure language.
 
-## Tutorials
-- [Calva - Get Started with Clojure](https://calva.io/get-started-with-clojure/) An interactive guide to get you started with Clojure using Calva and VS Code.
-
 ## Books
 
 - [Clojure for the Brave and True](http://www.braveclojure.com) A free book by Daniel Higginbotham
