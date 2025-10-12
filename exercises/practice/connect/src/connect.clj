@@ -3,4 +3,5 @@
 (defn connect-winner
   "Returns the winner of the given connect board."
   [board]
+  ;; function body
   )
