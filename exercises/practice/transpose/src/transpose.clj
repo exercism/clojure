@@ -1,7 +1,7 @@
 (ns transpose)
 
 (defn transpose
-  "Given a string, it returns the transposed version"
+  "Returns the transposed version of the given string."
   [s]
   ;; function body
   )

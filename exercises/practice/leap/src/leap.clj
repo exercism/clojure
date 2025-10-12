@@ -1,7 +1,8 @@
 (ns leap)
 
 (defn leap-year?
-  "Determine if a year is a leap year"
+  "Returns true if the given year is a leap year;
+  otherwise, it returns false."
   [year]
   ;; function body
   )

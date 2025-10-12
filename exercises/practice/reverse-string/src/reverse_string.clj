@@ -1,7 +1,7 @@
 (ns reverse-string)
 
 (defn reverse-string
-  "Reverses the given string"
+  "Reverses the given string."
   [s]
   ;; function body
   )

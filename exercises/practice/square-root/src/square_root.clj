@@ -1,7 +1,7 @@
 (ns square-root)
 
 (defn square-root
-  "Calculates a number's square root"
-  [n]
+  "Calculates the square root of a number."
+  [num]
   ;; function body
   )

@@ -5,7 +5,7 @@
   )
 
 (defn color-code
-  "Returns the numerical value associated with the given color"
+  "Returns the numerical value associated with the given color."
   [color]
   ;; function body
   )

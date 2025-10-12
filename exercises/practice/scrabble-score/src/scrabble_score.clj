@@ -1,7 +1,7 @@
 (ns scrabble-score)
 
 (defn score-word
-  "Calculate a word's scrabble score"
+  "Returns the scrabble score of a word."
   [word]
   ;; function body
   )
