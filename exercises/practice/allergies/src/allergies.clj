@@ -1,7 +1,8 @@
 (ns allergies)
 
 (defn allergic-to?
-  "Returns true if the score indicates an allergy to the allergen; otherwise, it returns false."
+  "Returns true if the score indicates an allergy to the allergen;
+  otherwise, it returns false."
   [score allergen]
   ;; function body
   )
