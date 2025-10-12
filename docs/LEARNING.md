@@ -5,8 +5,8 @@ Exercism provides exercises and feedback but can be difficult to jump into for t
 ## References
 
 - [Clojure.org](http://clojure.org) The official language website.
-- [ClojureDocs](https://clojuredocs.org) Community-driven documentation and examples repository.
-- [Clojure-doc](https://clojure-doc.org) Another community-driven documentation.
+- [ClojureDocs](https://clojuredocs.org) Documentation and community-driven examples repository.
+- [Clojure-doc](https://clojure-doc.org) Community-driven documentation.
 
 ## Exercises
 
