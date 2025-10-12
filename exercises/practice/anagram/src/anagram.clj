@@ -1,5 +1,7 @@
 (ns anagram)
 
-(defn anagrams-for [word prospect-list] ;; <- arglist goes here
-  ;; your code goes here
+(defn anagrams-for
+  "Returns all words from candidates that are anagrams of the given word."
+  [word candidates]
+  ;; function body
 )
