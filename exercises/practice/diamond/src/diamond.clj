@@ -1,7 +1,7 @@
 (ns diamond)
 
 (defn diamond
-  "Returns the diamond shape for a letter."
+  "Returns a diamond shape pattern for the given letter."
   [letter]
   ;; function body
   )
