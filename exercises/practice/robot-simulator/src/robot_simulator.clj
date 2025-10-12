@@ -7,8 +7,7 @@
   )
 
 (defn simulate
-  "Simulates the robot's movements based on the given instructions
-  and updates its state."
+  "Simulates the robot's movements based on the given instructions and updates its state."
   [instructions robot-state]
   ;; function body
   )
