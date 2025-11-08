@@ -1,0 +1,20 @@
+{
+  "authors": [
+    "tasxatzial"
+  ],
+  "contributors": [],
+  "files": {
+    "solution": [
+      "src/dragon_curve.clj"
+    ],
+    "test": [
+      "test/dragon_curve_test.clj"
+    ],
+    "example": [
+      ".meta/example.clj"
+    ]
+  },
+  "blurb": "TODO",
+  "source": "Anastasios Chatzialexiou",
+  "source_url": "https://github.com/exercism/clojure/pull/843"
+}
