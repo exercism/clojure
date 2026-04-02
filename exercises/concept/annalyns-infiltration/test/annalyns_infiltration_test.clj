@@ -82,7 +82,7 @@
   (testing "Cannot release prisoner if only knight is awake and pet dog is absent"
     (is (= false (annalyns-infiltration/can-free-prisoner? true false false false)))))
 
-(deftest ^{:task 4} release-prisoner-knight-awake-dog-present-test
+(deftest ^{:task 4} release-prisoner-knight-asleep-dog-present-test
   (testing "Cannot release prisoner if only knight is asleep and pet dog is present"
     (is (= false (annalyns-infiltration/can-free-prisoner? false true true true)))))
 
