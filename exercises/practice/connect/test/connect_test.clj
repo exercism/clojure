@@ -64,6 +64,24 @@
              "    . O X ."])))))
 
 (deftest connect-winner_test_8
+  (testing "X wins with left-hand dead end fork"
+    (is (= :X
+           (connect/connect-winner
+            [". . X ."
+             " X X . ."
+             "  . X X X"
+             "   O O O O"])))))
+
+(deftest connect-winner_test_9
+  (testing "X wins with right-hand dead end fork"
+    (is (= :X
+           (connect/connect-winner
+            [". . X X"
+             " X X . ."
+             "  . X X ."
+             "   O O O O"])))))
+
+(deftest connect-winner_test_10
   (testing "O wins crossing from top to bottom"
     (is (= :O
            (connect/connect-winner
@@ -73,7 +91,7 @@
              "   X X O X"
              "    . O X ."])))))
 
-(deftest connect-winner_test_9
+(deftest connect-winner_test_11
   (testing "X wins using a convoluted path"
     (is (= :X
            (connect/connect-winner
@@ -83,7 +101,7 @@
              "   . X X . ."
              "    O O O O O"])))))
 
-(deftest connect-winner_test_10
+(deftest connect-winner_test_12
   (testing "X wins using a spiral path"
     (is (= :X
            (connect/connect-winner
