@@ -2,7 +2,7 @@
   (:require [clojure.test :refer [deftest testing is function?]]
             [coordinate-transformation :refer [translate2d scale2d compose-transform memoize-transform]]))
 
-(deftest translate2d-test
+(deftest ^{:task-1 true :translate2d true} translate2d-test
   (testing "should return a function"
     (is (true? (function? translate2d))))
   (testing "should be predictable"
@@ -18,7 +18,7 @@
               reusedExpected [7 0]]
           (= reusedExpected (translator x2 y2))))))
 
-(deftest scale2d-test
+(deftest ^{:task-2 true :scale2d true} scale2d-test
   (testing "should return a function"
     (is (true? (function? scale2d))))
   (testing "should be predictable"
@@ -38,7 +38,7 @@
               reusedExpected [-8 10]]
           (= reusedExpected (scaler x2 y2))))))
 
-(deftest compose-transform-test
+(deftest ^{:task-3 true :compose-transform true} compose-transform-test
  (testing "should return a function"
    (is (let [dx         -6
              dy         10
@@ -80,7 +80,7 @@
                     composed (compose-transform translator scaler)]
                 (= [-18 20] (composed 0 0))))))
 
-(deftest memoize-transform-test
+(deftest ^{:task-4 true :memoize-transform true} memoize-transform-test
   (testing "should return a function"
     (is (function? (memoize-transform (translate2d 2 2)))))
   (testing "should return the same result if given the same input"
