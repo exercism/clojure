@@ -3,25 +3,25 @@
             high-scores))
 
 {{#test_cases.scores}}
-(deftest scores_test_{{idx}}
+(deftest ^:scores scores_test_{{idx}}
   (testing {{context}}
     (is (= {{expected}} (high-scores/scores {{input.scores}})))))
 {{/test_cases.scores}}
 
 {{#test_cases.latest}}
-(deftest latest_test_{{idx}}
+(deftest ^:latest latest_test_{{idx}}
   (testing {{context}}
     (is (= {{expected}} (high-scores/latest {{input.scores}})))))
 {{/test_cases.latest}}
 
 {{#test_cases.personalBest}}
-(deftest personal-best_test_{{idx}}
+(deftest ^:personal-best personal-best_test_{{idx}}
   (testing {{context}}
     (is (= {{expected}} (high-scores/personal-best {{input.scores}})))))
 {{/test_cases.personalBest}}
 
 {{#test_cases.personalTopThree}}
-(deftest personal-top-three_test_{{idx}}
+(deftest ^:personal-top-three personal-top-three_test_{{idx}}
   (testing {{context}}
     (is (= {{expected}} (high-scores/personal-top-three {{input.scores}})))))
 {{/test_cases.personalTopThree}}
