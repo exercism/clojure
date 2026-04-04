@@ -3,13 +3,13 @@
             simple-cipher))
 
 {{#test_cases.key}}
-(deftest rand-key_test_{{idx}}
+(deftest ^:rand-key rand-key_test_{{idx}}
   (testing {{context}}
     (is (true? (boolean (re-matches #{{expected.match}} (simple-cipher/rand-key)))))))
 {{/test_cases.key}}
 
 {{#test_cases.encode}}
-(deftest encode_test_{{idx}}
+(deftest ^:encode encode_test_{{idx}}
   (testing {{context}}
     {{#if input.key~}}
     (is (= {{expected}} (simple-cipher/encode {{input.key}} {{input.plaintext}})))))
@@ -20,7 +20,7 @@
 {{/test_cases.encode}}
 
 {{#test_cases.decode}}
-(deftest decode_test_{{idx}}
+(deftest ^:decode decode_test_{{idx}}
   (testing {{context}}
     {{#if input.key~}}
     (is (= {{expected}} (simple-cipher/decode {{input.key}} {{#if input.plaintext}}(simple-cipher/encode {{input.key}} {{input.plaintext}}){{else}}{{input.ciphertext}}{{/if}})))))
