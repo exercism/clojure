@@ -8,7 +8,7 @@
          (Math/round (* 100.0 actual)))))
 
 {{#test_cases.age}}
-(deftest on-{{input.planet}}_test_1
+(deftest ^:on-{{input.planet}} on-{{input.planet}}_test_1
   (testing {{context}}  
     (rounds-to {{expected}} (space-age/on-{{input.planet}} {{input.seconds}}))))
 {{/test_cases.age}}
