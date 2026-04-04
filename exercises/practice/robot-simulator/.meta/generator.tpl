@@ -3,7 +3,7 @@
             robot-simulator))
 
 {{#test_cases.create}}
-(deftest robot_test_{{idx}}
+(deftest ^:robot robot_test_{{idx}}
   (testing {{context}}
     (let [molly (robot-simulator/robot {:x {{input.position.x}} :y {{input.position.y}} } {{input.direction}})]
       (is (= {:bearing {{expected.direction}} :coordinates {:x {{expected.position.x}} :y {{expected.position.y}} }}
@@ -11,7 +11,7 @@
 {{/test_cases.create}}
 
 {{#test_cases.move}}
-(deftest simulate_test_{{idx}}
+(deftest ^:simulate simulate_test_{{idx}}
   (testing {{context}}
     (let [molly (robot-simulator/robot {:x {{input.position.x}} :y {{input.position.y}} } {{input.direction}})]
       (is (= {:bearing {{expected.direction}} :coordinates {:x {{expected.position.x}} :y {{expected.position.y}} }}
