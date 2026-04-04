@@ -4,7 +4,7 @@
             strain))
 
 {{#test_cases.keep}}
-(deftest retain_test_{{idx}}
+(deftest ^:retain retain_test_{{idx}}
   (testing {{context}}
     (is (= {{expected}}
            (strain/retain {{input.predicate}}
@@ -12,7 +12,7 @@
 {{/test_cases.keep}}
 
 {{#test_cases.discard}}
-(deftest discard_test_{{idx}}
+(deftest ^:discard discard_test_{{idx}}
   (testing {{context}}
     (is (= {{expected}}
            (strain/discard {{input.predicate}}
