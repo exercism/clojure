@@ -3,13 +3,13 @@
             matrix))
 
 {{#test_cases.row}}
-(deftest get-row_test_{{idx}}
+(deftest ^:get-row get-row_test_{{idx}}
   (testing {{context}}
     (is (= {{expected}} (matrix/get-row {{input.string}} {{input.index}})))))
 {{/test_cases.row}}
 
 {{#test_cases.column}}
-(deftest get-column_test_{{idx}}
+(deftest ^:get-column get-column_test_{{idx}}
   (testing {{context}}
     (is (= {{expected}} (matrix/get-column {{input.string}} {{input.index}})))))
 {{/test_cases.column}}
