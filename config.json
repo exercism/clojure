@@ -1601,6 +1601,14 @@
         "difficulty": 8
       },
       {
+        "slug": "dragon-curve",
+        "name": "Dragon curve",
+        "uuid": "a577573c-7533-4c40-8b59-b31148362e3a",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 8
+      },
+      {
         "slug": "go-counting",
         "name": "Go Counting",
         "uuid": "f0210181-7fe5-49f9-9036-be4256612b3e",
