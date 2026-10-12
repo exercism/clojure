@@ -95,3 +95,20 @@
           [1 1 0 0 0 1 1 1]
           [0 0 1 0 1 0 0 1]
           [1 0 0 0 0 0 1 1]])))))
+
+(deftest tick_test_9
+  (testing "Non-square matrix"
+    (is (= [[0 1 1]
+            [0 1 1]]
+           (game-of-life/tick [[0 0 1]
+                               [0 1 1]])))))
+
+(deftest tick_test_10
+  (testing "Non-square matrix 2"
+    (is (= [[0 0]
+            [1 1]
+            [0 0]]
+           (game-of-life/tick [[0 1]
+                               [0 1]
+                               [0 1]])))))
+
