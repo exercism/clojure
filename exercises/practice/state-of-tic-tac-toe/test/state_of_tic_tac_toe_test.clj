@@ -217,3 +217,19 @@
                            ["XXX"
                             "OOO"
                             "XOX"])))))
+
+(deftest gamestate_test_28
+  (testing "Invalid boards ▶ Invalid board: O kept playing after X wins"
+    (is (thrown-with-msg? IllegalArgumentException #"^Impossible board: game should have ended after the game was won$"
+                          (state-of-tic-tac-toe/gamestate
+                           ["OO "
+                            "XXX"
+                            " O "])))))
+
+(deftest gamestate_test_29
+  (testing "Invalid boards ▶ Invalid board: X kept playing after O wins"
+    (is (thrown-with-msg? IllegalArgumentException #"^Impossible board: game should have ended after the game was won$"
+                          (state-of-tic-tac-toe/gamestate
+                           ["XX "
+                            "OOO"
+                            " XX"])))))
