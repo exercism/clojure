@@ -27,21 +27,25 @@
     (is (= :abundant (perfect-numbers/classify 33550335)))))
 
 (deftest classify_test_7
+  (testing "Abundant numbers ▶ Perfect square abundant number is classified correctly"
+    (is (= :abundant (perfect-numbers/classify 196)))))
+
+(deftest classify_test_8
   (testing "Deficient numbers ▶ Smallest prime deficient number is classified correctly"
     (is (= :deficient (perfect-numbers/classify 2)))))
 
-(deftest classify_test_8
+(deftest classify_test_9
   (testing "Deficient numbers ▶ Smallest non-prime deficient number is classified correctly"
     (is (= :deficient (perfect-numbers/classify 4)))))
 
-(deftest classify_test_9
+(deftest classify_test_10
   (testing "Deficient numbers ▶ Medium deficient number is classified correctly"
     (is (= :deficient (perfect-numbers/classify 32)))))
 
-(deftest classify_test_10
+(deftest classify_test_11
   (testing "Deficient numbers ▶ Large deficient number is classified correctly"
     (is (= :deficient (perfect-numbers/classify 33550337)))))
 
-(deftest classify_test_11
+(deftest classify_test_12
   (testing "Deficient numbers ▶ Edge case (no factors other than itself) is classified correctly"
     (is (= :deficient (perfect-numbers/classify 1)))))
