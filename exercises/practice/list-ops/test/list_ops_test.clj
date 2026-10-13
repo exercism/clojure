@@ -95,11 +95,16 @@
            (list-ops/reverse-order [])))))
 
 (deftest ^:reverse-order reverse-order_test_2
-  (testing "Reverse ▶ non-empty vector"
+  (testing "Reverse ▶ non-empty even-length vector"
     (is (= [7 5 3 1]
            (list-ops/reverse-order [1 3 5 7])))))
 
 (deftest ^:reverse-order reverse-order_test_3
+  (testing "Reverse ▶ non-empty odd-length vector"
+    (is (= [13 11 9 7 5 3 1]
+           (list-ops/reverse-order [1 3 5 7 9 11 13])))))
+
+(deftest ^:reverse-order reverse-order_test_4
   (testing "Reverse ▶ vector of vectors is not flattened"
     (is (= [[4 5 6] [] [3] [1 2]]
            (list-ops/reverse-order [[1 2] [3] [] [4 5 6]])))))
