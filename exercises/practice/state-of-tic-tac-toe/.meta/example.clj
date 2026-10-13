@@ -19,7 +19,7 @@
        (map winner)
        (remove nil?)
        (distinct)
-       (count)))
+       (set)))
 
 (defn- moves-made [board]
   (->> board
@@ -36,10 +36,17 @@
       (throw (IllegalArgumentException. "Wrong turn order: O started")))))
 
 (defn- win [board]
-  (case (winners board)
-    2 (throw (IllegalArgumentException. "Impossible board: game should have ended after the game was won"))
-    1 :win
-    nil))
+  (let [board-winners (winners board)
+        moves    (moves-made board)
+        x-count  (get moves \X 0)
+        o-count  (get moves \O 0)
+        invalid-board! #(throw (IllegalArgumentException. "Impossible board: game should have ended after the game was won"))]
+    (cond
+      (= 2 (count board-winners)) (invalid-board!)
+      (and (contains? board-winners \X) (>= o-count x-count)) (invalid-board!)
+      (and (contains? board-winners \O) (> x-count o-count)) (invalid-board!)
+      (or (contains? board-winners \X) (contains? board-winners \O)) :win
+      :else nil)))
 
 (defn- draw [board]
   (when (= {\X 5 \O 4} (moves-made board))
