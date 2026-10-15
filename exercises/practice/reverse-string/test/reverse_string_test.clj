@@ -29,3 +29,8 @@
 (deftest reverse-string_test_7
   (testing "wide characters"
     (is (= "猫子" (reverse-string/reverse-string "子猫")))))
+
+(deftest reverse-string_test_8
+  (testing "emoji characters"
+    (is (= "hi 🚀" (reverse-string/reverse-string "🚀 ih")))))
+
