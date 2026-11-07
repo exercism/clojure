@@ -1,0 +1,8 @@
+(defn most-common-word [text]
+  (let [[best counts]
+        (reduce (fn [[best counts] word]
+                  (let [counts (update counts word (fnil inc 0))]
+                    [(if (> (counts word) (get counts best 0)) word best) counts]))
+                [nil {}]
+                (str/split (str/lower-case text) #" "))]
+    (format "\"%s\" appears %d times" best (counts best))))
