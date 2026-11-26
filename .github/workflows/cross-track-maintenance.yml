@@ -1,0 +1,28 @@
+name: Cross-track maintenance
+
+on:
+  issues:
+    types:
+      - opened
+  pull_request_target:
+    types:
+      - opened
+  issue_comment:
+    types:
+      - created
+  pull_request_review:
+    types:
+      - submitted
+  pull_request_review_comment:
+    types:
+      - created
+
+permissions:
+  issues: write
+  pull-requests: write
+
+jobs:
+  cross-track-maintenance:
+    if: github.repository_owner == 'exercism' # Stops this workflow from running inside forks of this repo
+    uses: exercism/github-actions/.github/workflows/cross-track-maintenance.yml@main
+    secrets: inherit
