@@ -16,5 +16,6 @@
   "forked_from": [
     "fsharp/lucians-luscious-lasagna"
   ],
+  "icon": "lasagna",
   "blurb": "Learn about the basics of Clojure by following a lasagna recipe"
 }
