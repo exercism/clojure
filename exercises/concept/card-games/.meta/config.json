@@ -16,6 +16,6 @@
   "forked_from": [
     "python/card-games"
   ],
-  "icon": "poker",
+  "icon": "blackjack",
   "blurb": "Learn about lists by tracking hands in card games."
 }
